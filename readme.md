@@ -8,7 +8,7 @@ start the project with:
 ```shell
 python ./main.py
 ```
-please confirm the env is setup:
+please confirm the .env file is setup:
 ```yaml
 #BASE_MODEL=gpt-4o-mini
 BASE_MODEL=deepseek-ai/DeepSeek-V2.5
