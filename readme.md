@@ -21,7 +21,7 @@ FASTAPI_ENV=development
 ```
 ## the chat frontend
 you can get the frontend:
-[https://github.com/rstarall/br-cti-frontend](https://github.com/rstarall/br-cti-frontend)
+[https://github.com/rstarall/br-cti-chat](https://github.com/rstarall/br-cti-chat)
 
 ## the default database
 ### neo4J
