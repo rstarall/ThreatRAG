@@ -19,13 +19,16 @@ API_KEY=your key of siliconflow
 OPENAI_API_KEY=sk-DGEoAotAgPZBovEm3rWjhHAd3plK6qaZjpi1vwwNFfWiQp6w
 FASTAPI_ENV=development
 ```
+## the chat frontend
+you can get the frontend:
+[https://github.com/rstarall/br-cti-frontend](https://github.com/rstarall/br-cti-frontend)
 
-
-## neo4J
+## the default database
+### neo4J
 username:neo4j
 password:12345678
 
-## milvus
+### milvus
 install
 ```shell
 pip install milvus
