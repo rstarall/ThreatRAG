@@ -2,16 +2,14 @@
 ## TreatRAG
 ThreadRAG is a RAG(Retrieval-Augmented Generation) framework for CTI(Cyber Threat Intelligence).
 
-# How to run?
+## How to run?
+
 start the project with:
 ```shell
-
 python ./main.py
-
 ```
-
-please comfirm the env is setup:
-```
+please confirm the env is setup:
+```yaml
 #BASE_MODEL=gpt-4o-mini
 BASE_MODEL=deepseek-ai/DeepSeek-V2.5
 #siliconflow
