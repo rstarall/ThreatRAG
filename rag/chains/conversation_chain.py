@@ -342,15 +342,23 @@ class StreamingConversationChain:
             
             # 获取RAG上下文
             rag_docs = self._query_vector_database(user_query)
+            rag_return_data = []
             rag_context = ""
             if rag_docs:
                 rag_context = "以下是相关文档信息：\n\n"
                 for i, doc in enumerate(rag_docs, 1):
                     source = doc.metadata.get('source', '未知来源')
                     rag_context += f"[文档{i}] 来源: {source}\n内容: {doc.page_content}\n\n"
+                    rag_return_data.append({
+                        "type": "rag_context",
+                        "source": source,
+                        "data": doc.page_content
+                    })
             else:
                 rag_context = "没有找到相关文档。"
-            
+
+            yield f"[rag_context]:{json.dumps(rag_return_data)}\n\n"
+
             try:
                 # 非阻塞执行链
                 loop = asyncio.get_event_loop()
