@@ -1,0 +1,5 @@
+The message is intended to make the victim believe that the Pokemon game does not work because of compatibility
+issues.
+The victim is likely to uninstall the application at this point. However, because a second application was installed, the
+phone would stay infected unless it is uninstalled as well.
+9/13

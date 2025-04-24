@@ -1,0 +1,7 @@
+Operation Electric Powder – Who is targeting Israel Electric
+Company?
+clearskysec.com
+/iec/
+Attackers have been trying to breach IEC (Israel Electric Company) in a year-long campaign.
+From April 2016 until at least February 2017,  attackers have been spreading malware via fake Facebook profiles
+and pages, breached websites, self-hosted and cloud based websites. Various artifacts indicate that the main target

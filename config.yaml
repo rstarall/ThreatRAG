@@ -1,0 +1,14 @@
+
+fastapi_server:
+  host: localhost
+  port: 8000
+
+vector_database:
+  path: /rag/data/vector_db
+
+file_upload:
+  path: /rag/data/file_uploads
+
+model:
+  embedding_model:
+    path: /rag/data/embedding_model

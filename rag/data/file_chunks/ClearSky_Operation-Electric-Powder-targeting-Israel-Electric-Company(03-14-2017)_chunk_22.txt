@@ -1,0 +1,9 @@
+Dropper
+ – self-extracting archives that extract and run the backdoor, sometimes while opening a decoy PDF
+document or website.
+(For example: 6fa869f17b703a1282b8f386d0d87bd4)
+Trojan backdoor / downloader –  
+malware that collects information about the system and can download
+and execute other files. (909125d1de7ac584c15f81a34262846f)
+Some samples had two hardcoded command and control servers: iecrs[.]co and iecr[.]co (note once again
+the use of IEC in the domain name).

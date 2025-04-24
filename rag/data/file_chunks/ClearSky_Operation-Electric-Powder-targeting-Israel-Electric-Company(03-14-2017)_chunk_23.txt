@@ -1,0 +1,13 @@
+the use of IEC in the domain name).
+Keylogger / screen grabber
+ – records keystrokes and takes screenshots. The malware file is compiled
+Python code. (
+d3e0b129bad263e6c0dcb1a9da55978b
+)
+An analysis of the malware and other parts of the campaign was 
+published by Mcafee
+ in on November 11, 2016.
+The latest known sample in this campaign (
+7ceac3389a5c97a3008aae9a270c706a
+) has compilation timestamp of
+February 12, 2017.  It is dropped when “pdf file products israel electric.exe” (

@@ -1,0 +1,10 @@
+84.200.17.123
+84.200.68.97
+82.211.30.212
+82.211.30.186
+82.211.30.192
+Florian Roth 
+shared a Yara rule to detect the downloader: 
+Operation-Electric-Powder-yara.txt
+The graph below depicts the campaign infrastructure (click the image to see the full graph):
+12/13

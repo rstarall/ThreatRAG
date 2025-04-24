@@ -1,0 +1,6 @@
+dashboard. However, it does not have any functionality, and when clicked,
+this error message is displayed:
+Error 505
+Sorry, this version is not compatible with your android version.
+The dropper does not really check what android version is installed:
+8/13

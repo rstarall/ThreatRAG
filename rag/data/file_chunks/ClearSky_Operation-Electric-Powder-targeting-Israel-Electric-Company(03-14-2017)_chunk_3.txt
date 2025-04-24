@@ -1,0 +1,12 @@
+vigilant target should be able to notice the attack and avoid infection. We do not have indication that the attacks
+succeeded in infecting IEC related computers or stealing information.
+Currently we do not know who is behind Operation Electric Powder or what its objectives are. See further discussion
+in the 
+Attribution 
+section.
+Impersonating Israeli news site
+The attackers registered and used in multiple attacks the domain 
+ynetnew
+e
+s[.]com
+ (note the extra e). This domain
