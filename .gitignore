@@ -1,5 +1,5 @@
 # ignore all files in the models folder
-models/*
+models/*/
 
 #忽略情报文档爬虫
 data_spider
