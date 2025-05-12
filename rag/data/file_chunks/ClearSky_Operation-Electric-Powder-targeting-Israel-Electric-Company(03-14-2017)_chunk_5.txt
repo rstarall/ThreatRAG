@@ -1,8 +1,0 @@
-Others, which are opened as decoy during malware infection, had copied content from a different news site:
-The URL 
-ynetnewes[.]com/video/Newfilm.html
- contained an article about Brad Pitt and Marion Cotillard 
-copied from
-another site
-. At the bottom was a link saying “Here For Watch It !”:
-2/13

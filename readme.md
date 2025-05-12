@@ -27,7 +27,8 @@ you can get the frontend:
 ### neo4J
 username:neo4j
 password:12345678
-
+website url:http://localhost:7474/browser/
+http://localhost:7474/browser/preview/
 ### milvus
 install
 ```shell
@@ -36,7 +37,6 @@ pip install milvus
 start milvus
 ```shell
 milvus-server --data ./milvus_lite
-
 ```
 
 

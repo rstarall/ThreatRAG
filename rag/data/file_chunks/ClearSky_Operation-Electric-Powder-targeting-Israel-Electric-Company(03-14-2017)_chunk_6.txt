@@ -1,8 +1,0 @@
-The link pointed to goo[.]gl/zxhJxu (Google’s URL shortening service). According to the 
-statistics page
-, it had been
-created on September 25, 2016 and have been clicked only 11 times. When clicked, it would redirect to
-iecr[.]co/info/index_info.php .
-We do not know what was the content in the final URL. We estimate that it served malware. The domain iecr[.]co
-was used as a command and control server for other malware in this campaign.
-Another URL,

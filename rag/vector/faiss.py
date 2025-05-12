@@ -8,7 +8,7 @@ from langchain_community.embeddings import HuggingFaceEmbeddings
 import os
 import time
 import threading
-from typing import List, Tuple
+from typing import List, Tuple, Set
 from rag.vector.vector_database import VectorDatabase
 import json
 from langchain_core.documents import Document
@@ -22,6 +22,7 @@ class FaissVectorDatabase(VectorDatabase):
         self.file_uploads_dir = os.path.join(self.data_dir, "file_uploads")
         self.file_chunks_dir = os.path.join(self.data_dir, "file_chunks")
         self.index_path = os.path.join(self.data_dir, "faiss_index")
+        self.exist_file_path = os.path.join(self.data_dir, "file_exist.json")
         
         # 确保目录存在
         os.makedirs(self.file_uploads_dir, exist_ok=True)
@@ -80,11 +81,13 @@ class FaissVectorDatabase(VectorDatabase):
         while not self.stop_update_thread:
             try:
                 print("自动检查新文档...")
-                has_update, update_files = self.has_update_files(self.data_dir)
-                if has_update:
-                    print("检测到有更新文档，开始更新向量数据库...")
-                    self.process_and_update_documents(update_files, self.file_uploads_dir, self.file_chunks_dir, self.index_path)
-                # 等待1分钟
+                new_files, deleted_files = self.check_file_changes()
+                if new_files or deleted_files:
+                    print(f"检测到文件变化，新增: {len(new_files)}个，删除: {len(deleted_files)}个")
+                    if new_files:
+                        self.process_and_update_documents(new_files)
+                    # TODO: 处理已删除文件的向量数据
+                # 等待60s
                 time.sleep(60)
             except Exception as e:
                 print(f"自动更新过程中出错: {str(e)}")
@@ -125,74 +128,56 @@ class FaissVectorDatabase(VectorDatabase):
         required_files = ["index.faiss", "index.pkl"]
         return all(os.path.exists(os.path.join(index_path, f)) for f in required_files)
     
-    # 判断是否有更新的文件
-    def has_update_files(self, data_path: str) -> Tuple[bool, List]:
-        """判断是否有更新的文件"""
-        # 检查file_update.json文件
-        update_file_path = os.path.join(data_path, "file_update.json")
-        if os.path.exists(update_file_path):
+    # 检查文件变化
+    def check_file_changes(self) -> Tuple[List[str], List[str]]:
+        """检查文件变化，返回新文件和已删除文件列表"""
+        # 获取当前文件列表
+        current_files = set(self.load_documents())
+        
+        # 读取已存在文件列表
+        exist_files = set()
+        if os.path.exists(self.exist_file_path):
             try:
-                with open(update_file_path, 'r', encoding='utf-8') as f:
-                    update_files = json.load(f)
-                    # 如果数组不为空，表示有更新
-                    return len(update_files) > 0, update_files
+                with open(self.exist_file_path, 'r', encoding='utf-8') as f:
+                    exist_files = set(json.load(f))
             except Exception as e:
-                return False, []
-        return False, []
-    
-    #更新的文档在列表中移除并添加到已存在的文档列表中
-    def remove_update_files(self, new_update_files: List):
-        """从更新列表中移除并添加到已存在的文档列表中"""
-        update_file_path = os.path.join(self.data_dir, "file_update.json")
-        exist_file_path = os.path.join(self.data_dir, "file_exist.json")
-        exist_files = []
-        update_files = []
-        if os.path.exists(exist_file_path) and os.path.exists(update_file_path):
-            with open(exist_file_path, 'r', encoding='utf-8') as f:
-                exist_files = json.load(f)
-            with open(update_file_path, 'r', encoding='utf-8') as f:
-                update_files = json.load(f)
-        for file in new_update_files:
-            if file in update_files:
-                update_files.remove(file)
-                exist_files.append(file)
-                print(f"移除更新文件: {file}")
-            else:
-                exist_files.append(file)
-                print(f"添加新文件: {file}")
-        #去重
-        update_files = list(set(update_files))
-        exist_files = list(set(exist_files))
-        # 保存更新文件列表
-        with open(exist_file_path, 'w', encoding='utf-8') as f:
-            json.dump(exist_files, f)
-        with open(update_file_path, 'w', encoding='utf-8') as f:
-            json.dump(update_files, f)
-        return exist_files, update_files
-                
+                print(f"读取已存在文件列表出错: {str(e)}")
+        
+        # 计算新文件和已删除文件
+        new_files = list(current_files - exist_files)
+        deleted_files = list(exist_files - current_files)
+        
+        # 更新已存在文件列表
+        if new_files or deleted_files:
+            updated_exist_files = list(current_files)
+            with open(self.exist_file_path, 'w', encoding='utf-8') as f:
+                json.dump(updated_exist_files, f, ensure_ascii=False)
+            print(f"已更新文件列表: 总计{len(updated_exist_files)}个文件")
+        
+        return new_files, deleted_files
     
     # 处理文档
-    def process_documents(self,update_files: List, data_path: str) -> Tuple[List, List]:
+    def process_documents(self, file_list: List[str], data_path: str) -> Tuple[List, List]:
         """加载文件夹中的文档，进行文本分割，并保存分割后的文本
         
         param:
-            update_files: 更新文件列表
+            file_list: 文件列表
             data_path: 文件夹路径
         return:
-            update_file_list: 更新文件列表
+            processed_files: 处理成功的文件列表
             split_docs: 分割后的文本列表
         """
         
         documents = []
-        update_file_list = []
-        # 遍历data_path中的文件，检查是否在update_files列表中
+        processed_files = []
+        # 遍历data_path中的文件，检查是否在file_list列表中
         supported_extensions = [".pdf", ".json", ".txt", ".docx"]
         for root, _, files in os.walk(data_path):
             for file in files:
                 file_ext = os.path.splitext(file)[1].lower()
                 
-                # 检查文件是否在更新列表中且扩展名受支持
-                if file in update_files and file_ext in supported_extensions:
+                # 检查文件是否在列表中且扩展名受支持
+                if file in file_list and file_ext in supported_extensions:
                     try:
                         file_path = os.path.join(root, file)
                         # 根据文件类型选择合适的加载器
@@ -208,25 +193,25 @@ class FaissVectorDatabase(VectorDatabase):
                         # 加载文档
                         doc = loader.load()
                         documents.extend(doc)
-                        update_file_list.append(file)
-                        print(f"已加载更新文件: {file}")
+                        processed_files.append(file)
+                        print(f"已加载文件: {file}")
                     except Exception as e:
                         print(f"加载文件 {file} 时出错: {str(e)}")
         
         if not documents:
-            print(f"在更新列表中未找到有效文档")
-            return update_file_list, []
+            print(f"未找到有效文档")
+            return processed_files, []
 
         # 分割文本
         text_splitter = RecursiveCharacterTextSplitter(
-            chunk_size=500,
-            chunk_overlap=50,
-            length_function=len,
-            is_separator_regex=False,
+            chunk_size=3000,           # 每个文本块的最大字符数
+            chunk_overlap=1000,          # 相邻文本块之间重叠的字符数
+            length_function=len,       # 用于计算文本长度的函数，这里用的是内置的len函数
+            is_separator_regex=False,  # 分隔符是否为正则表达式，False表示不是
         )
         split_docs = text_splitter.split_documents(documents)
         
-        return update_file_list, split_docs
+        return processed_files, split_docs
     
     #保存分块
     def save_split_docs(self, split_docs: List, chunk_path: str):
@@ -241,36 +226,26 @@ class FaissVectorDatabase(VectorDatabase):
         print(f"已保存 {len(split_docs)} 个文本块")
     
     # 处理并更新文档的统一函数
-    def process_and_update_documents(self,update_files: List, data_path: str, chunk_path: str, index_path: str):
+    def process_and_update_documents(self, file_list: List[str]):
         """处理新文档，保存分块，并更新向量数据库"""
-
         
         # 处理文档
-        update_file_list, new_split_docs = self.process_documents(update_files, data_path)
-        print(f"更新的文件队列:{update_file_list}")
+        processed_files, new_split_docs = self.process_documents(file_list, self.file_uploads_dir)
+        print(f"处理的文件: {processed_files}")
+        
         # 保存分块
-        self.save_split_docs(new_split_docs, chunk_path)
-        
-        self.remove_update_files(update_file_list)
-        
-        # 更新向量数据库
         if new_split_docs:
+            self.save_split_docs(new_split_docs, self.file_chunks_dir)
+            
+            # 更新向量数据库
             print(f"正在添加 {len(new_split_docs)} 个新文档块到向量数据库...")
             self.vector_store.add_documents(new_split_docs)
-            self.vector_store.save_local(index_path)
+            self.vector_store.save_local(self.index_path)
             print("数据库更新完成！")
         else:
-            print("未检测到新文档，无需更新")
+            print("未处理到有效文档，无需更新")
         
         return new_split_docs
-
-    # 修改后的向量数据库创建/加载函数
-    def process_and_save_split_texts(self, data_path: str = "../data/file_uploads", chunk_path: str = "../data/file_chunks"):
-        """加载文件夹，进行文本分割，并保存分割后的文本"""
-        update_file_list, split_docs = self.process_documents(data_path)
-        self.save_split_docs(split_docs, chunk_path)
-        self.remove_update_files(update_file_list)
-        return split_docs
 
     # 修改后的向量数据库创建/加载函数
     def load_or_create_vector_store(self, index_path: str = "../data/faiss_index"):
@@ -286,21 +261,29 @@ class FaissVectorDatabase(VectorDatabase):
         else:
             print("创建新向量数据库...")
             # 加载文档
-            new_file_list = self.load_documents()
+            file_list = self.load_documents()
             
             # 检查文档是否为空
-            if not new_file_list:
+            if not file_list:
                 print("警告：没有找到任何文档！请确保目录中有PDF、TXT、JSON或DOCX文件。")
+                # 创建空的向量存储
+                vector_store = FAISS.from_documents(
+                    documents=[Document(page_content="初始化", metadata={"source": "faiss数据库初始化"})],
+                    embedding=self.embeddings
+                )
+                vector_store.save_local(index_path)
                 return vector_store
                             
-            #分割文本
-            update_file_list, split_docs = self.process_documents(new_file_list,self.file_uploads_dir)
-            #保存分块
-            self.save_split_docs(split_docs, self.file_chunks_dir)
-            #移除更新文件
-            self.remove_update_files(update_file_list)
+            # 分割文本
+            processed_files, split_docs = self.process_documents(file_list, self.file_uploads_dir)
             
-
+            # 保存分块
+            self.save_split_docs(split_docs, self.file_chunks_dir)
+            
+            # 更新已存在文件列表
+            with open(self.exist_file_path, 'w', encoding='utf-8') as f:
+                json.dump(processed_files, f, ensure_ascii=False)
+            print(f"已初始化文件列表，包含 {len(processed_files)} 个文件")
 
             print(f"创建向量数据库，包含 {len(split_docs)} 个文档块...")           
             # 创建向量数据库
@@ -311,7 +294,7 @@ class FaissVectorDatabase(VectorDatabase):
             vector_store.save_local(index_path)
             return vector_store
 
-    # 新增动态更新函数
-    def update_vector_store(self, new_docs_path: str, index_path: str = "../data/faiss_index"):
+    # 更新向量数据库
+    def update_vector_store(self, file_list: List[str]):
         """动态更新现有向量数据库"""
-        return self.process_and_update_documents(new_docs_path, self.file_chunks_dir, index_path)
+        return self.process_and_update_documents(file_list)

@@ -2,8 +2,14 @@
 models/*/
 
 #忽略情报文档爬虫
-data_spider
-
+data_spider/**/*.json
+data_spider/**/*.pdf
+data_spider/**/*.txt
+# 忽略kg目录下的JSON和XML文件
+kg/**/*.json
+kg/**/*.xml
+kg/**/*.pdf
+kg/**/*.txt
 
 # ignore dataset files in the apt folder
 apt/*
