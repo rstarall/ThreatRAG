@@ -165,14 +165,14 @@ def process_batch_results(results_file: str, output_dir: str) -> Dict[str, Any]:
         return stats
 
 if __name__ == "__main__":
-    # 指定结果文件和输出目录
+    #指定结果文件和输出目录
     results_file = "kg/data_process/batch_inference/results/batch_results_batch_igmtythevy.jsonl"
     output_dir = "kg/data_process/extracted_entities"
     
-    # 处理结果
+    #处理结果
     stats = process_batch_results(results_file, output_dir)
     
-    # 保存处理统计信息
+    #保存处理统计信息
     stats_file = "kg/data_process/batch_inference/test_stats.json"
     
     with open(stats_file, 'w', encoding='utf-8') as f:
