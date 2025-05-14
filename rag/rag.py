@@ -7,7 +7,7 @@ from langchain.chains import RetrievalQA  # 使用RetrievalQA替代create_retrie
 from langchain_openai import ChatOpenAI
 # 如果用本地embedding模型（推荐）：
 from langchain_community.embeddings import HuggingFaceEmbeddings
-
+import os
 from rag.vector.faiss import FaissVectorDatabase
 
 class RAGService:
@@ -40,9 +40,9 @@ class RAGService:
     # 更新LLM初始化（网页20的千帆平台集成模式）
     def _init_llm(self):
         return ChatOpenAI(
-            model="deepseek-ai/DeepSeek-V2.5",  # 推荐国产模型（网页3）
-            api_base="https://api.siliconflow.cn/v1",
-            api_key="sk-ggyhlvddzgovjmjovtnpykqkywkfqbbfpllobangmpznsclj",
+            model=os.getenv("BASE_MODEL"),  # 推荐国产模型（网页3）
+            api_base=os.getenv("API_BASE"),
+            api_key=os.getenv("API_KEY"),
             temperature=0.3,  # 降低随机性
             max_tokens=2048,
             model_kwargs={"top_p": 0.9}

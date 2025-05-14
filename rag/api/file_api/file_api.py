@@ -102,4 +102,3 @@ async def upload_files(files: List[UploadFile] = File(...)):
             })
             
     return JSONResponse(content={"files": results})
-
