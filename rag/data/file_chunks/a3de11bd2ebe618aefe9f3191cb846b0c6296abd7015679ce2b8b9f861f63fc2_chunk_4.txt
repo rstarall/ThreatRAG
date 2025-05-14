@@ -1,0 +1,2 @@
+CVE-2014-7927漏洞
+在 Google V8 中 compiler/simplified-lowering.cc 中使用的 SimplifiedLowering：:D oLoadBuffer 函数（在 40.0.2214.91 之前的 Google Chrome 中使用）未正确选择整数数据类型，这允许远程攻击者通过构建的 JavaScript 代码造成拒绝服务（内存损坏）或可能产生其他不明影响。

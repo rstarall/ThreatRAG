@@ -1,0 +1,20 @@
+漏洞：CVE-2011-2856
+在 14.0.835.163 之前的 Google Chrome 中使用的 Google V8 允许远程攻击者通过不明向量绕过同源策略。
+CVE-2011-3243漏洞
+WebKit 中的跨站点脚本 （XSS） 漏洞（在低于 5.1.1 的 Apple iOS 和 Safari 5.1.1 之前版本中使用）允许远程攻击者通过涉及非活动 DOM 窗口的向量注入任意 Web 脚本或 HTML。
+漏洞：CVE-2013-2618
+0.97b 之前的网络天气图的 editor.php 中存在跨站脚本 （XSS） 漏洞，允许远程攻击者通过 map_title 参数注入任意 Web 脚本或 HTML。
+CVE-2013-6632漏洞
+低于 31.0.1650.57 的 Google Chrome 中存在整数溢出漏洞，允许远程攻击者通过不明向量执行任意代码或造成拒绝服务（内存损坏），如 PacSec 2013 的 Mobile Pwn2Own 竞赛中所示。
+CVE-2014-1701漏洞
+在 33.0.1750.149 之前的 Google Chrome 中使用的 Blink 中 bindings/scripts/code_generator_v8.pm 中的 GenerateFunction 函数没有对 EventTarget：:d ispatchEvent 函数实施特定的跨域限制，该函数允许远程攻击者通过涉及事件的向量进行通用 XSS （UXSS） 攻击。
+漏洞：CVE-2014-1705。
+在 OS X 和 Linux 上低于 33.0.1750.152 的 Google Chrome 以及 Windows 上低于 33.0.1750.154 的 Google Chrome 中使用了 Google V8，允许远程攻击者通过未知向量造成拒绝服务（内存损坏）或可能产生不明其他影响。
+CVE-2014-1747漏洞
+在 35.0.1916.114 之前的 Google Chrome 中使用，Blink 的 core/loader/DocumentLoader.cpp 中 DocumentLoader：：maybeCreateArchive 函数中存在跨站点脚本 （XSS） 漏洞，允许远程攻击者通过构建的 MHTML 内容（也称为“通用 XSS （UXSS）”）注入任意 Web 脚本或 HTML。
+漏洞：CVE-2014-3176
+低于 37.0.2062.94 的 Google Chrome 无法正确处理扩展、IPC、同步 API 和 Google V8 的交互，这允许远程攻击者通过不明向量执行任意代码，这是一个与 CVE-2014-3177 不同的漏洞。
+CVE-2014-6332漏洞
+Microsoft Windows Server 2003 SP2、Windows Vista SP2、Windows Server 2008 SP2 和 R2 SP1、Windows 7 SP1、Windows 8、Windows 8.1、Windows Server 2012 Gold 和 R2 以及 Windows RT Gold 和 8.1 的 OLE 中OleAut32.dll允许远程攻击者通过构建的 Web 站点执行任意代码，如触发 SafeArrayDimen 函数中大小值的不当处理的数组重新调整尝试所示。 又名“Windows OLE Automation Array Remote Code Execution Vulnerability”。
+CVE-2014-7927漏洞
+在 Google V8 中 compiler/simplified-lowering.cc 中使用的 SimplifiedLowering：:D oLoadBuffer 函数（在 40.0.2214.91 之前的 Google Chrome 中使用）未正确选择整数数据类型，这允许远程攻击者通过构建的 JavaScript 代码造成拒绝服务（内存损坏）或可能产生其他不明影响。

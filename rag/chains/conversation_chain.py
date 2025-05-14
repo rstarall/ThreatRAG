@@ -58,7 +58,7 @@ class StreamingConversationChain:
     
     def __init__(
         self, 
-        model_name: str = "deepseek-ai/DeepSeek-V2.5",
+        model_name: str = "deepseek-chat",
         api_base: Optional[str] = None,
         api_key: Optional[str] = None,
         temperature: float = 0.7,
@@ -157,12 +157,13 @@ class StreamingConversationChain:
                 openai_api_key=self.api_key
             )
     
-    def _create_chain(self, conversation_id: str, callback_handler):
+    def _create_chain(self, conversation_id: str, callback_handler, use_rag: bool = True):
         """创建对话链
         
         Args:
             conversation_id: 会话ID
             callback_handler: 回调处理器
+            use_rag: 是否使用RAG
             
         Returns:
             LLMChain: 对话链实例
@@ -173,24 +174,43 @@ class StreamingConversationChain:
         # 获取会话记忆
         memory = self._get_memory(conversation_id)
         
-        # 创建对话提示模板
-        prompt = ChatPromptTemplate.from_template("""
-            你是一个专业的AI助手。请根据历史对话和检索到的信息回答用户问题。
-            
-            遵循以下原则：
-            1. 如果检索内容中包含问题的答案，请基于这些内容回答
-            2. 对于引用的内容，请明确指出信息来源
-            3. 如果检索内容不足以回答问题，可以使用你的知识补充，但请明确区分
-            4. 保持响应友好、专业、有帮助
-            
-            历史对话:
-            {chat_history}
-                                                               
-            检索召回内容:
-            {rag_context}
+        # 根据是否使用RAG选择不同的提示模板
+        if use_rag:
+            # 创建带RAG的对话提示模板
+            prompt = ChatPromptTemplate.from_template("""
+                你是一个专业的AI助手。请根据历史对话和检索到的信息回答用户问题。
+                
+                遵循以下原则：
+                1. 如果检索内容中包含问题的答案，请基于这些内容回答
+                2. 对于引用的内容，请明确指出信息来源
+                3. 如果检索内容不足以回答问题，可以使用你的知识补充，但请明确区分
+                4. 保持响应友好、专业、有帮助
+                5. 直接回答问题，不要重复问题
+                
+                历史对话:
+                {chat_history}
+                                                                   
+                检索召回内容:
+                {rag_context}
 
-            人类: {question}
-        """)
+                人类: {question}
+                
+                助手:
+            """)
+        else:
+            # 创建不使用RAG的简化对话提示模板
+            prompt = ChatPromptTemplate.from_template("""
+                你是一个专业的AI助手。请根据历史对话回答用户问题。
+                
+                保持响应友好、专业、有帮助，直接回答问题，不要重复问题。
+                
+                历史对话:
+                {chat_history}
+                
+                人类: {question}
+                
+                助手:
+            """)
         
         # 创建LLMChain
         return LLMChain(
@@ -312,13 +332,14 @@ class StreamingConversationChain:
             return new_conversation_id
         return conversation_id
     
-
-    async def astream(self, message: str, conversation_id: str = None) -> AsyncGenerator[str, None]:
+    async def astream(self, message: str, conversation_id: str = None, use_rag: bool = True, file_ids: list = None) -> AsyncGenerator[str, None]:
         """异步流式生成响应
         
         Args:
             message: 用户消息
             conversation_id: 会话ID
+            use_rag: 是否使用RAG
+            file_ids: 文件ID列表，用于针对特定文件进行检索
             
         Yields:
             str: JSON格式的响应片段
@@ -337,27 +358,69 @@ class StreamingConversationChain:
             # 创建回调处理器
             callback_handler = StreamingCallbackHandler(handle_token)
             
-            # 创建对话链
-            chain = self._create_chain(conversation_id, callback_handler)
-            
-            # 获取RAG上下文
-            rag_docs = self._query_vector_database(user_query)
-            rag_return_data = []
-            rag_context = ""
-            if rag_docs:
-                rag_context = "以下是相关文档信息：\n\n"
-                for i, doc in enumerate(rag_docs, 1):
-                    source = doc.metadata.get('source', '未知来源')
-                    rag_context += f"[文档{i}] 来源: {source}\n内容: {doc.page_content}\n\n"
-                    rag_return_data.append({
-                        "type": "rag_context",
-                        "source": source,
-                        "data": doc.page_content
-                    })
+            # 根据是否使用RAG选择不同的处理逻辑
+            if use_rag and self.is_use_rag and self.vector_database:
+                # 使用RAG功能
+                # 创建带RAG的对话链
+                chain = self._create_chain(conversation_id, callback_handler, use_rag=True)
+                
+                # 获取RAG上下文
+                rag_docs = []
+                
+                # 如果提供了文件ID，优先对这些文件进行检索
+                if file_ids and len(file_ids) > 0:
+                    try:
+                        # 获取文件信息
+                        file_info_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../data/file_info.json")
+                        if os.path.exists(file_info_path):
+                            with open(file_info_path, 'r') as f:
+                                file_info = json.load(f)
+                                
+                            # 遍历文件ID
+                            for file_id in file_ids:
+                                if file_id in file_info:
+                                    # 获取文件信息
+                                    original_name = file_info[file_id].get("original_name", "未知文件")
+                                    file_ext = os.path.splitext(original_name)[1]
+                                    upload_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../../data/file_uploads")
+                                    file_path = os.path.join(upload_dir, f"{file_id}{file_ext}")
+                                    
+                                    if os.path.exists(file_path):
+                                        # 直接从向量数据库中查询
+                                        docs = self.vector_database.query_vector_database(
+                                            query=user_query,
+                                            filter={"source": f"{file_id}{file_ext}"}
+                                        )
+                                        if docs:
+                                            # 添加文件元数据
+                                            for doc in docs:
+                                                if "filename" not in doc.metadata:
+                                                    doc.metadata["filename"] = original_name
+                                                if "file_id" not in doc.metadata:
+                                                    doc.metadata["file_id"] = file_id
+                                            rag_docs.extend(docs)
+                    except Exception as e:
+                        print(f"处理文件ID时出错: {str(e)}")
+                
+                # 如果没有通过文件ID获取到文档，则使用常规向量检索
+                if not rag_docs:
+                    rag_docs = self._query_vector_database(user_query)
+                
+                rag_context = ""
+                if rag_docs:
+                    rag_context = "以下是相关文档信息：\n\n"
+                    for i, doc in enumerate(rag_docs, 1):
+                        source = doc.metadata.get('source', '未知来源')
+                        filename = doc.metadata.get('filename', os.path.basename(source) if source else '未知文件')
+                        rag_context += f"[文档{i}] 来源: {filename}\n内容: {doc.page_content}\n\n"
+                else:
+                    rag_context = "没有找到相关文档。"
             else:
-                rag_context = "没有找到相关文档。"
-
-            yield f"[rag_context]:{json.dumps(rag_return_data)}\n\n"
+                # 不使用RAG功能，使用简化的对话链
+                chain = self._create_chain(conversation_id, callback_handler, use_rag=False)
+                
+                # 空RAG上下文
+                rag_context = ""
 
             try:
                 # 非阻塞执行链
@@ -377,13 +440,29 @@ class StreamingConversationChain:
                         # 检查队列中是否有token
                         if queue:
                             token = queue.pop(0)
-                            yield token
+                            try:
+                                # 尝试解析JSON
+                                token_data = json.loads(token)
+                                if isinstance(token_data, dict) and "data" in token_data:
+                                    yield token_data["data"]
+                                else:
+                                    yield token
+                            except:
+                                yield token
                         
                         # 检查链是否已完成
                         if future.done():
                             # 确保所有剩余token都被处理
                             while queue:
-                                yield queue.pop(0)
+                                token = queue.pop(0)
+                                try:
+                                    token_data = json.loads(token)
+                                    if isinstance(token_data, dict) and "data" in token_data:
+                                        yield token_data["data"]
+                                    else:
+                                        yield token
+                                except:
+                                    yield token
                             break
                         
                         # 短暂等待

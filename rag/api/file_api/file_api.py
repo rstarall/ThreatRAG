@@ -1,105 +1,100 @@
-import hashlib
-import os
-import json
-from datetime import datetime
-import asyncio
-from fastapi import FastAPI, UploadFile, File, HTTPException
-from typing import List, Dict
+from fastapi import UploadFile, File, APIRouter, HTTPException
 from fastapi.responses import JSONResponse
+import os
+import hashlib
+from datetime import datetime
 import aiofiles
-from rag.api.server import fastapi_server as app
+import json
+from typing import List, Dict
+from rag.vector.faiss import FaissVectorDatabase  # 你已有的类
+import asyncio
 
-UPLOAD_DIR = "../../data/file_uploads"
-FILE_INFO = "../../data/file_info.json"
-file_lock = asyncio.Lock()  # 异步文件操作锁
+upload_router = APIRouter()
 
-# 确保上传目录存在
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+UPLOAD_DIR = os.path.join(BASE_DIR, "../../data/file_uploads")
+FILE_INFO = os.path.join(BASE_DIR, "../../data/file_info.json")
+
+
+file_lock = asyncio.Lock()
+
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
+# 初始化向量数据库（只初始化一次，避免多线程重复加载模型）
+vector_db = FaissVectorDatabase()
+
+# 生成文件哈希
 def generate_file_hash(file_path: str, chunk_size: int = 8192) -> str:
-    """生成文件的SHA256哈希值"""
     sha256 = hashlib.sha256()
     with open(file_path, "rb") as f:
         while chunk := f.read(chunk_size):
             sha256.update(chunk)
     return sha256.hexdigest()
 
-
+# 更新 file_info.json
 async def update_file_info(file_hash: str, original_name: str) -> None:
-    """异步更新文件信息到JSON文件"""
-    try:
-        # 使用异步锁保证线程安全
-        async with file_lock:
-            # 读取现有数据
-            data: Dict = {}
-            if os.path.exists(FILE_INFO):
-                async with aiofiles.open(FILE_INFO, mode='r') as f:
-                    content = await f.read()
-                    if content:
-                        data = json.loads(content)
+    async with file_lock:
+        data: Dict = {}
+        if os.path.exists(FILE_INFO):
+            async with aiofiles.open(FILE_INFO, 'r') as f:
+                content = await f.read()
+                if content:
+                    data = json.loads(content)
 
-            # 更新数据
-            data[file_hash] = {
-                "original_name": original_name,
-                "upload_time": datetime.now().isoformat()
-            }
-
-            # 写入更新后的数据
-            async with aiofiles.open(FILE_INFO, mode='w') as f:
-                await f.write(json.dumps(data, indent=2))
-    except Exception as e:
-        raise HTTPException(
-            status_code=500,
-            detail=f"Failed to update file info: {str(e)}"
-        )
-
-
-
-async def save_upload_file(file: UploadFile) -> dict:
-    """保存上传文件并返回文件信息"""
-    try:
-        contents = await file.read()
-        temp_path = os.path.join(UPLOAD_DIR, file.filename)
-        
-        # 保存临时文件
-        with open(temp_path, "wb") as f:
-            f.write(contents)
-        
-        # 生成哈希并重命名
-        file_hash = generate_file_hash(temp_path)
-        filename, ext = os.path.splitext(file.filename)
-        new_filename = f"{file_hash}{ext}"
-        new_path = os.path.join(UPLOAD_DIR, new_filename)
-        os.rename(temp_path, new_path)
-
-        # 异步更新文件信息
-        await update_file_info(file_hash, file.filename)
-
-        return {
-            "original_name": file.filename,
-            "saved_name": new_filename,
-            "hash": file_hash,
-            "path": new_path,
-            "size": len(contents)
+        data[file_hash] = {
+            "original_name": original_name,
+            "upload_time": datetime.now().isoformat()
         }
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-    finally:
-        await file.close()
 
-@app.post("/upload/")
-async def upload_files(files: List[UploadFile] = File(...)):
-    """批量上传文件接口"""
+        async with aiofiles.open(FILE_INFO, 'w') as f:
+            await f.write(json.dumps(data, indent=2))
+
+# 主上传接口
+@upload_router.post("/upload/with_embedding")
+async def upload_files_with_embedding(files: List[UploadFile] = File(...)):
     results = []
+
     for file in files:
         try:
-            file_info = await save_upload_file(file)
-            results.append(file_info)
+            contents = await file.read()
+            temp_path = os.path.join(UPLOAD_DIR, file.filename)
+
+            # 写入临时文件
+            with open(temp_path, "wb") as f:
+                f.write(contents)
+
+            # 生成哈希并重命名
+            file_hash = generate_file_hash(temp_path)
+            filename, ext = os.path.splitext(file.filename)
+            new_filename = f"{file_hash}{ext}"
+            new_path = os.path.join(UPLOAD_DIR, new_filename)
+            os.rename(temp_path, new_path)
+
+            # 更新文件记录
+            await update_file_info(file_hash, file.filename)
+
+            # 添加到向量库
+            vector_db.process_and_update_documents(
+                update_files=[new_filename],
+                data_path=vector_db.file_uploads_dir,
+                chunk_path=vector_db.file_chunks_dir,
+                index_path=vector_db.index_path
+            )
+
+            results.append({
+                "filename": file.filename,
+                "hash": file_hash,
+                "saved_as": new_filename,
+                "status": "✅ 已上传并入库"
+            })
+
         except Exception as e:
             results.append({
                 "filename": file.filename,
-                "error": str(e)
+                "error": str(e),
+                "status": "❌ 失败"
             })
-            
-    return JSONResponse(content={"files": results})
+        finally:
+            await file.close()
 
+    return JSONResponse(content={"files": results})

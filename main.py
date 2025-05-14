@@ -9,7 +9,7 @@ import sys
 config = None
 
 def load_config():
-    with open("config.yaml", "r") as f:
+    with open("E:/ragtest/ThreatRAG/config.yaml", "r") as f:
         config = yaml.load(f, Loader=yaml.FullLoader)  # 添加Loader参数以避免TypeError
     return config
 

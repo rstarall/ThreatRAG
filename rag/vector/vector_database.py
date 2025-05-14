@@ -7,7 +7,7 @@ class VectorDatabase:
         self.vector_database = {}
         self.path = path
 
-    def query_vector_database(self, query: str)->List[Document]:
+    def query_vector_database(self, query: str, filter: dict = None) -> List[Document]:
         """query vector database"""
         pass
     def load_or_create_vector_store(self, split_docs: List, index_path: str):

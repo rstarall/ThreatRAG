@@ -1,0 +1,3 @@
+CVE-2014-6332漏洞
+Microsoft Windows Server 2003 SP2、Windows Vista SP2、Windows Server 2008 SP2 和 R2 SP1、Windows 7 SP1、Windows 8、Windows 8.1、Windows Server 2012 Gold 和 R2 以及 Windows RT Gold 和 8.1 的 OLE 中OleAut32.dll允许远程攻击者通过构建的 Web 站点执行任意代码，如触发 SafeArrayDimen 函数中大小值的不当处理的数组重新调整尝试所示。 又名“Windows OLE Automation Array Remote Code Execution Vulnerability”。
+CVE-2014-7927漏洞
