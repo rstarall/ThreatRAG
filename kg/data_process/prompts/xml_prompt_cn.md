@@ -20,21 +20,25 @@
 1. 仔细阅读整个报告内容，理解攻击事件的整体情况
 2. 识别报告中的所有实体，包括攻击者、工具、漏洞、资产等
 3. 为每个实体分配唯一ID，确定其类型和子类型
-4. 根据MITRE ATT&CK框架，为相关实体添加战术标签
-5. 识别实体之间的关系
-6. 按照指定的XML格式输出结果
+4. 根据MITRE ATT&CK框架，为每个实体添加至少一个战术标签，准确反映其在攻击链中的位置
+5. 为每个实体分配时序属性，标记其在攻击流程中出现的顺序，确保时序与战术标签保持一致
+6. 识别实体之间的关系，确保关系反映攻击链的逻辑进展
+7. 按照指定的XML格式输出结果
 
 ## 实体与关系定义
 
 1.实体类型(type)
 <EntityTypes>
-    <EntityType name="actor" description="人员组织,攻击者、防御者、相关组织">
-        <SubType name="person" description="人员->名称"/>
-        <SubType name="org" description="组织->名称"/>
+    <EntityType name="attcker" description="攻击者、相关组织">
+        <SubType name="attacker" description="攻击者->名称"/>
+        <SubType name="org" description="攻击组织->名称"/>
+    </EntityType>
+    <EntityType name="victim" description="受害者、受害者组织">
+        <SubType name="user" description="相关用户->名称"/>
+        <SubType name="org" description="相关组织->名称"/>
     </EntityType>
     <EntityType name="event" description="攻击事件(报告),一般一个报告代表一个攻击事件">
-        <SubType name="attack" description="攻击事件->名称"/>
-        <SubType name="defend" description="防御事件->名称"/>
+        <SubType name="event" description="攻击事件->名称"/>
         <SubType name="location" description="攻击地点->名称"/>
     </EntityType>
     <EntityType name="asset" description="网络资产,主机、IP、服务设施">
@@ -52,11 +56,13 @@
         <SubType name="hash" description="HASH值 -> HASH值"/>
         <SubType name="url" description="URL地址 -> URL地址"/>
         <SubType name="domain" description="域名 -> 域名"/>
-        <SubType name="malware" description="恶意软件 -> 恶意软件名"/>
         <SubType name="payload" description="恶意载荷 -> 载荷信息"/>
     </EntityType>
-    <EntityType name="tool" description="攻击工具,工具名称、执行命令，恶意软件名">
+    <EntityType name="tool" description="攻击工具,工具名称、执行命令，恶意软件名、攻击手段">
         <SubType name="tool" description="工具 -> 工具名"/>
+        <SubType name="shell" description="执行命令 -> 命令名称或值"/>
+        <SubType name="malware" description="恶意软件 -> 恶意软件名"/>
+        <SubType name="method" description="攻击手段 -> 攻击手段名(邮件,社会工程)"/>
     </EntityType>
     <EntityType name="file" description="文件信息,文件、代码等">
         <SubType name="file" description="文件 -> 文件名称"/>
@@ -69,7 +75,22 @@
     </EntityType>
 </EntityTypes>
 
-2.实体TTP标签属性(labels) - 基于MITRE ATT&CK框架
+
+2.实体关系(relationship) - 定义实体间的关联方式
+<RelationshipTypes>
+    <RelationshipType name="use" description="attacker → tool/vul/ioc （攻击者使用工具/漏洞/IoC）"/>
+    <RelationshipType name="trigger" description="victim → file/env/ioc （受害者触发文件/环境/IoC）"/>
+    <RelationshipType name="involve" description="event → attacker/victim （攻击事件涉及人员/组织）"/>
+    <RelationshipType name="target" description="attacker → victim/asset/env （攻击者目标针对受害者/资产/环境）"/>
+    <RelationshipType name="has" description="victim → asset/env （受害者拥有资产/环境）"/>
+    <RelationshipType name="exploit" description="vul → asset/env （漏洞利用资产或环境缺陷）"/>
+    <RelationshipType name="affect" description="file → asset/env （攻击文件影响资产或环境）"/>
+    <RelationshipType name="related_to" description="tool → vul/ioc/file （攻击工具与漏洞、IoC、文件关联）"/>
+    <RelationshipType name="belong_to" description="file/ioc → asset/env （文件/ioc属于于某网络资产/环境）"/>
+</RelationshipTypes>
+
+
+3.实体TTP标签属性(labels) - 基于MITRE ATT&CK框架
 <Labels>
     <Label name="TA0043" description="侦察"/>
     <Label name="TA0042" description="资源开发"/>
@@ -87,19 +108,12 @@
     <Label name="TA0040" description="影响"/>
 </Labels>
 
-3.实体关系(relationship) - 定义实体间的关联方式
-<RelationshipTypes>
-    <RelationshipType name="involve" description="Event → Actor （攻击事件涉及人员/组织）"/>
-    <RelationshipType name="event_use" description="Event → Tool/Vul/IoC （攻击事件中使用的工具/漏洞/IoC）"/>
-    <RelationshipType name="actor_use" description="Actor → Tool/Vul/IoC （攻击人员/组织使用工具/漏洞/IoC）"/>
-    <RelationshipType name="target" description="Event → Asset/Env （攻击事件针对资产/环境）"/>
-    <RelationshipType name="exploit" description="Vul → Asset/Env （漏洞利用资产或环境缺陷）"/>
-    <RelationshipType name="generate" description="Tool → IoC/File （攻击工具生成IoC或文件）"/>
-    <RelationshipType name="belong_to" description="IoC → Asset （IoC属于某网络资产）"/>
-    <RelationshipType name="affect" description="File → Asset/Env （攻击文件影响资产或环境）"/>
-</RelationshipTypes>
+4.时序标签 - 实体在攻击链中的出现顺序
+<Times>
+    <Time name="time" description="实体在攻击链中出现的时序号码(1,2,3...)，表示攻击进展阶段，多个实体可能同时出现在同一阶段"/>
+</Times>
 
-4.实体格式 - 单个实体的XML结构
+5.实体格式 - 单个实体的XML结构
 <Entity>
     <EntityId>entity_1</EntityId>
     <EntityName>实体名称(值,统一名称)</EntityName>
@@ -114,12 +128,15 @@
         <Label>实体标签值2</Label>
         <Label>实体标签值3</Label>
     </Labels>
+    <Times>
+        <Time>实体在报告中行为出现的时序号码(1,2,3...),不同实体可能同时出现</Time>
+    </Times>
     <Properties>
         <Property name="属性名称">属性值</Property>
     </Properties>
 </Entity>
 
-5.关系格式 - 单个关系的XML结构
+6.关系格式 - 单个关系的XML结构
 <Relationship>
     <RelationshipId>relationship_1</RelationshipId>
     <RelationshipType>关系类型</RelationshipType>
@@ -127,7 +144,7 @@
     <Target>目标实体的名称(EntityName)</Target>
 </Relationship>
 
-6.实体列表 - 所有提取实体的集合
+7.实体列表 - 所有提取实体的集合
 <Entitys>
     <Entity>
         <EntityId>entity_1</EntityId>
@@ -143,13 +160,16 @@
             <Label>实体标签值2</Label>
             <Label>实体标签值3</Label>
         </Labels>
+        <Times>
+            <Time>事件在报告中发生时序排序号(1,2,3...)</Time>
+        </Times>
         <Properties>
             <Property name="属性名称">属性值</Property>
         </Properties>
     </Entity>
 </Entitys>
 
-7.关系列表 - 所有提取关系的集合
+8.关系列表 - 所有提取关系的集合
 <Relationships>
     <Relationship>
         <RelationshipId>relationship_1</RelationshipId>
@@ -180,13 +200,17 @@
             <EntityVariantName>APT29</EntityVariantName>
             <EntityVariantName>Cozy Bear</EntityVariantName>
         </EntityVariantNames>
-        <EntityType>actor</EntityType>
+        <EntityType>attcker</EntityType>
         <EntitySubType>org</EntitySubType>
         <Labels>
             <Label>TA0001</Label>
             <Label>TA0002</Label>
+            <Label>TA0003</Label>
             <Label>TA0008</Label>
         </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
         <Properties>
             <Property name="国家">俄罗斯</Property>
         </Properties>
@@ -195,12 +219,16 @@
         <EntityId>entity_2</EntityId>
         <EntityName>政府机构攻击事件</EntityName>
         <EntityType>event</EntityType>
-        <EntitySubType>attack</EntitySubType>
+        <EntitySubType>event</EntitySubType>
         <Labels>
             <Label>TA0001</Label>
             <Label>TA0002</Label>
+            <Label>TA0003</Label>
             <Label>TA0008</Label>
         </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
         <Properties>
             <Property name="时间">2023年4月</Property>
         </Properties>
@@ -208,8 +236,14 @@
     <Entity>
         <EntityId>entity_3</EntityId>
         <EntityName>政府机构</EntityName>
-        <EntityType>asset</EntityType>
-        <EntitySubType>bussiness</EntitySubType>
+        <EntityType>victim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
         <Properties>
             <Property name="行业">政府</Property>
         </Properties>
@@ -222,6 +256,9 @@
         <Labels>
             <Label>TA0001</Label>
         </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
         <Properties>
             <Property name="hash">8a9f75d3b12efg56</Property>
             <Property name="类型">Word文档</Property>
@@ -235,6 +272,9 @@
         <Labels>
             <Label>TA0002</Label>
         </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
         <Properties>
             <Property name="影响">Windows系统</Property>
         </Properties>
@@ -248,12 +288,21 @@
             <Label>TA0003</Label>
             <Label>TA0011</Label>
         </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
     </Entity>
     <Entity>
         <EntityId>entity_7</EntityId>
         <EntityName>192.168.1.10</EntityName>
         <EntityType>asset</EntityType>
         <EntitySubType>ip</EntitySubType>
+        <Labels>
+            <Label>TA0008</Label>
+        </Labels>
+        <Times>
+            <Time>5</Time>
+        </Times>
         <Properties>
             <Property name="用途">域控制器</Property>
         </Properties>
@@ -263,6 +312,12 @@
         <EntityName>Windows系统</EntityName>
         <EntityType>env</EntityType>
         <EntitySubType>os</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
     </Entity>
 </Entitys>
 
@@ -275,39 +330,69 @@
     </Relationship>
     <Relationship>
         <RelationshipId>relationship_2</RelationshipId>
-        <RelationshipType>target</RelationshipType>
+        <RelationshipType>involve</RelationshipType>
         <Source>政府机构攻击事件</Source>
         <Target>政府机构</Target>
     </Relationship>
     <Relationship>
         <RelationshipId>relationship_3</RelationshipId>
-        <RelationshipType>actor_use</RelationshipType>
+        <RelationshipType>use</RelationshipType>
         <Source>APT-29</Source>
         <Target>恶意Word文档</Target>
     </Relationship>
     <Relationship>
         <RelationshipId>relationship_4</RelationshipId>
-        <RelationshipType>actor_use</RelationshipType>
+        <RelationshipType>use</RelationshipType>
         <Source>APT-29</Source>
         <Target>CVE-2023-1234</Target>
     </Relationship>
     <Relationship>
         <RelationshipId>relationship_5</RelationshipId>
-        <RelationshipType>actor_use</RelationshipType>
+        <RelationshipType>use</RelationshipType>
         <Source>APT-29</Source>
         <Target>Cobalt Strike</Target>
     </Relationship>
     <Relationship>
         <RelationshipId>relationship_6</RelationshipId>
         <RelationshipType>target</RelationshipType>
-        <Source>政府机构攻击事件</Source>
-        <Target>192.168.1.10</Target>
+        <Source>APT-29</Source>
+        <Target>政府机构</Target>
     </Relationship>
     <Relationship>
         <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>APT-29</Source>
+        <Target>192.168.1.10</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
         <RelationshipType>exploit</RelationshipType>
         <Source>CVE-2023-1234</Source>
         <Target>Windows系统</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_9</RelationshipId>
+        <RelationshipType>has</RelationshipType>
+        <Source>政府机构</Source>
+        <Target>Windows系统</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_10</RelationshipId>
+        <RelationshipType>has</RelationshipType>
+        <Source>政府机构</Source>
+        <Target>192.168.1.10</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_11</RelationshipId>
+        <RelationshipType>trigger</RelationshipType>
+        <Source>政府机构</Source>
+        <Target>恶意Word文档</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_12</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Cobalt Strike</Source>
+        <Target>恶意Word文档</Target>
     </Relationship>
 </Relationships>
 ```
@@ -317,10 +402,21 @@
 1. **全面性**: 尽可能提取报告中所有相关实体和关系，不要遗漏重要信息
 2. **准确性**: 确保实体类型、子类型和关系类型的准确分类
 3. **一致性**: 相同实体在不同位置应使用相同的ID和名称
-4. **标签应用**: 根据实体的攻击行为正确应用MITRE ATT&CK战术标签
-5. **变种处理**: 对于同一实体的不同表述，使用EntityVariantNames进行关联
-6. **属性补充**: 尽可能提取实体的属性信息，丰富实体描述
-7. **关系推断**: 在明确的情况下，可以推断实体间的隐含关系
+4. **标签应用**: 每个实体必须分配至少一个MITRE ATT&CK战术标签，准确反映其在攻击链中的位置
+   - 攻击者(attcker)和事件(event)通常包含多个攻击阶段标签，反映其参与的整个攻击过程
+   - 工具、漏洞等实体应标记其主要作用的攻击阶段
+   - 相连实体的标签应体现攻击链的递进关系或同阶段协同
+   - 即使是被动实体(如受害者、资产)也应标记其在攻击链中被涉及的阶段
+5. **时序标记**: 每个实体必须有时序属性，准确反映其在攻击流程中的出现顺序
+   - 时序号码表示攻击进展的阶段(1,2,3...)
+   - 同一阶段的多个实体使用相同的时序号码
+   - 时序应与实体的战术标签保持逻辑一致性
+   - 攻击链中较早出现的实体时序号码较小，较晚出现的实体时序号码较大
+6. **变种处理**: 对于同一实体的不同表述，使用EntityVariantNames进行关联
+7. **属性补充**: 尽可能提取实体的属性信息，丰富实体描述
+8. **关系推断**: 在明确的情况下，可以推断实体间的隐含关系，确保关系反映攻击链的逻辑进展
+   - 例如，当报告提到攻击者使用某工具攻击某资产时，可以推断攻击者与资产之间存在target关系
+   - 当报告提到某漏洞被利用时，可以推断漏洞与相关资产之间存在exploit关系
 
 ## 边界情况处理
 

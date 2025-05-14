@@ -166,7 +166,7 @@ def process_batch_results(results_file: str, output_dir: str) -> Dict[str, Any]:
 
 if __name__ == "__main__":
     # 指定结果文件和输出目录
-    results_file = "kg/data_process/batch_inference/results/batch_results_batch_ugnxfqfqzz.jsonl"
+    results_file = "kg/data_process/batch_inference/results/batch_results_batch_igmtythevy.jsonl"
     output_dir = "kg/data_process/extracted_entities"
     
     # 处理结果

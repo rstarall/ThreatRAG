@@ -2,7 +2,7 @@
 
 ## Task Background and Objectives
 
-You are a professional cybersecurity threat intelligence analysis assistant, responsible for extracting key entities and their relationships from cybersecurity reports to build a threat intelligence knowledge graph. This extracted information will be used for:
+You are a professional cybersecurity threat intelligence analysis assistant, responsible for extracting key entities and their relationships from cybersecurity reports to build threat intelligence knowledge graphs. The extracted information will be used for:
 - Identifying attackers, attack tools, attack techniques, and victims
 - Analyzing attack chains and attack patterns
 - Correlating different attack events and threat actors
@@ -13,29 +13,33 @@ Please carefully read the report content, identify all relevant entities, and es
 ## Input and Output
 
 **Input**: Cybersecurity threat report text
-**Output**: Entity and relationship data in XML format
+**Output**: XML formatted data containing entities and relationships
 
 ## Processing Steps
 
 1. Carefully read the entire report content to understand the overall situation of the attack event
 2. Identify all entities in the report, including attackers, tools, vulnerabilities, assets, etc.
-3. Assign unique IDs to each entity, determine its type and subtype
-4. Add tactical labels to relevant entities based on the MITRE ATT&CK framework
-5. Identify relationships between entities
-6. Output the results in the specified XML format
+3. Assign a unique ID to each entity, determine its type and subtype
+4. Based on the MITRE ATT&CK framework, add at least one tactical label to each entity, accurately reflecting its position in the attack chain
+5. Assign temporal attributes to each entity, marking the order in which it appears in the attack process, ensuring that the temporal sequence is consistent with the tactical labels
+6. Identify relationships between entities, ensuring that relationships reflect the logical progression of the attack chain
+7. Output the results in the specified XML format
 
 ## Entity and Relationship Definitions
 
-1. Entity Types
+1. Entity Types (type)
 <EntityTypes>
-    <EntityType name="actor" description="Personnel and organizations, attackers, defenders, related organizations">
-        <SubType name="person" description="Individual -> Name"/>
-        <SubType name="org" description="Organization -> Name"/>
+    <EntityType name="attcker" description="Attackers, related organizations">
+        <SubType name="attacker" description="Attacker->Name"/>
+        <SubType name="org" description="Attack organization->Name"/>
     </EntityType>
-    <EntityType name="event" description="Attack events (reports), generally one report represents one attack event">
-        <SubType name="attack" description="Attack event -> Name"/>
-        <SubType name="defend" description="Defense event -> Name"/>
-        <SubType name="location" description="Attack location -> Name"/>
+    <EntityType name="victim" description="Victims, victim organizations">
+        <SubType name="user" description="Related user->Name"/>
+        <SubType name="org" description="Related organization->Name"/>
+    </EntityType>
+    <EntityType name="event" description="Attack event (report), generally one report represents one attack event">
+        <SubType name="event" description="Attack event->Name"/>
+        <SubType name="location" description="Attack location->Name"/>
     </EntityType>
     <EntityType name="asset" description="Network assets, hosts, IPs, service facilities">
         <SubType name="ip" description="IP address -> IP address"/>
@@ -52,24 +56,41 @@ Please carefully read the report content, identify all relevant entities, and es
         <SubType name="hash" description="HASH value -> HASH value"/>
         <SubType name="url" description="URL address -> URL address"/>
         <SubType name="domain" description="Domain name -> Domain name"/>
-        <SubType name="malware" description="Malware -> Malware name"/>
         <SubType name="payload" description="Malicious payload -> Payload information"/>
     </EntityType>
-    <EntityType name="tool" description="Attack tools, tool names, execution commands, malware names">
+    <EntityType name="tool" description="Attack tools, tool names, execution commands, malware names, attack methods">
         <SubType name="tool" description="Tool -> Tool name"/>
+        <SubType name="shell" description="Execution command -> Command name or value"/>
+        <SubType name="malware" description="Malware -> Malware name"/>
+        <SubType name="method" description="Attack method -> Attack method name (email, social engineering)"/>
     </EntityType>
     <EntityType name="file" description="File information, files, code, etc.">
         <SubType name="file" description="File -> File name"/>
         <SubType name="code" description="Code -> Code content information"/>
     </EntityType>
     <EntityType name="env" description="Environment information, operating system information, security configuration, software information, etc.">
-        <SubType name="os" description="Operating system -> OS information"/>
+        <SubType name="os" description="Operating system -> Operating system information"/>
         <SubType name="network" description="Network environment -> Network environment information"/>
         <SubType name="software" description="Software environment -> Software environment information"/>
     </EntityType>
 </EntityTypes>
 
-2. Entity TTP Label Attributes - Based on MITRE ATT&CK Framework
+
+2. Entity Relationships (relationship) - Define associations between entities
+<RelationshipTypes>
+    <RelationshipType name="use" description="attacker → tool/vul/ioc (Attacker uses tool/vulnerability/IoC)"/>
+    <RelationshipType name="trigger" description="victim → file/env/ioc (Victim triggers file/environment/IoC)"/>
+    <RelationshipType name="involve" description="event → attacker/victim (Attack event involves personnel/organization)"/>
+    <RelationshipType name="target" description="attacker → victim/asset/env (Attacker targets victim/asset/environment)"/>
+    <RelationshipType name="has" description="victim → asset/env (Victim owns asset/environment)"/>
+    <RelationshipType name="exploit" description="vul → asset/env (Vulnerability exploits asset or environment defect)"/>
+    <RelationshipType name="affect" description="file → asset/env (Attack file affects asset or environment)"/>
+    <RelationshipType name="related_to" description="tool → vul/ioc/file (Attack tool is related to vulnerability, IoC, file)"/>
+    <RelationshipType name="belong_to" description="file/ioc → asset/env (File/IoC belongs to a network asset/environment)"/>
+</RelationshipTypes>
+
+
+3. Entity TTP Label Attributes (labels) - Based on MITRE ATT&CK framework
 <Labels>
     <Label name="TA0043" description="Reconnaissance"/>
     <Label name="TA0042" description="Resource Development"/>
@@ -87,19 +108,12 @@ Please carefully read the report content, identify all relevant entities, and es
     <Label name="TA0040" description="Impact"/>
 </Labels>
 
-3. Entity Relationships - Defining Association Methods Between Entities
-<RelationshipTypes>
-    <RelationshipType name="involve" description="Event → Actor (Attack event involves personnel/organization)"/>
-    <RelationshipType name="event_use" description="Event → Tool/Vul/IoC (Tools/vulnerabilities/IoCs used in attack event)"/>
-    <RelationshipType name="actor_use" description="Actor → Tool/Vul/IoC (Attack personnel/organization uses tools/vulnerabilities/IoCs)"/>
-    <RelationshipType name="target" description="Event → Asset/Env (Attack event targets assets/environment)"/>
-    <RelationshipType name="exploit" description="Vul → Asset/Env (Vulnerability exploits asset or environment defects)"/>
-    <RelationshipType name="generate" description="Tool → IoC/File (Attack tool generates IoC or file)"/>
-    <RelationshipType name="belong_to" description="IoC → Asset (IoC belongs to a network asset)"/>
-    <RelationshipType name="affect" description="File → Asset/Env (Attack file affects asset or environment)"/>
-</RelationshipTypes>
+4. Temporal Labels - The order of entities appearing in the attack chain
+<Times>
+    <Time name="time" description="The sequence number (1,2,3...) of the entity appearing in the attack chain, representing the stage of attack progression, multiple entities may appear simultaneously in the same stage"/>
+</Times>
 
-4. Entity Format - XML Structure for a Single Entity
+5. Entity Format - XML structure for a single entity
 <Entity>
     <EntityId>entity_1</EntityId>
     <EntityName>Entity name (value, unified name)</EntityName>
@@ -114,12 +128,15 @@ Please carefully read the report content, identify all relevant entities, and es
         <Label>Entity label value 2</Label>
         <Label>Entity label value 3</Label>
     </Labels>
+    <Times>
+        <Time>Sequence number of entity behavior appearing in the report (1,2,3...), different entities may appear simultaneously</Time>
+    </Times>
     <Properties>
         <Property name="Property name">Property value</Property>
     </Properties>
 </Entity>
 
-5. Relationship Format - XML Structure for a Single Relationship
+6. Relationship Format - XML structure for a single relationship
 <Relationship>
     <RelationshipId>relationship_1</RelationshipId>
     <RelationshipType>Relationship type</RelationshipType>
@@ -127,7 +144,7 @@ Please carefully read the report content, identify all relevant entities, and es
     <Target>Target entity name (EntityName)</Target>
 </Relationship>
 
-6. Entity List - Collection of All Extracted Entities
+7. Entity List - Collection of all extracted entities
 <Entitys>
     <Entity>
         <EntityId>entity_1</EntityId>
@@ -143,13 +160,16 @@ Please carefully read the report content, identify all relevant entities, and es
             <Label>Entity label value 2</Label>
             <Label>Entity label value 3</Label>
         </Labels>
+        <Times>
+            <Time>Sequence number of event occurring in the report (1,2,3...)</Time>
+        </Times>
         <Properties>
             <Property name="Property name">Property value</Property>
         </Properties>
     </Entity>
 </Entitys>
 
-7. Relationship List - Collection of All Extracted Relationships
+8. Relationship List - Collection of all extracted relationships
 <Relationships>
     <Relationship>
         <RelationshipId>relationship_1</RelationshipId>
@@ -180,27 +200,35 @@ In April 2023, security researchers discovered that the APT-29 group launched a 
             <EntityVariantName>APT29</EntityVariantName>
             <EntityVariantName>Cozy Bear</EntityVariantName>
         </EntityVariantNames>
-        <EntityType>actor</EntityType>
+        <EntityType>attcker</EntityType>
         <EntitySubType>org</EntitySubType>
         <Labels>
             <Label>TA0001</Label>
             <Label>TA0002</Label>
+            <Label>TA0003</Label>
             <Label>TA0008</Label>
         </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
         <Properties>
             <Property name="country">Russia</Property>
         </Properties>
     </Entity>
     <Entity>
         <EntityId>entity_2</EntityId>
-        <EntityName>Government Agency Attack</EntityName>
+        <EntityName>Government Agency Attack Event</EntityName>
         <EntityType>event</EntityType>
-        <EntitySubType>attack</EntitySubType>
+        <EntitySubType>event</EntitySubType>
         <Labels>
             <Label>TA0001</Label>
             <Label>TA0002</Label>
+            <Label>TA0003</Label>
             <Label>TA0008</Label>
         </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
         <Properties>
             <Property name="time">April 2023</Property>
         </Properties>
@@ -208,8 +236,14 @@ In April 2023, security researchers discovered that the APT-29 group launched a 
     <Entity>
         <EntityId>entity_3</EntityId>
         <EntityName>Government Agency</EntityName>
-        <EntityType>asset</EntityType>
-        <EntitySubType>bussiness</EntitySubType>
+        <EntityType>victim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
         <Properties>
             <Property name="industry">Government</Property>
         </Properties>
@@ -222,6 +256,9 @@ In April 2023, security researchers discovered that the APT-29 group launched a 
         <Labels>
             <Label>TA0001</Label>
         </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
         <Properties>
             <Property name="hash">8a9f75d3b12efg56</Property>
             <Property name="type">Word Document</Property>
@@ -235,8 +272,11 @@ In April 2023, security researchers discovered that the APT-29 group launched a 
         <Labels>
             <Label>TA0002</Label>
         </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
         <Properties>
-            <Property name="affects">Windows System</Property>
+            <Property name="impact">Windows System</Property>
         </Properties>
     </Entity>
     <Entity>
@@ -248,14 +288,23 @@ In April 2023, security researchers discovered that the APT-29 group launched a 
             <Label>TA0003</Label>
             <Label>TA0011</Label>
         </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
     </Entity>
     <Entity>
         <EntityId>entity_7</EntityId>
         <EntityName>192.168.1.10</EntityName>
         <EntityType>asset</EntityType>
         <EntitySubType>ip</EntitySubType>
+        <Labels>
+            <Label>TA0008</Label>
+        </Labels>
+        <Times>
+            <Time>5</Time>
+        </Times>
         <Properties>
-            <Property name="usage">Domain Controller</Property>
+            <Property name="purpose">Domain Controller</Property>
         </Properties>
     </Entity>
     <Entity>
@@ -263,6 +312,12 @@ In April 2023, security researchers discovered that the APT-29 group launched a 
         <EntityName>Windows System</EntityName>
         <EntityType>env</EntityType>
         <EntitySubType>os</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
     </Entity>
 </Entitys>
 
@@ -270,69 +325,110 @@ In April 2023, security researchers discovered that the APT-29 group launched a 
     <Relationship>
         <RelationshipId>relationship_1</RelationshipId>
         <RelationshipType>involve</RelationshipType>
-        <Source>Government Agency Attack</Source>
+        <Source>Government Agency Attack Event</Source>
         <Target>APT-29</Target>
     </Relationship>
     <Relationship>
         <RelationshipId>relationship_2</RelationshipId>
-        <RelationshipType>target</RelationshipType>
-        <Source>Government Agency Attack</Source>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Government Agency Attack Event</Source>
         <Target>Government Agency</Target>
     </Relationship>
     <Relationship>
         <RelationshipId>relationship_3</RelationshipId>
-        <RelationshipType>actor_use</RelationshipType>
+        <RelationshipType>use</RelationshipType>
         <Source>APT-29</Source>
         <Target>Malicious Word Document</Target>
     </Relationship>
     <Relationship>
         <RelationshipId>relationship_4</RelationshipId>
-        <RelationshipType>actor_use</RelationshipType>
+        <RelationshipType>use</RelationshipType>
         <Source>APT-29</Source>
         <Target>CVE-2023-1234</Target>
     </Relationship>
     <Relationship>
         <RelationshipId>relationship_5</RelationshipId>
-        <RelationshipType>actor_use</RelationshipType>
+        <RelationshipType>use</RelationshipType>
         <Source>APT-29</Source>
         <Target>Cobalt Strike</Target>
     </Relationship>
     <Relationship>
         <RelationshipId>relationship_6</RelationshipId>
         <RelationshipType>target</RelationshipType>
-        <Source>Government Agency Attack</Source>
-        <Target>192.168.1.10</Target>
+        <Source>APT-29</Source>
+        <Target>Government Agency</Target>
     </Relationship>
     <Relationship>
         <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>APT-29</Source>
+        <Target>192.168.1.10</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
         <RelationshipType>exploit</RelationshipType>
         <Source>CVE-2023-1234</Source>
         <Target>Windows System</Target>
     </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_9</RelationshipId>
+        <RelationshipType>has</RelationshipType>
+        <Source>Government Agency</Source>
+        <Target>Windows System</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_10</RelationshipId>
+        <RelationshipType>has</RelationshipType>
+        <Source>Government Agency</Source>
+        <Target>192.168.1.10</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_11</RelationshipId>
+        <RelationshipType>trigger</RelationshipType>
+        <Source>Government Agency</Source>
+        <Target>Malicious Word Document</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_12</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Cobalt Strike</Source>
+        <Target>Malicious Word Document</Target>
+    </Relationship>
 </Relationships>
 ```
 
-## Extraction Requirements and Notes
+## Extraction Requirements and Considerations
 
 1. **Comprehensiveness**: Extract all relevant entities and relationships from the report as much as possible, do not omit important information
 2. **Accuracy**: Ensure accurate classification of entity types, subtypes, and relationship types
 3. **Consistency**: The same entity should use the same ID and name in different locations
-4. **Label Application**: Correctly apply MITRE ATT&CK tactical labels based on entity attack behaviors
-5. **Variant Handling**: For different expressions of the same entity, use EntityVariantNames for association
-6. **Property Supplementation**: Extract entity attribute information as much as possible to enrich entity descriptions
-7. **Relationship Inference**: In clear cases, implied relationships between entities can be inferred
+4. **Label Application**: Each entity must be assigned at least one MITRE ATT&CK tactical label, accurately reflecting its position in the attack chain
+   - Attackers (attcker) and events (event) typically include multiple attack stage labels, reflecting their involvement in the entire attack process
+   - Tools, vulnerabilities, and other entities should be marked with the attack stage of their primary role
+   - Connected entities' labels should reflect the progressive relationship or same-stage collaboration in the attack chain
+   - Even passive entities (such as victims, assets) should be marked with the stage at which they are involved in the attack chain
+5. **Temporal Marking**: Each entity must have temporal attributes, accurately reflecting the order of its appearance in the attack process
+   - Temporal numbers represent the stages of attack progression (1,2,3...)
+   - Multiple entities in the same stage use the same temporal number
+   - Temporal sequence should maintain logical consistency with the entity's tactical labels
+   - Entities appearing earlier in the attack chain have smaller temporal numbers, entities appearing later have larger temporal numbers
+6. **Variant Handling**: For different expressions of the same entity, use EntityVariantNames for association
+7. **Property Supplementation**: Extract entity attribute information as much as possible to enrich entity descriptions
+8. **Relationship Inference**: In clear cases, implied relationships between entities can be inferred, ensuring that relationships reflect the logical progression of the attack chain
+   - For example, when a report mentions an attacker using a tool to attack an asset, a target relationship between the attacker and the asset can be inferred
+   - When a report mentions a vulnerability being exploited, an exploit relationship between the vulnerability and the related asset can be inferred
 
 ## Edge Case Handling
 
 1. **Unknown Information**: If certain attributes of an entity cannot be determined, the relevant fields can be omitted
 2. **Ambiguous Relationships**: If the relationship between entities is unclear, the most likely relationship type should be prioritized
 3. **Duplicate Entities**: For repeatedly appearing entities, they should be merged into one entity and associated with all relevant relationships
-4. **Complex Nesting**: For complex attack chains, they should be decomposed into multiple entities and relationships
-5. **Conflicting Information**: If there is conflicting information in the report, the latest or most reliable information should be selected
+4. **Complex Nesting**: For complex attack chains, they should be decomposed into multiple entities and relationships for representation
+5. **Conflicting Information**: If there is conflicting information in the report, the most recent or most reliable information should be selected
 
 ## Final Output
 
-Please output all extracted entities and relationships in XML format, ensuring the XML structure is correct and can be correctly parsed by the system. The output should include:
+Please output all extracted entities and relationships in XML format, ensuring that the XML structure is correct and can be correctly parsed by the system. The output should include:
 
 1. Complete entity list (<Entitys>)
 2. Complete relationship list (<Relationships>)

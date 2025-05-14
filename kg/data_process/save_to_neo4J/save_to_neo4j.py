@@ -110,27 +110,9 @@ class Neo4jGraphSaver:
         flattened = {}
 
         # 处理Properties字段
-        if "Properties" in properties:
-            props = properties["Properties"]
-            if isinstance(props, dict):
-                for key, value in props.items():
-                    flattened[key] = value
-
-        # 处理Labels字段
-        if "Labels" in properties:
-            labels = properties["Labels"]
-            if isinstance(labels, dict) and "Labels" in labels:
-                flattened["labels"] = labels["Labels"]
-            elif isinstance(labels, list):
-                flattened["labels"] = labels
-
-        # 处理EntityVariantNames字段
-        if "EntityVariantNames" in properties:
-            variant_names = properties["EntityVariantNames"]
-            if isinstance(variant_names, dict) and "EntityVariantNames" in variant_names:
-                flattened["variant_names"] = variant_names["EntityVariantNames"]
-            elif isinstance(variant_names, list):
-                flattened["variant_names"] = variant_names
+        if isinstance(properties, dict):
+            for key, value in properties.items():
+                flattened[key] = value
 
         return flattened
 
@@ -202,6 +184,7 @@ class Neo4jGraphSaver:
             entities: 实体数据列表
             file_path: 源文件路径
         """
+        logger.debug(f"处理文件 {file_path} 中的实体数据")
         for entity in entities:
             try:
                 # 检查必要的字段
@@ -224,8 +207,8 @@ class Neo4jGraphSaver:
 
                 # 处理其他属性
                 if "Properties" in entity:
-                    flattened_props = self._flatten_properties(entity["Properties"])
-                    properties.update(flattened_props)
+                    if isinstance(entity["Properties"], dict):
+                        properties["properties"]= json.dumps(entity["Properties"],indent=2)
 
                 # 处理Labels
                 if "Labels" in entity:
@@ -234,6 +217,7 @@ class Neo4jGraphSaver:
                     elif isinstance(entity["Labels"], list):
                         properties["labels"] = entity["Labels"]
 
+
                 # 处理EntityVariantNames
                 if "EntityVariantNames" in entity:
                     if isinstance(entity["EntityVariantNames"], dict) and "EntityVariantNames" in entity["EntityVariantNames"]:
@@ -241,6 +225,13 @@ class Neo4jGraphSaver:
                     elif isinstance(entity["EntityVariantNames"], list):
                         properties["variant_names"] = entity["EntityVariantNames"]
 
+                # 处理Times
+                if "Times" in entity:
+                    if isinstance(entity["Times"], dict) and "Times" in entity["Times"]:
+                        properties["times"] = entity["Times"]["Times"]
+                    elif isinstance(entity["Times"], list):
+                        properties["times"] = entity["Times"]
+        
                 # 保存实体到Neo4j
                 self._save_entity_to_neo4j(entity_name, entity_type, properties)
             except Exception as e:
@@ -254,6 +245,7 @@ class Neo4jGraphSaver:
             relationships: 关系数据列表
             file_path: 源文件路径
         """
+        logger.debug(f"处理文件 {file_path} 中的关系数据")
         for relationship in relationships:
             try:
                 # 检查必要的字段

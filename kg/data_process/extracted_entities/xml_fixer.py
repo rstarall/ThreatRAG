@@ -68,35 +68,22 @@ def fix_tag_mismatch(content: str) -> str:
     Returns:
         str: 修复后的XML内容
     """
-    # 使用正则表达式查找所有的开始和结束标签
-    open_tags = re.findall(r'<([a-zA-Z0-9_]+)(?:\s+[^>]*)?>', content)
-    close_tags = re.findall(r'</([a-zA-Z0-9_]+)>', content)
+    # 直接处理特定的标签不匹配问题，如 <RelationshipId>relationship_6</RelationshipType>
+    # 这是一个简单但有效的方法，专门针对我们遇到的问题
 
-    # 创建标签替换映射
-    replacements = {}
+    # 修复 <RelationshipId>xxx</RelationshipType> 的情况
+    content = re.sub(
+        r'<RelationshipId>([^<>]*)</RelationshipType>',
+        r'<RelationshipId>\1</RelationshipId>',
+        content
+    )
 
-    # 检查每个结束标签
-    for i, close_tag in enumerate(close_tags):
-        # 如果结束标签不在TAG_PAIRS中，尝试找到正确的标签
-        if close_tag not in TAG_PAIRS.values():
-            # 查找对应的开始标签
-            if i < len(open_tags):
-                open_tag = open_tags[i]
-                if open_tag in TAG_PAIRS:
-                    # 添加到替换映射
-                    replacements[f'</{close_tag}>'] = f'</{TAG_PAIRS[open_tag]}>'
-                    logger.debug(f"标签不匹配: </{close_tag}> -> </{TAG_PAIRS[open_tag]}>")
-        # 如果结束标签在TAG_PAIRS中，但与对应的开始标签不匹配
-        elif i < len(open_tags):
-            open_tag = open_tags[i]
-            if open_tag in TAG_PAIRS and TAG_PAIRS[open_tag] != close_tag:
-                # 添加到替换映射
-                replacements[f'</{close_tag}>'] = f'</{TAG_PAIRS[open_tag]}>'
-                logger.debug(f"标签不匹配: </{close_tag}> -> </{TAG_PAIRS[open_tag]}>")
-
-    # 应用替换
-    for old, new in replacements.items():
-        content = content.replace(old, new)
+    # 修复其他可能的标签不匹配情况
+    for tag in TAG_PAIRS:
+        correct_close_tag = TAG_PAIRS[tag]
+        # 查找所有形如 <Tag>xxx</WrongTag> 的模式
+        pattern = f'<{tag}>([^<>]*)</(?!{correct_close_tag})[a-zA-Z0-9_]+>'
+        content = re.sub(pattern, f'<{tag}>\\1</{correct_close_tag}>', content)
 
     return content
 
@@ -110,7 +97,9 @@ def fix_unclosed_tags(content: str) -> str:
     Returns:
         str: 修复后的XML内容
     """
-    # 使用正则表达式查找所有的开始标签
+    # 使用一个更简单但更可靠的方法来修复未闭合的标签
+
+    # 使用正则表达式查找所有的开始标签和结束标签
     open_tags = re.findall(r'<([a-zA-Z0-9_]+)(?:\s+[^>]*)?>', content)
     close_tags = re.findall(r'</([a-zA-Z0-9_]+)>', content)
 
@@ -132,6 +121,30 @@ def fix_unclosed_tags(content: str) -> str:
     for tag in reversed(unclosed_tags):
         content += f'</{tag}>'
         logger.debug(f"添加缺失的闭合标签: </{tag}>")
+
+    # 特别处理一些常见的未闭合标签情况
+    # 例如，如果有 <Target>xxx 但没有 </Target>，添加 </Target>
+    for tag in TAG_PAIRS:
+        # 查找所有形如 <Tag>xxx 但没有对应的 </Tag> 的情况
+        pattern = f'<{tag}>([^<>]*?)(?!.*?</{tag}>).*?$'
+        matches = re.findall(pattern, content, re.DOTALL)
+        if matches:
+            # 在内容末尾添加缺失的闭合标签
+            if not content.endswith(f'</{tag}>'):
+                    content += f'</{tag}>'
+                    logger.debug(f"添加特殊缺失的闭合标签: </{tag}>")
+
+    # 处理特定的标签，如 Target、Source 等
+    for specific_tag in ['Target', 'Source', 'RelationshipId', 'RelationshipType', 'EntityId', 'EntityName', 'EntityType']:
+        if f'<{specific_tag}>' in content and f'</{specific_tag}>' not in content:
+            content += f'</{specific_tag}>'
+            logger.debug(f"添加特定缺失的闭合标签: </{specific_tag}>")
+
+    # 处理嵌套标签
+    for parent_tag in ['Relationship', 'Entity', 'Relationships', 'Entitys']:
+        if f'<{parent_tag}>' in content and f'</{parent_tag}>' not in content:
+            content += f'</{parent_tag}>'
+            logger.debug(f"添加嵌套缺失的闭合标签: </{parent_tag}>")
 
     return content
 
@@ -255,25 +268,116 @@ def fix_xml_content(content: str) -> str:
     # 保存原始内容，以便在处理失败时恢复
     original_content = content
 
-    # 检查是否包含关系部分
-    has_relationships = "<Relationships>" in content and "</Relationships>" in content
-    relationships_content = ""
-
-    # 如果有关系部分，先提取出来
-    if has_relationships:
-        rel_start = content.find("<Relationships>")
-        rel_end = content.find("</Relationships>") + len("</Relationships>")
-        relationships_content = content[rel_start:rel_end]
-
-        # 记录关系部分
-        logger.debug(f"提取到关系部分: {relationships_content[:100]}...")
-
-    # 应用各种修复
-    content = fix_invalid_characters(content)
-    content = fix_property_attributes(content)
+    # 首先，修复未闭合的标签和标签不匹配问题
+    # 这是最基本的修复，应该首先进行
     content = fix_tag_mismatch(content)
     content = fix_unclosed_tags(content)
-    content = fix_xml_structure(content)
+
+    # 检查是否包含实体和关系部分
+    has_entitys_open = "<Entitys>" in content
+    has_entitys_close = "</Entitys>" in content
+    has_relationships_open = "<Relationships>" in content
+    has_relationships_close = "</Relationships>" in content
+    has_entity = "<Entity>" in content
+    has_relationship = "<Relationship>" in content
+
+    # 提取关系部分（如果存在）
+    relationships_content = ""
+    if has_relationships_open:
+        rel_start = content.find("<Relationships>")
+        rel_end = content.find("</Relationships>") if has_relationships_close else len(content)
+        if has_relationships_close:
+            rel_end += len("</Relationships>")
+        relationships_content = content[rel_start:rel_end]
+        logger.debug(f"提取到关系部分: {relationships_content[:100]}...")
+
+    # 提取实体部分（如果存在）
+    entitys_content = ""
+    if has_entitys_open:
+        ent_start = content.find("<Entitys>")
+        ent_end = content.find("</Entitys>") if has_entitys_close else (rel_start if has_relationships_open else len(content))
+        if has_entitys_close:
+            ent_end += len("</Entitys>")
+        entitys_content = content[ent_start:ent_end]
+        logger.debug(f"提取到实体部分: {entitys_content[:100]}...")
+
+    # 如果没有明确的Entitys标签但有Entity标签，构建Entitys部分
+    if not has_entitys_open and has_entity:
+        # 查找所有Entity标签对
+        entity_pattern = r'<Entity>.*?</Entity>'
+        entity_matches = re.findall(entity_pattern, content, re.DOTALL)
+        if entity_matches:
+            entitys_content = "<Entitys>\n" + "\n".join(entity_matches) + "\n</Entitys>"
+            has_entitys_open = True
+            has_entitys_close = True
+            logger.debug("从Entity标签构建了Entitys部分")
+
+    # 如果没有明确的Relationships标签但有Relationship标签，构建Relationships部分
+    if not has_relationships_open and has_relationship:
+        # 查找所有Relationship标签对
+        relationship_pattern = r'<Relationship>.*?</Relationship>'
+        relationship_matches = re.findall(relationship_pattern, content, re.DOTALL)
+        if relationship_matches:
+            relationships_content = "<Relationships>\n" + "\n".join(relationship_matches) + "\n</Relationships>"
+            has_relationships_open = True
+            has_relationships_close = True
+            logger.debug("从Relationship标签构建了Relationships部分")
+
+    # 分别修复实体和关系部分
+    if entitys_content:
+        # 应用各种修复到实体部分
+        fixed_entitys = fix_invalid_characters(entitys_content)
+        fixed_entitys = fix_property_attributes(fixed_entitys)
+        fixed_entitys = fix_tag_mismatch(fixed_entitys)
+        fixed_entitys = fix_unclosed_tags(fixed_entitys)
+
+        # 确保实体部分有正确的开始和结束标签
+        if not fixed_entitys.startswith("<Entitys>"):
+            fixed_entitys = "<Entitys>\n" + fixed_entitys
+        if not fixed_entitys.endswith("</Entitys>"):
+            fixed_entitys += "\n</Entitys>"
+    else:
+        fixed_entitys = ""
+
+    if relationships_content:
+        # 应用各种修复到关系部分
+        fixed_relationships = fix_invalid_characters(relationships_content)
+        fixed_relationships = fix_property_attributes(fixed_relationships)
+        fixed_relationships = fix_tag_mismatch(fixed_relationships)
+        fixed_relationships = fix_unclosed_tags(fixed_relationships)
+
+        # 确保关系部分有正确的开始和结束标签
+        if not fixed_relationships.startswith("<Relationships>"):
+            fixed_relationships = "<Relationships>\n" + fixed_relationships
+        if not fixed_relationships.endswith("</Relationships>"):
+            fixed_relationships += "\n</Relationships>"
+    else:
+        fixed_relationships = ""
+
+    # 如果原始内容既没有实体也没有关系部分，直接修复整个内容
+    if not entitys_content and not relationships_content:
+        content = fix_invalid_characters(content)
+        content = fix_property_attributes(content)
+        content = fix_tag_mismatch(content)
+        content = fix_unclosed_tags(content)
+        content = fix_xml_structure(content)
+    else:
+        # 组合修复后的实体和关系部分
+        content = ""
+        if fixed_entitys:
+            content += fixed_entitys + "\n"
+        if fixed_relationships:
+            content += fixed_relationships
+
+    # 添加XML声明（如果原始内容有）
+    if original_content.startswith("<?xml"):
+        xml_decl_end = original_content.find("?>") + 2
+        xml_decl = original_content[:xml_decl_end]
+        if not content.startswith("<?xml"):
+            content = xml_decl + "\n" + content
+
+    # 最后再次修复未闭合的标签，确保所有标签都正确闭合
+    content = fix_unclosed_tags(content)
 
     # 使用BeautifulSoup进行最终清理，但要小心处理
     try:
@@ -281,36 +385,26 @@ def fix_xml_content(content: str) -> str:
         soup = BeautifulSoup(content, 'xml')
         parsed_content = str(soup)
 
-        # 检查清理后的内容是否保留了关系部分
-        if has_relationships and "<Relationships>" not in parsed_content:
-            logger.warning("BeautifulSoup清理后丢失了关系部分，将手动保留关系部分")
+        # 检查清理后的内容是否保留了实体和关系部分
+        fixed_has_entities = "<Entity>" in parsed_content
+        fixed_has_relationships = has_relationship and "<Relationship>" in parsed_content
 
-            # 如果丢失了关系部分，手动添加回去
-            if "</Entitys>" in parsed_content:
-                parsed_content = parsed_content.replace("</Entitys>", f"</Entitys>\n{relationships_content}")
-            else:
-                parsed_content += f"\n{relationships_content}"
-
-            content = parsed_content
+        if (has_entity and not fixed_has_entities) or (has_relationship and not fixed_has_relationships):
+            logger.warning("BeautifulSoup清理后丢失了重要部分，将使用手动修复的内容")
+            # 不使用BeautifulSoup的结果
         else:
             content = parsed_content
     except Exception as e:
         logger.warning(f"BeautifulSoup清理失败: {str(e)}，将使用手动修复的内容")
 
-        # 如果BeautifulSoup处理失败，使用手动修复的内容
-        # 但要确保关系部分被保留
-        if has_relationships and "<Relationships>" not in content:
-            if "</Entitys>" in content:
-                content = content.replace("</Entitys>", f"</Entitys>\n{relationships_content}")
-            else:
-                content += f"\n{relationships_content}"
-
     # 最终检查：如果修复后的内容丢失了实体或关系部分，恢复原始内容
     fixed_has_entities = "<Entity>" in content
-    fixed_has_relationships = has_relationships and "<Relationship>" in content
+    fixed_has_relationships = has_relationship and "<Relationship>" in content
 
-    if (has_relationships and not fixed_has_relationships) or not fixed_has_entities:
+    if (has_entity and not fixed_has_entities) or (has_relationship and not fixed_has_relationships):
         logger.warning("修复后的内容丢失了重要部分，将使用原始内容")
+        # 但是我们仍然需要修复未闭合的标签
+        original_content = fix_unclosed_tags(original_content)
         return original_content
 
     return content
@@ -479,11 +573,11 @@ def main():
     """主函数"""
     # 解析命令行参数
     parser = argparse.ArgumentParser(description='XML修复工具')
-    group = parser.add_mutually_exclusive_group(required=True)
+    group = parser.add_mutually_exclusive_group(required=False)
     group.add_argument('--file', help='要修复的XML文件路径')
-    group.add_argument('--dir', help='要修复的XML文件目录')
-    parser.add_argument('--output', help='输出路径')
-    parser.add_argument('--overwrite', action='store_true', help='是否覆盖原文件')
+    group.add_argument('--dir', help='要修复的XML文件目录',default="kg/data_process/extracted_entities")
+    parser.add_argument('--output', help='输出路径',default="kg/data_process/extracted_entities/fixed_xml")
+    parser.add_argument('--overwrite', action='store_true', help='是否覆盖原文件',default=True)
     parser.add_argument('--verbose', action='store_true', help='显示详细日志')
     parser.add_argument('--check-only', action='store_true', help='仅检查文件，不进行修复')
 

@@ -263,7 +263,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description='处理批量推理任务的结果')
 
     # 批量任务相关参数
-    parser.add_argument('--batch_id', type=str, default=None,
+    parser.add_argument('--batch_id', type=str, default="batch_igmtythevy",
                         help='批量推理任务ID')
 
     # 直接URL下载相关参数

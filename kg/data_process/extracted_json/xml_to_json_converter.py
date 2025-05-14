@@ -42,12 +42,14 @@ def ensure_dir_exists(directory):
     """确保指定目录存在，如果不存在则创建"""
     os.makedirs(directory, exist_ok=True)
 
-def parse_entity(entity_elem):
+def parse_entity(entity_elem, report_year=None, report_name=None):
     """
     解析单个实体元素
 
     Args:
         entity_elem: 实体XML元素
+        report_year: 报告年份，用于event类型实体的observe_time属性
+        report_name: 报告名称，用于event类型实体的report_name属性
 
     Returns:
         dict: 实体的字典表示
@@ -68,6 +70,8 @@ def parse_entity(entity_elem):
             entity["EntityVariantNames"] = [name.text for name in child.findall("EntityVariantName")]
         elif child.tag == "Labels":
             entity["Labels"] = [label.text for label in child.findall("Label")]
+        elif child.tag == "Times":
+            entity["Times"] = [time.text for time in child.findall("Time")]
         elif child.tag == "Properties":
             properties = {}
             for prop in child.findall("Property"):
@@ -83,6 +87,10 @@ def parse_entity(entity_elem):
     if "Labels" not in entity and entity_elem.findall("Label"):
         entity["Labels"] = [label.text for label in entity_elem.findall("Label")]
 
+    # 如果没有找到Times，但有直接的Time子元素
+    if "Times" not in entity and entity_elem.findall("Time"):
+        entity["Times"] = [time.text for time in entity_elem.findall("Time")]
+
     # 如果没有找到Properties，但有直接的Property子元素
     if "Properties" not in entity and entity_elem.findall("Property"):
         properties = {}
@@ -91,6 +99,15 @@ def parse_entity(entity_elem):
                 properties[prop.attrib["name"]] = prop.text or ""
         if properties:
             entity["Properties"] = properties
+
+    # 如果实体类型是event，添加observe_time和report_name属性
+    if entity.get("EntityType") == "event":
+        if "Properties" not in entity:
+            entity["Properties"] = {}
+        if report_year:
+            entity["Properties"]["observe_time"] = report_year
+        if report_name:
+            entity["Properties"]["report_name"] = report_name
 
     return entity
 
@@ -130,13 +147,26 @@ def process_xml_file(xml_file_path):
             "Relationships": []
         }
 
+        # 从文件路径中提取报告年份和报告名称
+        # 路径格式应该是 .../fixed_xml/YYYY/filename.xml
+        path_parts = Path(xml_file_path).parts
+        report_year = None
+        for part in path_parts:
+            # 尝试将路径部分解析为年份（4位数字）
+            if part.isdigit() and len(part) == 4:
+                report_year = part
+                break
+
+        # 提取报告名称（文件名，不包含扩展名）
+        report_name = Path(xml_file_path).stem
+
         # 读取XML文件内容
         with open(xml_file_path, 'r', encoding='utf-8') as f:
             content = f.read()
 
         # 尝试直接解析XML文件
         try:
-            # 解析XML文件
+            # 解析XML文件,xml必须有xml头
             tree = ET.parse(xml_file_path)
             root = tree.getroot()
 
@@ -146,7 +176,7 @@ def process_xml_file(xml_file_path):
                 entitys_elem = root if root.tag == "Entitys" else root.find("Entitys")
                 if entitys_elem is not None:
                     for entity_elem in entitys_elem.findall("Entity"):
-                        entity = parse_entity(entity_elem)
+                        entity = parse_entity(entity_elem, report_year, report_name)
                         data["Entities"].append(entity)
 
                 # 查找Relationships节点
@@ -158,7 +188,7 @@ def process_xml_file(xml_file_path):
             else:
                 # 如果根元素是Root，直接查找Entity和Relationship元素
                 for entity_elem in root.findall(".//Entity"):
-                    entity = parse_entity(entity_elem)
+                    entity = parse_entity(entity_elem, report_year, report_name)
                     data["Entities"].append(entity)
 
                 for rel_elem in root.findall(".//Relationship"):
@@ -182,7 +212,7 @@ def process_xml_file(xml_file_path):
 
                     # 处理所有Entity元素
                     for entity_elem in entitys_root.findall("Entity"):
-                        entity = parse_entity(entity_elem)
+                        entity = parse_entity(entity_elem, report_year, report_name)
                         data["Entities"].append(entity)
                 except ET.ParseError as e:
                     print(f"警告: 无法解析Entitys部分: {str(e)}")
@@ -214,7 +244,7 @@ def process_xml_file(xml_file_path):
 
                     # 查找Entity元素
                     for entity_elem in root.findall(".//Entity"):
-                        entity = parse_entity(entity_elem)
+                        entity = parse_entity(entity_elem, report_year, report_name)
                         data["Entities"].append(entity)
 
                     # 查找Relationship元素
