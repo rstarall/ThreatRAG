@@ -17,13 +17,13 @@ def start_server(host = "0.0.0.0", port = 8000):
     """start the fastapi server"""
     uvicorn.run(fastapi_server, host=host, port=port)
 
-def start_vector_database(path = "/rag/data/vector_db"):
-    """start the vector database"""
-    create_vector_database_instance(path=path)
+# def start_vector_database(path = "/rag/data/vector_db"):
+#     """start the vector database"""
+#     create_vector_database_instance(path=path)
 
-def start_rag_service():
-    """start the rag service"""
-    pass
+# def start_rag_service():
+#     """start the rag service"""
+#     pass
 
 def signal_handler(sig, frame):
     """处理信号，确保主进程结束时终止所有线程"""
@@ -39,7 +39,7 @@ if __name__ == "__main__":
     
     # 将向量数据库线程设置为守护线程，这样主进程结束时它会自动终止
     thread = threading.Thread(
-        target=start_vector_database, 
+        #target=start_vector_database, 
         args=(config["vector_database"]["path"],),
         daemon=True  # 设置为守护线程
     )
