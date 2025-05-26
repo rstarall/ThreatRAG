@@ -1,6 +1,7 @@
 # ignore all files in the models folder
 models/*/
 
+./milvus_lite/*
 #忽略情报文档爬虫
 data_spider
 
