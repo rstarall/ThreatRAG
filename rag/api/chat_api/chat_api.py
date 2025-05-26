@@ -58,7 +58,7 @@ async def chat_stream(request: ChatRequest):
                 if token_json:
                     full_response += token_json
                     yield f"data: {token_json}\n\n"
-
+            
             conversation_title = await streaming_conversation.get_title_from_conversation(conversation_id)
             yield f"data:[conversation_title]:{conversation_title}\n\n"
             yield f"event: complete\ndata: {json.dumps({'type':'conversation_full','data':full_response})}\n\n"

@@ -1,0 +1,76 @@
+version: '3.8'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: threatrag-rabbitmq
+    ports:
+      - "5672:5672"   # RabbitMQ服务端口
+      - "15672:15672" # RabbitMQ管理界面端口
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    networks:
+      - threatrag-network
+    healthcheck:
+      test: ["CMD", "rabbitmqctl", "status"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: threatrag-api
+    ports:
+      - "8000:8000"
+    environment:
+      - RABBITMQ_HOST=rabbitmq
+      - RABBITMQ_PORT=5672
+      - RABBITMQ_USERNAME=guest
+      - RABBITMQ_PASSWORD=guest
+      - RABBITMQ_VHOST=/
+      - CONVERSATION_WORKERS=3
+      - VECTOR_SEARCH_WORKERS=3
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    networks:
+      - threatrag-network
+
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile.worker
+    container_name: threatrag-worker
+    environment:
+      - RABBITMQ_HOST=rabbitmq
+      - RABBITMQ_PORT=5672
+      - RABBITMQ_USERNAME=guest
+      - RABBITMQ_PASSWORD=guest
+      - RABBITMQ_VHOST=/
+      - WORKER_TYPE=all  # 可选: conversation, vector, all
+      - WORKER_COUNT=3
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    networks:
+      - threatrag-network
+    deploy:
+      replicas: 2  # 可以根据需要调整工作器实例数量
+
+networks:
+  threatrag-network:
+    driver: bridge
+
+volumes:
+  rabbitmq_data:
