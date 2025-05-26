@@ -12,3 +12,9 @@ file_upload:
 model:
   embedding_model:
     path: /rag/data/embedding_model
+
+milvus:
+  auto_start: true
+  data_dir: ./milvus_lite
+  host: 127.0.0.1
+  port: 19530

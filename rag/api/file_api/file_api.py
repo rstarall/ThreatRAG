@@ -8,9 +8,22 @@ from typing import List, Dict
 from fastapi.responses import JSONResponse
 import aiofiles
 from rag.api.server import fastapi_server as app
+from pathlib import Path
 
-UPLOAD_DIR = "../../data/file_uploads"
-FILE_INFO = "../../data/file_info.json"
+# 获取项目根目录
+def get_project_root():
+    current_path = Path(__file__).resolve()
+    root_indicators = ['.git', 'requirements.txt', 'pyproject.toml', 'setup.py', 'README.md']
+
+    for parent in current_path.parents:
+        if any((parent / indicator).exists() for indicator in root_indicators):
+            return str(parent)
+
+    return str(current_path.parent.parent.parent)
+
+PROJECT_ROOT = get_project_root()
+UPLOAD_DIR = os.path.join(PROJECT_ROOT, "rag", "data", "file_uploads")
+FILE_INFO = os.path.join(PROJECT_ROOT, "rag", "data", "file_info.json")
 file_lock = asyncio.Lock()  # 异步文件操作锁
 
 # 确保上传目录存在
@@ -60,11 +73,11 @@ async def save_upload_file(file: UploadFile) -> dict:
     try:
         contents = await file.read()
         temp_path = os.path.join(UPLOAD_DIR, file.filename)
-        
+
         # 保存临时文件
         with open(temp_path, "wb") as f:
             f.write(contents)
-        
+
         # 生成哈希并重命名
         file_hash = generate_file_hash(temp_path)
         filename, ext = os.path.splitext(file.filename)
@@ -100,5 +113,5 @@ async def upload_files(files: List[UploadFile] = File(...)):
                 "filename": file.filename,
                 "error": str(e)
             })
-            
+
     return JSONResponse(content={"files": results})

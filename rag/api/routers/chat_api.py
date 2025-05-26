@@ -6,11 +6,11 @@ import uuid
 from fastapi import APIRouter, Body, Depends, HTTPException
 from fastapi.responses import StreamingResponse
 from langchain_core.messages import AIMessageChunk
-from src import executor,retriever,config
-from src.core import HistoryManager
+from packages import executor,retriever,config
+from packages.core import HistoryManager
 #from rag.src.agents import agent_manager
-from src.models import select_model
-from src.utils.logging_config import logger
+from packages.models import select_model
+from packages.utils.logging_config import logger
 #from rag.src.agents.tools_factory import get_all_tools
 
 chat = APIRouter(prefix="/chat")

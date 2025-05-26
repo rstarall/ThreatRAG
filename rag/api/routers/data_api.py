@@ -5,9 +5,9 @@ from typing import List, Optional
 from fastapi import APIRouter, File, UploadFile, HTTPException, Depends, Body, Form, Query
 import shutil
 
-from src.utils import logger, hashstr
-from src import config
-from src import executor, retriever, knowledge_base, graph_base
+from packages.utils import logger, hashstr
+from packages import config
+from packages import executor, retriever, knowledge_base, graph_base
 
 data = APIRouter(prefix="/data")
 

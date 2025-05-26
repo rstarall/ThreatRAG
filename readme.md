@@ -4,10 +4,18 @@ ThreadRAG is a RAG(Retrieval-Augmented Generation) framework for CTI(Cyber Threa
 
 ## How to run?
 
-start the project with:
+首先安装依赖：
+```shell
+pip install -r requirements.txt
+```
+
+然后启动项目：
 ```shell
 python ./main.py
 ```
+
+**注意：** 从现在开始，启动main.py时会自动启动本地的Milvus服务器，无需手动启动。如果是第一次运行，系统会自动安装milvus。
+
 please confirm the .env file is setup:
 ```yaml
 #BASE_MODEL=gpt-4o-mini
@@ -29,14 +37,27 @@ username:neo4j
 password:12345678
 
 ### milvus
-install
+Milvus会在启动main.py时自动安装和启动。
+
+如果需要手动管理，可以使用以下命令：
+
+安装milvus：
 ```shell
 pip install milvus
 ```
-start milvus
+
+手动启动milvus（通常不需要，因为会自动启动）：
 ```shell
 milvus-server --data ./milvus_lite
+```
 
+配置选项（在config.yaml中）：
+```yaml
+milvus:
+  auto_start: true          # 是否自动启动milvus
+  data_dir: ./milvus_lite   # 数据存储目录
+  host: 127.0.0.1          # 监听地址
+  port: 19530              # 监听端口
 ```
 
 

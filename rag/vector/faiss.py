@@ -15,29 +15,44 @@ from langchain_core.documents import Document
 class FaissVectorDatabase(VectorDatabase):
     def __init__(self, path: str = "../data/faiss_index"):
         super().__init__(path)
-        
+
         # 设置路径
         base_dir = os.path.dirname(os.path.abspath(__file__))
         self.data_dir = os.path.abspath(os.path.join(base_dir, "../data"))
         self.file_uploads_dir = os.path.join(self.data_dir, "file_uploads")
         self.file_chunks_dir = os.path.join(self.data_dir, "file_chunks")
         self.index_path = os.path.join(self.data_dir, "faiss_index")
-        
+
         # 确保目录存在
         os.makedirs(self.file_uploads_dir, exist_ok=True)
         os.makedirs(self.file_chunks_dir, exist_ok=True)
         os.makedirs(self.index_path, exist_ok=True)
-        
-        # 设置模型
-        model_path = os.path.abspath(os.path.join(base_dir, "../../models/embedding_model/bge-m3"))
+
+        # 设置模型 - 使用项目根目录的相对路径
+        from pathlib import Path
+
+        # 获取项目根目录
+        current_path = Path(__file__).resolve()
+        root_indicators = ['.git', 'requirements.txt', 'pyproject.toml', 'setup.py', 'README.md']
+
+        project_root = None
+        for parent in current_path.parents:
+            if any((parent / indicator).exists() for indicator in root_indicators):
+                project_root = str(parent)
+                break
+
+        if project_root is None:
+            project_root = str(current_path.parent.parent.parent)
+
+        model_path = os.path.join(project_root, "models", "embedding_model", "bge-m3")
         print(f"尝试加载嵌入模型：{model_path}")
-        
+
         # 测试嵌入模型
         try:
             self.embeddings = HuggingFaceEmbeddings(
                 model_name=model_path
             )
-            
+
             # 测试嵌入生成
             test_text = "这是一个测试文本，用于验证嵌入模型是否工作正常。"
             test_embedding = self.embeddings.embed_query(test_text)
@@ -54,10 +69,10 @@ class FaissVectorDatabase(VectorDatabase):
             except Exception as e:
                 print(f"在线嵌入模型也失败: {str(e)}")
                 raise ValueError("无法初始化嵌入模型，请检查网络连接和模型安装。")
-        
+
         # 创建或加载向量存储
         self.vector_store = self.load_or_create_vector_store(self.index_path)
-        
+
         # 启动自动更新线程
         self.stop_update_thread = False
         self.update_thread = threading.Thread(target=self._auto_update_vector_store)
@@ -84,10 +99,10 @@ class FaissVectorDatabase(VectorDatabase):
                     if key not in doc.metadata or doc.metadata[key] != value:
                         match = False
                         break
-                
+
                 if match:
                     filtered_docs.append(doc)
-            
+
             # 如果过滤后的结果少于3个，返回前3个，否则返回过滤后的结果
             return filtered_docs[:3] if len(filtered_docs) > 3 else filtered_docs
         else:
@@ -109,7 +124,7 @@ class FaissVectorDatabase(VectorDatabase):
                 print(f"自动更新过程中出错: {str(e)}")
                 # 出错后等待10秒再重试
                 time.sleep(10)
-    
+
     # 停止更新线程的方法
     def stop_auto_update(self):
         """停止自动更新线程"""
@@ -121,20 +136,20 @@ class FaissVectorDatabase(VectorDatabase):
     # 1. 扫描本地文档
     def load_documents(self):
         """扫描本地文档
-        
+
         返回：文件名字符串数组
         """
         # 检查目录是否存在并包含文件
         if not os.path.exists(self.file_uploads_dir) or not os.listdir(self.file_uploads_dir):
             print(f"目录 {self.file_uploads_dir} 不存在或为空")
             return []
-        
+
         file_list = []
         for file in os.listdir(self.file_uploads_dir):
             file_path = os.path.join(self.file_uploads_dir, file)
             if os.path.isfile(file_path):
                 file_list.append(file)
-        
+
         print(f"加载了 {len(file_list)} 个文档")
         return file_list
 
@@ -143,7 +158,7 @@ class FaissVectorDatabase(VectorDatabase):
         """检查本地是否存在FAISS索引文件"""
         required_files = ["index.faiss", "index.pkl"]
         return all(os.path.exists(os.path.join(index_path, f)) for f in required_files)
-    
+
     # 判断是否有更新的文件
     def has_update_files(self, data_path: str) -> Tuple[bool, List]:
         """判断是否有更新的文件"""
@@ -158,7 +173,7 @@ class FaissVectorDatabase(VectorDatabase):
             except Exception as e:
                 return False, []
         return False, []
-    
+
     #更新的文档在列表中移除并添加到已存在的文档列表中
     def remove_update_files(self, new_update_files: List):
         """从更新列表中移除并添加到已存在的文档列表中"""
@@ -188,12 +203,12 @@ class FaissVectorDatabase(VectorDatabase):
         with open(update_file_path, 'w', encoding='utf-8') as f:
             json.dump(update_files, f)
         return exist_files, update_files
-                
-    
+
+
     # 处理文档
     def process_documents(self,update_files: List, data_path: str) -> Tuple[List, List]:
         """加载文件夹中的文档，进行文本分割，并保存分割后的文本
-        
+
         param:
             update_files: 更新文件列表
             data_path: 文件夹路径
@@ -201,7 +216,7 @@ class FaissVectorDatabase(VectorDatabase):
             update_file_list: 更新文件列表
             split_docs: 分割后的文本列表
         """
-        
+
         documents = []
         update_file_list = []
         # 遍历data_path中的文件，检查是否在update_files列表中
@@ -209,7 +224,7 @@ class FaissVectorDatabase(VectorDatabase):
         for root, _, files in os.walk(data_path):
             for file in files:
                 file_ext = os.path.splitext(file)[1].lower()
-                
+
                 # 检查文件是否在更新列表中且扩展名受支持
                 if file in update_files and file_ext in supported_extensions:
                     try:
@@ -223,7 +238,7 @@ class FaissVectorDatabase(VectorDatabase):
                             loader = TextLoader(file_path,encoding="utf-8")
                         elif file_ext == ".docx":
                             loader = Docx2txtLoader(file_path)
-                            
+
                         # 加载文档
                         doc = loader.load()
                         documents.extend(doc)
@@ -231,7 +246,7 @@ class FaissVectorDatabase(VectorDatabase):
                         print(f"已加载更新文件: {file}")
                     except Exception as e:
                         print(f"加载文件 {file} 时出错: {str(e)}")
-        
+
         if not documents:
             print(f"在更新列表中未找到有效文档")
             return update_file_list, []
@@ -244,9 +259,9 @@ class FaissVectorDatabase(VectorDatabase):
             is_separator_regex=False,
         )
         split_docs = text_splitter.split_documents(documents)
-        
+
         return update_file_list, split_docs
-    
+
     #保存分块
     def save_split_docs(self, split_docs: List, chunk_path: str):
         """保存分割后的文本"""
@@ -256,22 +271,22 @@ class FaissVectorDatabase(VectorDatabase):
             chunk_filename = f"{chunk_path}/{base_filename}_chunk_{i}.txt"
             with open(chunk_filename, "w", encoding="utf-8") as f:
                 f.write(doc.page_content)
-            
+
         print(f"已保存 {len(split_docs)} 个文本块")
-    
+
     # 处理并更新文档的统一函数
     def process_and_update_documents(self,update_files: List, data_path: str, chunk_path: str, index_path: str):
         """处理新文档，保存分块，并更新向量数据库"""
 
-        
+
         # 处理文档
         update_file_list, new_split_docs = self.process_documents(update_files, data_path)
         print(f"更新的文件队列:{update_file_list}")
         # 保存分块
         self.save_split_docs(new_split_docs, chunk_path)
-        
+
         self.remove_update_files(update_file_list)
-        
+
         # 更新向量数据库
         if new_split_docs:
             print(f"正在添加 {len(new_split_docs)} 个新文档块到向量数据库...")
@@ -280,7 +295,7 @@ class FaissVectorDatabase(VectorDatabase):
             print("数据库更新完成！")
         else:
             print("未检测到新文档，无需更新")
-        
+
         return new_split_docs
 
     # 修改后的向量数据库创建/加载函数
@@ -306,22 +321,22 @@ class FaissVectorDatabase(VectorDatabase):
             print("创建新向量数据库...")
             # 加载文档
             new_file_list = self.load_documents()
-            
+
             # 检查文档是否为空
             if not new_file_list:
                 print("警告：没有找到任何文档！请确保目录中有PDF、TXT、JSON或DOCX文件。")
                 return vector_store
-                            
+
             #分割文本
             update_file_list, split_docs = self.process_documents(new_file_list,self.file_uploads_dir)
             #保存分块
             self.save_split_docs(split_docs, self.file_chunks_dir)
             #移除更新文件
             self.remove_update_files(update_file_list)
-            
 
 
-            print(f"创建向量数据库，包含 {len(split_docs)} 个文档块...")           
+
+            print(f"创建向量数据库，包含 {len(split_docs)} 个文档块...")
             # 创建向量数据库
             vector_store = FAISS.from_documents(
                 documents=split_docs,

@@ -8,12 +8,24 @@ import json
 from typing import List, Dict
 from rag.vector.faiss import FaissVectorDatabase  # 你已有的类
 import asyncio
+from pathlib import Path
 
 upload_router = APIRouter()
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-UPLOAD_DIR = os.path.join(BASE_DIR, "../../data/file_uploads")
-FILE_INFO = os.path.join(BASE_DIR, "../../data/file_info.json")
+# 获取项目根目录
+def get_project_root():
+    current_path = Path(__file__).resolve()
+    root_indicators = ['.git', 'requirements.txt', 'pyproject.toml', 'setup.py', 'README.md']
+
+    for parent in current_path.parents:
+        if any((parent / indicator).exists() for indicator in root_indicators):
+            return str(parent)
+
+    return str(current_path.parent.parent.parent)
+
+PROJECT_ROOT = get_project_root()
+UPLOAD_DIR = os.path.join(PROJECT_ROOT, "rag", "data", "file_uploads")
+FILE_INFO = os.path.join(PROJECT_ROOT, "rag", "data", "file_info.json")
 
 
 file_lock = asyncio.Lock()

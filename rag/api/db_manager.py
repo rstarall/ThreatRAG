@@ -5,13 +5,26 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.sql import func
+from pathlib import Path
+
+# 获取项目根目录
+def get_project_root():
+    current_path = Path(__file__).resolve()
+    root_indicators = ['.git', 'requirements.txt', 'pyproject.toml', 'setup.py', 'README.md']
+
+    for parent in current_path.parents:
+        if any((parent / indicator).exists() for indicator in root_indicators):
+            return str(parent)
+
+    return str(current_path.parent.parent.parent)
 
 Base = declarative_base()
 class DBManager:
     """数据库管理器"""
 
     def __init__(self):
-        self.db_path = os.path.join("saves", "data", "server.db")
+        project_root = get_project_root()
+        self.db_path = os.path.join(project_root, "saves", "data", "server.db")
         self.ensure_db_dir()
 
         # 创建SQLAlchemy引擎
