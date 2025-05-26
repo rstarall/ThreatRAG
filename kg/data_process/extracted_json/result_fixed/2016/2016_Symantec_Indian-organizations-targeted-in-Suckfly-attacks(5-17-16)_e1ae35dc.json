@@ -1,0 +1,253 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Suckfly",
+            "EntityVariantNames": [
+                "Suckfly"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Advanced cyberespionage group"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Indian Organizations Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "April 2014 - May 2016",
+                "location": "India",
+                "observe_time": "2016",
+                "report_name": "2016_Symantec_Indian-organizations-targeted-in-Suckfly-attacks(5-17-16)_e1ae35dc"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Indian Government Organization #2",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "function": "Implementing network software for ministries"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Backdoor.Nidiran",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Custom backdoor"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2014-6332",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "impact": "Windows System"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Windows",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "aux.robertstockdill[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "ssl.2upgrades[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "176.58.96.234",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "dllhost.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "iviewers.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "msfied",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Indian Organizations Attack Event",
+            "Target": "Suckfly"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Indian Organizations Attack Event",
+            "Target": "Indian Government Organization #2"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Suckfly",
+            "Target": "Backdoor.Nidiran"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Suckfly",
+            "Target": "CVE-2014-6332"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "Suckfly",
+            "Target": "Indian Government Organization #2"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2014-6332",
+            "Target": "Windows"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Backdoor.Nidiran",
+            "Target": "dllhost.exe"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Backdoor.Nidiran",
+            "Target": "iviewers.dll"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Backdoor.Nidiran",
+            "Target": "msfied"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "belong_to",
+            "Source": "aux.robertstockdill[.]com",
+            "Target": "Suckfly"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "ssl.2upgrades[.]com",
+            "Target": "Suckfly"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "belong_to",
+            "Source": "176.58.96.234",
+            "Target": "Suckfly"
+        }
+    ]
+}

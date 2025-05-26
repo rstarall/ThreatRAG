@@ -1,0 +1,424 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Calypso APT",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "region": "Asia",
+                "target": "Telecommunications"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Kazakhstan Telecommunications Company",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "compromised_since": "2019",
+                "industry": "Telecommunications"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Egyptian Government Agency",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Italian Airport",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "USA Marketing Company",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Canadian Transport Company",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Canadian Woodworking Company",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "BackDoor.PlugX.93",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "a8bff99e1ea76d3de660ffdbd78ad04f81a8c659",
+                "compilation_date": "2020-08-13"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "BackDoor.Whitebird.30",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "abfd737b14413a7c6a21c8757aeb6e151701626a",
+                "compilation_date": "2021-29-03"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "BackDoor.Siggen2.3622",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "be4d8344669f73e9620b9060fd87bc519a05617a"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Trojan.DownLoader43.44599",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "1a4b8232237651881750911853cf22d570eada9e",
+                "compilation_date": "2020-07-13"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Trojan.Loader.891",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "595b5a7f25834df7a4af757a6f1c2838eea09f7b",
+                "compilation_date": "2021-09-03 12:04:44"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Trojan.Loader.896",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "ff82dcadb969307f93d73bbed1b1f46233da762f",
+                "compilation_date": "2020-14-10"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Trojan.Uacbypass.21",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0004",
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "7412b13e27433db64b610f40232eb4f0bf2c8487",
+                "compilation_date": "2019-09-29"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Fast Reverse Proxy (FRP)",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "RemCom",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "Remote Rover",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "blog.globnewsline.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "159.65.157.100",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "Kazakhstan Telecom APT Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "October 2021",
+                "location": "Kazakhstan",
+                "observe_time": "2022",
+                "report_name": "2022_DrWeb-telecom_research_en(03-24-2022)_b0ef661e"
+            }
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "Microsoft Exchange",
+            "EntityType": "vul",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Kazakhstan Telecom APT Attack",
+            "Target": "Calypso APT"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Kazakhstan Telecom APT Attack",
+            "Target": "Kazakhstan Telecommunications Company"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "Calypso APT",
+            "Target": "Kazakhstan Telecommunications Company"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Calypso APT",
+            "Target": "BackDoor.PlugX.93"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Calypso APT",
+            "Target": "BackDoor.Whitebird.30"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Calypso APT",
+            "Target": "Fast Reverse Proxy (FRP)"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Calypso APT",
+            "Target": "RemCom"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Calypso APT",
+            "Target": "Remote Rover"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "BackDoor.PlugX.93",
+            "Target": "Microsoft Exchange"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "BackDoor.Whitebird.30",
+            "Target": "Remote Rover"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "BackDoor.Siggen2.3622",
+            "Target": "blog.globnewsline.com"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Trojan.DownLoader43.44599",
+            "Target": "159.65.157.100"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "has",
+            "Source": "Kazakhstan Telecommunications Company",
+            "Target": "Microsoft Exchange"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "target",
+            "Source": "Calypso APT",
+            "Target": "Egyptian Government Agency"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "target",
+            "Source": "Calypso APT",
+            "Target": "Italian Airport"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "target",
+            "Source": "Calypso APT",
+            "Target": "USA Marketing Company"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "target",
+            "Source": "Calypso APT",
+            "Target": "Canadian Transport Company"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "target",
+            "Source": "Calypso APT",
+            "Target": "Canadian Woodworking Company"
+        }
+    ]
+}

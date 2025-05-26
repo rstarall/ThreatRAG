@@ -1,0 +1,215 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Nitro Attack Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0006",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "July 2011 to September 2011",
+                "objective": "Industrial espionage",
+                "observe_time": "2011",
+                "report_name": "2011_the_nitro_attacks_7f8abd0d"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Covert Grove",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0043",
+                "TA0001",
+                "TA0002",
+                "TA0006"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Hebei, China",
+                "background": "Network security vocational school"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Chemical Industry Companies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "count": "29 confirmed",
+                "type": "Chemical research and manufacturing"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Poison Ivy",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Remote Access Tool (RAT)",
+                "source": "poisonivy-rat.com"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "204.74.215.58",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "purpose": "C&C server"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "antivirus-groups.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "pr[REMOVED].noip.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "AntiVirus_update_package.7z",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "091457444b7e7899c242c5125ddc0571",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Phishing Email",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Nitro Attack Campaign",
+            "Target": "Covert Grove"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Nitro Attack Campaign",
+            "Target": "Chemical Industry Companies"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Covert Grove",
+            "Target": "Poison Ivy"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Covert Grove",
+            "Target": "Phishing Email"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "Covert Grove",
+            "Target": "Chemical Industry Companies"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Poison Ivy",
+            "Target": "204.74.215.58"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Poison Ivy",
+            "Target": "antivirus-groups.com"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "belong_to",
+            "Source": "AntiVirus_update_package.7z",
+            "Target": "Phishing Email"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Poison Ivy",
+            "Target": "091457444b7e7899c242c5125ddc0571"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "trigger",
+            "Source": "Chemical Industry Companies",
+            "Target": "AntiVirus_update_package.7z"
+        }
+    ]
+}

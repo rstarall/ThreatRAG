@@ -1,0 +1,260 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Anunak Group",
+            "EntityVariantNames": [
+                "Carberp Group"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "origin": "Russia/Ukraine",
+                "activity": "2013-present"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Russian Banks",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "count": "50+"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Payment Systems",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "count": "5"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Anunak",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0006"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "origin": "Modified from Carberp"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Mimikatz",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "MBR Eraser",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Ammy Admin",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "CVE-2012-2539",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "CVE-2012-0158",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "AA36BA9F4DE5892F1DD427B7B2100B06",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Malicious DOC file"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "8FA296EFAF87FF4D9179283D42372C52",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Malicious DOC file"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Russian Bank Attacks",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "2013-2015",
+                "damage": "1 billion rubles",
+                "observe_time": "2014",
+                "report_name": "2014_Anunak_APT_against_financial_institutions_454eb625"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Russian Bank Attacks",
+            "Target": "Anunak Group"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Russian Bank Attacks",
+            "Target": "Russian Banks"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Anunak Group",
+            "Target": "Anunak"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Anunak Group",
+            "Target": "Mimikatz"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Anunak Group",
+            "Target": "MBR Eraser"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Anunak Group",
+            "Target": "Ammy Admin"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "Anunak Group",
+            "Target": "Russian Banks"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "Anunak Group",
+            "Target": "Payment Systems"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Anunak",
+            "Target": "AA36BA9F4DE5892F1DD427B7B2100B06"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Anunak",
+            "Target": "8FA296EFAF87FF4D9179283D42372C52"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2012-2539",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2012-0158",
+            "Target": "Windows System"
+        }
+    ]
+}

@@ -1,0 +1,260 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "TRITON",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0040"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "description": "ICS attack framework targeting Triconex Safety Instrumented System (SIS) controllers"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Critical Infrastructure Organization",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Critical Infrastructure"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Triconex Safety Instrumented System",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "SIS engineering workstation",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "os": "Microsoft Windows"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "trilog.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "SHA-256: e8542c07b2af63ee7e72ce5d97d91036c5da56e2b091aa2afe737b224305d230"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "inject.bin",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "SHA-256: 5fc4b0076eac7aa7815302b0c3158076e3569086c4c6aa2f71cd258238440d14",
+                "description": "Malicious function code"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "imain.bin",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "SHA-256: 08c34c6ac9186b61d9f29a77ef5e618067e0bc9fe85cab1ad25dc6049c376949",
+                "description": "Malicious control logic"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "TriStation protocol",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Nation State Actor",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "assessment": "Moderate confidence"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "TRITON Incident",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "2017",
+                "observe_time": "2017",
+                "report_name": "2017_Fireeye_ICS-Attack-Framework-TRITON(12-14-2017)_c7e6e744"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "library.zip",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "SHA-256: bef59b9a3e00a14956e0cd4a1f3e7524448cbe5d3cc1295d95a15b83a3579c59"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "TRITON Incident",
+            "Target": "Nation State Actor"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "TRITON Incident",
+            "Target": "Critical Infrastructure Organization"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "Nation State Actor",
+            "Target": "Critical Infrastructure Organization"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "target",
+            "Source": "Nation State Actor",
+            "Target": "Triconex Safety Instrumented System"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Nation State Actor",
+            "Target": "TRITON"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Nation State Actor",
+            "Target": "TriStation protocol"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "TRITON",
+            "Target": "trilog.exe"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "TRITON",
+            "Target": "inject.bin"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "TRITON",
+            "Target": "imain.bin"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "TRITON",
+            "Target": "library.zip"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "Triconex Safety Instrumented System",
+            "Target": "Critical Infrastructure Organization"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "belong_to",
+            "Source": "SIS engineering workstation",
+            "Target": "Critical Infrastructure Organization"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "affect",
+            "Source": "TRITON",
+            "Target": "Triconex Safety Instrumented System"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "affect",
+            "Source": "TRITON",
+            "Target": "SIS engineering workstation"
+        }
+    ]
+}

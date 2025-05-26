@@ -1,0 +1,302 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT35",
+            "EntityVariantNames": [
+                "TA453",
+                "COBALT ILLUSION",
+                "Charming Kitten",
+                "ITG18",
+                "Phosphorus",
+                "Newscaster"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0004",
+                "TA0005",
+                "TA0006",
+                "TA0007",
+                "TA0008",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Microsoft Exchange ProxyShell Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0004",
+                "TA0005",
+                "TA0006",
+                "TA0007",
+                "TA0008",
+                "TA0011"
+            ],
+            "Properties": {
+                "time": "December 2021"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Microsoft Exchange Server",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CVE-2021-34473",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2021-34523",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CVE-2021-31207",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "aspx_wkggiyvttmu.aspx",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "1a5ad24a6880eea807078375d6461f58",
+                "sha1": "da2470c3990ea0862a79149c6036388498da83cd",
+                "sha256": "84f77fc4281ebf94ab4897a48aa5dd7092cc0b7c78235965637eeef0908fb6c7"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "aspx_dyukbdcxjfi.aspx",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "1a5ad24a6880eea807078375d6461f58",
+                "sha1": "da2470c3990ea0862a79149c6036388498da83cd",
+                "sha256": "84f77fc4281ebf94ab4897a48aa5dd7092cc0b7c78235965637eeef0908fb6c7"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "dllhost.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "hash": "9a3703f9c532ae2ec3025840fa449d4e",
+                "sha1": "8ece87086e8b5aba0d1cc4ec3804bf74e0b45bee",
+                "sha256": "1604e69d17c0f26182a3e3ff65694a49450aafd56a7e8b21697a932409dfd81e"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "wininet.bat",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Properties": {
+                "hash": "5f098b55f94f5a448ca28904a57c0e58",
+                "sha1": "27102b416ef5df186bd8b35190c2a4cc4e2fbf37",
+                "sha256": "668ec78916bab79e707dc99fdecfa10f3c87ee36d4dee6e3502d1f5663a428a0"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "wininet.xml",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003"
+            ],
+            "Properties": {
+                "hash": "d2f4647a3749d30a35d5a8faff41765e",
+                "sha1": "0f676bc786db3c44cac4d2d22070fb514b4cb64c",
+                "sha256": "559d4abe3a6f6c93fc9eae24672a49781af140c43d491a757c8e975507b4032e"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "user.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003",
+                "TA0004"
+            ],
+            "Properties": {
+                "hash": "f0be699c8aafc41b25a8fc0974cc4582",
+                "sha1": "6bae2d45bbd8c4b0a59ba08892692fe86e596154",
+                "sha256": "7b5fbbd90eab5bee6f3c25aa3c2762104e219f96501ad6a4463e25e6001eb00b"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "task_update.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "cacb64bdf648444e66c82f5ce61caf4b",
+                "sha1": "3a6431169073d61748829c31a9da29123dd61da8",
+                "sha256": "12c6da07da24edba13650cd324b2ad04d0a0526bb4e853dee03c094075ff6d1a"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "148.251.71.182",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "107.173.231.114",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "tcp443.msupdate.us",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "kcp53.msupdate.us",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "python-urllib3/1.26.7",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "python-requests/2.26.0",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "Fast Reverse Proxy",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "Windows Defender",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0005"
+            ]
+        },
+        {
+            "EntityId": "entity_22",
+            "EntityName": "DefaultAccount",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0003",
+                "TA0004"
+            ],
+            "Properties": {
+                "password": "P@ssw0rd12341234"
+            }
+        },
+        {
+            "EntityId": "entity_23",
+            "EntityName": "LSASS.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0006"
+            ]
+        },
+        {
+            "EntityId": "entity_24",
+            "EntityName": "ssasl.pmd",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0006",
+                "TA0010"
+            ]
+        },
+        {
+            "EntityId": "entity_25",
+            "EntityName": "ssasl.zip",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0010"
+            ]
+        }
+    ],
+    "Relationships": []
+}

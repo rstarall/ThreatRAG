@@ -1,0 +1,224 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "MM Core",
+            "EntityVariantNames": [
+                "BaneChant",
+                "BigBoss",
+                "SillyGoose"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "version": "2.2-LNK (BigBoss), 2.3-LNK (SillyGoose)",
+                "type": "File-less APT backdoor"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Gratem",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Properties": {
+                "type": "Downloader trojan"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "CVE-2015-1641",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "product": "Microsoft Word"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "US pak track ii naval dialogues.doc",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "hash": "d336b8424a65f5c0b83328aa89089c2e4ddbcf72"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "ChoiceGuard.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "type": "Trojanized DLL",
+                "certificate": "Bor Port (Russian organization)"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Shikata ga nai",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Properties": {
+                "type": "Polymorphic encryption algorithm"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "DLL side-loading",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "presspublishing24[.]net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "davidjone[.]net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "MM Core Attack Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "timeframe": "2015-2016"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Middle Eastern countries",
+            "EntityType": "vctim",
+            "EntitySubType": "location",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Central Asian countries",
+            "EntityType": "vctim",
+            "EntitySubType": "location",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Africa",
+            "EntityType": "vctim",
+            "EntitySubType": "location",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "United States",
+            "EntityType": "vctim",
+            "EntitySubType": "location",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "News  Media",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Government - Defence",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "Oil  Gas Manufacturing",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "Telecommunications",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "Bor Port",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0042"
+            ],
+            "Properties": {
+                "country": "Russia",
+                "role": "Certificate provider (possibly stolen)"
+            }
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        }
+    ],
+    "Relationships": []
+}

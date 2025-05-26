@@ -1,0 +1,455 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "LazyScripter",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "first_observed": "February 2021"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "European Entities Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "July 2021",
+                "observe_time": "2022",
+                "report_name": "2022_Lab52_Lazyscripters-double-compromise-single-obfuscation(03-09-2022)_2c3540a9"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "European Entities",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "JOB NOTICE.pdf",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "creator": "Foxit PhantomPDF Printer Version 9.6.0.1818",
+                "creation_date": "Tue Nov 10 08:30:41 2020 CET",
+                "mod_date": "Tue Jul 13 22:17:50 2021 CEST"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "securessl.fit",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "ip": "192.64.119.125",
+                "registrar": "Namecheap",
+                "registration_date": "July 17th 2021"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "192.64.119.125",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "66.29.130.204",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "gowaymevps.xyz",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "registration_date": "May 12th 2021"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "LIST OF AVAILABLE JOBS.js",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "SALARY AND HIRING CONDITIONS.js",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "tk.vbs",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "path1": "C:\\Users\\*\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\tk.vbs",
+                "path2": "C:\\Users\\*\\AppData\\Roaming\\tk.vbs"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "H-Worm",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "author": "Houdini"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "stub.ignorelist.com",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "ip": "45.91.92.112"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "45.91.92.112",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "port": "449"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "windowsUpdate.lnk",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "path": "C:\\Users\\Lucas\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\windowsUpdate.lnk"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "njRAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "7"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "185.81.157.186",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "7"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "hackfree.org",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "8"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "HackFree",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "8"
+            ]
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "United Nations World Tourism Organization",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "International Air Transport Association",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "European Entities Attack Event",
+            "Target": "LazyScripter"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "European Entities Attack Event",
+            "Target": "European Entities"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "LazyScripter",
+            "Target": "European Entities"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "LazyScripter",
+            "Target": "JOB NOTICE.pdf"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "LazyScripter",
+            "Target": "LIST OF AVAILABLE JOBS.js"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "LazyScripter",
+            "Target": "SALARY AND HIRING CONDITIONS.js"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "LazyScripter",
+            "Target": "H-Worm"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "LIST OF AVAILABLE JOBS.js",
+            "Target": "SALARY AND HIRING CONDITIONS.js"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "belong_to",
+            "Source": "JOB NOTICE.pdf",
+            "Target": "European Entities"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "affect",
+            "Source": "JOB NOTICE.pdf",
+            "Target": "securessl.fit"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "securessl.fit",
+            "Target": "192.64.119.125"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "securessl.fit",
+            "Target": "66.29.130.204"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "66.29.130.204",
+            "Target": "gowaymevps.xyz"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "LIST OF AVAILABLE JOBS.js",
+            "Target": "tk.vbs"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "tk.vbs",
+            "Target": "H-Worm"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "H-Worm",
+            "Target": "stub.ignorelist.com"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "stub.ignorelist.com",
+            "Target": "45.91.92.112"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "related_to",
+            "Source": "tk.vbs",
+            "Target": "windowsUpdate.lnk"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "related_to",
+            "Source": "windowsUpdate.lnk",
+            "Target": "njRAT"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "related_to",
+            "Source": "njRAT",
+            "Target": "185.81.157.186"
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "related_to",
+            "Source": "H-Worm",
+            "Target": "hackfree.org"
+        },
+        {
+            "RelationshipId": "relationship_22",
+            "RelationshipType": "use",
+            "Source": "HackFree",
+            "Target": "hackfree.org"
+        },
+        {
+            "RelationshipId": "relationship_23",
+            "RelationshipType": "use",
+            "Source": "HackFree",
+            "Target": "njRAT"
+        },
+        {
+            "RelationshipId": "relationship_24",
+            "RelationshipType": "target",
+            "Source": "LazyScripter",
+            "Target": "United Nations World Tourism Organization"
+        },
+        {
+            "RelationshipId": "relationship_25",
+            "RelationshipType": "target",
+            "Source": "LazyScripter",
+            "Target": "International Air Transport Association"
+        }
+    ]
+}

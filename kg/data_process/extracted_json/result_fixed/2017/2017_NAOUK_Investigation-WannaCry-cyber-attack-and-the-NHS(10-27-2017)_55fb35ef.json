@@ -1,0 +1,274 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "WannaCry",
+            "EntityVariantNames": [
+                "WannaCry ransomware"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "APT-29",
+            "EntityVariantNames": [
+                "Cozy Bear"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0042",
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Russia"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "NHS",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "sector": "Healthcare",
+                "country": "UK"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CVE-2017-0144",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Windows XP",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Windows 7",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Barts Health NHS Trust",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Northern Lincolnshire and Goole NHS Foundation Trust",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "N3 network",
+            "EntityType": "asset",
+            "EntitySubType": "network",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Department of Health",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "NHS England",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "NHS Digital",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "National Cyber Security Centre",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "National Crime Agency",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "WannaCry"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "NHS"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "WannaCry",
+            "Target": "CVE-2017-0144"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "affect",
+            "Source": "WannaCry",
+            "Target": "Windows XP"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "affect",
+            "Source": "WannaCry",
+            "Target": "Windows 7"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "WannaCry",
+            "Target": "NHS"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "belong_to",
+            "Source": "WannaCry",
+            "Target": "N3 network"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "involve",
+            "Source": "WannaCry",
+            "Target": "Barts Health NHS Trust"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "involve",
+            "Source": "WannaCry",
+            "Target": "Northern Lincolnshire and Goole NHS Foundation Trust"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "has",
+            "Source": "NHS",
+            "Target": "Barts Health NHS Trust"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "has",
+            "Source": "NHS",
+            "Target": "Northern Lincolnshire and Goole NHS Foundation Trust"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Department of Health",
+            "Target": "NHS England"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "Department of Health",
+            "Target": "NHS Digital"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "National Cyber Security Centre",
+            "Target": "National Crime Agency"
+        }
+    ]
+}

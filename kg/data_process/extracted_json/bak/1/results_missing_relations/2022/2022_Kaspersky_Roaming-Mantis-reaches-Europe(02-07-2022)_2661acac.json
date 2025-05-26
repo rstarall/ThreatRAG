@@ -1,0 +1,140 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Roaming Mantis",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0005",
+                "TA0010"
+            ],
+            "Properties": {
+                "campaign_start": "2018"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Wroba.g",
+            "EntityVariantNames": [
+                "Wroba.o",
+                "Moqhao",
+                "XLoader"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0009"
+            ],
+            "Properties": {
+                "type": "Android Trojan",
+                "classification": "Trojan-Dropper.AndroidOS.Wroba.g"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Smishing Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0009"
+            ],
+            "Properties": {
+                "timeframe": "2021-2022",
+                "target_regions": "France, Germany, Japan, Taiwan, Korea"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "France",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "type": "Country"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Germany",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "type": "Country"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "kuronekoyamato.apk",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "type": "Malicious APK"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "libdf.so",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "location": "\\lib\\armeaib-v7a\\libdf.so",
+                "function": "Payload decryption"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "get_photo",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0009"
+            ],
+            "Properties": {
+                "function": "Steals photos from infected devices"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "get_gallery",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0009"
+            ],
+            "Properties": {
+                "function": "Steals galleries from infected devices"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "527b5eebb6dbd3d0b777c714e707659c",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "type": "MD5"
+            }
+        }
+    ],
+    "Relationships": []
+}

@@ -1,0 +1,209 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Hangul Document Exploit",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "2014/12/10",
+                "observe_time": "2014",
+                "report_name": "2014_korea_power_plant_wiper_db34f476"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "MBR Destruction Malware",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0040"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Trojan/Destroyer"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "HWPTAG_PARA_LINE_SEG",
+            "EntityType": "vul",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "software": "Hangul"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "54783422cfd7029a26a3f3f5e9087d8a",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "MD5"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Bddsvc.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "service": "BitLocker Drive Decryption Service"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "HWP",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "extension": ".hwp"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "PcaSvcc",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Registry Key"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "GetLocalTime",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "3BA8A6815F828DFC518A0BDBD27BBA5B",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "MD5"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "related_to",
+            "Source": "MBR Destruction Malware",
+            "Target": "HWPTAG_PARA_LINE_SEG"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "related_to",
+            "Source": "MBR Destruction Malware",
+            "Target": "54783422cfd7029a26a3f3f5e9087d8a"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "affect",
+            "Source": "MBR Destruction Malware",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "belong_to",
+            "Source": "Bddsvc.dll",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "Hangul Document Exploit",
+            "Target": "HWP"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "MBR Destruction Malware",
+            "Target": "PcaSvcc"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "MBR Destruction Malware",
+            "Target": "GetLocalTime"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "MBR Destruction Malware",
+            "Target": "3BA8A6815F828DFC518A0BDBD27BBA5B"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "involve",
+            "Source": "Hangul Document Exploit",
+            "Target": "MBR Destruction Malware"
+        }
+    ]
+}

@@ -1,0 +1,255 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Sidewinder Targeted Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0008",
+                "TA0009"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "2014",
+                "observe_time": "2014",
+                "report_name": "2014_fireeye-sidewinder-targeted-attack_b798ee94"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Android",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "version": "4.1.2"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Google Play",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "JavaScript-Binding-Over-HTTP",
+            "EntityVariantNames": [
+                "JBOH"
+            ],
+            "EntityType": "vul",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "DEX Loading over HTTP",
+            "EntityVariantNames": [
+                "DLOH"
+            ],
+            "EntityType": "vul",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Ad Libraries",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0001",
+                "TA0009"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "count": "92"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Cobalt Strike",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "towelroot",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0004"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Android Users",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "count": "1.1 billion"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Intel BYOD Program",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "device_count": "20,000"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "GPS Location Data",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Clipboard Data",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Sidewinder Targeted Attack",
+            "Target": "Android"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Sidewinder Targeted Attack",
+            "Target": "Android Users"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "exploit",
+            "Source": "JavaScript-Binding-Over-HTTP",
+            "Target": "Android"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "exploit",
+            "Source": "DEX Loading over HTTP",
+            "Target": "Android"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "Ad Libraries",
+            "Target": "JavaScript-Binding-Over-HTTP"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Ad Libraries",
+            "Target": "DEX Loading over HTTP"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "belong_to",
+            "Source": "GPS Location Data",
+            "Target": "Android"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "belong_to",
+            "Source": "Clipboard Data",
+            "Target": "Android"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "has",
+            "Source": "Android Users",
+            "Target": "Android"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "has",
+            "Source": "Intel BYOD Program",
+            "Target": "Android"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "target",
+            "Source": "Sidewinder Targeted Attack",
+            "Target": "Intel BYOD Program"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "use",
+            "Source": "Sidewinder Targeted Attack",
+            "Target": "Cobalt Strike"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "use",
+            "Source": "Sidewinder Targeted Attack",
+            "Target": "towelroot"
+        }
+    ]
+}

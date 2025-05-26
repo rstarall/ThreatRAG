@@ -1,0 +1,269 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "FLYING KITTEN",
+            "EntityVariantNames": [
+                "Saffron Rose"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0006",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Iran",
+                "affiliation": "Ajax Security Team"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Flying Kitten Targeted Intrusion",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0006",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "Since January 2014",
+                "observe_time": "2014",
+                "report_name": "2014_CrowdStrike_Flying_Kitten_e3ac6499"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "U.S.-based defense contractors",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Aerospace/Defense"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Political dissidents",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Stealer malware",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0010"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "function": "Data exfiltration"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "parmanpower[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "purpose": "Credential collection"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "info[@]usa.gov.us",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "aeroconf2014[.]org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "purpose": "Spoofed IEEE Aerospace Conference website"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "keyvan.ajaxtm[@]gmail.com",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Ajax Security Team",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Iran"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Flying Kitten RAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Flying Kitten Installer",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Flying Kitten Targeted Intrusion",
+            "Target": "FLYING KITTEN"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Flying Kitten Targeted Intrusion",
+            "Target": "U.S.-based defense contractors"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "Flying Kitten Targeted Intrusion",
+            "Target": "Political dissidents"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "FLYING KITTEN",
+            "Target": "Stealer malware"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "FLYING KITTEN",
+            "Target": "parmanpower[.]com"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "FLYING KITTEN",
+            "Target": "aeroconf2014[.]org"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "FLYING KITTEN",
+            "Target": "Flying Kitten RAT"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "FLYING KITTEN",
+            "Target": "Flying Kitten Installer"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "FLYING KITTEN",
+            "Target": "U.S.-based defense contractors"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "target",
+            "Source": "FLYING KITTEN",
+            "Target": "Political dissidents"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Stealer malware",
+            "Target": "Flying Kitten RAT"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "info[@]usa.gov.us",
+            "Target": "parmanpower[.]com"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "keyvan.ajaxtm[@]gmail.com",
+            "Target": "Ajax Security Team"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "FLYING KITTEN",
+            "Target": "Ajax Security Team"
+        }
+    ]
+}

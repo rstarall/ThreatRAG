@@ -1,0 +1,261 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "UAC-0098",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "affiliation": "TrickBot"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Phishing Email Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Ukraine",
+                "observe_time": "2022",
+                "report_name": "2022_cert.gov.ua-CERT-UA-4490(04-18-2022)_a36d987d"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Military on Azovstal.xls",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "ea9dae45f81fe3527c62ad7b84b03d19629014b1a0e346b6aa933e52b0929d8a"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "pe.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "e28ac0f94df75519a60ecc860475e6b3",
+                "date": "2022-04-15"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Cobalt Strike Beacon",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "variant": "notevil.dll",
+                "hash": "ff30fdd64297ac41937f9a018753871fee0e888844fbcf7bf92bf5f8d6f57090"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "shellcode.bin.packed.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "a3534cc24a76fa81ce38676027de9533"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "138.68.229.0",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "provider": "hostkey.com"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "dezword.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "date": "2022-03-22"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "84.32.188.29",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "provider": "cherryservers.com"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "rundll32.exe",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "command": "rundll32 C:\\Windows\\Tasks\\pe.dll, DllRegisterServer"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "C:\\Windows\\Tasks\\pe.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Ukrainian Government",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Phishing Email Attack Event",
+            "Target": "UAC-0098"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Phishing Email Attack Event",
+            "Target": "Ukrainian Government"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "UAC-0098",
+            "Target": "Military on Azovstal.xls"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "UAC-0098",
+            "Target": "pe.dll"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "UAC-0098",
+            "Target": "Cobalt Strike Beacon"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "UAC-0098",
+            "Target": "138.68.229.0"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "UAC-0098",
+            "Target": "dezword.com"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "UAC-0098",
+            "Target": "Ukrainian Government"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Cobalt Strike Beacon",
+            "Target": "pe.dll"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "belong_to",
+            "Source": "pe.dll",
+            "Target": "138.68.229.0"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "trigger",
+            "Source": "Ukrainian Government",
+            "Target": "Military on Azovstal.xls"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "affect",
+            "Source": "pe.dll",
+            "Target": "Ukrainian Government"
+        }
+    ]
+}

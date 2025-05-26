@@ -1,0 +1,343 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "GREF",
+            "EntityVariantNames": [
+                "GREF Group"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China",
+                "activity_period": "2009-present"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "XSLCmd Backdoor Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "discovery_date": "August 2014",
+                "observe_time": "2014",
+                "report_name": "2014_XSLCmd_OSX_7ba1acc6"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "OSX.XSLCmd",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "60242ad3e1b6c4d417d4dfeb8fb464a1",
+                "type": "Mach-O executable",
+                "capabilities": "reverse shell, file transfer, key logging, screen capture"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "61.128.110.38",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "role": "C2 server"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "www.appleupdate.biz",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "registration_date": "2012-08-02"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "OS X systems",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "versions": "10.8 and earlier"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "US Defense Industrial Base",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Defense"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Electronics and engineering companies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Tibetan NGOs",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "com.apple.service.clipboardd.plist",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "location": "$HOME/Library/LaunchAgents/",
+                "purpose": "Persistence mechanism"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "pxupdate.ini",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "location": "$HOME/.fontset/",
+                "content": "C2 configuration"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "SQLMap",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "SQL injection tool"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Acunetix",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Web vulnerability scanner"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Poison Ivy",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Gh0st",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Kaba/SOGU",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "XSLCmd Backdoor Attack Event",
+            "Target": "GREF"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "GREF",
+            "Target": "OSX.XSLCmd"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "GREF",
+            "Target": "US Defense Industrial Base"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "target",
+            "Source": "GREF",
+            "Target": "Electronics and engineering companies"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "GREF",
+            "Target": "Tibetan NGOs"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "OSX.XSLCmd",
+            "Target": "61.128.110.38"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "OSX.XSLCmd",
+            "Target": "www.appleupdate.biz"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "affect",
+            "Source": "OSX.XSLCmd",
+            "Target": "OS X systems"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "belong_to",
+            "Source": "com.apple.service.clipboardd.plist",
+            "Target": "OS X systems"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "belong_to",
+            "Source": "pxupdate.ini",
+            "Target": "OS X systems"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "GREF",
+            "Target": "SQLMap"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "use",
+            "Source": "GREF",
+            "Target": "Acunetix"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "use",
+            "Source": "GREF",
+            "Target": "Poison Ivy"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "use",
+            "Source": "GREF",
+            "Target": "Gh0st"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "use",
+            "Source": "GREF",
+            "Target": "Kaba/SOGU"
+        }
+    ]
+}

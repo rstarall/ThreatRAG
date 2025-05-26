@@ -1,0 +1,198 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Rocket Kitten",
+            "EntityVariantNames": [
+                "RocketKitten"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "region": "Middle East",
+                "suspected_country": "Iran"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Wool3n.H4t",
+            "EntityVariantNames": [
+                "Woole3n.H4t",
+                "Masoud_pk"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003"
+            ],
+            "Properties": {
+                "role": "Malware developer",
+                "alias": "pc12"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Israeli Defense Industry",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Academic Organizations in Israel",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "German-speaking Government Organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Operation Woolen-GoldFish",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "timeframe": "2014-2015"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "GHOLE",
+            "EntityVariantNames": [
+                "TROJ_GHOLE.A",
+                "BKDR_GHOLE.B"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "origin": "Modified CORE IMPACT",
+                "first_seen": "2011"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "CWoolger",
+            "EntityVariantNames": [
+                "TSPY_WOOLERG.A"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0009"
+            ],
+            "Properties": {
+                "type": "Keylogger"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Spear-phishing Emails",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Malicious Macros",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "83.170.33.60",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "hosting": "IABG",
+                "country": "DE"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "107.6.181.116",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "hosting": "SingleHop"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "07a77f8b9f0fcc93504dfba2d7d9d26246e5878f",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "type": "SHA1",
+                "associated_malware": "BKDR_GHOLE.B"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "d5b2b30fe2d4759c199e3659d561a50f88a7fb2e",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0003"
+            ],
+            "Properties": {
+                "type": "SHA1",
+                "associated_malware": "TSPY_WOOLERG.A"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "GET /index.php?c=xxxxxxxxr=xxxxxu=1t=",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0011"
+            ]
+        }
+    ],
+    "Relationships": []
+}

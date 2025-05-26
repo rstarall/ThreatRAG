@@ -1,0 +1,306 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Darkhotel APT",
+            "EntityVariantNames": [
+                "Tapaoux",
+                "Pioneer",
+                "Karba",
+                "Nemim"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "activity_period": "2007-2014",
+                "region": "Asia"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Hotel Wi-Fi Attacks",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time_period": "2007-2014",
+                "observe_time": "2014",
+                "report_name": "2014_darkhotel_kl_07.11_5dfc150d"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Corporate Executives",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Government Agencies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "NGO Organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Backdoor.Win32.Agent.dgrn",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "alias": "Catch.exe"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "microdelta.crabdance.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "CVE-2010-0188",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "CVE-2014-0497",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Ndiskpro.sys",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "type": "Kernel-level keylogger"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "msieckc.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "path": "%AppDATA%\\Microsoft\\Crypto\\DES64v7\\"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "DmaUp3.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0006",
+                "TA0009"
+            ],
+            "Times": [
+                "7"
+            ],
+            "Properties": {
+                "path": "%AppDATA%\\Microsoft\\Display\\"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "igfxext.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0008"
+            ],
+            "Times": [
+                "8"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "42world.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "9"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "hxxp://officerevision.com/update/files22/update.exe",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "10"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Hotel Wi-Fi Attacks",
+            "Target": "Darkhotel APT"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Hotel Wi-Fi Attacks",
+            "Target": "Corporate Executives"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "Darkhotel APT",
+            "Target": "Government Agencies"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "target",
+            "Source": "Darkhotel APT",
+            "Target": "NGO Organizations"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Darkhotel APT",
+            "Target": "Backdoor.Win32.Agent.dgrn"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Darkhotel APT",
+            "Target": "CVE-2010-0188"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Darkhotel APT",
+            "Target": "CVE-2014-0497"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Backdoor.Win32.Agent.dgrn",
+            "Target": "microdelta.crabdance.com"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Darkhotel APT",
+            "Target": "Ndiskpro.sys"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "Darkhotel APT",
+            "Target": "msieckc.exe"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "Darkhotel APT",
+            "Target": "DmaUp3.exe"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "use",
+            "Source": "Darkhotel APT",
+            "Target": "igfxext.exe"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "Darkhotel APT",
+            "Target": "42world.net"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "Darkhotel APT",
+            "Target": "hxxp://officerevision.com/update/files22/update.exe"
+        }
+    ]
+}

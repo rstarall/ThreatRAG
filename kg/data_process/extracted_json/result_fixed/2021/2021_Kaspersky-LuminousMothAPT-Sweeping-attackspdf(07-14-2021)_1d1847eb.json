@@ -1,0 +1,403 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "LuminousMoth",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "affiliation": "Chinese-speaking actor",
+                "connection": "HoneyMyte"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "HoneyMyte",
+            "EntityVariantNames": [
+                "Mustang Panda"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "LuminousMoth Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "October 2020 - March 2021",
+                "region": "South East Asia",
+                "observe_time": "2021",
+                "report_name": "2021_Kaspersky-LuminousMothAPT-Sweeping-attackspdf(07-14-2021)_1d1847eb"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Myanmar Government",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "department": "Development Assistance Coordination Unit"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Philippines Government",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "version.dll",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0008"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "0f8b7a64336b4315cc0a2e6171ab027e",
+                "function": "USB spreading mechanism"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "wwlib.dll",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "4fbc4835746a9c64f8d697659bfe8554",
+                "function": "Cobalt Strike loader"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Cobalt Strike",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Fake Zoom Application",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009",
+                "TA0010"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "hash": "c727a8fc56cedc69f0cfd2f2f5796797",
+                "function": "File exfiltration",
+                "certificate": "Founder Technology"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Chrome Cookies Stealer",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Spear-phishing Email",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "example": "COVID-19 Case 12-11-2020.rar"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "USB Drive Spreading",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "103.15.28.195",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "202.59.10.253",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "updatecatalogs.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "mopfi-ferd.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "impersonation": "Myanmar Ministry of Planning, Finance and Industry"
+            }
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "Chrome Browser",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "6"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "LuminousMoth Campaign",
+            "Target": "LuminousMoth"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "LuminousMoth Campaign",
+            "Target": "Myanmar Government"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "LuminousMoth Campaign",
+            "Target": "Philippines Government"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "LuminousMoth",
+            "Target": "version.dll"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "LuminousMoth",
+            "Target": "wwlib.dll"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "LuminousMoth",
+            "Target": "Cobalt Strike"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "LuminousMoth",
+            "Target": "Spear-phishing Email"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "LuminousMoth",
+            "Target": "USB Drive Spreading"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "LuminousMoth",
+            "Target": "Fake Zoom Application"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "LuminousMoth",
+            "Target": "Chrome Cookies Stealer"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "target",
+            "Source": "LuminousMoth",
+            "Target": "Myanmar Government"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "target",
+            "Source": "LuminousMoth",
+            "Target": "Philippines Government"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "wwlib.dll",
+            "Target": "Cobalt Strike"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "belong_to",
+            "Source": "version.dll",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "belong_to",
+            "Source": "wwlib.dll",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "LuminousMoth",
+            "Target": "HoneyMyte"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "updatecatalogs.com",
+            "Target": "LuminousMoth"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "related_to",
+            "Source": "mopfi-ferd.com",
+            "Target": "LuminousMoth"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "related_to",
+            "Source": "103.15.28.195",
+            "Target": "LuminousMoth"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "related_to",
+            "Source": "202.59.10.253",
+            "Target": "LuminousMoth"
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "has",
+            "Source": "Myanmar Government",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_22",
+            "RelationshipType": "has",
+            "Source": "Philippines Government",
+            "Target": "Windows System"
+        }
+    ]
+}

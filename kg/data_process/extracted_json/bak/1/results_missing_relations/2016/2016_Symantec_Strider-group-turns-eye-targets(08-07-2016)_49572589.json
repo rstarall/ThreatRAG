@@ -1,0 +1,134 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Strider",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0009",
+                "TA0010"
+            ],
+            "Properties": {
+                "activity_period": "Since October 2011",
+                "target_countries": "Russia, China, Sweden, Belgium"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Remsec",
+            "EntityVariantNames": [
+                "Backdoor.Remsec"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0009",
+                "TA0011"
+            ],
+            "Properties": {
+                "type": "Modular backdoor",
+                "capabilities": "Keylogging, file theft, network control"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Flamer",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Regin",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Russian Organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Chinese Airline",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Swedish Organization",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Belgian Embassy",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "MSAOSSPC.DLL",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Properties": {
+                "function": "Loader module",
+                "encryption": "0xBAADF00D key"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Lua Modules",
+            "EntityType": "file",
+            "EntitySubType": "code",
+            "Labels": [
+                "TA0002",
+                "TA0009"
+            ],
+            "Properties": {
+                "components": "Network loader, Host loader, Keylogger"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Sauron Keylogger",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009"
+            ]
+        }
+    ],
+    "Relationships": []
+}

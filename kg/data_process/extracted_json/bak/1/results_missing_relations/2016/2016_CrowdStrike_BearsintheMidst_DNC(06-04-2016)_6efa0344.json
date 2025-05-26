@@ -1,0 +1,299 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "COZY BEAR",
+            "EntityVariantNames": [
+                "CozyDuke",
+                "APT 29"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0006",
+                "TA0008",
+                "TA0010"
+            ],
+            "Properties": {
+                "country": "Russia",
+                "affiliation": "SVR"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "FANCY BEAR",
+            "EntityVariantNames": [
+                "Sofacy",
+                "APT 28"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0006",
+                "TA0008",
+                "TA0010"
+            ],
+            "Properties": {
+                "country": "Russia",
+                "affiliation": "GRU"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Democratic National Committee",
+            "EntityVariantNames": [
+                "DNC"
+            ],
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "industry": "Political",
+                "country": "United States"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "DNC Intrusion Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0006",
+                "TA0008",
+                "TA0010"
+            ],
+            "Properties": {
+                "timeframe": "Summer 2015 - April 2016"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "SeaDaddy",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "language": "Python",
+                "compiler": "py2exe"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Powershell Backdoor",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "persistence": "WMI"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "MimiKatz",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0006"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "X-Agent",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "X-Tunnel",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "RemCOM",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0008"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "6c1bce76f4d2358656132b6b1d471571820688ccdbaca0d86d0ca082b9390536",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "file": "pagemgr.exe"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "b101cd29e18a515753409ae86ce68a4cedbe0d640d385eb24b9bbb69cf8186ae",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "file": "pagemgr.exe"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "185.100.84.134:443",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "58.49.58.58:443",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "218.1.98.203:80",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "187.33.33.8:80",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "fd39d2837b30e7233bc54598ff51bdc2f8c418fa5b94dea2cadb24cf40f395e5",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "file": "twain_64.dll"
+            }
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "4845761c9bed0563d0aa83613311191e075a9b58861e80392914d61a21bad976",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "file": "VmUpgradeHelper.exe"
+            }
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "40ae43b7d6c413becc92b07076fa128b875c8dbb4da7c036639eccf5a9fc784f",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "file": "VmUpgradeHelper.exe"
+            }
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "185.86.148.227:443",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "45.32.129.185:443",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_22",
+            "EntityName": "23.227.196.217:443",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_23",
+            "EntityName": "Spearphish",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_24",
+            "EntityName": "Domain Spoofing",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_25",
+            "EntityName": "Windows Management Instrumentation",
+            "EntityVariantNames": [
+                "WMI"
+            ],
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0003"
+            ]
+        }
+    ],
+    "Relationships": []
+}

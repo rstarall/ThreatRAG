@@ -1,0 +1,267 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Iron Tiger",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "activity": "Cyberespionage",
+                "duration": "More than a decade"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "SysUpdate",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "version": "Updated 2022",
+                "platform": "Windows, Linux"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "rc.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "signer": "Microsoft",
+                "vulnerability": "DLL side-loading"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "rc.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "rc.bin",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "encoding": "Shikata Ga Nai"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Wazuh",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "type": "Security platform",
+                "status": "Legitimate software abused"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "8.8.8.8",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "purpose": "Google DNS server"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "dev.gitlabs.me",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "role": "C&C domain"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Permyakov Ivan Yurievich IP",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "7"
+            ],
+            "Properties": {
+                "type": "Stolen certificate",
+                "origin": "VMProtect"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Youdu",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "8"
+            ],
+            "Properties": {
+                "type": "Chat application lure",
+                "origin": "Chinese instant messaging"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Gambling company in Philippines",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "9"
+            ],
+            "Properties": {
+                "industry": "Gambling",
+                "location": "Philippines"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Chrome password and cookie grabber",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "10"
+            ],
+            "Properties": {
+                "signature": "VMProtect certificate",
+                "output": "passwords.txt, cookies.txt"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "Iron Tiger",
+            "Target": "SysUpdate"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Iron Tiger",
+            "Target": "rc.exe"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "rc.exe",
+            "Target": "rc.dll"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "rc.dll",
+            "Target": "rc.bin"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "affect",
+            "Source": "rc.exe",
+            "Target": "Wazuh"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "SysUpdate",
+            "Target": "8.8.8.8"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "SysUpdate",
+            "Target": "dev.gitlabs.me"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Iron Tiger",
+            "Target": "Permyakov Ivan Yurievich IP"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Iron Tiger",
+            "Target": "Youdu"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "target",
+            "Source": "Iron Tiger",
+            "Target": "Gambling company in Philippines"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "Iron Tiger",
+            "Target": "Chrome password and cookie grabber"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Chrome password and cookie grabber",
+            "Target": "Permyakov Ivan Yurievich IP"
+        }
+    ]
+}

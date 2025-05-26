@@ -1,0 +1,322 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Lorec53",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Russia",
+                "alias": "State-sponsored group"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Ukraine Government Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "January 2022",
+                "location": "Ukraine",
+                "observe_time": "2022",
+                "report_name": "2022_Telsy_BabaDeda-LorecCPL-Outsteel-Ukraine(02-16-2022)_678e7b5c"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Ukrainian Government",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Government"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "BabaDeda Crypter",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "LorecCPL",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Outsteel",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009",
+                "TA0010"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "185.244.41.109",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "port": "8080"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Особливі документи СБУ.lnk",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "931a86f402fee99ae1358bb0b76d055b2d04518f"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "PDF – Інструкція отримання бонусу за вакцинацію______________________-pdf.cpl",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "3bbe45cdcc2731c0bb4751d1098eccc50f98ef66"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "hxxp://3237.site/test01.exe",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "hxxp://smm2021.net/load2022.exe",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "hxxp://stun.site/zepok101.exe",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "mathparser.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "26474ba449682e82ca38fef32836dcb23ee24012"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "JxCnv40.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "7d44391b76368b8331c4f468f8ddbaf6ee5a6793"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "manual.pdf",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "8423b25054aa78535c49042295558f33d34deae1"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Ukraine Government Attack Event",
+            "Target": "Lorec53"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Ukraine Government Attack Event",
+            "Target": "Ukrainian Government"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Lorec53",
+            "Target": "BabaDeda Crypter"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Lorec53",
+            "Target": "LorecCPL"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Lorec53",
+            "Target": "Outsteel"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "Lorec53",
+            "Target": "Ukrainian Government"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "BabaDeda Crypter",
+            "Target": "Outsteel"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "LorecCPL",
+            "Target": "Outsteel"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Outsteel",
+            "Target": "185.244.41.109"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "trigger",
+            "Source": "Ukrainian Government",
+            "Target": "Особливі документи СБУ.lnk"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "trigger",
+            "Source": "Ukrainian Government",
+            "Target": "PDF – Інструкція отримання бонусу за вакцинацію______________________-pdf.cpl"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Особливі документи СБУ.lnk",
+            "Target": "hxxp://3237.site/test01.exe"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "PDF – Інструкція отримання бонусу за вакцинацію______________________-pdf.cpl",
+            "Target": "hxxp://stun.site/zepok101.exe"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "BabaDeda Crypter",
+            "Target": "mathparser.exe"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "BabaDeda Crypter",
+            "Target": "JxCnv40.dll"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "BabaDeda Crypter",
+            "Target": "manual.pdf"
+        }
+    ]
+}

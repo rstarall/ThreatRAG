@@ -1,0 +1,262 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Gh0st Rat",
+            "EntityVariantNames": [
+                "Gh0stRat",
+                "Gh0st RAT"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "origin": "C.Rufus Security Team",
+                "version": "3.6"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "C.Rufus Security Team",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "wk1888.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "ip": "174.139.51.150",
+                "hosting": "Krypt Technologies [AS 35908]"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "pk39.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "cb1st",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "magic_tag": "cb1st"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "whmhl",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "magic_tag": "whmhl"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "DarkShell",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "meng",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "email": "1377887494@qq.com",
+                "organization": "east china jiaotong university"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "bingxian feng",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "email": "a916196832@yahoo.com"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "zheng xuming",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "email": "924539333@qq.com"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "KrisR",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "magic_tag": "KrisRat"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "LURK0",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "magic_tag": "LURK0"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "C.Rufus Security Team",
+            "Target": "Gh0st Rat"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "related_to",
+            "Source": "Gh0st Rat",
+            "Target": "wk1888.com"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "Gh0st Rat",
+            "Target": "pk39.com"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "cb1st",
+            "Target": "wk1888.com"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "cb1st",
+            "Target": "pk39.com"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "whmhl",
+            "Target": "pk39.com"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "DarkShell",
+            "Target": "pk39.com"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "meng",
+            "Target": "wk1888.com"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "bingxian feng",
+            "Target": "Gh0st Rat"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "zheng xuming",
+            "Target": "pk39.com"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "KrisR",
+            "Target": "wk1888.com"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "LURK0",
+            "Target": "Gh0st Rat"
+        }
+    ]
+}

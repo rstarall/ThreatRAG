@@ -1,0 +1,346 @@
+<Entitys>
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>Gamaredon APT</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>Gamaredon</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0005</Label>
+            <Label>TA0007</Label>
+            <Label>TA0009</Label>
+            <Label>TA0010</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="country">Russia</Property>
+            <Property name="target">Ukraine</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>Ukrainian Government Agencies Attack Event</EntityName>
+        <EntityType>event</EntityType>
+        <EntitySubType>event</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0005</Label>
+            <Label>TA0007</Label>
+            <Label>TA0009</Label>
+            <Label>TA0010</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="time">September 2022</Property>
+            <Property name="location">Ukraine</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>Ukrainian Government Agencies</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="industry">Government</Property>
+            <Property name="country">Ukraine</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>Malicious Microsoft Office Document</EntityName>
+        <EntityType>file</EntityType>
+        <EntitySubType>file</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="hash">4aa2c783ae3d2d58f12d5e89282069533a80a7ba6f7fe6c548c6230a9601e650</Property>
+            <Property name="type">Office Document</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>Malicious LNK Files</EntityName>
+        <EntityType>file</EntityType>
+        <EntitySubType>file</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="hash">581ed090237b314a9f5cd65076cd876c229e1d51328a24effd9c8d812eaebe6a,34bf1a232870df28809597d49a70d9b549d776e1e4beb3308ff6d169a59ecd02,78c6b489ac6cebf846aab3687bbe64801fdf924f36f312802c6bb815ed6400ba,1cb2d299508739ae85d655efd6470c7402327d799eb4b69974e2efdb9226e447,a9916af0476243e6e0dbef9c45b955959772c4d18b7d1df583623e06414e53b7,8294815c2342ff11739aff5a55c993f5dd23c6c7caff2ee770e69e88a7c4cb6a,be79d470c081975528c0736a0aa10214e10e182c8948bc4526138846512f19e7,5264e8a8571fe0ef689933b8bc2ebe46b985c9263b24ea34e306d54358380cbb,ff7e8580ce6df5d5f5a2448b4646690a6f6d66b1db37f887b451665f4115d1a2,1ec69271abd8ebd1a42ac1c2fa5cdd9373ff936dc73f246e7f77435c8fa0f84c</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>RAR Archives</EntityName>
+        <EntityType>file</EntityType>
+        <EntitySubType>file</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="hash">750bcec54a2e51f3409c83e2100dfb23d30391e20e1c8051c2bc695914c413e3</Property>
+            <Property name="names">31.07.2022.rar,04.08.2022.rar,10.08.2022.rar</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>PowerShell Scripts</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>shell</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>VBScript Macros</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>shell</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_9</EntityId>
+        <EntityName>Information Stealer Malware</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0009</Label>
+            <Label>TA0010</Label>
+        </Labels>
+        <Times>
+            <Time>5</Time>
+        </Times>
+        <Properties>
+            <Property name="hash">139547707f38622c67c8ce2c026bf32052edd4d344f03a0b37895b5de016641a</Property>
+            <Property name="target_extensions">.doc, .docx, .xls, .rtf, .odt, .txt, .jpg, .jpeg, .pdf, .ps1, .rar, .zip, .7z, .mdb</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_10</EntityId>
+        <EntityName>xsph.ru Domains</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="urls">hxxp://a0698649.xsph[.]ru/barley/barley.xml,hxxp://a0700343.xsph[.]ru/new/preach.xml,hxxp://a0700462.xsph[.]ru/grow/guests.xml,hxxp://a0700462.xsph[.]ru/seek/lost.xml,hxxp://a0701919.xsph[.]ru/head/selling.xml,hxxp://a0701919.xsph[.]ru/predator/decimal.xml,hxxp://a0701919.xsph[.]ru/registry/prediction.xml,hxxp://a0704093.xsph[.]ru/basement/insufficient.xml,hxxp://a0704093.xsph[.]ru/bass/grudge.xml,hxxp://a0705076.xsph[.]ru/ramzeses1.html,hxxp://a0705076.xsph[.]ru/regiment.txt,hxxp://a0705269.xsph[.]ru/bars/dearest.txt,hxxp://a0705269.xsph[.]ru/instruct/deaf.txt,hxxp://a0705269.xsph[.]ru/prok/gur.html,hxxp://a0705581.xsph[.]ru/guinea/preservation.txt,hxxp://a0705880.xsph[.]ru/band/sentiment.txt,hxxp://a0705880.xsph[.]ru/based/pre.txt,hxxp://a0705880.xsph[.]ru/selection/seedling.txt,hxxp://a0706248.xsph[.]ru/reject/headlong.txt,hxxp://a0707763.xsph[.]ru/decipher/prayer.txt</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_11</EntityId>
+        <EntityName>Additional Payload Drop Sites</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>url</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>5</Time>
+        </Times>
+        <Properties>
+            <Property name="urls">hxxp://155.138.252[.]221/get.php,hxxp://45.77.237[.]252/get.php,hxxp://motoristo[.]ru/get.php,hxxp://heato[.]ru/index.php,hxxps://&lt;random_string&gt;.celticso[.]ru</Property>
+            <Property name="domains">kuckuduk[.]ru,pasamart[.]ru,celticso[.]ru</Property>
+            <Property name="ip">162[.]33[.]178[.]129</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_12</EntityId>
+        <EntityName>Windows System</EntityName>
+        <EntityType>env</EntityType>
+        <EntitySubType>os</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_13</EntityId>
+        <EntityName>Registry RUN Key Persistence</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>method</EntitySubType>
+        <Labels>
+            <Label>TA0003</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+        <Properties>
+            <Property name="key">HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run</Property>
+            <Property name="name">Windows Task</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_14</EntityId>
+        <EntityName>Mutex</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>payload</EntitySubType>
+        <Labels>
+            <Label>TA0003</Label>
+        </Labels>
+        <Times>
+            <Time>5</Time>
+        </Times>
+        <Properties>
+            <Property name="name">Global\flashupdate_r</Property>
+        </Properties>
+    </Entity>
+</Entitys>
+<Relationships>
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Ukrainian Government Agencies Attack Event</Source>
+        <Target>Gamaredon APT</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Ukrainian Government Agencies Attack Event</Source>
+        <Target>Ukrainian Government Agencies</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Gamaredon APT</Source>
+        <Target>Malicious Microsoft Office Document</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Gamaredon APT</Source>
+        <Target>Malicious LNK Files</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Gamaredon APT</Source>
+        <Target>PowerShell Scripts</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Gamaredon APT</Source>
+        <Target>VBScript Macros</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Gamaredon APT</Source>
+        <Target>Information Stealer Malware</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Gamaredon APT</Source>
+        <Target>xsph.ru Domains</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_9</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Gamaredon APT</Source>
+        <Target>Additional Payload Drop Sites</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_10</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Gamaredon APT</Source>
+        <Target>Ukrainian Government Agencies</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_11</RelationshipId>
+        <RelationshipType>has</RelationshipType>
+        <Source>Ukrainian Government Agencies</Source>
+        <Target>Windows System</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_12</RelationshipId>
+        <RelationshipType>trigger</RelationshipType>
+        <Source>Ukrainian Government Agencies</Source>
+        <Target>Malicious Microsoft Office Document</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_13</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>PowerShell Scripts</Source>
+        <Target>Malicious LNK Files</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_14</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>VBScript Macros</Source>
+        <Target>Malicious Microsoft Office Document</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_15</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Information Stealer Malware</Source>
+        <Target>PowerShell Scripts</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_16</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>xsph.ru Domains</Source>
+        <Target>Additional Payload Drop Sites</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_17</RelationshipId>
+        <RelationshipType>affect</RelationshipType>
+        <Source>Information Stealer Malware</Source>
+        <Target>Windows System</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_18</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Registry RUN Key Persistence</Source>
+        <Target>PowerShell Scripts</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_19</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Mutex</Source>
+        <Target>Information Stealer Malware</Target>
+    </Relationship>
+</Relationships>

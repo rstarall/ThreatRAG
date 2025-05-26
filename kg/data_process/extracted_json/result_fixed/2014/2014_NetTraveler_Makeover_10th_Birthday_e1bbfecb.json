@@ -1,0 +1,437 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "NetTraveler APT",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "activity_start": "2004",
+                "targets": "Diplomatic, Government, Military"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "NetTraveler Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "March 2014",
+                "observe_time": "2014",
+                "report_name": "2014_NetTraveler_Makeover_10th_Birthday_e1bbfecb"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Uyghur activists",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Sabiq sot xadimi gulnar abletning qeyin-Qistaqta olgenliki ashkarilanmaqta.doc",
+            "EntityVariantNames": [
+                "Malicious Word Document"
+            ],
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "b2385963d3afece16bd7478b4cf290ce",
+                "size": "381,667 bytes",
+                "type": "Single File Web Page"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2012-0158",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "impact": "Microsoft Office"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "net.exe",
+            "EntityVariantNames": [
+                "Trojan-Dropper.Win32.Agent.lifr"
+            ],
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Windowsupdataney.dll",
+            "EntityVariantNames": [
+                "Trojan-Spy.Win32.TravNet.qfr"
+            ],
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "hash": "c13c79ad874215cfec8d318468e3d116",
+                "size": "37,888 bytes",
+                "location": "%SystemRoot%\\system32\\"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "DOT.BAT",
+            "EntityVariantNames": [
+                "Trojan.BAT.Tiny.b"
+            ],
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Microsoft Office",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "language": "Simplified Chinese"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "uyghurinfo.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "ip": "216.83.32.29",
+                "location": "United States, Los Angeles"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "ssdcru.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "ip": "103.30.7.77",
+                "location": "Hong Kong"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "samedone.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "ip": "122.10.17.130",
+                "location": "Hong Kong, Kowloon"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "gobackto.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "ip": "103.1.42.1",
+                "location": "Hong Kong"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "worksware.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "jojomic.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "ip": "202.146.219.14",
+                "location": "Hong Kong"
+            }
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "angellost.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "ip": "103.17.117.201",
+                "location": "Hong Kong"
+            }
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "husden.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "ip": "103.30.7.76",
+                "location": "Hong Kong"
+            }
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "SD_2013 Is Running!",
+            "EntityVariantNames": [
+                "Boat-12 Is Running!",
+                "DocHunter2012 Is Running!",
+                "Hunter-2012 Is Running!",
+                "NT-2012 Is Running!",
+                "NetTravler Is Running!",
+                "NetTravler2012 Is Running!",
+                "SH-2011 Is Running!",
+                "ShengHai Is Running!"
+            ],
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "5"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "NetTraveler Attack Event",
+            "Target": "NetTraveler APT"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "NetTraveler Attack Event",
+            "Target": "Uyghur activists"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "NetTraveler APT",
+            "Target": "Sabiq sot xadimi gulnar abletning qeyin-Qistaqta olgenliki ashkarilanmaqta.doc"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "NetTraveler APT",
+            "Target": "CVE-2012-0158"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "NetTraveler APT",
+            "Target": "Uyghur activists"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2012-0158",
+            "Target": "Microsoft Office"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "affect",
+            "Source": "Sabiq sot xadimi gulnar abletning qeyin-Qistaqta olgenliki ashkarilanmaqta.doc",
+            "Target": "Microsoft Office"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Sabiq sot xadimi gulnar abletning qeyin-Qistaqta olgenliki ashkarilanmaqta.doc",
+            "Target": "net.exe"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "net.exe",
+            "Target": "Windowsupdataney.dll"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Windowsupdataney.dll",
+            "Target": "DOT.BAT"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "Windowsupdataney.dll",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Windowsupdataney.dll",
+            "Target": "SD_2013 Is Running!"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "Windowsupdataney.dll",
+            "Target": "uyghurinfo.com"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "Windowsupdataney.dll",
+            "Target": "ssdcru.com"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "Windowsupdataney.dll",
+            "Target": "samedone.com"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "Windowsupdataney.dll",
+            "Target": "gobackto.net"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "Windowsupdataney.dll",
+            "Target": "worksware.net"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "related_to",
+            "Source": "Windowsupdataney.dll",
+            "Target": "jojomic.com"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "related_to",
+            "Source": "Windowsupdataney.dll",
+            "Target": "angellost.net"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "related_to",
+            "Source": "Windowsupdataney.dll",
+            "Target": "husden.com"
+        }
+    ]
+}

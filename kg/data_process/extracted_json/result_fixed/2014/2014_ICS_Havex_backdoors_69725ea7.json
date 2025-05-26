@@ -1,0 +1,281 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Dragonfly",
+            "EntityVariantNames": [
+                "Energetic Bear",
+                "Crouching Yeti"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "sector": "Energy, ICS, Industrial/Machinery, Manufacturing, Pharmaceutical"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Havex RAT/backdoor",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "MESA Imaging",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "country": "Switzerland",
+                "industry": "Industrial cameras"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Swiss Ranger version 1.0.14.706",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "filename": "SwissrangerSetup1.0.14.706.exe",
+                "md5": "e027d4395d9ac9cc980d6a91122d2d83",
+                "sha256": "398a69b8be2ea2b4a6ed23a55459e0469f657e6c7703871f63da63fb04cefe90"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "eWON",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "country": "Belgium",
+                "industry": "Remote maintenance service"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Talk2M eCatcher version 4.0.0.13073",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "filename": "eCatcherSetup.exe",
+                "md5": "eb0dacdc8b346f44c8c370408bad4306",
+                "sha256": "70103c1078d6eb28b665a89ad0b3d11c1cbca61a05a18f87f6a16c79b501dfa9"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "eGrabIt 3.0.0.82",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "filename": "egrabitsetup.exe",
+                "md5": "1080e27b83c37dfeaa0daaa619bdf478",
+                "sha256": "0007ccdddb12491e14c64317f314c15e0628c666b619b10aed199eefcfe09705"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "MB Connect Line GmbH",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "country": "Germany",
+                "industry": "Industrial router and VPN service"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "mbCONFTOOL V 1.0.1",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "filename": "setup_1.0.1.exe",
+                "md5": "0a9ae7fdcd9a9fe0d8c5c106e8940701",
+                "sha256": "c32277fba70c82b237a86e9b542eb11b2b49e4995817b7c2da3ef67f6a971d4a"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "mbCHECK (EUROPE) V 1.1.1",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "filename": "mbCHECK.exe",
+                "md5": "1d6b11f85debdda27e873662e721289e",
+                "sha256": "0b74282d9c03affb25bbecf28d5155c582e246f0ce21be27b75504f1779707f5"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "VCOM_LAN2",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "filename": "setupvcom_lan2.exe"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "Dragonfly",
+            "Target": "Havex RAT/backdoor"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "target",
+            "Source": "Dragonfly",
+            "Target": "MESA Imaging"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "Dragonfly",
+            "Target": "eWON"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "target",
+            "Source": "Dragonfly",
+            "Target": "MB Connect Line GmbH"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "Havex RAT/backdoor",
+            "Target": "Swiss Ranger version 1.0.14.706"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Havex RAT/backdoor",
+            "Target": "Talk2M eCatcher version 4.0.0.13073"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Havex RAT/backdoor",
+            "Target": "eGrabIt 3.0.0.82"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Havex RAT/backdoor",
+            "Target": "mbCONFTOOL V 1.0.1"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Havex RAT/backdoor",
+            "Target": "mbCHECK (EUROPE) V 1.1.1"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "has",
+            "Source": "MESA Imaging",
+            "Target": "Swiss Ranger version 1.0.14.706"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "has",
+            "Source": "eWON",
+            "Target": "Talk2M eCatcher version 4.0.0.13073"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "has",
+            "Source": "eWON",
+            "Target": "eGrabIt 3.0.0.82"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "has",
+            "Source": "MB Connect Line GmbH",
+            "Target": "mbCONFTOOL V 1.0.1"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "has",
+            "Source": "MB Connect Line GmbH",
+            "Target": "mbCHECK (EUROPE) V 1.1.1"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "has",
+            "Source": "MB Connect Line GmbH",
+            "Target": "VCOM_LAN2"
+        }
+    ]
+}

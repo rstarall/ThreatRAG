@@ -1,0 +1,274 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "PROMETHIUM",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "NEODYMIUM",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "CVE-2016-4117",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "vendor": "Adobe",
+                "product": "Flash Player"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Truvasys",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "language": "Delphi",
+                "target": "Windows"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Wingbird",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "variant": "FinFisher",
+                "target": "Windows"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Individuals in Europe",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Turkey"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Windows 10",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Microsoft Office",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Parallel zero-day attacks targeting individuals in Europe",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "May 2016",
+                "location": "Europe",
+                "observe_time": "2016",
+                "report_name": "2016_Microsoft_SIR-Vol21-PROMETHIUM-NEODYMIUM-Updated(12-14-2016)_7cd66851"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "srv601.ddns.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "srv602.ddns.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "www.updatesync.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Parallel zero-day attacks targeting individuals in Europe",
+            "Target": "PROMETHIUM"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Parallel zero-day attacks targeting individuals in Europe",
+            "Target": "NEODYMIUM"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "Parallel zero-day attacks targeting individuals in Europe",
+            "Target": "Individuals in Europe"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "PROMETHIUM",
+            "Target": "CVE-2016-4117"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "PROMETHIUM",
+            "Target": "Truvasys"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "NEODYMIUM",
+            "Target": "CVE-2016-4117"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "NEODYMIUM",
+            "Target": "Wingbird"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "PROMETHIUM",
+            "Target": "Individuals in Europe"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "NEODYMIUM",
+            "Target": "Individuals in Europe"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2016-4117",
+            "Target": "Microsoft Office"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Truvasys",
+            "Target": "www.updatesync.com"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Wingbird",
+            "Target": "srv601.ddns.net"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "Wingbird",
+            "Target": "srv602.ddns.net"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "affect",
+            "Source": "Truvasys",
+            "Target": "Windows 10"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "affect",
+            "Source": "Wingbird",
+            "Target": "Windows 10"
+        }
+    ]
+}

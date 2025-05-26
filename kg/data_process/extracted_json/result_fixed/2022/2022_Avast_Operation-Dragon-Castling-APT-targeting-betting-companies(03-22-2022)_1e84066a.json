@@ -1,0 +1,340 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT group",
+            "EntityVariantNames": [
+                "Chinese speaking APT group"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "language": "Chinese",
+                "target": "Betting companies in South East Asia"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Operation Dragon Castling",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "March 22, 2022",
+                "location": "Taiwan, Philippines, Hong Kong",
+                "observe_time": "2022",
+                "report_name": "2022_Avast_Operation-Dragon-Castling-APT-targeting-betting-companies(03-22-2022)_1e84066a"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Betting companies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "South East Asia",
+                "industry": "Gambling"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CVE-2022-24934",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "software": "WPS Office updater",
+                "impact": "Arbitrary code execution"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "WPS Office",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "installations": "1.2 billion"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "103.140.187.16",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Fake update server"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "update.wps[.]cn",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "legitimate_owner": "Kingsoft"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "MulCom backdoor",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "ABA89668C6E9681671A95B3D7A08AAE2A067DEED2D835BA6F6FD18556C88A5F2",
+                "similar_to": "FFRat"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "FFRat",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "also_known_as": "FormerFirstRAT",
+                "associated_group": "DragonOK"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "mirrors.centos.8788912[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "purpose": "C&C server"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Proto8",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "f3ed09ee3fe869e76f34eee1ef974d1b24297a13a58ebff20ea4541b9a2d86c7",
+                "type": "Core module"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Core Plugin",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "hash": "0985D65FA981ABD57A4929D8ECD866FC72CE8C286BA9EB252CA180E280BD8755"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Zload",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0004"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "hash": "2ABC43865E49F8835844D30372697FDA55992E5A6A13808CFEED1C37BA8F7876",
+                "functionality": "Persistence, backdoor account creation"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "MecGame",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "hash": "4C73A62A9F19EEBB4FEFF4FDB88E4682EF852E37FFF957C9E1CFF27C5E5D47AD",
+                "functionality": "RPC interface registration"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation Dragon Castling",
+            "Target": "APT group"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Operation Dragon Castling",
+            "Target": "Betting companies"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "APT group",
+            "Target": "Betting companies"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "APT group",
+            "Target": "CVE-2022-24934"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2022-24934",
+            "Target": "WPS Office"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "APT group",
+            "Target": "MulCom backdoor"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "MulCom backdoor",
+            "Target": "FFRat"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "APT group",
+            "Target": "Proto8"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "APT group",
+            "Target": "Core Plugin"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "APT group",
+            "Target": "Zload"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "APT group",
+            "Target": "MecGame"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "belong_to",
+            "Source": "103.140.187.16",
+            "Target": "update.wps[.]cn"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "Proto8",
+            "Target": "Core Plugin"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "Core Plugin",
+            "Target": "Zload"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "Core Plugin",
+            "Target": "MecGame"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "MulCom backdoor",
+            "Target": "mirrors.centos.8788912[.]com"
+        }
+    ]
+}

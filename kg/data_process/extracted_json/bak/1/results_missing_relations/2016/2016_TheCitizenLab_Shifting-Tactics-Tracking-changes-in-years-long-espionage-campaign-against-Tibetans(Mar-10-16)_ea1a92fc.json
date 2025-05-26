@@ -1,0 +1,146 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Scarlet Mimic",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Tibetan Community",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "FakeM Custom SSL",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CVE-2012-0158",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2010-3333",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "news.firewall-gateway.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "ip": "109.169.77.230"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "detail43.myfirewall.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "ip": "109.169.77.230"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "sys.firewall-gateway.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "ip": "95.154.195.159"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "accountgoogle.firewall-gateway.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "ip": "95.154.195.171"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "filegoogle.firewall-gateway.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "ip": "95.154.195.171"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "8b83fc5d3a6a80281269f9e337fe3fff",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Google Drive Phishing Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0006"
+            ],
+            "Properties": {
+                "time": "November 2015 - December 2015"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "iomart",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0011"
+            ]
+        }
+    ],
+    "Relationships": []
+}

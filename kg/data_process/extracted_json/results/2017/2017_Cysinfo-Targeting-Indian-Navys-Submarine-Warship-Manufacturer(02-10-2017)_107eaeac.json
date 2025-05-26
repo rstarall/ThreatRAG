@@ -1,0 +1,277 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Cyber Espionage Group",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Pakistan",
+                "affiliation": "Combined Freight (PVT) Limited"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Mazagon Dock Shipbuilders Limited Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "January 25, 2017",
+                "observe_time": "2017",
+                "report_name": "2017_Cysinfo-Targeting-Indian-Navys-Submarine-Warship-Manufacturer(02-10-2017)_107eaeac"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Mazagon Dock Shipbuilders Limited",
+            "EntityVariantNames": [
+                "MDL",
+                "ship builder to the nation"
+            ],
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Defense",
+                "country": "India"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Malicious Excel File",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "KeyBase Malware",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0009",
+                "TA0010"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "08f2fc9cb30b22c765a0ca9433b35a46"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "tripleshop[.]id",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "103[.]229[.]74[.]32",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "country": "Indonesia"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Hidrofersa",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Spain"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Combined Freight (PVT) Limited",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Pakistan"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Workbook_Open()",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "PowerShell Script",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "doc6.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "eventvwr.exe",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Mazagon Dock Shipbuilders Limited Attack Event",
+            "Target": "Cyber Espionage Group"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Mazagon Dock Shipbuilders Limited Attack Event",
+            "Target": "Mazagon Dock Shipbuilders Limited"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "Cyber Espionage Group",
+            "Target": "Mazagon Dock Shipbuilders Limited"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Cyber Espionage Group",
+            "Target": "Malicious Excel File"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Cyber Espionage Group",
+            "Target": "KeyBase Malware"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "KeyBase Malware",
+            "Target": "tripleshop[.]id"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "KeyBase Malware",
+            "Target": "103[.]229[.]74[.]32"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Cyber Espionage Group",
+            "Target": "Workbook_Open()"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Cyber Espionage Group",
+            "Target": "PowerShell Script"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "PowerShell Script",
+            "Target": "doc6.exe"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "doc6.exe",
+            "Target": "eventvwr.exe"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "belong_to",
+            "Source": "Cyber Espionage Group",
+            "Target": "Combined Freight (PVT) Limited"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "trigger",
+            "Source": "Mazagon Dock Shipbuilders Limited",
+            "Target": "Malicious Excel File"
+        }
+    ]
+}

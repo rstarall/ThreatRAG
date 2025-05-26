@@ -1,0 +1,276 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Kimsuky",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0009"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "category": "APT",
+                "region": "North Korea"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Kimsuky Espionage Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0009"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "June 2021",
+                "observe_time": "2021",
+                "report_name": "2021_Inquest_Kimsuky-Espionage-Campaign(08-23-2021)_f225275c"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Korean Foreign Ministry",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "20eff877aeff0afaa8a5d29fe272bdd61e49779b9e308c4a202ad868a901a5cd",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Javascript file",
+                "size": "27.31 MB"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "3251c02ff0fc90dccd79b94fb2064fb3d7f870c69192ac1f10ad136a43c1ccea",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "PDF",
+                "size": "20.23 MB",
+                "role": "Decoy"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "0a4f2cff4d4613c08b39c9f18253af0fd356697368eecddf7c0fa560386377e6",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "type": "DLL x64",
+                "size": "190.00 KB",
+                "packer": "UPX"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "ae50cf4339ff2f2b3a50cf8e8027b818b18a0582e143e842bf41fdb00e0bfba5",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0009"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "type": "DLL x64",
+                "size": "474.50 KB",
+                "description": "Kimsuky Spy Tool"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "hxxp://texts.letterpaper[.]press",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "PowerShell Script",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Document Search Functionality",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "targets": ".hwp, .pdf, .doc, .xls, .ppt, .txt"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Registry Persistence Mechanism",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "keys": "\\REGISTRY\\USER\\[...]\\RunOnce\\ESTsoftAutoUpdate"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Keylogger Functionality",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "5"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Kimsuky Espionage Campaign",
+            "Target": "Kimsuky"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Kimsuky Espionage Campaign",
+            "Target": "Korean Foreign Ministry"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Kimsuky",
+            "Target": "20eff877aeff0afaa8a5d29fe272bdd61e49779b9e308c4a202ad868a901a5cd"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Kimsuky",
+            "Target": "PowerShell Script"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Kimsuky",
+            "Target": "ae50cf4339ff2f2b3a50cf8e8027b818b18a0582e143e842bf41fdb00e0bfba5"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "Kimsuky",
+            "Target": "Korean Foreign Ministry"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "PowerShell Script",
+            "Target": "20eff877aeff0afaa8a5d29fe272bdd61e49779b9e308c4a202ad868a901a5cd"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "ae50cf4339ff2f2b3a50cf8e8027b818b18a0582e143e842bf41fdb00e0bfba5",
+            "Target": "Document Search Functionality"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "ae50cf4339ff2f2b3a50cf8e8027b818b18a0582e143e842bf41fdb00e0bfba5",
+            "Target": "Keylogger Functionality"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "ae50cf4339ff2f2b3a50cf8e8027b818b18a0582e143e842bf41fdb00e0bfba5",
+            "Target": "Registry Persistence Mechanism"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "3251c02ff0fc90dccd79b94fb2064fb3d7f870c69192ac1f10ad136a43c1ccea",
+            "Target": "Korean Foreign Ministry"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "ae50cf4339ff2f2b3a50cf8e8027b818b18a0582e143e842bf41fdb00e0bfba5",
+            "Target": "hxxp://texts.letterpaper[.]press"
+        }
+    ]
+}

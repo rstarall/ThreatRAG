@@ -1,0 +1,146 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "PLATINUM",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0005",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "region": "South and Southeast Asia",
+                "technique": "hot patching"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "PLATINUM file-transfer tool",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "communication_channel": "Intel AMT SOL",
+                "encryption": "Blowfish"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Intel Active Management Technology (AMT)",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "vendor": "Intel",
+                "feature": "Serial-over-LAN (SOL)"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "imrsdk.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "api": "IMR_SOLSendText/IMR_SOLReceiveText"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Windows Defender ATP",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "vendor": "Microsoft",
+                "capability": "behavior analytics"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Organizational networks in Southeast Asia",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "region": "Southeast Asia"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "PLATINUM",
+            "Target": "PLATINUM file-transfer tool"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "related_to",
+            "Source": "PLATINUM file-transfer tool",
+            "Target": "Intel Active Management Technology (AMT)"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "PLATINUM file-transfer tool",
+            "Target": "imrsdk.dll"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "target",
+            "Source": "PLATINUM",
+            "Target": "Organizational networks in Southeast Asia"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "affect",
+            "Source": "PLATINUM file-transfer tool",
+            "Target": "Intel Active Management Technology (AMT)"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "belong_to",
+            "Source": "imrsdk.dll",
+            "Target": "Intel Active Management Technology (AMT)"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "trigger",
+            "Source": "Organizational networks in Southeast Asia",
+            "Target": "PLATINUM file-transfer tool"
+        }
+    ]
+}

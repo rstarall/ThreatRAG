@@ -1,0 +1,346 @@
+<Entitys>
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>Blackfly</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>APT41</EntityVariantName>
+            <EntityVariantName>Winnti Group</EntityVariantName>
+            <EntityVariantName>Bronze Atlas</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0006</Label>
+            <Label>TA0007</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="country">China</Property>
+            <Property name="active_since">2010</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>Grayfly</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="country">China</Property>
+            <Property name="relation">Associated with Blackfly</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>Asian Conglomerate Subsidiaries</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="industry">Materials and composites</Property>
+            <Property name="region">Asia</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>Backdoor.Winnkit</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0003</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="hash">caba1085791d13172b1bb5aca25616010349ecce17564a00cb1d89c7158d6459</Property>
+            <Property name="hash">cf6bcd3a62720f0e26e1880fe7ac9ca6c62f7f05f1f68b8fe59a4eb47377880a</Property>
+            <Property name="hash">e1e0b887b68307ed192d393e886d8b982e4a2fd232ee13c2f20cd05f91358596</Property>
+            <Property name="hash">a3078d0c4c564f5efb1460e7d341981282f637d38048501221125756bc740aac</Property>
+            <Property name="hash">714cef77c92b1d909972580ec7602b0914f30e32c09a5e8cb9cb4d32aa2a2196</Property>
+            <Property name="hash">192ef0dee8df73eec9ee617abe4b0104799f9543a22a41e28d4d44c3ad713284</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>Credential-dumping tool</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>tool</EntitySubType>
+        <Labels>
+            <Label>TA0006</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="hash">100cad54c1f54126b9d37eb8c9e426cb609fc0eda0e9a241c2c9fd5a3a01ad6c</Property>
+            <Property name="description">Creates a dump of credentials from lsass.exe in C:\windows\temp\1.bin</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>Screenshotting tool</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>tool</EntitySubType>
+        <Labels>
+            <Label>TA0009</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="hash">452d08d420a8d564ff5df6f6a91521887f8b9141d96c77a423ac7fc9c28e07e4</Property>
+            <Property name="description">Screenshots all open windows and saves them as .jpg files</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>Process-hollowing tool</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>tool</EntitySubType>
+        <Labels>
+            <Label>TA0005</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="hash">1cc838896fbaf7c1996198309fbf273c058b796cd2ac1ba7a46bee6df606900e</Property>
+            <Property name="description">Injects shellcode in C:\Windows\system32\svchost.exe -k LocalSystemNetworkRestricted</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>SQL tool</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>tool</EntitySubType>
+        <Labels>
+            <Label>TA0007</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="hash">4ae2cb9454077300151e701e6ac4e4d26dc72227135651e02437902ac05aa80d</Property>
+            <Property name="description">SQL client tool used to query SQL databases</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_9</EntityId>
+        <EntityName>Mimikatz</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>tool</EntitySubType>
+        <Labels>
+            <Label>TA0006</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="hash">560ea79a96dc4f459e96df379b00b59828639b02bd7a7a9964b06d04cb43a35a</Property>
+            <Property name="hash">b28456a0252f4cd308dfb84eeaa14b713d86ba30c4b9ca8d87ba3e592fd27f1c</Property>
+            <Property name="description">Publicly available credential-dumping tool</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_10</EntityId>
+        <EntityName>ForkPlayground</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>tool</EntitySubType>
+        <Labels>
+            <Label>TA0006</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="hash">a3acb9f79647f813671c1a21097a51836b0b95397ebc9cd178bc806e1773c864</Property>
+            <Property name="description">Proof-of-Concept application to create a memory dump of an arbitrary process using the ForkLib</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_11</EntityId>
+        <EntityName>Proxy configuration tool</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>tool</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+        <Properties>
+            <Property name="hash">5e51bdf067e5781d2868d97e7608187d2fec423856dbc883c6f81a9746e99b9f</Property>
+            <Property name="hash">d4e1f09cb7b9b03b4779c87f2a10d379f1dd010a9686d221c3a9f45bda5655ee</Property>
+            <Property name="hash">f138d785d494b8ff12d4a57db94958131f61c76d5d2c4d387b343a213b29d18f</Property>
+            <Property name="hash">88113bebc49d40c0aa1f1f0b10a7e6e71e4ed3ae595362451bd9dcebcf7f8bf4</Property>
+            <Property name="hash">498e8d231f97c037909662764397e02f67d0ee16b4f6744cf923f4de3b522bc1</Property>
+            <Property name="description">Configures proxy settings by injecting into: C:\Windows\system32\svchost.exe -k LocalSystemNetworkRestricted</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_12</EntityId>
+        <EntityName>PlugX/Fast</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>Backdoor.Korplug</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0003</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_13</EntityId>
+        <EntityName>Winnti/Pasteboy</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>Backdoor.Winnti</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0003</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_14</EntityId>
+        <EntityName>Shadowpad</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>Backdoor.Shadowpad</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0003</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_15</EntityId>
+        <EntityName>conf.dat</EntityName>
+        <EntityType>file</EntityType>
+        <EntitySubType>file</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+        <Properties>
+            <Property name="location">c:\users\public\conf.dat</Property>
+            <Property name="purpose">Contains the configuration to set up proxy settings</Property>
+        </Properties>
+    </Entity>
+</Entitys>
+<Relationships>
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Blackfly</Source>
+        <Target>Asian Conglomerate Subsidiaries</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Blackfly</Source>
+        <Target>Backdoor.Winnkit</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Blackfly</Source>
+        <Target>Credential-dumping tool</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Blackfly</Source>
+        <Target>Screenshotting tool</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Blackfly</Source>
+        <Target>Process-hollowing tool</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Blackfly</Source>
+        <Target>SQL tool</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Blackfly</Source>
+        <Target>Mimikatz</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Blackfly</Source>
+        <Target>ForkPlayground</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_9</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Blackfly</Source>
+        <Target>Proxy configuration tool</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_10</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Blackfly</Source>
+        <Target>Grayfly</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_11</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Blackfly</Source>
+        <Target>PlugX/Fast</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_12</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Blackfly</Source>
+        <Target>Winnti/Pasteboy</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_13</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Blackfly</Source>
+        <Target>Shadowpad</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_14</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Proxy configuration tool</Source>
+        <Target>conf.dat</Target>
+    </Relationship>
+</Relationships>

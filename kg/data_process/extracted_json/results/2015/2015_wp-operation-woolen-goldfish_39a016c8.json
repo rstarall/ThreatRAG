@@ -1,0 +1,324 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Rocket Kitten",
+            "EntityVariantNames": [
+                "RocketKitten"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "region": "Middle East",
+                "suspected_country": "Iran"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Wool3n.H4t",
+            "EntityVariantNames": [
+                "Woole3n.H4t",
+                "Masoud_pk"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "role": "Malware developer",
+                "alias": "pc12"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Israeli Defense Industry",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Academic Organizations in Israel",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "German-speaking Government Organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Operation Woolen-GoldFish",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "2014-2015",
+                "observe_time": "2015",
+                "report_name": "2015_wp-operation-woolen-goldfish_39a016c8"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "GHOLE",
+            "EntityVariantNames": [
+                "TROJ_GHOLE.A",
+                "BKDR_GHOLE.B"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "origin": "Modified CORE IMPACT",
+                "first_seen": "2011"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "CWoolger",
+            "EntityVariantNames": [
+                "TSPY_WOOLERG.A"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0009"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Keylogger"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Spear-phishing Emails",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Malicious Macros",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "83.170.33.60",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hosting": "IABG",
+                "country": "DE"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "107.6.181.116",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hosting": "SingleHop"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "07a77f8b9f0fcc93504dfba2d7d9d26246e5878f",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "SHA1",
+                "associated_malware": "BKDR_GHOLE.B"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "d5b2b30fe2d4759c199e3659d561a50f88a7fb2e",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "SHA1",
+                "associated_malware": "TSPY_WOOLERG.A"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "GET /index.php?c=xxxxxxxx&r=xxxxx&u=1&t=",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation Woolen-GoldFish",
+            "Target": "Rocket Kitten"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Operation Woolen-GoldFish",
+            "Target": "Israeli Defense Industry"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Rocket Kitten",
+            "Target": "GHOLE"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Rocket Kitten",
+            "Target": "Spear-phishing Emails"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Rocket Kitten",
+            "Target": "Malicious Macros"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "Rocket Kitten",
+            "Target": "Israeli Defense Industry"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "Rocket Kitten",
+            "Target": "Academic Organizations in Israel"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "Rocket Kitten",
+            "Target": "German-speaking Government Organizations"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "GHOLE",
+            "Target": "83.170.33.60"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "GHOLE",
+            "Target": "GET /index.php?c=xxxxxxxx&r=xxxxx&u=1&t="
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "CWoolger",
+            "Target": "107.6.181.116"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "belong_to",
+            "Source": "Wool3n.H4t",
+            "Target": "Rocket Kitten"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "Wool3n.H4t",
+            "Target": "CWoolger"
+        }
+    ]
+}

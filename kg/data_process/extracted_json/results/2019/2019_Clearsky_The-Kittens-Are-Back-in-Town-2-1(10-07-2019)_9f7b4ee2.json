@@ -1,0 +1,145 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Charming Kitten",
+            "EntityVariantNames": [
+                "APT35",
+                "Phosphorus"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0007"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Iran"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Charming Kitten Campaign 2019",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0007"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "October 2019",
+                "observe_time": "2019",
+                "report_name": "2019_Clearsky_The-Kittens-Are-Back-in-Town-2-1(10-07-2019)_9f7b4ee2"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Google Drive Impersonation",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "SMS Message",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Login Attempt Alert",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Social Networks Impersonation",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Nooshin Sadegh Samimi",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "affiliation": "NIACouncil"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Charming Kitten Campaign 2019",
+            "Target": "Charming Kitten"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Charming Kitten",
+            "Target": "Google Drive Impersonation"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Charming Kitten",
+            "Target": "SMS Message"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Charming Kitten",
+            "Target": "Login Attempt Alert"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Charming Kitten",
+            "Target": "Social Networks Impersonation"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "Charming Kitten",
+            "Target": "Nooshin Sadegh Samimi"
+        }
+    ]
+}

@@ -1,0 +1,298 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Duke group",
+            "EntityVariantNames": [
+                "Office Monkeys",
+                "EuroAPT",
+                "Cozy Bear",
+                "Cozyduke"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0006",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "activity_since": "2010",
+                "targets": "Government, diplomatic, research organizations"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Seaduke",
+            "EntityVariantNames": [
+                "Trojan.Seaduke"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0006",
+                "TA0010"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Information-stealing Trojan",
+                "language": "Python",
+                "configurations": "Hundreds of variations"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Cozyduke",
+            "EntityVariantNames": [
+                "Trojan.Cozer"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "delivery_method": "Phishing emails",
+                "themes": "Office Monkeys, eFax"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Miniduke",
+            "EntityVariantNames": [
+                "Backdoor.Miniduke"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0008"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "targets": "Eastern Europe, ex-Soviet states"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Cosmicduke",
+            "EntityVariantNames": [
+                "Backdoor.Tinybaron"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Government targets",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "locations": "United States, Europe"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Private research institute",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Washington, D.C."
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Compromised websites",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "quantity": "Hundreds"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Nemesis Gemina",
+            "EntityType": "tool",
+            "EntitySubType": "framework",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "PowerShell script",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Mimikatz",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "MS Exchange Server",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Cloud services",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0010"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "Duke group",
+            "Target": "Seaduke"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Duke group",
+            "Target": "Cozyduke"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Duke group",
+            "Target": "Miniduke"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Duke group",
+            "Target": "Cosmicduke"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "Duke group",
+            "Target": "Government targets"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "Duke group",
+            "Target": "Private research institute"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Duke group",
+            "Target": "Compromised websites"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Miniduke",
+            "Target": "Nemesis Gemina"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Cosmicduke",
+            "Target": "Nemesis Gemina"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Cozyduke",
+            "Target": "PowerShell script"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Seaduke",
+            "Target": "Mimikatz"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "target",
+            "Source": "Seaduke",
+            "Target": "MS Exchange Server"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "target",
+            "Source": "Seaduke",
+            "Target": "Cloud services"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "Seaduke",
+            "Target": "Cozyduke"
+        }
+    ]
+}

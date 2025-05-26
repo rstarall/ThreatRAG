@@ -1,0 +1,227 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Operation Oil Tanker",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0006",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "January 2014",
+                "location": "North East England",
+                "observe_time": "2015",
+                "report_name": "2015_oil-tanker-en_70035111"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Black Gold",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Maritime oil transportation"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Susan",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "role": "Secretary"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Phantom Menace",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0006"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Fileless attack"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Malicious PDF",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "size": "4MB",
+                "disguise": "Adobe Acrobat Reader icon"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "FTP Server",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0010"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "service": "Free FTP service"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Nigerian attacker",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0001",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Ikeja, Nigeria",
+                "email": "*********5@gmail.com"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "dcp.exe",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "purpose": "File encryption"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Windows Registry",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Windows Firewall",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation Oil Tanker",
+            "Target": "Black Gold"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Operation Oil Tanker",
+            "Target": "Nigerian attacker"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "Nigerian attacker",
+            "Target": "Black Gold"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Nigerian attacker",
+            "Target": "Phantom Menace"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Nigerian attacker",
+            "Target": "Malicious PDF"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Nigerian attacker",
+            "Target": "FTP Server"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "trigger",
+            "Source": "Susan",
+            "Target": "Malicious PDF"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Phantom Menace",
+            "Target": "dcp.exe"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "affect",
+            "Source": "Malicious PDF",
+            "Target": "Windows Registry"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "affect",
+            "Source": "Malicious PDF",
+            "Target": "Windows Firewall"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "has",
+            "Source": "Black Gold",
+            "Target": "Susan"
+        }
+    ]
+}

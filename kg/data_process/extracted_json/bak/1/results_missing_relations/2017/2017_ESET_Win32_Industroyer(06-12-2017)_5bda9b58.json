@@ -1,0 +1,329 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Win32/Industroyer",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0040"
+            ],
+            "Properties": {
+                "target": "Industrial Control Systems",
+                "purpose": "Disrupt electrical substations"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Ukrainian power grid",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "industry": "Energy",
+                "location": "Ukraine"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Main backdoor",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "version": "1.1e/1.1s",
+                "communication": "HTTPS"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Additional backdoor",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "disguise": "Trojanized Notepad"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Launcher component",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "activation_date": "2016-12-17/2016-12-20"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "101 payload",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0040"
+            ],
+            "Properties": {
+                "protocol": "IEC 60870-5-101",
+                "target": "RTU devices"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "104 payload",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0040"
+            ],
+            "Properties": {
+                "protocol": "IEC 60870-5-104",
+                "target": "TCP/IP network devices"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "61850 payload",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0040"
+            ],
+            "Properties": {
+                "protocol": "IEC 61850",
+                "target": "Substation automation systems"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "OPC DA payload",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0040"
+            ],
+            "Properties": {
+                "protocol": "OPC Data Access",
+                "target": "ABB MicroSCADA systems"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Data wiper",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Properties": {
+                "filename": "haslo.dat/haslo.exe"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Port scanner tool",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0043"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "DoS tool",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0040"
+            ],
+            "Properties": {
+                "target": "Siemens SIPROTEC devices",
+                "vulnerability": "CVE-2015-5374"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "CVE-2015-5374",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "impact": "Denial of Service",
+                "target": "Siemens SIPROTEC"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "195.16.88.6",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "46.28.200.132",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "188.42.253.43",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "5.39.218.152",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "93.115.27.57",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "F6C21F8189CED6AE150F9EF2E82A3A57843B587D",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "CCCCE62996D578B984984426A024D9B250237533",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "8E39ECA1E48240C01EE570631AE8F0C9A9637187",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_22",
+            "EntityName": "2CB8230281B86FA944D3043AE906016C8B5984D9",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_23",
+            "EntityName": "79CA89711CDAEDB16B0CCCCFDCFBD6AA7E57120A",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_24",
+            "EntityName": "94488F214B165512D2FC0438A581F5C9E3BD4D4C",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_25",
+            "EntityName": "5A5FAFBC3FEC8D36FD57B075EBF34119BA3BFF04",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_26",
+            "EntityName": "B92149F046F00BB69DE329B8457D32C24726EE00",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_27",
+            "EntityName": "B335163E6EB854DF5E08E85026B2C3518891EDA8",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_28",
+            "EntityName": "Siemens SIPROTEC",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0040"
+            ],
+            "Properties": {
+                "type": "Protection relay"
+            }
+        },
+        {
+            "EntityId": "entity_29",
+            "EntityName": "ABB MicroSCADA",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0040"
+            ],
+            "Properties": {
+                "type": "SCADA system"
+            }
+        }
+    ],
+    "Relationships": []
+}

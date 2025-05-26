@@ -1,0 +1,111 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "ViperRAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0009",
+                "TA0010"
+            ],
+            "Properties": {
+                "type": "Mobile surveillanceware",
+                "sophistication": "Advanced"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Israeli Defense Force",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "country": "Israel"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Command and Control servers",
+            "EntityVariantNames": [
+                "C2 servers"
+            ],
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "SR Chat",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "type": "Trojanized app"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "YeeCall Pro",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "type": "Trojanized app"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Social Engineering",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Hamas",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0043"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "ViperRAT Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0009",
+                "TA0010"
+            ],
+            "Properties": {
+                "time": "February 2017"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Mobile Device",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ]
+        }
+    ],
+    "Relationships": []
+}

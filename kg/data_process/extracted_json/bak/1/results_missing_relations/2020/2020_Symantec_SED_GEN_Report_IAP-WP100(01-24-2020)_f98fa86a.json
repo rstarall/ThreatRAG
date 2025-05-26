@@ -1,0 +1,144 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Shamoon",
+            "EntityVariantNames": [
+                "Cutting Sword of Justice"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0040"
+            ],
+            "Properties": {
+                "first_seen": "2012",
+                "target_sectors": "Energy, Aviation, Government"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Dustman/ZeroCleare",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0040"
+            ],
+            "Properties": {
+                "first_seen": "2019",
+                "target_sectors": "Energy"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Elfin",
+            "EntityVariantNames": [
+                "APT33",
+                "Stonedrill",
+                "Holmium"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0007"
+            ],
+            "Properties": {
+                "first_seen": "2015",
+                "target_sectors": "Aerospace, Defense, Energy, etc."
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Seedworm",
+            "EntityVariantNames": [
+                "MuddyWater",
+                "Temp Zagros"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0007"
+            ],
+            "Properties": {
+                "first_seen": "2017",
+                "target_sectors": "Government, Energy, Telecommunications"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "W32.Disttrack",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Backdoor.Mori",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Mimikatz",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0006"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "LaZagne",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0006"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "CVE-2018-20250",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Middle Eastern oil and gas organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "industry": "Energy",
+                "region": "Middle East"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "device-update.tk",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        }
+    ],
+    "Relationships": []
+}

@@ -1,0 +1,306 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "MuddyWater",
+            "EntityVariantNames": [
+                "Earth Vetala",
+                "MERCURY",
+                "Static Kitten",
+                "Seedworm",
+                "TEMP.Zagros"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0005",
+                "TA0008",
+                "TA0010",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "affiliation": "Iranian Ministry of Intelligence and Security (MOIS)",
+                "country": "Iran"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Iranian Government-Sponsored Cyber Operations",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0005",
+                "TA0008",
+                "TA0010",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "Since approximately 2018",
+                "sectors": "Telecommunications, Defense, Local Government, Oil and Natural Gas",
+                "regions": "Asia, Africa, Europe, North America",
+                "observe_time": "2022",
+                "report_name": "2022_CISA_AA22-055A_Iranian_Government-Sponsored_Actors_Conduct_Cyber_Operations(02-24-2022)_a6246bf8"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "PowGoop",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "components": "DLL loader, PowerShell-based downloader",
+                "technique": "DLL side-loading",
+                "impersonation": "Google Update executable"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Small Sieve",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011",
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Python backdoor",
+                "distribution": "NSIS installer",
+                "communication": "Telegram Bot API over HTTPS",
+                "obfuscation": "Hex byte swapping encoding scheme"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Canopy/Starwhale",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "delivery": "Spearphishing emails with targeted attachments",
+                "technique": "Windows Script File (.wsf) scripts"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Mori",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "communication": "DNS tunneling",
+                "technique": "DLL written in C++"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "POWERSTATS",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "technique": "PowerShell scripts",
+                "purpose": "Persistent access"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "CVE-2020-1472",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0004"
+            ],
+            "Times": [
+                "7"
+            ],
+            "Properties": {
+                "description": "Microsoft Netlogon elevation of privilege vulnerability"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "CVE-2020-0688",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "7"
+            ],
+            "Properties": {
+                "description": "Microsoft Exchange memory corruption vulnerability"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "88.119.170.124",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "8"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "95.181.161.49",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "8"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Cooperation terms.xls",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "9"
+            ],
+            "Properties": {
+                "type": "Malicious Excel file",
+                "content": "Macros written in VBA"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "FML.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "10"
+            ],
+            "Properties": {
+                "language": "C++",
+                "execution": "regsvr32.exe"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Iranian Government-Sponsored Cyber Operations",
+            "Target": "MuddyWater"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "MuddyWater",
+            "Target": "PowGoop"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "MuddyWater",
+            "Target": "Small Sieve"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "MuddyWater",
+            "Target": "Canopy/Starwhale"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "MuddyWater",
+            "Target": "Mori"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "MuddyWater",
+            "Target": "POWERSTATS"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "MuddyWater",
+            "Target": "CVE-2020-1472"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "MuddyWater",
+            "Target": "CVE-2020-0688"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "PowGoop",
+            "Target": "88.119.170.124"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "POWERSTATS",
+            "Target": "95.181.161.49"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Canopy/Starwhale",
+            "Target": "Cooperation terms.xls"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Mori",
+            "Target": "FML.dll"
+        }
+    ]
+}

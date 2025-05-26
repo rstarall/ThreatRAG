@@ -1,0 +1,283 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Cybercriminals",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0043",
+                "TA0001",
+                "TA0002",
+                "TA0005",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "SWIFT Banking System Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0043",
+                "TA0001",
+                "TA0002",
+                "TA0005",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "May 20, 2016",
+                "observe_time": "2016",
+                "report_name": "2016_McAfee_SWIFT-Insider-Knowledge(05-20-2016)_f1c9eb91"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Bank in Bangladesh",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Bangladesh"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Tienphong Commercial Joint Stock Bank",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Vietnam",
+                "location": "Hanoi",
+                "SWIFT_code": "TPBVVNVX"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "0b9bf941e2539eaa34756a9e2c0d5343",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "909e1b840909522fe6ba3d4dfd197d93",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Fake Foxit Reader",
+            "EntityType": "malware",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "compile_timestamp": "2015-12-04 02:04:23",
+                "first_submission": "December 22, 2015"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "C:\\\\Windows\\temp\\\\WRTU\\ldksetup.tmp",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "encoding": "XOR 0x47"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Lmutilps32.dat",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "location": "C:\\\\Windows\\\\temp\\WRTU\\",
+                "encoding": "XOR 0x7C4D5978"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "fpdsdk.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "origin": "Foxit SDK"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "C:\\Documents and Settings\\Test\\Local Settings\\Temp\\",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "SWIFT messaging system",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "SWIFT Banking System Attack",
+            "Target": "Cybercriminals"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "SWIFT Banking System Attack",
+            "Target": "Bank in Bangladesh"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "SWIFT Banking System Attack",
+            "Target": "Tienphong Commercial Joint Stock Bank"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Cybercriminals",
+            "Target": "Fake Foxit Reader"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Cybercriminals",
+            "Target": "0b9bf941e2539eaa34756a9e2c0d5343"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Cybercriminals",
+            "Target": "909e1b840909522fe6ba3d4dfd197d93"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "Cybercriminals",
+            "Target": "Bank in Bangladesh"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "Cybercriminals",
+            "Target": "Tienphong Commercial Joint Stock Bank"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "Cybercriminals",
+            "Target": "SWIFT messaging system"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Fake Foxit Reader",
+            "Target": "C:\\\\Windows\\temp\\\\WRTU\\ldksetup.tmp"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Fake Foxit Reader",
+            "Target": "Lmutilps32.dat"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Fake Foxit Reader",
+            "Target": "fpdsdk.dll"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "belong_to",
+            "Source": "C:\\\\Windows\\temp\\\\WRTU\\ldksetup.tmp",
+            "Target": "Tienphong Commercial Joint Stock Bank"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "belong_to",
+            "Source": "Lmutilps32.dat",
+            "Target": "Tienphong Commercial Joint Stock Bank"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "has",
+            "Source": "Bank in Bangladesh",
+            "Target": "SWIFT messaging system"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "has",
+            "Source": "Tienphong Commercial Joint Stock Bank",
+            "Target": "SWIFT messaging system"
+        }
+    ]
+}

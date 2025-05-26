@@ -12,3 +12,16 @@ neo4j-driver>=5.14.0
 requests>=2.31.0
 python-magic>=0.4.27
 huggingface-hub>=0.19.4
+fastapi>=0.100.0
+uvicorn[standard]>=0.20.0
+python-multipart>=0.0.6
+pypdf>=3.10.0
+sentence-transformers>=2.2.2
+chromadb>=0.4.15
+openai>=1.0.0
+langchain>=0.1.0
+pymilvus>=2.3.0
+psutil>=5.9.0
+neo4j>=5.0.0
+python-dotenv>=1.0.0
+# 如果你使用其他大模型, 请替换 openai 或添加相应库

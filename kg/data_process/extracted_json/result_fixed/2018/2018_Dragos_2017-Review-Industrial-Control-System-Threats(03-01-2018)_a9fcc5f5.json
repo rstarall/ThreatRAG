@@ -1,0 +1,288 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "ELECTRUM",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "capability": "ICS-specific malware development"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "COVELLITE",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "target": "US electric grid companies"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "DYMALLOY",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0007"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "target": "ICS networks in Turkey, Europe, and North America"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CHRYSENE",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0009"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "target": "Oil and gas, electric generation industries"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "MAGNALLIUM",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0009"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "target": "Saudi Arabian petrochemical and aerospace"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CRASHOVERRIDE",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "target": "Electric grid operations",
+                "impact": "Caused power outage in Ukraine"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "TRISIS",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0040"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "target": "Schneider Electric Triconex safety systems",
+                "impact": "First malware targeting safety instrumented systems"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "WannaCry",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Ransomware worm",
+                "exploit": "MS17-010 (EternalBlue)"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "NotPetya",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0040"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "type": "Wiper masquerading as ransomware",
+                "impact": "Estimated $300M loss for Maersk"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "MS17-010",
+            "EntityType": "vul",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "name": "EternalBlue",
+                "description": "SMB protocol vulnerability"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "2016 Ukrainian power outage",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "December 2016",
+                "location": "Ukraine",
+                "observe_time": "2018",
+                "report_name": "2018_Dragos_2017-Review-Industrial-Control-System-Threats(03-01-2018)_a9fcc5f5"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "TRISIS attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0040"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "date": "November 2017",
+                "observe_time": "2018",
+                "report_name": "2018_Dragos_2017-Review-Industrial-Control-System-Threats(03-01-2018)_a9fcc5f5"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Schneider Electric Triconex",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Safety instrumented system"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "ELECTRUM",
+            "Target": "CRASHOVERRIDE"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "2016 Ukrainian power outage",
+            "Target": "ELECTRUM"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "2016 Ukrainian power outage",
+            "Target": "CRASHOVERRIDE"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "involve",
+            "Source": "TRISIS attack",
+            "Target": "TRISIS"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "TRISIS",
+            "Target": "Schneider Electric Triconex"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "WannaCry",
+            "Target": "MS17-010"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "COVELLITE",
+            "Target": "US electric grid companies"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "DYMALLOY",
+            "Target": "ICS networks in Turkey, Europe, and North America"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "CHRYSENE",
+            "Target": "Oil and gas, electric generation industries"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "target",
+            "Source": "MAGNALLIUM",
+            "Target": "Saudi Arabian petrochemical and aerospace"
+        }
+    ]
+}

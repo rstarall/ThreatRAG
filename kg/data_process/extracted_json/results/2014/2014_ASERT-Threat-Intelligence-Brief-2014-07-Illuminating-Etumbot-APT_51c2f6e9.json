@@ -1,0 +1,263 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Numbered Panda",
+            "EntityVariantNames": [
+                "APT12",
+                "DYNCALC/CALC Team",
+                "IXESHE"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China",
+                "activity_since": "July 2009"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Etumbot",
+            "EntityVariantNames": [
+                "Exploz",
+                "Specfix"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "first_seen": "March 2011",
+                "type": "Backdoor"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Etumbot APT Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "2011-2014",
+                "targets": "Taiwanese and Japanese organizations",
+                "observe_time": "2014",
+                "report_name": "2014_ASERT-Threat-Intelligence-Brief-2014-07-Illuminating-Etumbot-APT_51c2f6e9"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Taiwanese Government",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Japanese Government",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "HTran",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "purpose": "Connection bouncer"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "ka4281x3.log",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "kb71271.log",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "211.53.164.152",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "finance.yesplusno.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Right-to-Left Override",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "ff5a7a610746ab5492cc6ab284138852",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "Numbered Panda",
+            "Target": "Etumbot"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Numbered Panda",
+            "Target": "HTran"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Numbered Panda",
+            "Target": "Right-to-Left Override"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "target",
+            "Source": "Numbered Panda",
+            "Target": "Taiwanese Government"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "Numbered Panda",
+            "Target": "Japanese Government"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Etumbot",
+            "Target": "ka4281x3.log"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Etumbot",
+            "Target": "kb71271.log"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Etumbot",
+            "Target": "211.53.164.152"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Etumbot",
+            "Target": "finance.yesplusno.com"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "involve",
+            "Source": "Etumbot APT Campaign",
+            "Target": "Numbered Panda"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "involve",
+            "Source": "Etumbot APT Campaign",
+            "Target": "Taiwanese Government"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "involve",
+            "Source": "Etumbot APT Campaign",
+            "Target": "Japanese Government"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "belong_to",
+            "Source": "finance.yesplusno.com",
+            "Target": "211.53.164.152"
+        }
+    ]
+}

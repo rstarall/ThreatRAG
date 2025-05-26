@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entitys>
+<Entity>
+<EntityId>entity_1</EntityId>
+<EntityName>Red October</EntityName>
+<EntityType>attcker</EntityType>
+<EntitySubType>org</EntitySubType>
+<Labels>
+<Label>TA0001</Label>
+<Label>TA0002</Label>
+<Label>TA0003</Label>
+<Label>TA0006</Label>
+<Label>TA0009</Label>
+<Label>TA0010</Label>
+</Labels>
+<Times>
+<Time>1</Time>
+</Times>
+<Properties>
+<Property name="origin">Russian-speaking</Property>
+<Property name="activity_period">2007-2013</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_2</EntityId>
+<EntityName>Red October Attack Campaign</EntityName>
+<EntityType>event</EntityType>
+<EntitySubType>event</EntitySubType>
+<Labels>
+<Label>TA0001</Label>
+<Label>TA0002</Label>
+<Label>TA0003</Label>
+<Label>TA0006</Label>
+<Label>TA0009</Label>
+<Label>TA0010</Label>
+</Labels>
+<Times>
+<Time>1</Time>
+</Times>
+<Properties>
+<Property name="timeframe">2007-2013</Property>
+<Property name="targets">Diplomatic, governmental, scientific research organizations</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_3</EntityId>
+<EntityName>CVE-2009-3129</EntityName>
+<EntityType>vul</EntityType>
+<EntitySubType>cve</EntitySubType>
+<Labels>
+<Label>TA0001</Label>
+</Labels>
+<Times>
+<Time>2</Time>
+</Times>
+<Properties>
+<Property name="affected_software">Microsoft Excel</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_4</EntityId>
+<EntityName>CVE-2010-3333</EntityName>
+<EntityType>vul</EntityType>
+<EntitySubType>cve</EntitySubType>
+<Labels>
+<Label>TA0001</Label>
+</Labels>
+<Times>
+<Time>2</Time>
+</Times>
+<Properties>
+<Property name="affected_software">Microsoft Word</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_5</EntityId>
+<EntityName>CVE-2012-0158</EntityName>
+<EntityType>vul</EntityType>
+<EntitySubType>cve</EntitySubType>
+<Labels>
+<Label>TA0001</Label>
+</Labels>
+<Times>
+<Time>2</Time>
+</Times>
+<Properties>
+<Property name="affected_software">Microsoft Word</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_6</EntityId>
+<EntityName>CVE-2011-3544</EntityName>
+<EntityType>vul</EntityType>
+<EntitySubType>cve</EntitySubType>
+<Labels>
+<Label>TA0001</Label>
+</Labels>
+<Times>
+<Time>2</Time>
+</Times>
+<Properties>
+<Property name="name">Rhino exploit</Property>
+<Property name="affected_software">Java</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_7</EntityId>
+<EntityName>Katyn_-_opinia_Rosjan.xls</EntityName>
+<EntityType>file</EntityType>
+<EntitySubType>file</EntitySubType>
+<Labels>
+<Label>TA0001</Label>
+</Labels>
+<Times>
+<Time>2</Time>
+</Times>
+<Properties>
+<Property name="type">Malicious Excel file</Property>
+<Property name="victim_id">F50D0B17F870EB38026F</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_8</EntityId>
+<EntityName>tactlist_05-05-2011_.8634.xls</EntityName>
+<EntityType>file</EntityType>
+<EntitySubType>file</EntitySubType>
+<Labels>
+<Label>TA0001</Label>
+</Labels>
+<Times>
+<Time>2</Time>
+</Times>
+<Properties>
+<Property name="type">Malicious Excel file</Property>
+<Property name="victim_id">FCF5E48A0AE558F4B859</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_9</EntityId>
+<EntityName>MSC.BAT</EntityName>
+<EntityType>file</EntityType>
+<EntitySubType>file</EntitySubType>
+<Labels>
+<Label>TA0002</Label>
+</Labels>
+<Times>
+<Time>3</Time>
+</Times>
+<Properties>
+<Property name="location">%TEMP%</Property>
+<Property name="content">chcp 1251; attrib -a -s -h -r "%DROPPER_FILE%"; del "%DROPPER_FILE%"</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_10</EntityId>
+<EntityName>LHAFD.GCP</EntityName>
+<EntityType>file</EntityType>
+<EntitySubType>file</EntitySubType>
+<Labels>
+<Label>TA0002</Label>
+<Label>TA0011</Label>
+</Labels>
+<Times>
+<Time>3</Time>
+</Times>
+<Properties>
+<Property name="location">%ProgramFiles%WINDOWS NT</Property>
+<Property name="encryption">RC4</Property>
+<Property name="compression">Zlib</Property>
+<Property name="type">Backdoor</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_11</EntityId>
+<EntityName>SVCHOST.EXE</EntityName>
+<EntityType>file</EntityType>
+<EntitySubType>file</EntitySubType>
+<Labels>
+<Label>TA0002</Label>
+<Label>TA0011</Label>
+</Labels>
+<Times>
+<Time>3</Time>
+</Times>
+<Properties>
+<Property name="location">%ProgramFiles%WINDOWS NT</Property>
+<Property name="type">Loader module</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_12</EntityId>
+<EntityName>dll-host-update.com</EntityName>
+<EntityType>ioc</EntityType>
+<EntitySubType>domain</EntitySubType>
+<Labels>
+<Label>TA0011</Label>
+</Labels>
+<Times>
+<Time>4</Time>
+</Times>
+<Properties>
+<Property name="status">Sinkholed by Kaspersky</Property>
+<Property name="ip">95.211.172.143</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_13</EntityId>
+<EntityName>shellupdate.com</EntityName>
+<EntityType>ioc</EntityType>
+<EntitySubType>domain</EntitySubType>
+<Labels>
+<Label>TA0011</Label>
+</Labels>
+<Times>
+<Time>4</Time>
+</Times>
+<Properties>
+<Property name="status">Sinkholed by Kaspersky</Property>
+<Property name="ip">95.211.172.143</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_14</EntityId>
+<EntityName>msgenuine.net</EntityName>
+<EntityType>ioc</EntityType>
+<EntitySubType>domain</EntitySubType>
+<Labels>
+<Label>TA0011</Label>
+</Labels>
+<Times>
+<Time>4</Time>
+</Times>
+<Properties>
+<Property name="status">Sinkholed by Kaspersky</Property>
+<Property name="ip">95.211.172.143</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_15</EntityId>
+<EntityName>microsoft-msdn.com</EntityName>
+<EntityType>ioc</EntityType>
+<EntitySubType>domain</EntitySubType>
+<Labels>
+<Label>TA0011</Label>
+</Labels>
+<Times>
+<Time>4</Time>
+</Times>
+<Properties>
+<Property name="status">Sinkholed by Kaspersky</Property>
+<Property name="ip">95.211.172.143</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_16</EntityId>
+<EntityName>windowsonlineupdate.com</EntityName>
+<EntityType>ioc</EntityType>
+<EntitySubType>domain</EntitySubType>
+<Labels>
+<Label>TA0011</Label>
+</Labels>
+<Times>
+<Time>4</Time>
+</Times>
+<Properties>
+<Property name="status">Sinkholed by Kaspersky</Property>
+<Property name="ip">95.211.172.143</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_17</EntityId>
+<EntityName>windows-genuine.com</EntityName>
+<EntityType>ioc</EntityType>
+<EntitySubType>domain</EntitySubType>
+<Labels>
+<Label>TA0011</Label>
+</Labels>
+<Times>
+<Time>4</Time>
+</Times>
+<Properties>
+<Property name="status">Sinkholed by Kaspersky</Property>
+<Property name="ip">95.211.172.143</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_18</EntityId>
+<EntityName>31.41.45.139</EntityName>
+<EntityType>asset</EntityType>
+<EntitySubType>ip</EntitySubType>
+<Labels>
+<Label>TA0011</Label>
+</Labels>
+<Times>
+<Time>4</Time>
+</Times>
+<Properties>
+<Property name="type">C&amp;C server</Property>
+<Property name="port">40080</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_19</EntityId>
+<EntityName>178.63.208.63</EntityName>
+<EntityType>asset</EntityType>
+<EntitySubType>ip</EntitySubType>
+<Labels>
+<Label>TA0011</Label>
+</Labels>
+<Times>
+<Time>4</Time>
+</Times>
+<Properties>
+<Property name="type">C&amp;C server</Property>
+<Property name="port">40080</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_20</EntityId>
+<EntityName>Acid Cryptofiler</EntityName>
+<EntityType>asset</EntityType>
+<EntitySubType>bussiness</EntitySubType>
+<Labels>
+<Label>TA0006</Label>
+</Labels>
+<Times>
+<Time>5</Time>
+</Times>
+<Properties>
+<Property name="type">Cryptographic system</Property>
+<Property name="users">EU organizations</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_21</EntityId>
+<EntityName>Diplomatic Service Agencies</EntityName>
+<EntityType>vctim</EntityType>
+<EntitySubType>org</EntitySubType>
+<Labels>
+<Label>TA0001</Label>
+</Labels>
+<Times>
+<Time>1</Time>
+</Times>
+</Entity>
+<Entity>
+<EntityId>entity_22</EntityId>
+<EntityName>Government Agencies</EntityName>
+<EntityType>vctim</EntityType>
+<EntitySubType>org</EntitySubType>
+<Labels>
+<Label>TA0001</Label>
+</Labels>
+<Times>
+<Time>1</Time>
+</Times>
+</Entity>
+<Entity>
+<EntityId>entity_23</EntityId>
+<EntityName>Scientific Research Organizations</EntityName>
+<EntityType>vctim</EntityType>
+<EntitySubType>org</EntitySubType>
+<Labels>
+<Label>TA0001</Label>
+</Labels>
+<Times>
+<Time>1</Time>
+</Times>
+</Entity>
+</Entitys>

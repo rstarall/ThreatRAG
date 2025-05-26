@@ -1,0 +1,477 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Lazarus",
+            "EntityVariantNames": [
+                "APT-29",
+                "Pompilus"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0006",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "North Korea",
+                "campaign": "Operation Dream Job"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Operation Dream Job",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0006",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "January 2022",
+                "location": "South Korea",
+                "observe_time": "2022",
+                "report_name": "2022_Symantec_Lazarus-Targets-Chemical-Sector(04-14-2022)_a1a3b962"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Chemical Sector Organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Chemical",
+                "location": "South Korea"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "join_06[1].htm",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "e31af5131a095fbc884c56068e19b0c98636d95f93c257a0c829ec3f3cc8e4ba",
+                "type": "HTM file"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "scskapplink.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "signature": "\"A\" MEDICAL OFFICE, PLLC"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "INISAFE Web EX Client",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "happy.nanoace.co.kr",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "url": "hxxp[:]//happy[.]nanoace.co.kr/Content/rating/themes/krajee-fas/FrmAMEISMngWeb.asp"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "final.cpl",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "hash": "5f20cc6a6a82b940670a0f89eda5d68f091073091394c362bfcaf52145b058db",
+                "type": "Trojanized LZMA Utils"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Windows Management Instrumentation",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "MagicLine",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "developer": "DreamSecurity"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "SiteShoter",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "7"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "IP Logger",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "7"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "WakeOnLAN",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "7"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "FastCopy",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "7"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "File Transfer Protocol",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0010"
+            ],
+            "Times": [
+                "7"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Cryptodome",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "8"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "BitDefender",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "8"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "wpm.cpl",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "9"
+            ],
+            "Properties": {
+                "hash": "942489ce7dce87f7888322a0e56b5e3c3b0130e11f57b3879fbefc48351a78f6"
+            }
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "arm.dat",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "10"
+            ],
+            "Properties": {
+                "hash": "48f3ead8477f3ef16da6b74dadc89661a231c82b96f3574c6b7ceb9c03468291",
+                "function": "SiteShoter"
+            }
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "addins.cpl",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "11"
+            ],
+            "Properties": {
+                "hash": "5f20cc6a6a82b940670a0f89eda5d68f091073091394c362bfcaf52145b058db"
+            }
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "uso",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "12"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation Dream Job",
+            "Target": "Lazarus"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Operation Dream Job",
+            "Target": "Chemical Sector Organizations"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Lazarus",
+            "Target": "join_06[1].htm"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Lazarus",
+            "Target": "scskapplink.dll"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Lazarus",
+            "Target": "final.cpl"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Lazarus",
+            "Target": "Windows Management Instrumentation"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Lazarus",
+            "Target": "SiteShoter"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Lazarus",
+            "Target": "IP Logger"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Lazarus",
+            "Target": "WakeOnLAN"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "Lazarus",
+            "Target": "FastCopy"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "Lazarus",
+            "Target": "File Transfer Protocol"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "use",
+            "Source": "Lazarus",
+            "Target": "Cryptodome"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "use",
+            "Source": "Lazarus",
+            "Target": "BitDefender"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "use",
+            "Source": "Lazarus",
+            "Target": "addins.cpl"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "use",
+            "Source": "Lazarus",
+            "Target": "uso"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "target",
+            "Source": "Lazarus",
+            "Target": "Chemical Sector Organizations"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "target",
+            "Source": "Lazarus",
+            "Target": "INISAFE Web EX Client"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "target",
+            "Source": "Lazarus",
+            "Target": "MagicLine"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "belong_to",
+            "Source": "join_06[1].htm",
+            "Target": "Chemical Sector Organizations"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "belong_to",
+            "Source": "scskapplink.dll",
+            "Target": "INISAFE Web EX Client"
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "related_to",
+            "Source": "final.cpl",
+            "Target": "happy.nanoace.co.kr"
+        },
+        {
+            "RelationshipId": "relationship_22",
+            "RelationshipType": "related_to",
+            "Source": "Windows Management Instrumentation",
+            "Target": "MagicLine"
+        },
+        {
+            "RelationshipId": "relationship_23",
+            "RelationshipType": "related_to",
+            "Source": "addins.cpl",
+            "Target": "uso"
+        },
+        {
+            "RelationshipId": "relationship_24",
+            "RelationshipType": "has",
+            "Source": "Chemical Sector Organizations",
+            "Target": "INISAFE Web EX Client"
+        },
+        {
+            "RelationshipId": "relationship_25",
+            "RelationshipType": "has",
+            "Source": "Chemical Sector Organizations",
+            "Target": "MagicLine"
+        },
+        {
+            "RelationshipId": "relationship_26",
+            "RelationshipType": "has",
+            "Source": "Chemical Sector Organizations",
+            "Target": "BitDefender"
+        },
+        {
+            "RelationshipId": "relationship_27",
+            "RelationshipType": "trigger",
+            "Source": "Chemical Sector Organizations",
+            "Target": "join_06[1].htm"
+        }
+    ]
+}

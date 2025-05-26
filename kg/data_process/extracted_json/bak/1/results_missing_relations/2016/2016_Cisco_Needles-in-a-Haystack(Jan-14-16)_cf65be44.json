@@ -1,0 +1,274 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Anubis sandbox",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0043"
+            ],
+            "Properties": {
+                "samples": "30M",
+                "duration": "6 years"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Advanced Persistent Threat",
+            "EntityVariantNames": [
+                "APT"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Cisco Advanced Malware Protection",
+            "EntityVariantNames": [
+                "AMP"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0005"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Beebus",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Properties": {
+                "date": "February 2013"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Arid Viper",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Properties": {
+                "date": "February 2015"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Red October",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Properties": {
+                "date": "January 2013"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Equation",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Properties": {
+                "date": "February 2015"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Pacific RAT",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Properties": {
+                "date": "July 2014"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Regin",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Properties": {
+                "date": "November 2014"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Aurora",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Properties": {
+                "date": "January 2010"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Pitty Tiger",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Properties": {
+                "date": "July 2014"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Net Traveller",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Properties": {
+                "date": "June 2013"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "BrutPOS",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Properties": {
+                "date": "July 2014"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "VirusTotal",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0043"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "003315B0AEA2FCB9F77D29223DD8947D0E6792B3A0227E054BE8EB2A11F443D9",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "date": "2015-02-17",
+                "disposition": "MALICIOUS"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "015FBC0B216D197136DF8692B354BF2FC7BD6EB243E73283D861A4DBBB81A751",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "date": "2014-12-20",
+                "disposition": "UNKNOWN/MALICIOUS"
+            }
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "14BFDA4A4ACA1276388702D0FB7629AF120FF34C1ACDEB7613815F2981C99832",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "date": "2014-05-07",
+                "disposition": "MALICIOUS"
+            }
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "508909C8A00026C904F52099DD62BBF4062B4E8E40FC0601BD9E13570514B4F5",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "date": "2014-05-06",
+                "disposition": "MALICIOUS"
+            }
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "7170A07BCB5B0467A75CBD17A1A1877AEC3C8EA43C45D3BED6AB5E6C95A62713",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "date": "2014-05-06",
+                "disposition": "MALICIOUS"
+            }
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "9A10916AD0F43FA3376C2E54FD5CFDD06D684B3A19895ED4107FAF9F3313DCDA",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "date": "2014-05-07",
+                "disposition": "MALICIOUS"
+            }
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "E28EABEB678AFB5E172F4127C5692E742809FD86DFA8478C1DC6F9C13B2A8E5F",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "date": "2014-05-06",
+                "disposition": "UNKNOWN/MALICIOUS"
+            }
+        }
+    ],
+    "Relationships": []
+}

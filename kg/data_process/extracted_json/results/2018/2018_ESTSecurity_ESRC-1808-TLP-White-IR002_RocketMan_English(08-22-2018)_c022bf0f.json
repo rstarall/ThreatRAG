@@ -1,0 +1,401 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Geumseong121 Group",
+            "EntityVariantNames": [
+                "Geumseong121"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "suspected_origin": "State-sponsored"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Operation Rocket Man",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "August 2018",
+                "observe_time": "2018",
+                "report_name": "2018_ESTSecurity_ESRC-1808-TLP-White-IR002_RocketMan_English(08-22-2018)_c022bf0f"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "North Korean organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Korean defense sectors",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2018-4878",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "111.hwp",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "md5": "EDC1BDB2D70E36891826FDD58682B6C4",
+                "sha256": "2CAF1E26A67760268648B0EC8EA66BE9D2E28BAC1B2A48E1E6F6E9A06BEB042C"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Ant_3.5.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "md5": "B710E5A4CA00A52F6297A3CC7190393A",
+                "sha256": "32E98F39BCDE86885C527DDCF68FAD67D0A7E6C23877672EBFD4C2A6A3F545E5"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "worldnews.doc",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "md5": "1213E5A0BE1FBD9A7103AB08FE8EA5CB",
+                "sha256": "dc827f7a1e5ee4600697d7d3efdeb8401b7a9af3d704d0462e7d3e0804a9069d"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "desktops.ini",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "md5": "05EEF00DE73498167B2D7EBDC492C429",
+                "sha256": "4380769cdef6ed56c1290acfc98a26e029e887a3b4ebfc417bfd80408b4d9e90"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "m.ssbw.co.kr",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "endlesspaws.com",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "175.45.178.133",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "PubNub",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "CVE-2017-8759",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "CVE-2015-5119",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "CVE-2015-0313",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "AOL Messenger",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "KakaoTalk Messenger",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "LiuJin",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "taihaole9366",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation Rocket Man",
+            "Target": "Geumseong121 Group"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Operation Rocket Man",
+            "Target": "North Korean organizations"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "Operation Rocket Man",
+            "Target": "Korean defense sectors"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Geumseong121 Group",
+            "Target": "CVE-2018-4878"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Geumseong121 Group",
+            "Target": "111.hwp"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Geumseong121 Group",
+            "Target": "Ant_3.5.exe"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Geumseong121 Group",
+            "Target": "worldnews.doc"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Geumseong121 Group",
+            "Target": "desktops.ini"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Geumseong121 Group",
+            "Target": "PubNub"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "Geumseong121 Group",
+            "Target": "AOL Messenger"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "Geumseong121 Group",
+            "Target": "KakaoTalk Messenger"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "target",
+            "Source": "Geumseong121 Group",
+            "Target": "North Korean organizations"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "target",
+            "Source": "Geumseong121 Group",
+            "Target": "Korean defense sectors"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "belong_to",
+            "Source": "111.hwp",
+            "Target": "m.ssbw.co.kr"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "belong_to",
+            "Source": "worldnews.doc",
+            "Target": "m.ssbw.co.kr"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "belong_to",
+            "Source": "Ant_3.5.exe",
+            "Target": "m.ssbw.co.kr"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "belong_to",
+            "Source": "desktops.ini",
+            "Target": "m.ssbw.co.kr"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "related_to",
+            "Source": "PubNub",
+            "Target": "desktops.ini"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "related_to",
+            "Source": "LiuJin",
+            "Target": "PubNub"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "related_to",
+            "Source": "taihaole9366",
+            "Target": "Geumseong121 Group"
+        }
+    ]
+}

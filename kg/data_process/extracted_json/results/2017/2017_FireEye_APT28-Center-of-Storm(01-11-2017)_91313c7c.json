@@ -1,0 +1,230 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT28",
+            "EntityVariantNames": [
+                "Fancy Bear",
+                "Pawn Storm"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Russia",
+                "sponsor": "Russian Government"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Democratic National Committee",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "industry": "Politics",
+                "country": "United States"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "World Anti-Doping Agency",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "industry": "Sports"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "GAMEFISH",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "aka": "Sednit, Seduploader, JHUHUGIT, Sofacy"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2016-7855",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "software": "Adobe Flash"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Guccifer 2.0",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0010"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "type": "False persona"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Fancy Bears' Hack Team",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0010"
+            ],
+            "Times": [
+                "7"
+            ],
+            "Properties": {
+                "type": "False hacktivist persona"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Anti-Doping Administration and Management System",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "8"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "John Podesta",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "9"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Democratic Congressional Campaign Committee",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "10"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "target",
+            "Source": "APT28",
+            "Target": "Democratic National Committee"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "target",
+            "Source": "APT28",
+            "Target": "World Anti-Doping Agency"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "APT28",
+            "Target": "GAMEFISH"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "APT28",
+            "Target": "CVE-2016-7855"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "APT28",
+            "Target": "Guccifer 2.0"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "APT28",
+            "Target": "Fancy Bears' Hack Team"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2016-7855",
+            "Target": "Democratic National Committee"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "GAMEFISH",
+            "Target": "Democratic National Committee"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "APT28",
+            "Target": "John Podesta"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "target",
+            "Source": "APT28",
+            "Target": "Democratic Congressional Campaign Committee"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "has",
+            "Source": "World Anti-Doping Agency",
+            "Target": "Anti-Doping Administration and Management System"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Fancy Bears' Hack Team",
+            "Target": "World Anti-Doping Agency"
+        }
+    ]
+}

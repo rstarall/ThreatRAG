@@ -1,0 +1,242 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Duqu",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0006",
+                "TA0009"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Cyber espionage tool",
+                "capabilities": "Keystroke logging, screen capture, file exfiltration"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Flame",
+            "EntityVariantNames": [
+                "sKyWIper"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0006",
+                "TA0009"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Info-stealer malware",
+                "capabilities": "Microphone/webcam activation, keylogging, geolocation extraction"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "MiniDuke",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Backdoor",
+                "size": "20kb",
+                "language": "Assembly"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CrySyS Lab",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Research laboratory",
+                "location": "Budapest, Hungary"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "MS Word document with kernel exploit",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "role": "Dropper",
+                "exploit": "Windows kernel 0-day"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Targeted PDF documents",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "exploit": "Acrobat Reader 0-day"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Windows Update proxy",
+            "EntityType": "method",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001",
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "technique": "Masquerading"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Fake Microsoft certificate",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "vulnerability": "MD5 collision"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Twitter and Google for C&C",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "technique": "Legitimate service abuse"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Government entities in Europe",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "countries": "Ukraine, Belgium, Portugal, Romania, Czech Republic, Ireland"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "Duqu"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "Flame"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "MiniDuke"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "CrySyS Lab"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "Government entities in Europe"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Duqu",
+            "Target": "MS Word document with kernel exploit"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Flame",
+            "Target": "Fake Microsoft certificate"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "MiniDuke",
+            "Target": "Targeted PDF documents"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "MiniDuke",
+            "Target": "Twitter and Google for C&C"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "trigger",
+            "Source": "CrySyS Lab",
+            "Target": "Duqu"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "trigger",
+            "Source": "Government entities in Europe",
+            "Target": "MiniDuke"
+        }
+    ]
+}

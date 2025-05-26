@@ -1,0 +1,398 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Deep Panda",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Government Agency Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "April 2023",
+                "observe_time": "2013",
+                "report_name": "2013_AdversaryIntelligenceReport_DeepPanda_0 (1)_7f9b50f4"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Government Agency",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Government"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "14c04f88dc97aef3e9b516ef208a2bf5",
+            "EntityVariantNames": [
+                "Dropper Sample"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "14c04f88dc97aef3e9b516ef208a2bf5",
+                "type": "Dropper"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "47619fca20895abc83807321cbb80a3d",
+            "EntityVariantNames": [
+                "Backdoor DLL Sample"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "47619fca20895abc83807321cbb80a3d",
+                "type": "Backdoor DLL"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "2dce7fc3f52a692d8a84a0c182519133",
+            "EntityVariantNames": [
+                "Post Exploitation Tool Sample"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "2dce7fc3f52a692d8a84a0c182519133",
+                "type": "Post Exploitation Tool"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "de7500fc1065a081180841f32f06a537",
+            "EntityVariantNames": [
+                "Backdoor DLL Sample"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "hash": "de7500fc1065a081180841f32f06a537",
+                "type": "Backdoor DLL"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "dae6b9b3b8e39b08b10a51a6457444d8",
+            "EntityVariantNames": [
+                "Kernel Driver Sample"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0005",
+                "TA0003"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "hash": "dae6b9b3b8e39b08b10a51a6457444d8",
+                "type": "Kernel Driver"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "1.9.5.38",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "port": "443",
+                "location": "Malaysia"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "202.86.190.3",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "port": "80",
+                "location": "Hong Kong"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "infoadmn.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "path": "C:\\Documents and Settings\\All Users\\Documents\\infoadmn.dll"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "infoctrs.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "path": "C:\\Documents and Settings\\All Users\\Documents\\infoctrs.dll"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "infocardapi.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "path": "C:\\Documents and Settings\\All Users\\Documents\\infocardapi.dll"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "msupdate",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "registry_key": "HKLM\\\\SYSTEM\\\\CurrentControlSet\\\\Services\\\\msupdate"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Steven Lai",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "alias": "embedlinux",
+                "country": "China"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "360.cn",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "6"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Government Agency Attack Event",
+            "Target": "Deep Panda"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Government Agency Attack Event",
+            "Target": "Government Agency"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Deep Panda",
+            "Target": "14c04f88dc97aef3e9b516ef208a2bf5"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Deep Panda",
+            "Target": "47619fca20895abc83807321cbb80a3d"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Deep Panda",
+            "Target": "2dce7fc3f52a692d8a84a0c182519133"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Deep Panda",
+            "Target": "de7500fc1065a081180841f32f06a537"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Deep Panda",
+            "Target": "dae6b9b3b8e39b08b10a51a6457444d8"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "Deep Panda",
+            "Target": "Government Agency"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "14c04f88dc97aef3e9b516ef208a2bf5",
+            "Target": "47619fca20895abc83807321cbb80a3d"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "47619fca20895abc83807321cbb80a3d",
+            "Target": "1.9.5.38"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "2dce7fc3f52a692d8a84a0c182519133",
+            "Target": "202.86.190.3"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "de7500fc1065a081180841f32f06a537",
+            "Target": "202.86.190.3"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "de7500fc1065a081180841f32f06a537",
+            "Target": "dae6b9b3b8e39b08b10a51a6457444d8"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "Steven Lai",
+            "Target": "dae6b9b3b8e39b08b10a51a6457444d8"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "Steven Lai",
+            "Target": "360.cn"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "belong_to",
+            "Source": "infoadmn.dll",
+            "Target": "Government Agency"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "belong_to",
+            "Source": "infoctrs.dll",
+            "Target": "Government Agency"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "belong_to",
+            "Source": "infocardapi.dll",
+            "Target": "Government Agency"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "belong_to",
+            "Source": "msupdate",
+            "Target": "Government Agency"
+        }
+    ]
+}

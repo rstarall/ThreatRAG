@@ -1,0 +1,133 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Infy",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "variant": "Original",
+                "version": "1-31"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Infy M",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "version": "6.x-8.0"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Prince of Persia Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "duration": "Decade-long"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Government and Industry Targets",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "count": "326 systems",
+                "countries": "35"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "us1s2.strangled.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "uvps1.cotbm.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0010"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "138.201.0.134",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "f07e85143e057ee565c25db2a9f36491102d4e526ffb02c83e580712ec00eb27",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "version": "Infy 31"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "583349B7A2385A1E8DE682A43351798CA113CBBB80686193ECF9A61E6942786A",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "version": "Infy M 8.0"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Shadowserver",
+            "EntityType": "org",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0040"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Palo Alto Networks Unit 42",
+            "EntityType": "org",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0040"
+            ]
+        }
+    ],
+    "Relationships": []
+}

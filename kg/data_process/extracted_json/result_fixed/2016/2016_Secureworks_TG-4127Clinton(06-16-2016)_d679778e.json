@@ -1,0 +1,248 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Threat Group-4127",
+            "EntityVariantNames": [
+                "TG-4127",
+                "APT28",
+                "Sofacy",
+                "Sednit",
+                "Pawn Storm"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0006",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Russian Federation",
+                "confidence": "moderate"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Hillary Clinton Presidential Campaign Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0006",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "October 2015 - May 2016",
+                "observe_time": "2016",
+                "report_name": "2016_Secureworks_TG-4127Clinton(06-16-2016)_d679778e"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Hillary for America",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "domain": "hillaryclinton.com",
+                "email_service": "Google Apps"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Democratic National Committee",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "domain": "dnc.org"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Spearphishing Campaign",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "technique": "Bitly shortened URLs",
+                "target_count": "3,907"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Fake Google Login Page",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0001",
+                "TA0006"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "technique": "Credential harvesting"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Base64-encoded email string",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Google Apps",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "service": "Gmail"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "aspmx.l.google.com",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "purpose": "Mail server"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Personal Gmail Accounts",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "count": "26"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Hillary Clinton Presidential Campaign Attack",
+            "Target": "Threat Group-4127"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Hillary Clinton Presidential Campaign Attack",
+            "Target": "Hillary for America"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "Hillary Clinton Presidential Campaign Attack",
+            "Target": "Democratic National Committee"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Threat Group-4127",
+            "Target": "Spearphishing Campaign"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Threat Group-4127",
+            "Target": "Fake Google Login Page"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Threat Group-4127",
+            "Target": "Base64-encoded email string"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "Threat Group-4127",
+            "Target": "Hillary for America"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "Threat Group-4127",
+            "Target": "Democratic National Committee"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "Threat Group-4127",
+            "Target": "Personal Gmail Accounts"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "has",
+            "Source": "Hillary for America",
+            "Target": "Google Apps"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "aspmx.l.google.com",
+            "Target": "Google Apps"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Spearphishing Campaign",
+            "Target": "Fake Google Login Page"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "Fake Google Login Page",
+            "Target": "Base64-encoded email string"
+        }
+    ]
+}

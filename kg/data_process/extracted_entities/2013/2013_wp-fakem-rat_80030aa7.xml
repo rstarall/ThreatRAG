@@ -1,0 +1,353 @@
+<Entitys>
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>FAKEM RAT</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>FAKEM</EntityVariantName>
+            <EntityVariantName>Fake Windows Messenger RAT</EntityVariantName>
+            <EntityVariantName>Fake Yahoo! Messenger RAT</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="type">Remote Access Trojan</Property>
+            <Property name="disguise">Windows/Yahoo Messenger, HTML</Property>
+        </Properties>
+    </Entity>
+    
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>Spear-phishing emails</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>method</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+    
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>CVE-2010-3333</EntityName>
+        <EntityType>vul</EntityType>
+        <EntitySubType>cve</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+    
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>CVE-2012-0158</EntityName>
+        <EntityType>vul</EntityType>
+        <EntitySubType>cve</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+    
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>CVE-2009-3129</EntityName>
+        <EntityType>vul</EntityType>
+        <EntitySubType>cve</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+    
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>vcvcvcvc.dyndns.org</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>zjhao.dtdns.net</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>avira.suroot.com</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    
+    <Entity>
+        <EntityId>entity_9</EntityId>
+        <EntityName>*.googmail.com</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    
+    <Entity>
+        <EntityId>entity_10</EntityId>
+        <EntityName>*.yourturbe.org</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    
+    <Entity>
+        <EntityId>entity_11</EntityId>
+        <EntityName>freeavg.sytes.net</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    
+    <Entity>
+        <EntityId>entity_12</EntityId>
+        <EntityName>Protux</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    
+    <Entity>
+        <EntityId>entity_13</EntityId>
+        <EntityName>cxgid</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    
+    <Entity>
+        <EntityId>entity_14</EntityId>
+        <EntityName>endless.zapto.org</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    
+    <Entity>
+        <EntityId>entity_15</EntityId>
+        <EntityName>hkcmd.exe</EntityName>
+        <EntityType>file</EntityType>
+        <EntitySubType>file</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="location">%Temp% folder</Property>
+        </Properties>
+    </Entity>
+    
+    <Entity>
+        <EntityId>entity_16</EntityId>
+        <EntityName>tpframe.exe</EntityName>
+        <EntityType>file</EntityType>
+        <EntitySubType>file</EntitySubType>
+        <Labels>
+            <Label>TA0003</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="location">%System% folder</Property>
+        </Properties>
+    </Entity>
+    
+    <Entity>
+        <EntityId>entity_17</EntityId>
+        <EntityName>Windows System</EntityName>
+        <EntityType>env</EntityType>
+        <EntitySubType>os</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+</Entitys>
+<Relationships>
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>FAKEM RAT</Source>
+        <Target>Spear-phishing emails</Target>
+    </Relationship>
+    
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>FAKEM RAT</Source>
+        <Target>CVE-2010-3333</Target>
+    </Relationship>
+    
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>FAKEM RAT</Source>
+        <Target>CVE-2012-0158</Target>
+    </Relationship>
+    
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>FAKEM RAT</Source>
+        <Target>CVE-2009-3129</Target>
+    </Relationship>
+    
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>FAKEM RAT</Source>
+        <Target>vcvcvcvc.dyndns.org</Target>
+    </Relationship>
+    
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>FAKEM RAT</Source>
+        <Target>zjhao.dtdns.net</Target>
+    </Relationship>
+    
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>FAKEM RAT</Source>
+        <Target>avira.suroot.com</Target>
+    </Relationship>
+    
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>FAKEM RAT</Source>
+        <Target>*.googmail.com</Target>
+    </Relationship>
+    
+    <Relationship>
+        <RelationshipId>relationship_9</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>FAKEM RAT</Source>
+        <Target>*.yourturbe.org</Target>
+    </Relationship>
+    
+    <Relationship>
+        <RelationshipId>relationship_10</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>FAKEM RAT</Source>
+        <Target>freeavg.sytes.net</Target>
+    </Relationship>
+    
+    <Relationship>
+        <RelationshipId>relationship_11</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>FAKEM RAT</Source>
+        <Target>Protux</Target>
+    </Relationship>
+    
+    <Relationship>
+        <RelationshipId>relationship_12</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>FAKEM RAT</Source>
+        <Target>cxgid</Target>
+    </Relationship>
+    
+    <Relationship>
+        <RelationshipId>relationship_13</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>FAKEM RAT</Source>
+        <Target>endless.zapto.org</Target>
+    </Relationship>
+    
+    <Relationship>
+        <RelationshipId>relationship_14</RelationshipId>
+        <RelationshipType>affect</RelationshipType>
+        <Source>FAKEM RAT</Source>
+        <Target>Windows System</Target>
+    </Relationship>
+    
+    <Relationship>
+        <RelationshipId>relationship_15</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>FAKEM RAT</Source>
+        <Target>hkcmd.exe</Target>
+    </Relationship>
+    
+    <Relationship>
+        <RelationshipId>relationship_16</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>FAKEM RAT</Source>
+        <Target>tpframe.exe</Target>
+    </Relationship>
+</Relationships>

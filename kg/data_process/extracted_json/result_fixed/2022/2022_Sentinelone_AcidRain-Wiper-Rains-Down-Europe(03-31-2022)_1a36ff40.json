@@ -1,0 +1,223 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "AcidRain",
+            "EntityVariantNames": [
+                "ukrop"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "SHA256": "9b4dfaca873961174ba935fddaf696145afe7bbf5734509f95feb54f3584fd9a",
+                "SHA1": "86906b140b019fdedaaba73948d0c8f96a6b1b42",
+                "MD5": "ecbe1b1e30a1f4bffaf1d374014c877f",
+                "type": "ELF 32-bit MIPS"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Viasat KA-SAT modem attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0008",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "2022-02-24",
+                "location": "Ukraine, Germany",
+                "observe_time": "2022",
+                "report_name": "2022_Sentinelone_AcidRain-Wiper-Rains-Down-Europe(03-31-2022)_1a36ff40"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Russian GRU",
+            "EntityVariantNames": [
+                "APT28",
+                "Sandworm"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Russia"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Viasat KA-SAT modems",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Satellite modem"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Enercon wind turbines",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "count": "5800",
+                "location": "Germany"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "VPNFilter",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0040"
+            ],
+            "Times": [
+                "0"
+            ],
+            "Properties": {
+                "relation": "Developmental similarity to AcidRain"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "VPNFilter dstr plugin",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "0"
+            ],
+            "Properties": {
+                "SHA256": "47f521bd6be19f823bfd3a72d851d6f3440a6c4cc3d940190bdc9b6dd53a83d6"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Misconfigured VPN appliance",
+            "EntityType": "vul",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Ukrainian military",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Ukraine"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Viasat KA-SAT modem attack",
+            "Target": "Russian GRU"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Viasat KA-SAT modem attack",
+            "Target": "Ukrainian military"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Russian GRU",
+            "Target": "AcidRain"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Russian GRU",
+            "Target": "VPNFilter"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "Russian GRU",
+            "Target": "Viasat KA-SAT modems"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "Russian GRU",
+            "Target": "Ukrainian military"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "affect",
+            "Source": "AcidRain",
+            "Target": "Viasat KA-SAT modems"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "affect",
+            "Source": "AcidRain",
+            "Target": "Enercon wind turbines"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "exploit",
+            "Source": "Misconfigured VPN appliance",
+            "Target": "Viasat KA-SAT modems"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "AcidRain",
+            "Target": "VPNFilter dstr plugin"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "VPNFilter",
+            "Target": "VPNFilter dstr plugin"
+        }
+    ]
+}

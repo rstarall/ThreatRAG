@@ -1,0 +1,205 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "OrcaRat",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "version": "Updated",
+                "origin": "LeoUncia"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "LeoUncia",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "age": "Old"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "OrcaKiller",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "purpose": "Master key"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "RC4",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "algorithm": "Encryption"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Custom Base64 Encoding",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "variation": "URI-safe"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Hibernation Feature",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "evolution": "From plaintext to obfuscated"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "wbt.dat",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "location": "App Data folder",
+                "obfuscation": "XOR with 'product'"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "readx",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "format": "Plain-text"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Debug Strings",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "purpose": "C&amp;C communication"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "related_to",
+            "Source": "OrcaRat",
+            "Target": "LeoUncia"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "OrcaRat",
+            "Target": "OrcaKiller"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "OrcaRat",
+            "Target": "RC4"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "OrcaRat",
+            "Target": "Custom Base64 Encoding"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "LeoUncia",
+            "Target": "RC4"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "LeoUncia",
+            "Target": "Custom Base64 Encoding"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Hibernation Feature",
+            "Target": "wbt.dat"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Hibernation Feature",
+            "Target": "readx"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "OrcaRat",
+            "Target": "Debug Strings"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "LeoUncia",
+            "Target": "Debug Strings"
+        }
+    ]
+}

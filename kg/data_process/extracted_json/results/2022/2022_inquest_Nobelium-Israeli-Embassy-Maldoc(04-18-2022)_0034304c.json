@@ -1,0 +1,229 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Nobelium",
+            "EntityVariantNames": [
+                "DarkHalo"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0007",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Israeli Embassy Maldoc Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0007",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "2022-04-18",
+                "source": "inquest.net",
+                "observe_time": "2022",
+                "report_name": "2022_inquest_Nobelium-Israeli-Embassy-Maldoc(04-18-2022)_0034304c"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Ambassador_Absense.docx",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "sha256": "7ff9891f4cfe841233b1e0669c83de4938ce68ffae43afab51d0015c20515f7b",
+                "type": "Office Open XML Document",
+                "creation_time": "2022-01-10 12:37:00 UTC"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "IconCacheService.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "sha256": "95bbd494cecc25a422fa35912ec2365f3200d5a18ea4bfad5566432eb0834f9f",
+                "type": "Dll X64",
+                "creation_time": "2022-01-17 09:33:38 UTC",
+                "path": "C:\\Users\\user\\AppData\\Local\\Temp\\..\\IconCacheService.dll"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "api.trello.com C2",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "url1": "hxxps://api.trello[.]com/1/members/me/boards?key=664f145b65b9ea751df4dd21a96601f0&amp;token=39daa5890c85fba874a352473b2fa9a97c7839223422411c22f22970f3b71ecc",
+                "url2": "hxxps://api.trello[.]com/1/members/me/boards?key=326f330aab6aa067b808d5bd93bd077d&amp;token=abe916f8fe7fa2ddfd3e1bd6edd52fbd80219ed0c289ae21234d496cf449488d"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "HTA script",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002",
+                "TA0007"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Israeli Embassy",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Beatdrop malware",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash1": "2f11ca3dcc1d9400e141d8f3ee9a7a0d18e21908e825990f5c22119214fbb2f5",
+                "hash2": "95bbd494cecc25a422fa35912ec2365f3200d5a18ea4bfad5566432eb0834f9f",
+                "hash3": "8bdd318996fb3a947d10042f85b6c6ed29547e1d6ebdc177d5d85fa26859e1ca"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Israeli Embassy Maldoc Attack",
+            "Target": "Nobelium"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Israeli Embassy Maldoc Attack",
+            "Target": "Israeli Embassy"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Nobelium",
+            "Target": "Ambassador_Absense.docx"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Nobelium",
+            "Target": "HTA script"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Nobelium",
+            "Target": "Beatdrop malware"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Nobelium",
+            "Target": "api.trello.com C2"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "Nobelium",
+            "Target": "Israeli Embassy"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "HTA script",
+            "Target": "IconCacheService.dll"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "affect",
+            "Source": "IconCacheService.dll",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "belong_to",
+            "Source": "IconCacheService.dll",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Beatdrop malware",
+            "Target": "IconCacheService.dll"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Beatdrop malware",
+            "Target": "api.trello.com C2"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "trigger",
+            "Source": "Israeli Embassy",
+            "Target": "Ambassador_Absense.docx"
+        }
+    ]
+}

@@ -1,0 +1,245 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Darkhotel",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Kaspersky Global Research and Analysis Team",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0043"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "report_date": "November 2014",
+                "contact": "intelreports@kaspersky.com",
+                "observe_time": "2014",
+                "report_name": "2014_darkhotelappendixindicators_kl_bf8f250a"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "41b816289a6a639f7f2a72b6c9e6a695",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "filename": "msieckc.exe",
+                "type": "Small Downloader"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "autolace.twilightparadox.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "automachine.servequake.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "864cd4a59215a7db2740dfbe4a648053",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "filename": "dmaUp3.exe",
+                "type": "Information Stealer"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "0fe3daf9e8b69255e592c8af97d24649",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "filename": "acroedit.exe",
+                "type": "Trojan.Win32.Karba.e"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "micronaoko.jumpingcrab.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "microchsse.strangled.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "microsoft-xpupdate.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "fcd2458376398b0be09eaa34f4f4d091",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "7"
+            ],
+            "Properties": {
+                "filename": "igfxext.exe",
+                "type": "Trojan-Dropper"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "86b18e99072ba72d5d36bce9a00fc052",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "8"
+            ],
+            "Properties": {
+                "filename": "ndiskpro.sys",
+                "type": "Keylogger"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Kaspersky Global Research and Analysis Team",
+            "Target": "Darkhotel"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Darkhotel",
+            "Target": "41b816289a6a639f7f2a72b6c9e6a695"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "41b816289a6a639f7f2a72b6c9e6a695",
+            "Target": "autolace.twilightparadox.com"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "41b816289a6a639f7f2a72b6c9e6a695",
+            "Target": "automachine.servequake.com"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Darkhotel",
+            "Target": "864cd4a59215a7db2740dfbe4a648053"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Darkhotel",
+            "Target": "0fe3daf9e8b69255e592c8af97d24649"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "0fe3daf9e8b69255e592c8af97d24649",
+            "Target": "micronaoko.jumpingcrab.com"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "0fe3daf9e8b69255e592c8af97d24649",
+            "Target": "microchsse.strangled.net"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "0fe3daf9e8b69255e592c8af97d24649",
+            "Target": "microsoft-xpupdate.com"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "Darkhotel",
+            "Target": "fcd2458376398b0be09eaa34f4f4d091"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "Darkhotel",
+            "Target": "86b18e99072ba72d5d36bce9a00fc052"
+        }
+    ]
+}

@@ -1,0 +1,254 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "BlackEnergy APT group",
+            "EntityVariantNames": [
+                "BlackEnergy"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "origin": "Originally created by Cr4sh",
+                "activity": "Active since 2007"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Ukraine Critical Sectors Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "Late 2015 - January 2016",
+                "location": "Ukraine",
+                "observe_time": "2016",
+                "report_name": "2016_Kaspersky_BlackEnergy-APT-Attacks-in-Ukraine-employ-spearphishing-with-Word-documents(Jan-28-16)_1440c598"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Ukraine Critical Sectors",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "sectors": "ICS, Energy, government, media"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "$RR143TB.doc",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "e15b36c2e394d599a8ab352159089dd2",
+                "type": "Word Document",
+                "content": "Right Sector party lure"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "vba_macro.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "ac2d7f21c826ce0c449481f79138aebd",
+                "type": "BlackEnergy dropper"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "FONTCACHE.DAT",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "3fa9130c9ec44e36e52142f3688313ff",
+                "type": "BlackEnergy v3 trojan",
+                "location": "%LOCALAPPDATA%"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "5.149.254.114",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "port": "80",
+                "purpose": "C&C server"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "STB TV station",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "url": "http://www.stb.ua/ru/",
+                "industry": "Media"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Microsoft Office macros",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Social engineering"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "BlackEnergy Trojan",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Ukraine Critical Sectors Attack Event",
+            "Target": "BlackEnergy APT group"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Ukraine Critical Sectors Attack Event",
+            "Target": "Ukraine Critical Sectors"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "BlackEnergy APT group",
+            "Target": "Ukraine Critical Sectors"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "target",
+            "Source": "BlackEnergy APT group",
+            "Target": "STB TV station"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "BlackEnergy APT group",
+            "Target": "$RR143TB.doc"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "BlackEnergy APT group",
+            "Target": "Microsoft Office macros"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "BlackEnergy APT group",
+            "Target": "BlackEnergy Trojan"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "$RR143TB.doc",
+            "Target": "vba_macro.exe"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "vba_macro.exe",
+            "Target": "FONTCACHE.DAT"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "FONTCACHE.DAT",
+            "Target": "5.149.254.114"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "trigger",
+            "Source": "Ukraine Critical Sectors",
+            "Target": "$RR143TB.doc"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "belong_to",
+            "Source": "FONTCACHE.DAT",
+            "Target": "Ukraine Critical Sectors"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "has",
+            "Source": "Ukraine Critical Sectors",
+            "Target": "STB TV station"
+        }
+    ]
+}

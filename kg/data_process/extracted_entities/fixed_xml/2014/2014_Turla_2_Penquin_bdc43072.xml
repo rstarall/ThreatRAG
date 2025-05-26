@@ -1,0 +1,181 @@
+<Entitys>
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>Turla</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>Penquin Turla</EntityVariantName>
+            <EntityVariantName>Snake</EntityVariantName>
+            <EntityVariantName>Uroburos</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="category">APT</Property>
+            <Property name="complexity">High</Property>
+        </Properties>
+    </Entity>
+    
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>Linux Turla Module</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="md5">0994d9deb50352e76b0322f48ee576c6,14ecd5e6fc8e501037b54ca263896a11,19fbd8cbfb12482e8020a887d6427315</Property>
+            <Property name="type">Backdoor</Property>
+            <Property name="platform">Linux</Property>
+            <Property name="libraries">glibc2.3.2, openssl v0.9.6, libpcap</Property>
+        </Properties>
+    </Entity>
+    
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>news-bbc.podzone[.]org</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="status">sinkholed</Property>
+            <Property name="sinkhole_by">Kaspersky Lab</Property>
+        </Properties>
+    </Entity>
+    
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>80.248.65.183</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>ip</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="AS">AS30982</Property>
+            <Property name="org">CAFE Informatique et telecommunications</Property>
+        </Properties>
+    </Entity>
+    
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>cd00r</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="type">Backdoor source</Property>
+        </Properties>
+    </Entity>
+    
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>Linux System</EntityName>
+        <EntityType>env</EntityType>
+        <EntitySubType>os</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+    
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>Victim Site</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+</Entitys>
+<Relationships>
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Turla</Source>
+        <Target>Linux Turla Module</Target>
+    </Relationship>
+    
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Linux Turla Module</Source>
+        <Target>cd00r</Target>
+    </Relationship>
+    
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Linux Turla Module</Source>
+        <Target>news-bbc.podzone[.]org</Target>
+    </Relationship>
+    
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>news-bbc.podzone[.]org</Source>
+        <Target>80.248.65.183</Target>
+    </Relationship>
+    
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Turla</Source>
+        <Target>Victim Site</Target>
+    </Relationship>
+    
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>affect</RelationshipType>
+        <Source>Linux Turla Module</Source>
+        <Target>Linux System</Target>
+    </Relationship>
+    
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>has</RelationshipType>
+        <Source>Victim Site</Source>
+        <Target>Linux System</Target>
+    </Relationship>
+    
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Turla</Source>
+        <Target>news-bbc.podzone[.]org</Target>
+    </Relationship>
+</Relationships>

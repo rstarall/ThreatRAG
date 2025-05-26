@@ -1,0 +1,139 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "FinFisher",
+            "EntityVariantNames": [
+                "FinSpy",
+                "FinFisher remote monitoring solution"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "developer": "Gamma International GmbH"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Gamma International GmbH",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0042"
+            ],
+            "Properties": {
+                "location": "Munich, Germany"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "FinSpy Command  Control Servers",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "count": "36",
+                "countries": "25"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Ethiopian FinSpy Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Properties": {
+                "target": "Ginbot 7 opposition group"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Ginbot 7",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "country": "Ethiopia"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Vietnamese FinSpy Mobile Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Properties": {
+                "platform": "Android"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "FinSpy Mobile",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "platforms": "iOS, Android, Windows Mobile, Symbian, Blackberry"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "213.55.99.74",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "provider": "Ethio Telecom",
+                "country": "Ethiopia"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "183.91.2.199",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "provider": "CMC Telecom Infrastructure Company",
+                "country": "Vietnam"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "+841257725403",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0010"
+            ],
+            "Properties": {
+                "type": "SMS command and control"
+            }
+        }
+    ],
+    "Relationships": []
+}

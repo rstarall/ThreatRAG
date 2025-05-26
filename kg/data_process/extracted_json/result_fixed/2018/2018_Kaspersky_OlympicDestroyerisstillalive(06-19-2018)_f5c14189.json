@@ -1,0 +1,215 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Olympic Destroyer",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0043",
+                "TA0001",
+                "TA0002",
+                "TA0004",
+                "TA0005",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "description": "Advanced threat actor known for cyber-sabotage and deception techniques"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Winter Olympic Games 2018 Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0043",
+                "TA0001",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "March 2018",
+                "location": "Pyeongchang, South Korea",
+                "observe_time": "2018",
+                "report_name": "2018_Kaspersky_OlympicDestroyerisstillalive(06-19-2018)_f5c14189"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Spiez CONVERGENCE.doc",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "md5": "0e7b32d23fbd6d62a593c234bafa2311",
+                "sha1": "ff59cb2b4a198d1e6438e020bb11602bd7d2510d",
+                "type": "Microsoft Office Word"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Invoke-Obfuscation",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Powershell Empire",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Joomla v1.7.3",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "version": "1.7.3",
+                "vulnerable": "Yes"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "79.142.76.40",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Financial organizations in Russia",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "7"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Biological and chemical threat prevention laboratories",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "7"
+            ],
+            "Properties": {
+                "location": "Europe and Ukraine"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "SPIEZ LABORATORY",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "7"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Winter Olympic Games 2018 Attack",
+            "Target": "Olympic Destroyer"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Olympic Destroyer",
+            "Target": "Spiez CONVERGENCE.doc"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Olympic Destroyer",
+            "Target": "Invoke-Obfuscation"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Olympic Destroyer",
+            "Target": "Powershell Empire"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "exploit",
+            "Source": "Olympic Destroyer",
+            "Target": "Joomla v1.7.3"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Spiez CONVERGENCE.doc",
+            "Target": "Invoke-Obfuscation"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "Olympic Destroyer",
+            "Target": "Financial organizations in Russia"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "Olympic Destroyer",
+            "Target": "Biological and chemical threat prevention laboratories"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "Olympic Destroyer",
+            "Target": "SPIEZ LABORATORY"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "belong_to",
+            "Source": "79.142.76.40",
+            "Target": "Olympic Destroyer"
+        }
+    ]
+}

@@ -1,0 +1,332 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Cloud Atlas",
+            "EntityVariantNames": [
+                "Inception"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "activity": "Cyber-espionage",
+                "targets": "Industries and governmental entities"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Cloud Atlas Campaign 2019",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "2019 - July",
+                "location": "Russia, Central Asia, Ukraine",
+                "observe_time": "2019",
+                "report_name": "2019_Kaspersky_Recent-Cloud-Atlas-activity(08-12-2019)_6945b2bf"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "PowerShower",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "PowerShell backdoor",
+                "function": "Validator and second stage implant"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CVE-2017-11882",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "description": "Microsoft Equation vulnerability"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2018-0802",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "VBShower",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Polymorphic VBS backdoor",
+                "function": "Validator implant"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "176.31.59.232",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "role": "C2 server"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "144.217.174.57",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "role": "C2 server"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Spear-phishing emails",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "vector": "Office documents with malicious remote templates"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "LaZagne",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "function": "Password stealer"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "infocentre.gov@mail.ru",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "middleeasteye@asia.com",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "simbf2019@mail.ru",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "world_overview@politician.com",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "infocentre.gov@bk.ru",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Cloud Atlas Campaign 2019",
+            "Target": "Cloud Atlas"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Cloud Atlas",
+            "Target": "PowerShower"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Cloud Atlas",
+            "Target": "VBShower"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Cloud Atlas",
+            "Target": "Spear-phishing emails"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Cloud Atlas",
+            "Target": "LaZagne"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2017-11882",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2018-0802",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "PowerShower",
+            "Target": "VBShower"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "VBShower",
+            "Target": "176.31.59.232"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "VBShower",
+            "Target": "144.217.174.57"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Spear-phishing emails",
+            "Target": "infocentre.gov@mail.ru"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Spear-phishing emails",
+            "Target": "middleeasteye@asia.com"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "Spear-phishing emails",
+            "Target": "simbf2019@mail.ru"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "Spear-phishing emails",
+            "Target": "world_overview@politician.com"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "Spear-phishing emails",
+            "Target": "infocentre.gov@bk.ru"
+        }
+    ]
+}

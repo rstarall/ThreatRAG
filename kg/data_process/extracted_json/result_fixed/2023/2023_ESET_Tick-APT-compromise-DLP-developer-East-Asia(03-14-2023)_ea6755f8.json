@@ -1,0 +1,315 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Tick APT group",
+            "EntityVariantNames": [
+                "BRONZE BUTLER",
+                "REDBALDKNIGHT"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "region": "APAC",
+                "activity": "Since 2006"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "East Asian DLP software developer",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Data Loss Prevention",
+                "customers": "Government, Military"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "DLP company compromise event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "March 2021",
+                "observe_time": "2023",
+                "report_name": "2023_ESET_Tick-APT-compromise-DLP-developer-East-Asia(03-14-2023)_ea6755f8"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "ShadowPy",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Python downloader",
+                "SHA-1": "8BC1F41A4DDF5CFF599570ED6645B706881BEEED"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Netboy",
+            "EntityVariantNames": [
+                "Invader"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Delphi backdoor",
+                "SHA-1": "72BDDEAD9B508597B75C1EE8BE970A7CA8EB85DC"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "ReVBShell",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "VBScript backdoor",
+                "version": "1.0"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Q-Dir trojanized installer",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Trojanized application",
+                "SHA-1": "B9675D0EFBC4AE92E02B3BFC8CA04B01F8877DB6"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "103.127.124.117",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "provider": "MOACK.Co.LTD",
+                "first_seen": "2020-10-15"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "travelasist.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "ip": "115.144.69.108",
+                "first_seen": "2021-04-14"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "softsrobot.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "first_seen": "2020"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "DLL side-loading",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Compromised update servers",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Two DLP customers",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "industries": "Engineering, Manufacturing"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "DLP company compromise event",
+            "Target": "Tick APT group"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "DLP company compromise event",
+            "Target": "East Asian DLP software developer"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "Tick APT group",
+            "Target": "East Asian DLP software developer"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "target",
+            "Source": "Tick APT group",
+            "Target": "Two DLP customers"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Tick APT group",
+            "Target": "ShadowPy"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Tick APT group",
+            "Target": "Netboy"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Tick APT group",
+            "Target": "ReVBShell"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Tick APT group",
+            "Target": "Q-Dir trojanized installer"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Tick APT group",
+            "Target": "DLL side-loading"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "has",
+            "Source": "East Asian DLP software developer",
+            "Target": "Compromised update servers"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "ShadowPy",
+            "Target": "travelasist.com"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "ReVBShell",
+            "Target": "softsrobot.com"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "Q-Dir trojanized installer",
+            "Target": "ReVBShell"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "belong_to",
+            "Source": "103.127.124.117",
+            "Target": "Compromised update servers"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "trigger",
+            "Source": "East Asian DLP software developer",
+            "Target": "Q-Dir trojanized installer"
+        }
+    ]
+}

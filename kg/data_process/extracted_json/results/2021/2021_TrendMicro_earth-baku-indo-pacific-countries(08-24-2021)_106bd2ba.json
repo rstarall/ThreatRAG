@@ -1,0 +1,308 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Earth Baku",
+            "EntityVariantNames": [
+                "APT41"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China",
+                "alias": "APT41"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Indo-Pacific Cyberespionage Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "Since July 2020",
+                "region": "Indo-Pacific",
+                "observe_time": "2021",
+                "report_name": "2021_TrendMicro_earth-baku-indo-pacific-countries(08-24-2021)_106bd2ba"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Indo-Pacific Organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "countries": "India, Indonesia, Malaysia, Philippines, Taiwan, Vietnam",
+                "industries": "Airline, Computer Hardware, Automotive, Infrastructure, Publishing, Media, IT"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "StealthVector",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Shellcode Loader",
+                "language": "C/C++"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "StealthMutant",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Shellcode Loader",
+                "language": "C#"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "ScrambleCross",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Modular Backdoor",
+                "relation": "Refactored version of Crosswalk"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Cobalt Strike",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "CVE-2021-26855",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "name": "ProxyLogon",
+                "system": "Microsoft Exchange Server"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "SQL Injection",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Phishing Email",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "install.bat",
+            "EntityType": "ioc",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "China Chopper",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "ns.cloud01.tk",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "45.138.157.78",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Indo-Pacific Cyberespionage Campaign",
+            "Target": "Earth Baku"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Indo-Pacific Cyberespionage Campaign",
+            "Target": "Indo-Pacific Organizations"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Earth Baku",
+            "Target": "StealthVector"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Earth Baku",
+            "Target": "StealthMutant"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Earth Baku",
+            "Target": "ScrambleCross"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Earth Baku",
+            "Target": "Cobalt Strike"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Earth Baku",
+            "Target": "CVE-2021-26855"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Earth Baku",
+            "Target": "SQL Injection"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Earth Baku",
+            "Target": "Phishing Email"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "target",
+            "Source": "Earth Baku",
+            "Target": "Indo-Pacific Organizations"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "StealthVector",
+            "Target": "install.bat"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "StealthVector",
+            "Target": "China Chopper"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "Cobalt Strike",
+            "Target": "ns.cloud01.tk"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "Cobalt Strike",
+            "Target": "45.138.157.78"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2021-26855",
+            "Target": "Microsoft Exchange Server"
+        }
+    ]
+}

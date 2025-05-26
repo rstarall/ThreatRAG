@@ -1,0 +1,264 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "UAC-0050",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Kyivstar Contract Debt Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "21.12.2023",
+                "observe_time": "2023",
+                "report_name": "2023_CERT-UA-8338(12-21-2023)_50a11ec2"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Subscriber's debt.zip",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "8b48c11a538af362b766d8ccb09ef11ad6ee62bb430424c9f78d8e7cd5785b7a"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Subscriber's debt.doc",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "93aa6fc207df430a6e9833259e618895bcdb75c7db0850599d3dbb87d47a54c7"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "GB.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "d698994e527111a6ddd590e09ddf08322d54b82302e881f5f27e3f5d5368829c"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "wsuscr.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "hash": "6619b7126840529091b2da2fa1b7238d6b10bc17bbfc8327aad3683ae686b81d"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "RemcosRAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "license": "5639D40461DCDD07011A2B87AD3C9EDD"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "89.23.98.22",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "45.87.155.41",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "bitbucket.org/olegovich-007/777/downloads/wsuscr.exe",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "AS44477",
+            "EntityType": "asset",
+            "EntitySubType": "network",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "provider": "STARK INDUSTRIES SOLUTIONS LTD"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Shinjiru",
+            "EntityType": "asset",
+            "EntitySubType": "network",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "country": "Malaysia"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Kyivstar Contract Debt Attack",
+            "Target": "UAC-0050"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "UAC-0050",
+            "Target": "Subscriber's debt.zip"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "UAC-0050",
+            "Target": "Subscriber's debt.doc"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "UAC-0050",
+            "Target": "GB.exe"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "UAC-0050",
+            "Target": "wsuscr.exe"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "UAC-0050",
+            "Target": "RemcosRAT"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "RemcosRAT",
+            "Target": "89.23.98.22"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "RemcosRAT",
+            "Target": "45.87.155.41"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "RemcosRAT",
+            "Target": "AS44477"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "RemcosRAT",
+            "Target": "Shinjiru"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "Subscriber's debt.doc",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "wsuscr.exe",
+            "Target": "bitbucket.org/olegovich-007/777/downloads/wsuscr.exe"
+        }
+    ]
+}

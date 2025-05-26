@@ -1,0 +1,177 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "BlackOasis",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011",
+                "TA0010"
+            ],
+            "Properties": {
+                "alias": "APT"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "FinSpy",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "vendor": "Gamma International",
+                "type": "Surveillance malware"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "CVE-2017-11292",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "product": "Adobe Flash"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Microsoft Office document",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "delivery": "Email"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "89.45.67.107",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "role": "C2 server"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "4a49135d2ecc07085a8b7c5925a36c0a",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "type": "MD5"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Middle Eastern political figures",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "category": "High-profile targets"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Adobe Flash Player",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "version": "21.0.0.226 and earlier"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Kaspersky Lab",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "role": "Security vendor"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "CVE-2017-8759",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "CVE-2016-4117",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "CVE-2016-0984",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "CVE-2015-5119",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "FinFisher",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "vendor": "Gamma International"
+            }
+        }
+    ],
+    "Relationships": []
+}

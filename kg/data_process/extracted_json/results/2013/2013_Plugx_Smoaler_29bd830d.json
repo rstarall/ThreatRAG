@@ -1,0 +1,209 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Smoaler",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "family": "PlugX",
+                "variant": "Smoaler-A"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "CVE-2012-0158",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "DW20.DLL",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "location": "%TEMP%"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "dtl.dnsd.me",
+            "EntityVariantNames": [
+                "dtl.eauto.com",
+                "dtl6.moo.com"
+            ],
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "HKCU\\Software\\Microsoft\\Windows Media\\XC",
+            "EntityType": "env",
+            "EntitySubType": "network",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "IEXPLORE.EXE",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "56e8c76cd88996da9b88901520f72ebb743e55ff",
+            "EntityVariantNames": [
+                "a99b73b56fe94375ec46e51903f815d86afbd78d",
+                "b2f854e9987bce5d110349a354588568ab49726b",
+                "c093d4cd2390617da58bd412c9219e013de503a3",
+                "b84a133cf02eaa7b8a8096e997bda28fc482cf78"
+            ],
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "RTF Document",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "extension": ".DOC/.DOCX"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "rundll32.exe",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\run",
+            "EntityType": "env",
+            "EntitySubType": "network",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "related_to",
+            "Source": "Smoaler",
+            "Target": "CVE-2012-0158"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "related_to",
+            "Source": "Smoaler",
+            "Target": "DW20.DLL"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "Smoaler",
+            "Target": "dtl.dnsd.me"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "belong_to",
+            "Source": "DW20.DLL",
+            "Target": "HKCU\\Software\\Microsoft\\Windows Media\\XC"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "Smoaler",
+            "Target": "IEXPLORE.EXE"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Smoaler",
+            "Target": "56e8c76cd88996da9b88901520f72ebb743e55ff"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Smoaler",
+            "Target": "RTF Document"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Smoaler",
+            "Target": "rundll32.exe"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "belong_to",
+            "Source": "Smoaler",
+            "Target": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\run"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2012-0158",
+            "Target": "RTF Document"
+        }
+    ]
+}

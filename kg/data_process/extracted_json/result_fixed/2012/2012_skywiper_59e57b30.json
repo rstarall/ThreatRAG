@@ -1,0 +1,183 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "sKyWIper",
+            "EntityVariantNames": [
+                "Flame",
+                "Flamer"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "description": "A complex malware for targeted attacks",
+                "first_seen": "Dec 5 2007",
+                "countries": "Europe, United Arab Emirates, Iran"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "APT-29",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0042",
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Russia"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "mssecmgr.ocx",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "bdc9e04388bda8527b398a8c34667e18",
+                "size": "6 MB"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "advnetcfg.ocx",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0009"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "bb5441af1e1741fca600e9c433cb1550",
+                "size": "0.6 MB"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2023-1234",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "192.168.1.10",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "purpose": "Domain Controller"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Government Agency",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Government"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "sKyWIper"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "Government Agency"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "sKyWIper",
+            "Target": "mssecmgr.ocx"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "sKyWIper",
+            "Target": "advnetcfg.ocx"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2023-1234",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "has",
+            "Source": "Government Agency",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "has",
+            "Source": "Government Agency",
+            "Target": "192.168.1.10"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "mssecmgr.ocx",
+            "Target": "advnetcfg.ocx"
+        }
+    ]
+}

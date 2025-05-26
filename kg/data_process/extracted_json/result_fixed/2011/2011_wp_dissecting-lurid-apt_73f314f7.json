@@ -1,0 +1,360 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Lurid Downloader",
+            "EntityVariantNames": [
+                "Enfal"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "version": "2.14, 2.15",
+                "project_path": "e:\\programs\\LuridDownLoader\\LuridDownloader for Falcon\\DllServiceTrojan\\Release\\DllServiceTrojan.pdb"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "APT-29",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Government ministries and diplomatic missions",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "countries": "Russia, CIS, Europe"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "LOSAR_FLYER_edited-3.pdf",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "md5": "322fcf1b134fef1bae52fbd80a373ede",
+                "detection": "TROJ_PIDIEF.SMZX"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2009-4324",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "affected": "Adobe Reader 9.x (before 9.3) and 8.x (before 8.2)"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "ctfmon.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "md5": "84d24967cb5cbacf4052a3001692dd54",
+                "detection": "TROJ_MECIV.A"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "mspmsnsr.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "md5": "3447416fbbc65906bd0384d4c2ba479e",
+                "detection": "TROJ_MECIV.A"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "isssync.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "md5": "856de08a947a40e00ea7ed66b8e02c53",
+                "detection": "WORM_OTORUN.TMP"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "mailru-vip.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "173.212.195.216",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "96.46.11.88",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "provider": "INTERNETXTUSA",
+                "location": "China (via VPN)"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "info3.gawab.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "66.220.20.18",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "emb107@gawab.com",
+            "EntityType": "ioc",
+            "EntitySubType": "email",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "bruce_tuner@yahoo.com",
+            "EntityType": "ioc",
+            "EntitySubType": "email",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "icqmaster@163.com",
+            "EntityType": "ioc",
+            "EntitySubType": "email",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "Lurid Downloader"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "Government ministries and diplomatic missions"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "LOSAR_FLYER_edited-3.pdf"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "CVE-2009-4324"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2009-4324",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Lurid Downloader",
+            "Target": "ctfmon.exe"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Lurid Downloader",
+            "Target": "mspmsnsr.dll"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Lurid Downloader",
+            "Target": "isssync.exe"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Lurid Downloader",
+            "Target": "mailru-vip.com"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Lurid Downloader",
+            "Target": "173.212.195.216"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "mailru-vip.com",
+            "Target": "173.212.195.216"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "96.46.11.88"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "info3.gawab.com"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "belong_to",
+            "Source": "info3.gawab.com",
+            "Target": "66.220.20.18"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "emb107@gawab.com"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "bruce_tuner@yahoo.com"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "icqmaster@163.com"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "has",
+            "Source": "Government ministries and diplomatic missions",
+            "Target": "Windows System"
+        }
+    ]
+}

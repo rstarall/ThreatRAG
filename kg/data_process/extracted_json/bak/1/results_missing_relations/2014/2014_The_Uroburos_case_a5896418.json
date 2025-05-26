@@ -1,0 +1,365 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Uroburos",
+            "EntityVariantNames": [
+                "Snake",
+                "Turla"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "type": "Rootkit",
+                "origin": "Russia"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Agent.BTZ",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "type": "RAT",
+                "impact": "U.S. military computers"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "ComRAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "type": "RAT",
+                "versions": "v3.25, v3.26"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Russian APT Group",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "country": "Russia"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Uroburos Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "time": "February 2014"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "U.S. Military",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "country": "United States"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "credprov.tlb",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "path": "%APPDATA%\\Microsoft\\"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "shdocvw.tlp",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Properties": {
+                "path": "%APPDATA%\\Microsoft\\"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "COM Object Hijacking",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0003"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Registry Key",
+            "EntityType": "asset",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0003"
+            ],
+            "Properties": {
+                "path": "HKCU\\Software\\Classes\\CLSID\\{42aedc87-2188-41fd-b9a3-0c966feabec1}\\InprocServer32"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "1dM3uu4j7Fw4sjnbcwlDqet4F7JyuUi4m5Imnxl1pzxI6as80cbLnmz54cs5Ldn4ri3do5L6gs923HL34x2f5cvd0fk6c1a0s",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0005"
+            ],
+            "Properties": {
+                "type": "XOR key"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "weather-online.hopto.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "type": "CC server"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "webonline.mefound.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "type": "CC server"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "sportacademy.my03.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "type": "CC server"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "easport-news.publicvm.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "type": "CC server"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "new-book.linkpc.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "type": "CC server"
+            }
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "explorer.exe",
+            "EntityType": "asset",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "51e7e58a1e654b6e586fe36e10c67a73",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "type": "MD5",
+                "version": "dropper v3.25"
+            }
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "e6ce1f962a47479a86ff2e67129f4ecc",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "type": "MD5",
+                "version": "lib1, v3.25"
+            }
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "ec7e3cfaeaac0401316d66e964be684e",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "type": "MD5",
+                "version": "lib2, v3.25"
+            }
+        },
+        {
+            "EntityId": "entity_22",
+            "EntityName": "0ae421691579ff6b27f65f49e79e88f6",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "type": "MD5",
+                "version": "dropper v3.26"
+            }
+        },
+        {
+            "EntityId": "entity_23",
+            "EntityName": "255118ac14a9e66124f7110acd16f2cd",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "type": "MD5",
+                "version": "lib1 v3.26"
+            }
+        },
+        {
+            "EntityId": "entity_24",
+            "EntityName": "b407b6e5b4046da226d6e189a67f62ca",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "type": "MD5",
+                "version": "lib2, v3.26"
+            }
+        },
+        {
+            "EntityId": "entity_25",
+            "EntityName": "8ebf7f768d7214f99905c99b6f8242dc",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "type": "MD5",
+                "version": "dropper, unknown version"
+            }
+        },
+        {
+            "EntityId": "entity_26",
+            "EntityName": "9d481769de63789d571805009cbf709a",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "type": "MD5",
+                "version": "dropper, unknown version"
+            }
+        },
+        {
+            "EntityId": "entity_27",
+            "EntityName": "83a48760e92bf30961b4a943d3095b0a",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "type": "MD5",
+                "version": "lib 64-Bit, unknown version"
+            }
+        },
+        {
+            "EntityId": "entity_28",
+            "EntityName": "ea23d67e41d1f0a7f7e7a8b59e7cb60f",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "type": "MD5",
+                "version": "lib 64-Bit, unknown version"
+            }
+        }
+    ],
+    "Relationships": []
+}

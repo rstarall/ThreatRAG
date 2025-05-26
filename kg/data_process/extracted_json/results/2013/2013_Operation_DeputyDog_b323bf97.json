@@ -1,0 +1,329 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Operation DeputyDog",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "August 19, 2013 - September 2013",
+                "location": "Japan",
+                "observe_time": "2013",
+                "report_name": "2013_Operation_DeputyDog_b323bf97"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "CVE-2013-3893",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "software": "Internet Explorer"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "210.176.3.130",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "location": "Hong Kong"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "img20130823.jpg",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "8aba4b5184072f2a50cbc5ecfe326701",
+                "type": "Executable"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "28542CC0.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "46fd936bada07819f61ec3790cb08e19",
+                "location": "C:\\Documents and Settings\\All Users\\Application Data\\"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "180.150.228.102",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "location": "South Korea",
+                "port": "443"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "111.118.21.105",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "sun.css",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "hash": "bd07926c72739bb7121cec8a2863ad87"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "DGGYDSYRL",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "7"
+            ],
+            "Properties": {
+                "type": "Builder artifact"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "HiKit rootkit",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "8"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "downloadmp3server.servemp3.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "9"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "66.153.86.14",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "9"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "yahooeast.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "10"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "blankchair.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "11"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Japanese Targets",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Japan"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Bit9",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "12"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation DeputyDog",
+            "Target": "Japanese Targets"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Operation DeputyDog",
+            "Target": "CVE-2013-3893"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Operation DeputyDog",
+            "Target": "img20130823.jpg"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "img20130823.jpg",
+            "Target": "28542CC0.dll"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "belong_to",
+            "Source": "img20130823.jpg",
+            "Target": "210.176.3.130"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "28542CC0.dll",
+            "Target": "180.150.228.102"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "sun.css",
+            "Target": "180.150.228.102"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "belong_to",
+            "Source": "sun.css",
+            "Target": "111.118.21.105"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "DGGYDSYRL",
+            "Target": "img20130823.jpg"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "DGGYDSYRL",
+            "Target": "sun.css"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "HiKit rootkit",
+            "Target": "downloadmp3server.servemp3.com"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "downloadmp3server.servemp3.com",
+            "Target": "66.153.86.14"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "yahooeast.net",
+            "Target": "66.153.86.14"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "blankchair.com",
+            "Target": "180.150.228.102"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "involve",
+            "Source": "Operation DeputyDog",
+            "Target": "Bit9"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2013-3893",
+            "Target": "Japanese Targets"
+        }
+    ]
+}

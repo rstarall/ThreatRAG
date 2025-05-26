@@ -1,0 +1,400 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "UNC3886",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0005",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China",
+                "type": "APT"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Fortinet Zero-Day Exploitation",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0005",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "Mid-2022",
+                "observe_time": "2023",
+                "report_name": "2023_Mandiant_Fortinet-Zero-Day-Suspected-Chinese-Operation(03-16-2023)_753de991"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "CVE-2022-41328",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Directory Traversal",
+                "system": "FortiOS"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "THINCRUST",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Python backdoor",
+                "path": "/usr/local/lib/python3.8/proj/util/views.py"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CASTLETAP",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "type": "ICMP backdoor",
+                "path": "/bin/fgfm"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "TABLEFLIP",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0005",
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "type": "Traffic redirection utility",
+                "path": "/bin/auth"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "REPTILE",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "type": "Backdoor",
+                "path": "/bin/klogd"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "FortiGate",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "version": "6.2.7",
+                "type": "Firewall"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "FortiManager",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "version": "6.4.7",
+                "type": "Management platform"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "FortiAnalyzer",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "version": "6.4.7",
+                "type": "Log management"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Defense Industrial Base",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Defense"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Government",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Technology",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Telecommunications",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "/bin/lspci",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "status": "Modified"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "/bin/sysctl",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "status": "Modified"
+            }
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "FortiOS",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Fortinet Zero-Day Exploitation",
+            "Target": "UNC3886"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Fortinet Zero-Day Exploitation",
+            "Target": "Defense Industrial Base"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "Fortinet Zero-Day Exploitation",
+            "Target": "Government"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "involve",
+            "Source": "Fortinet Zero-Day Exploitation",
+            "Target": "Technology"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "involve",
+            "Source": "Fortinet Zero-Day Exploitation",
+            "Target": "Telecommunications"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "UNC3886",
+            "Target": "CVE-2022-41328"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "UNC3886",
+            "Target": "THINCRUST"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "UNC3886",
+            "Target": "CASTLETAP"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "UNC3886",
+            "Target": "TABLEFLIP"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "UNC3886",
+            "Target": "REPTILE"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "target",
+            "Source": "UNC3886",
+            "Target": "FortiGate"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "target",
+            "Source": "UNC3886",
+            "Target": "FortiManager"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "target",
+            "Source": "UNC3886",
+            "Target": "FortiAnalyzer"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2022-41328",
+            "Target": "FortiOS"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "THINCRUST",
+            "Target": "/bin/lspci"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "CASTLETAP",
+            "Target": "/bin/sysctl"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "has",
+            "Source": "Defense Industrial Base",
+            "Target": "FortiGate"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "has",
+            "Source": "Government",
+            "Target": "FortiManager"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "has",
+            "Source": "Technology",
+            "Target": "FortiAnalyzer"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "affect",
+            "Source": "/bin/lspci",
+            "Target": "FortiOS"
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "affect",
+            "Source": "/bin/sysctl",
+            "Target": "FortiOS"
+        }
+    ]
+}

@@ -1,0 +1,139 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "MSUpdater Trojan",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "type": "Remote Access Trojan",
+                "alias": "Backdoor.Calla, Mal/Ovoxual, Backdoor.Matchaldru"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "APT Group",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Aero/Geospace and Defense Companies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "industry": "Aerospace, Defense",
+                "location": "United States, Foreign"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CVE-2010-2883",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "software": "Adobe PDF Reader"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Phishing Email",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "subject": "Information for Contractor",
+                "attachment": "chap6.pdf"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "mail.hfmforum.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "GoogleTray.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "msupdater.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "FAVORITES.DAT",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "INTEREST__FOREIGN_EXCHANGE_RATES.pdf",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "md5": "4EF704239FA63D1C1DFCF2EA2DA0D711"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "ISSNIP_2010.pdf",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "md5": "3D966CD90D320EA4A319452D1CCB11AA"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Windows XP",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        }
+    ],
+    "Relationships": []
+}

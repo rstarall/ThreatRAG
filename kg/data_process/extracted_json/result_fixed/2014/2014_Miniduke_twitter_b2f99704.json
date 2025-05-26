@@ -1,0 +1,257 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "MiniDuke",
+            "EntityVariantNames": [
+                "Win32/SandyEva"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "size": "24 KB",
+                "type": "Backdoor"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "CVE-2014-1761",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "impact": "Word RTF parsing"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Proposal-Cover-Sheet-English.rtf",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "RTF exploit document"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "a.l",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "location": "%TEMP%"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "kernel32.dll",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "TwitterJS",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "component": "Secondary",
+                "language": "JScript"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "@FloydLSchwartz",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "platform": "Twitter"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "http://www.geoiptool.com",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0007"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "cryptdll.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "location": "%USERPROFILE%"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "NTUSER.DAT",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "location": "%USERPROFILE%"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "init.cmd",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "@AA2ADcAOAA",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "platform": "Twitter"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "related_to",
+            "Source": "MiniDuke",
+            "Target": "CVE-2014-1761"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "related_to",
+            "Source": "MiniDuke",
+            "Target": "Proposal-Cover-Sheet-English.rtf"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "MiniDuke",
+            "Target": "a.l"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "MiniDuke",
+            "Target": "TwitterJS"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "TwitterJS",
+            "Target": "@FloydLSchwartz"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "TwitterJS",
+            "Target": "http://www.geoiptool.com"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "TwitterJS",
+            "Target": "cryptdll.dll"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "TwitterJS",
+            "Target": "NTUSER.DAT"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "TwitterJS",
+            "Target": "init.cmd"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "TwitterJS",
+            "Target": "@AA2ADcAOAA"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2014-1761",
+            "Target": "Proposal-Cover-Sheet-English.rtf"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "belong_to",
+            "Source": "a.l",
+            "Target": "kernel32.dll"
+        }
+    ]
+}

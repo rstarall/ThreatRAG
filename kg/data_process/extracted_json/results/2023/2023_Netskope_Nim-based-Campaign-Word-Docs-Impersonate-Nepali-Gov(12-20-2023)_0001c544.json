@@ -1,0 +1,291 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Nim-based Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "December 20, 2023",
+                "observe_time": "2023",
+                "report_name": "2023_Netskope_Nim-based-Campaign-Word-Docs-Impersonate-Nepali-Gov(12-20-2023)_0001c544"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Nepali Government Impersonation",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "e2a3edc708016316477228de885f0c39.doc",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "e2a3edc708016316477228de885f0c39",
+                "type": "Word Document"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "OCu3HBg7gyI9aUaB.vbs",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "path": "C:\\Users\\&lt;user&gt;\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\OCu3HBg7gyI9aUaB.vbs"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "skriven.vbs",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "path": "C:\\Users\\&lt;user&gt;\\AppData\\Local\\skriven.vbs"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "conhost.zip",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "path": "C:\\Users\\&lt;user&gt;\\AppData\\Local\\Microsoft\\conhost.zip"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "8lGghf8kIPIuu3cM.bat",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "path": "C:\\Users\\&lt;jack&gt;\\AppData\\Local\\8lGghf8kIPIuu3cM.bat"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "conhost.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "language": "Nim",
+                "compiled_date": "September 20, 2023"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "mail[.]mofa[.]govnp[.]org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "nitc[.]govnp[.]org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "mx1[.]nepal[.]govnp[.]org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "dns[.]govnp[.]org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "ConsoleHostManager",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Nim-based Campaign",
+            "Target": "Nepali Government Impersonation"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Nepali Government Impersonation",
+            "Target": "e2a3edc708016316477228de885f0c39.doc"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "belong_to",
+            "Source": "e2a3edc708016316477228de885f0c39.doc",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "e2a3edc708016316477228de885f0c39.doc",
+            "Target": "OCu3HBg7gyI9aUaB.vbs"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "e2a3edc708016316477228de885f0c39.doc",
+            "Target": "skriven.vbs"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "e2a3edc708016316477228de885f0c39.doc",
+            "Target": "conhost.zip"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "e2a3edc708016316477228de885f0c39.doc",
+            "Target": "8lGghf8kIPIuu3cM.bat"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "conhost.zip",
+            "Target": "conhost.exe"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "conhost.exe",
+            "Target": "mail[.]mofa[.]govnp[.]org"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "conhost.exe",
+            "Target": "nitc[.]govnp[.]org"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "conhost.exe",
+            "Target": "mx1[.]nepal[.]govnp[.]org"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "conhost.exe",
+            "Target": "dns[.]govnp[.]org"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "8lGghf8kIPIuu3cM.bat",
+            "Target": "ConsoleHostManager"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "affect",
+            "Source": "conhost.exe",
+            "Target": "Windows System"
+        }
+    ]
+}

@@ -1,0 +1,196 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Carbanak",
+            "EntityVariantNames": [
+                "Anunak"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0007",
+                "TA0008",
+                "TA0010"
+            ],
+            "Properties": {
+                "industry": "Cybercrime",
+                "notoriety": "High-profile"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Hospitality Industry Attacks",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0007",
+                "TA0010"
+            ],
+            "Properties": {
+                "sector": "Hospitality"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Hospitality Clients",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "industry": "Hospitality"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Malicious Word Document",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "type": "Word Document"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "AdobeUpdateManagementTool.vbs",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0007"
+            ],
+            "Properties": {
+                "version": "1",
+                "hash": "8d7c90a699b4055e9c7db4571588c765c1cf2358"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "AdobeUpdateManagementTool.vbs",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0007"
+            ],
+            "Properties": {
+                "version": "2",
+                "hash": "a91416185d2565ce991fc2c0dd9591c71fd1f627"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "95.215.47.105",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "192.99.14.211",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "revital-travel.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "juste-travel.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "park-travels.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "el32.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0004"
+            ],
+            "Properties": {
+                "hash": "83D0964F06E5F53D882F759E4933A6511730E07B"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "el64.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0004"
+            ],
+            "Properties": {
+                "hash": "CF5B30E6ADA0D6EE7449D6BDE9986A35DF6F2986"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "bf.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011",
+                "TA0010"
+            ],
+            "Properties": {
+                "hash": "3d00602c98776e2ea5d64a78fc622c4ff08708e3"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "CVE-2013-3660",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0004"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        }
+    ],
+    "Relationships": []
+}

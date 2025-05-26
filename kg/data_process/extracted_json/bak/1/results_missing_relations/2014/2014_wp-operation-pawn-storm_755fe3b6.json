@@ -1,0 +1,207 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT-29",
+            "EntityVariantNames": [
+                "Pawn Storm",
+                "SEDNIT",
+                "Sofacy"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0005",
+                "TA0006",
+                "TA0011"
+            ],
+            "Properties": {
+                "country": "Russia",
+                "targets": "Military, embassy, defense contractors"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Operation Pawn Storm",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0005",
+                "TA0006",
+                "TA0011"
+            ],
+            "Properties": {
+                "timeframe": "2007-2014",
+                "vectors": "Spear-phishing, phishing websites, exploits"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Ministry of Defense, France",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Vatican Embassy, Iraq",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Ministry of Defense, Hungary",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "OSCE, Austria",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "SAIC, United States",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "ACADEMI",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "SEDNIT",
+            "EntityVariantNames": [
+                "Sofacy"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0006",
+                "TA0011"
+            ],
+            "Properties": {
+                "function": "Backdoor, information stealer"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Cobalt Strike",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "CVE-2010-3333",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "CVE-2012-0158",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "eurosatory2014.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "real_domain": "eurosatory.com"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "vice-news.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "real_domain": "news.vice.com"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "200.106.145.122",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "70.85.221.20",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "International Military.rtf",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "hash": "956d1a36055c903cb570890da69deabaacb5a18a"
+            }
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "IDF_Spokesperson_Terror_Attack_011012.doc",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ]
+        }
+    ],
+    "Relationships": []
+}

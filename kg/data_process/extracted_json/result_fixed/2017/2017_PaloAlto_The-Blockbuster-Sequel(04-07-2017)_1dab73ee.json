@@ -1,0 +1,221 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Lazarus Group",
+            "EntityVariantNames": [
+                "Lazarus",
+                "DarkSeoul group"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "language": "Korean, English",
+                "previous_operations": "Operation Blockbuster, Sony Pictures Entertainment attack, 2013 DarkSeoul attacks"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Blockbuster Sequel Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "March 2017",
+                "target": "Korean-speaking individuals",
+                "observe_time": "2017",
+                "report_name": "2017_PaloAlto_The-Blockbuster-Sequel(04-07-2017)_1dab73ee"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "한싹시스템.doc",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "cec26d8629c5f223a120677a5c7fbd8d477f9a1b963f19d3f1195a7f94bc194b",
+                "type": "Malicious Word Document",
+                "language": "Korean"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Malicious VBA Macros",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "technique": "XOR-decoded PE file"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "032ccd6ae0a6e49ac93b7bd10c7d249f853fff3f5771a1fe3797f733f09db5a0",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "type": "Unpacked payload",
+                "compiled": "2017-03-02",
+                "packer": "UPX"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Fake TLS Protocol",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "SNI_records": "twitter.com, www.amazon.com, www.apple.com, www.bing.com, www.facebook.com, www.microsoft.com, www.yahoo.com, www.join.me"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "103.224.82.154",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "daedong.or.kr",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "String Interpolation Technique",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "77a32726af6205d27999b9a564dd7b020dc0a8f697a81a8f597b971140e28976",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "type": "Batch cleanup script",
+                "label": "L21024"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Blockbuster Sequel Campaign",
+            "Target": "Lazarus Group"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Lazarus Group",
+            "Target": "한싹시스템.doc"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "한싹시스템.doc",
+            "Target": "Malicious VBA Macros"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "Malicious VBA Macros",
+            "Target": "032ccd6ae0a6e49ac93b7bd10c7d249f853fff3f5771a1fe3797f733f09db5a0"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Lazarus Group",
+            "Target": "Fake TLS Protocol"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Fake TLS Protocol",
+            "Target": "103.224.82.154"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Fake TLS Protocol",
+            "Target": "daedong.or.kr"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Lazarus Group",
+            "Target": "String Interpolation Technique"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "032ccd6ae0a6e49ac93b7bd10c7d249f853fff3f5771a1fe3797f733f09db5a0",
+            "Target": "77a32726af6205d27999b9a564dd7b020dc0a8f697a81a8f597b971140e28976"
+        }
+    ]
+}

@@ -1,0 +1,286 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Lazarus",
+            "EntityVariantNames": [
+                "Lazarus Group"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0005",
+                "TA0007",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "North Korea"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Software Vendor Compromise Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0005",
+                "TA0007",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "Mid-July 2023",
+                "observe_time": "2023",
+                "report_name": "2023_Kaspersky_cascade-of-compromise-unveiling-Lazarus-new-campaign(10-27-2023)_37bc4eb9"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Software Vendor",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "SIGNBT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "9b62352851c9f82157d1d7fcafeb49d3"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "LPEClient",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0007",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "3a77b5054c36e6812f07366fb70b007d"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "ualapi.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003",
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "path": "%system%\\ualapi.dll",
+                "hash": "9cd90dff2d9d56654dbecdcd409e1ef3,88a96f8730b35c7406d57f23bbba734d,54df2984e833ba2854de670cce43b823"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "tw-100a-a00-e14d9.tmp",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "path": "C:\\Windows\\system32\\config\\systemprofile\\appdata\\Local\\tw-100a-a00-e14d9.tmp"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "tw-100b-a00-e14d9.tmp",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "path": "C:\\Windows\\system32\\config\\systemprofile\\appdata\\Local\\tw-100b-a00-e14d9.tmp"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "ictm[.]or[.]kr",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "url": "hxxp://ictm[.]or[.]kr/UPLOAD_file/board/free/edit/index[.]php"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "spoolsv.exe",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Gopuram",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Software Vendor Compromise Event",
+            "Target": "Lazarus"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Software Vendor Compromise Event",
+            "Target": "Software Vendor"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Lazarus",
+            "Target": "SIGNBT"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Lazarus",
+            "Target": "LPEClient"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Lazarus",
+            "Target": "ualapi.dll"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "Lazarus",
+            "Target": "Software Vendor"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "Lazarus",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "SIGNBT",
+            "Target": "ualapi.dll"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "SIGNBT",
+            "Target": "tw-100a-a00-e14d9.tmp"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "SIGNBT",
+            "Target": "tw-100b-a00-e14d9.tmp"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "SIGNBT",
+            "Target": "ictm[.]or[.]kr"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "LPEClient",
+            "Target": "Gopuram"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "has",
+            "Source": "Software Vendor",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "belong_to",
+            "Source": "ualapi.dll",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "affect",
+            "Source": "ualapi.dll",
+            "Target": "spoolsv.exe"
+        }
+    ]
+}

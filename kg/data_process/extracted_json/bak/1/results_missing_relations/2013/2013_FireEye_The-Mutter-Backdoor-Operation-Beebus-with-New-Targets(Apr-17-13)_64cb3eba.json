@@ -1,0 +1,268 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Comment Group",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Operation Beebus",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "time": "December 2011 - April 2013"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Aerospace, Defense, and Telecommunications Organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "location": "United States and India",
+                "industry": "Aerospace, Defense, Telecommunications"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Mutter Backdoor",
+            "EntityVariantNames": [
+                "Backdoor.APT.NS01"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "version": "V0.7 and V0.9.6",
+                "technique": "HTTP proxy aware, evasion techniques"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2012-0158",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CVE-2008-3005",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "CVE-2010-3333",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "cdind.antivirup.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "port": "8081"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "http.4pu.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "port": "80"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "oracledata.ns01.us",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "port": "80"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "mydns.dns2.us",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "port": "443"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "winsupdate.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "agfire.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Pakistan's Indigenous UAV industry",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "hash": "b5f4a9aac67b53762ed98fafd067c803",
+                "type": "Decoy Document"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "2012_3_12.xls",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "hash": "92643bfa4121f1960c43c78a3d53568b"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Change of Address.doc",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "hash": "4d5a235048e94579aab0062057296186"
+            }
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "Urgent message.doc",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "hash": "589f10e2efdd98bfbdc34f247b6a347f"
+            }
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "update.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "725fc0d7a8e7b9e01a83111619744b6f"
+            }
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "msdsp.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "igfxtray.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "681a014e9d221c1003c54a2a9a1d9df8"
+            }
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "winsups.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_22",
+            "EntityName": "ctfmon.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "d5640ae049779bbb068eff08616adb95"
+            }
+        },
+        {
+            "EntityId": "entity_23",
+            "EntityName": "igfxpers.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "06d5dddd4c349f666d84a91d6edc4f8d"
+            }
+        }
+    ],
+    "Relationships": []
+}

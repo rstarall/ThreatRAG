@@ -1,0 +1,261 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Gholee Threat Actor",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "sophistication": "High level professional",
+                "origin": "Iran (suspected)"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Operation Protective Edge Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "August 2014",
+                "location": "Israel",
+                "observe_time": "2014",
+                "report_name": "2014_Gholee_Protective_Edge_themed_spear_phishing_campaign_a14230a7"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Israeli Target",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Government/Military"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Operation Protective Edge.xlsb",
+            "EntityVariantNames": [
+                "Operation Protective Edge.xlsb"
+            ],
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "d0c3f4c9896d41a7c42737134ffb4c2e",
+                "type": "Excel Binary Workbook"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Social Engineering Message",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "content": "Due to security considerations I consciously hid the Informations. It will be visible for you by enabling content above."
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "NTUSER.data.{GUIDE}.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "48573a150562c57742230583456b4c02",
+                "location": "System root folder"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "83.170.33.60",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "location": "Kuwait",
+                "owner": "iABG Mbh"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "83.170.33.37",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "location": "Same /26 netblock as 83.170.33.60"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Core Impact",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "creator": "Core Security"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Expired SSL Certificate",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "issuer": "Thawte",
+                "expiration": "2010",
+                "domain": "*coreimpactagent.net",
+                "fingerprint": "9C 80 C2 47 40 6D 6C ED FC E0 08 AE EF D9 98 90"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "svchost 67.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "hash": "916be1b609ed3dc80e5039a1d8102e82",
+                "upload_location": "Latvia"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation Protective Edge Attack",
+            "Target": "Gholee Threat Actor"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Operation Protective Edge Attack",
+            "Target": "Israeli Target"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Gholee Threat Actor",
+            "Target": "Operation Protective Edge.xlsb"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Gholee Threat Actor",
+            "Target": "Social Engineering Message"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "Gholee Threat Actor",
+            "Target": "Israeli Target"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Operation Protective Edge.xlsb",
+            "Target": "NTUSER.data.{GUIDE}.dll"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "NTUSER.data.{GUIDE}.dll",
+            "Target": "83.170.33.60"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "svchost 67.exe",
+            "Target": "83.170.33.37"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "NTUSER.data.{GUIDE}.dll",
+            "Target": "Expired SSL Certificate"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Operation Protective Edge.xlsb",
+            "Target": "svchost 67.exe"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Core Impact",
+            "Target": "Expired SSL Certificate"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "trigger",
+            "Source": "Israeli Target",
+            "Target": "Operation Protective Edge.xlsb"
+        }
+    ]
+}

@@ -1,0 +1,246 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Grabit",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0009",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "platform": "Windows 32-bit",
+                "framework": "Microsoft .NET Framework (Visual Basic/C#)",
+                "compilation_date": "March 7-9, 2015"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "HawkEye",
+            "EntityVariantNames": [
+                "HawkEyeProducts",
+                "HawkEye Logger"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009",
+                "TA0010"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Keylogger",
+                "delivery_methods": "FTP, SMTP, Web-Panel"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "DarkComet",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Grabit Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0009",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "start_date": "Late February 2015",
+                "end_date": "Mid-March 2015",
+                "origin_countries": "India, United States, Israel",
+                "observe_time": "2015",
+                "report_name": "2015_Grabit_c360c5f2"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Malicious Word Document",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "extension": ".doc",
+                "macro": "AutoOpen"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Affected Organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "countries": "Thailand, India",
+                "infected_count": "Approximately 10,000"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "31.220.16.147",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "204.152.219.78",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "3f77403a64a2dde60c4962a6752de601d56a621a",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "9b48a2e82d8a82c1717f135fa750ba774403e972b6edb2a522f9870bed57e72a",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Grabit Campaign",
+            "Target": "Grabit"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Grabit Campaign",
+            "Target": "Affected Organizations"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "Grabit",
+            "Target": "HawkEye"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "Grabit",
+            "Target": "DarkComet"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "Grabit",
+            "Target": "Malicious Word Document"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "belong_to",
+            "Source": "Malicious Word Document",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "Grabit",
+            "Target": "Affected Organizations"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Grabit",
+            "Target": "31.220.16.147"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Grabit",
+            "Target": "204.152.219.78"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Grabit",
+            "Target": "3f77403a64a2dde60c4962a6752de601d56a621a"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Grabit",
+            "Target": "9b48a2e82d8a82c1717f135fa750ba774403e972b6edb2a522f9870bed57e72a"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "has",
+            "Source": "Affected Organizations",
+            "Target": "Windows System"
+        }
+    ]
+}

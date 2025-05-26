@@ -1,0 +1,304 @@
+<Entitys>
+    <!-- Attack Groups -->
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>ELECTRUM</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0040</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="capability">ICS-specific malware development</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>COVELLITE</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="target">US electric grid companies</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>DYMALLOY</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0007</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="target">ICS networks in Turkey, Europe, and North America</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>CHRYSENE</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0009</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+        <Properties>
+            <Property name="target">Oil and gas, electric generation industries</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>MAGNALLIUM</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0009</Label>
+        </Labels>
+        <Times>
+            <Time>5</Time>
+        </Times>
+        <Properties>
+            <Property name="target">Saudi Arabian petrochemical and aerospace</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Malware -->
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>CRASHOVERRIDE</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0040</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="target">Electric grid operations</Property>
+            <Property name="impact">Caused power outage in Ukraine</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>TRISIS</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0040</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="target">Schneider Electric Triconex safety systems</Property>
+            <Property name="impact">First malware targeting safety instrumented systems</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>WannaCry</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="type">Ransomware worm</Property>
+            <Property name="exploit">MS17-010 (EternalBlue)</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_9</EntityId>
+        <EntityName>NotPetya</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0040</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+        <Properties>
+            <Property name="type">Wiper masquerading as ransomware</Property>
+            <Property name="impact">Estimated $300M loss for Maersk</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Vulnerabilities -->
+    <Entity>
+        <EntityId>entity_10</EntityId>
+        <EntityName>MS17-010</EntityName>
+        <EntityType>vul</EntityType>
+        <EntitySubType>others</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="name">EternalBlue</Property>
+            <Property name="description">SMB protocol vulnerability</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Events -->
+    <Entity>
+        <EntityId>entity_11</EntityId>
+        <EntityName>2016 Ukrainian power outage</EntityName>
+        <EntityType>event</EntityType>
+        <EntitySubType>event</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0040</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="date">December 2016</Property>
+            <Property name="location">Ukraine</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_12</EntityId>
+        <EntityName>TRISIS attack</EntityName>
+        <EntityType>event</EntityType>
+        <EntitySubType>event</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0040</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="date">November 2017</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Systems -->
+    <Entity>
+        <EntityId>entity_13</EntityId>
+        <EntityName>Schneider Electric Triconex</EntityName>
+        <EntityType>env</EntityType>
+        <EntitySubType>software</EntitySubType>
+        <Labels>
+            <Label>TA0040</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="type">Safety instrumented system</Property>
+        </Properties>
+    </Entity>
+</Entitys>
+<Relationships>
+    <!-- ELECTRUM relationships -->
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>ELECTRUM</Source>
+        <Target>CRASHOVERRIDE</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>2016 Ukrainian power outage</Source>
+        <Target>ELECTRUM</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>2016 Ukrainian power outage</Source>
+        <Target>CRASHOVERRIDE</Target>
+    </Relationship>
+
+    <!-- TRISIS relationships -->
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>TRISIS attack</Source>
+        <Target>TRISIS</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>TRISIS</Source>
+        <Target>Schneider Electric Triconex</Target>
+    </Relationship>
+
+    <!-- WannaCry relationships -->
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>exploit</RelationshipType>
+        <Source>WannaCry</Source>
+        <Target>MS17-010</Target>
+    </Relationship>
+
+    <!-- COVELLITE relationships -->
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>COVELLITE</Source>
+        <Target>US electric grid companies</Target>
+    </Relationship>
+
+    <!-- DYMALLOY relationships -->
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>DYMALLOY</Source>
+        <Target>ICS networks in Turkey, Europe, and North America</Target>
+    </Relationship>
+
+    <!-- CHRYSENE relationships -->
+    <Relationship>
+        <RelationshipId>relationship_9</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>CHRYSENE</Source>
+        <Target>Oil and gas, electric generation industries</Target>
+    </Relationship>
+
+    <!-- MAGNALLIUM relationships -->
+    <Relationship>
+        <RelationshipId>relationship_10</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>MAGNALLIUM</Source>
+        <Target>Saudi Arabian petrochemical and aerospace</Target>
+    </Relationship>
+</Relationships>

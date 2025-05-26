@@ -1,0 +1,349 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Carbanak",
+            "EntityVariantNames": [
+                "Anunak"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0007",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Cybercrime",
+                "notoriety": "High-profile"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Hospitality Industry Attacks",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0007",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "sector": "Hospitality",
+                "observe_time": "2016",
+                "report_name": "2016_Trustwave_Carbanak _Anunak_Attack_Methodology(11-14-2016)_c71104ac"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Hospitality Clients",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Hospitality"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Malicious Word Document",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Word Document"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "AdobeUpdateManagementTool.vbs",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0007"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "version": "1",
+                "hash": "8d7c90a699b4055e9c7db4571588c765c1cf2358"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "AdobeUpdateManagementTool.vbs",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0007"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "version": "2",
+                "hash": "a91416185d2565ce991fc2c0dd9591c71fd1f627"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "95.215.47.105",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "192.99.14.211",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "revital-travel.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "juste-travel.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "park-travels.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "el32.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0004"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "hash": "83D0964F06E5F53D882F759E4933A6511730E07B"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "el64.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0004"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "hash": "CF5B30E6ADA0D6EE7449D6BDE9986A35DF6F2986"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "bf.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011",
+                "TA0010"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "hash": "3d00602c98776e2ea5d64a78fc622c4ff08708e3"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "CVE-2013-3660",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0004"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Hospitality Industry Attacks",
+            "Target": "Carbanak"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Hospitality Industry Attacks",
+            "Target": "Hospitality Clients"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "Carbanak",
+            "Target": "Hospitality Clients"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Carbanak",
+            "Target": "Malicious Word Document"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Carbanak",
+            "Target": "AdobeUpdateManagementTool.vbs"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Carbanak",
+            "Target": "bf.exe"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Carbanak",
+            "Target": "CVE-2013-3660"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "AdobeUpdateManagementTool.vbs",
+            "Target": "95.215.47.105"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "AdobeUpdateManagementTool.vbs",
+            "Target": "192.99.14.211"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "AdobeUpdateManagementTool.vbs",
+            "Target": "revital-travel.com"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "AdobeUpdateManagementTool.vbs",
+            "Target": "juste-travel.com"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "AdobeUpdateManagementTool.vbs",
+            "Target": "park-travels.com"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "bf.exe",
+            "Target": "el32.exe"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "bf.exe",
+            "Target": "el64.exe"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2013-3660",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "has",
+            "Source": "Hospitality Clients",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "trigger",
+            "Source": "Hospitality Clients",
+            "Target": "Malicious Word Document"
+        }
+    ]
+}

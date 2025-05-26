@@ -1,0 +1,220 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Sednit",
+            "EntityVariantNames": [
+                "APT28",
+                "Fancy Bear",
+                "Sofacy",
+                "Pawn Storm",
+                "STRONTIUM",
+                "Tsar Team"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "activity_start": "2004",
+                "targets": "Government departments, embassies, Eastern Europe geopolitics"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Downdelph",
+            "EntityVariantNames": [
+                "DelPHA cy"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "language": "Delphi",
+                "activity_period": "2013-2015",
+                "deployments": "7"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "intelmeserver.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "active_period": "2013-2015",
+                "status": "sinkholed"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "104.171.117.216",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "141.255.160.52",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Windows Bootkit",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0005"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "infection_method": "MBR infection",
+                "target_os": "Windows XP to Windows 7"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "HIDEDRV",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0005"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "type": "Rootkit",
+                "techniques": "SSDT hooking, minifilter driver"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "BlackEnergy",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "CVE-2023-1234",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Democratic National Committee",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "Sednit",
+            "Target": "Downdelph"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "related_to",
+            "Source": "Downdelph",
+            "Target": "intelmeserver.com"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "Downdelph",
+            "Target": "104.171.117.216"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "Downdelph",
+            "Target": "141.255.160.52"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Sednit",
+            "Target": "Windows Bootkit"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Sednit",
+            "Target": "HIDEDRV"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Windows Bootkit",
+            "Target": "BlackEnergy"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "Sednit",
+            "Target": "Democratic National Committee"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2023-1234",
+            "Target": "Windows System"
+        }
+    ]
+}

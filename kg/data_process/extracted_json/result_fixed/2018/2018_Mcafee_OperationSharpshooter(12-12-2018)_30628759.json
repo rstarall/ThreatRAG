@@ -1,0 +1,217 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Operation Sharpshooter",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0007",
+                "TA0009",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "October-November 2018",
+                "target_countries": "United States, others",
+                "observe_time": "2018",
+                "report_name": "2018_Mcafee_OperationSharpshooter(12-12-2018)_30628759"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Lazarus Group",
+            "EntityVariantNames": [
+                "Lazarus"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0007",
+                "TA0009",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "suspected_false_flag": "true"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Rising Sun",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0007",
+                "TA0009",
+                "TA0010"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "origin": "Modified from Trojan Duuzer",
+                "type": "In-memory implant"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Strategic Planning Manager.doc",
+            "EntityVariantNames": [
+                "Business Intelligence Administrator.doc",
+                "Customer Service Representative.doc"
+            ],
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "url": "hxxp://208.117.44.112/document/Strategic Planning Manager.doc",
+                "type": "Weaponized document"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "34.214.99.20/view_style.php",
+            "EntityVariantNames": [
+                "137.74.41.56/board.php",
+                "kingkoil.com.sg/board.php"
+            ],
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "C2 server"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Nuclear, Defense, Energy, Financial Companies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "count": "87 organizations",
+                "primary_sector": "Defense and government"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "8106a30bd35526bded384627d8eebce15da35d17",
+            "EntityVariantNames": [
+                "66776c50bcc79bbcecdbe99960e6ee39c8a31181",
+                "668b0df94c6d12ae86711ce24ce79dbe0ee2d463",
+                "9b0f22e129c73ce4c21be4122182f6dcbc351c95",
+                "31e79093d452426247a56ca0eff860b0ecc86009"
+            ],
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Job Recruitment Campaign",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Social engineering"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation Sharpshooter",
+            "Target": "Lazarus Group"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Operation Sharpshooter",
+            "Target": "Nuclear, Defense, Energy, Financial Companies"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Lazarus Group",
+            "Target": "Rising Sun"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Lazarus Group",
+            "Target": "Strategic Planning Manager.doc"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Lazarus Group",
+            "Target": "Job Recruitment Campaign"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "Lazarus Group",
+            "Target": "Nuclear, Defense, Energy, Financial Companies"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Rising Sun",
+            "Target": "34.214.99.20/view_style.php"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Rising Sun",
+            "Target": "8106a30bd35526bded384627d8eebce15da35d17"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "trigger",
+            "Source": "Nuclear, Defense, Energy, Financial Companies",
+            "Target": "Strategic Planning Manager.doc"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "belong_to",
+            "Source": "34.214.99.20/view_style.php",
+            "Target": "Nuclear, Defense, Energy, Financial Companies"
+        }
+    ]
+}

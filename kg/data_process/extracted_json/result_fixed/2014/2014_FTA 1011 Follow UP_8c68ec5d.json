@@ -1,0 +1,247 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Sneakernet Trojan",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0009"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "description": "Malware system for data discovery and retrieval via removable storage devices"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "netsat.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0003",
+                "TA0009",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "md5": "eb8399483b55f416e48a320d68597d72",
+                "size": "43520 bytes",
+                "role": "Headquarters component"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "netui3.dll",
+            "EntityVariantNames": [
+                "setup35.exe",
+                "update.exe"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0007",
+                "TA0009"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "md5": "68aed7b1f171b928913780d5b21f7617",
+                "size": "39424 bytes",
+                "role": "Field unit/agent component"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "netwn.drv",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "location": "CSIDL_WINDOWS\\msagent\\",
+                "encryption": "TEA (Tiny Encryption Algorithm)"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "wins",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "location": "CSIDL_MYPICTURES\\",
+                "content": "Log file"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Autorun.inf",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "~disk.ini",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "versions": "Windows 2000 to Windows7/Server 2008 and up"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "RECYCLED\\RECYCLED\\SYS",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "location": "On infected removable drives",
+                "purpose": "Data collection storage"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Intel",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "location": "CSIDL_NETHOOD\\Microsoft\\",
+                "purpose": "Collected data storage"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Mtx_Sp_on_PC_1_2_8",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Mutex",
+                "purpose": "Prevent multiple iterations"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "related_to",
+            "Source": "Sneakernet Trojan",
+            "Target": "netsat.exe"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "related_to",
+            "Source": "Sneakernet Trojan",
+            "Target": "netui3.dll"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "netsat.exe",
+            "Target": "netwn.drv"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "netsat.exe",
+            "Target": "wins"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "netui3.dll",
+            "Target": "Autorun.inf"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "netui3.dll",
+            "Target": "~disk.ini"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "affect",
+            "Source": "netui3.dll",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "belong_to",
+            "Source": "RECYCLED\\RECYCLED\\SYS",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "belong_to",
+            "Source": "Intel",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "netui3.dll",
+            "Target": "Mtx_Sp_on_PC_1_2_8"
+        }
+    ]
+}

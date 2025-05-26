@@ -1,0 +1,127 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Operation BugDrop",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0043",
+                "TA0001",
+                "TA0002",
+                "TA0009",
+                "TA0010"
+            ],
+            "Properties": {
+                "discovery_date": "February 2017",
+                "discovered_by": "CyberX"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Ukrainian Organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "sectors": "Critical infrastructure, media, scientific research",
+                "locations": "Ukraine, Russia, Saudi Arabia, Austria, Donetsk, Luhansk"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Dropbox",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0010"
+            ],
+            "Properties": {
+                "usage": "Data exfiltration"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Reflective DLL Injection",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0002",
+                "TA0005"
+            ],
+            "Properties": {
+                "used_by": "BlackEnergy, Duqu"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "windows-problem-reporting.site88.net",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "hosting_type": "Free web hosting"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Blowfish",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Properties": {
+                "usage": "Data encryption"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Malicious Word Document",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "hash": "997841515222dbfa65d1aea79e9e6a89a0142819eaeec3467c31fa169e57076a",
+                "content": "Military personnel list"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "P*****@mail.ru",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0043",
+                "TA0001",
+                "TA0002",
+                "TA0009",
+                "TA0010"
+            ],
+            "Properties": {
+                "email": "P*****@mail.ru"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Operation Groundbait",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0043",
+                "TA0001"
+            ],
+            "Properties": {
+                "discovery_date": "May 2016",
+                "discovered_by": "ESET"
+            }
+        }
+    ],
+    "Relationships": []
+}

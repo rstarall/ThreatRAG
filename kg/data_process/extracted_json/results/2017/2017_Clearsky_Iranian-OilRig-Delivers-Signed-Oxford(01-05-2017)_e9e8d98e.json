@@ -1,0 +1,374 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "OilRig",
+            "EntityVariantNames": [
+                "APT34"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Iran"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "OilRig Middle East Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "Since 2015",
+                "observe_time": "2017",
+                "report_name": "2017_Clearsky_Iranian-OilRig-Delivers-Signed-Oxford(01-05-2017)_e9e8d98e"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Israeli IT Vendors",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Israeli Post Office",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Financial Institutes",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Fake VPN Web Portal",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "JuniperSetupClientInstaller.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "6a65d762fb548d2dc56cfde4842a4d3c"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Helminth",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "tecsupport[.]in",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "AI Squared Code Signing Certificate",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "thumbprint": "F340C0D841F9D99DBC289151C13391000366631C",
+                "serial": "45 E4 7F 56 0B 01 B6 4E 68 39 5E 5D 79 2F 2E 09"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "oxford-symposia[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "7"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "OxfordSymposiumRegTool.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "8"
+            ],
+            "Properties": {
+                "hash": "f77ee804de304f7c3ea6b87824684b33"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "oxford-careers[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "9"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "oxford[.]in",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "10"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "oxford-employee[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "11"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "OxfordCVCreator.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "12"
+            ],
+            "Properties": {
+                "hash": "5713c3c01067c91771ac70e193ef5419"
+            }
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "updater[.]li",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "13"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "Israel Airline.xls",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "14"
+            ],
+            "Properties": {
+                "hash": "197c018922237828683783654d3c632a"
+            }
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "83.142.230.138",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "15"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "OilRig Middle East Campaign",
+            "Target": "OilRig"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "OilRig Middle East Campaign",
+            "Target": "Israeli IT Vendors"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "OilRig Middle East Campaign",
+            "Target": "Israeli Post Office"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "involve",
+            "Source": "OilRig Middle East Campaign",
+            "Target": "Financial Institutes"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "OilRig",
+            "Target": "Fake VPN Web Portal"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "OilRig",
+            "Target": "JuniperSetupClientInstaller.exe"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "OilRig",
+            "Target": "Helminth"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Helminth",
+            "Target": "JuniperSetupClientInstaller.exe"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "belong_to",
+            "Source": "tecsupport[.]in",
+            "Target": "Helminth"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "OilRig",
+            "Target": "AI Squared Code Signing Certificate"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "target",
+            "Source": "OilRig",
+            "Target": "Israeli IT Vendors"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "target",
+            "Source": "OilRig",
+            "Target": "Israeli Post Office"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "target",
+            "Source": "OilRig",
+            "Target": "Financial Institutes"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "OxfordSymposiumRegTool.exe",
+            "Target": "oxford-symposia[.]com"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "OxfordCVCreator.exe",
+            "Target": "oxford-employee[.]com"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "belong_to",
+            "Source": "updater[.]li",
+            "Target": "OxfordCVCreator.exe"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "83.142.230.138",
+            "Target": "OilRig"
+        }
+    ]
+}

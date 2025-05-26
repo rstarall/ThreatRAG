@@ -1,0 +1,273 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT-29",
+            "EntityVariantNames": [
+                "Cozy Bear"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0008"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Stuxnet",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0040"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "size": "500 kilobytes",
+                "target": "Iranian centrifuges"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Flame",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0009",
+                "TA0010"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "size": "20 megabytes",
+                "function": "Intelligence gathering"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Gauss",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0005",
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "feature": "Execution constraints"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "APT1",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "compromised": "141 companies",
+                "duration": "4 years 10 months",
+                "data_stolen": "6.5 Terabytes"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Turla",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0011",
+                "TA0010"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "technique": "Satellite connections"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Operation Aurora",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0009"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "target": "Source code repositories",
+                "observe_time": "2016",
+                "report_name": "2016_VirusBulletin_EvronRaz(10-05-2016)_261be554"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Sofacy APT",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0009",
+                "TA0010"
+            ],
+            "Times": [
+                "7"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Hurricane Panda",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0005",
+                "TA0008"
+            ],
+            "Times": [
+                "8"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Red October",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0003",
+                "TA0010"
+            ],
+            "Times": [
+                "9"
+            ],
+            "Properties": {
+                "duration": "5 years"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "The Mask",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0005",
+                "TA0008"
+            ],
+            "Times": [
+                "10"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "APT12",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0008"
+            ],
+            "Times": [
+                "11"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Gaza Hacker team",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0040"
+            ],
+            "Times": [
+                "11"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "Stuxnet"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "Flame"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "Stuxnet",
+            "Target": "Flame"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "Gauss"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "APT1",
+            "Target": "Turla"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "involve",
+            "Source": "Operation Aurora",
+            "Target": "APT1"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Sofacy APT",
+            "Target": "APT1"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Hurricane Panda",
+            "Target": "Red October"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "The Mask",
+            "Target": "Red October"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "APT12",
+            "Target": "Gaza Hacker team"
+        }
+    ]
+}

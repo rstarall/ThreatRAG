@@ -1,0 +1,336 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Andromeda Botnet Operators",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Beta Bot Operators",
+            "EntityVariantNames": [
+                "Lord Huron",
+                "betamonkey"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Neutrino Bot Operators",
+            "EntityVariantNames": [
+                "n3utrino"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Andromeda",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "features": "modular bot, anti-VM, anti-reversing, self-propagation, process injection, network traffic encryption",
+                "price": "$500 (form grabber), $300 (rootkit), $200 (keylogger)"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Beta Bot",
+            "EntityVariantNames": [
+                "Trojan.Neurevt"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "features": "anti-VM, anti-reversing, self-propagation, rootkit, AV-disabling, form grabbing",
+                "price": "$320-$500"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Neutrino Bot",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011",
+                "TA0040"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "features": "HTTP stress-testing, anti-VM, anti-debugging, DoS, keylogger, credential stealing",
+                "price": "$550 (Builder), $200 (Full set), $20 (Update)"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "DorkBot/NgrBot",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011",
+                "TA0040"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "features": "process injection, hard drive wiping, IRC commands, self-propagation"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "121.11.83.7",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "location": "China",
+                "malware": "Andromeda, Beta Bot, NgrBot, Neutrino"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "155.133.18.45",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "location": "Poland",
+                "malware": "Andromeda, Beta Bot, NgrBot, Neutrino"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "54.69.90.62",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "location": "US (Amazon)",
+                "malware": "Andromeda, Beta Bot, NgrBot, Neutrino"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "a2kiaymoster14902.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "ip": "121.14.212.248",
+                "location": "China"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "b.9thegamejuststarted14k9.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "ip": "116.255.202.74",
+                "location": "China"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Manufacturing/Biotechnology & Drugs",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Professional Services/Engineering",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Government/State",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Global Botnet Campaign 2014",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "October-December 2014",
+                "observe_time": "2014",
+                "report_name": "2014_FTA_1014_Bots_Machines_and_the_Matrix_4276258d"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "Andromeda Botnet Operators",
+            "Target": "Andromeda"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Beta Bot Operators",
+            "Target": "Beta Bot"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Neutrino Bot Operators",
+            "Target": "Neutrino Bot"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "Andromeda",
+            "Target": "121.11.83.7"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "Beta Bot",
+            "Target": "155.133.18.45"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Neutrino Bot",
+            "Target": "54.69.90.62"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "involve",
+            "Source": "Global Botnet Campaign 2014",
+            "Target": "Andromeda Botnet Operators"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "involve",
+            "Source": "Global Botnet Campaign 2014",
+            "Target": "Manufacturing/Biotechnology & Drugs"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "Andromeda Botnet Operators",
+            "Target": "Government/State"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "target",
+            "Source": "Beta Bot Operators",
+            "Target": "Professional Services/Engineering"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "affect",
+            "Source": "Andromeda",
+            "Target": "Manufacturing/Biotechnology & Drugs"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "affect",
+            "Source": "Beta Bot",
+            "Target": "Professional Services/Engineering"
+        }
+    ]
+}

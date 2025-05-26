@@ -1,0 +1,406 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Operation ShadowCat",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0005",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "July 24, 2024",
+                "target": "Indian political observers",
+                "observe_time": "2024",
+                "report_name": "2024_Cyble_OperationShadowCat-Targeting-Indian-Political-Observers(07-24-2024)_d6c9f65e"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Russian-speaking Threat Actor",
+            "EntityVariantNames": [
+                "TA",
+                "RaaS entity"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "language": "Russian",
+                "motive": "Financial"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Indian political observers",
+            "EntityVariantNames": [
+                "Government officials",
+                "Political analysts",
+                "Journalists",
+                "Researchers",
+                "Think tanks"
+            ],
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "interest": "Indian political affairs"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Untitled Document.LNK",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "6f4dc0d9fe5970586403865d551bbea13e2ceb1bfe41f22e235a6456a5ec509b",
+                "type": "Shortcut file",
+                "disguise": "Legitimate Office document"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "PowerShell command",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": ".NET loader",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0005"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "168182578da46de165d10e6753d1c7db7b214efc723c89c6d9d0038264abad54"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "daephaphahph.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "location": "%temp% directory"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Steganographic PNG image",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0005",
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "hash_x86": "8edc8f3eed761694c6b1df740de376f9e12f82675df7507417adb2c8bbedd8da",
+                "hash_x64": "ac957c501867a86c13045fa72d53faacb291cc8b6b2750915abc1b5815b164c6",
+                "content": "Gzip-compressed payload"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Go-based RAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "hash_32bit": "c42ea4d3c8b6ae2c4727a11de65f624a70dabba46c1996aa545de35a58804802",
+                "hash_64bit": "83d6e377a5527f41d8333f8eb0d42f7c6a24f8694ed3caceb3a1e63de7b23e9d",
+                "language": "Go",
+                "size": "8.4 MB"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "use1.netcatgroup.site",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "7"
+            ],
+            "Properties": {
+                "port": "443",
+                "protocol": "WebSocket",
+                "subprotocol": "NetCat"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "suquaituupie.global.ssl.fastly.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "type": "CDN"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "APC injection",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0004",
+                "TA0005"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "target": "powershell.exe",
+                "apis": "CreateProcess, QueueUserAPC, ResumeThread"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Lure document",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "content": "Indian parliamentary question",
+                "extension": ".docx"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Donut",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "type": "Shellcode generator",
+                "origin": "Open-source project"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "HashiCorp Yamux",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "purpose": "Multiplexing communication streams"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Secsy goftp",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0010"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "purpose": "File transfers"
+            }
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation ShadowCat",
+            "Target": "Russian-speaking Threat Actor"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Operation ShadowCat",
+            "Target": "Indian political observers"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Russian-speaking Threat Actor",
+            "Target": "Untitled Document.LNK"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Russian-speaking Threat Actor",
+            "Target": "PowerShell command"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Russian-speaking Threat Actor",
+            "Target": ".NET loader"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Russian-speaking Threat Actor",
+            "Target": "Go-based RAT"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "Russian-speaking Threat Actor",
+            "Target": "Indian political observers"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "trigger",
+            "Source": "Indian political observers",
+            "Target": "Untitled Document.LNK"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "PowerShell command",
+            "Target": ".NET loader"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": ".NET loader",
+            "Target": "Steganographic PNG image"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Go-based RAT",
+            "Target": "Steganographic PNG image"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "belong_to",
+            "Source": "Steganographic PNG image",
+            "Target": "suquaituupie.global.ssl.fastly.net"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "Go-based RAT",
+            "Target": "use1.netcatgroup.site"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "APC injection",
+            "Target": ".NET loader"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "Donut",
+            "Target": "Steganographic PNG image"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "Go-based RAT",
+            "Target": "HashiCorp Yamux"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "Go-based RAT",
+            "Target": "Secsy goftp"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "affect",
+            "Source": "Untitled Document.LNK",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "has",
+            "Source": "Indian political observers",
+            "Target": "Windows System"
+        }
+    ]
+}

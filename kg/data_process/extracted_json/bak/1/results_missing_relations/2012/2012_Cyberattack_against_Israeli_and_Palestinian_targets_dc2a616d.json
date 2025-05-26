@@ -1,0 +1,139 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Unknown Attacker Group",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "motive": "Espionage/Surveillance"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Israeli Government",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Palestinian Targets",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Israeli-Palestinian Cyber Attacks",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "duration": "Ongoing for at least a year",
+                "date": "2011-2012"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "XtremeRat",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "IDF strikes militants in Gaza Strip following rocket barrage.doc.scr",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "hash": "66DDF27517985A75B2317231B46A6F62",
+                "type": "WinRAR SFX archive"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Silence of the Jews make the Church of the Nativity of the Palestinians.doc.scr",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "hash": "15FC009D9CAAA8F11D6C3DA2B69EA06E"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "may2008.dyndns.info",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "108.171.108.190",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "location": "US"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "188.161.*",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "location": "Gaza",
+                "provider": "Palestine Telecommunications Company"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Faked Digital Certificate",
+            "EntityType": "vul",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0005"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Spear Phishing",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ]
+        }
+    ],
+    "Relationships": []
+}

@@ -1,0 +1,14 @@
+{
+  "batch_id": "batch_ugnxfqfqzz",
+  "input_file_id": "file-hdtlfotqho",
+  "model": "deepseek-ai/DeepSeek-V3",
+  "completion_window": "24h",
+  "status": "in_queue",
+  "created_at": 1746691816,
+  "expires_at": 1746778216,
+  "request_counts": {
+    "total": 0,
+    "completed": 0,
+    "failed": 0
+  }
+}

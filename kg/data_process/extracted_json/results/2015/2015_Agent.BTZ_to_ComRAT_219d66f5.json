@@ -1,0 +1,275 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Agent.BTZ",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Remote Administration Tool",
+                "first_seen": "2007"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "ComRAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Remote Administration Tool",
+                "first_seen": "2012"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Uroburos",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0005"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Rootkit"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "G DATA SecurityLabs",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "role": "Security Research Organization"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "US Pentagon",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "industry": "Government"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Belgium Ministry of Foreign Affairs",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "industry": "Government"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Finnish Ministry of Foreign Affairs",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "industry": "Government"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Windows Vista",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Visual Studio 6.0",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Visual Studio 9.0/10.0",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Chinch",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "original_name": "Chinch"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "B196B286-BAB4-101A-B69C-00AA00341D07",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "CLSID"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "42aedc87-2188-41fd-b9a3-0c966feabec1",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "type": "CLSID"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "related_to",
+            "Source": "Agent.BTZ",
+            "Target": "ComRAT"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "related_to",
+            "Source": "Agent.BTZ",
+            "Target": "Uroburos"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "ComRAT",
+            "Target": "Uroburos"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "ComRAT",
+            "Target": "Chinch"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "Agent.BTZ",
+            "Target": "US Pentagon"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "ComRAT",
+            "Target": "Belgium Ministry of Foreign Affairs"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "ComRAT",
+            "Target": "Finnish Ministry of Foreign Affairs"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "exploit",
+            "Source": "Agent.BTZ",
+            "Target": "Windows Vista"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Agent.BTZ",
+            "Target": "Visual Studio 6.0"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "ComRAT",
+            "Target": "Visual Studio 9.0/10.0"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "ComRAT",
+            "Target": "B196B286-BAB4-101A-B69C-00AA00341D07"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "ComRAT",
+            "Target": "42aedc87-2188-41fd-b9a3-0c966feabec1"
+        }
+    ]
+}

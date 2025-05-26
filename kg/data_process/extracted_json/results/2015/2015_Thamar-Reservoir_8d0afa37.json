@@ -1,0 +1,306 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Thamar Reservoir",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0006",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "2014-2015",
+                "region": "Middle East",
+                "observe_time": "2015",
+                "report_name": "2015_Thamar-Reservoir_8d0afa37"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Iranian Threat Actor",
+            "EntityVariantNames": [
+                "Gholee",
+                "Rocket Kitten",
+                "Ajax Security Team"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0006",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "origin": "Iran",
+                "motivation": "espionage"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Dr. Thamar E. Gindin",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "affiliation": "University of Haifa",
+                "expertise": "Iranian linguistics"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Weaponized Excel File",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Excel",
+                "function": "dropper"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "NTUSER.dat{GUID}.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "55ff220e38556ff902528ac984fc72dc",
+                "type": "executable",
+                "function": "downloader"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "tmp.bat",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "function": "persistence"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "CWoolger Keylogger",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "location": "%appdata%\\microsoft\\windows\\templates\\wlg.exe"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "login-users.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "mail5.maxer.hu",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "location": "Hungary"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "saeed.kn2003@gmail.com",
+            "EntityType": "ioc",
+            "EntitySubType": "email",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Israeli Research Institute",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "107.6.172.51",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "5.39.223.227",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "31.192.105.10",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Thamar Reservoir",
+            "Target": "Iranian Threat Actor"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Thamar Reservoir",
+            "Target": "Dr. Thamar E. Gindin"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "Iranian Threat Actor",
+            "Target": "Dr. Thamar E. Gindin"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Iranian Threat Actor",
+            "Target": "Weaponized Excel File"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "Weaponized Excel File",
+            "Target": "NTUSER.dat{GUID}.exe"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Weaponized Excel File",
+            "Target": "tmp.bat"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "affect",
+            "Source": "NTUSER.dat{GUID}.exe",
+            "Target": "CWoolger Keylogger"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Iranian Threat Actor",
+            "Target": "login-users.com"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Iranian Threat Actor",
+            "Target": "mail5.maxer.hu"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "Iranian Threat Actor",
+            "Target": "saeed.kn2003@gmail.com"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "target",
+            "Source": "Iranian Threat Actor",
+            "Target": "Israeli Research Institute"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "belong_to",
+            "Source": "login-users.com",
+            "Target": "107.6.172.51"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "belong_to",
+            "Source": "login-users.com",
+            "Target": "5.39.223.227"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "belong_to",
+            "Source": "login-users.com",
+            "Target": "31.192.105.10"
+        }
+    ]
+}

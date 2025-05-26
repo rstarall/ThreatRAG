@@ -1,0 +1,405 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT32",
+            "EntityVariantNames": [
+                "OceanLotus Group"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0004",
+                "TA0005",
+                "TA0006",
+                "TA0007",
+                "TA0008",
+                "TA0009",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Vietnam",
+                "motivation": "Cyber espionage"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "FireEye",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Cybersecurity"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "WINDSHIELD",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "capabilities": "Command and control, file system interaction, process termination"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "KOMPROGO",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "capabilities": "Reverse shell, file transfers, WMI queries"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "SOUNDBITE",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "capabilities": "DNS C2, shell command execution, registry manipulation"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "PHOREAL",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "capabilities": "ICMP C2, reverse shell, filesystem manipulation"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "BEACON",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "vendor": "Cobalt Strike",
+                "capabilities": "Arbitrary code execution, file transfer, shell commands"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "CVE-2016-7255",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0004"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "impact": "Privilege escalation"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "80.255.3.87",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "images.chinabytes.info",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "blog.panggin.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "share.codehao.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "yii.yiihao126.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "APT32 Cyber Espionage Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0004",
+                "TA0005",
+                "TA0006",
+                "TA0007",
+                "TA0008",
+                "TA0009",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "2014-2017",
+                "region": "Southeast Asia",
+                "observe_time": "2017",
+                "report_name": "2017_FireEye_Cyber-Espionage-Alive-Well-APT32(05-14-2017)_d13c4928"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Spear-phishing emails",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "ActiveMime files",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "Invoke-Obfuscation",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "McAfee ePO infrastructure",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "APT32 Cyber Espionage Campaign",
+            "Target": "APT32"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "APT32 Cyber Espionage Campaign",
+            "Target": "FireEye"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "APT32",
+            "Target": "WINDSHIELD"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "APT32",
+            "Target": "KOMPROGO"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "APT32",
+            "Target": "SOUNDBITE"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "APT32",
+            "Target": "PHOREAL"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "APT32",
+            "Target": "BEACON"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "APT32",
+            "Target": "CVE-2016-7255"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "APT32",
+            "Target": "Spear-phishing emails"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "APT32",
+            "Target": "ActiveMime files"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "APT32",
+            "Target": "Invoke-Obfuscation"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "target",
+            "Source": "APT32",
+            "Target": "FireEye"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "target",
+            "Source": "APT32",
+            "Target": "McAfee ePO infrastructure"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "BEACON",
+            "Target": "80.255.3.87"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "BEACON",
+            "Target": "images.chinabytes.info"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "APT32-specific backdoor",
+            "Target": "blog.panggin.org"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "APT32-specific backdoor",
+            "Target": "share.codehao.net"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "related_to",
+            "Source": "APT32-specific backdoor",
+            "Target": "yii.yiihao126.net"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2016-7255",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "affect",
+            "Source": "ActiveMime files",
+            "Target": "Windows System"
+        }
+    ]
+}

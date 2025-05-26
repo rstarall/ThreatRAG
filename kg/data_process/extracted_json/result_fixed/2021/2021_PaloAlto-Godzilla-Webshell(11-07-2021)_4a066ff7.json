@@ -1,0 +1,316 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT-27",
+            "EntityVariantNames": [
+                "TG-3390",
+                "Emissary Panda"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0006"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "ManageEngine ADSelfService Plus Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0006"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "September 2021",
+                "observe_time": "2021",
+                "report_name": "2021_PaloAlto-Godzilla-Webshell(11-07-2021)_4a066ff7"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "CVE-2021-40539",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "impact": "ManageEngine ADSelfService Plus"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Godzilla Webshell",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "a44a5e8e65266611d5845d88b43c9e4a9d84fe074fd18f48b50fb837fa6e429d",
+                "version": "3.00+",
+                "language": "Chinese"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "NGLite",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "805b92787ca7833eef5e61e2df1310e4b6544955e812e60b5f834f904623fd9f",
+                "language": "Go"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "KdcSponge",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "hash": "3c90df0e02cc9b1cf1a86f9d7e6f777366c5748bd3cf4070b49460b48b4d4090",
+                "target": "LSASS process"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "ME_ADManager.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "b2a29d99a1657140f4e254221d8666a736160ce960d06557778318e0d1b7423b",
+                "path": "c:\\Users\\[username]\\AppData\\Roaming\\ADManager\\ME_ADManager.exe"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "ME_ADAudit.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "805b92787ca7833eef5e61e2df1310e4b6544955e812e60b5f834f904623fd9f",
+                "path": "%SYSTEM32%\\ME_ADAudit.exe"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "24.64.36.238",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "149.248.11.205",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "ManageEngine ADSelfService Plus",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "seed.nkn.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Technology Company",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Technology"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Defense Organization",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Defense"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "ManageEngine ADSelfService Plus Attack Event",
+            "Target": "APT-27"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "ManageEngine ADSelfService Plus Attack Event",
+            "Target": "Technology Company"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "APT-27",
+            "Target": "CVE-2021-40539"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "APT-27",
+            "Target": "Godzilla Webshell"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "APT-27",
+            "Target": "NGLite"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "APT-27",
+            "Target": "KdcSponge"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "APT-27",
+            "Target": "Technology Company"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "APT-27",
+            "Target": "Defense Organization"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "APT-27",
+            "Target": "ManageEngine ADSelfService Plus"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2021-40539",
+            "Target": "ManageEngine ADSelfService Plus"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "ME_ADManager.exe",
+            "Target": "Godzilla Webshell"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "ME_ADManager.exe",
+            "Target": "ME_ADAudit.exe"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "ME_ADAudit.exe",
+            "Target": "NGLite"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "NGLite",
+            "Target": "seed.nkn.org"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "belong_to",
+            "Source": "Godzilla Webshell",
+            "Target": "ManageEngine ADSelfService Plus"
+        }
+    ]
+}

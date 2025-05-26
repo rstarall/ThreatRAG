@@ -1,0 +1,162 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Volatile Cedar",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Properties": {
+                "origin": "Lebanon",
+                "motive": "Nation-state/political-group interests"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Explosive",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0006",
+                "TA0009",
+                "TA0011"
+            ],
+            "Properties": {
+                "type": "Remote Access Trojan",
+                "first_seen": "November 2012"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Public web servers",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "os": "Windows"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Web shell",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Properties": {
+                "type": "ASP/ASP.Net/PHP"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Caterpillar web shell",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "dab2cbb34ec587587bdf0418f7fb06b1"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Cobalt Strike",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "69.64.90.94",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "location": "USA",
+                "role": "CC server"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "213.204.122.130",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "location": "Lebanon",
+                "role": "CC server"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "explorerdotnt.info",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "role": "Dynamic CC updater"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "USB infection",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001",
+                "TA0008"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Keylogger",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0006"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Clipboard logger",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0006"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Port scanner",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0043"
+            ]
+        }
+    ],
+    "Relationships": []
+}

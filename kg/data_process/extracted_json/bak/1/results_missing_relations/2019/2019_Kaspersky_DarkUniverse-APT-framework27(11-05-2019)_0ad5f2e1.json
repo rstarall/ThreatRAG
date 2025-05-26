@@ -1,0 +1,222 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "DarkUniverse",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0006",
+                "TA0007",
+                "TA0009",
+                "TA0011"
+            ],
+            "Properties": {
+                "activity_period": "2009-2017",
+                "version": "Latest version until 2017"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "ItaDuke",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0006",
+                "TA0009",
+                "TA0011"
+            ],
+            "Properties": {
+                "known_since": "2013"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Spear Phishing",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Malicious Microsoft Office Document",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "updater.mod",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "location": "%USERPROFILE%\\AppData\\Roaming\\Microsoft\\Windows\\Reorder"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "glue30.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0009"
+            ],
+            "Properties": {
+                "functionality": "Keylogging"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "mydrive.ch",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "type": "Cloud storage"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "dfrgntfs5.sqt",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0007",
+                "TA0008",
+                "TA0009"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "msvcrt58.sqt",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0006",
+                "TA0009"
+            ],
+            "Properties": {
+                "functionality": "Email credential theft"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "zl4vq.sqt",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "description": "Legitimate zlib library"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "SOFTWARE\\AppDataLow\\GUI\\LegacyP",
+            "EntityType": "env",
+            "EntitySubType": "network",
+            "Labels": [
+                "TA0003"
+            ],
+            "Properties": {
+                "type": "Registry key"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Victim Organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "locations": "Syria, Iran, Afghanistan, Tanzania, Ethiopia, Sudan, Russia, Belarus, United Arab Emirates",
+                "types": "Civilian and military organizations"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "1addee050504ba999eb9f9b1ee5b9f04",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "4b71ec0b2d23204e560481f138833371",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "4e24b26d76a37e493bb35b1a8c8be0f6",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "405ef35506dc864301fada6f5f1d0711",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "764a4582a02cc54eb1d5460d723ae3a5",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "c2edda7e766553a04b87f2816a83f563",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "71d36436fe26fe570b876ad3441ea73c",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ]
+        }
+    ],
+    "Relationships": []
+}

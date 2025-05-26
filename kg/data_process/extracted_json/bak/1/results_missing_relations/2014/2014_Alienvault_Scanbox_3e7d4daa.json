@@ -1,0 +1,158 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Scanbox Framework",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0043",
+                "TA0007",
+                "TA0009"
+            ],
+            "Properties": {
+                "function": "Reconnaissance framework",
+                "delivery": "Watering hole attack"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Industrial Company Website",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "industry": "Automotive, Aerospace, Manufacturing",
+                "purpose": "Simulation and system engineering software"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Malicious Javascript File",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "122.10.9.109",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "role": "CC Server"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Watering Hole Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0007",
+                "TA0009"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Industrial Company",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Metasploit",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "mail.webmailgoogle.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "js.webmailgoogle.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Internet Explorer",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0007"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "EMET",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0007"
+            ],
+            "Properties": {
+                "full_name": "Enhanced Mitigation Experience Toolkit"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Adobe Flash",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0007"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Microsoft Office",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0007"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Acrobat Reader",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0007"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Java",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0007"
+            ]
+        }
+    ],
+    "Relationships": []
+}

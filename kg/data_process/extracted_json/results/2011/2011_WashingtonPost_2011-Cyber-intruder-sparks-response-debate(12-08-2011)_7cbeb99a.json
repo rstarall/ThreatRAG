@@ -1,0 +1,218 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Agent.btz",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "discovery_date": "October 2008",
+                "origin": "Suspected Russian intelligence"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Russian Intelligence Service",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0043",
+                "TA0001",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "U.S. Military Classified Network",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "network_type": "SIPRNet"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Thumb Drive",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Buckshot Yankee",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0005",
+                "TA0040"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "date": "October 2008",
+                "observe_time": "2011",
+                "report_name": "2011_WashingtonPost_2011-Cyber-intruder-sparks-response-debate(12-08-2011)_7cbeb99a"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "NSA Advanced Networks Operations Team",
+            "EntityType": "org",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Cyber Command",
+            "EntityType": "org",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "creation_date": "October 31, 2010"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "U.S. Department of Defense",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Secret Internet Protocol Router Network",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "acronym": "SIPRNet"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Joint Worldwide Intelligence Communication System",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "acronym": "JWICS"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "Russian Intelligence Service",
+            "Target": "Agent.btz"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "target",
+            "Source": "Russian Intelligence Service",
+            "Target": "U.S. Military Classified Network"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "Agent.btz",
+            "Target": "Thumb Drive"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "affect",
+            "Source": "Agent.btz",
+            "Target": "U.S. Military Classified Network"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "involve",
+            "Source": "Buckshot Yankee",
+            "Target": "U.S. Department of Defense"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "involve",
+            "Source": "Buckshot Yankee",
+            "Target": "NSA Advanced Networks Operations Team"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "has",
+            "Source": "U.S. Department of Defense",
+            "Target": "U.S. Military Classified Network"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "has",
+            "Source": "U.S. Department of Defense",
+            "Target": "Secret Internet Protocol Router Network"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "has",
+            "Source": "U.S. Department of Defense",
+            "Target": "Joint Worldwide Intelligence Communication System"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "affect",
+            "Source": "Agent.btz",
+            "Target": "Secret Internet Protocol Router Network"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "affect",
+            "Source": "Agent.btz",
+            "Target": "Joint Worldwide Intelligence Communication System"
+        }
+    ]
+}

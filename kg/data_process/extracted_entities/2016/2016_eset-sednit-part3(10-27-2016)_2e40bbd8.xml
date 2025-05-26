@@ -1,0 +1,235 @@
+<Entitys>
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>Sednit</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>APT28</EntityVariantName>
+            <EntityVariantName>Fancy Bear</EntityVariantName>
+            <EntityVariantName>Sofacy</EntityVariantName>
+            <EntityVariantName>Pawn Storm</EntityVariantName>
+            <EntityVariantName>STRONTIUM</EntityVariantName>
+            <EntityVariantName>Tsar Team</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0008</Label>
+            <Label>TA0010</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="activity_start">2004</Property>
+            <Property name="targets">Government departments, embassies, Eastern Europe geopolitics</Property>
+        </Properties>
+    </Entity>
+    
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>Downdelph</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>DelPHA cy</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="language">Delphi</Property>
+            <Property name="activity_period">2013-2015</Property>
+            <Property name="deployments">7</Property>
+        </Properties>
+    </Entity>
+    
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>intelmeserver.com</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="active_period">2013-2015</Property>
+            <Property name="status">sinkholed</Property>
+        </Properties>
+    </Entity>
+    
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>104.171.117.216</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>ip</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>141.255.160.52</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>ip</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>Windows Bootkit</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0003</Label>
+            <Label>TA0005</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+        <Properties>
+            <Property name="infection_method">MBR infection</Property>
+            <Property name="target_os">Windows XP to Windows 7</Property>
+        </Properties>
+    </Entity>
+    
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>HIDEDRV</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0003</Label>
+            <Label>TA0005</Label>
+        </Labels>
+        <Times>
+            <Time>5</Time>
+        </Times>
+        <Properties>
+            <Property name="type">Rootkit</Property>
+            <Property name="techniques">SSDT hooking, minifilter driver</Property>
+        </Properties>
+    </Entity>
+    
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>BlackEnergy</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+    
+    <Entity>
+        <EntityId>entity_9</EntityId>
+        <EntityName>CVE-2023-1234</EntityName>
+        <EntityType>vul</EntityType>
+        <EntitySubType>cve</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    
+    <Entity>
+        <EntityId>entity_10</EntityId>
+        <EntityName>Democratic National Committee</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+</Entitys>
+<Relationships>
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Sednit</Source>
+        <Target>Downdelph</Target>
+    </Relationship>
+    
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Downdelph</Source>
+        <Target>intelmeserver.com</Target>
+    </Relationship>
+    
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Downdelph</Source>
+        <Target>104.171.117.216</Target>
+    </Relationship>
+    
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Downdelph</Source>
+        <Target>141.255.160.52</Target>
+    </Relationship>
+    
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Sednit</Source>
+        <Target>Windows Bootkit</Target>
+    </Relationship>
+    
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Sednit</Source>
+        <Target>HIDEDRV</Target>
+    </Relationship>
+    
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Windows Bootkit</Source>
+        <Target>BlackEnergy</Target>
+    </Relationship>
+    
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Sednit</Source>
+        <Target>Democratic National Committee</Target>
+    </Relationship>
+    
+    <Relationship>
+        <RelationshipId>relationship_9</RelationshipId>
+        <RelationshipType>exploit</RelationshipType>
+        <Source>CVE-2023-1234</Source>
+        <Target>Windows System</Target>
+    </Relationship>
+</Relationships>

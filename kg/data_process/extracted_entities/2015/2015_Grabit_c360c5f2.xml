@@ -1,0 +1,242 @@
+<Entitys>
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>Grabit</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0009</Label>
+            <Label>TA0010</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="platform">Windows 32-bit</Property>
+            <Property name="framework">Microsoft .NET Framework (Visual Basic/C#)</Property>
+            <Property name="compilation_date">March 7-9, 2015</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>HawkEye</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>HawkEyeProducts</EntityVariantName>
+            <EntityVariantName>HawkEye Logger</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0009</Label>
+            <Label>TA0010</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="type">Keylogger</Property>
+            <Property name="delivery_methods">FTP, SMTP, Web-Panel</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>DarkComet</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>Grabit Campaign</EntityName>
+        <EntityType>event</EntityType>
+        <EntitySubType>event</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0009</Label>
+            <Label>TA0010</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="start_date">Late February 2015</Property>
+            <Property name="end_date">Mid-March 2015</Property>
+            <Property name="origin_countries">India, United States, Israel</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>Malicious Word Document</EntityName>
+        <EntityType>file</EntityType>
+        <EntitySubType>file</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="extension">.doc</Property>
+            <Property name="macro">AutoOpen</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>Affected Organizations</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="countries">Thailand, India</Property>
+            <Property name="infected_count">Approximately 10,000</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>31.220.16.147</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>ip</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>204.152.219.78</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>ip</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_9</EntityId>
+        <EntityName>3f77403a64a2dde60c4962a6752de601d56a621a</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>hash</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_10</EntityId>
+        <EntityName>9b48a2e82d8a82c1717f135fa750ba774403e972b6edb2a522f9870bed57e72a</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>hash</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_11</EntityId>
+        <EntityName>Windows System</EntityName>
+        <EntityType>env</EntityType>
+        <EntitySubType>os</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+</Entitys>
+<Relationships>
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Grabit Campaign</Source>
+        <Target>Grabit</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Grabit Campaign</Source>
+        <Target>Affected Organizations</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Grabit</Source>
+        <Target>HawkEye</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Grabit</Source>
+        <Target>DarkComet</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Grabit</Source>
+        <Target>Malicious Word Document</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>Malicious Word Document</Source>
+        <Target>Windows System</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Grabit</Source>
+        <Target>Affected Organizations</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipType>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Grabit</Source>
+        <Target>31.220.16.147</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_9</RelationshipType>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Grabit</Source>
+        <Target>204.152.219.78</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_10</RelationshipType>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Grabit</Source>
+        <Target>3f77403a64a2dde60c4962a6752de601d56a621a</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_11</RelationshipType>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Grabit</Source>
+        <Target>9b48a2e82d8a82c1717f135fa750ba774403e972b6edb2a522f9870bed57e72a</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_12</RelationshipType>
+        <RelationshipType>has</RelationshipType>
+        <Source>Affected Organizations</Source>
+        <Target>Windows System</Target>
+    </Relationship>
+</Relationships>

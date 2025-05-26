@@ -1,0 +1,213 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Andromeda Botnet Operators",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Beta Bot Operators",
+            "EntityVariantNames": [
+                "Lord Huron",
+                "betamonkey"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Neutrino Bot Operators",
+            "EntityVariantNames": [
+                "n3utrino"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Andromeda",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "features": "modular bot, anti-VM, anti-reversing, self-propagation, process injection, network traffic encryption",
+                "price": "$500 (form grabber), $300 (rootkit), $200 (keylogger)"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Beta Bot",
+            "EntityVariantNames": [
+                "Trojan.Neurevt"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "features": "anti-VM, anti-reversing, self-propagation, rootkit, AV-disabling, form grabbing",
+                "price": "$320-$500"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Neutrino Bot",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011",
+                "TA0040"
+            ],
+            "Properties": {
+                "features": "HTTP stress-testing, anti-VM, anti-debugging, DoS, keylogger, credential stealing",
+                "price": "$550 (Builder), $200 (Full set), $20 (Update)"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "DorkBot/NgrBot",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011",
+                "TA0040"
+            ],
+            "Properties": {
+                "features": "process injection, hard drive wiping, IRC commands, self-propagation"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "121.11.83.7",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "location": "China",
+                "malware": "Andromeda, Beta Bot, NgrBot, Neutrino"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "155.133.18.45",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "location": "Poland",
+                "malware": "Andromeda, Beta Bot, NgrBot, Neutrino"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "54.69.90.62",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "location": "US (Amazon)",
+                "malware": "Andromeda, Beta Bot, NgrBot, Neutrino"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "a2kiaymoster14902.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "ip": "121.14.212.248",
+                "location": "China"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "b.9thegamejuststarted14k9.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "ip": "116.255.202.74",
+                "location": "China"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Manufacturing/Biotechnology  Drugs",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Professional Services/Engineering",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Government/State",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Global Botnet Campaign 2014",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "timeframe": "October-December 2014"
+            }
+        }
+    ],
+    "Relationships": []
+}

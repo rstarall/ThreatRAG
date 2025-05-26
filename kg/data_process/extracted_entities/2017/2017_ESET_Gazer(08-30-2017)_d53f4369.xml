@@ -1,0 +1,220 @@
+<Entitys>
+    <!-- Attacker Entities -->
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>Turla</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>APT-29</EntityVariantName>
+            <EntityVariantName>MAKERSMARK</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0008</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="country">Russia</Property>
+            <Property name="targets">Governments, diplomats</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Malware Entities -->
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>Gazer</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="type">Second stage backdoor</Property>
+            <Property name="first_seen">2016</Property>
+        </Properties>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>Skipper</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="type">First stage backdoor</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Victim Entities -->
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>Embassies and Consulates</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="region">Southeastern Europe, former Soviet Union</Property>
+        </Properties>
+    </Entity>
+
+    <!-- C2 Entities -->
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>daybreakhealthcare.co.uk/wp-includes/themees.php</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>url</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>simplecreative.design/wp-content/plugins/calculated-fields-form/single.php</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>url</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+
+    <!-- Technique Entities -->
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>Spearphishing</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>method</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>Thread Hijacking</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>method</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+
+    <!-- File Entities -->
+    <Entity>
+        <EntityId>entity_9</EntityId>
+        <EntityName>KB943729.log</EntityName>
+        <EntityType>file</EntityType>
+        <EntitySubType>file</EntitySubType>
+        <Labels>
+            <Label>TA0005</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="location">%TEMP%</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Hash Entities -->
+    <Entity>
+        <EntityId>entity_10</EntityId>
+        <EntityName>27FA78DE705EbAA4b11C4b5FE7277F91906b3F92</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>hash</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="type">SHA1</Property>
+            <Property name="component">Gazer wiper x32</Property>
+        </Properties>
+    </Entity>
+</Entitys>
+<Relationships>
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Turla</Source>
+        <Target>Gazer</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Turla</Source>
+        <Target>Skipper</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Turla</Source>
+        <Target>Spearphishing</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Turla</Source>
+        <Target>Embassies and Consulates</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Gazer</Source>
+        <Target>daybreakhealthcare.co.uk/wp-includes/themees.php</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Gazer</Source>
+        <Target>Thread Hijacking</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>KB943729.log</Source>
+        <Target>Gazer</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>27FA78DE705EbAA4b11C4b5FE7277F91906b3F92</Source>
+        <Target>Gazer</Target>
+    </Relationship>
+</Relationships>

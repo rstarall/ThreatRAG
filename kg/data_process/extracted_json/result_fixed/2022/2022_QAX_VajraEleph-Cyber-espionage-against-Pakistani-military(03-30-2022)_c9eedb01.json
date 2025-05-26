@@ -1,0 +1,217 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "VajraEleph",
+            "EntityVariantNames": [
+                "King Kong Elephant",
+                "APT-Q-43"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0009"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "region": "South Asia",
+                "background": "Government-backed"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Pakistani Military Espionage Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0009"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "June 2021 - February 2022",
+                "observe_time": "2022",
+                "report_name": "2022_QAX_VajraEleph-Cyber-espionage-against-Pakistani-military(03-30-2022)_c9eedb01"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Pakistani Military Personnel",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "units": "FC, SSG, FCBLN, FIA, Police"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "VajraSpy",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0009"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "platform": "Android",
+                "function": "Data exfiltration"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "appz.live",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "212.24.100.197",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "WhatsApp",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "7a47d859d5ee71934018433e3ab7ed5b",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Google Cloud Storage",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0010"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Android Platform",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Pakistani Military Espionage Event",
+            "Target": "VajraEleph"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Pakistani Military Espionage Event",
+            "Target": "Pakistani Military Personnel"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "VajraEleph",
+            "Target": "VajraSpy"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "VajraEleph",
+            "Target": "WhatsApp"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "VajraEleph",
+            "Target": "Pakistani Military Personnel"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "VajraSpy",
+            "Target": "appz.live"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "VajraSpy",
+            "Target": "7a47d859d5ee71934018433e3ab7ed5b"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "belong_to",
+            "Source": "7a47d859d5ee71934018433e3ab7ed5b",
+            "Target": "Android Platform"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "affect",
+            "Source": "VajraSpy",
+            "Target": "Android Platform"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "VajraSpy",
+            "Target": "Google Cloud Storage"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "has",
+            "Source": "Pakistani Military Personnel",
+            "Target": "Android Platform"
+        }
+    ]
+}

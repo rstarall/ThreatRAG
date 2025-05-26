@@ -1,0 +1,399 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT-28",
+            "EntityVariantNames": [
+                "Sofacy",
+                "Sednit",
+                "Sourface"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0005",
+                "TA0006",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Russia",
+                "affiliation": "Russian intelligence services"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Financial Institution Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0006",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "April-May 2015",
+                "discovered_by": "root9B",
+                "observe_time": "2015",
+                "report_name": "2015_FSOFACY_8dd14da6"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Commercial Bank International of UAE",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Banking",
+                "domain": "cbiuae.com"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Bank of America",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Banking",
+                "fake_domain": "b-of-americ.com"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "TD Canada Trust",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Banking",
+                "fake_domain": "t-d-canadatrust.com"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CARBON2U.COM",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Malicious server",
+                "association": "Sofacy group"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "CBIUAEBANK.COM",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Fake domain",
+                "created": "2015-04-29",
+                "nameserver": "site4now.net"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "CBIUAEBN.COM",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Fake domain",
+                "created": "2015-04-29",
+                "nameserver": "ok2host.com"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "176.31.112.10",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "C2 Server"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "0450aaf8ed309ca6baf303837701b5b23aac6f05",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Malware SHA1 Hash"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "bb909d9c27a509bf97cdc85268556ff5a6d2550a",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Malware SHA1 Hash"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "f325970fd24bb088f1befdae5788152329e26bf3",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Malware SHA1 Hash"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "a351842ee01374d66bae35354ffe72f0b1b8a40b",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Malware SHA1 Hash"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Spear-phishing",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Zero-day malware",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "root9B",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Cybersecurity firm",
+                "affiliation": "US Department of Defense"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Financial Institution Attack Event",
+            "Target": "APT-28"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Financial Institution Attack Event",
+            "Target": "Commercial Bank International of UAE"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "Financial Institution Attack Event",
+            "Target": "Bank of America"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "involve",
+            "Source": "Financial Institution Attack Event",
+            "Target": "TD Canada Trust"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "APT-28",
+            "Target": "Commercial Bank International of UAE"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "APT-28",
+            "Target": "Bank of America"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "APT-28",
+            "Target": "TD Canada Trust"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "APT-28",
+            "Target": "Spear-phishing"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "APT-28",
+            "Target": "Zero-day malware"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "APT-28",
+            "Target": "CARBON2U.COM"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "APT-28",
+            "Target": "CBIUAEBANK.COM"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "use",
+            "Source": "APT-28",
+            "Target": "CBIUAEBN.COM"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "use",
+            "Source": "APT-28",
+            "Target": "176.31.112.10"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "Zero-day malware",
+            "Target": "0450aaf8ed309ca6baf303837701b5b23aac6f05"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "Zero-day malware",
+            "Target": "bb909d9c27a509bf97cdc85268556ff5a6d2550a"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "Zero-day malware",
+            "Target": "f325970fd24bb088f1befdae5788152329e26bf3"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "Zero-day malware",
+            "Target": "a351842ee01374d66bae35354ffe72f0b1b8a40b"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "belong_to",
+            "Source": "CBIUAEBANK.COM",
+            "Target": "Commercial Bank International of UAE"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "belong_to",
+            "Source": "CBIUAEBN.COM",
+            "Target": "Commercial Bank International of UAE"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "trigger",
+            "Source": "Commercial Bank International of UAE",
+            "Target": "CBIUAEBANK.COM"
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "trigger",
+            "Source": "Bank of America",
+            "Target": "b-of-americ.com"
+        },
+        {
+            "RelationshipId": "relationship_22",
+            "RelationshipType": "trigger",
+            "Source": "TD Canada Trust",
+            "Target": "t-d-canadatrust.com"
+        }
+    ]
+}

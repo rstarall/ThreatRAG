@@ -1,0 +1,272 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Operation Aurora",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "January 2010",
+                "target": "Google and other large companies",
+                "observe_time": "2010",
+                "report_name": "2010_McAfee_Operation_Aurora_6d2ff747"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "CVE-2010-0249",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "description": "Microsoft Internet Explorer DOM Operation Memory Corruption Vulnerability",
+                "risk": "High"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Exploit-Comele",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "description": "Malicious script exploiting IE vulnerability"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Roarur.dr",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "description": "Trojan that drops additional malicious files"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Roarur.dll",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "description": "DLL dropped by Roarur.dr that creates additional service"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Google",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Internet Explorer",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "versions": "IE6, IE7, IE8"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "versions": "Windows XP, Server 2003, Vista, Server 2008, Windows 7"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "360.homeunix.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "69.164.192.4",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "E3798C71D25816611A4CAB031AE3C27A",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "filename": "securmon.dll"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "0F9C5408335833E72FE73E6166B5A01B",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "filename": "Rasmon.dll"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Trojan.Hydraq",
+            "EntityVariantNames": [
+                "Aurora"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation Aurora",
+            "Target": "Google"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2010-0249",
+            "Target": "Internet Explorer"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2010-0249",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "Exploit-Comele",
+            "Target": "CVE-2010-0249"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "Roarur.dr",
+            "Target": "Exploit-Comele"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Roarur.dll",
+            "Target": "Roarur.dr"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "belong_to",
+            "Source": "360.homeunix.com",
+            "Target": "Operation Aurora"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "belong_to",
+            "Source": "69.164.192.4",
+            "Target": "Operation Aurora"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Trojan.Hydraq",
+            "Target": "Operation Aurora"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "E3798C71D25816611A4CAB031AE3C27A",
+            "Target": "Roarur.dll"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "0F9C5408335833E72FE73E6166B5A01B",
+            "Target": "Roarur.dll"
+        }
+    ]
+}

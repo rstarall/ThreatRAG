@@ -1,0 +1,414 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "TA402",
+            "EntityVariantNames": [
+                "Molerats"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "affiliation": "Palestinian Territories",
+                "target_region": "Middle East"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "NimbleMamba",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "language": "C#",
+                "obfuscator": "SmartAssembly",
+                "c2_method": "Dropbox API"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "BrittleBush",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "communication": "easyuploadservice.com",
+                "format": "base64 encoded JSON"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Middle Eastern Governments Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "November 2021 - January 2022",
+                "targets": "Middle Eastern governments, think tanks, airlines",
+                "observe_time": "2022",
+                "report_name": "2022_Proofpoint_UggBoots-Palestinian-Aligned-Espionage(02-08-2022)_5511d3d2"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Middle Eastern Governments",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "region": "Middle East"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "uggboots4sale.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "emaratalyoumcom.wordpress.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Dropbox",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "role": "C2 and payload delivery"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "JustPasteIt",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "role": "Configuration retrieval"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "easyuploadservice.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "c61fcd8bed15414529959e8b5484b2c559ac597143c1775b1cec7d493a40369d",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "430c12393a1714e3f5087e1338a3e3846ab62b18d816cc4916749a935f8dab44",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "2e4671c517040cbd66a1be0f04fb8f2af7064fef2b5ee5e33d1f9d347e4c419f",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "LastConn",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "0"
+            ],
+            "Properties": {
+                "relation": "Predecessor to NimbleMamba"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "SharpStage",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "0"
+            ],
+            "Properties": {
+                "relation": "Predecessor to LastConn"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Spear Phishing Emails",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "Geofencing",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "api.ipify.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0007"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "myexternalip.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0007"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "ip-api.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0007"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "api.ipstack.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0007"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Middle Eastern Governments Attack Event",
+            "Target": "TA402"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Middle Eastern Governments Attack Event",
+            "Target": "Middle Eastern Governments"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "TA402",
+            "Target": "NimbleMamba"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "TA402",
+            "Target": "BrittleBush"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "TA402",
+            "Target": "Spear Phishing Emails"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "TA402",
+            "Target": "Geofencing"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "TA402",
+            "Target": "Middle Eastern Governments"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "NimbleMamba",
+            "Target": "Dropbox"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "NimbleMamba",
+            "Target": "JustPasteIt"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "BrittleBush",
+            "Target": "easyuploadservice.com"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "NimbleMamba",
+            "Target": "LastConn"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "LastConn",
+            "Target": "SharpStage"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "belong_to",
+            "Source": "uggboots4sale.com",
+            "Target": "TA402"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "belong_to",
+            "Source": "emaratalyoumcom.wordpress.com",
+            "Target": "TA402"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "NimbleMamba",
+            "Target": "api.ipify.com"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "NimbleMamba",
+            "Target": "myexternalip.com"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "NimbleMamba",
+            "Target": "ip-api.com"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "related_to",
+            "Source": "NimbleMamba",
+            "Target": "api.ipstack.com"
+        }
+    ]
+}

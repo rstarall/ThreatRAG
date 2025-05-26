@@ -1,0 +1,320 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Sandworm Team",
+            "EntityVariantNames": [
+                "Sand Worm Team"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Russia",
+                "affiliation": "Russian cyber espionage",
+                "first_seen": "2009"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Sandworm Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "2013-2014",
+                "observe_time": "2014",
+                "report_name": "2014_Sandworm_briefing2_970fae43"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "CVE-2014-4114",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "impact": "Microsoft Windows",
+                "type": "Zero-day"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "BlackEnergy",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "version": "2 and 3"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "NATO",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Ukraine",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Poland",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "European Union",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "European Telecommunications",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Energy Sector",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Microsoft Windows",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "versions": "Vista to 8.1, Server 2008-2012"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Spear-phishing documents",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Microsoft Office documents"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "iSIGHT Partners",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "role": "Security researcher"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Microsoft",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "role": "Vendor"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Sandworm Campaign",
+            "Target": "Sandworm Team"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Sandworm Team",
+            "Target": "CVE-2014-4114"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Sandworm Team",
+            "Target": "BlackEnergy"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Sandworm Team",
+            "Target": "Spear-phishing documents"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "Sandworm Team",
+            "Target": "NATO"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "Sandworm Team",
+            "Target": "Ukraine"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "Sandworm Team",
+            "Target": "Poland"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "Sandworm Team",
+            "Target": "European Union"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "Sandworm Team",
+            "Target": "European Telecommunications"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "target",
+            "Source": "Sandworm Team",
+            "Target": "Energy Sector"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2014-4114",
+            "Target": "Microsoft Windows"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "BlackEnergy",
+            "Target": "Spear-phishing documents"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "involve",
+            "Source": "Sandworm Campaign",
+            "Target": "NATO"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "involve",
+            "Source": "Sandworm Campaign",
+            "Target": "Ukraine"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "involve",
+            "Source": "Sandworm Campaign",
+            "Target": "Poland"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "involve",
+            "Source": "Sandworm Campaign",
+            "Target": "European Union"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "involve",
+            "Source": "Sandworm Campaign",
+            "Target": "European Telecommunications"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "involve",
+            "Source": "Sandworm Campaign",
+            "Target": "Energy Sector"
+        }
+    ]
+}

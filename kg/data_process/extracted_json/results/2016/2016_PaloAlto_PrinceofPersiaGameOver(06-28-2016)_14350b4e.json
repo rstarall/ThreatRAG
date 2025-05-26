@@ -1,0 +1,235 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Infy",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "variant": "Original",
+                "version": "1-31"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Infy M",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "version": "6.x-8.0"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Prince of Persia Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "duration": "Decade-long",
+                "observe_time": "2016",
+                "report_name": "2016_PaloAlto_PrinceofPersiaGameOver(06-28-2016)_14350b4e"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Government and Industry Targets",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "count": "326 systems",
+                "countries": "35"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "us1s2.strangled.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "uvps1.cotbm.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0010"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "138.201.0.134",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "f07e85143e057ee565c25db2a9f36491102d4e526ffb02c83e580712ec00eb27",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "version": "Infy 31"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "583349B7A2385A1E8DE682A43351798CA113CBBB80686193ECF9A61E6942786A",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "version": "Infy M 8.0"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Shadowserver",
+            "EntityType": "org",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Palo Alto Networks Unit 42",
+            "EntityType": "org",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Prince of Persia Campaign",
+            "Target": "Infy"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Prince of Persia Campaign",
+            "Target": "Infy M"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "Prince of Persia Campaign",
+            "Target": "Government and Industry Targets"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "Infy",
+            "Target": "us1s2.strangled.net"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "Infy M",
+            "Target": "uvps1.cotbm.com"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Infy",
+            "Target": "f07e85143e057ee565c25db2a9f36491102d4e526ffb02c83e580712ec00eb27"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Infy M",
+            "Target": "583349B7A2385A1E8DE682A43351798CA113CBBB80686193ECF9A61E6942786A"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Infy",
+            "Target": "138.201.0.134"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Infy M",
+            "Target": "138.201.0.134"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Prince of Persia Campaign",
+            "Target": "Palo Alto Networks Unit 42"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Prince of Persia Campaign",
+            "Target": "Shadowserver"
+        }
+    ]
+}

@@ -1,0 +1,303 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Sunshop Digital Quartermaster",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China",
+                "type": "APT collective"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "NGO SWC Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "September 24 2014",
+                "observe_time": "2014",
+                "report_name": "2014_Aided_Frame_Aided_Direction_831f5a91"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Non-profit organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Environmental advocacy"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "NGOs",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "focus": "Democracy and human rights"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "103.27.108.45",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "hxxp://103.27.108.45/img/js.php",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Poison Ivy RAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "MD5": "118fa558a6b5020b078739ef7bdac3a1",
+                "size": "25608 bytes",
+                "compile_time": "2014 09 15 08:21:23",
+                "import_hash": "09d0478591d4f788cb3e5ea416c25237"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "zilliontek Co.,Ltd certificate",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "SHA1": "47:8C:E3:D6:CC:17:60:D3:27:14:6A:36:C9:88:77:4D:27:83:6A:D4",
+                "MD5": "82B582589D4A59BE0720F088ACAC67A3",
+                "serial_number": "581AE6B6ABAFD73AC85B1AEFBDB2555F",
+                "country": "KR"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "quakegoogle.servequake.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "IP": "115.126.62.100",
+                "port": "80"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "115.126.62.100",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "assign.ddnsking.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "picsgoogle.servepics.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "SOGU (Kaba)",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Sunshop Manifest",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "7"
+            ],
+            "Properties": {
+                "SHA256": "82a98c88d3dd57a6ebc0fe7167a86875ed52ebddc6374ad640407efec01b1393"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "NGO SWC Campaign",
+            "Target": "Sunshop Digital Quartermaster"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "NGO SWC Campaign",
+            "Target": "Non-profit organizations"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "NGO SWC Campaign",
+            "Target": "NGOs"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Sunshop Digital Quartermaster",
+            "Target": "103.27.108.45"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Sunshop Digital Quartermaster",
+            "Target": "Poison Ivy RAT"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Sunshop Digital Quartermaster",
+            "Target": "Sunshop Manifest"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "Sunshop Digital Quartermaster",
+            "Target": "Non-profit organizations"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "Sunshop Digital Quartermaster",
+            "Target": "NGOs"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Poison Ivy RAT",
+            "Target": "hxxp://103.27.108.45/img/js.php"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Poison Ivy RAT",
+            "Target": "zilliontek Co.,Ltd certificate"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Poison Ivy RAT",
+            "Target": "quakegoogle.servequake.com"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "SOGU (Kaba)",
+            "Target": "assign.ddnsking.com"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "belong_to",
+            "Source": "quakegoogle.servequake.com",
+            "Target": "115.126.62.100"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "belong_to",
+            "Source": "assign.ddnsking.com",
+            "Target": "115.126.62.100"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "belong_to",
+            "Source": "picsgoogle.servepics.com",
+            "Target": "115.126.62.100"
+        }
+    ]
+}

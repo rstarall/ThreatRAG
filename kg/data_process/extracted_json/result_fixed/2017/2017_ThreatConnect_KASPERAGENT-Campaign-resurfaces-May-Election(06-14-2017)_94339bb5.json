@@ -1,0 +1,342 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "KASPERAGENT Malware Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "April-May 2017",
+                "location": "Middle East",
+                "observe_time": "2017",
+                "report_name": "2017_ThreatConnect_KASPERAGENT-Campaign-resurfaces-May-Election(06-14-2017)_94339bb5"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "KASPERAGENT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0007",
+                "TA0009"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "first_seen": "July 2015",
+                "targets": "United States, Israel, Palestinian Territories, Egypt",
+                "pdb_string": "c:\\Users\\USA\\Documents\\Visual Studio 2008\\Projects\\New folder (2)\\kasper\\Release\\kasper.pdb"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "mailsinfo[.]net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "stikerscloud[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "windowsnewupdates[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "registration_date": "late March 2017"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "195.154.110[.]237",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "testproj.exe",
+            "EntityVariantNames": [
+                "6843AE9EAC03F69DF301D024BFDEFC88"
+            ],
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "vlc.exe",
+            "EntityVariantNames": [
+                "2DE25306A58D8A5B6CBE8D5E2FC5F3C5"
+            ],
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Palestinian Authority",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Middle East"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Hamas",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Gaza"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Fatah",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "West Bank"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Yahya Al-Sinwar",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "role": "Hamas leader"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Mazen Fuqaha",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "role": "Hamas military leader"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "OPAERA user agent",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "treestower[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "upfile2box[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "0"
+            ],
+            "Properties": {
+                "registrant": "Gaza web developer"
+            }
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "7aga[.]net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "0"
+            ],
+            "Properties": {
+                "registrant": "Gaza web developer"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "KASPERAGENT Malware Campaign",
+            "Target": "KASPERAGENT"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "KASPERAGENT Malware Campaign",
+            "Target": "Palestinian Authority"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "KASPERAGENT Malware Campaign",
+            "Target": "Hamas"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "involve",
+            "Source": "KASPERAGENT Malware Campaign",
+            "Target": "Fatah"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "KASPERAGENT",
+            "Target": "mailsinfo[.]net"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "KASPERAGENT",
+            "Target": "stikerscloud[.]com"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "KASPERAGENT",
+            "Target": "OPAERA user agent"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "belong_to",
+            "Source": "windowsnewupdates[.]com",
+            "Target": "195.154.110[.]237"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "belong_to",
+            "Source": "upfile2box[.]com",
+            "Target": "195.154.110[.]237"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "belong_to",
+            "Source": "7aga[.]net",
+            "Target": "195.154.110[.]237"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "testproj.exe",
+            "Target": "treestower[.]com"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "vlc.exe",
+            "Target": "windowsnewupdates[.]com"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "target",
+            "Source": "KASPERAGENT Malware Campaign",
+            "Target": "Yahya Al-Sinwar"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "target",
+            "Source": "KASPERAGENT Malware Campaign",
+            "Target": "Mazen Fuqaha"
+        }
+    ]
+}

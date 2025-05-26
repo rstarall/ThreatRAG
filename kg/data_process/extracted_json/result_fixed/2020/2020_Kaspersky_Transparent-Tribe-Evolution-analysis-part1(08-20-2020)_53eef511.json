@@ -1,0 +1,297 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Transparent Tribe",
+            "EntityVariantNames": [
+                "PROJECTM",
+                "MYTHIC LEOPARD"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0005",
+                "TA0007",
+                "TA0009",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "first_seen": "2013",
+                "targets": "Indian military and government personnel"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Crimson RAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0009",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": ".NET RAT"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Peppy",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Python-based RAT"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Crimson Server",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011",
+                "TA0009"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "version": "A and B"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "USBWorm",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0008",
+                "TA0009"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "function": "USB infector, downloader, and stealer"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Indian military and government personnel",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "India"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Afghanistan targets",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Afghanistan"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Malicious Microsoft Office documents",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Spear-phishing emails",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "64.188.25.206",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "type": "Crimson C2"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "173.212.192.229",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "type": "Crimson C2"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "newsbizupdates.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "type": "Crimson C2"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "5158C5C17862225A86C8A4F36F054AE2",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Excel document - NHQ_Notice_File.xls"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "Transparent Tribe",
+            "Target": "Crimson RAT"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Transparent Tribe",
+            "Target": "Peppy"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Transparent Tribe",
+            "Target": "Crimson Server"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Transparent Tribe",
+            "Target": "USBWorm"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Transparent Tribe",
+            "Target": "Malicious Microsoft Office documents"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Transparent Tribe",
+            "Target": "Spear-phishing emails"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "Transparent Tribe",
+            "Target": "Indian military and government personnel"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "Transparent Tribe",
+            "Target": "Afghanistan targets"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Crimson RAT",
+            "Target": "Crimson Server"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Crimson RAT",
+            "Target": "USBWorm"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Crimson Server",
+            "Target": "64.188.25.206"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Crimson Server",
+            "Target": "173.212.192.229"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "Crimson Server",
+            "Target": "newsbizupdates.net"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "Malicious Microsoft Office documents",
+            "Target": "5158C5C17862225A86C8A4F36F054AE2"
+        }
+    ]
+}

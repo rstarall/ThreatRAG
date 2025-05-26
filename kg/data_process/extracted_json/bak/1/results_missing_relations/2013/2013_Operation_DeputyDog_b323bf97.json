@@ -1,0 +1,182 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Operation DeputyDog",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "time": "August 19, 2013 - September 2013",
+                "location": "Japan"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "CVE-2013-3893",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "software": "Internet Explorer"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "210.176.3.130",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "location": "Hong Kong"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "img20130823.jpg",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "hash": "8aba4b5184072f2a50cbc5ecfe326701",
+                "type": "Executable"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "28542CC0.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003"
+            ],
+            "Properties": {
+                "hash": "46fd936bada07819f61ec3790cb08e19",
+                "location": "C:\\Documents and Settings\\All Users\\Application Data\\"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "180.150.228.102",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "location": "South Korea",
+                "port": "443"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "111.118.21.105",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "sun.css",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "hash": "bd07926c72739bb7121cec8a2863ad87"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "DGGYDSYRL",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "type": "Builder artifact"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "HiKit rootkit",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "downloadmp3server.servemp3.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "66.153.86.14",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "yahooeast.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "blankchair.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Japanese Targets",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "location": "Japan"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Bit9",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        }
+    ],
+    "Relationships": []
+}

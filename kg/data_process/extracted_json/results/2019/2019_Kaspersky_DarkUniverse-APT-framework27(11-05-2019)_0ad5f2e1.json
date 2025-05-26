@@ -1,0 +1,412 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "DarkUniverse",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0006",
+                "TA0007",
+                "TA0009",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "activity_period": "2009-2017",
+                "version": "Latest version until 2017"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "ItaDuke",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0006",
+                "TA0009",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "known_since": "2013"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Spear Phishing",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Malicious Microsoft Office Document",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "updater.mod",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "location": "%USERPROFILE%\\AppData\\Roaming\\Microsoft\\Windows\\Reorder"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "glue30.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "functionality": "Keylogging"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "mydrive.ch",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "type": "Cloud storage"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "dfrgntfs5.sqt",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0007",
+                "TA0008",
+                "TA0009"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "msvcrt58.sqt",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0006",
+                "TA0009"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "functionality": "Email credential theft"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "zl4vq.sqt",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "description": "Legitimate zlib library"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "SOFTWARE\\AppDataLow\\GUI\\LegacyP",
+            "EntityType": "env",
+            "EntitySubType": "network",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "7"
+            ],
+            "Properties": {
+                "type": "Registry key"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Victim Organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "locations": "Syria, Iran, Afghanistan, Tanzania, Ethiopia, Sudan, Russia, Belarus, United Arab Emirates",
+                "types": "Civilian and military organizations"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "1addee050504ba999eb9f9b1ee5b9f04",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "8"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "4b71ec0b2d23204e560481f138833371",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "8"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "4e24b26d76a37e493bb35b1a8c8be0f6",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "8"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "405ef35506dc864301fada6f5f1d0711",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "8"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "764a4582a02cc54eb1d5460d723ae3a5",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "8"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "c2edda7e766553a04b87f2816a83f563",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "8"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "71d36436fe26fe570b876ad3441ea73c",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "8"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "ItaDuke",
+            "Target": "DarkUniverse"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "ItaDuke",
+            "Target": "Spear Phishing"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "Spear Phishing",
+            "Target": "Malicious Microsoft Office Document"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "target",
+            "Source": "ItaDuke",
+            "Target": "Victim Organizations"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "DarkUniverse",
+            "Target": "updater.mod"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "DarkUniverse",
+            "Target": "glue30.dll"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "DarkUniverse",
+            "Target": "dfrgntfs5.sqt"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "DarkUniverse",
+            "Target": "msvcrt58.sqt"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "DarkUniverse",
+            "Target": "zl4vq.sqt"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "belong_to",
+            "Source": "updater.mod",
+            "Target": "mydrive.ch"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "glue30.dll",
+            "Target": "mydrive.ch"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "belong_to",
+            "Source": "dfrgntfs5.sqt",
+            "Target": "mydrive.ch"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "belong_to",
+            "Source": "msvcrt58.sqt",
+            "Target": "mydrive.ch"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "belong_to",
+            "Source": "zl4vq.sqt",
+            "Target": "mydrive.ch"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "affect",
+            "Source": "DarkUniverse",
+            "Target": "Victim Organizations"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "DarkUniverse",
+            "Target": "1addee050504ba999eb9f9b1ee5b9f04"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "DarkUniverse",
+            "Target": "4b71ec0b2d23204e560481f138833371"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "related_to",
+            "Source": "DarkUniverse",
+            "Target": "4e24b26d76a37e493bb35b1a8c8be0f6"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "related_to",
+            "Source": "DarkUniverse",
+            "Target": "405ef35506dc864301fada6f5f1d0711"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "related_to",
+            "Source": "DarkUniverse",
+            "Target": "764a4582a02cc54eb1d5460d723ae3a5"
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "related_to",
+            "Source": "DarkUniverse",
+            "Target": "c2edda7e766553a04b87f2816a83f563"
+        },
+        {
+            "RelationshipId": "relationship_22",
+            "RelationshipType": "related_to",
+            "Source": "DarkUniverse",
+            "Target": "71d36436fe26fe570b876ad3441ea73c"
+        }
+    ]
+}

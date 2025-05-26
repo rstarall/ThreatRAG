@@ -1,0 +1,283 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "NewRomanic Cyber Army Team",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "theme": "Ancient Roman references"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Whois Hacking Team",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0004"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "South Korean Banks",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Financial"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "South Korean Media",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Media"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "LG +U",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Telecommunications"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Operation Troy",
+            "EntityVariantNames": [
+                "Dark Seoul"
+            ],
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "March 20, 2013",
+                "location": "South Korea",
+                "observe_time": "2013",
+                "report_name": "2013_dissecting-operation-troy_e5419361"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Dropper Trojan",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "size": "418KB",
+                "compile_date": "March 20, 2013",
+                "hash": "9263e40d9823aecf9388b64de34eae54"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "MBR Wiper",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "size": "24KB",
+                "compile_date": "January 31, 2013",
+                "strings": "principes, hastati"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Remote-Access Trojan",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "size": "46KB",
+                "compile_date": "January 26, 2013",
+                "build_path": "Make Troy"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Spear-phishing",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Patch-management server",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "IRC control servers",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "domains": "sujewha.com, dochang.pe.kr, mupa.co.kr"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation Troy",
+            "Target": "NewRomanic Cyber Army Team"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Operation Troy",
+            "Target": "Whois Hacking Team"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "Operation Troy",
+            "Target": "South Korean Banks"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "involve",
+            "Source": "Operation Troy",
+            "Target": "South Korean Media"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "NewRomanic Cyber Army Team",
+            "Target": "South Korean Banks"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "NewRomanic Cyber Army Team",
+            "Target": "South Korean Media"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "Whois Hacking Team",
+            "Target": "LG +U"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "NewRomanic Cyber Army Team",
+            "Target": "Dropper Trojan"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "NewRomanic Cyber Army Team",
+            "Target": "MBR Wiper"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "NewRomanic Cyber Army Team",
+            "Target": "Remote-Access Trojan"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "NewRomanic Cyber Army Team",
+            "Target": "Spear-phishing"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "belong_to",
+            "Source": "Remote-Access Trojan",
+            "Target": "IRC control servers"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "affect",
+            "Source": "MBR Wiper",
+            "Target": "Patch-management server"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "has",
+            "Source": "South Korean Banks",
+            "Target": "Patch-management server"
+        }
+    ]
+}

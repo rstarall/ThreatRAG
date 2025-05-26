@@ -1,0 +1,140 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "TRITON",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0040"
+            ],
+            "Properties": {
+                "description": "ICS attack framework targeting Triconex Safety Instrumented System (SIS) controllers"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Critical Infrastructure Organization",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "industry": "Critical Infrastructure"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Triconex Safety Instrumented System",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001",
+                "TA0040"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "SIS engineering workstation",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "os": "Microsoft Windows"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "trilog.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "SHA-256: e8542c07b2af63ee7e72ce5d97d91036c5da56e2b091aa2afe737b224305d230"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "inject.bin",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "SHA-256: 5fc4b0076eac7aa7815302b0c3158076e3569086c4c6aa2f71cd258238440d14",
+                "description": "Malicious function code"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "imain.bin",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "SHA-256: 08c34c6ac9186b61d9f29a77ef5e618067e0bc9fe85cab1ad25dc6049c376949",
+                "description": "Malicious control logic"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "TriStation protocol",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Nation State Actor",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0040"
+            ],
+            "Properties": {
+                "assessment": "Moderate confidence"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "TRITON Incident",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0040"
+            ],
+            "Properties": {
+                "time": "2017"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "library.zip",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "SHA-256: bef59b9a3e00a14956e0cd4a1f3e7524448cbe5d3cc1295d95a15b83a3579c59"
+            }
+        }
+    ],
+    "Relationships": []
+}

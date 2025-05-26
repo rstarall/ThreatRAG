@@ -1,0 +1,338 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Blackfly",
+            "EntityVariantNames": [
+                "APT41",
+                "Winnti Group",
+                "Bronze Atlas"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0006",
+                "TA0007",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China",
+                "active_since": "2010"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Grayfly",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China",
+                "relation": "Associated with Blackfly"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Asian Conglomerate Subsidiaries",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Materials and composites",
+                "region": "Asia"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Backdoor.Winnkit",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "192ef0dee8df73eec9ee617abe4b0104799f9543a22a41e28d4d44c3ad713284"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Credential-dumping tool",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "100cad54c1f54126b9d37eb8c9e426cb609fc0eda0e9a241c2c9fd5a3a01ad6c",
+                "description": "Creates a dump of credentials from lsass.exe in C:\\windows\\temp\\1.bin"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Screenshotting tool",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "452d08d420a8d564ff5df6f6a91521887f8b9141d96c77a423ac7fc9c28e07e4",
+                "description": "Screenshots all open windows and saves them as .jpg files"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Process-hollowing tool",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "1cc838896fbaf7c1996198309fbf273c058b796cd2ac1ba7a46bee6df606900e",
+                "description": "Injects shellcode in C:\\Windows\\system32\\svchost.exe -k LocalSystemNetworkRestricted"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "SQL tool",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0007"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "4ae2cb9454077300151e701e6ac4e4d26dc72227135651e02437902ac05aa80d",
+                "description": "SQL client tool used to query SQL databases"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Mimikatz",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "b28456a0252f4cd308dfb84eeaa14b713d86ba30c4b9ca8d87ba3e592fd27f1c",
+                "description": "Publicly available credential-dumping tool"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "ForkPlayground",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "a3acb9f79647f813671c1a21097a51836b0b95397ebc9cd178bc806e1773c864",
+                "description": "Proof-of-Concept application to create a memory dump of an arbitrary process using the ForkLib"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Proxy configuration tool",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "498e8d231f97c037909662764397e02f67d0ee16b4f6744cf923f4de3b522bc1",
+                "description": "Configures proxy settings by injecting into: C:\\Windows\\system32\\svchost.exe -k LocalSystemNetworkRestricted"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "PlugX/Fast",
+            "EntityVariantNames": [
+                "Backdoor.Korplug"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Winnti/Pasteboy",
+            "EntityVariantNames": [
+                "Backdoor.Winnti"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Shadowpad",
+            "EntityVariantNames": [
+                "Backdoor.Shadowpad"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "conf.dat",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "location": "c:\\users\\public\\conf.dat",
+                "purpose": "Contains the configuration to set up proxy settings"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "target",
+            "Source": "Blackfly",
+            "Target": "Asian Conglomerate Subsidiaries"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Blackfly",
+            "Target": "Backdoor.Winnkit"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Blackfly",
+            "Target": "Credential-dumping tool"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Blackfly",
+            "Target": "Screenshotting tool"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Blackfly",
+            "Target": "Process-hollowing tool"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Blackfly",
+            "Target": "SQL tool"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Blackfly",
+            "Target": "Mimikatz"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Blackfly",
+            "Target": "ForkPlayground"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Blackfly",
+            "Target": "Proxy configuration tool"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Blackfly",
+            "Target": "Grayfly"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "Blackfly",
+            "Target": "PlugX/Fast"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "use",
+            "Source": "Blackfly",
+            "Target": "Winnti/Pasteboy"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "use",
+            "Source": "Blackfly",
+            "Target": "Shadowpad"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "Proxy configuration tool",
+            "Target": "conf.dat"
+        }
+    ]
+}

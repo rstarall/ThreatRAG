@@ -1,0 +1,303 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Red October",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0006",
+                "TA0009",
+                "TA0010"
+            ],
+            "Properties": {
+                "origin": "Russian-speaking",
+                "activity_period": "2007-2013"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Red October Attack Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0006",
+                "TA0009",
+                "TA0010"
+            ],
+            "Properties": {
+                "timeframe": "2007-2013",
+                "targets": "Diplomatic, governmental, scientific research organizations"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "CVE-2009-3129",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "affected_software": "Microsoft Excel"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CVE-2010-3333",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "affected_software": "Microsoft Word"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2012-0158",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "affected_software": "Microsoft Word"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CVE-2011-3544",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "name": "Rhino exploit",
+                "affected_software": "Java"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Katyn_-_opinia_Rosjan.xls",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "type": "Malicious Excel file",
+                "victim_id": "F50D0B17F870EB38026F"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "tactlist_05-05-2011_.8634.xls",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "type": "Malicious Excel file",
+                "victim_id": "FCF5E48A0AE558F4B859"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "MSC.BAT",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "location": "%TEMP%",
+                "content": "chcp 1251; attrib -a -s -h -r %DROPPER_FILE%; del %DROPPER_FILE%"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "LHAFD.GCP",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "location": "%ProgramFiles%WINDOWS NT",
+                "encryption": "RC4",
+                "compression": "Zlib",
+                "type": "Backdoor"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "SVCHOST.EXE",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "location": "%ProgramFiles%WINDOWS NT",
+                "type": "Loader module"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "dll-host-update.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "status": "Sinkholed by Kaspersky",
+                "ip": "95.211.172.143"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "shellupdate.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "status": "Sinkholed by Kaspersky",
+                "ip": "95.211.172.143"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "msgenuine.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "status": "Sinkholed by Kaspersky",
+                "ip": "95.211.172.143"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "microsoft-msdn.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "status": "Sinkholed by Kaspersky",
+                "ip": "95.211.172.143"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "windowsonlineupdate.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "status": "Sinkholed by Kaspersky",
+                "ip": "95.211.172.143"
+            }
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "windows-genuine.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "status": "Sinkholed by Kaspersky",
+                "ip": "95.211.172.143"
+            }
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "31.41.45.139",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "type": "CC server",
+                "port": "40080"
+            }
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "178.63.208.63",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "type": "CC server",
+                "port": "40080"
+            }
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "Acid Cryptofiler",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0006"
+            ],
+            "Properties": {
+                "type": "Cryptographic system",
+                "users": "EU organizations"
+            }
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "Diplomatic Service Agencies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_22",
+            "EntityName": "Government Agencies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_23",
+            "EntityName": "Scientific Research Organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        }
+    ],
+    "Relationships": []
+}

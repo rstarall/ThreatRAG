@@ -1,0 +1,252 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT17",
+            "EntityVariantNames": [
+                "Operation Aurora",
+                "PLA Unit 61398"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China",
+                "activity": "2009-2017"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "CCleaner Supply Chain Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "September 2017",
+                "observe_time": "2017",
+                "report_name": "2017_Intezer_Evidence-Aurora-Supply-Chain-Attack-CCleaner-Part1(09-20-2017)_b0ceed34"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "CCleaner Users",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "scale": "Millions"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Avast",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "industry": "Software"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CCleaner v5.33.6162",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "6f7840c77f99049d788155c1351e1560b62b8ad18ad0e9adda8218b9f432f0a9",
+                "type": "Compromised Software"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CCBkdr",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "216.126.225.148",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Domain Generation Algorithm",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "PE Loader",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "4"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "CCleaner Supply Chain Attack",
+            "Target": "APT17"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "CCleaner Supply Chain Attack",
+            "Target": "CCleaner Users"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "CCleaner Supply Chain Attack",
+            "Target": "Avast"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "APT17",
+            "Target": "CCleaner v5.33.6162"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "APT17",
+            "Target": "CCBkdr"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "APT17",
+            "Target": "Domain Generation Algorithm"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "APT17",
+            "Target": "PE Loader"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "APT17",
+            "Target": "CCleaner Users"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "APT17",
+            "Target": "Avast"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "CCBkdr",
+            "Target": "CCleaner v5.33.6162"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "CCBkdr",
+            "Target": "216.126.225.148"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "CCBkdr",
+            "Target": "Domain Generation Algorithm"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "CCBkdr",
+            "Target": "PE Loader"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "affect",
+            "Source": "CCleaner v5.33.6162",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "has",
+            "Source": "CCleaner Users",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "trigger",
+            "Source": "CCleaner Users",
+            "Target": "CCleaner v5.33.6162"
+        }
+    ]
+}

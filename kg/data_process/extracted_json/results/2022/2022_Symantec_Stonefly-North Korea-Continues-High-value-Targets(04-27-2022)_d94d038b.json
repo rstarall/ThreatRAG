@@ -1,0 +1,407 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Stonefly",
+            "EntityVariantNames": [
+                "DarkSeoul",
+                "BlackMine",
+                "Operation Troy",
+                "Silent Chollima"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "North Korea",
+                "focus": "Espionage",
+                "sectors": "Energy, Aerospace, Military Equipment"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Engineering Firm Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "February 2022",
+                "observe_time": "2022",
+                "report_name": "2022_Symantec_Stonefly-North Korea-Continues-High-value-Targets(04-27-2022)_d94d038b"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Engineering Firm",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Energy and Military"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CVE-2021-44228",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "description": "Log4j vulnerability"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "VMware View server",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Backdoor.Preft",
+            "EntityVariantNames": [
+                "Dtrack",
+                "Valefor"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "pvhost.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0010"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "description": "Masqueraded PSCP"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "pl.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "description": "Masqueraded Mimikatz"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "svhost.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "description": "3proxy tiny proxy server"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "tapi.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "description": "Suspected proxy tool"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "svchost.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "description": "Preft backdoor"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "WinSCP",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0010"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Invoke-TheHash",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "file_name": "rev.ps1"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "wmiexec.py",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "file_name": "notepad.exe"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Custom Information Stealer",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009",
+                "TA0010"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Backdoor.Prioxer",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "0"
+            ],
+            "Properties": {
+                "year": "2011"
+            }
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "Trojan.Jokra",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "0"
+            ],
+            "Properties": {
+                "year": "2013"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Engineering Firm Attack",
+            "Target": "Stonefly"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Engineering Firm Attack",
+            "Target": "Engineering Firm"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "Stonefly",
+            "Target": "Engineering Firm"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Stonefly",
+            "Target": "CVE-2021-44228"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2021-44228",
+            "Target": "VMware View server"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "has",
+            "Source": "Engineering Firm",
+            "Target": "VMware View server"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Stonefly",
+            "Target": "Backdoor.Preft"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Stonefly",
+            "Target": "pvhost.exe"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Stonefly",
+            "Target": "pl.exe"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "Stonefly",
+            "Target": "svhost.exe"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "Stonefly",
+            "Target": "tapi.exe"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "use",
+            "Source": "Stonefly",
+            "Target": "svchost.exe"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "use",
+            "Source": "Stonefly",
+            "Target": "WinSCP"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "use",
+            "Source": "Stonefly",
+            "Target": "Invoke-TheHash"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "use",
+            "Source": "Stonefly",
+            "Target": "wmiexec.py"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "use",
+            "Source": "Stonefly",
+            "Target": "Custom Information Stealer"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "Backdoor.Preft",
+            "Target": "svchost.exe"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "belong_to",
+            "Source": "pvhost.exe",
+            "Target": "Engineering Firm"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "belong_to",
+            "Source": "pl.exe",
+            "Target": "Engineering Firm"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "belong_to",
+            "Source": "svhost.exe",
+            "Target": "Engineering Firm"
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "belong_to",
+            "Source": "tapi.exe",
+            "Target": "Engineering Firm"
+        },
+        {
+            "RelationshipId": "relationship_22",
+            "RelationshipType": "belong_to",
+            "Source": "svchost.exe",
+            "Target": "Engineering Firm"
+        }
+    ]
+}

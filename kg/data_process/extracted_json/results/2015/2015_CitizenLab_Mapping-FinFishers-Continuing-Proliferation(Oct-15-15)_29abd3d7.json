@@ -1,0 +1,491 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "FinFisher GmbH",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0042",
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Munich, Germany"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "FinFisher Spyware Suite",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "FinSpy Master",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0001",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "FinSpy Relay",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0001",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "FinFly Web",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "APT-29",
+            "EntityVariantNames": [
+                "Cozy Bear"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "MOLERATS",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Eagle Eye Digital Solutions LLC",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Oman"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Technology Research Department (TRD)",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Egypt"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "National Encryption Body (Lembaga Sandi Negara)",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Indonesia"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Directorate General of Forces Intelligence (DGFI)",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Bangladesh"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Federal Police Service",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Belgium"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Security Information Agency (BIA)",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Serbia"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "National Intelligence Service (NIS)",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Kenya"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "General Directorate of General Security",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Lebanon"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Internal Security Forces (ISF)",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Lebanon"
+            }
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "Conseil Superieur De La Defense Nationale (CSDN)",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Morocco"
+            }
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "State Special Security Department (SSSD)",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Mongolia"
+            }
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "FinFisher Government Users Mapping Report",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0043"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "October 15, 2015",
+                "observe_time": "2015",
+                "report_name": "2015_CitizenLab_Mapping-FinFishers-Continuing-Proliferation(Oct-15-15)_29abd3d7"
+            }
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "google.wwwhost.biz",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "workingulf.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_22",
+            "EntityName": "news-youm7.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_23",
+            "EntityName": "to70.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_24",
+            "EntityName": "Elaman GmbH",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "role": "FinFisher reseller"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "FinFisher GmbH",
+            "Target": "FinFisher Spyware Suite"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "related_to",
+            "Source": "FinFisher Spyware Suite",
+            "Target": "FinSpy Master"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "FinFisher Spyware Suite",
+            "Target": "FinSpy Relay"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "FinFisher Spyware Suite",
+            "Target": "FinFly Web"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "FinFisher Spyware Suite"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "MOLERATS",
+            "Target": "FinFisher Spyware Suite"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Technology Research Department (TRD)",
+            "Target": "FinFisher Spyware Suite"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "National Encryption Body (Lembaga Sandi Negara)",
+            "Target": "FinFisher Spyware Suite"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Directorate General of Forces Intelligence (DGFI)",
+            "Target": "FinFisher Spyware Suite"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "Federal Police Service",
+            "Target": "FinFisher Spyware Suite"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "Security Information Agency (BIA)",
+            "Target": "FinFisher Spyware Suite"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "use",
+            "Source": "National Intelligence Service (NIS)",
+            "Target": "FinFisher Spyware Suite"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "use",
+            "Source": "General Directorate of General Security",
+            "Target": "FinFisher Spyware Suite"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "use",
+            "Source": "Internal Security Forces (ISF)",
+            "Target": "FinFisher Spyware Suite"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "use",
+            "Source": "Conseil Superieur De La Defense Nationale (CSDN)",
+            "Target": "FinFisher Spyware Suite"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "use",
+            "Source": "State Special Security Department (SSSD)",
+            "Target": "FinFisher Spyware Suite"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "involve",
+            "Source": "FinFisher Government Users Mapping Report",
+            "Target": "FinFisher GmbH"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "belong_to",
+            "Source": "google.wwwhost.biz",
+            "Target": "MOLERATS"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "belong_to",
+            "Source": "workingulf.net",
+            "Target": "Technology Research Department (TRD)"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "belong_to",
+            "Source": "news-youm7.com",
+            "Target": "Technology Research Department (TRD)"
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "belong_to",
+            "Source": "to70.org",
+            "Target": "Eagle Eye Digital Solutions LLC"
+        },
+        {
+            "RelationshipId": "relationship_22",
+            "RelationshipType": "related_to",
+            "Source": "Eagle Eye Digital Solutions LLC",
+            "Target": "Elaman GmbH"
+        }
+    ]
+}

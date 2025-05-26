@@ -1,0 +1,267 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Cyber Caliphate",
+            "EntityVariantNames": [
+                "Islamic State hacker group"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "affiliation": "Islamic State of Iraq and Syria (ISIS)"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "TV5Monde Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "April 8, 2015",
+                "duration": "3 hours",
+                "observe_time": "2015",
+                "report_name": "2015_Ahnlab_Targeted-Attack-on-Frances-TV5Monde(May-5-15)_14d641ef"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "TV5Monde",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Television network",
+                "country": "France"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Njworm",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "origin": "Middle East",
+                "creator": "njq8 (Naser Al Mutairi)"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "NjRAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "origin": "Middle East",
+                "creator": "njq8 (Naser Al Mutairi)"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "SecurityNajaf.vbs",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "path": "C:\\Documents and Settings\\Administrator\\Start Menu\\Programs\\Startup\\",
+                "type": "VBS script"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "VB script backdoor",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "function": "Information stealing and remote control"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "YouTube password",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "value": "lemotdepassedeyoutube"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "njq8",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "0"
+            ],
+            "Properties": {
+                "real_name": "Naser Al Mutairi",
+                "nationality": "Kuwaiti"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Houdini",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "0"
+            ],
+            "Properties": {
+                "real_name": "Mohamed Benabdellah",
+                "nationality": "Algerian"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "TV5Monde Attack Event",
+            "Target": "Cyber Caliphate"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "TV5Monde Attack Event",
+            "Target": "TV5Monde"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "Cyber Caliphate",
+            "Target": "TV5Monde"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Cyber Caliphate",
+            "Target": "Njworm"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Cyber Caliphate",
+            "Target": "VB script backdoor"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Njworm",
+            "Target": "NjRAT"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "VB script backdoor",
+            "Target": "SecurityNajaf.vbs"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "belong_to",
+            "Source": "SecurityNajaf.vbs",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "has",
+            "Source": "TV5Monde",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "trigger",
+            "Source": "TV5Monde",
+            "Target": "YouTube password"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "njq8",
+            "Target": "Njworm"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Houdini",
+            "Target": "Njworm"
+        }
+    ]
+}

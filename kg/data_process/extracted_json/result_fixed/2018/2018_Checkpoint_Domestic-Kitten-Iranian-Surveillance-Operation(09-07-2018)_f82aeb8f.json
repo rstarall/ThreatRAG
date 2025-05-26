@@ -1,0 +1,403 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Domestic Kitten",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0009",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "Since 2016",
+                "description": "Iranian surveillance operation targeting Kurdish and Turkish natives and ISIS supporters",
+                "observe_time": "2018",
+                "report_name": "2018_Checkpoint_Domestic-Kitten-Iranian-Surveillance-Operation(09-07-2018)_f82aeb8f"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Iranian Government",
+            "EntityVariantNames": [
+                "Islamic Revolutionary Guard Corps (IRGC)",
+                "Ministry of Intelligence",
+                "Ministry of Interior"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0009",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Iran"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Iranian Citizens",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "count": "240",
+                "groups": "Kurdish minority, ISIS supporters"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "ISIS Branded Wallpaper Changer",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0009"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "code_name": "Daesh4"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "ANF Kurdistan News Agency App",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0009"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "code_name": "Military News"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Fake Vidogram App",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0009"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "telecom2016@yahoo.com",
+            "EntityType": "ioc",
+            "EntitySubType": "email",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "firmwaresystemupdate.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Stevenwentz.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Ronaldlubbers.site",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Georgethompson.space",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "162.248.247.172",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "190.2.144.140",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "190.2.145.145",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "89.38.98.49",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "c168f3ea7d0e2cee91612bf86c5d95167d26e69c",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "0fafeb1cbcd6b19c46a72a26a4b8e3ed588e385f",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "f1355dfe633f9e1350887c31c67490d928f4feec",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "d1f70c47c016f8a544ef240487187c2e8ea78339",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "Android Devices",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Domestic Kitten",
+            "Target": "Iranian Government"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Domestic Kitten",
+            "Target": "Iranian Citizens"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Iranian Government",
+            "Target": "ISIS Branded Wallpaper Changer"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Iranian Government",
+            "Target": "ANF Kurdistan News Agency App"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Iranian Government",
+            "Target": "Fake Vidogram App"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Iranian Government",
+            "Target": "telecom2016@yahoo.com"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "Iranian Government",
+            "Target": "Iranian Citizens"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "ISIS Branded Wallpaper Changer",
+            "Target": "firmwaresystemupdate.com"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "ANF Kurdistan News Agency App",
+            "Target": "Stevenwentz.com"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Fake Vidogram App",
+            "Target": "Ronaldlubbers.site"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "firmwaresystemupdate.com",
+            "Target": "162.248.247.172"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "belong_to",
+            "Source": "Stevenwentz.com",
+            "Target": "190.2.144.140"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "belong_to",
+            "Source": "Ronaldlubbers.site",
+            "Target": "190.2.145.145"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "belong_to",
+            "Source": "Georgethompson.space",
+            "Target": "89.38.98.49"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "affect",
+            "Source": "ISIS Branded Wallpaper Changer",
+            "Target": "Android Devices"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "affect",
+            "Source": "ANF Kurdistan News Agency App",
+            "Target": "Android Devices"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "affect",
+            "Source": "Fake Vidogram App",
+            "Target": "Android Devices"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "has",
+            "Source": "Iranian Citizens",
+            "Target": "Android Devices"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "trigger",
+            "Source": "Iranian Citizens",
+            "Target": "ISIS Branded Wallpaper Changer"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "trigger",
+            "Source": "Iranian Citizens",
+            "Target": "ANF Kurdistan News Agency App"
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "trigger",
+            "Source": "Iranian Citizens",
+            "Target": "Fake Vidogram App"
+        }
+    ]
+}

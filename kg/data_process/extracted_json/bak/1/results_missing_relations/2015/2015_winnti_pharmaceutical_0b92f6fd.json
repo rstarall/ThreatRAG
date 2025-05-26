@@ -1,0 +1,155 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Winnti Group",
+            "EntityVariantNames": [
+                "Winnti",
+                "Axiom Group"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "country": "China",
+                "type": "Cyber-espionage"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Pharmaceutical Company Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "time": "After April 2014"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "European Pharmaceutical Company",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "industry": "Pharmaceutical",
+                "location": "Europe"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Winnti 3.0",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "type": "RAT (Remote Access Trojan)",
+                "version": "3.0"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "w64.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "function": "Worker library (RAT DLL)"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "8e61219b18d36748ce956099277cc29b",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "detection": "Backdoor.Win64.Winnti.gy"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "5979cf5018c03be2524b87b7dda64a1a",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "detection": "Backdoor.Win64.Winnti.gf"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "ac9b247691b1036a1cdb4aaf37bea97f",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0005"
+            ],
+            "Properties": {
+                "detection": "Rootkit.Win64.Winnti.ai"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "C:\\Windows\\TEMP\\tmpCCD.tmp",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "ServiceAdobe.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "ksadobe.dat",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Stolen Japanese Certificate",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Properties": {
+                "origin": "Japanese conglomerate",
+                "industry": "Microelectronics/Drugs/Medical equipment"
+            }
+        }
+    ],
+    "Relationships": []
+}

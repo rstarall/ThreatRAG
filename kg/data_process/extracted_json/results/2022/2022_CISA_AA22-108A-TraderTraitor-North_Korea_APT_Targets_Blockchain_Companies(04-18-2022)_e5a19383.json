@@ -1,0 +1,390 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Lazarus Group",
+            "EntityVariantNames": [
+                "APT38",
+                "BlueNoroff",
+                "Stardust Chollima"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "North Korea",
+                "sponsor": "State-sponsored"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "TraderTraitor Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "Since at least 2020",
+                "sector": "Blockchain and cryptocurrency",
+                "observe_time": "2022",
+                "report_name": "2022_CISA_AA22-108A-TraderTraitor-North_Korea_APT_Targets_Blockchain_Companies(04-18-2022)_e5a19383"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Cryptocurrency Industry",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "types": "Exchanges, DeFi protocols, gaming companies, trading firms, VC funds"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "DAFOM",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "60b3cfe2ec3100caf4afde734cfd5147f78acf58ab17d4480196831db4aa5f18",
+                "type": "MacOS dropper",
+                "domain": "dafom[.]dev",
+                "ip": "45.14.227[.]58"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "TokenAIS",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "5b40b73934c1583144f41d8463e227529fa7157e26e6012babd062e3fd7e0b03",
+                "type": "MacOS dropper",
+                "domain": "tokenais[.]com",
+                "ip": "199.188.103[.]115"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CryptAIS",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "f0e8c29e3349d030a97f4a8673387c2e21858cccd1fb9ebbf9009b27743b2e5b",
+                "type": "MacOS dropper",
+                "domain": "cryptais[.]com",
+                "ip": "82.102.31.14"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "AlticGO",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "765a79d22330098884e0f7ce692d61c40dfcf288826342f33d976d8314cfd819",
+                "type": "Windows dropper",
+                "domain": "alticgo[.]com",
+                "ip": "108.170.55[.]202"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Esilet",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "9ba02f8a985ec1a99ab7b78fa678f26c0273d91ae7cbe45b814e6775ec477598",
+                "type": "MacOS dropper",
+                "domain": "esilet[.]com",
+                "ip": "104.168.98[.]156"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Manuscrypt",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "RAT",
+                "description": "Custom remote access trojan"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Node.js",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "role": "Runtime environment for malware"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Electron Framework",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "role": "Used to package malicious applications"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Spearphishing",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "description": "Initial access technique"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Windows",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "macOS",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "TraderTraitor Campaign",
+            "Target": "Lazarus Group"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "TraderTraitor Campaign",
+            "Target": "Cryptocurrency Industry"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Lazarus Group",
+            "Target": "DAFOM"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Lazarus Group",
+            "Target": "TokenAIS"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Lazarus Group",
+            "Target": "CryptAIS"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Lazarus Group",
+            "Target": "AlticGO"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Lazarus Group",
+            "Target": "Esilet"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Lazarus Group",
+            "Target": "Manuscrypt"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Lazarus Group",
+            "Target": "Spearphishing"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "Lazarus Group",
+            "Target": "Node.js"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "Lazarus Group",
+            "Target": "Electron Framework"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "target",
+            "Source": "Lazarus Group",
+            "Target": "Cryptocurrency Industry"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "target",
+            "Source": "Lazarus Group",
+            "Target": "Windows"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "target",
+            "Source": "Lazarus Group",
+            "Target": "macOS"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "DAFOM",
+            "Target": "Manuscrypt"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "TokenAIS",
+            "Target": "Manuscrypt"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "CryptAIS",
+            "Target": "Manuscrypt"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "related_to",
+            "Source": "AlticGO",
+            "Target": "Manuscrypt"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "related_to",
+            "Source": "Esilet",
+            "Target": "Manuscrypt"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "affect",
+            "Source": "DAFOM",
+            "Target": "macOS"
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "affect",
+            "Source": "TokenAIS",
+            "Target": "macOS"
+        },
+        {
+            "RelationshipId": "relationship_22",
+            "RelationshipType": "affect",
+            "Source": "CryptAIS",
+            "Target": "macOS"
+        },
+        {
+            "RelationshipId": "relationship_23",
+            "RelationshipType": "affect",
+            "Source": "AlticGO",
+            "Target": "Windows"
+        },
+        {
+            "RelationshipId": "relationship_24",
+            "RelationshipType": "affect",
+            "Source": "Esilet",
+            "Target": "macOS"
+        }
+    ]
+}

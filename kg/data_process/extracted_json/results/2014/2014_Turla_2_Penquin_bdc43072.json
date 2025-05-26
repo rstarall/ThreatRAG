@@ -1,0 +1,170 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Turla",
+            "EntityVariantNames": [
+                "Penquin Turla",
+                "Snake",
+                "Uroburos"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "category": "APT",
+                "complexity": "High"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Linux Turla Module",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "md5": "0994d9deb50352e76b0322f48ee576c6,14ecd5e6fc8e501037b54ca263896a11,19fbd8cbfb12482e8020a887d6427315",
+                "type": "Backdoor",
+                "platform": "Linux",
+                "libraries": "glibc2.3.2, openssl v0.9.6, libpcap"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "news-bbc.podzone[.]org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "status": "sinkholed",
+                "sinkhole_by": "Kaspersky Lab"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "80.248.65.183",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "AS": "AS30982",
+                "org": "CAFE Informatique et telecommunications"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "cd00r",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Backdoor source"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Linux System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Victim Site",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "Turla",
+            "Target": "Linux Turla Module"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "related_to",
+            "Source": "Linux Turla Module",
+            "Target": "cd00r"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "Linux Turla Module",
+            "Target": "news-bbc.podzone[.]org"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "belong_to",
+            "Source": "news-bbc.podzone[.]org",
+            "Target": "80.248.65.183"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "Turla",
+            "Target": "Victim Site"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "affect",
+            "Source": "Linux Turla Module",
+            "Target": "Linux System"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "has",
+            "Source": "Victim Site",
+            "Target": "Linux System"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Turla",
+            "Target": "news-bbc.podzone[.]org"
+        }
+    ]
+}

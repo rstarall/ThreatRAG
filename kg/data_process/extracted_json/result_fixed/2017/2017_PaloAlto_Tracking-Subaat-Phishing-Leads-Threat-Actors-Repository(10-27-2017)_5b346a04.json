@@ -1,0 +1,324 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Subaat",
+            "EntityVariantNames": [
+                "Subaat user"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "email": "hassanusauae786@hotmail.com",
+                "forum": "HackForums",
+                "age": "27",
+                "dob": "2/24/1990"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "US-based Government Organization Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "July 16, 2017",
+                "location": "US",
+                "observe_time": "2017",
+                "report_name": "2017_PaloAlto_Tracking-Subaat-Phishing-Leads-Threat-Actors-Repository(10-27-2017)_5b346a04"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "US-based Government Organization",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "sector": "Government"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Malicious RTF Document",
+            "EntityVariantNames": [
+                "0ade053b355eca7ae1fccea01fe14ff8d56a9d1703d01b3c00f7a09419357301",
+                "9a57f96a3fd92b049494807b6f99ffcd6bb9eb81f4f5b352d4b525ad32fac42d"
+            ],
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "0ade053b355eca7ae1fccea01fe14ff8d56a9d1703d01b3c00f7a09419357301,9a57f96a3fd92b049494807b6f99ffcd6bb9eb81f4f5b352d4b525ad32fac42d",
+                "type": "RTF"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2012-0158",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "QuasarRAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Malicious Excel Document",
+            "EntityVariantNames": [
+                "e3243674aa3661319903a8c0e1edde211f1ffdeed53b305359d3390808007621"
+            ],
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "e3243674aa3661319903a8c0e1edde211f1ffdeed53b305359d3390808007621",
+                "type": "Excel"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Crimson Downloader",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "5.189.157.215",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "location": "Germany"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "115.186.136.237",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "location": "Pakistan",
+                "ISP": "Pakistan-based ISP"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "subaat.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "IP": "23.92.211.186",
+                "hosting": "pkwebhost.net",
+                "location": "Pakistan"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "LuminosityLink",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "US-based Government Organization Attack",
+            "Target": "Subaat"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "US-based Government Organization Attack",
+            "Target": "US-based Government Organization"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Subaat",
+            "Target": "Malicious RTF Document"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Subaat",
+            "Target": "Malicious Excel Document"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Subaat",
+            "Target": "QuasarRAT"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Subaat",
+            "Target": "Crimson Downloader"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Subaat",
+            "Target": "LuminosityLink"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "Subaat",
+            "Target": "US-based Government Organization"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2012-0158",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Malicious RTF Document",
+            "Target": "QuasarRAT"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Malicious Excel Document",
+            "Target": "Crimson Downloader"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "belong_to",
+            "Source": "subaat.com",
+            "Target": "Subaat"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "QuasarRAT",
+            "Target": "115.186.136.237"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "Crimson Downloader",
+            "Target": "5.189.157.215"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "LuminosityLink",
+            "Target": "115.186.136.237"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "trigger",
+            "Source": "US-based Government Organization",
+            "Target": "Malicious RTF Document"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "trigger",
+            "Source": "US-based Government Organization",
+            "Target": "Malicious Excel Document"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "has",
+            "Source": "US-based Government Organization",
+            "Target": "Windows System"
+        }
+    ]
+}

@@ -1,0 +1,124 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT28",
+            "EntityVariantNames": [
+                "Fancy Bear"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0043",
+                "TA0042"
+            ],
+            "Properties": {
+                "country": "Russia",
+                "type": "Nation State Threat Actor"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "WADA Targeting Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0043"
+            ],
+            "Properties": {
+                "date": "January 14, 2017",
+                "previous_attack": "Summer 2016"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "World Anti-Doping Agency",
+            "EntityVariantNames": [
+                "WADA"
+            ],
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "country": "Canada",
+                "domain": "wada-ama.org"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "worlddopingagency[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001",
+                "TA0042"
+            ],
+            "Properties": {
+                "creation_date": "2017-01-14",
+                "status": "Active"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "dopingagency[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001",
+                "TA0042"
+            ],
+            "Properties": {
+                "creation_date": "2017-01-14",
+                "status": "Active"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "mail[.]worlddopingagency[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "ip": "40.112.145.124"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "mail[.]dopingagency[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "ip": "40.112.145.124"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "40.112.145.124",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0001",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Phishing Campaign",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ]
+        }
+    ],
+    "Relationships": []
+}

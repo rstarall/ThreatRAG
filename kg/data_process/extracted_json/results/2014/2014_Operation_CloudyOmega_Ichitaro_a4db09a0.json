@@ -1,0 +1,342 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "CloudyOmega",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Unknown",
+                "target": "Japanese organizations"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Operation CloudyOmega",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "2011-present",
+                "location": "Japan",
+                "observe_time": "2014",
+                "report_name": "2014_Operation_CloudyOmega_Ichitaro_a4db09a0"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Japanese organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "sector": "Public sector, chemical companies"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Ichitaro zero-day vulnerability",
+            "EntityType": "vul",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "product": "Ichitaro"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Malicious Ichitaro document",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "detection": "Bloodhound.Exploit.557"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Backdoor.Emdivi",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Type S, Type T",
+                "language": "C++, .NET"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Backdoor.Korplug",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Backdoor.ZXshell",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "CVE-2012-5054",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "product": "Adobe Flash Player and AIR"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "CVE-2013-0634",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "product": "Adobe Flash Player"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Compromised Japanese websites",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "count": "50",
+                "hosting": "Japanese cloud-hosting service"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Hidden Lynx",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "LadyBoyle group",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Ichitaro",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Japanese office suite software"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Email with malicious attachment",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation CloudyOmega",
+            "Target": "CloudyOmega"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Operation CloudyOmega",
+            "Target": "Japanese organizations"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "CloudyOmega",
+            "Target": "Ichitaro zero-day vulnerability"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "CloudyOmega",
+            "Target": "Malicious Ichitaro document"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "CloudyOmega",
+            "Target": "Backdoor.Emdivi"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "CloudyOmega",
+            "Target": "Backdoor.Korplug"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "CloudyOmega",
+            "Target": "Backdoor.ZXshell"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "CloudyOmega",
+            "Target": "Email with malicious attachment"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "CloudyOmega",
+            "Target": "Japanese organizations"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "exploit",
+            "Source": "Ichitaro zero-day vulnerability",
+            "Target": "Ichitaro"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Backdoor.Emdivi",
+            "Target": "Compromised Japanese websites"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "CloudyOmega",
+            "Target": "Hidden Lynx"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "CloudyOmega",
+            "Target": "LadyBoyle group"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "use",
+            "Source": "CloudyOmega",
+            "Target": "CVE-2012-5054"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "use",
+            "Source": "CloudyOmega",
+            "Target": "CVE-2013-0634"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "trigger",
+            "Source": "Japanese organizations",
+            "Target": "Malicious Ichitaro document"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "has",
+            "Source": "Japanese organizations",
+            "Target": "Ichitaro"
+        }
+    ]
+}

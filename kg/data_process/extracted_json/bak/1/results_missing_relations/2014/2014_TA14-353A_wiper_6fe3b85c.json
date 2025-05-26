@@ -1,0 +1,286 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "SMB Worm Tool",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0008"
+            ],
+            "Properties": {
+                "hash": "194ae075bf53aa4c83e175d4fa1b9d89"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Listening Implant",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "port": "444"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Lightweight Backdoor",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "hash": "838e57492f632da79dcd5aa47b23f8a9"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Proxy Tool",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "hash": "3b9da603992d8001c1322474aac25f87"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Destructive Hard Drive Tool",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Properties": {
+                "hash": "8dec36d7f5e6cbd5e06775771351c54e"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Destructive Target Cleaning Tool",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Properties": {
+                "hash": "7bea4323807f7e8cf53776e24cbd71f1"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Microsoft Windows",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "major entertainment company",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "203.131.222.102",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "country": "Thailand",
+                "port": "8080"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "217.96.33.164",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "country": "Poland",
+                "port": "8000"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "88.53.215.64",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "country": "Italy",
+                "port": "8000"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "200.87.126.116",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "country": "Bolivia",
+                "port": "8000"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "58.185.154.99",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "country": "Singapore",
+                "port": "8080"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "212.31.102.100",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "country": "Cypress",
+                "port": "8080"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "208.105.226.235",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "country": "United States"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "igfxtrayex.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0040"
+            ],
+            "Properties": {
+                "hash": "760C35A80D758F032D02CF4DB12D3E55"
+            }
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "diskpartmg16.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "net_ver.dat",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0007"
+            ],
+            "Properties": {
+                "hash": "93BC819011B2B3DA8487F964F29EB934"
+            }
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "iissvr.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "hash": "E1864A55D5CCB76AF4BF7A0AE16279BA"
+            }
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "usbdrv3_32bit.sys",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0005"
+            ],
+            "Properties": {
+                "hash": "6AEAC618E29980B69721158044C2E544"
+            }
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "usbdrv3_64bit.sys",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0005"
+            ],
+            "Properties": {
+                "hash": "86E212B7FC20FC406C692400294073FF"
+            }
+        },
+        {
+            "EntityId": "entity_22",
+            "EntityName": "igfxtpers.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "hash": "e904bf93403c0fb08b9683a9e858c73e"
+            }
+        },
+        {
+            "EntityId": "entity_23",
+            "EntityName": "Targeted Destructive Malware Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011",
+                "TA0040"
+            ],
+            "Properties": {
+                "date": "December 19, 2014"
+            }
+        }
+    ],
+    "Relationships": []
+}

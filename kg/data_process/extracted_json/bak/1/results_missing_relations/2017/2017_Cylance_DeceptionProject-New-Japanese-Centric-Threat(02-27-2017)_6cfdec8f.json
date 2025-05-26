@@ -1,0 +1,202 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT28/Sofacy",
+            "EntityVariantNames": [
+                "APT28",
+                "Sofacy"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "country": "Russia"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Snake Wine",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "target": "Japanese companies and individuals"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Japanese Companies and Individuals",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "industry": "Various"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "It Itch",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0043"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Hacking Team Code-Signing Certificate",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0005"
+            ],
+            "Properties": {
+                "thumbprint": "B366DBE8B3E81915CA5C5170C65DCAD8348B11F0",
+                "serial": "3F FC EB A8 3F E0 0F EF 97 F6 3C D9 2E 77 EB B9"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Spear Phishing",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "LNK Files",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "PowerShell",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "goog.gl",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "koala.acsocietyy.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "PowerSploit",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "The Ham Backdoor",
+            "EntityVariantNames": [
+                "ChChes"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011",
+                "TA0003"
+            ],
+            "Properties": {
+                "version": "1.6.4",
+                "language": "C++",
+                "compiler": "Visual Studio 2015"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "gavin.ccfchrist.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Windows Run Key",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0003"
+            ],
+            "Properties": {
+                "path": "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Tofu Backdoor",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011",
+                "TA0003"
+            ],
+            "Properties": {
+                "language": "C++",
+                "compiler": "Visual Studio 2015"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "area.wthelpdesk.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "MenuPass/Stone Panda",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Properties": {
+                "country": "China"
+            }
+        }
+    ],
+    "Relationships": []
+}

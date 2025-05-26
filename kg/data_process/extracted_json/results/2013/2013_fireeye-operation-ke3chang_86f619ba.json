@@ -1,0 +1,409 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Ke3chang",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China",
+                "activity_period": "Since at least 2010"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Ministries of Foreign Affairs Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "August 2013",
+                "location": "Europe",
+                "observe_time": "2013",
+                "report_name": "2013_fireeye-operation-ke3chang_86f619ba"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Ministries of Foreign Affairs",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Government",
+                "location": "Europe"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "BS2005",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "version": "Most recent iteration",
+                "compile_date": "2013/07/25"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "US_military_options_in_Syria.zip",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "6cb633b371700d1bd6fde49ab38ca471"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "US_military_options_in_Syria.pdf.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "b68a16cef982e6451ddf26568c60833d",
+                "pdb_string": "c:\\BS2005\\BS2005\\release\\Loader.pdb"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "ie.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "277487587ae9c11d7f4bd5336275a906",
+                "pdb_string": "c:\\BS2005\\BS2005\\release\\IE.pdb"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "cascais.epac.to",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "ip": "122.10.83.51"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "CVE-2012-4681",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "technology": "Java"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "CVE-2010-3333",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "technology": "Microsoft Word"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "CVE-2010-2883",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "technology": "Adobe PDF Reader"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "MyWeb",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "activity_period": "Jan 2010 - May 2011"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "BMW",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "activity_period": "July 2010"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "gsecdump",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "a7b20fe0bc6ae7f7a24670a732d2a021",
+                "version": "v0.7"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "NetE",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0007"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "8cdc9ffadbe4aad9418580b6ba2cc252",
+                "version": "v1.0"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "PwDump",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "8cf6e698ecf3e167321a3ed2b9a9c62f",
+                "version": "62"
+            }
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "122.10.83.51",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Ministries of Foreign Affairs Attack Event",
+            "Target": "Ke3chang"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Ministries of Foreign Affairs Attack Event",
+            "Target": "Ministries of Foreign Affairs"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Ke3chang",
+            "Target": "BS2005"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Ke3chang",
+            "Target": "MyWeb"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Ke3chang",
+            "Target": "BMW"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Ke3chang",
+            "Target": "CVE-2012-4681"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Ke3chang",
+            "Target": "CVE-2010-3333"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Ke3chang",
+            "Target": "CVE-2010-2883"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "Ke3chang",
+            "Target": "Ministries of Foreign Affairs"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "BS2005",
+            "Target": "US_military_options_in_Syria.zip"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "BS2005",
+            "Target": "US_military_options_in_Syria.pdf.exe"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "BS2005",
+            "Target": "ie.exe"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "BS2005",
+            "Target": "cascais.epac.to"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "belong_to",
+            "Source": "cascais.epac.to",
+            "Target": "122.10.83.51"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "use",
+            "Source": "Ke3chang",
+            "Target": "gsecdump"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "use",
+            "Source": "Ke3chang",
+            "Target": "NetE"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "use",
+            "Source": "Ke3chang",
+            "Target": "PwDump"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2012-4681",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "has",
+            "Source": "Ministries of Foreign Affairs",
+            "Target": "Windows System"
+        }
+    ]
+}

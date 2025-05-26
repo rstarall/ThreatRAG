@@ -1,0 +1,252 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "North Korean hacking organization",
+            "EntityVariantNames": [
+                "North Korean hackers"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0005"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "North Korea"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Malicious Hangul Documents Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0005"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "February-March 2022",
+                "target": "20th presidential election",
+                "observe_time": "2022",
+                "report_name": "2022_Ahnlab_Malicious-Hangul-disguised-pressreleases-presidential-election(03-03-2022)_ebaee7fa"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "National Election Commission",
+            "EntityVariantNames": [
+                "NEC"
+            ],
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Government"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Press release (220228)_March_1st___March_4th_20th_Presidential Election_Shipboard Voting_Conducted (final).hwp",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Hangul Word Processor document",
+                "size": "2.42 MB"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "mx6.bat",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "path": "%TEMP%\\mx6.bat"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "PowerShell command",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "variable": "$kkx9",
+                "command": "[DllImport(\"user32.dll\")] public static extern bool ShowWindow(int handle, int state);"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "MDP.Powershell.M4208",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "www.nec.go.kr",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "organization": "National Election Commission"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Public Recruitment of Counting Observers for the 20th Presidential Election",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Hangul Word Processor document"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "AhnLab Smart Defense",
+            "EntityVariantNames": [
+                "ASD"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "5"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Malicious Hangul Documents Attack Event",
+            "Target": "North Korean hacking organization"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Malicious Hangul Documents Attack Event",
+            "Target": "National Election Commission"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "North Korean hacking organization",
+            "Target": "Press release (220228)_March_1st___March_4th_20th_Presidential Election_Shipboard Voting_Conducted (final).hwp"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "North Korean hacking organization",
+            "Target": "mx6.bat"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "North Korean hacking organization",
+            "Target": "PowerShell command"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "North Korean hacking organization",
+            "Target": "National Election Commission"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "North Korean hacking organization",
+            "Target": "www.nec.go.kr"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "PowerShell command",
+            "Target": "mx6.bat"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "PowerShell command",
+            "Target": "MDP.Powershell.M4208"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "belong_to",
+            "Source": "Press release (220228)_March_1st___March_4th_20th_Presidential Election_Shipboard Voting_Conducted (final).hwp",
+            "Target": "www.nec.go.kr"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "trigger",
+            "Source": "National Election Commission",
+            "Target": "Press release (220228)_March_1st___March_4th_20th_Presidential Election_Shipboard Voting_Conducted (final).hwp"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "has",
+            "Source": "National Election Commission",
+            "Target": "www.nec.go.kr"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "use",
+            "Source": "North Korean hacking organization",
+            "Target": "Public Recruitment of Counting Observers for the 20th Presidential Election"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "AhnLab Smart Defense",
+            "Target": "MDP.Powershell.M4208"
+        }
+    ]
+}

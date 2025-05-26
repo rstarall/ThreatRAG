@@ -1,0 +1,135 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "OilRig",
+            "EntityVariantNames": [
+                "APT34"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0006",
+                "TA0011"
+            ],
+            "Properties": {
+                "first_seen": "May 2016"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "ALMA Communicator Trojan",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "sha256": "2fc7810a316863a5a5076bf3078ac6fad246bc8773a5fb835e0993609e5bb62e",
+                "technique": "DNS tunneling"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Clayslide",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Properties": {
+                "sha256": "f37b1bbf5a07759f10e0298b861b354cee13f325bc76fbddfaacd1ea7505e111",
+                "type": "Delivery document"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Mimikatz",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0006"
+            ],
+            "Properties": {
+                "sha256": "2d6f06d8ee0da16d2335f26eb18cd1f620c4db3e880efa6a5999eff53b12415c",
+                "purpose": "Credential harvesting"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Public Utilities Company",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "region": "Middle East"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "prosalar[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "OilRig Attack Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0006",
+                "TA0011"
+            ],
+            "Properties": {
+                "date": "November 2017"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "36.37.94.33",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "purpose": "DNS C2 start marker"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "33.33.94.94",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "purpose": "DNS C2 end marker"
+            }
+        }
+    ],
+    "Relationships": []
+}

@@ -1,0 +1,208 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Axiom group",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "country": "China",
+                "type": "APT"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "CCleaner supply chain attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "date": "10/2/2017"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "CCleaner users",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CCBkdr",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "dc9b5e8aa6ec86db8af0a7aa897ca61db3e5f3d2e0942e319074db1aaccfdc83",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "type": "Stage 2 Payload"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "07fb252d2e853a9b1b32f30ede411f2efbb9f01e4a7782db5eacf3f55cf34902",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "type": "x86 Trojanized Binary"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "f0d1f88c59a005312faad902528d60acbf9cd5a7b36093db8ca811f763e1292a",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0003"
+            ],
+            "Properties": {
+                "type": "x86 Registry Payload"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "128aca58be325174f0220bd7ca6030e4e206b4378796e82da460055733bb6f4f",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "type": "x64 Trojanized Binary"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "75eaa1889dbc93f11544cf3e40e3b9342b81b1678af5d83026496ee6a1b2ef79",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0003"
+            ],
+            "Properties": {
+                "type": "x64 Registry Payload"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "www.microsoft.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "update.microsoft.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "13.59.9.90",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\WbemPerf\\001",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0003"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\WbemPerf\\002",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0003"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\WbemPerf\\003",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0003"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\WbemPerf\\004",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0003"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\WbemPerf\\HBP",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0003"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "Steganography",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "XOR decryption",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Properties": {
+                "key": "0x31415926"
+            }
+        }
+    ],
+    "Relationships": []
+}

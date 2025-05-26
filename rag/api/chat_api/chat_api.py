@@ -19,22 +19,18 @@ class ChatRequest(BaseModel):
     conversation_id: str | None = None
     temperature: float = 0.7
 
-
+class DataRequest(BaseModel):
+    conversation_id: str | None = None
+    message: str
+    temperature: float = 0.7
+    use_rag: bool = True
 
 # 初始化全局代理实例
-# streaming_conversation = StreamingConversationalAgent(verbose=False,
-#                                                 model_name=os.getenv("BASE_MODEL"),
-#                                                 api_base=os.getenv("API_BASE"),
-#                                                 api_key=os.getenv("API_KEY"),
-#                                                 use_rag=True,
-#                                                 vector_database=get_vector_database_instance()
-#                                                )
-
 streaming_conversation = StreamingConversationChain(verbose=False,
                                                 model_name=os.getenv("BASE_MODEL"),
-                                                api_base=os.getenv("API_BASE"),
+                                                api_base=os.getenv("BASE_URL"),
                                                 api_key=os.getenv("API_KEY"),
-                                                use_rag=True,
+                                                use_rag=False, #使用 RAG 功能
                                                 vector_database=get_vector_database_instance()
                                                )
 
@@ -79,6 +75,9 @@ async def chat_stream(request: ChatRequest):
         error_details = f"错误: {str(e)}\n{traceback.format_exc()}"
         print(error_details)
         raise HTTPException(status_code=500, detail=str(e))
+    
+
+
 
 @chat_api.get("/health")
 def health_check():

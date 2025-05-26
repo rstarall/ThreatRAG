@@ -1,0 +1,320 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "TiltedTemple",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "APT"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "SockDetour Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "February 2022",
+                "observe_time": "2022",
+                "report_name": "2022_PaloAltoNetworks_SockDetour-Fileless-Socketless-Backdoor(02-24-2022)_af96624c"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "U.S. Defense Contractors",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "count": "4",
+                "industry": "Defense"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CVE-2021-40539",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "product": "Zoho ManageEngine ADSelfService Plus"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2021-44077",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "product": "ManageEngine ServiceDesk Plus"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CVE-2021-28799",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "product": "QNAP NAS"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "SockDetour",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Backdoor",
+                "stealth": "Fileless, Socketless"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Donut framework",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "purpose": "Shellcode generator"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "PowerSploit",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Memory injector"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Microsoft Detours",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "purpose": "API hooking"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Compromised QNAP NAS",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "SOHO NAS server"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Windows servers",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "0b2b9a2ac4bff81847b332af18a8e0705075166a137ab248e4d9b5cbd8b960df",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "SHA256"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Public Key",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "value": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDWD9BUhQQZkagIIHsCdn/wtRNXcYoEi3Z4PhZkH3mar20EONVyXWP/YUxyUmxD"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "SockDetour Campaign",
+            "Target": "TiltedTemple"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "SockDetour Campaign",
+            "Target": "U.S. Defense Contractors"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "TiltedTemple",
+            "Target": "CVE-2021-40539"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "TiltedTemple",
+            "Target": "CVE-2021-44077"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "TiltedTemple",
+            "Target": "CVE-2021-28799"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "TiltedTemple",
+            "Target": "SockDetour"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "TiltedTemple",
+            "Target": "Donut framework"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "TiltedTemple",
+            "Target": "PowerSploit"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "TiltedTemple",
+            "Target": "Microsoft Detours"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "target",
+            "Source": "TiltedTemple",
+            "Target": "U.S. Defense Contractors"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "target",
+            "Source": "TiltedTemple",
+            "Target": "Compromised QNAP NAS"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2021-28799",
+            "Target": "Compromised QNAP NAS"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "has",
+            "Source": "U.S. Defense Contractors",
+            "Target": "Windows servers"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "SockDetour",
+            "Target": "Public Key"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "SockDetour",
+            "Target": "0b2b9a2ac4bff81847b332af18a8e0705075166a137ab248e4d9b5cbd8b960df"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "belong_to",
+            "Source": "Public Key",
+            "Target": "SockDetour"
+        }
+    ]
+}

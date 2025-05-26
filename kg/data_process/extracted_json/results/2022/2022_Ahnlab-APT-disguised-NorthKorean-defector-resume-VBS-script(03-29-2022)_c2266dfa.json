@@ -1,0 +1,248 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT Group",
+            "EntityVariantNames": [
+                "North Korean APT"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0009",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "North Korea"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "North Korean Defector Resume Phishing Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0009",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "March 2022",
+                "observe_time": "2022",
+                "report_name": "2022_Ahnlab-APT-disguised-NorthKorean-defector-resume-VBS-script(03-29-2022)_c2266dfa"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "2022 resume form.vbs",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "VBS Script",
+                "hash": "ab97956fec732676ecfcedf55efadcbc"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "mscornet.vbs",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "type": "VBS Script",
+                "hash": "e49e41a810730f4bf3d43178e4c84ee5"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "fserverone.webcindario.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "url": "hxxp://fserverone.webcindario[.]com/contri/sqlite/msgbugPlog.php"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "cmaildowninvoice.webcindario.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "url": "hxxp://cmaildowninvoice.webcindario[.]com/contri/sqlite/msgbugGlog.php"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "PowerShell",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Task Scheduler",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Victim PC",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0009"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "os": "Windows"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "2022.hwp",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Hangul Word Processor File"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "North Korean Defector Resume Phishing Attack",
+            "Target": "APT Group"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "APT Group",
+            "Target": "2022 resume form.vbs"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "APT Group",
+            "Target": "PowerShell"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "APT Group",
+            "Target": "Task Scheduler"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "APT Group",
+            "Target": "Victim PC"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "2022 resume form.vbs",
+            "Target": "fserverone.webcindario.com"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "mscornet.vbs",
+            "Target": "cmaildowninvoice.webcindario.com"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "affect",
+            "Source": "2022 resume form.vbs",
+            "Target": "Victim PC"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "affect",
+            "Source": "mscornet.vbs",
+            "Target": "Victim PC"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "belong_to",
+            "Source": "2022 resume form.vbs",
+            "Target": "Victim PC"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "mscornet.vbs",
+            "Target": "Victim PC"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "2022 resume form.vbs",
+            "Target": "2022.hwp"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "PowerShell",
+            "Target": "mscornet.vbs"
+        }
+    ]
+}

@@ -1,0 +1,291 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Hworm",
+            "EntityVariantNames": [
+                "Houdini"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "version": "Delphi version",
+                "type": "RAT"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Houdini's Magic Reappearance Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "June 2016 - October 2016",
+                "observe_time": "2016",
+                "report_name": "2016_PaloAlto_Houdinis-Magic-Reappearance(10-25-2016)_68612af9"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Middle Eastern and Mediterranean political targets",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "SFX files",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "examples": "Mohamed Dahlan Abu Dhabi Meeting.exe, etc."
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Decoy documents/videos/URLs",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "RCSTEST mutex",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "start.loginto[.]me",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "samah.sytes[.]net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "52.42.161[.]75",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "78.47.96[.]17",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "136.243.104[.]200",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "DynamicWrapperX",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "RunPE shellcode",
+            "EntityType": "file",
+            "EntitySubType": "code",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Houdini (forum user)",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "0"
+            ],
+            "Properties": {
+                "forum": "dev-point[.]com"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Delphi Hworm Beta Builder",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "0"
+            ],
+            "Properties": {
+                "hash": "a4c71f862757e3535b305a14ff9f268e6cf196b2e54b426f25fa65bf658a9242"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Houdini's Magic Reappearance Attack",
+            "Target": "Hworm"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Houdini's Magic Reappearance Attack",
+            "Target": "Middle Eastern and Mediterranean political targets"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Houdini (forum user)",
+            "Target": "Delphi Hworm Beta Builder"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Houdini (forum user)",
+            "Target": "Hworm"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "Houdini (forum user)",
+            "Target": "Middle Eastern and Mediterranean political targets"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Hworm",
+            "Target": "SFX files"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Hworm",
+            "Target": "RCSTEST mutex"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Hworm",
+            "Target": "start.loginto[.]me"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Hworm",
+            "Target": "samah.sytes[.]net"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Hworm",
+            "Target": "DynamicWrapperX"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Hworm",
+            "Target": "RunPE shellcode"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "trigger",
+            "Source": "Middle Eastern and Mediterranean political targets",
+            "Target": "SFX files"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "trigger",
+            "Source": "Middle Eastern and Mediterranean political targets",
+            "Target": "Decoy documents/videos/URLs"
+        }
+    ]
+}

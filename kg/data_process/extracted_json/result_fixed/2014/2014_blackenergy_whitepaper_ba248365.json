@@ -1,0 +1,223 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Quedagh",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "interest": "Political targets"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "BlackEnergy",
+            "EntityVariantNames": [
+                "BlackEnergy 1",
+                "BlackEnergy 2",
+                "BlackEnergy 3"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "origin": "Russian cyber underground",
+                "first_seen": "2007"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Ukrainian government organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Ukraine"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CVE-2010-3333",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "msiexec.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Installer"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Ukrainian Railway proxy",
+            "EntityType": "ioc",
+            "EntitySubType": "proxy",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "giknpc.com.ua",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "location": "Dnipropetrovsk, Ukraine"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "si plugin",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "function": "Information stealing"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "64-bit Windows systems",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "2008 cyberattacks on Georgia",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "year": "2008",
+                "observe_time": "2014",
+                "report_name": "2014_blackenergy_whitepaper_ba248365"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "Quedagh",
+            "Target": "BlackEnergy"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "target",
+            "Source": "Quedagh",
+            "Target": "Ukrainian government organizations"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "BlackEnergy",
+            "Target": "msiexec.exe"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "BlackEnergy",
+            "Target": "CVE-2010-3333"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "BlackEnergy",
+            "Target": "Ukrainian Railway proxy"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "BlackEnergy",
+            "Target": "giknpc.com.ua"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "BlackEnergy",
+            "Target": "si plugin"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "exploit",
+            "Source": "BlackEnergy",
+            "Target": "64-bit Windows systems"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "involve",
+            "Source": "2008 cyberattacks on Georgia",
+            "Target": "Quedagh"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "involve",
+            "Source": "2008 cyberattacks on Georgia",
+            "Target": "BlackEnergy"
+        }
+    ]
+}

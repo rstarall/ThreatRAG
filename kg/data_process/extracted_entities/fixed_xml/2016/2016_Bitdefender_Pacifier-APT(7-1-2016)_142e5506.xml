@@ -1,0 +1,286 @@
+<Entitys>
+    <!-- Attacker Entity -->
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>Pacifier APT</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0008</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+
+    <!-- Attack Event Entity -->
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>Romanian Institutions Cyber-Espionage</EntityName>
+        <EntityType>event</EntityType>
+        <EntitySubType>event</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0008</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="timeframe">2014-2016</Property>
+            <Property name="location">Romania, Iran, India, Philippines, Russia, Lithuania, Thailand, Vietnam, Hungary</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Victim Entities -->
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>Romanian Institutions</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="industry">Government</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Malicious Document Entity -->
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>Malicious Word Document</EntityName>
+        <EntityType>file</EntityType>
+        <EntitySubType>file</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="type">Word Document with Macros</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Dropper Entity -->
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>MSWord.exe</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="path">%appdata%\Microsoft\Word\MSWord.exe</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Second Dropper Entity -->
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>ubfic.exe</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+        <Properties>
+            <Property name="path">%appdata%\Axpim\ubfic.exe</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Backdoor Components -->
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>ntlm.exe</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0003</Label>
+        </Labels>
+        <Times>
+            <Time>5</Time>
+        </Times>
+        <Properties>
+            <Property name="path">%temp%\ntlm.exe</Property>
+        </Properties>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>msvck.dll</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>6</Time>
+        </Times>
+        <Properties>
+            <Property name="path">%temp%\msvck.dll</Property>
+            <Property name="function">Main backdoor</Property>
+        </Properties>
+    </Entity>
+
+    <!-- C&C Servers -->
+    <Entity>
+        <EntityId>entity_9</EntityId>
+        <EntityName>88.208.0.130/rss.php</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>url</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>7</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_10</EntityId>
+        <EntityName>78.47.51.238/rss.php</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>url</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>7</Time>
+        </Times>
+    </Entity>
+
+    <!-- Attack Method -->
+    <Entity>
+        <EntityId>entity_11</EntityId>
+        <EntityName>Spear Phishing Email</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>method</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+
+    <!-- Registry Keys -->
+    <Entity>
+        <EntityId>entity_12</EntityId>
+        <EntityName>HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run\svchostUpdate</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>payload</EntitySubType>
+        <Labels>
+            <Label>TA0003</Label>
+        </Labels>
+        <Times>
+            <Time>5</Time>
+        </Times>
+    </Entity>
+</Entitys>
+<Relationships>
+    <!-- Attack event involves attacker -->
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Romanian Institutions Cyber-Espionage</Source>
+        <Target>Pacifier APT</Target>
+    </Relationship>
+
+    <!-- Attack event involves victim -->
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Romanian Institutions Cyber-Espionage</Source>
+        <Target>Romanian Institutions</Target>
+    </Relationship>
+
+    <!-- Attacker uses spear phishing -->
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Pacifier APT</Source>
+        <Target>Spear Phishing Email</Target>
+    </Relationship>
+
+    <!-- Attacker targets victim -->
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Pacifier APT</Source>
+        <Target>Romanian Institutions</Target>
+    </Relationship>
+
+    <!-- Spear phishing delivers malicious document -->
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Spear Phishing Email</Source>
+        <Target>Malicious Word Document</Target>
+    </Relationship>
+
+    <!-- Malicious document drops MSWord.exe -->
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Malicious Word Document</Source>
+        <Target>MSWord.exe</Target>
+    </Relationship>
+
+    <!-- MSWord.exe drops ubfic.exe -->
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>MSWord.exe</Source>
+        <Target>ubfic.exe</Target>
+    </Relationship>
+
+    <!-- ubfic.exe drops backdoor components -->
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>ubfic.exe</Source>
+        <Target>ntlm.exe</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_9</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>ubfic.exe</Source>
+        <Target>msvck.dll</Target>
+    </Relationship>
+
+    <!-- Backdoor communicates with C&C -->
+    <Relationship>
+        <RelationshipId>relationship_10</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>msvck.dll</Source>
+        <Target>88.208.0.130/rss.php</Target>
+    </Relationship>
+
+    <!-- Registry persistence -->
+    <Relationship>
+        <RelationshipId>relationship_11</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>ntlm.exe</Source>
+        <Target>HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run\svchostUpdate</Target>
+    </Relationship>
+</Relationships>

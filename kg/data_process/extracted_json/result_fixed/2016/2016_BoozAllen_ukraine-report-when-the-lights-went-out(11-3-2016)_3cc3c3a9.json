@@ -1,0 +1,306 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Unknown Cyber Actors",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "suspected_origin": "Russia"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Ukrainian Power Grid Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "2015-12-23",
+                "location": "Ukraine",
+                "observe_time": "2016",
+                "report_name": "2016_BoozAllen_ukraine-report-when-the-lights-went-out(11-3-2016)_3cc3c3a9"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Prykarpattyaoblenergo",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Electricity Distributor"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Kyivoblenergo",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Electricity Distributor"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Chernivtsioblenergo",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Electricity Distributor"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "BlackEnergy 3",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "version": "3",
+                "type": "RAT"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "KillDisk",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Data Wiper"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Phishing Email",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Weaponized MS Office Documents",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "SCADA System",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0008",
+                "TA0040"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Moxa UC 7408-LX-Plus",
+            "EntityType": "asset",
+            "EntitySubType": "network",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "IRZRUH2 3G",
+            "EntityType": "asset",
+            "EntitySubType": "network",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "ABB RTU560 CMU-02",
+            "EntityType": "asset",
+            "EntitySubType": "network",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Ukrainian Power Grid Attack",
+            "Target": "Unknown Cyber Actors"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Ukrainian Power Grid Attack",
+            "Target": "Prykarpattyaoblenergo"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "Ukrainian Power Grid Attack",
+            "Target": "Kyivoblenergo"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "involve",
+            "Source": "Ukrainian Power Grid Attack",
+            "Target": "Chernivtsioblenergo"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Unknown Cyber Actors",
+            "Target": "BlackEnergy 3"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Unknown Cyber Actors",
+            "Target": "KillDisk"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Unknown Cyber Actors",
+            "Target": "Phishing Email"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "BlackEnergy 3",
+            "Target": "Weaponized MS Office Documents"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "Unknown Cyber Actors",
+            "Target": "SCADA System"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "target",
+            "Source": "Unknown Cyber Actors",
+            "Target": "Moxa UC 7408-LX-Plus"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "target",
+            "Source": "Unknown Cyber Actors",
+            "Target": "IRZRUH2 3G"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "target",
+            "Source": "Unknown Cyber Actors",
+            "Target": "ABB RTU560 CMU-02"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "affect",
+            "Source": "KillDisk",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "has",
+            "Source": "Prykarpattyaoblenergo",
+            "Target": "SCADA System"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "has",
+            "Source": "Kyivoblenergo",
+            "Target": "SCADA System"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "has",
+            "Source": "Chernivtsioblenergo",
+            "Target": "SCADA System"
+        }
+    ]
+}

@@ -1,0 +1,346 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT-C-36",
+            "EntityVariantNames": [
+                "Blind Eagle"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "region": "South America",
+                "active_since": "2019"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Colombia Judiciary Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "February 2023",
+                "observe_time": "2023",
+                "report_name": "2023_Blackberry_BlindEagle-Fake-UUE-Fsociety-Target-Colombia(02-27-2023)_9314bdc6"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Colombian Judiciary",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Government"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Fv3608799004720042L900483000P19878099700001537012.pdf",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash_md5": "e4d2799f3001a531d15939b1898399b4",
+                "hash_sha256": "fc85d3da6401b0764a2e8a5f55334a7d683ec20fb8210213feb6148f02a30554"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Asuntos_DIAN_N6440005403992837L2088970004-01-02-2023-pdf.uue",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash_md5": "B432202CF7F00B4A4CBE377C284F3F28",
+                "hash_sha256": "6D9D0EB5E8E69FFE9914C63676D293DA1B7D3B7B9F3D2C8035ABE0A3DE8B9FCA"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Asuntos_DIAN_N6440005403992837L2088970004-01-02-2023-pdf.vbs",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash_md5": "6BEF68F58AFCFDD93943AFCC894F8740",
+                "hash_sha256": "430BE2A37BAC2173CF47CA1376126A3E78A94904DBC5F304576D87F5A17ED366"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Fiber.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "hash_md5": "C75F9D3DA98E57B973077FDE8EC3780F",
+                "hash_sha256": "5399BF1F18AFCC125007D127493082005421C5DDEBC34697313D62D8BC88DAEC"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Fsociety.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "hash_md5": "07AF8778DE9F2BC53899AAC7AD671A72",
+                "hash_sha256": "03B7D19202F596FE4DC556B7DA818F0F76195912E29D728B14863DDA7B91D9B5"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "AsyncRAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011",
+                "TA0003"
+            ],
+            "Times": [
+                "7"
+            ],
+            "Properties": {
+                "hash_md5": "5E518B80C701E17259F3E7323EFFC83F",
+                "hash_sha256": "64A08714BD5D04DA6E2476A46EA620E3F7D2C8A438EDA8110C3F1917D63DFCFC"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "172.174.176.153",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "asy1543.duckdns.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "8"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "46.246.86.3",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "8"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "46.246.12.6",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "8"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Spear-phishing",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "DIAN (Dirección de Impuestos y Aduanas Nacionales)",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Colombia Judiciary Attack",
+            "Target": "APT-C-36"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Colombia Judiciary Attack",
+            "Target": "Colombian Judiciary"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "APT-C-36",
+            "Target": "Spear-phishing"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "APT-C-36",
+            "Target": "Fv3608799004720042L900483000P19878099700001537012.pdf"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "APT-C-36",
+            "Target": "AsyncRAT"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "APT-C-36",
+            "Target": "Colombian Judiciary"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "APT-C-36",
+            "Target": "DIAN (Dirección de Impuestos y Aduanas Nacionales)"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Fv3608799004720042L900483000P19878099700001537012.pdf",
+            "Target": "Asuntos_DIAN_N6440005403992837L2088970004-01-02-2023-pdf.uue"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Asuntos_DIAN_N6440005403992837L2088970004-01-02-2023-pdf.uue",
+            "Target": "Asuntos_DIAN_N6440005403992837L2088970004-01-02-2023-pdf.vbs"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Asuntos_DIAN_N6440005403992837L2088970004-01-02-2023-pdf.vbs",
+            "Target": "Fiber.dll"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Fiber.dll",
+            "Target": "Fsociety.dll"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Fsociety.dll",
+            "Target": "AsyncRAT"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "AsyncRAT",
+            "Target": "asy1543.duckdns.org"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "belong_to",
+            "Source": "Fsociety.dll",
+            "Target": "172.174.176.153"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "belong_to",
+            "Source": "Fiber.dll",
+            "Target": "172.174.176.153"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "belong_to",
+            "Source": "asy1543.duckdns.org",
+            "Target": "46.246.86.3"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "belong_to",
+            "Source": "asy1543.duckdns.org",
+            "Target": "46.246.12.6"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "trigger",
+            "Source": "Colombian Judiciary",
+            "Target": "Fv3608799004720042L900483000P19878099700001537012.pdf"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "trigger",
+            "Source": "DIAN (Dirección de Impuestos y Aduanas Nacionales)",
+            "Target": "Fv3608799004720042L900483000P19878099700001537012.pdf"
+        }
+    ]
+}

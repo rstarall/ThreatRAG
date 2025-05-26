@@ -1,0 +1,269 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Hidden Cobra",
+            "EntityVariantNames": [
+                "APT38",
+                "Lazarus Group"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0009",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "North Korea"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Turkish Financial Sector Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0009",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "March 2018",
+                "location": "Turkey",
+                "observe_time": "2018",
+                "report_name": "2018_McAfee_Hidden-Cobra-Turkish-Financial-Sector-Bankshot-Implant(03-08-2018)_425cea4b"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Turkish Financial Organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Financial",
+                "country": "Turkey"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Bankshot",
+            "EntityVariantNames": [
+                "Trojan Manuscript"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0009",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Remote Access Tool",
+                "capabilities": "File wiping, command execution, data exfiltration"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2018-4878",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "product": "Adobe Flash",
+                "type": "Arbitrary Code Execution"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "falcancoin.io",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "creation_date": "2017-12-27",
+                "update_date": "2018-02-19"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Agreement.docx",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "650b7d25f4ed87490f8467eb48e0443fb244a8c4",
+                "type": "Malicious Word Document"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "530hr[dot]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "028xmz[dot]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "168wangpi[dot]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Turkish Financial Sector Attack",
+            "Target": "Hidden Cobra"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Turkish Financial Sector Attack",
+            "Target": "Turkish Financial Organizations"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Hidden Cobra",
+            "Target": "Bankshot"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Hidden Cobra",
+            "Target": "CVE-2018-4878"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Hidden Cobra",
+            "Target": "Agreement.docx"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "Hidden Cobra",
+            "Target": "Turkish Financial Organizations"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2018-4878",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Bankshot",
+            "Target": "falcancoin.io"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Bankshot",
+            "Target": "530hr[dot]com"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Bankshot",
+            "Target": "028xmz[dot]com"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Bankshot",
+            "Target": "168wangpi[dot]com"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "belong_to",
+            "Source": "Agreement.docx",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "has",
+            "Source": "Turkish Financial Organizations",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "trigger",
+            "Source": "Turkish Financial Organizations",
+            "Target": "Agreement.docx"
+        }
+    ]
+}

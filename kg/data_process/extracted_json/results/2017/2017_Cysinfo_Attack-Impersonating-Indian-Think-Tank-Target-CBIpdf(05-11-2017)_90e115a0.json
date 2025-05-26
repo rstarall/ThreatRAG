@@ -1,0 +1,334 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT Group (Pakistan)",
+            "EntityVariantNames": [
+                "Pakistan espionage group"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Pakistan"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "CBI and Indian Army Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "February 21st, 2017",
+                "observe_time": "2017",
+                "report_name": "2017_Cysinfo_Attack-Impersonating-Indian-Think-Tank-Target-CBIpdf(05-11-2017)_90e115a0"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Central Bureau of Investigation (CBI)",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Government"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Indian Army",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Military"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Case Detail of Suspected abuser.xls",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Malicious Excel File"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Contact List of attendees.xls",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Malicious Excel File"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "idsadesk[.]in",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "registration_date": "20th Feb 2017"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "idsagroup[.]in",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "registration_date": "20th Feb 2017"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "SQLite.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "f8daa49c489f606c87d39a88ab76a1ba"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "qhavcloud[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "ip": "173.212.194.214, 173.212.193.53"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "91.205.173.3",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "180.92.154.176",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0010"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "country": "Pakistan"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "iasia69@z7az14m[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "email",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "CBI and Indian Army Attack Event",
+            "Target": "APT Group (Pakistan)"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "CBI and Indian Army Attack Event",
+            "Target": "Central Bureau of Investigation (CBI)"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "CBI and Indian Army Attack Event",
+            "Target": "Indian Army"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "APT Group (Pakistan)",
+            "Target": "Case Detail of Suspected abuser.xls"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "APT Group (Pakistan)",
+            "Target": "Contact List of attendees.xls"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "APT Group (Pakistan)",
+            "Target": "SQLite.exe"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "APT Group (Pakistan)",
+            "Target": "idsadesk[.]in"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "APT Group (Pakistan)",
+            "Target": "qhavcloud[.]com"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "APT Group (Pakistan)",
+            "Target": "Central Bureau of Investigation (CBI)"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "target",
+            "Source": "APT Group (Pakistan)",
+            "Target": "Indian Army"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "SQLite.exe",
+            "Target": "qhavcloud[.]com"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "SQLite.exe",
+            "Target": "91.205.173.3"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "SQLite.exe",
+            "Target": "180.92.154.176"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "trigger",
+            "Source": "Central Bureau of Investigation (CBI)",
+            "Target": "Case Detail of Suspected abuser.xls"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "trigger",
+            "Source": "Indian Army",
+            "Target": "Contact List of attendees.xls"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "belong_to",
+            "Source": "Case Detail of Suspected abuser.xls",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "belong_to",
+            "Source": "Contact List of attendees.xls",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "has",
+            "Source": "Central Bureau of Investigation (CBI)",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "has",
+            "Source": "Indian Army",
+            "Target": "Windows System"
+        }
+    ]
+}

@@ -1,0 +1,402 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT-C-36",
+            "EntityVariantNames": [
+                "Blind Eagle"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "South America",
+                "targets": "Colombia, Ecuador, Panama",
+                "industries": "Government, Finance, Insurance"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Amadey Botnet Trojan Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "2023",
+                "observe_time": "2023",
+                "report_name": "2023_CoreSec360_APT-C-36-BlindEagle-Amadey-botnet(10-31-2023)_f908eaf3"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Government departments in Colombia",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Colombia"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Amadey botnet Trojan",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "md5": "461A67CE40F4A12863244EFEEF5EBC26",
+                "size": "237056",
+                "type": "WIN32 EXE",
+                "capabilities": "Anti-sandbox, persistence, privilege escalation, script execution, command execution, lateral movement, DDos, data theft"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "PDF spear phishing document",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Malicious VBS script",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Powershell exploit script",
+            "EntityType": "file",
+            "EntitySubType": "code",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "net_dll",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "function": "Persistence and next-stage payload loading"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "AsyncRAT Trojan",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "cred.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "function": "Information collection component"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "clip.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "function": "Information collection component"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "onLyofFicED.bat",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "CrubCrypt encryptor",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "7"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Remcos",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "7"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "213.226.123.14",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "autgerman.autgerman.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "http://213.226.123.14/8bmeVwqx/Plugins/cred.dll",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "https://subirfact.com/onLyofFicED.bat",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Amadey Botnet Trojan Campaign",
+            "Target": "APT-C-36"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Amadey Botnet Trojan Campaign",
+            "Target": "Government departments in Colombia"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "APT-C-36",
+            "Target": "Amadey botnet Trojan"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "APT-C-36",
+            "Target": "PDF spear phishing document"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "APT-C-36",
+            "Target": "net_dll"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "APT-C-36",
+            "Target": "Government departments in Colombia"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "PDF spear phishing document",
+            "Target": "Malicious VBS script"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Malicious VBS script",
+            "Target": "Powershell exploit script"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Powershell exploit script",
+            "Target": "net_dll"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Powershell exploit script",
+            "Target": "Amadey botnet Trojan"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "net_dll",
+            "Target": "AsyncRAT Trojan"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Amadey botnet Trojan",
+            "Target": "cred.dll"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "Amadey botnet Trojan",
+            "Target": "clip.dll"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "Amadey botnet Trojan",
+            "Target": "onLyofFicED.bat"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "onLyofFicED.bat",
+            "Target": "CrubCrypt encryptor"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "CrubCrypt encryptor",
+            "Target": "Remcos"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "belong_to",
+            "Source": "cred.dll",
+            "Target": "213.226.123.14"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "belong_to",
+            "Source": "clip.dll",
+            "Target": "213.226.123.14"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "belong_to",
+            "Source": "onLyofFicED.bat",
+            "Target": "subirfact.com"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "has",
+            "Source": "Government departments in Colombia",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "affect",
+            "Source": "Amadey botnet Trojan",
+            "Target": "Windows System"
+        }
+    ]
+}

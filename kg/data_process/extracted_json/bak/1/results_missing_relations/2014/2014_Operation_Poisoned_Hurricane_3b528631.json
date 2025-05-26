@@ -1,0 +1,283 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT Actor",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0011",
+                "TA0005"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Internet Infrastructure Providers",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "region": "Asia and United States"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Media Organization",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "location": "United States"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Financial Institution",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "location": "Asia"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Asian Government Organization",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Operation Poisoned Hurricane",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0011",
+                "TA0005"
+            ],
+            "Properties": {
+                "timeframe": "March 2014 - August 2014"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Kaba",
+            "EntityVariantNames": [
+                "PlugX",
+                "SOGU"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "52d2d1ab9b84303a585fb81e927b9e01",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "size": "180296",
+                "compile_time": "2013-10-15 05:17:37"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "eae0391e92a913e757ac78b14a6f079f",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "size": "184304",
+                "compile_time": "2013-11-26 17:39:25"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "17bc9d2a640da75db6cbb66e5898feb1",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "size": "282800 bytes"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Hurricane Electric DNS Hijacking",
+            "EntityType": "vul",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "216.218.130.2",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "purpose": "Hurricane Electric nameserver"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "216.218.131.2",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "purpose": "Hurricane Electric nameserver"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "216.218.132.2",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "purpose": "Hurricane Electric nameserver"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "216.66.1.2",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "purpose": "Hurricane Electric nameserver"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "59.125.42.167",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "59.125.42.168",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "211.125.81.203",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "www.adobe.com",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "update.adobe.com",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "www.outlook.com",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_22",
+            "EntityName": "code.google.com/p/udom/",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_23",
+            "EntityName": "Police Mutual Aid Association Certificate",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Properties": {
+                "serial": "06 55 69 a3 e2 61 40 91 28 a4 0a ff a9 0d 6d 10"
+            }
+        },
+        {
+            "EntityId": "entity_24",
+            "EntityName": "MOCOMSYS INC Certificate",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Properties": {
+                "serial": "03 e5 a0 10 b0 5c 92 87 f8 23 c2 58 5f 54 7b 80"
+            }
+        },
+        {
+            "EntityId": "entity_25",
+            "EntityName": "QTI INTERNATIONAL INC Certificate",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Properties": {
+                "serial": "2e df b9 fd cf a0 0c cb 5a b0 09 ee 3a db 97 b9"
+            }
+        }
+    ],
+    "Relationships": []
+}

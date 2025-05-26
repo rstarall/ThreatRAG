@@ -1,0 +1,247 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "TG-2889",
+            "EntityVariantNames": [
+                "Threat Group-2889"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0043",
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Iran",
+                "alias": "Operation CLEAVER"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Fake LinkedIn Profiles Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0043",
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "October 2015",
+                "reporter": "Dell SecureWorks CTU",
+                "observe_time": "2015",
+                "report_name": "2015_Secureworks_HackerGroup-Creates-Network-Fake-LinkedIn-Profiles(10-07-2015)_a15ca384"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "LinkedIn",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Social Media Platform"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Leader Personas",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "count": "8",
+                "description": "Fully developed fake profiles with detailed histories"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Supporter Personas",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "count": "17",
+                "description": "Simpler fake profiles used to endorse Leader personas"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Middle Eastern Targets",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "count": "204",
+                "industry": "Telecommunications, Government, Defense",
+                "region": "Middle East and North Africa"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Teledyne-Jobs.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Doosan-Job.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "NorthropGrumman.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Social Engineering",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Spearphishing",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Fake LinkedIn Profiles Campaign",
+            "Target": "TG-2889"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Fake LinkedIn Profiles Campaign",
+            "Target": "Middle Eastern Targets"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "TG-2889",
+            "Target": "Leader Personas"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "TG-2889",
+            "Target": "Supporter Personas"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "TG-2889",
+            "Target": "Social Engineering"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "TG-2889",
+            "Target": "Spearphishing"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "TG-2889",
+            "Target": "Middle Eastern Targets"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "TG-2889",
+            "Target": "LinkedIn"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Leader Personas",
+            "Target": "LinkedIn"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Supporter Personas",
+            "Target": "LinkedIn"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "TG-2889",
+            "Target": "Teledyne-Jobs.com"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "TG-2889",
+            "Target": "Doosan-Job.com"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "TG-2889",
+            "Target": "NorthropGrumman.net"
+        }
+    ]
+}

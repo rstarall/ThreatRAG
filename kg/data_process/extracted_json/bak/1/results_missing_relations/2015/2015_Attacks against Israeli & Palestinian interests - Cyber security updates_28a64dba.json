@@ -1,0 +1,148 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "DownExecute",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "ecc240f1983007177bc5bbecba50eea27b80fd3d14fd261bef6cda10b8ffe1e9",
+                "original_name": "Israel Homeland Defense Directory 2015_Secured_.exe"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Poison Ivy",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "password": "admin!@#$%"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Xtreme RAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Israeli  Palestinian Interests Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "time": "April 2015",
+                "earliest_samples": "June 2014"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Israel-based organisations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "industry": "Political",
+                "location": "Israel"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Palestinian interests",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "industry": "Political",
+                "location": "Palestine"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "no-ip.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Host Sailor",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "location": "Belize"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "185.33.168.150",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "rotter2.sytes.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "impersonates": "rotter.net"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "haartezenglish.strangled.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "impersonates": "haaretz.co.il"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Pomf.se",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "location": "Sweden",
+                "type": "File sharing/hosting"
+            }
+        }
+    ],
+    "Relationships": []
+}

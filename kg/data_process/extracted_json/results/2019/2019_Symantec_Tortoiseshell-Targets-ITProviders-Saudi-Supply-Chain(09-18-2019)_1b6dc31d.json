@@ -1,0 +1,249 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Tortoiseshell",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0007",
+                "TA0008"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "first_seen": "July 2018",
+                "last_seen": "July 2019"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "IT Providers in Saudi Arabia",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Saudi Arabia",
+                "count": "11"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Backdoor.Syskit",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Backdoor",
+                "languages": "Delphi, .NET"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Infostealer/Sha.exe/Sha432.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0007",
+                "TA0009"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Infostealer/stereoversioncontrol.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0007",
+                "TA0009"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "get-logon-history.ps1",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0007"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "64.235.60.123",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "64.235.39.45",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "d9ac9c950e5495c9005b04843a40f01fa49d5fd49226cb5b03a055232ffc36f3",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Web shell"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Poison Frog",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "0"
+            ],
+            "Properties": {
+                "related_group": "APT34/Oilrig"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Domain Controller",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Windows",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "target",
+            "Source": "Tortoiseshell",
+            "Target": "IT Providers in Saudi Arabia"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Tortoiseshell",
+            "Target": "Backdoor.Syskit"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Tortoiseshell",
+            "Target": "Infostealer/Sha.exe/Sha432.exe"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Tortoiseshell",
+            "Target": "Infostealer/stereoversioncontrol.exe"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Tortoiseshell",
+            "Target": "get-logon-history.ps1"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Backdoor.Syskit",
+            "Target": "64.235.60.123"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Backdoor.Syskit",
+            "Target": "64.235.39.45"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "belong_to",
+            "Source": "d9ac9c950e5495c9005b04843a40f01fa49d5fd49226cb5b03a055232ffc36f3",
+            "Target": "IT Providers in Saudi Arabia"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "has",
+            "Source": "IT Providers in Saudi Arabia",
+            "Target": "Domain Controller"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "has",
+            "Source": "IT Providers in Saudi Arabia",
+            "Target": "Windows"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "affect",
+            "Source": "Backdoor.Syskit",
+            "Target": "Windows"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "target",
+            "Source": "Tortoiseshell",
+            "Target": "Domain Controller"
+        }
+    ]
+}

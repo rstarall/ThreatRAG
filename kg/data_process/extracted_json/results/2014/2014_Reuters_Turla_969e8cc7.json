@@ -1,0 +1,205 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Turla",
+            "EntityVariantNames": [
+                "Uroburos",
+                "snake"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0003",
+                "TA0009",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Rootkit",
+                "function": "Cyber espionage"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Russian Government",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0042",
+                "TA0001",
+                "TA0003"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Russia"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "European and US Government Computers",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "sector": "Government",
+                "locations": "Europe, United States"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Agent.BTZ",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0003"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "relation": "Related to Turla"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Red October",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0009"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "relation": "Related to Turla",
+                "observe_time": "2014",
+                "report_name": "2014_Reuters_Turla_969e8cc7"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Command and Control Servers",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "function": "Malware control"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "G Data",
+            "EntityType": "org",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0043"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "role": "Security research"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "BAE Systems Applied Intelligence",
+            "EntityType": "org",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0043"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "role": "Security research"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Encrypted File System",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0005",
+                "TA0009"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "function": "Data storage"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "Russian Government",
+            "Target": "Turla"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "target",
+            "Source": "Russian Government",
+            "Target": "European and US Government Computers"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "Turla",
+            "Target": "Agent.BTZ"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "Turla",
+            "Target": "Red October"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "belong_to",
+            "Source": "Command and Control Servers",
+            "Target": "Turla"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Turla",
+            "Target": "Encrypted File System"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "involve",
+            "Source": "Red October",
+            "Target": "Russian Government"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "has",
+            "Source": "European and US Government Computers",
+            "Target": "Command and Control Servers"
+        }
+    ]
+}
