@@ -36,16 +36,23 @@ class GraphDatabase:
             return
         uri = os.environ.get("NEO4J_URL", "bolt://localhost:7687")
         username = os.environ.get("NEO4J_USERNAME", "neo4j")
-        password = os.environ.get("NEO4J_PASSWORD", "123456")
-        logger.info(f"Connecting to Neo4j at {uri}/{self.kgdb_name}")
+        password = os.environ.get("NEO4J_PASSWORD", "12345678")
+        logger.info(f"Connecting to Neo4j at {uri} with database {self.kgdb_name}")
         try:
-            self.driver = GD.driver(f"{uri}/{self.kgdb_name}", auth=(username, password))
+            # Neo4j连接URI不应该包含数据库名称
+            self.driver = GD.driver(uri, auth=(username, password))
+
+            # 测试连接
+            with self.driver.session(database=self.kgdb_name) as session:
+                session.run("RETURN 1")
+
             self.status = "open"
-            logger.info(f"Connected to Neo4j at {uri}/{self.kgdb_name}, {self.get_graph_info(self.kgdb_name)}")
+            logger.info(f"Connected to Neo4j at {uri} with database {self.kgdb_name}")
             # 连接成功后保存图数据库信息
             self.save_graph_info(self.kgdb_name)
         except Exception as e:
-            logger.error(f"Failed to connect to Neo4j: {e}, {uri}, {self.kgdb_name}, {username}, {password}")
+            logger.error(f"Failed to connect to Neo4j: {e}")
+            logger.error(f"Connection details: URI={uri}, Database={self.kgdb_name}, Username={username}")
             config.enable_knowledge_graph = False
 
     def close(self):
@@ -66,18 +73,19 @@ class GraphDatabase:
             result = tx.run("MATCH (n)-[r]->(m) RETURN n, r, m LIMIT $num", num=int(num))
             return result.values()
 
-        with self.driver.session() as session:
+        with self.driver.session(database=self.kgdb_name) as session:
             return session.execute_read(query, num)
 
     def create_graph_database(self, kgdb_name):
         """创建新的数据库，如果已存在则返回已有数据库的名称"""
-        with self.driver.session() as session:
+        # 连接到系统数据库来管理数据库
+        with self.driver.session(database="system") as session:
             existing_databases = session.run("SHOW DATABASES")
             existing_db_names = [db['name'] for db in existing_databases]
 
-            if existing_db_names:
-                print(f"已存在数据库: {existing_db_names[0]}")
-                return existing_db_names[0]  # 返回所有已有数据库名称
+            if kgdb_name in existing_db_names:
+                print(f"数据库 '{kgdb_name}' 已存在")
+                return kgdb_name
 
             session.run(f"CREATE DATABASE {kgdb_name}")
             print(f"数据库 '{kgdb_name}' 创建成功.")
@@ -104,7 +112,7 @@ class GraphDatabase:
                 )
                 tx.run(query, h=h, t=t)
 
-        with self.driver.session() as session:
+        with self.driver.session(database=self.kgdb_name) as session:
             session.execute_write(create, triples)
 
     async def txt_add_vector_entity(self, triples, kgdb_name='neo4j'):
@@ -154,7 +162,7 @@ class GraphDatabase:
             MATCH (n:Entity)
             WHERE n.name IN [{param_placeholders}] AND n.embedding IS NULL
             RETURN n.name AS name
-            """, params)
+            """, **params)
 
             return [record["name"] for record in result]
 
@@ -172,7 +180,7 @@ class GraphDatabase:
         assert self.embed_model_name == cur_embed_info.get('name') or self.embed_model_name is None, \
             f"embed_model_name={self.embed_model_name}, {cur_embed_info.get('name')=}"
 
-        with self.driver.session() as session:
+        with self.driver.session(database=self.kgdb_name) as session:
             logger.info(f"Adding entity to {kgdb_name}")
             session.execute_write(_create_graph, triples)
             logger.info(f"Creating vector index for {kgdb_name} with {config.embed_model}")
@@ -238,7 +246,7 @@ class GraphDatabase:
     def delete_entity(self, entity_name=None, kgdb_name="neo4j"):
         """删除数据库中的指定实体三元组, 参数entity_name为空则删除全部实体"""
         self.use_database(kgdb_name)
-        with self.driver.session() as session:
+        with self.driver.session(database=self.kgdb_name) as session:
             if entity_name:
                 session.execute_write(self._delete_specific_entity, entity_name)
             else:
@@ -287,7 +295,7 @@ class GraphDatabase:
             return result.values()
 
         try:
-            with self.driver.session() as session:
+            with self.driver.session(database=self.kgdb_name) as session:
                 results = session.execute_read(query, entity_name)
         except Exception as e:
             if "向量索引不存在" in str(e):
@@ -338,7 +346,7 @@ class GraphDatabase:
                 return []
 
         try:
-            with self.driver.session() as session:
+            with self.driver.session(database=self.kgdb_name) as session:
                 return session.execute_read(query, entity_name, hops, limit)
         except Exception as e:
             logger.error(f"数据库会话异常: {str(e)}")
@@ -356,7 +364,7 @@ class GraphDatabase:
             values = clean_triples_embedding(values)
             return values
 
-        with self.driver.session() as session:
+        with self.driver.session(database=self.kgdb_name) as session:
             return session.execute_read(query, hops)
 
     def query_by_relationship_type(self, relationship_type, kgdb_name='neo4j', hops = 2):
@@ -371,7 +379,7 @@ class GraphDatabase:
             values = clean_triples_embedding(values)
             return values
 
-        with self.driver.session() as session:
+        with self.driver.session(database=self.kgdb_name) as session:
             return session.execute_read(query, relationship_type, hops)
 
     def query_entity_like(self, keyword, kgdb_name='neo4j', hops = 2):
@@ -388,7 +396,7 @@ class GraphDatabase:
             values = clean_triples_embedding(values)
             return values
 
-        with self.driver.session() as session:
+        with self.driver.session(database=self.kgdb_name) as session:
             return session.execute_read(query, keyword, hops)
 
     def query_node_info(self, node_name, kgdb_name='neo4j', hops = 2):
@@ -404,7 +412,7 @@ class GraphDatabase:
             values = clean_triples_embedding(values)
             return values
 
-        with self.driver.session() as session:
+        with self.driver.session(database=self.kgdb_name) as session:
             return session.execute_read(query, node_name, hops)
 
     async def aget_embedding(self, text):
@@ -453,7 +461,7 @@ class GraphDatabase:
         try:
             if self.status == "open" and self.driver and self.is_running():
                 # 获取数据库信息
-                with self.driver.session() as session:
+                with self.driver.session(database=self.kgdb_name) as session:
                     graph_info = session.execute_read(query)
 
                     # 添加时间戳
@@ -502,7 +510,7 @@ class GraphDatabase:
             """)
             return [record["name"] for record in result]
 
-        with self.driver.session() as session:
+        with self.driver.session(database=self.kgdb_name) as session:
             return session.execute_read(query)
 
     def load_graph_info(self):
@@ -549,7 +557,7 @@ class GraphDatabase:
             node_names = self.query_nodes_without_embedding(kgdb_name)
 
         count = 0
-        with self.driver.session() as session:
+        with self.driver.session(database=self.kgdb_name) as session:
             for node_name in node_names:
                 try:
                     embedding = self.get_embedding(node_name)
@@ -688,5 +696,3 @@ def clean_triples_embedding(triples):
     return triples
 
 
-if __name__ == "__main__":
-    pass

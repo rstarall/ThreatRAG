@@ -33,8 +33,34 @@ you can get the frontend:
 
 ## the default database
 ### neo4J
-username:neo4j
-password:12345678
+Neo4j数据库配置已在.env文件中设置：
+
+```bash
+NEO4J_URL=bolt://localhost:7687
+NEO4J_USERNAME=neo4j
+NEO4J_PASSWORD=12345678
+NEO4J_DATABASE=neo4j
+```
+
+**注意：**
+- Neo4j需要手动安装和启动，不会自动启动
+- 默认用户名: neo4j
+- 默认密码: 12345678
+- 请确保Neo4j服务器在启动应用前已经运行
+
+安装Neo4j：
+- 下载地址: https://neo4j.com/download/
+- 或使用Docker: `docker run --name neo4j -p7474:7474 -p7687:7687 -d neo4j:latest`
+
+配置选项（在config.yaml中）：
+```yaml
+neo4j:
+  auto_start: false         # 是否自动启动neo4j（暂不支持）
+  data_dir: ./neo4j_data    # 数据存储目录
+  host: 127.0.0.1          # 监听地址
+  port: 7687               # Bolt协议端口
+  http_port: 7474          # HTTP端口
+```
 
 ### milvus
 Milvus会在启动main.py时自动安装和启动。

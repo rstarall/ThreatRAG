@@ -18,3 +18,10 @@ milvus:
   data_dir: ./milvus_lite
   host: 127.0.0.1
   port: 19530
+
+neo4j:
+  auto_start: false
+  data_dir: ./neo4j_data
+  host: 127.0.0.1
+  port: 7687
+  http_port: 7474

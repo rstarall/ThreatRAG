@@ -1,5 +1,4 @@
 import uvicorn
-from rag.api.server import fastapi_server
 import threading
 from rag.vector.vector_database import create_vector_database_instance
 import yaml
@@ -47,6 +46,8 @@ def stop_milvus():
 
 def start_server(host = "0.0.0.0", port = 8000):
     """start the fastapi server"""
+    # 延迟导入，确保在Milvus启动后再导入
+    from rag.api.server import fastapi_server
     uvicorn.run(fastapi_server, host=host, port=port)
 
 # def start_vector_database(path = "/rag/data/vector_db"):
