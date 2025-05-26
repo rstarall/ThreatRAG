@@ -1,0 +1,195 @@
+<Entitys>
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>APT-29</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>Cozy Bear</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="country">Russia</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>Gameover Zeus</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>CryptoLocker</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0040</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>Evgeniy Bogachev</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>attacker</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>BlackPoS</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0006</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>Target</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="industry">Retail</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>PlugX</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>GOBLIN PANDA</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+        <Properties>
+            <Property name="country">China</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_9</EntityId>
+        <EntityName>HURRICANE PANDA</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>5</Time>
+        </Times>
+        <Properties>
+            <Property name="country">China</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_10</EntityId>
+        <EntityName>CVE-2014-4113</EntityName>
+        <EntityType>vul</EntityType>
+        <EntitySubType>cve</EntitySubType>
+        <Labels>
+            <Label>TA0004</Label>
+        </Labels>
+        <Times>
+            <Time>5</Time>
+        </Times>
+    </Entity>
+</Entitys>
+<Relationships>
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>APT-29</Source>
+        <Target>Gameover Zeus</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>APT-29</Source>
+        <Target>CryptoLocker</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Evgeniy Bogachev</Source>
+        <Target>Gameover Zeus</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>APT-29</Source>
+        <Target>Target</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>GOBLIN PANDA</Source>
+        <Target>PlugX</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>HURRICANE PANDA</Source>
+        <Target>CVE-2014-4113</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>PlugX</Source>
+        <Target>GOBLIN PANDA</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
+        <RelationshipType>exploit</RelationshipType>
+        <Source>CVE-2014-4113</Source>
+        <Target>Windows System</Target>
+    </Relationship>
+</Relationships>

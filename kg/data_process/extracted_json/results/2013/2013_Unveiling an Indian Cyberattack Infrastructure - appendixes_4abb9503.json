@@ -1,0 +1,207 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT-29",
+            "EntityVariantNames": [
+                "HangOver Group",
+                "Indian Cyberattack Infrastructure"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "India",
+                "operation": "Operation Hangover"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Operation Hangover",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "observe_time": "2013",
+                "report_name": "2013_Unveiling an Indian Cyberattack Infrastructure - appendixes_4abb9503"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "HangOver 1.2.2",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "00bd9447c13afbbb7140bef94e24b535",
+                "type": "C++ uploader"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "HangOver 1.5.7",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "C++ uploader"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "chkpoint.info",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "sonificaton.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "109.203.110.103",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "5.34.242.129",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "msupl.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "00bd9447c13afbbb7140bef94e24b535"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Pending_Electricity_Bill_(December-January).pdf.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "681757936109f7c6e65197fdbb6a8655",
+                "C2": "chkpoint.info"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation Hangover",
+            "Target": "APT-29"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "HangOver 1.2.2"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "HangOver 1.5.7"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "HangOver 1.2.2",
+            "Target": "chkpoint.info"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "HangOver 1.2.2",
+            "Target": "msupl.exe"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "HangOver 1.5.7",
+            "Target": "sonificaton.com"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "belong_to",
+            "Source": "chkpoint.info",
+            "Target": "109.203.110.103"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "belong_to",
+            "Source": "sonificaton.com",
+            "Target": "5.34.242.129"
+        }
+    ]
+}

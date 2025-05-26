@@ -1,0 +1,402 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT3",
+            "EntityVariantNames": [
+                "UPS"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0005",
+                "TA0007",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Operation Double Tap",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0005",
+                "TA0007",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "2014-11-19",
+                "observe_time": "2014",
+                "report_name": "2014_OperationDoubleTap_1b5ca0d8"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "CVE-2014-6332",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "description": "Windows OLE Automation Array Remote Code Execution vulnerability",
+                "disclosure_date": "2014-11-11"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CVE-2014-4113",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0004"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "description": "Privilege escalation vulnerability",
+                "disclosure_date": "2014-10-14"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Spearphishing Email",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "subject": "One Month's Free Membership for The PLAYBOY CLUB"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "hxxp://join.playboysplus.com/signup/",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "VBScript",
+            "EntityType": "file",
+            "EntitySubType": "code",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "function": "runmumaa()"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "install.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "MD5": "5a0c4e1925c76a959ab0588f683ab437",
+                "size": "46592 bytes",
+                "compile_time": "2014-11-19 08:55:10Z",
+                "import_hash": "6b8611f8148a6b51e37fd68e75b6a81c",
+                "pdb": "c:\\Users\\aa\\Documents\\Visual Studio 2008\\Projects\\MShell\\Release\\MShell.pdb"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "doc.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0004"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "MD5": "492a839a3bf9c61b7065589a18c5aa8d",
+                "size": "12288 bytes",
+                "import_hash": "9342d18e7d315117f23db7553d59a9d1",
+                "pdb": "c:\\Users\\aa\\Documents\\Visual Studio 2008\\Projects\\4113\\Release\\4113.pdb"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "test.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "MD5": "5c08957f05377004376e6a622406f9aa",
+                "size": "11264 bytes",
+                "compile_time": "2014-11-18 10:49:23Z",
+                "import_hash": "f34d5f2d4577ed6d9ceec516c1f5a744",
+                "pdb": "C:\\Users\\aa\\Documents\\Visual Studio 2010\\Projects\\MyRat\\Client\\Client\\obj\\x86\\Release\\Client.pdb"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "192.157.198.103",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "7"
+            ],
+            "Properties": {
+                "port": "1913"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "192.184.60.229",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "7"
+            ],
+            "Properties": {
+                "port": "81"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "securitywap.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "7"
+            ],
+            "Properties": {
+                "ip": "192.184.60.229"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "104.151.248.173",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "join.playboysplus.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "ip": "104.151.248.173"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "walterclean.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "7"
+            ],
+            "Properties": {
+                "ip": "104.151.248.173"
+            }
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "Target Organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation Double Tap",
+            "Target": "APT3"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Operation Double Tap",
+            "Target": "Target Organizations"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "APT3",
+            "Target": "Spearphishing Email"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "APT3",
+            "Target": "CVE-2014-6332"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "APT3",
+            "Target": "CVE-2014-4113"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "APT3",
+            "Target": "Target Organizations"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Spearphishing Email",
+            "Target": "hxxp://join.playboysplus.com/signup/"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "VBScript",
+            "Target": "install.exe"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "doc.exe",
+            "Target": "test.exe"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "belong_to",
+            "Source": "securitywap.com",
+            "Target": "192.184.60.229"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "join.playboysplus.com",
+            "Target": "104.151.248.173"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "belong_to",
+            "Source": "walterclean.com",
+            "Target": "104.151.248.173"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2014-6332",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2014-4113",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "affect",
+            "Source": "install.exe",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "affect",
+            "Source": "doc.exe",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "affect",
+            "Source": "test.exe",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "has",
+            "Source": "Target Organizations",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "trigger",
+            "Source": "Target Organizations",
+            "Target": "Spearphishing Email"
+        }
+    ]
+}

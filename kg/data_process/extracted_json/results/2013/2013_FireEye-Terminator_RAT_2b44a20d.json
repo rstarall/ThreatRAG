@@ -1,0 +1,325 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Terminator RAT",
+            "EntityVariantNames": [
+                "FakeM RAT"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "description": "Remote Access Tool with evasive tactics"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "APT actors",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "103.doc",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "md5": "a130b2e578d82409021b3c9ceda657b7",
+                "type": "Malicious Word Document"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CVE-2012-0158",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "impact": "Microsoft Office"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "DW20.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "md5": "7B18E1F0CE0CB7EEA990859EF6DB810C"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "svchost_.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "sss.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "md5": "93F51B957DA86BDE1B82934E73B10D9D"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "liumingzhen.zapto.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "ip": "123.51.208.69"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "liumingzhen.myftp.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "ip": "123.51.208.69"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "catlovers.25u.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "ip": "123.51.208.142"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Taiwan entities",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "region": "Taiwan"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Microsoft Office",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Terminator RAT Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "observe_time": "2013",
+                "report_name": "2013_FireEye-Terminator_RAT_2b44a20d"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Terminator RAT Attack Event",
+            "Target": "APT actors"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Terminator RAT Attack Event",
+            "Target": "Taiwan entities"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "APT actors",
+            "Target": "Terminator RAT"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "APT actors",
+            "Target": "103.doc"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "APT actors",
+            "Target": "CVE-2012-0158"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "APT actors",
+            "Target": "Taiwan entities"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2012-0158",
+            "Target": "Microsoft Office"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "103.doc",
+            "Target": "DW20.exe"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "DW20.exe",
+            "Target": "svchost_.exe"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "DW20.exe",
+            "Target": "sss.exe"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Terminator RAT",
+            "Target": "svchost_.exe"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Terminator RAT",
+            "Target": "sss.exe"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "Terminator RAT",
+            "Target": "liumingzhen.zapto.org"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "Terminator RAT",
+            "Target": "liumingzhen.myftp.org"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "Terminator RAT",
+            "Target": "catlovers.25u.com"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "has",
+            "Source": "Taiwan entities",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "has",
+            "Source": "Taiwan entities",
+            "Target": "Microsoft Office"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "trigger",
+            "Source": "Taiwan entities",
+            "Target": "103.doc"
+        }
+    ]
+}

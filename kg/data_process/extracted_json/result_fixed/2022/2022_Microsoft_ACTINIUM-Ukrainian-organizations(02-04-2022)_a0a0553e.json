@@ -1,0 +1,290 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "ACTINIUM",
+            "EntityVariantNames": [
+                "DEV-0157",
+                "Gamaredon"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Russia",
+                "affiliation": "FSB",
+                "location": "Crimea"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Ukrainian Organizations Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "Since October 2021",
+                "sector": "Government, Military, NGOs, Judiciary, Law Enforcement",
+                "observe_time": "2022",
+                "report_name": "2022_Microsoft_ACTINIUM-Ukrainian-organizations(02-04-2022)_a0a0553e"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Ukrainian Organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "sector": "Government, Military, NGOs, Judiciary, Law Enforcement"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Spear-phishing with Remote Templates",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "description": "Emails with malicious macro attachments using remote template injection"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "who-int[.]info",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "usa-national[.]info",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Pterodo",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "QuietSieve",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009",
+                "TA0010"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "PowerPunch",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "jolotras[.]ru",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "moolin[.]ru",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "UltraVNC",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "0afce2247ffb53783259b7dc5a0afe04d918767c991db2da906277898fd80be5",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "51b9e03db53b2d583f66e47af56bb0146630f8a175d4a439369045038d6d2a45",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Ukrainian Organizations Attack",
+            "Target": "ACTINIUM"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Ukrainian Organizations Attack",
+            "Target": "Ukrainian Organizations"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "ACTINIUM",
+            "Target": "Ukrainian Organizations"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "ACTINIUM",
+            "Target": "Spear-phishing with Remote Templates"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "ACTINIUM",
+            "Target": "Pterodo"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "ACTINIUM",
+            "Target": "QuietSieve"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "ACTINIUM",
+            "Target": "PowerPunch"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "ACTINIUM",
+            "Target": "UltraVNC"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Spear-phishing with Remote Templates",
+            "Target": "who-int[.]info"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Spear-phishing with Remote Templates",
+            "Target": "usa-national[.]info"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Pterodo",
+            "Target": "jolotras[.]ru"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "QuietSieve",
+            "Target": "moolin[.]ru"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "QuietSieve",
+            "Target": "0afce2247ffb53783259b7dc5a0afe04d918767c991db2da906277898fd80be5"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "Pterodo",
+            "Target": "51b9e03db53b2d583f66e47af56bb0146630f8a175d4a439369045038d6d2a45"
+        }
+    ]
+}

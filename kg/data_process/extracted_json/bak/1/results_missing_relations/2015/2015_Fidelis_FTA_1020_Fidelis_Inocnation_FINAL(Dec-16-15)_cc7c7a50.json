@@ -1,0 +1,130 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "INOCNATION Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "discovery_date": "2015"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Initial Launcher/Dropper",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Properties": {
+                "md5": "A7BD555866AE1C161F78630A638850E7",
+                "type": "EXE"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "RAT Installer",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Properties": {
+                "md5": "4F4BF27B738FF8F2A89D1BC487B054A8",
+                "type": "EXE"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Cisco AnyConnect Decoy",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "md5": "2F7E5F91BE1F5BE2B2F4FDA0910A4C16",
+                "type": "EXE"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "RAT Implant/Payload",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "md5": "75D3D1F23628122A64A2F1B7EF33F5CF",
+                "type": "DLL",
+                "filename": "adobe.dat"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "inocnation[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "ip": "87.198.23.40"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "mail.cbppnews[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "ip": "202.172.32.160"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Cisco Systems, Inc.",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "product": "Cisco AnyConnect Mobility Client"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Victim System",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        }
+    ],
+    "Relationships": []
+}

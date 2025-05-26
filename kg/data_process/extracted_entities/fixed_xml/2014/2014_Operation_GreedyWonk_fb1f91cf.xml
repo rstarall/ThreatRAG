@@ -1,0 +1,381 @@
+<Entitys>
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>Operation GreedyWonk</EntityName>
+        <EntityType>event</EntityType>
+        <EntitySubType>event</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="date">February 2014</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>CVE-2014-0502</EntityName>
+        <EntityType>vul</EntityType>
+        <EntitySubType>cve</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="vendor">Adobe</Property>
+            <Property name="product">Flash Player</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>PlugX/Kaba</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="hash">507aed81e3106da8c50efb3a045c5e2b</Property>
+            <Property name="type">RAT</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>Peter G. Peterson Institute for International Economics</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>www.piie.com</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="sector">Nonprofit</Property>
+            <Property name="focus">International Economics</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>American Research Center in Egypt</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>www.arce.org</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="sector">Nonprofit</Property>
+            <Property name="focus">Cultural Research</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>Smith Richardson Foundation</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>www.srf.org</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="sector">Nonprofit</Property>
+            <Property name="focus">Public Policy</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>74.126.177.68</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>ip</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>192.74.246.219</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>ip</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_9</EntityId>
+        <EntityName>103.246.246.103</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>ip</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_10</EntityId>
+        <EntityName>java.ns1.name</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_11</EntityId>
+        <EntityName>adservice.no-ip.org</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_12</EntityId>
+        <EntityName>wmi.ns01.us</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_13</EntityId>
+        <EntityName>Windows XP</EntityName>
+        <EntityType>env</EntityType>
+        <EntitySubType>os</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_14</EntityId>
+        <EntityName>Windows 7</EntityName>
+        <EntityType>env</EntityType>
+        <EntitySubType>os</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_15</EntityId>
+        <EntityName>Java 1.6</EntityName>
+        <EntityType>env</EntityType>
+        <EntitySubType>software</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_16</EntityId>
+        <EntityName>Microsoft Office 2007/2010</EntityName>
+        <EntityType>env</EntityType>
+        <EntitySubType>software</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_17</EntityId>
+        <EntityName>Poison Ivy</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_18</EntityId>
+        <EntityName>Unknown Threat Actor</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>attacker</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="capability">Zero-day access</Property>
+        </Properties>
+    </Entity>
+</Entitys>
+<Relationships>
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Operation GreedyWonk</Source>
+        <Target>Unknown Threat Actor</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Operation GreedyWonk</Source>
+        <Target>Peter G. Peterson Institute for International Economics</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Operation GreedyWonk</Source>
+        <Target>American Research Center in Egypt</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Operation GreedyWonk</Source>
+        <Target>Smith Richardson Foundation</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Unknown Threat Actor</Source>
+        <Target>CVE-2014-0502</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Unknown Threat Actor</Source>
+        <Target>PlugX/Kaba</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Unknown Threat Actor</Source>
+        <Target>Peter G. Peterson Institute for International Economics</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Unknown Threat Actor</Source>
+        <Target>American Research Center in Egypt</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_9</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Unknown Threat Actor</Source>
+        <Target>Smith Richardson Foundation</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_10</RelationshipId>
+        <RelationshipType>exploit</RelationshipType>
+        <Source>CVE-2014-0502</Source>
+        <Target>Windows XP</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_11</RelationshipId>
+        <RelationshipType>exploit</RelationshipType>
+        <Source>CVE-2014-0502</Source>
+        <Target>Windows 7</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_12</RelationshipId>
+        <RelationshipType>exploit</RelationshipType>
+        <Source>CVE-2014-0502</Source>
+        <Target>Java 1.6</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_13</RelationshipId>
+        <RelationshipType>exploit</RelationshipType>
+        <Source>CVE-2014-0502</Source>
+        <Target>Microsoft Office 2007/2010</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_14</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>PlugX/Kaba</Source>
+        <Target>java.ns1.name</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_15</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>PlugX/Kaba</Source>
+        <Target>adservice.no-ip.org</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_16</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>PlugX/Kaba</Source>
+        <Target>wmi.ns01.us</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_17</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>java.ns1.name</Source>
+        <Target>74.126.177.68</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_18</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>wmi.ns01.us</Source>
+        <Target>192.74.246.219</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_19</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>wmi.ns01.us</Source>
+        <Target>103.246.246.103</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_20</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Poison Ivy</Source>
+        <Target>wmi.ns01.us</Target>
+    </Relationship>
+</Relationships>

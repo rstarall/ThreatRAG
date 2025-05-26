@@ -1,0 +1,195 @@
+<Entitys>
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>Foreign Intelligence Agency</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0010</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="suspected_country">Russia</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>2008 US Military Cyberattack</EntityName>
+        <EntityType>event</EntityType>
+        <EntitySubType>event</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0010</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="time">2008</Property>
+            <Property name="location">Middle East</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>US Military</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>Malicious Flash Drive</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>tool</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>US Central Command Network</EntityName>
+        <EntityType>asset</EntityType>
+        <EntitySubType>network</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>Operation Buckshot Yankee</EntityName>
+        <EntityType>event</EntityType>
+        <EntitySubType>event</EntitySubType>
+        <Labels>
+            <Label>TA0005</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+        <Properties>
+            <Property name="time">November 2008</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>William J. Lynn III</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>user</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="position">Deputy Defense Secretary</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>Malicious Code</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_9</EntityId>
+        <EntityName>US Military Command and Control System</EntityName>
+        <EntityType>asset</EntityType>
+        <EntitySubType>bussiness</EntitySubType>
+        <Labels>
+            <Label>TA0010</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+    </Entity>
+</Entitys>
+<Relationships>
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>2008 US Military Cyberattack</Source>
+        <Target>Foreign Intelligence Agency</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>2008 US Military Cyberattack</Source>
+        <Target>US Military</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Foreign Intelligence Agency</Source>
+        <Target>Malicious Flash Drive</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Foreign Intelligence Agency</Source>
+        <Target>Malicious Code</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Foreign Intelligence Agency</Source>
+        <Target>US Military</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Foreign Intelligence Agency</Source>
+        <Target>US Central Command Network</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Foreign Intelligence Agency</Source>
+        <Target>US Military Command and Control System</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
+        <RelationshipType>has</RelationshipType>
+        <Source>US Military</Source>
+        <Target>US Central Command Network</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_9</RelationshipId>
+        <RelationshipType>has</RelationshipType>
+        <Source>US Military</Source>
+        <Target>US Military Command and Control System</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_10</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Malicious Flash Drive</Source>
+        <Target>Malicious Code</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_11</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Operation Buckshot Yankee</Source>
+        <Target>US Military</Target>
+    </Relationship>
+</Relationships>

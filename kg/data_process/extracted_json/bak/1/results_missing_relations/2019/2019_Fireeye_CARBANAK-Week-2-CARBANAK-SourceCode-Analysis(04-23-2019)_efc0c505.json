@@ -1,0 +1,345 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "CARBANAK",
+            "EntityVariantNames": [
+                "Anunak",
+                "bot"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0005",
+                "TA0006",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "FIN7",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Cobalt Strike",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Mimikatz",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0006"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2013-3660",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CVE-2013-5065",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0004"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "CVE-2014-4113",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0004"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "CVE-2010-4398",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0004"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "104.193.252.151",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "hostname": "vds2.system-host[.]net"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "185.180.196.35",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "hostname": "customer.clientshostname[.]com"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "213.227.155.8",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "94.156.133.69",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "185.174.172.241",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "hostname": "vds9992.hyperhost[.]name"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "109.230.199.227",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "comixed[.]org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "194.146.180.40",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "aaaabbbbccccc[.]org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "stats10-google[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "192.168.0.100",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "port": "700"
+            }
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "80.84.49.50",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "port": "443"
+            }
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "52.11.125.44",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "port": "443"
+            }
+        },
+        {
+            "EntityId": "entity_22",
+            "EntityName": "85.25.84.223",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_23",
+            "EntityName": "qwqreererwere[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_24",
+            "EntityName": "akamai-technologies[.]org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_25",
+            "EntityName": "37.1.212.100",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "port": "700"
+            }
+        },
+        {
+            "EntityId": "entity_26",
+            "EntityName": "188.138.98.105",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "port": "710"
+            }
+        },
+        {
+            "EntityId": "entity_27",
+            "EntityName": "hhklhlkhkjhjkjk[.]org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_28",
+            "EntityName": "aaa.stage.4463714.news.meteonovosti[.]info",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_29",
+            "EntityName": "193.203.48.23",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "port": "800"
+            }
+        },
+        {
+            "EntityId": "entity_30",
+            "EntityName": "Test Company certificate",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0005"
+            ],
+            "Properties": {
+                "subject": "CN=Test Company",
+                "issuer": "CN=Test Company",
+                "serial": "834C6C3985506D8740FB56D26E385E8A",
+                "thumbprint": "0BCBD1C184809164A9E83F308AD6FF4DBAFDA22C"
+            }
+        },
+        {
+            "EntityId": "entity_31",
+            "EntityName": "1He9Psa7LzB1wiRn",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0006"
+            ]
+        },
+        {
+            "EntityId": "entity_32",
+            "EntityName": "1234567812345678",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0006"
+            ]
+        },
+        {
+            "EntityId": "entity_33",
+            "EntityName": "cbvhX3tJ0k8HwnMy",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0006"
+            ]
+        }
+    ],
+    "Relationships": []
+}

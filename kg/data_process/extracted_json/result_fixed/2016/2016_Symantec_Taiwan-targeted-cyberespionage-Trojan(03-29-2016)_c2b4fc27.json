@@ -1,0 +1,246 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Budminer",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Taiwan Cyberespionage Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "August 2015",
+                "observe_time": "2016",
+                "report_name": "2016_Symantec_Taiwan-targeted-cyberespionage-Trojan(03-29-2016)_c2b4fc27"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Taiwan Organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Taiwan"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Backdoor.Dripion",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Backdoor Trojan",
+                "function": "Information stealing"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Downloader.Blugger",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "hash": "260f19ef39d56373bb5590346d2c1811"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Trojan.Taidoor",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "hyydn.nortonsoft.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "mhysix.mcfeesoft.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "198.144.100.73",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "208.61.229.10",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "classic-blog.[REDACTED DOMAIN 1].com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "nasyzk.[REDACTED DOMAIN 2].net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Taiwan Cyberespionage Event",
+            "Target": "Budminer"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Taiwan Cyberespionage Event",
+            "Target": "Taiwan Organizations"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Budminer",
+            "Target": "Backdoor.Dripion"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Budminer",
+            "Target": "Downloader.Blugger"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Budminer",
+            "Target": "Trojan.Taidoor"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "Budminer",
+            "Target": "Taiwan Organizations"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Downloader.Blugger",
+            "Target": "Backdoor.Dripion"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Downloader.Blugger",
+            "Target": "Trojan.Taidoor"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "belong_to",
+            "Source": "hyydn.nortonsoft.com",
+            "Target": "Backdoor.Dripion"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "belong_to",
+            "Source": "mhysix.mcfeesoft.com",
+            "Target": "Backdoor.Dripion"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "classic-blog.[REDACTED DOMAIN 1].com",
+            "Target": "Downloader.Blugger"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "belong_to",
+            "Source": "nasyzk.[REDACTED DOMAIN 2].net",
+            "Target": "Downloader.Blugger"
+        }
+    ]
+}

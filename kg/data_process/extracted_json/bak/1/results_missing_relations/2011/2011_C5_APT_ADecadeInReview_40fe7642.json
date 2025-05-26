@@ -1,0 +1,126 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT",
+            "EntityVariantNames": [
+                "Advanced Persistent Threat"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "description": "Well-resourced, highly capable and relentless class of hacker"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Moonlight Maze",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0010"
+            ],
+            "Properties": {
+                "time": "March 1998-2000",
+                "targets": "Pentagon, NASA, US Energy Department, research laboratories, private universities"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Stuxnet",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0040"
+            ],
+            "Properties": {
+                "type": "Worm",
+                "target": "Industrial control systems"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Operation Aurora",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0010"
+            ],
+            "Properties": {
+                "time": "Mid December 2009",
+                "targets": "Google, Adobe Systems, other high profile companies"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "GhostNet",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0009"
+            ],
+            "Properties": {
+                "time": "29 March 2009",
+                "targets": "1295 computers in 103 countries"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Social Engineering",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "description": "Techniques to exploit human vulnerabilities"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Zero Day Exploit",
+            "EntityType": "vul",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "description": "Attack capability that takes advantage of unknown software flaws"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "RSA Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0006"
+            ],
+            "Properties": {
+                "time": "17 March 2011",
+                "method": "Socially engineered emails with malicious attachments"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "USB Flash Drive",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ]
+        }
+    ],
+    "Relationships": []
+}

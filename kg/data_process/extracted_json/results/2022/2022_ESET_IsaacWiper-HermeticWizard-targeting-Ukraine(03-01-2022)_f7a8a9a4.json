@@ -1,0 +1,308 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Unknown Threat Actor",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0042",
+                "TA0001",
+                "TA0008",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Ukraine Cyberattack February 2022",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0008",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "February 23-26, 2022",
+                "location": "Ukraine",
+                "observe_time": "2022",
+                "report_name": "2022_ESET_IsaacWiper-HermeticWizard-targeting-Ukraine(03-01-2022)_f7a8a9a4"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Ukrainian Organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "count": "Multiple"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Ukrainian Governmental Network",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "HermeticWiper",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "912342F1C840A42F6B74132F8A7C4FFE7D40FB77",
+                "first_seen": "February 23, 2022"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "HermeticWizard",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "3C54C9A49A8DDCA02189FE15FEA52FE24F41A86F"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "HermeticRansom",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "F32D791EC9E6385A91B45942C230F52AFF1626DF"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "IsaacWiper",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "AD602039C6F0237D4A997D5640E92CE5E2B3BBA3",
+                "first_seen": "February 24, 2022"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Impacket",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "RemCom",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "23873BF2670CF64C2440058130548D4E4DA412DD"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "GPO Deployment",
+            "EntityType": "vul",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Hermetica Digital Ltd Certificate",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "issued": "April 13, 2021",
+                "revoked": "February 24, 2022"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "EaseUS Partition Master Drivers",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hashes": "\n                0E84AFF18D42FC691CB1104018F44403C325AD21,\n                379FF9236F0F72963920232F4A0782911A6BD7F7,\n                87BD9404A68035F8D70804A5159A37D1EB0A3568,\n                B33DD3EE12F9E6C150C964EA21147BF6B7F7AFA9\n            "
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Ukraine Cyberattack February 2022",
+            "Target": "Unknown Threat Actor"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Ukraine Cyberattack February 2022",
+            "Target": "Ukrainian Organizations"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "Ukraine Cyberattack February 2022",
+            "Target": "Ukrainian Governmental Network"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "target",
+            "Source": "Unknown Threat Actor",
+            "Target": "Ukrainian Organizations"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "Unknown Threat Actor",
+            "Target": "Ukrainian Governmental Network"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Unknown Threat Actor",
+            "Target": "HermeticWiper"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Unknown Threat Actor",
+            "Target": "HermeticWizard"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Unknown Threat Actor",
+            "Target": "HermeticRansom"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Unknown Threat Actor",
+            "Target": "IsaacWiper"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "Unknown Threat Actor",
+            "Target": "Impacket"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "Unknown Threat Actor",
+            "Target": "RemCom"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "use",
+            "Source": "Unknown Threat Actor",
+            "Target": "Hermetica Digital Ltd Certificate"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "use",
+            "Source": "Unknown Threat Actor",
+            "Target": "GPO Deployment"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "HermeticWiper",
+            "Target": "EaseUS Partition Master Drivers"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "HermeticWizard",
+            "Target": "HermeticWiper"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "HermeticRansom",
+            "Target": "HermeticWiper"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "affect",
+            "Source": "HermeticWiper",
+            "Target": "Ukrainian Organizations"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "affect",
+            "Source": "IsaacWiper",
+            "Target": "Ukrainian Governmental Network"
+        }
+    ]
+}

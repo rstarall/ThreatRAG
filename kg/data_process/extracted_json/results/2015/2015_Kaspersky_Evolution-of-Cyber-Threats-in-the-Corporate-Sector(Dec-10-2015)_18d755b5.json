@@ -1,0 +1,359 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Carbanak",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0006",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "target": "Financial institutions",
+                "region": "Global",
+                "loss": "$1 billion"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Wild Neutron",
+            "EntityVariantNames": [
+                "Jripbot",
+                "Morpho"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0009"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "target": "Multiple industries",
+                "technique": "Stolen certificate"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Winnti",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "origin": "China",
+                "target": "Gaming, pharmaceutical, telecom"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Desert Falcons",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0009"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "region": "Middle East",
+                "victims": "300"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Blue Termite",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "target": "Japan"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Scatter",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0040"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Ransomware",
+                "extension": ".vault"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Onion",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0040"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Ransomware",
+                "network": "Tor"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Cryakl",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0040"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Ransomware",
+                "language": "Delphi"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Trojan-Ransom.Linux.Cryptor",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0040"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Linux ransomware",
+                "target": "Web servers"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Stolen Acer certificate",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Stolen Japanese certificate",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Financial institutions",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0006"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Corporate networks",
+            "EntityType": "asset",
+            "EntitySubType": "network",
+            "Labels": [
+                "TA0001",
+                "TA0008"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "POS terminals",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Office application vulnerabilities",
+            "EntityType": "vul",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "frequency": "3x more than home users"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Adobe Flash Player vulnerabilities",
+            "EntityType": "vul",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "Android vulnerabilities",
+            "EntityType": "vul",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "target",
+            "Source": "Carbanak",
+            "Target": "Financial institutions"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Wild Neutron",
+            "Target": "Stolen Acer certificate"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Winnti",
+            "Target": "Stolen Japanese certificate"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "target",
+            "Source": "Wild Neutron",
+            "Target": "Corporate networks"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "Winnti",
+            "Target": "Corporate networks"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "exploit",
+            "Source": "Office application vulnerabilities",
+            "Target": "Corporate networks"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "exploit",
+            "Source": "Adobe Flash Player vulnerabilities",
+            "Target": "Corporate networks"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "exploit",
+            "Source": "Android vulnerabilities",
+            "Target": "Corporate networks"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "APT groups",
+            "Target": "Scatter"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "APT groups",
+            "Target": "Onion"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "APT groups",
+            "Target": "Cryakl"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "target",
+            "Source": "APT groups",
+            "Target": "POS terminals"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "Scatter",
+            "Target": "Office application vulnerabilities"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "Onion",
+            "Target": "Adobe Flash Player vulnerabilities"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "Cryakl",
+            "Target": "Android vulnerabilities"
+        }
+    ]
+}

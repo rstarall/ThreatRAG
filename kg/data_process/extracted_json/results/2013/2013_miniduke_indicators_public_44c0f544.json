@@ -1,0 +1,268 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT-29",
+            "EntityVariantNames": [
+                "MiniDuke"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "MiniDuke Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "February 2013",
+                "observe_time": "2013",
+                "report_name": "2013_miniduke_indicators_public_44c0f544"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Government Agency",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Hungary"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "bg_aefk.gif",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "3e71a9f492101bde28cf9f024d87b496",
+                "type": "GIF file"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "bg_aefk.gif.dec",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "a4ad6b55b1bc9e16123de1388f6ef9bf",
+                "type": "Decrypted file"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "1109821546.gif",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "07a9975d7d96ff3b56de024ab2017582",
+                "type": "GIF file"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "1109821546.gif_dec",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "738c60fff066934b6f33e368cfe9a88c",
+                "type": "Decrypted file"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "action_plan.pdf",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "hash": "3668b018b4bb080d1875aee346e3650a",
+                "country": "Belgium"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "arabooks.ch",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "ip": "194.38.160.153",
+                "location": "Switzerland"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "news.grouptumbler.com",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "ip": "200.63.46.23",
+                "location": "Panama"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Cobalt Strike",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "rundll32.exe",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "MiniDuke Attack Event",
+            "Target": "APT-29"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "MiniDuke Attack Event",
+            "Target": "Government Agency"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "bg_aefk.gif"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "1109821546.gif"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "action_plan.pdf"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "Cobalt Strike"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "rundll32.exe"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "Government Agency"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "bg_aefk.gif",
+            "Target": "bg_aefk.gif.dec"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "1109821546.gif",
+            "Target": "1109821546.gif_dec"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "bg_aefk.gif",
+            "Target": "ar abooks.ch"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "belong_to",
+            "Source": "1109821546.gif",
+            "Target": "news.grouptumbler.com"
+        }
+    ]
+}

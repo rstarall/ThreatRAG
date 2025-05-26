@@ -1,0 +1,234 @@
+<Entitys>
+    <!-- Threat Actors -->
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>APT28</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>Sednit</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="country">Russia</Property>
+            <Property name="affiliation">GRU</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>APT29</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>Cozy Bear</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="country">Russia</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Attack Event -->
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>Russian Nation State Targeting Campaign</EntityName>
+        <EntityType>event</EntityType>
+        <EntitySubType>event</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="timeframe">2015-2017</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Victim Organizations -->
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>United Nations</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>Ministry of Foreign Affairs India</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>NATO</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+
+    <!-- Malicious Domains -->
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>dpko[.]info</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="creation_date">2016-10-29</Property>
+            <Property name="target">un.org</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>afceaint[.]org</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="creation_date">2016-11-02</Property>
+            <Property name="target">afcea.org</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_9</EntityId>
+        <EntityName>jimin-jp[.]biz</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="creation_date">2016-12-27</Property>
+            <Property name="target">jimin.jp</Property>
+        </Properties>
+    </Entity>
+
+    <!-- IP Addresses -->
+    <Entity>
+        <EntityId>entity_10</EntityId>
+        <EntityName>216.155.143.28</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>ip</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_11</EntityId>
+        <EntityName>167.114.35.70</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>ip</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+    </Entity>
+</Entitys>
+<Relationships>
+    <!-- Actor involvement -->
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Russian Nation State Targeting Campaign</Source>
+        <Target>APT28</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Russian Nation State Targeting Campaign</Source>
+        <Target>APT29</Target>
+    </Relationship>
+
+    <!-- Targeting relationships -->
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>APT28</Source>
+        <Target>United Nations</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>APT28</Source>
+        <Target>NATO</Target>
+    </Relationship>
+
+    <!-- IOC usage -->
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>APT28</Source>
+        <Target>dpko[.]info</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>APT28</Source>
+        <Target>afceaint[.]org</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>APT28</Source>
+        <Target>216.155.143.28</Target>
+    </Relationship>
+
+    <!-- Domain to IP relationships -->
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>afceaint[.]org</Source>
+        <Target>216.155.143.28</Target>
+    </Relationship>
+</Relationships>

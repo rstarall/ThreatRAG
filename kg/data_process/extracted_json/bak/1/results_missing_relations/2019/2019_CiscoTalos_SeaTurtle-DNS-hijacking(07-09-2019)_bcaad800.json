@@ -1,0 +1,120 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Sea Turtle",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0005",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Sea Turtle DNS Hijacking Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0005",
+                "TA0011"
+            ],
+            "Properties": {
+                "time": "2019"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "ICS-Forth",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "type": "ccTLD for Greece"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "rootdnservers[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001",
+                "TA0011"
+            ],
+            "Properties": {
+                "registration_date": "April 5, 2019",
+                "registrar": "NameCheap"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "45[.]32[.]100[.]62",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "ns1[.]intersecdns[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "95[.]179[.]150[.]101",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "DNS Hijacking Technique",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001",
+                "TA0005"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "PHP-Proxy",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Government Organization in Middle East",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Government Organization in North Africa",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        }
+    ],
+    "Relationships": []
+}

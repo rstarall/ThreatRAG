@@ -1,0 +1,371 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT-29",
+            "EntityVariantNames": [
+                "Cozy Bear"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Enfal",
+            "EntityVariantNames": [
+                "EtenFalcon"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "RegSubsDat",
+            "EntityVariantNames": [
+                "RegSubDat",
+                "Kirpich"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Murcy",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "windowsaupdate.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "windowsaupdate.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "asia-online.us",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "jeno_1980@hotmail.com",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "king_public@hotmail.com",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "123.120.96.0/19",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "114.248.80.0/20",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "114.248.96.0/20",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Government Ministries in Vietnam, Brunei, Myanmar",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Regional Petroleum Companies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Newspaper",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Government Ministries in Europe and Middle East",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "Embassy in Mainland China",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "Nuclear Safety Agency",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "Sin Digoo Affair",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "February 29, 2012",
+                "url": "http://www.secureworks.com/research/threats/sindigoo/",
+                "observe_time": "2012",
+                "report_name": "2012_The_Sin_Digoo_Affair_8d96228c"
+            }
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "China Beijing Province Network (AS4808)",
+            "EntityType": "asset",
+            "EntitySubType": "network",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Sin Digoo Affair",
+            "Target": "APT-29"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "Enfal"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "RegSubsDat"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "Murcy"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "Enfal",
+            "Target": "windowsaupdate.net"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "RegSubsDat",
+            "Target": "asia-online.us"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Murcy",
+            "Target": "asia-online.us"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "belong_to",
+            "Source": "windowsaupdate.net",
+            "Target": "China Beijing Province Network (AS4808)"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "belong_to",
+            "Source": "asia-online.us",
+            "Target": "China Beijing Province Network (AS4808)"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "Government Ministries in Vietnam, Brunei, Myanmar"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "Regional Petroleum Companies"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "Newspaper"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "Government Ministries in Europe and Middle East"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "Embassy in Mainland China"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "Nuclear Safety Agency"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "jeno_1980@hotmail.com",
+            "Target": "APT-29"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "king_public@hotmail.com",
+            "Target": "APT-29"
+        }
+    ]
+}

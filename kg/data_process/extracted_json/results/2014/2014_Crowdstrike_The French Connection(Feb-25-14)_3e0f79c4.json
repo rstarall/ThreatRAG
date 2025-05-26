@@ -1,0 +1,384 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "AURORA PANDA",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "French Aerospace Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "January 2014",
+                "observe_time": "2014",
+                "report_name": "2014_Crowdstrike_The French Connection(Feb-25-14)_3e0f79c4"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "VFW Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "observe_time": "2014",
+                "report_name": "2014_Crowdstrike_The French Connection(Feb-25-14)_3e0f79c4"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CVE-2014-0322",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "ZxShell",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Sakula",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "savmpet[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "gifas[.]assso[.]net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "173.252.252.204",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "secure[.]safran-group[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "oa[.]ameteksen[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "GIFAS",
+            "EntityVariantNames": [
+                "Groupement des industries françaises aéronautiques et spatiales"
+            ],
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Aerospace",
+                "country": "France"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Safran",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Aerospace",
+                "country": "France"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Snecma",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Aerospace",
+                "country": "France"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Capstone Turbine",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "industry": "Turbine Manufacturing",
+                "country": "US"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "CVE-2012-4792",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "61fe6f4cb2c54511f0804b1417ab3bd2",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "c869c75ed1998294af3c676bdbd56851",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "web[.]vipreclod[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "gifas[.]cechire[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "gifas[.]blogsite[.]org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "French Aerospace Attack Event",
+            "Target": "AURORA PANDA"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "VFW Attack Event",
+            "Target": "AURORA PANDA"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "AURORA PANDA",
+            "Target": "CVE-2014-0322"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "AURORA PANDA",
+            "Target": "ZxShell"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "AURORA PANDA",
+            "Target": "Sakula"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "AURORA PANDA",
+            "Target": "GIFAS"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "AURORA PANDA",
+            "Target": "Safran"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "AURORA PANDA",
+            "Target": "Snecma"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "AURORA PANDA",
+            "Target": "Capstone Turbine"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Sakula",
+            "Target": "oa[.]ameteksen[.]com"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Sakula",
+            "Target": "web[.]vipreclod[.]com"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "belong_to",
+            "Source": "secure[.]safran-group[.]com",
+            "Target": "Safran"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "belong_to",
+            "Source": "gifas[.]assso[.]net",
+            "Target": "GIFAS"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "belong_to",
+            "Source": "gifas[.]cechire[.]com",
+            "Target": "GIFAS"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "belong_to",
+            "Source": "gifas[.]blogsite[.]org",
+            "Target": "GIFAS"
+        }
+    ]
+}

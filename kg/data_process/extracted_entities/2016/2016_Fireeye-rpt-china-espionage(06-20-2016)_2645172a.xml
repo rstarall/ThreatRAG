@@ -1,0 +1,207 @@
+<Entitys>
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>APT-29</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>Cozy Bear</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0008</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="country">China</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>Xi Jinping</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>attacker</EntitySubType>
+        <Labels>
+            <Label>TA0043</Label>
+            <Label>TA0042</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="position">Chinese President</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>PLA Unit 61398</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0010</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>APT1</EntityName>
+        <EntityType>event</EntityType>
+        <EntitySubType>event</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0010</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="date">February 2013</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>CVE-2023-1234</EntityName>
+        <EntityType>vul</EntityType>
+        <EntitySubType>cve</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>Spear Phishing</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>method</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>U.S. Government Services Company</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>5</Time>
+        </Times>
+        <Properties>
+            <Property name="industry">Government Services</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>Semiconductor Firms</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0010</Label>
+        </Labels>
+        <Times>
+            <Time>6</Time>
+        </Times>
+        <Properties>
+            <Property name="industry">Semiconductor Manufacturing</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_9</EntityId>
+        <EntityName>Taiwanese News Organizations</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>7</Time>
+        </Times>
+        <Properties>
+            <Property name="industry">Media</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_10</EntityId>
+        <EntityName>Vietnamese Government</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>7</Time>
+        </Times>
+    </Entity>
+</Entitys>
+<Relationships>
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>APT1</Source>
+        <Target>PLA Unit 61398</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>APT-29</Source>
+        <Target>Spear Phishing</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>APT-29</Source>
+        <Target>U.S. Government Services Company</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>APT-29</Source>
+        <Target>Semiconductor Firms</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>APT-29</Source>
+        <Target>Taiwanese News Organizations</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>APT-29</Source>
+        <Target>Vietnamese Government</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipType>
+        <RelationshipType>use</RelationshipType>
+        <Source>PLA Unit 61398</Source>
+        <Target>CVE-2023-1234</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Spear Phishing</Source>
+        <Target>CVE-2023-1234</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_9</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>APT-29</Source>
+        <Target>Xi Jinping</Target>
+    </Relationship>
+</Relationships>

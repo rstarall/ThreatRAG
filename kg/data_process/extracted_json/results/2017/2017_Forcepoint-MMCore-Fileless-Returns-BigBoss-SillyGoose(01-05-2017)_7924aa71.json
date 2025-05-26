@@ -1,0 +1,413 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "MM Core",
+            "EntityVariantNames": [
+                "BaneChant",
+                "BigBoss",
+                "SillyGoose"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "version": "2.2-LNK (BigBoss), 2.3-LNK (SillyGoose)",
+                "type": "File-less APT backdoor"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Gratem",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Downloader trojan"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "CVE-2015-1641",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "product": "Microsoft Word"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "US pak track ii naval dialogues.doc",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "hash": "d336b8424a65f5c0b83328aa89089c2e4ddbcf72"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "ChoiceGuard.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Trojanized DLL",
+                "certificate": "Bor Port (Russian organization)"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Shikata ga nai",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Polymorphic encryption algorithm"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "DLL side-loading",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "presspublishing24[.]net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "davidjone[.]net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "MM Core Attack Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "2015-2016",
+                "observe_time": "2017",
+                "report_name": "2017_Forcepoint-MMCore-Fileless-Returns-BigBoss-SillyGoose(01-05-2017)_7924aa71"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Middle Eastern countries",
+            "EntityType": "vctim",
+            "EntitySubType": "location",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Central Asian countries",
+            "EntityType": "vctim",
+            "EntitySubType": "location",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Africa",
+            "EntityType": "vctim",
+            "EntitySubType": "location",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "United States",
+            "EntityType": "vctim",
+            "EntitySubType": "location",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "News & Media",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Government - Defence",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "Oil & Gas Manufacturing",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "Telecommunications",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "Bor Port",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "0"
+            ],
+            "Properties": {
+                "country": "Russia",
+                "role": "Certificate provider (possibly stolen)"
+            }
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "MM Core Attack Campaign",
+            "Target": "MM Core"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "MM Core Attack Campaign",
+            "Target": "Gratem"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "MM Core",
+            "Target": "Shikata ga nai"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "MM Core Attack Campaign",
+            "Target": "CVE-2015-1641"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "MM Core Attack Campaign",
+            "Target": "DLL side-loading"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "MM Core",
+            "Target": "Gratem"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2015-1641",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "belong_to",
+            "Source": "ChoiceGuard.dll",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "US pak track ii naval dialogues.doc",
+            "Target": "CVE-2015-1641"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "US pak track ii naval dialogues.doc",
+            "Target": "ChoiceGuard.dll"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "presspublishing24[.]net",
+            "Target": "MM Core"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "belong_to",
+            "Source": "davidjone[.]net",
+            "Target": "MM Core"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "target",
+            "Source": "MM Core Attack Campaign",
+            "Target": "Middle Eastern countries"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "target",
+            "Source": "MM Core Attack Campaign",
+            "Target": "Central Asian countries"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "target",
+            "Source": "MM Core Attack Campaign",
+            "Target": "Africa"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "target",
+            "Source": "MM Core Attack Campaign",
+            "Target": "United States"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "target",
+            "Source": "MM Core Attack Campaign",
+            "Target": "News & Media"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "target",
+            "Source": "MM Core Attack Campaign",
+            "Target": "Government - Defence"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "target",
+            "Source": "MM Core Attack Campaign",
+            "Target": "Oil & Gas Manufacturing"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "target",
+            "Source": "MM Core Attack Campaign",
+            "Target": "Telecommunications"
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "use",
+            "Source": "MM Core Attack Campaign",
+            "Target": "Bor Port"
+        }
+    ]
+}

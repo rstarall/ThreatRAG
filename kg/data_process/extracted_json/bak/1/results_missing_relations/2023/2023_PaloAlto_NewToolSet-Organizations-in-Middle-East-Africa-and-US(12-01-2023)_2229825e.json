@@ -1,0 +1,208 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Nation-state related threat actors",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0006",
+                "TA0010"
+            ],
+            "Properties": {
+                "confidence": "Medium"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Middle East, Africa and US Attack Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0006",
+                "TA0010"
+            ],
+            "Properties": {
+                "date": "December 2023",
+                "cluster": "CL-STA-0002"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Education organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Real estate organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Retail organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Non-profit organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Telecom companies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Government organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Agent Racoon",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0011"
+            ],
+            "Properties": {
+                "language": ".NET Framework",
+                "protocol": "DNS",
+                "first_seen": "2020"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Ntospy",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0006"
+            ],
+            "Properties": {
+                "type": "Network Provider DLL"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Mimilite",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0006"
+            ],
+            "Properties": {
+                "origin": "Customized Mimikatz"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "geoinfocdn[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "registration_date": "2022/08/19"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "telemetry.geoinfocdn[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "geostatcdn[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "registration_date": "2020/08/27"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "telemetry.geostatcdn[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "ntoskrnl.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0006"
+            ],
+            "Properties": {
+                "path": "c:\\windows\\system32\\ntoskrnl.dll"
+            }
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "update.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0006"
+            ],
+            "Properties": {
+                "path": "C:\\temp\\update.exe",
+                "sha256": "3490ba26a75b6fb295256d077e0dbc13e4e32f9fd4e91fb35692dbf64c923c98"
+            }
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "install.bat",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "path": "C:\\Windows\\Temp\\install.bat"
+            }
+        }
+    ],
+    "Relationships": []
+}

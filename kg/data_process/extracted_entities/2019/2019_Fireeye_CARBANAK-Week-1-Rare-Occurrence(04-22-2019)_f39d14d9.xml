@@ -1,0 +1,167 @@
+<Entitys>
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>CARBANAK</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="type">Backdoor</Property>
+            <Property name="features">Full-featured</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>FIN7</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>kb3r1p</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>hash</EntitySubType>
+        <Labels>
+            <Label>TA0042</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="type">RAR archive</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>apwmie</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>hash</EntitySubType>
+        <Labels>
+            <Label>TA0042</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="type">RAR archive</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>botcmd.exe</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>PJW hash</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>method</EntitySubType>
+        <Labels>
+            <Label>TA0005</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+        <Properties>
+            <Property name="purpose">Obfuscated import resolution</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>named pipes</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>method</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="purpose">Command and Control communication</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>Financial institutions</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="impact">Millions of dollars in financial crimes</Property>
+        </Properties>
+    </Entity>
+</Entitys>
+<Relationships>
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>FIN7</Source>
+        <Target>CARBANAK</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>CARBANAK</Source>
+        <Target>kb3r1p</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>CARBANAK</Source>
+        <Target>apwmie</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>CARBANAK</Source>
+        <Target>botcmd.exe</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>CARBANAK</Source>
+        <Target>named pipes</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>CARBANAK</Source>
+        <Target>PJW hash</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>FIN7</Source>
+        <Target>Financial institutions</Target>
+    </Relationship>
+</Relationships>

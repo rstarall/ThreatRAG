@@ -1,0 +1,370 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Molerats",
+            "EntityVariantNames": [
+                "Gaza Hackers Team"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "region": "Middle East"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Operation Molerats",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "2012-2013",
+                "observe_time": "2013",
+                "report_name": "2013_Operation_Molerats_3fc7556d"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Israeli Government",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Palestinian National Authority",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "US Government",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "UK Government",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Poison Ivy",
+            "EntityVariantNames": [
+                "PIVY"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "XtremeRAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Hamas shoot down Israeli F-16 fighter jet by modern weapon in Gaza sea.doc.scr",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "7084f3a2d63a16a191b7fcb2b19f0e0d"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "toornt.servegame.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "209.200.39.48",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "updateo.servegame.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "egypttv.sytes.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "skype.servemp3.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "natco2.no-ip.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "!@#GooD#@!",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "Ramadan.rar",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "fc554a0ad7cf9d4f47ec4f297dbde375"
+            }
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "hxxps://dl.dropboxusercontent.com/s/uiod7orcpykx2g8/Ramadan.rar",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "Forged Microsoft Certificate",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation Molerats",
+            "Target": "Molerats"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Operation Molerats",
+            "Target": "Israeli Government"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "Operation Molerats",
+            "Target": "Palestinian National Authority"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "involve",
+            "Source": "Operation Molerats",
+            "Target": "US Government"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "involve",
+            "Source": "Operation Molerats",
+            "Target": "UK Government"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Molerats",
+            "Target": "Poison Ivy"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Molerats",
+            "Target": "XtremeRAT"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Molerats",
+            "Target": "Hamas shoot down Israeli F-16 fighter jet by modern weapon in Gaza sea.doc.scr"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Molerats",
+            "Target": "Ramadan.rar"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "Molerats",
+            "Target": "Forged Microsoft Certificate"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "target",
+            "Source": "Molerats",
+            "Target": "Israeli Government"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "target",
+            "Source": "Molerats",
+            "Target": "Palestinian National Authority"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "target",
+            "Source": "Molerats",
+            "Target": "US Government"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "target",
+            "Source": "Molerats",
+            "Target": "UK Government"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "Poison Ivy",
+            "Target": "toornt.servegame.com"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "Poison Ivy",
+            "Target": "!@#GooD#@!"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "belong_to",
+            "Source": "toornt.servegame.com",
+            "Target": "209.200.39.48"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "related_to",
+            "Source": "Ramadan.rar",
+            "Target": "hxxps://dl.dropboxusercontent.com/s/uiod7orcpykx2g8/Ramadan.rar"
+        }
+    ]
+}

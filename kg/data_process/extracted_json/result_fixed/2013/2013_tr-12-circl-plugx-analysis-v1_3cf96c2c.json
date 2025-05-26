@@ -1,0 +1,221 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "PlugX",
+            "EntityVariantNames": [
+                "Gulpix",
+                "Korplug"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "version": "7.0",
+                "codename": "fking"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "update.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "MD5": "f1f48360f95e1b43e9fba0fec5a2afb8",
+                "SHA1": "70ceb467db7b0161d22e4545479f747417b9705a",
+                "SHA-256": "2bc5ce39dd9afe2157448d3f6d8cb9c549ed39543d159616e38480b9e6c11c49"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "mcvsmap.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "MD5": "4e1e0b8b0673937415599bf2f24c44ad",
+                "SHA1": "9224de3af2a246011c6294f64f27206d165317ba",
+                "SHA-256": "ae16e10e621d6610a3f7f2c7122f9d1263700ba02d1b90e42798decb2fe84096",
+                "signer": "McAfee, Inc."
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "McUtil.DLL",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "MD5": "ad4a646b38a482cc07d5b09b4fffd3b3",
+                "SHA1": "ae0f9bf2740d00c5d485827eb32aca33feaa3a90",
+                "SHA-256": "0a99238e1ebebc47d7a89b2ccddfae537479f7f77322b5d4941315d3f7e5ca48"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "McUtil.DLL.PPT",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "MD5": "545bb4365a9b7cdb6d22844ebeedda93",
+                "SHA1": "a267f1183b4ff843d68a63264846abf78cc71d1f",
+                "SHA-256": "d4fe890a08d4dd44b58a3b85b2a7e89536338099c1c42a9b7e85f4007b0a37b7"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "UAC.TMP",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "MD5": "52df5c2c07433e2a8f054c2347acb3b4",
+                "SHA1": "8051474c1fc0d8f404a42ea32eca1699e54f02e1",
+                "SHA-256": "dc09091e5d0ce03c6144748f17bd636f2f0b2ca56f88b550c1d48860596dbdb1"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "help.yahoo-upgrade.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "IP": "122.199.194.197"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "122.199.194.197",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "C:\\Documents and Settings\\All Users\\VirusMap\\NvSmart.hlp",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "6"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "related_to",
+            "Source": "PlugX",
+            "Target": "update.exe"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "related_to",
+            "Source": "PlugX",
+            "Target": "mcvsmap.exe"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "PlugX",
+            "Target": "McUtil.DLL"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "PlugX",
+            "Target": "McUtil.DLL.PPT"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "PlugX",
+            "Target": "UAC.TMP"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "PlugX",
+            "Target": "help.yahoo-upgrade.com"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "PlugX",
+            "Target": "122.199.194.197"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "affect",
+            "Source": "PlugX",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "PlugX",
+            "Target": "C:\\Documents and Settings\\All Users\\VirusMap\\NvSmart.hlp"
+        }
+    ]
+}

@@ -1,0 +1,124 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT-29",
+            "EntityVariantNames": [
+                "Cozy Bear"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008"
+            ],
+            "Properties": {
+                "country": "China"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Xi Jinping",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0043",
+                "TA0042"
+            ],
+            "Properties": {
+                "position": "Chinese President"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "PLA Unit 61398",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0010"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "APT1",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0010"
+            ],
+            "Properties": {
+                "date": "February 2013"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2023-1234",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Spear Phishing",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "U.S. Government Services Company",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "industry": "Government Services"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Semiconductor Firms",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0010"
+            ],
+            "Properties": {
+                "industry": "Semiconductor Manufacturing"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Taiwanese News Organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "industry": "Media"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Vietnamese Government",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        }
+    ],
+    "Relationships": []
+}

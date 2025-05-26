@@ -1,0 +1,399 @@
+<Entitys>
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>Domestic Kitten</EntityName>
+        <EntityType>event</EntityType>
+        <EntitySubType>event</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0009</Label>
+            <Label>TA0010</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="time">Since 2016</Property>
+            <Property name="description">Iranian surveillance operation targeting Kurdish and Turkish natives and ISIS supporters</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>Iranian Government</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>Islamic Revolutionary Guard Corps (IRGC)</EntityVariantName>
+            <EntityVariantName>Ministry of Intelligence</EntityVariantName>
+            <EntityVariantName>Ministry of Interior</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0009</Label>
+            <Label>TA0010</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="country">Iran</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>Iranian Citizens</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>user</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="count">240</Property>
+            <Property name="groups">Kurdish minority, ISIS supporters</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>ISIS Branded Wallpaper Changer</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0009</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="code_name">Daesh4</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>ANF Kurdistan News Agency App</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0009</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="code_name">Military News</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>Fake Vidogram App</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0009</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>telecom2016@yahoo.com</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>email</EntitySubType>
+        <Labels>
+            <Label>TA0042</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>firmwaresystemupdate.com</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_9</EntityId>
+        <EntityName>Stevenwentz.com</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_10</EntityId>
+        <EntityName>Ronaldlubbers.site</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_11</EntityId>
+        <EntityName>Georgethompson.space</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_12</EntityId>
+        <EntityName>162.248.247.172</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>ip</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_13</EntityId>
+        <EntityName>190.2.144.140</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>ip</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_14</EntityId>
+        <EntityName>190.2.145.145</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>ip</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_15</EntityId>
+        <EntityName>89.38.98.49</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>ip</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_16</EntityId>
+        <EntityName>c168f3ea7d0e2cee91612bf86c5d95167d26e69c</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>hash</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_17</EntityId>
+        <EntityName>0fafeb1cbcd6b19c46a72a26a4b8e3ed588e385f</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>hash</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_18</EntityId>
+        <EntityName>f1355dfe633f9e1350887c31c67490d928f4feec</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>hash</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_19</EntityId>
+        <EntityName>d1f70c47c016f8a544ef240487187c2e8ea78339</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>hash</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_20</EntityId>
+        <EntityName>Android Devices</EntityName>
+        <EntityType>env</EntityType>
+        <EntitySubType>os</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+</Entitys>
+<Relationships>
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Domestic Kitten</Source>
+        <Target>Iranian Government</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Domestic Kitten</Source>
+        <Target>Iranian Citizens</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Iranian Government</Source>
+        <Target>ISIS Branded Wallpaper Changer</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Iranian Government</Source>
+        <Target>ANF Kurdistan News Agency App</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Iranian Government</Source>
+        <Target>Fake Vidogram App</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Iranian Government</Source>
+        <Target>telecom2016@yahoo.com</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Iranian Government</Source>
+        <Target>Iranian Citizens</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>ISIS Branded Wallpaper Changer</Source>
+        <Target>firmwaresystemupdate.com</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_9</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>ANF Kurdistan News Agency App</Source>
+        <Target>Stevenwentz.com</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_10</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Fake Vidogram App</Source>
+        <Target>Ronaldlubbers.site</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_11</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>firmwaresystemupdate.com</Source>
+        <Target>162.248.247.172</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_12</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>Stevenwentz.com</Source>
+        <Target>190.2.144.140</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_13</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>Ronaldlubbers.site</Source>
+        <Target>190.2.145.145</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_14</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>Georgethompson.space</Source>
+        <Target>89.38.98.49</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_15</RelationshipId>
+        <RelationshipType>affect</RelationshipType>
+        <Source>ISIS Branded Wallpaper Changer</Source>
+        <Target>Android Devices</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_16</RelationshipId>
+        <RelationshipType>affect</RelationshipType>
+        <Source>ANF Kurdistan News Agency App</Source>
+        <Target>Android Devices</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_17</RelationshipId>
+        <RelationshipType>affect</RelationshipType>
+        <Source>Fake Vidogram App</Source>
+        <Target>Android Devices</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_18</RelationshipId>
+        <RelationshipType>has</RelationshipType>
+        <Source>Iranian Citizens</Source>
+        <Target>Android Devices</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_19</RelationshipId>
+        <RelationshipType>trigger</RelationshipType>
+        <Source>Iranian Citizens</Source>
+        <Target>ISIS Branded Wallpaper Changer</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_20</RelationshipId>
+        <RelationshipType>trigger</RelationshipType>
+        <Source>Iranian Citizens</Source>
+        <Target>ANF Kurdistan News Agency App</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_21</RelationshipId>
+        <RelationshipType>trigger</RelationshipType>
+        <Source>Iranian Citizens</Source>
+        <Target>Fake Vidogram App</Target>
+    </Relationship>
+</Relationships>

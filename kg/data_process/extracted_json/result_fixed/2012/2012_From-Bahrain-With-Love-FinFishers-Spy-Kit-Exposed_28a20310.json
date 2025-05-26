@@ -1,0 +1,275 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Gamma International UK Ltd.",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "UK"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Bahrain Government",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Bahrain"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Bahraini Pro-Democracy Activists",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "FinFisher Suite",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "FinSpy",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "77.69.140.194",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "owner": "Batelco",
+                "country": "Bahrain"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Phishing Email",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "RLO Character Exploit",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001",
+                "TA0005"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Virtualised Packer",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Process Hollowing",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0002",
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "AES-256-CBC Encryption",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005",
+                "TA0010"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Skype Monitoring",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Keylogger",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0006",
+                "TA0009"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "Bahrain Government",
+            "Target": "FinFisher Suite"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Bahrain Government",
+            "Target": "FinSpy"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "Bahrain Government",
+            "Target": "Bahraini Pro-Democracy Activists"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Bahrain Government",
+            "Target": "Phishing Email"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Bahrain Government",
+            "Target": "RLO Character Exploit"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "FinSpy",
+            "Target": "Virtualised Packer"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "FinSpy",
+            "Target": "Process Hollowing"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "FinSpy",
+            "Target": "AES-256-CBC Encryption"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "FinSpy",
+            "Target": "Skype Monitoring"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "FinSpy",
+            "Target": "Keylogger"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "FinSpy",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "belong_to",
+            "Source": "77.69.140.194",
+            "Target": "FinSpy"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "use",
+            "Source": "Gamma International UK Ltd.",
+            "Target": "FinFisher Suite"
+        }
+    ]
+}

@@ -1,0 +1,345 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Oracle MICROS Compromise",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "August 2016",
+                "observe_time": "2016",
+                "report_name": "2016_Visa_Oracle-Micros-Compromise(08-08-2016)_8a9c9259"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Oracle MICROS",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Point-of-Sale Systems",
+                "customers": "330,000 sites in 180 countries"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Carbanak",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0006",
+                "TA0010"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "MalumPOS",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "language": "Delphi",
+                "target": "Oracle MICROS POS devices"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "MICROS customer support portal",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Mnv.exe",
+            "EntityType": "ioc",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "757ae5eed0c5e229ad9bae586f1281b5de053767",
+                "description": "Oracle Forms process, MICROS 9700 VISAD Driver"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Nvsvc.exe",
+            "EntityType": "ioc",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "2cf2f41d2454b59641a84f8180fd7e32135a0dbc",
+                "description": "MICROS 9700 SSL GW"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Nvsvc.exe",
+            "EntityType": "ioc",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "f728bf7d6dbfc4c7bea21d6a3fd0b88f4fe52a4a",
+                "description": "Oracle Forms process, Web-based PoS systems"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Nvsvc.exe",
+            "EntityType": "ioc",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "798bc2d91293c18af7e99ba7c9a4fd3010051741",
+                "description": "Accessed through Microsoft Windows Internet Explorer, Shift4 Corporation Universal"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Nvsvc.exe",
+            "EntityType": "ioc",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "90e85b471b64667dbcde3aee3fa504c0d4b0ad35",
+                "description": "Transaction Gateway, PAR Springer-Miller Systems"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Rdp.exe",
+            "EntityType": "ioc",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "fe713f9bb90b999250c3b6a3bba965d603de32a3",
+                "description": "Looks like a test"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Winini.exe",
+            "EntityType": "ioc",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "d0b3562d868694fd1147e15483f88f3a78ebedfb",
+                "description": "Client stub"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Psexec",
+            "EntityType": "ioc",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": ".bin files",
+            "EntityType": "ioc",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "location": "\\All users\\%AppData%\\Mozilla\\ or c:\\ProgramData\\Mozilla\\"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Svchost.exe",
+            "EntityType": "ioc",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "location": "Windows\\System32\\com\\catalogue\\",
+                "function": "Remote access including command execution and file transfer"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Svchost.exe",
+            "EntityType": "ioc",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "location": "C:\\ProgramData\\Mozilla\\svchost.exe"
+            }
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "Windows services ending in \"sys\"",
+            "EntityType": "ioc",
+            "EntitySubType": "env",
+            "Labels": [
+                "TA0007"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Oracle MICROS Compromise",
+            "Target": "Oracle MICROS"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Oracle MICROS Compromise",
+            "Target": "Carbanak"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "Oracle MICROS Compromise",
+            "Target": "MalumPOS"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "target",
+            "Source": "Carbanak",
+            "Target": "Oracle MICROS"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "MalumPOS",
+            "Target": "Oracle MICROS"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Carbanak",
+            "Target": "MICROS customer support portal"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "MalumPOS",
+            "Target": "Mnv.exe"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "MalumPOS",
+            "Target": "Nvsvc.exe"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "MalumPOS",
+            "Target": "Rdp.exe"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "MalumPOS",
+            "Target": "Winini.exe"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "has",
+            "Source": "Oracle MICROS",
+            "Target": "MICROS customer support portal"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "belong_to",
+            "Source": "Mnv.exe",
+            "Target": "Oracle MICROS"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "belong_to",
+            "Source": "Nvsvc.exe",
+            "Target": "Oracle MICROS"
+        }
+    ]
+}

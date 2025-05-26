@@ -1,0 +1,336 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Operation Groundbait",
+            "EntityVariantNames": [
+                "Prikormka",
+                "PZZ"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0007",
+                "TA0009",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Ukraine",
+                "language": "Russian, Ukrainian",
+                "first_seen": "2008"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Ukrainian Separatists",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "location": "Donetsk, Luhansk"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Ukrainian Government",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Prikormka",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0007",
+                "TA0009",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Modular surveillance malware",
+                "first_seen": "2008"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "PERSISTENCE",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "technique": "DLL load-order hijacking"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "DOCS_STEALER",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "KEYLOGGER",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "SCREENSHOTS",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "MICROPHONE",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "SKYPE",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "gils.ho.ua",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "ip": "91.228.146.12",
+                "location": "Ukraine"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "wallejob.in.ua",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "ip": "185.68.16.35"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Spearphishing Emails",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "D_xxx",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "L_ment",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "rbcon.ini",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation Groundbait",
+            "Target": "Ukrainian Separatists"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Operation Groundbait",
+            "Target": "Ukrainian Government"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Operation Groundbait",
+            "Target": "Prikormka"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Operation Groundbait",
+            "Target": "Spearphishing Emails"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "Prikormka",
+            "Target": "PERSISTENCE"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Prikormka",
+            "Target": "DOCS_STEALER"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Prikormka",
+            "Target": "KEYLOGGER"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Prikormka",
+            "Target": "SCREENSHOTS"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Prikormka",
+            "Target": "MICROPHONE"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Prikormka",
+            "Target": "SKYPE"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Prikormka",
+            "Target": "gils.ho.ua"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Prikormka",
+            "Target": "wallejob.in.ua"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "Prikormka",
+            "Target": "rbcon.ini"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "Prikormka",
+            "Target": "D_xxx"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "Prikormka",
+            "Target": "L_ment"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "target",
+            "Source": "Operation Groundbait",
+            "Target": "Ukrainian Separatists"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "target",
+            "Source": "Operation Groundbait",
+            "Target": "Ukrainian Government"
+        }
+    ]
+}

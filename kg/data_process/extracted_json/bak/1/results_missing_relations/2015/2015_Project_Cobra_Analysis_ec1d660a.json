@@ -1,0 +1,278 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Turla",
+            "EntityVariantNames": [
+                "APT-29",
+                "Snake",
+                "Uroburos"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011",
+                "TA0010"
+            ],
+            "Properties": {
+                "country": "Russia"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Project Cobra",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011",
+                "TA0010"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Carbon System",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "version": "3.71"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Agent.BTZ",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "cb1b68d9971c2353c2d6a8119c49b51f",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Backdoor.TurlaCarbon.A",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Win32.Trojan.Cobra.B",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "f:\\Workshop\\Projects\\cobra\\carbon_system\\x64\\Release\\carbon_system.pdb",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0042"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "miniport.dat",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "ipvpn.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "srsvc.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "kmsvc.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "msimghlp.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "msximl.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "HKLM\\SYSTEM\\CurrentControlSet\\Service\\",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0003"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "%SystemRoot%\\system32\\",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "%ProgramFiles%",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "43e896ede6fe025ee90f7f27c6d376a4",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "e6d1dcc6c2601e592f2b03f35b06fa8f",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "carbon_system.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "CAST-128",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ]
+        },
+        {
+            "EntityId": "entity_22",
+            "EntityName": "soheylistore.ir",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_23",
+            "EntityName": "tazohor.com",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_24",
+            "EntityName": "jucheafrica.com",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_25",
+            "EntityName": "61paris.fr",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_26",
+            "EntityName": "CARBON.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_27",
+            "EntityName": "554450c1ecb925693fedbb9e56702646",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ]
+        }
+    ],
+    "Relationships": []
+}

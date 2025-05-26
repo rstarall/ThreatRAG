@@ -1,0 +1,308 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "PLATINUM",
+            "EntityVariantNames": [
+                "APT Group PLATINUM"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0043",
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "first_seen": "2009",
+                "region": "South and Southeast Asia",
+                "targets": "Government, Defense, Intelligence, Diplomatic, Telecommunications"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "PLATINUM Targeted Attacks",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "2009-2016",
+                "location": "South and Southeast Asia",
+                "observe_time": "2016",
+                "report_name": "2016_Microsoft_Targeted-attacks-in-South-and-Southeast-Asia(Apr-26-16)_d544f8a0"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "CVE-2013-7331",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "affected": "Windows versions"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CVE-2013-1331",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "affected": "Microsoft Office 2003 SP3"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2015-2545",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "affected": "Microsoft Office PostScript filter"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CVE-2015-2546",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0004"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "affected": "Windows kernel"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Dipsind",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "variant": "Dipsind.B"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "JPIN",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0006",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "adbupd",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Hot Patcher",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Spear Phishing",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Government Agencies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "region": "South and Southeast Asia"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Resume.docx",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "box62.a-inet.net",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "PLATINUM",
+            "Target": "Dipsind"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "PLATINUM",
+            "Target": "JPIN"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "PLATINUM",
+            "Target": "adbupd"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "PLATINUM",
+            "Target": "Hot Patcher"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "PLATINUM",
+            "Target": "Spear Phishing"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "PLATINUM",
+            "Target": "CVE-2013-7331"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "PLATINUM",
+            "Target": "CVE-2013-1331"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "PLATINUM",
+            "Target": "CVE-2015-2545"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "PLATINUM",
+            "Target": "CVE-2015-2546"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "target",
+            "Source": "PLATINUM",
+            "Target": "Government Agencies"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "involve",
+            "Source": "PLATINUM Targeted Attacks",
+            "Target": "PLATINUM"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "involve",
+            "Source": "PLATINUM Targeted Attacks",
+            "Target": "Government Agencies"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "Dipsind",
+            "Target": "CVE-2013-7331"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "Resume.docx",
+            "Target": "CVE-2015-2545"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "Dipsind",
+            "Target": "box62.a-inet.net"
+        }
+    ]
+}

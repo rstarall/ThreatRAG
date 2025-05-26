@@ -1,0 +1,246 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Strider",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0009",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "activity_period": "Since October 2011",
+                "target_countries": "Russia, China, Sweden, Belgium"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Remsec",
+            "EntityVariantNames": [
+                "Backdoor.Remsec"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0009",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Modular backdoor",
+                "capabilities": "Keylogging, file theft, network control"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Flamer",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Regin",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Russian Organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Chinese Airline",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Swedish Organization",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Belgian Embassy",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "MSAOSSPC.DLL",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "function": "Loader module",
+                "encryption": "0xBAADF00D key"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Lua Modules",
+            "EntityType": "file",
+            "EntitySubType": "code",
+            "Labels": [
+                "TA0002",
+                "TA0009"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "components": "Network loader, Host loader, Keylogger"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Sauron Keylogger",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "4"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "Strider",
+            "Target": "Remsec"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "related_to",
+            "Source": "Strider",
+            "Target": "Flamer"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "Strider",
+            "Target": "Regin"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "target",
+            "Source": "Strider",
+            "Target": "Russian Organizations"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "Strider",
+            "Target": "Chinese Airline"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "Strider",
+            "Target": "Swedish Organization"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "Strider",
+            "Target": "Belgian Embassy"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Remsec",
+            "Target": "MSAOSSPC.DLL"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Remsec",
+            "Target": "Lua Modules"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Remsec",
+            "Target": "Sauron Keylogger"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "MSAOSSPC.DLL",
+            "Target": "Remsec"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "belong_to",
+            "Source": "Lua Modules",
+            "Target": "Remsec"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "belong_to",
+            "Source": "Sauron Keylogger",
+            "Target": "Remsec"
+        }
+    ]
+}

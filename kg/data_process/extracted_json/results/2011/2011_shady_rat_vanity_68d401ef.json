@@ -1,0 +1,371 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Operation Shady RAT",
+            "EntityVariantNames": [
+                "Shady RAT"
+            ],
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "duration": "5 years",
+                "victims": "70+ organizations",
+                "countries": "14",
+                "observe_time": "2011",
+                "report_name": "2011_shady_rat_vanity_68d401ef"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "China",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "evidence": "Circumstantial"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "McAfee",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "role": "Discoverer"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Dmitri Alperovitch",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "title": "Vice President of Threat Research"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Spear-phishing email",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Remote-access tool",
+            "EntityVariantNames": [
+                "RAT"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Command-and-control server",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "location": "Western country"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "International Olympic Committee",
+            "EntityVariantNames": [
+                "IOC"
+            ],
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0010"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "World Anti-doping Agency",
+            "EntityVariantNames": [
+                "WADA"
+            ],
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0010"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "United Nations",
+            "EntityVariantNames": [
+                "UN"
+            ],
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0010"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "ASEAN",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0010"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Associated Press",
+            "EntityVariantNames": [
+                "AP"
+            ],
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0010"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "U.S. defense contractors",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0010"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "count": "13"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Intellectual Property",
+            "EntityVariantNames": [
+                "IP"
+            ],
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0010"
+            ],
+            "Times": [
+                "7"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation Shady RAT",
+            "Target": "China"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Operation Shady RAT",
+            "Target": "International Olympic Committee"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "Operation Shady RAT",
+            "Target": "World Anti-doping Agency"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "involve",
+            "Source": "Operation Shady RAT",
+            "Target": "United Nations"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "involve",
+            "Source": "Operation Shady RAT",
+            "Target": "ASEAN"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "involve",
+            "Source": "Operation Shady RAT",
+            "Target": "Associated Press"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "involve",
+            "Source": "Operation Shady RAT",
+            "Target": "U.S. defense contractors"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "China",
+            "Target": "Spear-phishing email"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "China",
+            "Target": "Remote-access tool"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "China",
+            "Target": "Command-and-control server"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "target",
+            "Source": "China",
+            "Target": "International Olympic Committee"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "target",
+            "Source": "China",
+            "Target": "World Anti-doping Agency"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "target",
+            "Source": "China",
+            "Target": "United Nations"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "target",
+            "Source": "China",
+            "Target": "ASEAN"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "target",
+            "Source": "China",
+            "Target": "Associated Press"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "target",
+            "Source": "China",
+            "Target": "U.S. defense contractors"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "Remote-access tool",
+            "Target": "Command-and-control server"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "has",
+            "Source": "International Olympic Committee",
+            "Target": "Intellectual Property"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "has",
+            "Source": "World Anti-doping Agency",
+            "Target": "Intellectual Property"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "has",
+            "Source": "United Nations",
+            "Target": "Intellectual Property"
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "has",
+            "Source": "ASEAN",
+            "Target": "Intellectual Property"
+        },
+        {
+            "RelationshipId": "relationship_22",
+            "RelationshipType": "has",
+            "Source": "Associated Press",
+            "Target": "Intellectual Property"
+        },
+        {
+            "RelationshipId": "relationship_23",
+            "RelationshipType": "has",
+            "Source": "U.S. defense contractors",
+            "Target": "Intellectual Property"
+        }
+    ]
+}

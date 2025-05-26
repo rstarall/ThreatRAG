@@ -1,0 +1,391 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "BlackEnergy Group",
+            "EntityVariantNames": [
+                "BlackEnergy",
+                "APT group behind BlackEnergy"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "first_seen": "2007",
+                "resurgence": "2014"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Ukrainian News Media and Electric Industry Attacks",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "2015-2016",
+                "location": "Ukraine",
+                "observe_time": "2016",
+                "report_name": "2016_ESET_BlackEnergy-by-the-SSHBearDoor(Jan-3-16)_058580f1"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Ukrainian News Media Companies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Media",
+                "country": "Ukraine"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Ukrainian Electric Power Industry",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Energy",
+                "country": "Ukraine"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "BlackEnergy",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Trojan",
+                "first_seen": "2007"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "KillDisk",
+            "EntityVariantNames": [
+                "Win32/KillDisk.NBB",
+                "Win32/KillDisk.NBC",
+                "Win32/KillDisk.NBD"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "purpose": "Data destruction"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "SSHBearDoor",
+            "EntityVariantNames": [
+                "Win32/SSHBearDoor.A",
+                "Dropbear SSH backdoor"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "type": "SSH backdoor",
+                "port": "6789"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "5.149.254.114",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "5.9.32.230",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "31.210.111.154",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "88.198.25.92",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "146.0.74.7",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "188.40.8.72",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "AA67CA4FB712374F5301D1D2BAB0AC66107A4DF1",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "XLS document with malicious macro SHA-1"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "passDs5Bu9Te7",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "type": "SSH backdoor password"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "komut.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "impact": "Industrial control system process"
+            }
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "sec_service.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "impact": "ASEM Ubiquity or ELTIMA Serial to Ethernet Connector process"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Ukrainian News Media and Electric Industry Attacks",
+            "Target": "BlackEnergy Group"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Ukrainian News Media and Electric Industry Attacks",
+            "Target": "Ukrainian News Media Companies"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "Ukrainian News Media and Electric Industry Attacks",
+            "Target": "Ukrainian Electric Power Industry"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "BlackEnergy Group",
+            "Target": "BlackEnergy"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "BlackEnergy Group",
+            "Target": "KillDisk"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "BlackEnergy Group",
+            "Target": "SSHBearDoor"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "BlackEnergy Group",
+            "Target": "Ukrainian News Media Companies"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "BlackEnergy Group",
+            "Target": "Ukrainian Electric Power Industry"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "BlackEnergy",
+            "Target": "KillDisk"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "BlackEnergy",
+            "Target": "5.149.254.114"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "BlackEnergy",
+            "Target": "5.9.32.230"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "BlackEnergy",
+            "Target": "31.210.111.154"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "BlackEnergy",
+            "Target": "88.198.25.92"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "BlackEnergy",
+            "Target": "146.0.74.7"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "BlackEnergy",
+            "Target": "188.40.8.72"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "BlackEnergy",
+            "Target": "AA67CA4FB712374F5301D1D2BAB0AC66107A4DF1"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "KillDisk",
+            "Target": "komut.exe"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "related_to",
+            "Source": "KillDisk",
+            "Target": "sec_service.exe"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "belong_to",
+            "Source": "komut.exe",
+            "Target": "Ukrainian Electric Power Industry"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "belong_to",
+            "Source": "sec_service.exe",
+            "Target": "Ukrainian Electric Power Industry"
+        }
+    ]
+}

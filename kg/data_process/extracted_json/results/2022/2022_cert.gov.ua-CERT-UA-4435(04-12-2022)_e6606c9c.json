@@ -1,0 +1,345 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "CERT-UA",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Ukraine",
+                "sector": "Energy"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "INDUSTROYER2",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "compilation_date": "2022-03-23"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "CADDYWIPER",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "ARGUEPATCH",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "TAILJUMP",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "ORCSHRED",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "SOLOSHRED",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "AWFULSHRED",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "POWERGAP",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "IMPACKET",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Windows",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Linux",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "91.245.255.243",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "195.230.23.19",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "fbe32784c073e341fc57d175a913905c",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "43d07f28b7b699f43abd4f695596c15a90d772bfbd6029c8ee7bc5859c2b0861",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "sc.sh",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "Ukraine Energy Facility Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0008",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "April 2022",
+                "observe_time": "2022",
+                "report_name": "2022_cert.gov.ua-CERT-UA-4435(04-12-2022)_e6606c9c"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Ukraine Energy Facility Attack",
+            "Target": "CERT-UA"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Ukraine Energy Facility Attack",
+            "Target": "INDUSTROYER2"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Ukraine Energy Facility Attack",
+            "Target": "CADDYWIPER"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Ukraine Energy Facility Attack",
+            "Target": "ARGUEPATCH"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Ukraine Energy Facility Attack",
+            "Target": "TAILJUMP"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Ukraine Energy Facility Attack",
+            "Target": "ORCSHRED"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Ukraine Energy Facility Attack",
+            "Target": "SOLOSHRED"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Ukraine Energy Facility Attack",
+            "Target": "AWFULSHRED"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Ukraine Energy Facility Attack",
+            "Target": "POWERGAP"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "Ukraine Energy Facility Attack",
+            "Target": "IMPACKET"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "target",
+            "Source": "Ukraine Energy Facility Attack",
+            "Target": "CERT-UA"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "has",
+            "Source": "CERT-UA",
+            "Target": "Windows"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "has",
+            "Source": "CERT-UA",
+            "Target": "Linux"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "CADDYWIPER",
+            "Target": "ARGUEPATCH"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "CADDYWIPER",
+            "Target": "TAILJUMP"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "ORCSHRED",
+            "Target": "sc.sh"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "belong_to",
+            "Source": "91.245.255.243",
+            "Target": "Ukraine Energy Facility Attack"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "belong_to",
+            "Source": "195.230.23.19",
+            "Target": "Ukraine Energy Facility Attack"
+        }
+    ]
+}

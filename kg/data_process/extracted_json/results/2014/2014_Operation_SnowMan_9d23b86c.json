@@ -1,0 +1,328 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Operation SnowMan",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "February 2014",
+                "location": "US Capitol",
+                "observe_time": "2014",
+                "report_name": "2014_Operation_SnowMan_9d23b86c"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "DeputyDog Actor",
+            "EntityVariantNames": [
+                "Operation DeputyDog",
+                "Operation Ephemeral Hydra"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Veterans of Foreign Wars",
+            "EntityVariantNames": [
+                "VFW"
+            ],
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Military"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "vfw.org",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2014-0322",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Use-after-free",
+                "affected": "Internet Explorer 10"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "ZxShell",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "8455bbb9a210ce603a1b646b0d951bce",
+                "type": "Backdoor"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Gh0stRat",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "variant": "HTTPS"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "newss.effers.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "ip": "118.99.60.142"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "info.flnet.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "ip": "118.99.60.142"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Internet Explorer 10",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Adobe Flash",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "EMET",
+            "EntityVariantNames": [
+                "Experience Mitigation Toolkit"
+            ],
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "sqlrenew.txt",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "stream.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "iframe exploit",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "www.[REDACTED].com/Data/img/img.html",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation SnowMan",
+            "Target": "DeputyDog Actor"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Operation SnowMan",
+            "Target": "Veterans of Foreign Wars"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "DeputyDog Actor",
+            "Target": "Veterans of Foreign Wars"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "target",
+            "Source": "DeputyDog Actor",
+            "Target": "vfw.org"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "DeputyDog Actor",
+            "Target": "CVE-2014-0322"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "DeputyDog Actor",
+            "Target": "ZxShell"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "DeputyDog Actor",
+            "Target": "Gh0stRat"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "DeputyDog Actor",
+            "Target": "iframe exploit"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "has",
+            "Source": "Veterans of Foreign Wars",
+            "Target": "vfw.org"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2014-0322",
+            "Target": "Internet Explorer 10"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "ZxShell",
+            "Target": "newss.effers.com"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Gh0stRat",
+            "Target": "info.flnet.org"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "affect",
+            "Source": "sqlrenew.txt",
+            "Target": "Internet Explorer 10"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "affect",
+            "Source": "stream.exe",
+            "Target": "Internet Explorer 10"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "belong_to",
+            "Source": "www.[REDACTED].com/Data/img/img.html",
+            "Target": "vfw.org"
+        }
+    ]
+}

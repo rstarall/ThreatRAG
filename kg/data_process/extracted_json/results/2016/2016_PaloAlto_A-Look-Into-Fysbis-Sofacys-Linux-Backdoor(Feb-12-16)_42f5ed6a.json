@@ -1,0 +1,224 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Sofacy",
+            "EntityVariantNames": [
+                "APT28",
+                "Sednit"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Russia",
+                "targets": "Government, Defense, Eastern European governments"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Fysbis Linux Backdoor Analysis",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "February 12, 2016",
+                "observe_time": "2016",
+                "report_name": "2016_PaloAlto_A-Look-Into-Fysbis-Sofacys-Linux-Backdoor(Feb-12-16)_42f5ed6a"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Fysbis",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Linux trojan/backdoor",
+                "architecture": "32-bit and 64-bit ELF binaries",
+                "installation": "Can install with or without root privileges"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "azureon-line[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "port": "TCP/80",
+                "timeframe": "Late 2014"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "198.105.125[.]74",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "port": "TCP/80",
+                "timeframe": "Early 2015"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "mozilla-plugins[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "port": "TCP/80",
+                "timeframe": "Late 2015"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Linux systems",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "CHOPSTICK",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Government agencies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Defense organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Fysbis Linux Backdoor Analysis",
+            "Target": "Sofacy"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Sofacy",
+            "Target": "Fysbis"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "Fysbis",
+            "Target": "azureon-line[.]com"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "Fysbis",
+            "Target": "198.105.125[.]74"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "Fysbis",
+            "Target": "mozilla-plugins[.]com"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "Sofacy",
+            "Target": "Government agencies"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "Sofacy",
+            "Target": "Defense organizations"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "affect",
+            "Source": "Fysbis",
+            "Target": "Linux systems"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "CHOPSTICK",
+            "Target": "198.105.125[.]74"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "Sofacy",
+            "Target": "CHOPSTICK"
+        }
+    ]
+}

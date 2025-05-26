@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entitys>
+<Entity>
+<EntityId>entity_1</EntityId>
+<EntityName>Uroburos</EntityName>
+<EntityVariantNames>
+<EntityVariantName>Snake</EntityVariantName>
+<EntityVariantName>Turla</EntityVariantName>
+</EntityVariantNames>
+<EntityType>tool</EntityType>
+<EntitySubType>malware</EntitySubType>
+<Labels>
+<Label>TA0001</Label>
+<Label>TA0002</Label>
+<Label>TA0003</Label>
+<Label>TA0011</Label>
+</Labels>
+<Times>
+<Time>1</Time>
+</Times>
+<Properties>
+<Property name="type">Rootkit</Property>
+<Property name="origin">Russia</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_2</EntityId>
+<EntityName>Agent.BTZ</EntityName>
+<EntityType>tool</EntityType>
+<EntitySubType>malware</EntitySubType>
+<Labels>
+<Label>TA0001</Label>
+<Label>TA0002</Label>
+<Label>TA0003</Label>
+<Label>TA0011</Label>
+</Labels>
+<Times>
+<Time>1</Time>
+</Times>
+<Properties>
+<Property name="type">RAT</Property>
+<Property name="impact">U.S. military computers</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_3</EntityId>
+<EntityName>ComRAT</EntityName>
+<EntityType>tool</EntityType>
+<EntitySubType>malware</EntitySubType>
+<Labels>
+<Label>TA0001</Label>
+<Label>TA0002</Label>
+<Label>TA0003</Label>
+<Label>TA0011</Label>
+</Labels>
+<Times>
+<Time>2</Time>
+</Times>
+<Properties>
+<Property name="type">RAT</Property>
+<Property name="versions">v3.25, v3.26</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_4</EntityId>
+<EntityName>Russian APT Group</EntityName>
+<EntityType>attcker</EntityType>
+<EntitySubType>org</EntitySubType>
+<Labels>
+<Label>TA0001</Label>
+<Label>TA0002</Label>
+<Label>TA0003</Label>
+<Label>TA0011</Label>
+</Labels>
+<Times>
+<Time>1</Time>
+</Times>
+<Properties>
+<Property name="country">Russia</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_5</EntityId>
+<EntityName>Uroburos Attack Event</EntityName>
+<EntityType>event</EntityType>
+<EntitySubType>event</EntitySubType>
+<Labels>
+<Label>TA0001</Label>
+<Label>TA0002</Label>
+<Label>TA0003</Label>
+<Label>TA0011</Label>
+</Labels>
+<Times>
+<Time>1</Time>
+</Times>
+<Properties>
+<Property name="time">February 2014</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_6</EntityId>
+<EntityName>U.S. Military</EntityName>
+<EntityType>vctim</EntityType>
+<EntitySubType>org</EntitySubType>
+<Labels>
+<Label>TA0001</Label>
+</Labels>
+<Times>
+<Time>1</Time>
+</Times>
+<Properties>
+<Property name="country">United States</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_7</EntityId>
+<EntityName>credprov.tlb</EntityName>
+<EntityType>file</EntityType>
+<EntitySubType>file</EntitySubType>
+<Labels>
+<Label>TA0002</Label>
+</Labels>
+<Times>
+<Time>3</Time>
+</Times>
+<Properties>
+<Property name="path">%APPDATA%\Microsoft\</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_8</EntityId>
+<EntityName>shdocvw.tlp</EntityName>
+<EntityType>file</EntityType>
+<EntitySubType>file</EntitySubType>
+<Labels>
+<Label>TA0002</Label>
+<Label>TA0003</Label>
+</Labels>
+<Times>
+<Time>3</Time>
+</Times>
+<Properties>
+<Property name="path">%APPDATA%\Microsoft\</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_9</EntityId>
+<EntityName>COM Object Hijacking</EntityName>
+<EntityType>tool</EntityType>
+<EntitySubType>method</EntitySubType>
+<Labels>
+<Label>TA0003</Label>
+</Labels>
+<Times>
+<Time>4</Time>
+</Times>
+</Entity>
+<Entity>
+<EntityId>entity_10</EntityId>
+<EntityName>Registry Key</EntityName>
+<EntityType>asset</EntityType>
+<EntitySubType>others</EntitySubType>
+<Labels>
+<Label>TA0003</Label>
+</Labels>
+<Times>
+<Time>4</Time>
+</Times>
+<Properties>
+<Property name="path">HKCU\Software\Classes\CLSID\{42aedc87-2188-41fd-b9a3-0c966feabec1}\InprocServer32</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_11</EntityId>
+<EntityName>1dM3uu4j7Fw4sjnbcwlDqet4F7JyuUi4m5Imnxl1pzxI6as80cbLnmz54cs5Ldn4ri3do5L6gs923HL34x2f5cvd0fk6c1a0s</EntityName>
+<EntityType>ioc</EntityType>
+<EntitySubType>payload</EntitySubType>
+<Labels>
+<Label>TA0005</Label>
+</Labels>
+<Times>
+<Time>5</Time>
+</Times>
+<Properties>
+<Property name="type">XOR key</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_12</EntityId>
+<EntityName>weather-online.hopto.org</EntityName>
+<EntityType>ioc</EntityType>
+<EntitySubType>domain</EntitySubType>
+<Labels>
+<Label>TA0011</Label>
+</Labels>
+<Times>
+<Time>6</Time>
+</Times>
+<Properties>
+<Property name="type">C&amp;C server</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_13</EntityId>
+<EntityName>webonline.mefound.com</EntityName>
+<EntityType>ioc</EntityType>
+<EntitySubType>domain</EntitySubType>
+<Labels>
+<Label>TA0011</Label>
+</Labels>
+<Times>
+<Time>6</Time>
+</Times>
+<Properties>
+<Property name="type">C&amp;C server</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_14</EntityId>
+<EntityName>sportacademy.my03.com</EntityName>
+<EntityType>ioc</EntityType>
+<EntitySubType>domain</EntitySubType>
+<Labels>
+<Label>TA0011</Label>
+</Labels>
+<Times>
+<Time>6</Time>
+</Times>
+<Properties>
+<Property name="type">C&amp;C server</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_15</EntityId>
+<EntityName>easport-news.publicvm.com</EntityName>
+<EntityType>ioc</EntityType>
+<EntitySubType>domain</EntitySubType>
+<Labels>
+<Label>TA0011</Label>
+</Labels>
+<Times>
+<Time>6</Time>
+</Times>
+<Properties>
+<Property name="type">C&amp;C server</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_16</EntityId>
+<EntityName>new-book.linkpc.net</EntityName>
+<EntityType>ioc</EntityType>
+<EntitySubType>domain</EntitySubType>
+<Labels>
+<Label>TA0011</Label>
+</Labels>
+<Times>
+<Time>6</Time>
+</Times>
+<Properties>
+<Property name="type">C&amp;C server</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_17</EntityId>
+<EntityName>Windows System</EntityName>
+<EntityType>env</EntityType>
+<EntitySubType>os</EntitySubType>
+<Labels>
+<Label>TA0002</Label>
+</Labels>
+<Times>
+<Time>2</Time>
+</Times>
+</Entity>
+<Entity>
+<EntityId>entity_18</EntityId>
+<EntityName>explorer.exe</EntityName>
+<EntityType>asset</EntityType>
+<EntitySubType>software</EntitySubType>
+<Labels>
+<Label>TA0002</Label>
+</Labels>
+<Times>
+<Time>3</Time>
+</Times>
+</Entity>
+<Entity>
+<EntityId>entity_19</EntityId>
+<EntityName>51e7e58a1e654b6e586fe36e10c67a73</EntityName>
+<EntityType>ioc</EntityType>
+<EntitySubType>hash</EntitySubType>
+<Labels>
+<Label>TA0002</Label>
+</Labels>
+<Times>
+<Time>7</Time>
+</Times>
+<Properties>
+<Property name="type">MD5</Property>
+<Property name="version">dropper v3.25</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_20</EntityId>
+<EntityName>e6ce1f962a47479a86ff2e67129f4ecc</EntityName>
+<EntityType>ioc</EntityType>
+<EntitySubType>hash</EntitySubType>
+<Labels>
+<Label>TA0002</Label>
+</Labels>
+<Times>
+<Time>7</Time>
+</Times>
+<Properties>
+<Property name="type">MD5</Property>
+<Property name="version">lib1, v3.25</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_21</EntityId>
+<EntityName>ec7e3cfaeaac0401316d66e964be684e</EntityName>
+<EntityType>ioc</EntityType>
+<EntitySubType>hash</EntitySubType>
+<Labels>
+<Label>TA0002</Label>
+</Labels>
+<Times>
+<Time>7</Time>
+</Times>
+<Properties>
+<Property name="type">MD5</Property>
+<Property name="version">lib2, v3.25</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_22</EntityId>
+<EntityName>0ae421691579ff6b27f65f49e79e88f6</EntityName>
+<EntityType>ioc</EntityType>
+<EntitySubType>hash</EntitySubType>
+<Labels>
+<Label>TA0002</Label>
+</Labels>
+<Times>
+<Time>7</Time>
+</Times>
+<Properties>
+<Property name="type">MD5</Property>
+<Property name="version">dropper v3.26</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_23</EntityId>
+<EntityName>255118ac14a9e66124f7110acd16f2cd</EntityName>
+<EntityType>ioc</EntityType>
+<EntitySubType>hash</EntitySubType>
+<Labels>
+<Label>TA0002</Label>
+</Labels>
+<Times>
+<Time>7</Time>
+</Times>
+<Properties>
+<Property name="type">MD5</Property>
+<Property name="version">lib1 v3.26</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_24</EntityId>
+<EntityName>b407b6e5b4046da226d6e189a67f62ca</EntityName>
+<EntityType>ioc</EntityType>
+<EntitySubType>hash</EntitySubType>
+<Labels>
+<Label>TA0002</Label>
+</Labels>
+<Times>
+<Time>7</Time>
+</Times>
+<Properties>
+<Property name="type">MD5</Property>
+<Property name="version">lib2, v3.26</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_25</EntityId>
+<EntityName>8ebf7f768d7214f99905c99b6f8242dc</EntityName>
+<EntityType>ioc</EntityType>
+<EntitySubType>hash</EntitySubType>
+<Labels>
+<Label>TA0002</Label>
+</Labels>
+<Times>
+<Time>7</Time>
+</Times>
+<Properties>
+<Property name="type">MD5</Property>
+<Property name="version">dropper, unknown version</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_26</EntityId>
+<EntityName>9d481769de63789d571805009cbf709a</EntityName>
+<EntityType>ioc</EntityType>
+<EntitySubType>hash</EntitySubType>
+<Labels>
+<Label>TA0002</Label>
+</Labels>
+<Times>
+<Time>7</Time>
+</Times>
+<Properties>
+<Property name="type">MD5</Property>
+<Property name="version">dropper, unknown version</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_27</EntityId>
+<EntityName>83a48760e92bf30961b4a943d3095b0a</EntityName>
+<EntityType>ioc</EntityType>
+<EntitySubType>hash</EntitySubType>
+<Labels>
+<Label>TA0002</Label>
+</Labels>
+<Times>
+<Time>7</Time>
+</Times>
+<Properties>
+<Property name="type">MD5</Property>
+<Property name="version">lib 64-Bit, unknown version</Property>
+</Properties>
+</Entity>
+<Entity>
+<EntityId>entity_28</EntityId>
+<EntityName>ea23d67e41d1f0a7f7e7a8b59e7cb60f</EntityName>
+<EntityType>ioc</EntityType>
+<EntitySubType>hash</EntitySubType>
+<Labels>
+<Label>TA0002</Label>
+</Labels>
+<Times>
+<Time>7</Time>
+</Times>
+<Properties>
+<Property name="type">MD5</Property>
+<Property name="version">lib 64-Bit, unknown version</Property>
+</Properties>
+</Entity>
+</Entitys>

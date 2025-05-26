@@ -1,0 +1,142 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "HeartBeat APT",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "country": "Unknown",
+                "motive": "Political"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "HeartBeat Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "time": "2009-2012",
+                "location": "South Korea"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "South Korean Government",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "industry": "Government"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Bundled RAT Installer",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Properties": {
+                "file_names": "msrt.exe, AcroRd32.exe, config.exe, explorer.exe"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "HeartBeat RAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "dll_names": "6to4nt.dll, htrn.dll, hyper.dll, Network Remote.dll, SvcHost.dll"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Spearphishing Email",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Decoy Documents",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "formats": "JPG, PDF, XLS, HWP"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "CC Domains",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "domains": "ahnlab.myfw.us, kissyou01.myfw.us, kita.myfw.us, login.sbs.com.PassAs.us, mail2.myfw.us, park007.myfw.us, snrp.UglyAs.com, www.banking.com.PassAs.us, www.huyang.go.kr.PassAs.us, www.kinu.or.kr.rr.nu, www.kndu.ac.kr.myfw.us, young03.myfw.us"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "CC IPs",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "ports": "80, 443, 5600, 8080"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Campaign Codes",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "examples": "1119HWP, kris0315, PDF-0417, gh-0525, 0909-jpg, 0916, jpg-jf-0925, army-1022, 1103-ghui, 1113-minzhu, ajh7884@han, 001, 0305-ziyoudang, 0326-xuehui, 0328-junf, 0329-mnd, 1q2w3e4r, 0520-tiegang, guohui-0604"
+            }
+        }
+    ],
+    "Relationships": []
+}

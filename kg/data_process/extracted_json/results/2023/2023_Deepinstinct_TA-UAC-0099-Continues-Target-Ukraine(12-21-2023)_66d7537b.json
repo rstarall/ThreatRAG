@@ -1,0 +1,332 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "UAC-0099",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "target": "Ukraine",
+                "first_observed": "mid-2022"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "UAC-0099 Ukraine Attacks",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "December 2023",
+                "location": "Ukraine",
+                "observe_time": "2023",
+                "report_name": "2023_Deepinstinct_TA-UAC-0099-Continues-Target-Ukraine(12-21-2023)_66d7537b"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Ukrainian employees",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "description": "Working for companies outside Ukraine"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CVE-2023-38831",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "software": "WinRAR",
+                "type": "ZIP processing vulnerability"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "147.78.46.40",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "196.196.156.2",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "2.59.222.98",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "LonePage",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "VBS malware"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "WinRAR SFX",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "d21aa84542303ca70b59b53e9de9f092f9001f409158a9d46a5e8ce82ab60fb6"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Malicious LNK",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "0eec5a7373b28a991831d9be1e30976ceb057e5b701e732372524f1a50255c7"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "HTA file",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "38b49818bb95108187fb4376e9537084062207f91310cdafcb9e4b7aa0d078f9"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "PowerShell",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Fabricated court summons",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Email impersonation",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "impersonated": "Lviv city court",
+                "email_service": "ukr.net"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "WinRAR",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "version": "Unpatched (before 6.23)"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "UAC-0099 Ukraine Attacks",
+            "Target": "UAC-0099"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "UAC-0099 Ukraine Attacks",
+            "Target": "Ukrainian employees"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "UAC-0099",
+            "Target": "Ukrainian employees"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "UAC-0099",
+            "Target": "CVE-2023-38831"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "UAC-0099",
+            "Target": "LonePage"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "UAC-0099",
+            "Target": "WinRAR SFX"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "UAC-0099",
+            "Target": "Malicious LNK"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "UAC-0099",
+            "Target": "HTA file"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "UAC-0099",
+            "Target": "PowerShell"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "UAC-0099",
+            "Target": "Fabricated court summons"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "UAC-0099",
+            "Target": "Email impersonation"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "LonePage",
+            "Target": "PowerShell"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "WinRAR SFX",
+            "Target": "CVE-2023-38831"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2023-38831",
+            "Target": "WinRAR"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "LonePage",
+            "Target": "147.78.46.40"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "LonePage",
+            "Target": "196.196.156.2"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "LonePage",
+            "Target": "2.59.222.98"
+        }
+    ]
+}

@@ -1,0 +1,314 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Lorec53",
+            "EntityVariantNames": [
+                "Lori Bear",
+                "UAC-0056"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0007",
+                "TA0009"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Russia",
+                "activity": "Eastern Europe",
+                "first_seen": "2020"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Ukraine Cyber Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0007",
+                "TA0009"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "End of 2021 to February 2022",
+                "location": "Ukraine",
+                "observe_time": "2022",
+                "report_name": "2022_nsfocus_Lorec53-LoriBear-Ukraine(02-16-2022)_112a94ff"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Ukrainian Government",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "sector": "Government",
+                "departments": "Ministry of Defense, Ministry of Finance, Presidential Office, Ministry of the Interior, Border Guard"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "3237.site",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "stun.site",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "eumr.site",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "LorecDocStealer",
+            "EntityVariantNames": [
+                "OutSteel"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0009"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "LorecCPL",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "SaintBot",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Phishing Document",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "formats": "pdf, doc, cpl, lnk"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Ukrainian State-Owned Enterprises",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "examples": "Naftogaz, Ukrtransnafta, Energoatom"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Ukrainian Medical Facilities",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Ukraine Cyber Attack Event",
+            "Target": "Lorec53"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Ukraine Cyber Attack Event",
+            "Target": "Ukrainian Government"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "Ukraine Cyber Attack Event",
+            "Target": "Ukrainian State-Owned Enterprises"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "involve",
+            "Source": "Ukraine Cyber Attack Event",
+            "Target": "Ukrainian Medical Facilities"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Lorec53",
+            "Target": "3237.site"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Lorec53",
+            "Target": "stun.site"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Lorec53",
+            "Target": "eumr.site"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Lorec53",
+            "Target": "LorecDocStealer"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Lorec53",
+            "Target": "LorecCPL"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "Lorec53",
+            "Target": "SaintBot"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "Lorec53",
+            "Target": "Phishing Document"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "target",
+            "Source": "Lorec53",
+            "Target": "Ukrainian Government"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "target",
+            "Source": "Lorec53",
+            "Target": "Ukrainian State-Owned Enterprises"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "target",
+            "Source": "Lorec53",
+            "Target": "Ukrainian Medical Facilities"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "LorecDocStealer",
+            "Target": "3237.site"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "LorecDocStealer",
+            "Target": "stun.site"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "LorecDocStealer",
+            "Target": "eumr.site"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "related_to",
+            "Source": "LorecCPL",
+            "Target": "3237.site"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "trigger",
+            "Source": "Ukrainian Government",
+            "Target": "Phishing Document"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "trigger",
+            "Source": "Ukrainian State-Owned Enterprises",
+            "Target": "Phishing Document"
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "trigger",
+            "Source": "Ukrainian Medical Facilities",
+            "Target": "Phishing Document"
+        }
+    ]
+}

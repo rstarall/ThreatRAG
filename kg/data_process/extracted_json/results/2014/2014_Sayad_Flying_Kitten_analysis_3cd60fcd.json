@@ -1,0 +1,200 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Ajax Security Team",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0006",
+                "TA0009",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Iran"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Sayad",
+            "EntityVariantNames": [
+                "Flying Kitten",
+                "DiagnosticsService.dll"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0006",
+                "TA0009",
+                "TA0010"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": ".NET DLL",
+                "hash": "8521eefbf7336df5c275c3da4b61c94062fafdda"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "WEXTRACT.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "1c52b749403d3f229636f07b0040eb17beba28e4"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "~8f60957b3689075fa093b047242c0255.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "69fd05ca3a7514ea79480d1dbb358fab391e738d"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "0o0o0o0o0.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "ip": "107.6.182.179",
+                "location": "Netherlands"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "107.6.182.179",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Phishing Email",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "base.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "082da03918039125dcf1f096a13ffa9ab6a56bde"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "Ajax Security Team",
+            "Target": "Sayad"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Ajax Security Team",
+            "Target": "Phishing Email"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "Sayad",
+            "Target": "WEXTRACT.exe"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "Sayad",
+            "Target": "~8f60957b3689075fa093b047242c0255.exe"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "Sayad",
+            "Target": "base.dll"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Sayad",
+            "Target": "0o0o0o0o0.com"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "belong_to",
+            "Source": "0o0o0o0o0.com",
+            "Target": "107.6.182.179"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "WEXTRACT.exe",
+            "Target": "~8f60957b3689075fa093b047242c0255.exe"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "~8f60957b3689075fa093b047242c0255.exe",
+            "Target": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run"
+        }
+    ]
+}

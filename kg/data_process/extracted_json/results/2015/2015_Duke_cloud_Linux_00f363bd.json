@@ -1,0 +1,377 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Duke APT group",
+            "EntityVariantNames": [
+                "Duke group",
+                "The Dukes"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0010",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Russia",
+                "suspected_state_ties": "Yes"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "SeaDuke",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "language": "Python",
+                "platform": "Windows, Linux",
+                "obfuscation": "Multiple layers"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "CloudDuke",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0010",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "components": "DropperSolution, BastionSolution, OneDriveSolution"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "DropperSolution",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "function": "Downloader"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "BastionSolution",
+            "EntityVariantNames": [
+                "MiniDionis"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "framework": "Z framework"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "OneDriveSolution",
+            "EntityVariantNames": [
+                "CloudLook"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0010",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "c2_channel": "OneDrive",
+                "framework": "Z framework"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "py2exe",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "pyinstaller",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "US Department of Defense",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Microsoft OneDrive",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Z framework",
+            "EntityType": "tool",
+            "EntitySubType": "code",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "functions": "Encryption, compression, randomization, network communications"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "28d29c702fdf3c16f27b33f3e32687dd82185e8b",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "description": "US letter fax test page PDF"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "cognimuse.cs.ntua.gr/search.php",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "portal.sbn.co.th/rss.php",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "97.75.120.45/news/archive.php",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "58.80.109.59/plugins/search.php",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "flockfilmseries.com/eFax/incoming/5442.ZIP",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "www.recordsmanagementservices.com/eFax/incoming/150721/5442.ZIP",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "files.counseling.org/eFax/incoming/150721/5442.ZIP",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "04299c0b549d4a46154e0a754dda2bc9e43dff76",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "Duke APT group",
+            "Target": "SeaDuke"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Duke APT group",
+            "Target": "CloudDuke"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Duke APT group",
+            "Target": "py2exe"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Duke APT group",
+            "Target": "pyinstaller"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "Duke APT group",
+            "Target": "US Department of Defense"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "CloudDuke",
+            "Target": "DropperSolution"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "CloudDuke",
+            "Target": "BastionSolution"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "CloudDuke",
+            "Target": "OneDriveSolution"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "BastionSolution",
+            "Target": "Z framework"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "OneDriveSolution",
+            "Target": "Z framework"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "OneDriveSolution",
+            "Target": "Microsoft OneDrive"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "DropperSolution",
+            "Target": "cognimuse.cs.ntua.gr/search.php"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "DropperSolution",
+            "Target": "portal.sbn.co.th/rss.php"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "DropperSolution",
+            "Target": "flockfilmseries.com/eFax/incoming/5442.ZIP"
+        }
+    ]
+}

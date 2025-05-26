@@ -1,0 +1,255 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Lazarus Group",
+            "EntityVariantNames": [
+                "APT-29",
+                "Bluenoroff"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "North Korea",
+                "sponsor": "State-sponsored"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "PowerRatankba Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "June 2017 - December 2017",
+                "target": "Cryptocurrency organizations",
+                "observe_time": "2017",
+                "report_name": "2017_ProofPoint_us-wp-north-korea-bitten-by-bitcoin-bug(12-19-2017)_3a8291ad"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "PowerRatankba",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "PowerShell-based malware",
+                "purpose": "Reconnaissance and backdoor"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Gh0st RAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "version": "RFC18 variant",
+                "purpose": "Remote access"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "RatankbaPOS",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0006",
+                "TA0010"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "target": "Point-of-sale systems",
+                "region": "South Korea"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "PowerSpritz",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "encryption": "Spritz-xor algorithm"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Malicious CHM Files",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "M2Soft ActiveX",
+            "EntityType": "vul",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "hxxp://dogecoin.deaftone[.]com:8080/mainls.cs",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "hxxp://trade.publicvm[.]com/images/top_bar.gif",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Cryptocurrency Organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "South Korean POS Systems",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "4"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "PowerRatankba Campaign",
+            "Target": "Lazarus Group"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Lazarus Group",
+            "Target": "PowerRatankba"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Lazarus Group",
+            "Target": "Gh0st RAT"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Lazarus Group",
+            "Target": "RatankbaPOS"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "Lazarus Group",
+            "Target": "Cryptocurrency Organizations"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "Lazarus Group",
+            "Target": "South Korean POS Systems"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "PowerRatankba",
+            "Target": "hxxp://dogecoin.deaftone[.]com:8080/mainls.cs"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "RatankbaPOS",
+            "Target": "hxxp://trade.publicvm[.]com/images/top_bar.gif"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Lazarus Group",
+            "Target": "PowerSpritz"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "Lazarus Group",
+            "Target": "Malicious CHM Files"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "exploit",
+            "Source": "M2Soft ActiveX",
+            "Target": "Cryptocurrency Organizations"
+        }
+    ]
+}

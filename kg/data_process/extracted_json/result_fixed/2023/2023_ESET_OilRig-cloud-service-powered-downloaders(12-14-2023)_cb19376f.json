@@ -1,0 +1,352 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "OilRig",
+            "EntityVariantNames": [
+                "APT34",
+                "Lyceum",
+                "Crambus",
+                "Siamesekitten"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0043",
+                "TA0042",
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Iran",
+                "active_since": "2014",
+                "target_regions": "Middle East"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "OilRig Cloud Service Downloaders Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "2021-2023",
+                "location": "Israel",
+                "observe_time": "2023",
+                "report_name": "2023_ESET_OilRig-cloud-service-powered-downloaders(12-14-2023)_cb19376f"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Israeli Healthcare Organization",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "industry": "Healthcare",
+                "location": "Israel"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Israeli Manufacturing Company",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "industry": "Manufacturing",
+                "location": "Israel"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Israeli Local Government Organization",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "industry": "Government",
+                "location": "Israel"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "SampleCheck5000",
+            "EntityVariantNames": [
+                "SC5k"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "version": "v1, v2, v3",
+                "language": "C#/.NET",
+                "protocol": "EWS API"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "OilCheck",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "language": "C#/.NET",
+                "protocol": "Graph API"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "ODAgent",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "language": "C#/.NET",
+                "protocol": "Graph API"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "OilBooster",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "language": "C/C++",
+                "protocol": "Graph API",
+                "libraries": "OpenSSL, Boost"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "samplecheck5000@outlook.com",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "host1[.]com",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hosting_provider": "Cloudflare, Inc."
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "188.114.96[.]2",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "T1583.006",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "description": "Acquire Infrastructure: Web Services"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "T1567.002",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0010"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "description": "Exfiltration Over Web Service: Exfiltration to Cloud Storage"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "OilRig Cloud Service Downloaders Campaign",
+            "Target": "OilRig"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "OilRig Cloud Service Downloaders Campaign",
+            "Target": "Israeli Healthcare Organization"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "OilRig Cloud Service Downloaders Campaign",
+            "Target": "Israeli Manufacturing Company"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "involve",
+            "Source": "OilRig Cloud Service Downloaders Campaign",
+            "Target": "Israeli Local Government Organization"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "OilRig",
+            "Target": "SampleCheck5000"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "OilRig",
+            "Target": "OilCheck"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "OilRig",
+            "Target": "ODAgent"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "OilRig",
+            "Target": "OilBooster"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "OilRig",
+            "Target": "T1583.006"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "OilRig",
+            "Target": "T1567.002"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "target",
+            "Source": "OilRig",
+            "Target": "Israeli Healthcare Organization"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "target",
+            "Source": "OilRig",
+            "Target": "Israeli Manufacturing Company"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "target",
+            "Source": "OilRig",
+            "Target": "Israeli Local Government Organization"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "SampleCheck5000",
+            "Target": "samplecheck5000@outlook.com"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "OilBooster",
+            "Target": "host1[.]com"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "belong_to",
+            "Source": "host1[.]com",
+            "Target": "188.114.96[.]2"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "has",
+            "Source": "Israeli Healthcare Organization",
+            "Target": "Microsoft Office 365"
+        }
+    ]
+}

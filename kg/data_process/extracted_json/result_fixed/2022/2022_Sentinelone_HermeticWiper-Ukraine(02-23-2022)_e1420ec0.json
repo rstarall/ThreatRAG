@@ -1,0 +1,266 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "HermeticWiper",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "size": "114KB",
+                "type": "Wiper malware"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Hermetica Digital Ltd",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "certificate_valid": "April 2021"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "empntdrv.sys",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "origin": "EaseUS Partition Manager"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Ukrainian organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Ukraine"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Windows devices",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "912342f1c840a42f6b74132f8a7c4ffe7d40fb77",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "SHA1"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "61b25d11392172e587d8da3045812a66c3385451",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "SHA1"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "a952e288a1ead66490b3275a807f52e5",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "ms-compressed SHA1"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "231b3385ac17e41c5bb1b1fcb59599c4",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "ms-compressed SHA1"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "095a1678021b034903c85dd5acb447ad",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "ms-compressed SHA1"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "eb845b7a16ed82bd248e395d9852f467",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "ms-compressed SHA1"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Cyber Attacks on Ukraine",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "February 23rd",
+                "observe_time": "2022",
+                "report_name": "2022_Sentinelone_HermeticWiper-Ukraine(02-23-2022)_e1420ec0"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "Hermetica Digital Ltd",
+            "Target": "HermeticWiper"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "HermeticWiper",
+            "Target": "empntdrv.sys"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "Hermetica Digital Ltd",
+            "Target": "Ukrainian organizations"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "target",
+            "Source": "HermeticWiper",
+            "Target": "Windows devices"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "involve",
+            "Source": "Cyber Attacks on Ukraine",
+            "Target": "Hermetica Digital Ltd"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "involve",
+            "Source": "Cyber Attacks on Ukraine",
+            "Target": "Ukrainian organizations"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "HermeticWiper",
+            "Target": "912342f1c840a42f6b74132f8a7c4ffe7d40fb77"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "HermeticWiper",
+            "Target": "61b25d11392172e587d8da3045812a66c3385451"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "HermeticWiper",
+            "Target": "a952e288a1ead66490b3275a807f52e5"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "HermeticWiper",
+            "Target": "231b3385ac17e41c5bb1b1fcb59599c4"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "HermeticWiper",
+            "Target": "095a1678021b034903c85dd5acb447ad"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "HermeticWiper",
+            "Target": "eb845b7a16ed82bd248e395d9852f467"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "has",
+            "Source": "Ukrainian organizations",
+            "Target": "Windows devices"
+        }
+    ]
+}

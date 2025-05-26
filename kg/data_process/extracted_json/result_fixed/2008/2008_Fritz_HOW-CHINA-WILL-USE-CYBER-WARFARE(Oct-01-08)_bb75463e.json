@@ -1,0 +1,161 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "People’s Liberation Army (PLA)",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0043",
+                "TA0042",
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "branches": "PLA Ground Force, PLA Navy, PLA Air Force, Second Artillery Corps, PLA Reserved Force",
+                "personnel": "2.3 million active, 800,000 reserve, 3.9 million paramilitary"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "China's Cyber Warfare Capability",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "description": "Asymmetric warfare capability to leapfrog military competitiveness"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "APT-29",
+            "EntityVariantNames": [
+                "Cozy Bear"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "country": "Russia"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Titan Rain",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "timeframe": "2003-2006",
+                "targets": "US defence and aerospace installations, Sandia National Laboratories, Lockheed Martin",
+                "observe_time": "2008",
+                "report_name": "2008_Fritz_HOW-CHINA-WILL-USE-CYBER-WARFARE(Oct-01-08)_bb75463e"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Second Artillery Corps (SAC)",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "capabilities": "Nuclear and conventional missile forces"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Unrestricted Warfare",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0040"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "description": "Military doctrine advocating combination of traditional and non-traditional warfare methods"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Assassin's Mace (shashoujian)",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "7"
+            ],
+            "Properties": {
+                "description": "Asymmetric warfare tactic to deliver decisive blows"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "People’s Liberation Army (PLA)",
+            "Target": "China's Cyber Warfare Capability"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "related_to",
+            "Source": "China's Cyber Warfare Capability",
+            "Target": "Unrestricted Warfare"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "China's Cyber Warfare Capability",
+            "Target": "Assassin's Mace (shashoujian)"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "involve",
+            "Source": "Titan Rain",
+            "Target": "APT-29"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "People’s Liberation Army (PLA)",
+            "Target": "Second Artillery Corps (SAC)"
+        }
+    ]
+}

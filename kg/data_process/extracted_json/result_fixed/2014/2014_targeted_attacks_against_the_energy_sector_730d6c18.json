@@ -1,0 +1,195 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT-29",
+            "EntityVariantNames": [
+                "Cozy Bear"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Russia"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Stuxnet",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0040"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "version": "0.5, 1.x",
+                "first_appeared": "2005"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "CVE-2010-2568",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Night Dragon",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0009"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "year": "2010",
+                "observe_time": "2014",
+                "report_name": "2014_targeted_attacks_against_the_energy_sector_730d6c18"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Shamoon/Disttrack",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "components": "dropper, wiper, reporter"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Poison Ivy",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Energy Sector",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Energy"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "SCADA",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Smart Grid",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "Energy Sector"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "Stuxnet"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "Stuxnet",
+            "Target": "CVE-2010-2568"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "affect",
+            "Source": "Stuxnet",
+            "Target": "SCADA"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "involve",
+            "Source": "Night Dragon",
+            "Target": "Energy Sector"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Night Dragon",
+            "Target": "Poison Ivy"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "Shamoon/Disttrack",
+            "Target": "Energy Sector"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "has",
+            "Source": "Energy Sector",
+            "Target": "SCADA"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "has",
+            "Source": "Energy Sector",
+            "Target": "Smart Grid"
+        }
+    ]
+}

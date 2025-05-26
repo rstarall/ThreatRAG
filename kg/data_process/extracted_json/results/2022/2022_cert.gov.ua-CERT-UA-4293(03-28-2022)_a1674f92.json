@@ -1,0 +1,345 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "UAC-0056",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Wage arrears phishing attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "target": "Ukrainian government agencies",
+                "observe_time": "2022",
+                "report_name": "2022_cert.gov.ua-CERT-UA-4293(03-28-2022)_a1674f92"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Ukrainian government agencies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Ukraine"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Wage arrears.xls",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "c1afb561cd5363ac5826ce7a72f0055b400b86bd7524da43474c94bc480d7eff",
+                "type": "Excel Document"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Base-Update.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "9e9fa8b3b0a59762b429853a36674608df1fa7d7f7140c8fccd7c1946070995a",
+                "type": "GoDownloader",
+                "path": "%TMP%\\Base-Update.exe"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "java-sdk.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "8ffe7f2eeb0cbfbe158b77bbff3e0055d2ef7138f481b4fac8ade6bfb9b2b0a1",
+                "type": "GoDownloader",
+                "path": "%USERPROFILE%\\.Java-sdk\\java-sdk.exe"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "oracle-java.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "hash": "99a2b79a4231806d4979aa017ff7e8b804d32bfe9dcc0958d403dfe06bdd0532",
+                "type": "GrimPlant",
+                "path": "%USERPROFILE%\\.Java-sdk\\oracle-java.exe"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "microsoft-cortana.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "hash": "c83d8b36402639ea3f1ad5d48edc1a22005923aee1c1826afabe27cb3989baa3",
+                "type": "GraphSteel",
+                "path": "%USERPROFILE%\\.Java-sdk\\microsoft-cortana.exe"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "194.31.98.124",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "hxxp://194.31.98.124:443/i",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "hxxp://194.31.98.124:443/p",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "hxxp://194.31.98.124:443/m",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "ws://194.31.98.124:443/c",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "GraphSteel",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "GrimPlant",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "GoDownloader",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Wage arrears phishing attack",
+            "Target": "UAC-0056"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Wage arrears phishing attack",
+            "Target": "Ukrainian government agencies"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "UAC-0056",
+            "Target": "Wage arrears.xls"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "UAC-0056",
+            "Target": "Base-Update.exe"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "UAC-0056",
+            "Target": "GraphSteel"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "UAC-0056",
+            "Target": "GrimPlant"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "UAC-0056",
+            "Target": "194.31.98.124"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "UAC-0056",
+            "Target": "Ukrainian government agencies"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "trigger",
+            "Source": "Ukrainian government agencies",
+            "Target": "Wage arrears.xls"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Base-Update.exe",
+            "Target": "GoDownloader"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "java-sdk.exe",
+            "Target": "GoDownloader"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "oracle-java.exe",
+            "Target": "GrimPlant"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "microsoft-cortana.exe",
+            "Target": "GraphSteel"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "belong_to",
+            "Source": "194.31.98.124",
+            "Target": "UAC-0056"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "hxxp://194.31.98.124:443/i",
+            "Target": "194.31.98.124"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "hxxp://194.31.98.124:443/p",
+            "Target": "194.31.98.124"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "hxxp://194.31.98.124:443/m",
+            "Target": "194.31.98.124"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "related_to",
+            "Source": "ws://194.31.98.124:443/c",
+            "Target": "194.31.98.124"
+        }
+    ]
+}

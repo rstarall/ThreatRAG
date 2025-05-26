@@ -1,0 +1,130 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Threat Group-4127",
+            "EntityVariantNames": [
+                "TG-4127",
+                "APT28",
+                "Sofacy",
+                "Sednit",
+                "Pawn Storm"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0006",
+                "TA0011"
+            ],
+            "Properties": {
+                "country": "Russian Federation",
+                "confidence": "moderate confidence"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Hillary Clinton Presidential Campaign Targeting",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0006",
+                "TA0011"
+            ],
+            "Properties": {
+                "time": "October 2015 - May 2016"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Hillary for America",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "domain": "hillaryclinton.com",
+                "email_service": "Google Apps"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Democratic National Committee",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "domain": "dnc.org"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Bitly",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "usage": "URL shortening for spearphishing"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Fake Google Login Page",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0001",
+                "TA0006"
+            ],
+            "Properties": {
+                "technique": "Credential harvesting"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Google Apps",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "aspmx.l.google.com",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "purpose": "Google mail server"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Spearphishing Campaign",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Base64-encoded email string",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0001"
+            ]
+        }
+    ],
+    "Relationships": []
+}

@@ -1,0 +1,432 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "TURBINE PANDA",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China",
+                "affiliation": "MSS Jiangsu Bureau"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Ministry of State Security (MSS)",
+            "EntityVariantNames": [
+                "国安部"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Jiangsu Bureau of the MSS (JSSD)",
+            "EntityVariantNames": [
+                "江苏省国家安全厅"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Nanjing, China"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "C919 Passenger Jet",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "manufacturer": "COMAC"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "LEAP-X engine",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "manufacturer": "CFM International"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "PlugX",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Winnti",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Sakula",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "YU Pingan",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "role": "Sakula developer"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "XU Yanjun",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "role": "MSS Intelligence Officer",
+                "position": "Deputy Division Director"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "ZHENG Xiaoqing",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "role": "GE Employee and insider"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "JI Chaoqun",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "role": "U.S. Army Reservist and assessor"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Commercial Aircraft Corporation of China (COMAC)",
+            "EntityVariantNames": [
+                "中国商用飞机有限责任公司"
+            ],
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "State-owned enterprise"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Aviation Industry Corporation of China (AVIC)",
+            "EntityVariantNames": [
+                "中国航空工业集团公司"
+            ],
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "State-owned enterprise"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Capstone Turbine",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "location": "Los Angeles"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Honeywell",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "Safran",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "Strategic web compromise (SWC)",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "DNS hijacking",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "China Information Technical Security Evaluation Center (CNITSEC)",
+            "EntityVariantNames": [
+                "中国信息安全测评中心"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "affiliation": "MSS Technical Bureau"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "belong_to",
+            "Source": "TURBINE PANDA",
+            "Target": "Jiangsu Bureau of the MSS (JSSD)"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "belong_to",
+            "Source": "Jiangsu Bureau of the MSS (JSSD)",
+            "Target": "Ministry of State Security (MSS)"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "TURBINE PANDA",
+            "Target": "C919 Passenger Jet"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "target",
+            "Source": "TURBINE PANDA",
+            "Target": "LEAP-X engine"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "TURBINE PANDA",
+            "Target": "PlugX"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "TURBINE PANDA",
+            "Target": "Winnti"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "TURBINE PANDA",
+            "Target": "Sakula"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "TURBINE PANDA",
+            "Target": "Strategic web compromise (SWC)"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "TURBINE PANDA",
+            "Target": "DNS hijacking"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Sakula",
+            "Target": "YU Pingan"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "PlugX",
+            "Target": "Winnti"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "target",
+            "Source": "TURBINE PANDA",
+            "Target": "Capstone Turbine"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "target",
+            "Source": "TURBINE PANDA",
+            "Target": "Honeywell"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "target",
+            "Source": "TURBINE PANDA",
+            "Target": "Safran"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "belong_to",
+            "Source": "C919 Passenger Jet",
+            "Target": "Commercial Aircraft Corporation of China (COMAC)"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "belong_to",
+            "Source": "LEAP-X engine",
+            "Target": "CFM International"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "China Information Technical Security Evaluation Center (CNITSEC)",
+            "Target": "Ministry of State Security (MSS)"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "involve",
+            "Source": "TURBINE PANDA",
+            "Target": "XU Yanjun"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "involve",
+            "Source": "TURBINE PANDA",
+            "Target": "ZHENG Xiaoqing"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "involve",
+            "Source": "TURBINE PANDA",
+            "Target": "JI Chaoqun"
+        }
+    ]
+}

@@ -1,0 +1,197 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Lotus Blossom",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "target": "Taiwan",
+                "language": "Traditional Chinese"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Taiwanese Students Cyber Dating Observation Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "date": "December 2015",
+                "location": "Taiwan"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Taiwanese individuals",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "台灣學生網路援交觀察.pps",
+            "EntityVariantNames": [
+                "Observations on cyber compensated dating among Taiwanese students.pps"
+            ],
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "md5": "c205fc5ab1c722bbe66a4cb6aff41190",
+                "size": "241504 bytes"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2014-4114",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "alias": "Sandworm vulnerability"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "hlwyss.jpg",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "type": "MS-DOS executable"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "hlwyss.inf",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "md5": "bc179ebf3ca089dc9f3596beea38ab27"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Syncmgr.dll",
+            "EntityVariantNames": [
+                "hlwyss.dll"
+            ],
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "md5": "353fc24939bb5db003097a8dd3c0ee7b",
+                "compile_time": "2015-11-24 04:57:52"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "WEB2013BW6.DAT",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "md5": "3940a839c8f933cbdc17a50d164186fa",
+                "size": "512051 KB"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "60HGBC00.DAT",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "md5": "6fcdc554b71db3f0b46c7722c2a08285"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "showip[.]net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "ustar5.PassAs[.]us",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "ip": "203.124.14[.]241"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "dnt5b.myfw[.]us",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "103.193.150[.]33",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Windows",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Spear-phishing",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ]
+        }
+    ],
+    "Relationships": []
+}

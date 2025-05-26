@@ -1,0 +1,287 @@
+<Entitys>
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>Lazarus Group</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>Lazarus</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0006</Label>
+            <Label>TA0008</Label>
+            <Label>TA0010</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>COVID-19 Research Attack Event</EntityName>
+        <EntityType>event</EntityType>
+        <EntitySubType>event</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0006</Label>
+            <Label>TA0008</Label>
+            <Label>TA0010</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="time">September-October 2020</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>Government Health Ministry</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="industry">Government</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>Pharmaceutical Company</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="industry">Pharmaceutical</Property>
+            <Property name="focus">COVID-19 vaccine development</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>wAgent</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="hash">dc3c2663bd9a991e0fbec791c20cbf92</Property>
+            <Property name="path">%programdata%\oracle\javac.dat</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>Bookcode</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="hash">0e44fcafab066abe99fe64ec6c46c84e</Property>
+            <Property name="path">%SystemRoot%\system32\gmslogmgr.dat</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>Windows Server</EntityName>
+        <EntityType>env</EntityType>
+        <EntitySubType>os</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>ADFind</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>tool</EntitySubType>
+        <Labels>
+            <Label>TA0007</Label>
+            <Label>TA0008</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_9</EntityId>
+        <EntityName>WakeMeOnLan</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>tool</EntitySubType>
+        <Labels>
+            <Label>TA0007</Label>
+            <Label>TA0008</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_10</EntityId>
+        <EntityName>hxxps://iski.silogica[.]net</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>url</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_11</EntityId>
+        <EntityName>hxxps://www.kne.co[.]kr</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>url</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_12</EntityId>
+        <EntityName>hxxps://www.locknlockmall[.]com</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>url</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_13</EntityId>
+        <EntityName>Customer_Session.asp</EntityName>
+        <EntityType>file</EntityType>
+        <EntitySubType>file</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+</Entitys>
+<Relationships>
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>COVID-19 Research Attack Event</Source>
+        <Target>Lazarus Group</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>COVID-19 Research Attack Event</Source>
+        <Target>Government Health Ministry</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>COVID-19 Research Attack Event</Source>
+        <Target>Pharmaceutical Company</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Lazarus Group</Source>
+        <Target>Government Health Ministry</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Lazarus Group</Source>
+        <Target>Pharmaceutical Company</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Lazarus Group</Source>
+        <Target>wAgent</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Lazarus Group</Source>
+        <Target>Bookcode</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Lazarus Group</Source>
+        <Target>ADFind</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_9</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Lazarus Group</Source>
+        <Target>WakeMeOnLan</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_10</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>wAgent</Source>
+        <Target>hxxps://iski.silogica[.]net</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_11</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Bookcode</Source>
+        <Target>hxxps://www.kne.co[.]kr</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_12</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Bookcode</Source>
+        <Target>hxxps://www.locknlockmall[.]com</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_13</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Bookcode</Source>
+        <Target>Customer_Session.asp</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_14</RelationshipId>
+        <RelationshipType>has</RelationshipType>
+        <Source>Government Health Ministry</Source>
+        <Target>Windows Server</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_15</RelationshipId>
+        <RelationshipType>has</RelationshipType>
+        <Source>Pharmaceutical Company</Source>
+        <Target>Windows Server</Target>
+    </Relationship>
+</Relationships>

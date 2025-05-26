@@ -1,0 +1,206 @@
+<Entitys>
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>Regin</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>W64/Regin</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0005</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="version">Stage #1</Property>
+            <Property name="target">64-bit Windows systems</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>wshnetc.dll</EntityName>
+        <EntityType>file</EntityType>
+        <EntitySubType>file</EntitySubType>
+        <Labels>
+            <Label>TA0005</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="description">Winsock 2 Helper DLL (TL/IPv4)</Property>
+            <Property name="type">DLL</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>5191d7e28ffd1bc76ec7ed02d861679a77f2c239</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>hash</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>Microsoft Root Authority</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>method</EntitySubType>
+        <Labels>
+            <Label>TA0005</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="KeyID">41 68 26 6a 16 60 0f 36 41 19 af 06 f9 54 4d 06</Property>
+            <Property name="SerialNumber">0c ea ea 19 bb bd 4f 86 4e b7 e9 47 97 cf 74 a8</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>Virtual Machine</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>tool</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="purpose">Payload retrieval and processing</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>NRV2E</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>method</EntitySubType>
+        <Labels>
+            <Label>TA0005</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="type">Compression algorithm</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>QuickPeParse64</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>tool</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+        <Properties>
+            <Property name="function">PE file parsing</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>Windows System</EntityName>
+        <EntityType>env</EntityType>
+        <EntitySubType>os</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="version">64-bit</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_9</EntityId>
+        <EntityName>wshtcpip.dll</EntityName>
+        <EntityType>file</EntityType>
+        <EntitySubType>file</EntitySubType>
+        <Labels>
+            <Label>TA0005</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="type">Legitimate Windows DLL</Property>
+        </Properties>
+    </Entity>
+</Entitys>
+<Relationships>
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Regin</Source>
+        <Target>wshnetc.dll</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Regin</Source>
+        <Target>5191d7e28ffd1bc76ec7ed02d861679a77f2c239</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Regin</Source>
+        <Target>Microsoft Root Authority</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Regin</Source>
+        <Target>Virtual Machine</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Regin</Source>
+        <Target>NRV2E</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Regin</Source>
+        <Target>QuickPeParse64</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Regin</Source>
+        <Target>Windows System</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>wshnetc.dll</Source>
+        <Target>wshtcpip.dll</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_9</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>wshnetc.dll</Source>
+        <Target>Windows System</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_10</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>wshtcpip.dll</Source>
+        <Target>Windows System</Target>
+    </Relationship>
+</Relationships>

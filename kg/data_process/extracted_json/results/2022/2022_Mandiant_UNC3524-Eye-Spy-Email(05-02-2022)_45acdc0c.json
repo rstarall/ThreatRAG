@@ -1,0 +1,220 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "UNC3524",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Russia",
+                "motivation": "Espionage"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "QUIETEXIT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0011",
+                "TA0008"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "SSH-based backdoor",
+                "origin": "Modified Dropbear SSH"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "REGEORG",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Web shell",
+                "version": "Obfuscated variant"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "WMIEXEC",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "origin": "Modified Impacket tool"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "cloudns.asiadynu.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "mywire.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "webredirect.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "LifeSize Conference Room Camera",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "D-Link IP Camera",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Exchange Web Services API",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0010"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Email Collection",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0010"
+            ],
+            "Times": [
+                "5"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "UNC3524",
+            "Target": "QUIETEXIT"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "UNC3524",
+            "Target": "REGEORG"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "UNC3524",
+            "Target": "WMIEXEC"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "UNC3524",
+            "Target": "Exchange Web Services API"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "QUIETEXIT",
+            "Target": "cloudns.asiadynu.net"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "QUIETEXIT",
+            "Target": "mywire.org"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "QUIETEXIT",
+            "Target": "webredirect.org"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "belong_to",
+            "Source": "LifeSize Conference Room Camera",
+            "Target": "QUIETEXIT"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "belong_to",
+            "Source": "D-Link IP Camera",
+            "Target": "QUIETEXIT"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Email Collection",
+            "Target": "Exchange Web Services API"
+        }
+    ]
+}

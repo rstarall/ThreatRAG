@@ -1,0 +1,302 @@
+<Entitys>
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>Unknown Cyber Actors</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>attacker</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0008</Label>
+            <Label>TA0040</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="suspected_origin">Russia</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>Ukrainian Power Grid Attack</EntityName>
+        <EntityType>event</EntityType>
+        <EntitySubType>event</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0008</Label>
+            <Label>TA0040</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="date">2015-12-23</Property>
+            <Property name="location">Ukraine</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>Prykarpattyaoblenergo</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="type">Electricity Distributor</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>Kyivoblenergo</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="type">Electricity Distributor</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>Chernivtsioblenergo</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="type">Electricity Distributor</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>BlackEnergy 3</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="version">3</Property>
+            <Property name="type">RAT</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>KillDisk</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0040</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="type">Data Wiper</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>Phishing Email</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>method</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_9</EntityId>
+        <EntityName>Weaponized MS Office Documents</EntityName>
+        <EntityType>file</EntityType>
+        <EntitySubType>file</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_10</EntityId>
+        <EntityName>SCADA System</EntityName>
+        <EntityType>asset</EntityType>
+        <EntitySubType>bussiness</EntitySubType>
+        <Labels>
+            <Label>TA0008</Label>
+            <Label>TA0040</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_11</EntityId>
+        <EntityName>Moxa UC 7408-LX-Plus</EntityName>
+        <EntityType>asset</EntityType>
+        <EntitySubType>network</EntitySubType>
+        <Labels>
+            <Label>TA0008</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_12</EntityId>
+        <EntityName>IRZRUH2 3G</EntityName>
+        <EntityType>asset</EntityType>
+        <EntitySubType>network</EntitySubType>
+        <Labels>
+            <Label>TA0008</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_13</EntityId>
+        <EntityName>ABB RTU560 CMU-02</EntityName>
+        <EntityType>asset</EntityType>
+        <EntitySubType>network</EntitySubType>
+        <Labels>
+            <Label>TA0008</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_14</EntityId>
+        <EntityName>Windows System</EntityName>
+        <EntityType>env</EntityType>
+        <EntitySubType>os</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+</Entitys>
+<Relationships>
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Ukrainian Power Grid Attack</Source>
+        <Target>Unknown Cyber Actors</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Ukrainian Power Grid Attack</Source>
+        <Target>Prykarpattyaoblenergo</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Ukrainian Power Grid Attack</Source>
+        <Target>Kyivoblenergo</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Ukrainian Power Grid Attack</Source>
+        <Target>Chernivtsioblenergo</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Unknown Cyber Actors</Source>
+        <Target>BlackEnergy 3</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Unknown Cyber Actors</Source>
+        <Target>KillDisk</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Unknown Cyber Actors</Source>
+        <Target>Phishing Email</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>BlackEnergy 3</Source>
+        <Target>Weaponized MS Office Documents</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_9</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Unknown Cyber Actors</Source>
+        <Target>SCADA System</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_10</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Unknown Cyber Actors</Source>
+        <Target>Moxa UC 7408-LX-Plus</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_11</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Unknown Cyber Actors</Source>
+        <Target>IRZRUH2 3G</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_12</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Unknown Cyber Actors</Source>
+        <Target>ABB RTU560 CMU-02</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_13</RelationshipId>
+        <RelationshipType>affect</RelationshipType>
+        <Source>KillDisk</Source>
+        <Target>Windows System</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_14</RelationshipId>
+        <RelationshipType>has</RelationshipType>
+        <Source>Prykarpattyaoblenergo</Source>
+        <Target>SCADA System</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_15</RelationshipId>
+        <RelationshipType>has</RelationshipType>
+        <Source>Kyivoblenergo</Source>
+        <Target>SCADA System</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_16</RelationshipId>
+        <RelationshipType>has</RelationshipType>
+        <Source>Chernivtsioblenergo</Source>
+        <Target>SCADA System</Target>
+    </Relationship>
+</Relationships>

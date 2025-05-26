@@ -1,0 +1,167 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "ChessMaster",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Properties": {
+                "alias": "APT 10, menuPass, POTASSIUM, Stone Panda, Red Apollo, CVNX"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "ChessMaster Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Properties": {
+                "date": "July 2017",
+                "location": "Japan"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Japanese organizations",
+            "EntityVariantNames": [
+                "Japanese academe",
+                "technology enterprises",
+                "media outfits",
+                "managed service providers",
+                "government agencies"
+            ],
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "ChChes",
+            "EntityVariantNames": [
+                "BKDR_CHCHES"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "type": "Backdoor",
+                "characteristic": "Uses SID as encryption key"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Malicious LNK files",
+            "EntityType": "ioc",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "PowerShell script",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Self-extracting archive (SFX)",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "TinyX",
+            "EntityVariantNames": [
+                "PlugX variant"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "RedLeaves",
+            "EntityVariantNames": [
+                "himawari"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0008",
+                "TA0011"
+            ],
+            "Properties": {
+                "type": "RAT",
+                "origin": "Based on Trochilus"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Emdivi",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Spear-phishing emails",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Password dumping tools",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0006"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "CC servers",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        }
+    ],
+    "Relationships": []
+}

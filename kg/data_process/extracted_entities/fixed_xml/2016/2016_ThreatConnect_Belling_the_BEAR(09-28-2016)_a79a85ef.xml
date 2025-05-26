@@ -1,0 +1,331 @@
+<Entitys>
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>FANCY BEAR</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>APT29</EntityVariantName>
+            <EntityVariantName>Cozy Bear</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0005</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="country">Russia</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>CyberBerkut</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0040</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="affiliation">Pro-Russian</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>Bellingcat Targeting Event</EntityName>
+        <EntityType>event</EntityType>
+        <EntitySubType>event</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0040</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="timeframe">2015-2016</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>Bellingcat</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="type">Investigative Journalism</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>Eliot Higgins</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>user</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>Ruslan Leviev</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>user</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0040</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>Spearphishing Emails</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>method</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="count">16+</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>Bitly URLs</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>url</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_9</EntityId>
+        <EntityName>Google Sites Spoofing Pages</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>url</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_10</EntityId>
+        <EntityName>Yandex Email Accounts</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>email</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="examples">berg01berg01@yandex.com, hellomail1@yandex.com</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_11</EntityId>
+        <EntityName>Malicious Domains</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="examples">evrosatory.com, accounts.servicegoogle.com, id833.ga</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_12</EntityId>
+        <EntityName>Yandex Mail Servers</EntityName>
+        <EntityType>asset</EntityType>
+        <EntitySubType>ip</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_13</EntityId>
+        <EntityName>Bellingcat Website</EntityName>
+        <EntityType>asset</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0040</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_14</EntityId>
+        <EntityName>MH17 Investigation</EntityName>
+        <EntityType>event</EntityType>
+        <EntitySubType>event</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_15</EntityId>
+        <EntityName>DCLeaks</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>method</EntitySubType>
+        <Labels>
+            <Label>TA0040</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+</Entitys>
+<Relationships>
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Bellingcat Targeting Event</Source>
+        <Target>FANCY BEAR</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Bellingcat Targeting Event</Source>
+        <Target>CyberBerkut</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Bellingcat Targeting Event</Source>
+        <Target>Bellingcat</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>FANCY BEAR</Source>
+        <Target>Bellingcat</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>CyberBerkut</Source>
+        <Target>Ruslan Leviev</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>FANCY BEAR</Source>
+        <Target>Spearphishing Emails</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>FANCY BEAR</Source>
+        <Target>Bitly URLs</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>FANCY BEAR</Source>
+        <Target>Google Sites Spoofing Pages</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_9</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>FANCY BEAR</Source>
+        <Target>Yandex Email Accounts</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_10</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>FANCY BEAR</Source>
+        <Target>Malicious Domains</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_11</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>CyberBerkut</Source>
+        <Target>Yandex Mail Servers</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_12</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Spearphishing Emails</Source>
+        <Target>Bitly URLs</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_13</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Spearphishing Emails</Source>
+        <Target>Google Sites Spoofing Pages</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_14</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>Bellingcat Website</Source>
+        <Target>Bellingcat</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_15</RelationshipId>
+        <RelationshipType>has</RelationshipType>
+        <Source>Bellingcat</Source>
+        <Target>Eliot Higgins</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_16</RelationshipId>
+        <RelationshipType>has</RelationshipType>
+        <Source>Bellingcat</Source>
+        <Target>Ruslan Leviev</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_17</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>FANCY BEAR</Source>
+        <Target>DCLeaks</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_18</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>CyberBerkut</Source>
+        <Target>DCLeaks</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_19</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>FANCY BEAR</Source>
+        <Target>MH17 Investigation</Target>
+    </Relationship>
+</Relationships>

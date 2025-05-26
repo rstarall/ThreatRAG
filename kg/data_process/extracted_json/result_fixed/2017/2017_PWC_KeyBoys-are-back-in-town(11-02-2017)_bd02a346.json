@@ -1,0 +1,245 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "KeyBoy",
+            "EntityVariantNames": [
+                "KeyBoys"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0005",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "origin": "China"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "2017 Q4 Work Plan.docx",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "292843976600e8ad2130224d70356bfc",
+                "creation_date": "2017-10-11"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Dynamic Data Exchange (DDE)",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "debug.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "md5": "64b2ac701a0d67da134e13b2efc46900",
+                "sha1": "1bb516d70591a5a0eb55ee71f9f38597f3640b14",
+                "sha256": "f3f55c3df39b85d934121355bed439b53501f996e9b39d4abed14c7fe8081d92",
+                "internal_name": "InstallClient.dll"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "rasauto.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "service": "Remote Access Auto Connection Manager"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "dllhost.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "jessma.org",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "7"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "ldcsaa@21cn.com",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "7"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "657603405@qq.com",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "7"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Weblogic727.xxuz.com",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "7"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Weblogic1709.zzux.com",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "7"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "KeyBoy",
+            "Target": "2017 Q4 Work Plan.docx"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "KeyBoy",
+            "Target": "Dynamic Data Exchange (DDE)"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "2017 Q4 Work Plan.docx",
+            "Target": "debug.dll"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "affect",
+            "Source": "debug.dll",
+            "Target": "rasauto.dll"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "rasauto.dll",
+            "Target": "dllhost.exe"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "affect",
+            "Source": "dllhost.exe",
+            "Target": "jessma.org"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "affect",
+            "Source": "dllhost.exe",
+            "Target": "Weblogic727.xxuz.com"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "affect",
+            "Source": "dllhost.exe",
+            "Target": "Weblogic1709.zzux.com"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "belong_to",
+            "Source": "2017 Q4 Work Plan.docx",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "belong_to",
+            "Source": "rasauto.dll",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "KeyBoy",
+            "Target": "ldcsaa@21cn.com"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "KeyBoy",
+            "Target": "657603405@qq.com"
+        }
+    ]
+}

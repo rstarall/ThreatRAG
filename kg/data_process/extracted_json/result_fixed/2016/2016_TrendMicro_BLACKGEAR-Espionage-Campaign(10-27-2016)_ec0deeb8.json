@@ -1,0 +1,371 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "BLACKGEAR",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "target": "Taiwan, Japan"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "BLACKGEAR Espionage Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "October 2016",
+                "observe_time": "2016",
+                "report_name": "2016_TrendMicro_BLACKGEAR-Espionage-Campaign(10-27-2016)_ec0deeb8"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Taiwanese Users",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Japanese Users",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "ELIRKS",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "TROJ_BLAGFLDR",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "TSPY_RAMNY",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "TSPY_YMALRMINI",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "BKDR_ELIRKS",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "BKDR_YMALR",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Blogs and Microblogging Services",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "1q2w3e4r",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "YMailer",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "toolson",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "BLACKGEAR Espionage Campaign",
+            "Target": "BLACKGEAR"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "BLACKGEAR Espionage Campaign",
+            "Target": "Taiwanese Users"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "BLACKGEAR Espionage Campaign",
+            "Target": "Japanese Users"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "BLACKGEAR",
+            "Target": "ELIRKS"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "BLACKGEAR",
+            "Target": "TROJ_BLAGFLDR"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "BLACKGEAR",
+            "Target": "TSPY_RAMNY"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "BLACKGEAR",
+            "Target": "TSPY_YMALRMINI"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "BLACKGEAR",
+            "Target": "BKDR_ELIRKS"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "BLACKGEAR",
+            "Target": "BKDR_YMALR"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "BLACKGEAR",
+            "Target": "Blogs and Microblogging Services"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "target",
+            "Source": "BLACKGEAR",
+            "Target": "Taiwanese Users"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "target",
+            "Source": "BLACKGEAR",
+            "Target": "Japanese Users"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "target",
+            "Source": "BLACKGEAR",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "TROJ_BLAGFLDR",
+            "Target": "TSPY_RAMNY"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "TROJ_BLAGFLDR",
+            "Target": "TSPY_YMALRMINI"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "TSPY_RAMNY",
+            "Target": "BKDR_ELIRKS"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "TSPY_YMALRMINI",
+            "Target": "BKDR_YMALR"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "related_to",
+            "Source": "BKDR_ELIRKS",
+            "Target": "BKDR_YMALR"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "related_to",
+            "Source": "TSPY_RAMNY",
+            "Target": "1q2w3e4r"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "related_to",
+            "Source": "TSPY_YMALRMINI",
+            "Target": "1q2w3e4r"
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "related_to",
+            "Source": "BKDR_YMALR",
+            "Target": "1q2w3e4r"
+        },
+        {
+            "RelationshipId": "relationship_22",
+            "RelationshipType": "related_to",
+            "Source": "TSPY_YMALRMINI",
+            "Target": "YMailer"
+        },
+        {
+            "RelationshipId": "relationship_23",
+            "RelationshipType": "related_to",
+            "Source": "BKDR_YMALR",
+            "Target": "YMailer"
+        },
+        {
+            "RelationshipId": "relationship_24",
+            "RelationshipType": "related_to",
+            "Source": "TSPY_RAMNY",
+            "Target": "toolson"
+        },
+        {
+            "RelationshipId": "relationship_25",
+            "RelationshipType": "related_to",
+            "Source": "TSPY_YMALRMINI",
+            "Target": "toolson"
+        },
+        {
+            "RelationshipId": "relationship_26",
+            "RelationshipType": "belong_to",
+            "Source": "BKDR_ELIRKS",
+            "Target": "Blogs and Microblogging Services"
+        },
+        {
+            "RelationshipId": "relationship_27",
+            "RelationshipType": "belong_to",
+            "Source": "BKDR_YMALR",
+            "Target": "Blogs and Microblogging Services"
+        },
+        {
+            "RelationshipId": "relationship_28",
+            "RelationshipType": "affect",
+            "Source": "TROJ_BLAGFLDR",
+            "Target": "Windows System"
+        }
+    ]
+}

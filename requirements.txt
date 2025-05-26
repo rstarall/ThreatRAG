@@ -1,0 +1,9 @@
+fastapi>=0.100.0
+uvicorn[standard]>=0.20.0
+python-multipart>=0.0.6
+pypdf>=3.10.0
+sentence-transformers>=2.2.2
+chromadb>=0.4.15
+openai>=1.0.0
+langchain>=0.1.0 
+# 如果你使用其他大模型, 请替换 openai 或添加相应库 

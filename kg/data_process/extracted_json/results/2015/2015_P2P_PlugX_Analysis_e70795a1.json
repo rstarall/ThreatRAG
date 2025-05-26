@@ -1,0 +1,249 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "PlugX",
+            "EntityVariantNames": [
+                "P2P PlugX"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011",
+                "TA0008"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Remote Access Tool (RAT)",
+                "first_observed": "2012"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "P2P PlugX Variant",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011",
+                "TA0008"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "first_observed": "October 2014",
+                "config_size": "0x36a4 bytes"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "bc65e2859f243ff45b12cd184bfed7b809f74e67e5bb61bc92ed94058d3d2515",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "SHA-256"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "93c85a8dd0becc4e396eea2dc15c0010ff58d2b873d44fd7e45711a27cfe613b",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "SHA-256"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "0ff134057a8b2e31b148fedfdd185f5b1a512149499a8c5c0915cf10b10a613e",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "SHA-256"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "TCP/1357",
+            "EntityType": "ioc",
+            "EntitySubType": "port",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "UDP/1357",
+            "EntityType": "ioc",
+            "EntitySubType": "port",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Protocol 255",
+            "EntityType": "ioc",
+            "EntitySubType": "protocol",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "description": "Reserved by IANA"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "PlugX Configuration",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "size": "0x36a4 bytes",
+                "features": "16 C&C servers, P2P communication, MAC address check, UAC bypass"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "PlugX Encoding Algorithm",
+            "EntityType": "file",
+            "EntitySubType": "code",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Various sectors in Japan",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "related_to",
+            "Source": "P2P PlugX Variant",
+            "Target": "PlugX"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "related_to",
+            "Source": "P2P PlugX Variant",
+            "Target": "bc65e2859f243ff45b12cd184bfed7b809f74e67e5bb61bc92ed94058d3d2515"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "P2P PlugX Variant",
+            "Target": "93c85a8dd0becc4e396eea2dc15c0010ff58d2b873d44fd7e45711a27cfe613b"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "P2P PlugX Variant",
+            "Target": "0ff134057a8b2e31b148fedfdd185f5b1a512149499a8c5c0915cf10b10a613e"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "P2P PlugX Variant",
+            "Target": "TCP/1357"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "P2P PlugX Variant",
+            "Target": "UDP/1357"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "P2P PlugX Variant",
+            "Target": "Protocol 255"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "P2P PlugX Variant",
+            "Target": "PlugX Configuration"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "P2P PlugX Variant",
+            "Target": "PlugX Encoding Algorithm"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "target",
+            "Source": "PlugX",
+            "Target": "Various sectors in Japan"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "target",
+            "Source": "P2P PlugX Variant",
+            "Target": "Various sectors in Japan"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "belong_to",
+            "Source": "PlugX Configuration",
+            "Target": "P2P PlugX Variant"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "belong_to",
+            "Source": "PlugX Encoding Algorithm",
+            "Target": "P2P PlugX Variant"
+        }
+    ]
+}

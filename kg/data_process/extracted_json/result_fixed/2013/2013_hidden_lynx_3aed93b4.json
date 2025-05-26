@@ -1,0 +1,322 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Hidden Lynx",
+            "EntityVariantNames": [
+                "APT-29",
+                "Cozy Bear"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "size": "50-100 individuals",
+                "operation_since": "2009",
+                "country": "China"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Bit9",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "industry": "Security",
+                "location": "Waltham, Massachusetts"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Defense Industrial Sector",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Backdoor.Moudoor",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "variant": "Customized Gh0st RAT"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Trojan.Naid",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Backdoor.Hikit",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "CVE-2012-1889",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "description": "Microsoft XML Core Services Remote Code Execution Vulnerability"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "CVE-2012-1723",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "description": "Oracle Java SE Remote Code Execution Vulnerability"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "CVE-2013-1493",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "description": "Oracle Java SE Remote Code Execution Vulnerability"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "SQL Injection",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Watering Hole Attack",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Bit9 Compromise",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "date": "July 2012",
+                "observe_time": "2013",
+                "report_name": "2013_hidden_lynx_3aed93b4"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "VOHO Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "date": "June-July 2012",
+                "observe_time": "2013",
+                "report_name": "2013_hidden_lynx_3aed93b4"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "66.153.86.14",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "110.173.55.187",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "target",
+            "Source": "Hidden Lynx",
+            "Target": "Bit9"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "target",
+            "Source": "Hidden Lynx",
+            "Target": "Defense Industrial Sector"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Hidden Lynx",
+            "Target": "Backdoor.Moudoor"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Hidden Lynx",
+            "Target": "Trojan.Naid"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Hidden Lynx",
+            "Target": "Backdoor.Hikit"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Hidden Lynx",
+            "Target": "SQL Injection"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Hidden Lynx",
+            "Target": "Watering Hole Attack"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "involve",
+            "Source": "Bit9 Compromise",
+            "Target": "Hidden Lynx"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "involve",
+            "Source": "Bit9 Compromise",
+            "Target": "Bit9"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "involve",
+            "Source": "VOHO Campaign",
+            "Target": "Hidden Lynx"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Backdoor.Moudoor",
+            "Target": "CVE-2012-1889"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Trojan.Naid",
+            "Target": "CVE-2012-1723"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "Trojan.Naid",
+            "Target": "CVE-2013-1493"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "belong_to",
+            "Source": "66.153.86.14",
+            "Target": "Backdoor.Hikit"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "belong_to",
+            "Source": "110.173.55.187",
+            "Target": "Trojan.Naid"
+        }
+    ]
+}

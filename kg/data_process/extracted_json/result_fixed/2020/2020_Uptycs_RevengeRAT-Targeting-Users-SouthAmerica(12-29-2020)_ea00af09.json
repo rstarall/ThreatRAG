@@ -1,0 +1,305 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Revenge RAT Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "South America",
+                "country": "Brazil",
+                "observe_time": "2020",
+                "report_name": "2020_Uptycs_RevengeRAT-Targeting-Users-SouthAmerica(12-29-2020)_ea00af09"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Unknown Attacker",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "email": "mmpereiramm30@gmail.com"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Brazilian Users",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Rooming List Reservas para 3 Familias.docx",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "91611ac2268d9bf7b7cb2e71976c630f6b4bfdbb68774420bf01fd1493ed28c7"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "azulviagens[.]online",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Dynamic Office Template Injection",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001",
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "1.docx",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "338b2d8d76f4028bfbd177127371b2509971606553d606c534316dc40cfa8fb9"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Microsoft_Excel_Macro-Enabled_Worksheet.xlsm",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "32f1a502126b1932e1def04b98d8be235c8d25ef7268f8cb35d460cd073a88b2"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "A.txt",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "hash": "4b65e5785692950f8100b22f2827d65ba93e99dd717eb444af035e96fcd84763"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "index.vbs",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "opera.ps1",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "7"
+            ],
+            "Properties": {
+                "hash": "03f5ff9b6a6b24f76799cc15fe3f1fbf1ca9d6dda30a4154125ed5dd5834290c"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Revenge RAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "8"
+            ],
+            "Properties": {
+                "hash": "73f113a6146224c4a1f92f89055922a28322787c108e30000a0a420fa46ed9e2",
+                "capabilities": "Screen capture, Keylogging, Video capture, Credential dumping, Audio capture"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Cdtpitbull[.]hopto[.]org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "8"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Revenge RAT Campaign",
+            "Target": "Unknown Attacker"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Revenge RAT Campaign",
+            "Target": "Brazilian Users"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Unknown Attacker",
+            "Target": "Rooming List Reservas para 3 Familias.docx"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Unknown Attacker",
+            "Target": "Dynamic Office Template Injection"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Unknown Attacker",
+            "Target": "Revenge RAT"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "Unknown Attacker",
+            "Target": "Brazilian Users"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Rooming List Reservas para 3 Familias.docx",
+            "Target": "1.docx"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "1.docx",
+            "Target": "Microsoft_Excel_Macro-Enabled_Worksheet.xlsm"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Microsoft_Excel_Macro-Enabled_Worksheet.xlsm",
+            "Target": "A.txt"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "A.txt",
+            "Target": "index.vbs"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "index.vbs",
+            "Target": "opera.ps1"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "opera.ps1",
+            "Target": "Revenge RAT"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "belong_to",
+            "Source": "azulviagens[.]online",
+            "Target": "Unknown Attacker"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "belong_to",
+            "Source": "Cdtpitbull[.]hopto[.]org",
+            "Target": "Unknown Attacker"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "has",
+            "Source": "Brazilian Users",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "trigger",
+            "Source": "Brazilian Users",
+            "Target": "Rooming List Reservas para 3 Familias.docx"
+        }
+    ]
+}

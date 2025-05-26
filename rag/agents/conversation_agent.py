@@ -105,7 +105,7 @@ class StreamingConversationalAgent:
     
     def __init__(
         self, 
-        model_name: str = "deepseek-ai/DeepSeek-V2.5",
+        model_name: str = "deepseek-chat",
         api_base: Optional[str] = None,
         api_key: Optional[str] = None,
         temperature: float = 0.7,

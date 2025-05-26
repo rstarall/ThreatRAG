@@ -1,0 +1,100 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Turla",
+            "EntityVariantNames": [
+                "Penquin Turla",
+                "Snake",
+                "Uroburos"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "category": "APT",
+                "complexity": "High"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Linux Turla Module",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "md5": "0994d9deb50352e76b0322f48ee576c6,14ecd5e6fc8e501037b54ca263896a11,19fbd8cbfb12482e8020a887d6427315",
+                "type": "Backdoor",
+                "platform": "Linux",
+                "libraries": "glibc2.3.2, openssl v0.9.6, libpcap"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "news-bbc.podzone[.]org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "status": "sinkholed",
+                "sinkhole_by": "Kaspersky Lab"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "80.248.65.183",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "AS": "AS30982",
+                "org": "CAFE Informatique et telecommunications"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "cd00r",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "type": "Backdoor source"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Linux System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Victim Site",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        }
+    ],
+    "Relationships": []
+}

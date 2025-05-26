@@ -1,0 +1,296 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Roaming Tiger",
+            "EntityVariantNames": [
+                "Roaming tiger group"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "region": "Russia and CIS countries",
+                "target": "High profile victims in Russia"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Russia and CIS Attacks",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "2014",
+                "location": "Russia, Belarus, Kazakhstan, Kyrgyzstan, Tajikistan, Ukraine, Uzbekistan",
+                "observe_time": "2014",
+                "report_name": "2014_roaming_tiger_zeronights_2014_7a463e87"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "CVE-2012-0158",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CVE-2014-1761",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "implementation": "Poorly implemented"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Win32/Korplug",
+            "EntityVariantNames": [
+                "PlugX RAT"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "technique": "DLL Side-loading"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Win32/Farfli.BEK",
+            "EntityVariantNames": [
+                "Gh0st RAT"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0005",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "technique": "UAC bypass, Persistence"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "adobeflashupdate.dynu.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "ip": "122.10.92.14",
+                "location": "Hong Kong"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "checkpdate.youdontcare.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "ip": "122.10.118.129",
+                "location": "Hong Kong"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "csrss.dnsedc.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "ip": "122.10.118.131",
+                "location": "Hong Kong"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "dotkang.vicp.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "ip": "122.10.118.131",
+                "location": "Hong Kong"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "liu qiuping",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "organization": "huajiyoutian",
+                "location": "Beijing, China",
+                "email": "yuminga1@126.com"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Russia and CIS Attacks",
+            "Target": "Roaming Tiger"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Roaming Tiger",
+            "Target": "CVE-2012-0158"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Roaming Tiger",
+            "Target": "CVE-2014-1761"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Roaming Tiger",
+            "Target": "Win32/Korplug"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Roaming Tiger",
+            "Target": "Win32/Farfli.BEK"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Win32/Farfli.BEK",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Win32/Korplug",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2012-0158",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2014-1761",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Roaming Tiger",
+            "Target": "liu qiuping"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Roaming Tiger",
+            "Target": "adobeflashupdate.dynu.com"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Roaming Tiger",
+            "Target": "checkpdate.youdontcare.com"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "Roaming Tiger",
+            "Target": "csrss.dnsedc.com"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "Roaming Tiger",
+            "Target": "dotkang.vicp.net"
+        }
+    ]
+}

@@ -1,0 +1,133 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Icefog",
+            "EntityVariantNames": [
+                "APT-29",
+                "Fucobha"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008"
+            ],
+            "Properties": {
+                "country": "China",
+                "activity": "2011-present"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Icefog Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008"
+            ],
+            "Properties": {
+                "time": "2011-2013",
+                "targets": "Japan, South Korea"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Japanese House of Representatives",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "industry": "Government"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "House of Councillors",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "industry": "Government"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2012-1856",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "impact": "Microsoft Office"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CVE-2012-0158",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "impact": "Microsoft Office"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Icefog Backdoor",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Properties": {
+                "version": "Type 1"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Macfog",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Properties": {
+                "platform": "Mac OS X"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "appst0re.net",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "cloudsbit.com",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        }
+    ],
+    "Relationships": []
+}

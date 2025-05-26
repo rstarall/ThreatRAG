@@ -1,0 +1,225 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "HTran",
+            "EntityVariantNames": [
+                "HUC Packet Transmit Tool"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011",
+                "TA0005"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "author": "lion",
+                "group": "HUC (Honker Union of China)"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "RSA breach",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "March 2011",
+                "observe_time": "2011",
+                "report_name": "2011_HTran_and_the_Advanced_Persistent_Threat_c386e97d"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "53ba6845f57f8e9ef600ef166be3be14",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "my.amazingrm.com",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "203.92.45.2",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Honker Union of China",
+            "EntityVariantNames": [
+                "HUC"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0043",
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "lion",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0043",
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "affiliation": "HUC"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Advanced Persistent Threat",
+            "EntityVariantNames": [
+                "APT"
+            ],
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "observe_time": "2011",
+                "report_name": "2011_HTran_and_the_Advanced_Persistent_Threat_c386e97d"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "12.38.236.41:443",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "epod.businessconsults.net",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "3493fc0e4a76b9d12b68afc46cab7f34",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "related_to",
+            "Source": "HTran",
+            "Target": "RSA breach"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Honker Union of China",
+            "Target": "HTran"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "belong_to",
+            "Source": "lion",
+            "Target": "Honker Union of China"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "belong_to",
+            "Source": "53ba6845f57f8e9ef600ef166be3be14",
+            "Target": "my.amazingrm.com"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "belong_to",
+            "Source": "my.amazingrm.com",
+            "Target": "203.92.45.2"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "involve",
+            "Source": "Advanced Persistent Threat",
+            "Target": "Honker Union of China"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "HTran",
+            "Target": "Advanced Persistent Threat"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "belong_to",
+            "Source": "epod.businessconsults.net",
+            "Target": "12.38.236.41:443"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "belong_to",
+            "Source": "3493fc0e4a76b9d12b68afc46cab7f34",
+            "Target": "12.38.236.41:443"
+        }
+    ]
+}

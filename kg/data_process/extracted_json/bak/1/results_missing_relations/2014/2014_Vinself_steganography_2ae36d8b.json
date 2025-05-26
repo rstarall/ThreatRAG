@@ -1,0 +1,126 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "VinSelf",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "type": "RAT malware",
+                "family": "VinSelf"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "colors.bmp",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001",
+                "TA0005"
+            ],
+            "Properties": {
+                "type": "Bitmap image",
+                "source": "Google Docs"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Google Docs",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "vinself_cipher",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Properties": {
+                "description": "Custom obfuscation algorithm"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "HC-128",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Properties": {
+                "type": "Stream cipher"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "192.168.1.101",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "role": "CC server"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "2.2.2.2",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "role": "CC server"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "3.3.3.3",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "role": "CC server"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "4.4.4.4",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "role": "CC server"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "LSB steganography",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Properties": {
+                "description": "Least Significant Bit steganography"
+            }
+        }
+    ],
+    "Relationships": []
+}

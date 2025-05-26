@@ -1,0 +1,109 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Chinese state",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0010"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Third Department of the People's Liberation Army",
+            "EntityVariantNames": [
+                "3PLA"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0010"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Five Year Plan",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0043"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "National Outline for Medium and Long Term ST Development",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0043"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "State Owned Enterprises",
+            "EntityVariantNames": [
+                "SOEs"
+            ],
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0010"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "COMAC",
+            "EntityVariantNames": [
+                "Commercial Aircraft Corporation of China"
+            ],
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0010"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Phishing email",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Malicious macros",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Cobalt Strike",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Five Poisons",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0006"
+            ]
+        }
+    ],
+    "Relationships": []
+}

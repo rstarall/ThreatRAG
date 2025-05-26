@@ -1,0 +1,445 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Islamic State in Iraq and Syria",
+            "EntityVariantNames": [
+                "ISIS"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Raqqah is being Slaughtered Silently",
+            "EntityVariantNames": [
+                "RSS"
+            ],
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Ar-Raqqah, Syria",
+                "type": "Citizen media group"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Malware Attack Targeting Syrian ISIS Critics",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "November 2014",
+                "observe_time": "2014",
+                "report_name": "2014_Targeting_Syrian_ISIS_Critics_b3e79158"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "slideshow.zip",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "b72e6678e79cc57d33e684528b5721bd",
+                "location": "tempsend.com"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "slideshow.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "f8bfb82aa92ea6a8e4e0b378781b3859"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "AdobeR1.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "aa6bcba23cd39c2827d72d33f5104856",
+                "path": "C:\\Users\\[Username]\\AppData\\Local\\Temp\\IXP000.TMP\\"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "pictures.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "eda83c8e4ba7d088593f22d56cf39d9f",
+                "path": "C:\\Users\\[Username]\\AppData\\Local\\Temp\\IXP000.TMP\\"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "AdbrRader.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "hash": "9d36e8e3e557239d7006d0bb5c2df298",
+                "path": "C:\\Users\\[Username]\\Microsoft\\Windows\\Z0xapp8T.tmp\\"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "AdobeIns.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "hash": "1d5d8c5ce3854de61b28de7ca73093f1",
+                "path": "C:\\Users\\[Username]\\Microsoft\\Windows\\Z0xapp8T.tmp\\"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "GoogleUpate.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "hash": "55039dd6ce3274dbce569473ad37918b",
+                "path": "C:\\Users\\[Username]\\Microsoft\\Windows\\Z0xapp8T.tmp\\"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "GooglUpd.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "hash": "efdd9b96ae0f43f7d738ead2e1d5430c",
+                "path": "C:\\Users\\[Username]\\Microsoft\\Windows\\Z0xapp8T.tmp\\"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "nvidrv.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "hash": "0e3eb8de93297f12b56de9fc33657066",
+                "path": "C:\\Users\\[Username]\\Microsoft\\Windows\\Z0xapp8T.tmp\\"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "nvisdvr.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "hash": "3eb6f95c321ace0e3b101fd7e2cdd489",
+                "path": "C:\\Users\\[Username]\\Microsoft\\Windows\\Z0xapp8T.tmp\\"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "rundl132.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "hash": "84bbd592a212f5a84923e82621e9177d",
+                "path": "C:\\Users\\[Username]\\Microsoft\\Windows\\Z0xapp8T.tmp\\"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "svhosts.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "hash": "13caa1c95e6610f2d5134174e1fb4fd0",
+                "path": "C:\\Users\\[Username]\\Microsoft\\Windows\\Z0xapp8T.tmp\\"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "inbox.com email account",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "myexternalip.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "Phishing Email",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "Social Engineering",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Malware Attack Targeting Syrian ISIS Critics",
+            "Target": "Islamic State in Iraq and Syria"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Malware Attack Targeting Syrian ISIS Critics",
+            "Target": "Raqqah is being Slaughtered Silently"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "Islamic State in Iraq and Syria",
+            "Target": "Raqqah is being Slaughtered Silently"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Islamic State in Iraq and Syria",
+            "Target": "Phishing Email"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Islamic State in Iraq and Syria",
+            "Target": "Social Engineering"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Islamic State in Iraq and Syria",
+            "Target": "slideshow.zip"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Phishing Email",
+            "Target": "slideshow.zip"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Social Engineering",
+            "Target": "Phishing Email"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "belong_to",
+            "Source": "slideshow.exe",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "slideshow.exe",
+            "Target": "AdobeR1.exe"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "slideshow.exe",
+            "Target": "pictures.exe"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "AdobeR1.exe",
+            "Target": "AdbrRader.exe"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "AdobeR1.exe",
+            "Target": "AdobeIns.exe"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "AdobeR1.exe",
+            "Target": "GoogleUpate.exe"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "AdobeR1.exe",
+            "Target": "GooglUpd.exe"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "AdobeR1.exe",
+            "Target": "nvidrv.exe"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "AdobeR1.exe",
+            "Target": "nvisdvr.exe"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "related_to",
+            "Source": "AdobeR1.exe",
+            "Target": "rundl132.exe"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "related_to",
+            "Source": "AdobeR1.exe",
+            "Target": "svhosts.exe"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "related_to",
+            "Source": "rundl132.exe",
+            "Target": "myexternalip.com"
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "related_to",
+            "Source": "AdobeIns.exe",
+            "Target": "inbox.com email account"
+        },
+        {
+            "RelationshipId": "relationship_22",
+            "RelationshipType": "trigger",
+            "Source": "Raqqah is being Slaughtered Silently",
+            "Target": "slideshow.zip"
+        }
+    ]
+}

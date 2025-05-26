@@ -1,0 +1,120 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Regin",
+            "EntityVariantNames": [
+                "W64/Regin"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0005",
+                "TA0011"
+            ],
+            "Properties": {
+                "version": "Stage #1",
+                "target": "64-bit Windows systems"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "wshnetc.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0005"
+            ],
+            "Properties": {
+                "description": "Winsock 2 Helper DLL (TL/IPv4)",
+                "type": "DLL"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "5191d7e28ffd1bc76ec7ed02d861679a77f2c239",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Microsoft Root Authority",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Properties": {
+                "KeyID": "41 68 26 6a 16 60 0f 36 41 19 af 06 f9 54 4d 06",
+                "SerialNumber": "0c ea ea 19 bb bd 4f 86 4e b7 e9 47 97 cf 74 a8"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Virtual Machine",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "purpose": "Payload retrieval and processing"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "NRV2E",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Properties": {
+                "type": "Compression algorithm"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "QuickPeParse64",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "function": "PE file parsing"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "version": "64-bit"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "wshtcpip.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0005"
+            ],
+            "Properties": {
+                "type": "Legitimate Windows DLL"
+            }
+        }
+    ],
+    "Relationships": []
+}

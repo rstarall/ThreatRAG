@@ -1,0 +1,215 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "CARBANAK",
+            "EntityVariantNames": [
+                "CARBANAK backdoor"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Backdoor"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "CARBANAK Build Tool",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "function": "Configures CARBANAK binaries"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "bot.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Template binary"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "POSLogMonitorThread",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "function": "Monitors POS log files"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "blizkoThread",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "function": "Checks for Blizko service"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "tinymet",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "command_hash": "0xB0603B4",
+                "function": "Downloads and executes shellcode"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "met.plug",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "content": "Contains Meterpreter payload"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "metsrv.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Meterpreter DLL"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "CARBANAK operators",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "CARBANAK C2 protocol",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "versions": "5"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "CARBANAK operators",
+            "Target": "CARBANAK"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "CARBANAK operators",
+            "Target": "CARBANAK Build Tool"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "CARBANAK Build Tool",
+            "Target": "bot.dll"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "CARBANAK",
+            "Target": "POSLogMonitorThread"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "CARBANAK",
+            "Target": "blizkoThread"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "CARBANAK",
+            "Target": "tinymet"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "tinymet",
+            "Target": "met.plug"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "met.plug",
+            "Target": "metsrv.dll"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "CARBANAK",
+            "Target": "CARBANAK C2 protocol"
+        }
+    ]
+}

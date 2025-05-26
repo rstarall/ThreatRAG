@@ -1,0 +1,281 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Nitro",
+            "EntityVariantNames": [
+                "APT Group Nitro"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "first_seen": "2011",
+                "known_for": "spear phishing, Poison Ivy malware"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Spindest",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "PCClient",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Farfli",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "223.25.233.248",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "purpose": "C2 server"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "196.45.144.12",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "purpose": "C2 server"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "xenserver.ddns[.]net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "zipoo.redirectme[.]net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "good.myftp[.]org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "zip.redirectme[.]net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "South Korean clothing and accessories manufacturer's website",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "International technology company (SCCM solutions)",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "US based IT company",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "US based IT Solutions provider",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "US based commercial vendor of space imagery and geospatial content",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "European leader in power technologies and automation",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "US based provider of medical and dental imaging systems",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "0a1103bc90725d4665b932f88e81d39eafa5823b0de3ab146e2d4548b7da79a0",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "file_name": "update.exe",
+                "first_seen": "2014-07-24"
+            }
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "8aef92a986568ba31729269efa31a2488f35920d136ab41cb6fce55fd8e0b4b7",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "file_name": "lsm.exe",
+                "first_seen": "2014-07-15"
+            }
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "995bc16a5c2c212b57ba00c2376ac57c8032c7f2b1d521f995a5e1d49066d64d",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "file_name": "install_reader11_en_aaa_aih.exe",
+                "first_seen": "2014-07-09"
+            }
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "e7f2af8c48f837da57000c068368d77bc9b06eba1e077edfab58df6aa2ea40ec",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "file_name": "mdm.exe",
+                "first_seen": "2014-05-20"
+            }
+        },
+        {
+            "EntityId": "entity_22",
+            "EntityName": "e601da16f923b33465dbafbff9d47195e8fc50099fd0581a16a1745bf890afb6",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "file_name": "CitrixReceiverWeb.exe",
+                "first_seen": "2014-05-15"
+            }
+        },
+        {
+            "EntityId": "entity_23",
+            "EntityName": "184c083e839451c2ab0de7a89aa801dc0458e2bd1fe79e60f35c26d92a0dbf6a",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "file_name": "update.exe",
+                "first_seen": "2014-04-15"
+            }
+        },
+        {
+            "EntityId": "entity_24",
+            "EntityName": "ffbddfb536e8e604c880ec977d06f804a500fc0396899bd2c195fb1f5b74207a",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "file_name": "CitrixReceiverWeb.exe",
+                "first_seen": "2014-03-12"
+            }
+        },
+        {
+            "EntityId": "entity_25",
+            "EntityName": "Nitro Attack Campaign 2014",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "timeframe": "March-July 2014"
+            }
+        }
+    ],
+    "Relationships": []
+}

@@ -1,0 +1,443 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Korplug",
+            "EntityVariantNames": [
+                "PlugX"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Remote Access Trojan",
+                "first_seen": "2012"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Chinese APT groups",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "www.notebookhk.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "created": "2013-06-18",
+                "registrant": "lee stan",
+                "country": "HK"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "www.dicemention.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "created": "2013-09-10",
+                "registrant": "z x",
+                "country": "HK"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "www.abudlrasul.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "created": "2014-10-16",
+                "registrant": "gang xin",
+                "country": "AR"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CVE-2012-0158",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "product": "Microsoft Word"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "CVE-2014-1761",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "DarkStRat",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "language": "Spanish",
+                "origin": "Chinese"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "File Stealer",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "language": "C"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "newvinta.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "worksware.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Nanning weiwu Technology co.,ltd",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Military and diplomatic targets in Afghanistan",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Afghanistan"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Military and diplomatic targets in Tajikistan",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Tajikistan"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Military and diplomatic targets in Russia",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Russia"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Military and diplomatic targets in Kyrgyzstan",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Kyrgyzstan"
+            }
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "Military and diplomatic targets in Kazakhstan",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Kazakhstan"
+            }
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "Spear-phishing documents",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "Korplug military targeted attacks",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "Since June 2014",
+                "observe_time": "2014",
+                "report_name": "2014_Korplug_Afghanistan_Tajikistan_c7b34b07"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "Chinese APT groups",
+            "Target": "Korplug"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "related_to",
+            "Source": "Korplug",
+            "Target": "www.notebookhk.net"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "Korplug",
+            "Target": "www.dicemention.com"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "Korplug",
+            "Target": "www.abudlrasul.com"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Chinese APT groups",
+            "Target": "Spear-phishing documents"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2012-0158",
+            "Target": "Microsoft Word"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2014-1761",
+            "Target": "Microsoft Word"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Chinese APT groups",
+            "Target": "DarkStRat"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Chinese APT groups",
+            "Target": "File Stealer"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "DarkStRat",
+            "Target": "www.dicemention.com"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "File Stealer",
+            "Target": "newvinta.com"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "File Stealer",
+            "Target": "worksware.net"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "belong_to",
+            "Source": "Nanning weiwu Technology co.,ltd",
+            "Target": "DarkStRat"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "belong_to",
+            "Source": "Nanning weiwu Technology co.,ltd",
+            "Target": "File Stealer"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "target",
+            "Source": "Chinese APT groups",
+            "Target": "Military and diplomatic targets in Afghanistan"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "target",
+            "Source": "Chinese APT groups",
+            "Target": "Military and diplomatic targets in Tajikistan"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "target",
+            "Source": "Chinese APT groups",
+            "Target": "Military and diplomatic targets in Russia"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "target",
+            "Source": "Chinese APT groups",
+            "Target": "Military and diplomatic targets in Kyrgyzstan"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "target",
+            "Source": "Chinese APT groups",
+            "Target": "Military and diplomatic targets in Kazakhstan"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "involve",
+            "Source": "Korplug military targeted attacks",
+            "Target": "Chinese APT groups"
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "involve",
+            "Source": "Korplug military targeted attacks",
+            "Target": "Military and diplomatic targets in Afghanistan"
+        },
+        {
+            "RelationshipId": "relationship_22",
+            "RelationshipType": "involve",
+            "Source": "Korplug military targeted attacks",
+            "Target": "Military and diplomatic targets in Tajikistan"
+        },
+        {
+            "RelationshipId": "relationship_23",
+            "RelationshipType": "involve",
+            "Source": "Korplug military targeted attacks",
+            "Target": "Military and diplomatic targets in Russia"
+        },
+        {
+            "RelationshipId": "relationship_24",
+            "RelationshipType": "involve",
+            "Source": "Korplug military targeted attacks",
+            "Target": "Military and diplomatic targets in Kyrgyzstan"
+        },
+        {
+            "RelationshipId": "relationship_25",
+            "RelationshipType": "involve",
+            "Source": "Korplug military targeted attacks",
+            "Target": "Military and diplomatic targets in Kazakhstan"
+        }
+    ]
+}

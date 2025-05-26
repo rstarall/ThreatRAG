@@ -1,0 +1,239 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Zombie Zero",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Advanced Persistent Malware",
+                "origin": "Chinese factory"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Chinese hardware/software scanner application",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "purpose": "Shipping/transport scanning"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Windows XP embedded",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Chinese manufacturer's support website",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0043"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "China"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Logistics and shipping companies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Logistics/Shipping"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "ERP system",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0009",
+                "TA0010"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Financial data system"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "SMB protocol",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "port": "135/445"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "RADMIN protocol",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "port": "4899"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Lanxiang Vocational School",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "location": "China Unicom Shandong province network"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Beijing facility",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "location": "Beijing"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Chinese manufacturer",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Same area as Lanxiang Vocational School"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "Chinese manufacturer",
+            "Target": "Zombie Zero"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "belong_to",
+            "Source": "Zombie Zero",
+            "Target": "Windows XP embedded"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "Chinese manufacturer",
+            "Target": "Logistics and shipping companies"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "has",
+            "Source": "Logistics and shipping companies",
+            "Target": "Chinese hardware/software scanner application"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "affect",
+            "Source": "Zombie Zero",
+            "Target": "ERP system"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Zombie Zero",
+            "Target": "SMB protocol"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Zombie Zero",
+            "Target": "RADMIN protocol"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Zombie Zero",
+            "Target": "Lanxiang Vocational School"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Zombie Zero",
+            "Target": "Beijing facility"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "exploit",
+            "Source": "Zombie Zero",
+            "Target": "Chinese hardware/software scanner application"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "Zombie Zero",
+            "Target": "Chinese manufacturer's support website"
+        }
+    ]
+}

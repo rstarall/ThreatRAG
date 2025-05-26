@@ -1,0 +1,182 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Lazarus Group",
+            "EntityVariantNames": [
+                "APT-29",
+                "Cozy Bear"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "North Korea",
+                "activity_since": "2009"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Sony Pictures Entertainment Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "November 2014",
+                "location": "United States",
+                "observe_time": "2016",
+                "report_name": "2016_Novetta_Operation-Blockbuster-Report(Feb-24-2016)_922bab34"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Sony Pictures Entertainment",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Media and Entertainment"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "WhiskeyAlfa",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Destructive Malware",
+                "hash": "d1c27ee7ce18675974edf42d4eea25c6"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "IndiaAlfa",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Installer"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CVE-2015-6585",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Hangul Word Processor",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "192.168.1.10",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "purpose": "Domain Controller"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Sony Pictures Entertainment Attack",
+            "Target": "Lazarus Group"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Sony Pictures Entertainment Attack",
+            "Target": "Sony Pictures Entertainment"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Lazarus Group",
+            "Target": "WhiskeyAlfa"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Lazarus Group",
+            "Target": "IndiaAlfa"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "Lazarus Group",
+            "Target": "Sony Pictures Entertainment"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2015-6585",
+            "Target": "Hangul Word Processor"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "has",
+            "Source": "Sony Pictures Entertainment",
+            "Target": "192.168.1.10"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "IndiaAlfa",
+            "Target": "WhiskeyAlfa"
+        }
+    ]
+}

@@ -1,0 +1,282 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Ghost Dragon",
+            "EntityVariantNames": [
+                "Gh0st Dragon"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Gh0st RAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "version": "3.6",
+                "variant": "Modified"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Chinese and Russian users",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "bbs.winupdate[dot]net",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "ip": "122.10.18.166"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "122.10.18.166",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "XYTvn",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Static packet flag"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Dynamic packet flag",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "XOR obfuscated"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "f9a669d22866cd041e2d520c5eb093188962bea8864fdfd0c0abb2b254e9f197",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "name": "install.exe",
+                "type": "Gh0st RAT variant"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "6c7f8ba75889e0021c4616fcbee86ac06cd7f5e1e355e0cbfbbb5110c08bb6df",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Gh0st RAT variant"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Windows XP",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "info.winupdate[dot]net",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "ip": "122.10.36.94"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "www.fhtd[dot]info",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "ip": "122.10.18.166"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "www.swgabeg[dot]com",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "fb5a7cb34040b1e98b077edaf91cb59a446d8ff07263afe875cf6bd85bfb359d",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "name": "operas.exe",
+                "type": "Gh0st RAT variant"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "Ghost Dragon",
+            "Target": "Gh0st RAT"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "target",
+            "Source": "Ghost Dragon",
+            "Target": "Chinese and Russian users"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "Gh0st RAT",
+            "Target": "XYTvn"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "Gh0st RAT",
+            "Target": "Dynamic packet flag"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "belong_to",
+            "Source": "XYTvn",
+            "Target": "f9a669d22866cd041e2d520c5eb093188962bea8864fdfd0c0abb2b254e9f197"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "belong_to",
+            "Source": "Dynamic packet flag",
+            "Target": "1be9c68b31247357328596a388010c9cfffadcb6e9841fb22de8b0dc2d161c42"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Ghost Dragon",
+            "Target": "bbs.winupdate[dot]net"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Ghost Dragon",
+            "Target": "info.winupdate[dot]net"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Ghost Dragon",
+            "Target": "www.fhtd[dot]info"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "Ghost Dragon",
+            "Target": "www.swgabeg[dot]com"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "affect",
+            "Source": "f9a669d22866cd041e2d520c5eb093188962bea8864fdfd0c0abb2b254e9f197",
+            "Target": "Windows XP"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "affect",
+            "Source": "6c7f8ba75889e0021c4616fcbee86ac06cd7f5e1e355e0cbfbbb5110c08bb6df",
+            "Target": "Windows XP"
+        }
+    ]
+}

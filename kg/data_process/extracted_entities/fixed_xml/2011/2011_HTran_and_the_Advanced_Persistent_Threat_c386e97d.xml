@@ -1,0 +1,222 @@
+<Entitys>
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>HTran</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>HUC Packet Transmit Tool</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>tool</EntityType>
+        <EntitySubType>tool</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+            <Label>TA0005</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="author">lion</Property>
+            <Property name="group">HUC (Honker Union of China)</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>RSA breach</EntityName>
+        <EntityType>event</EntityType>
+        <EntitySubType>event</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0010</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="date">March 2011</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>53ba6845f57f8e9ef600ef166be3be14</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>hash</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>my.amazingrm.com</EntityName>
+        <EntityType>asset</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>203.92.45.2</EntityName>
+        <EntityType>asset</EntityType>
+        <EntitySubType>ip</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>Honker Union of China</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>HUC</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0043</Label>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="country">China</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>lion</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>attacker</EntitySubType>
+        <Labels>
+            <Label>TA0043</Label>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="affiliation">HUC</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>Advanced Persistent Threat</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>APT</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>event</EntityType>
+        <EntitySubType>event</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0010</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+    <!-- Additional entities from the survey table -->
+    <Entity>
+        <EntityId>entity_9</EntityId>
+        <EntityName>12.38.236.41:443</EntityName>
+        <EntityType>asset</EntityType>
+        <EntitySubType>ip</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_10</EntityId>
+        <EntityName>epod.businessconsults.net</EntityName>
+        <EntityType>asset</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <!-- Additional hashes from the survey -->
+    <Entity>
+        <EntityId>entity_11</EntityId>
+        <EntityName>3493fc0e4a76b9d12b68afc46cab7f34</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>hash</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <!-- More entities can be added similarly from the survey data -->
+</Entitys>
+<Relationships>
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>HTran</Source>
+        <Target>RSA breach</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Honker Union of China</Source>
+        <Target>HTran</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>lion</Source>
+        <Target>Honker Union of China</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>53ba6845f57f8e9ef600ef166be3be14</Source>
+        <Target>my.amazingrm.com</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>my.amazingrm.com</Source>
+        <Target>203.92.45.2</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Advanced Persistent Threat</Source>
+        <Target>Honker Union of China</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>HTran</Source>
+        <Target>Advanced Persistent Threat</Target>
+    </Relationship>
+    <!-- Relationships from the survey data -->
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>epod.businessconsults.net</Source>
+        <Target>12.38.236.41:443</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_9</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>3493fc0e4a76b9d12b68afc46cab7f34</Source>
+        <Target>12.38.236.41:443</Target>
+    </Relationship>
+    <!-- More relationships can be added similarly from the survey data -->
+</Relationships>

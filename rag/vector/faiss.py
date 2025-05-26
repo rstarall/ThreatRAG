@@ -64,16 +64,35 @@ class FaissVectorDatabase(VectorDatabase):
         self.update_thread.daemon = True
         self.update_thread.start()
         print("已启动自动更新线程，每分钟检查一次新文档")
-    def query_vector_database(self, query: str)->List[Document]:
+    def query_vector_database(self, query: str, filter: dict = None) -> List[Document]:
         """查询向量数据库
            使用相似度搜索获取文档列表
            默认的嵌入模型是bge-m3
         参数:
             query: 查询文本
+            filter: 过滤条件，如 {"source": "filename.pdf"}
         返回:
             docs: 文档列表
         """
-        return self.vector_store.similarity_search(query)
+        if filter:
+            # 检索并过滤
+            docs = self.vector_store.similarity_search(query, k=10)  # 获取较多结果，以便过滤后仍有足够的文档
+            filtered_docs = []
+            for doc in docs:
+                match = True
+                for key, value in filter.items():
+                    if key not in doc.metadata or doc.metadata[key] != value:
+                        match = False
+                        break
+                
+                if match:
+                    filtered_docs.append(doc)
+            
+            # 如果过滤后的结果少于3个，返回前3个，否则返回过滤后的结果
+            return filtered_docs[:3] if len(filtered_docs) > 3 else filtered_docs
+        else:
+            # 常规检索
+            return self.vector_store.similarity_search(query)
     # 自动更新向量库的线程函数
     def _auto_update_vector_store(self):
         """每分钟自动检查并更新向量数据库"""

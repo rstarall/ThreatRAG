@@ -1,0 +1,244 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Scarab",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "language": "Chinese",
+                "target": "Russian speakers"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Russian-speaking individuals",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Russia and other regions"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Trojan.Scieron",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Backdoor"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Trojan.Scieron.B",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0005",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Enhanced backdoor with rootkit"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2012-0158",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "description": "Microsoft Windows Common Controls ActiveX Control Remote Code Execution Vulnerability"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Dynamic DNS domains",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "location": "South Korea"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "@yandex.ru email addresses",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Malicious .scr files",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "delivery": "Embedded in .rar files"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "seclog32.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "function": "Backdoor"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "hidsvc.dat",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "function": "Rootkit"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "target",
+            "Source": "Scarab",
+            "Target": "Russian-speaking individuals"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Scarab",
+            "Target": "Trojan.Scieron"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Scarab",
+            "Target": "Trojan.Scieron.B"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Scarab",
+            "Target": "CVE-2012-0158"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Scarab",
+            "Target": "Dynamic DNS domains"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Scarab",
+            "Target": "@yandex.ru email addresses"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Scarab",
+            "Target": "Malicious .scr files"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Trojan.Scieron",
+            "Target": "Trojan.Scieron.B"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2012-0158",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "belong_to",
+            "Source": "seclog32.dll",
+            "Target": "Trojan.Scieron.B"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "hidsvc.dat",
+            "Target": "Trojan.Scieron.B"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "trigger",
+            "Source": "Russian-speaking individuals",
+            "Target": "Malicious .scr files"
+        }
+    ]
+}

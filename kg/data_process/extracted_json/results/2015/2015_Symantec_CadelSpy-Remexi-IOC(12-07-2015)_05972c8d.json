@@ -1,0 +1,228 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Backdoor.Cadelspy",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Backdoor.Remexi",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "ntinst.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "MD5": "8b9d1fc8e5864a46ba5992f7350d5d89",
+                "SHA1": "72219ba63f2cb336bc7d2e59e9e527af612e207d",
+                "SHA256": "c3a14dab06866ce635b45196022a35fe99e1d7ceccf8b378cc807249771e6e42",
+                "Size": "636,416 bytes"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "ldr32_x86.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "MD5": "6542d5f614ba093a43cd6a3a846d37ff",
+                "SHA1": "65bb99e15e098166bff04f22805b15810f8fbf71",
+                "SHA256": "bf24d7f4e40aaa102d8e5b048de82c6ca9ffcc6c07f207ea79d1a4af5ffc9120",
+                "Size": "75,264 bytes"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "ldr32_x64.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "MD5": "269b5a5270b34bf86c60bc793486aab7",
+                "SHA1": "14a694517ca05165ca09c81c984888923a35f0b0",
+                "SHA256": "6e8f5c8addab6d875a06bc92e109c0298aede342810eb25e16d292b4fffce535",
+                "Size": "91,648 bytes"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "ntsvc32.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "MD5": "200e662384542ccd979d4994dd08163e",
+                "SHA1": "c5f1bb651f665cc30cf789ce554f2bfc9d91a19f",
+                "SHA256": "0f7f0283baddacac623b0adcadf4ce146f6e61cc514abb31982299d25cd86400",
+                "Size": "415,232 bytes"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "37atypz123.dns-bind9.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "5ppob16.dockerjsbin.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "87abfg113.dockerjsbin.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "87pqxz159.dockerjsbin.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "related_to",
+            "Source": "Backdoor.Cadelspy",
+            "Target": "ntinst.exe"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "related_to",
+            "Source": "Backdoor.Cadelspy",
+            "Target": "ldr32_x86.exe"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "Backdoor.Cadelspy",
+            "Target": "ldr32_x64.exe"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "Backdoor.Cadelspy",
+            "Target": "ntsvc32.dll"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "Backdoor.Remexi",
+            "Target": "37atypz123.dns-bind9.com"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Backdoor.Remexi",
+            "Target": "5ppob16.dockerjsbin.com"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Backdoor.Remexi",
+            "Target": "87abfg113.dockerjsbin.com"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Backdoor.Remexi",
+            "Target": "87pqxz159.dockerjsbin.com"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "affect",
+            "Source": "Backdoor.Cadelspy",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "affect",
+            "Source": "Backdoor.Remexi",
+            "Target": "Windows System"
+        }
+    ]
+}

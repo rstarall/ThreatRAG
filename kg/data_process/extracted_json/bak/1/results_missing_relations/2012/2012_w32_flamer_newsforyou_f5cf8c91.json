@@ -1,0 +1,215 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "W32.Flamer",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011",
+                "TA0010"
+            ],
+            "Properties": {
+                "type": "Cyber espionage tool",
+                "target": "Middle East"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Newsforyou",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "purpose": "Command-and-control Web application"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "D***",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0042",
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "H*****",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0042",
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "O******",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0042"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "R***",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0042"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Middle East targets",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Command-and-control server #1",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "setup_date": "2012-05-18"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Command-and-control server #2",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "setup_date": "2012-03-25"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Windows Update MITM attack",
+            "EntityType": "method",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "browse32.ocx",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0005"
+            ],
+            "Properties": {
+                "purpose": "Flamer cleanup module"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "PROTOCOL_OLD",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "PROTOCOL_SIGNUP",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "PROTOCOL_OLD_E",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "PROTOCOL_RED",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Ramp;^Tamp;IOHIO%^amp;^E%@#$UIO*()",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0005"
+            ],
+            "Properties": {
+                "type": "Symmetric encryption key"
+            }
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "27934e96d90d06818674b98bec7230fa",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0005"
+            ],
+            "Properties": {
+                "type": "MD5 password hash"
+            }
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "dnslocation.info",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "LogWiper_fixed.txt",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0005"
+            ],
+            "Properties": {
+                "purpose": "Disable logging and delete log files"
+            }
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "MySQL database",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0007"
+            ]
+        }
+    ],
+    "Relationships": []
+}

@@ -1,0 +1,250 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Unknown Attacker",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0005",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Bangladesh Bank Cyber Heist",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0005",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "February 2016",
+                "amount": "$951 million",
+                "observe_time": "2016",
+                "report_name": "2016_BAESystems_SSA-Two-bytes-to-951m(04-25-2016)_c6a5f02c"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Bangladesh Bank",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "SWIFT_code": "BBHOBDDH"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "SWIFT Alliance Access",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Oracle Database",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "evtdiag.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "SHA1": "525a8e3ae4e3df8c9c61f2a49e38541d196e9228",
+                "compile_time": "2016-02-05 11:46:20",
+                "size": "65,536 bytes"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "liboradb.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "gpca.dat",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "location": "[ROOT_DRIVE]:\\Users\\Administrator\\AppData\\Local\\Allians\\gpca.dat",
+                "RC4_key": "4e 38 1f a7 7f 08 cc aa 0d 56 ed ef f9 ed 08 ef"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "196.202.103.174",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "purpose": "Command-and-control server"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "nroff.exe",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "7"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "HP LaserJet 400 M401",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "8"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Bangladesh Bank Cyber Heist",
+            "Target": "Unknown Attacker"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Bangladesh Bank Cyber Heist",
+            "Target": "Bangladesh Bank"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "Unknown Attacker",
+            "Target": "Bangladesh Bank"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Unknown Attacker",
+            "Target": "evtdiag.exe"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Unknown Attacker",
+            "Target": "nroff.exe"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "has",
+            "Source": "Bangladesh Bank",
+            "Target": "SWIFT Alliance Access"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "has",
+            "Source": "Bangladesh Bank",
+            "Target": "Oracle Database"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "evtdiag.exe",
+            "Target": "liboradb.dll"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "evtdiag.exe",
+            "Target": "gpca.dat"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "evtdiag.exe",
+            "Target": "196.202.103.174"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "liboradb.dll",
+            "Target": "SWIFT Alliance Access"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "affect",
+            "Source": "evtdiag.exe",
+            "Target": "SWIFT Alliance Access"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "affect",
+            "Source": "evtdiag.exe",
+            "Target": "Oracle Database"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "nroff.exe",
+            "Target": "HP LaserJet 400 M401"
+        }
+    ]
+}

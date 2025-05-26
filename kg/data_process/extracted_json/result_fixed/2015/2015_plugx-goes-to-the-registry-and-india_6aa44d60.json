@@ -1,0 +1,306 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "PlugX",
+            "EntityVariantNames": [
+                "PlugX v2",
+                "P2P PlugX",
+                "Registry PlugX"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "version": "v2",
+                "date_constant": "20150108",
+                "storage": "registry"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "APT-29",
+            "EntityVariantNames": [
+                "PlugX malware group"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "CVE-2012-0158",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "India",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Government"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Peeled Tomato Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "September 2014 - February 2015",
+                "observe_time": "2015",
+                "report_name": "2015_plugx-goes-to-the-registry-and-india_6aa44d60"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "www.freetimes.dns05.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "lucas1.dnset.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "unisers.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "registrant": "wang cheng",
+                "country": "CN"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "freemoney.ignorelist.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Windows Registry",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Omdork",
+            "EntityVariantNames": [
+                "Sybin"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Smoaler",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "9blog",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Russia",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "PlugX"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "CVE-2012-0158"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "India"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "Russia"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "involve",
+            "Source": "Peeled Tomato Campaign",
+            "Target": "APT-29"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "involve",
+            "Source": "Peeled Tomato Campaign",
+            "Target": "India"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "PlugX",
+            "Target": "Windows Registry"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "PlugX",
+            "Target": "www.freetimes.dns05.com"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "PlugX",
+            "Target": "lucas1.dnset.com"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "PlugX",
+            "Target": "unisers.com"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "PlugX",
+            "Target": "freemoney.ignorelist.com"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "PlugX",
+            "Target": "Omdork"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "PlugX",
+            "Target": "Smoaler"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "PlugX",
+            "Target": "9blog"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2012-0158",
+            "Target": "Windows Registry"
+        }
+    ]
+}

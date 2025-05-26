@@ -1,0 +1,161 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "CozyDuke",
+            "EntityVariantNames": [
+                "CozyCar"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "MiniDionis Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "time": "July 7, 2015"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Government Organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "industry": "Government"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Think-Tanks",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "miniDionis",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "pdb_path": "c:\\BastionSolution\\Shells\\Projects\\miniDionis4\\miniDionis\\obj\\Release\\miniDionis.pdb"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "extranet.qualityplanning[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "ip": "64.244.34[.]200"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "64.244.34[.]200",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "player.swf",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "0d132ee171768dc30d14590ed2dbadd1",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0005"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "www.illuminatistudios[.]net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Seaduke",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Spear Phishing Email",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Compromised Websites",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "AutoFocus Service",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0043"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "WildFire",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0043"
+            ]
+        }
+    ],
+    "Relationships": []
+}

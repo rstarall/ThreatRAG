@@ -1,0 +1,277 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Wekby",
+            "EntityVariantNames": [
+                "APT group Wekby"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industries": "healthcare, telecommunications, aerospace, defense, high tech"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "US-based organization",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "pisloader",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "family": "HTTPBrowser malware family"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "http://globalprint-us[.]com/proxy_plugin.exe",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "http://globalprint-us[.]com/proxy_web_plugin.exe",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "E4968C8060EA017B5E5756C16B80B012",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "8FFBB7A80EFA9EE79E996ABDE7A95CF8DC6F9A41F9026672A8DBD95539FEA82A",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Poison Ivy",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "intranetwabcam[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "E8D58AA76DD97536AC225949A2767E05",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "DA3261C332E72E4C1641CA0DE439AF280E064B224D950817A11922A8078B11F1",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "07B9B62FB3B1C068837C188FEFBD5DE9",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "456FFFC256422AD667CA023D694494881BAED1496A3067485D56ECC8FEFBFAEB",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "ns1.logitech-usa[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Windows",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "DNS",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "target",
+            "Source": "Wekby",
+            "Target": "US-based organization"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Wekby",
+            "Target": "pisloader"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Wekby",
+            "Target": "Poison Ivy"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Wekby",
+            "Target": "DNS"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "pisloader",
+            "Target": "http://globalprint-us[.]com/proxy_plugin.exe"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "pisloader",
+            "Target": "http://globalprint-us[.]com/proxy_web_plugin.exe"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "belong_to",
+            "Source": "http://globalprint-us[.]com/proxy_plugin.exe",
+            "Target": "globalprint-us[.]com"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "belong_to",
+            "Source": "http://globalprint-us[.]com/proxy_web_plugin.exe",
+            "Target": "globalprint-us[.]com"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Poison Ivy",
+            "Target": "intranetwabcam[.]com"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "pisloader",
+            "Target": "ns1.logitech-usa[.]com"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "affect",
+            "Source": "pisloader",
+            "Target": "Windows"
+        }
+    ]
+}

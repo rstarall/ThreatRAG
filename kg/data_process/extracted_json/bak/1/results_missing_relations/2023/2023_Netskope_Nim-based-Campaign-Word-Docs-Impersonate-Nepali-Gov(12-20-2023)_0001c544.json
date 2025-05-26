@@ -1,0 +1,162 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Nim-based Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "date": "December 20, 2023"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Nepali Government Impersonation",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "e2a3edc708016316477228de885f0c39.doc",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "hash": "e2a3edc708016316477228de885f0c39",
+                "type": "Word Document"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "OCu3HBg7gyI9aUaB.vbs",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Properties": {
+                "path": "C:\\Users\\lt;usergt;\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\OCu3HBg7gyI9aUaB.vbs"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "skriven.vbs",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "path": "C:\\Users\\lt;usergt;\\AppData\\Local\\skriven.vbs"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "conhost.zip",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "path": "C:\\Users\\lt;usergt;\\AppData\\Local\\Microsoft\\conhost.zip"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "8lGghf8kIPIuu3cM.bat",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "path": "C:\\Users\\lt;jackgt;\\AppData\\Local\\8lGghf8kIPIuu3cM.bat"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "conhost.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "language": "Nim",
+                "compiled_date": "September 20, 2023"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "mail[.]mofa[.]govnp[.]org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "nitc[.]govnp[.]org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "mx1[.]nepal[.]govnp[.]org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "dns[.]govnp[.]org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "ConsoleHostManager",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        }
+    ],
+    "Relationships": []
+}

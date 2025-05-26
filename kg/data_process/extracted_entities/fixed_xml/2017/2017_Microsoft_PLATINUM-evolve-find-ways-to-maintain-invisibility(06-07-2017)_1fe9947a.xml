@@ -1,0 +1,144 @@
+<Entitys>
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>PLATINUM</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0005</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="region">South and Southeast Asia</Property>
+            <Property name="technique">hot patching</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>PLATINUM file-transfer tool</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>tool</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="communication_channel">Intel AMT SOL</Property>
+            <Property name="encryption">Blowfish</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>Intel Active Management Technology (AMT)</EntityName>
+        <EntityType>env</EntityType>
+        <EntitySubType>software</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="vendor">Intel</Property>
+            <Property name="feature">Serial-over-LAN (SOL)</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>imrsdk.dll</EntityName>
+        <EntityType>file</EntityType>
+        <EntitySubType>file</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="api">IMR_SOLSendText/IMR_SOLReceiveText</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>Windows Defender ATP</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>tool</EntitySubType>
+        <Labels>
+            <Label>TA0005</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+        <Properties>
+            <Property name="vendor">Microsoft</Property>
+            <Property name="capability">behavior analytics</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>Organizational networks in Southeast Asia</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="region">Southeast Asia</Property>
+        </Properties>
+    </Entity>
+</Entitys>
+<Relationships>
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>PLATINUM</Source>
+        <Target>PLATINUM file-transfer tool</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>PLATINUM file-transfer tool</Source>
+        <Target>Intel Active Management Technology (AMT)</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>PLATINUM file-transfer tool</Source>
+        <Target>imrsdk.dll</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>PLATINUM</Source>
+        <Target>Organizational networks in Southeast Asia</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>affect</RelationshipType>
+        <Source>PLATINUM file-transfer tool</Source>
+        <Target>Intel Active Management Technology (AMT)</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>imrsdk.dll</Source>
+        <Target>Intel Active Management Technology (AMT)</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>trigger</RelationshipType>
+        <Source>Organizational networks in Southeast Asia</Source>
+        <Target>PLATINUM file-transfer tool</Target>
+    </Relationship>
+</Relationships>

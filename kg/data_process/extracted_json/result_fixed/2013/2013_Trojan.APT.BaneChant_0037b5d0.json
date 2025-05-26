@@ -1,0 +1,244 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Trojan.APT.BaneChant",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "In-Memory Trojan",
+                "capability": "Mouse click detection, anti-sandboxing"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Islamic Jihad.doc",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Spear phishing document",
+                "format": "RTF"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "CVE-2012-0158",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "MSCOMCTL.ocx",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "ow.ly/iGKKT",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "service": "URL shortening service"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "symbisecure.com/update/winword.pkg",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "kibber.no-ip.org/adserv/logo.jpg",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Fake JPEG file"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "GoogleUpdate.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "location": "C:\\ProgramData\\Google2\\",
+                "type": "Malicious copy"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "symbisecure.com/adserv/get.php",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Middle East and Central Asia Governments",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "region": "Middle East, Central Asia"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "NO-IP",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "service": "Dynamic DNS service"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "related_to",
+            "Source": "Trojan.APT.BaneChant",
+            "Target": "Islamic Jihad.doc"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2012-0158",
+            "Target": "MSCOMCTL.ocx"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "Islamic Jihad.doc",
+            "Target": "CVE-2012-0158"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "Islamic Jihad.doc",
+            "Target": "MSCOMCTL.ocx"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "belong_to",
+            "Source": "ow.ly/iGKKT",
+            "Target": "symbisecure.com/update/winword.pkg"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "belong_to",
+            "Source": "kibber.no-ip.org/adserv/logo.jpg",
+            "Target": "NO-IP"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "Trojan.APT.BaneChant",
+            "Target": "Middle East and Central Asia Governments"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "affect",
+            "Source": "Trojan.APT.BaneChant",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "has",
+            "Source": "Middle East and Central Asia Governments",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Trojan.APT.BaneChant",
+            "Target": "GoogleUpdate.exe"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Trojan.APT.BaneChant",
+            "Target": "symbisecure.com/adserv/get.php"
+        }
+    ]
+}

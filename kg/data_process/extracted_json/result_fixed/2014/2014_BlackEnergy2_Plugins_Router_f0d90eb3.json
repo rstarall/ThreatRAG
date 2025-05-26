@@ -1,0 +1,494 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "BE2/Sandworm",
+            "EntityVariantNames": [
+                "BE2 APT",
+                "Sandworm Team"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "BlackEnergy2",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "BlackEnergy3",
+            "EntityVariantNames": [
+                "Backdoor.Win32.Fonten"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Power generation facilities",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "industry": "ICS/SCADA"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Government agencies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Russian Ministry of Defense",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "ip": "188.128.123.52"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Turkish Ministry of Interior",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "ip": "212.175.109.10"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Cisco routers",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "SCADA networks",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "weap_hwi",
+            "EntityType": "tool",
+            "EntitySubType": "plugin",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "platform": "ARM",
+                "function": "DDoS"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "ps",
+            "EntityType": "tool",
+            "EntitySubType": "plugin",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "function": "Password stealer"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "vsnet",
+            "EntityType": "tool",
+            "EntitySubType": "plugin",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "function": "Lateral movement"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "dstr",
+            "EntityType": "tool",
+            "EntitySubType": "plugin",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "function": "Data destruction"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "ciscoapi.tcl",
+            "EntityType": "tool",
+            "EntitySubType": "script",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "killint.tcl",
+            "EntityType": "tool",
+            "EntitySubType": "script",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "184.22.205.194",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "owner": "hostnoc.net",
+                "country": "US"
+            }
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "46.165.222.28",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "owner": "Leaseweb",
+                "country": "NL"
+            }
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "94.185.85.122",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "%system32%\\drivers\\winntd_.dat",
+            "EntityType": "ioc",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "%LOCALAPPDATA%\\adobe\\settings.sol",
+            "EntityType": "ioc",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "%USERPROFILE%\\NTUSER.LOG",
+            "EntityType": "ioc",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_22",
+            "EntityName": "d57ccbb25882b16198a0f43285dafbb4",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_23",
+            "EntityName": "f0ebb6105c0981fdd15888122355398c",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_24",
+            "EntityName": "plus.google.com/115125387226417117030/",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_25",
+            "EntityName": "Siemens ccprojectmgr.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "BE2/Sandworm",
+            "Target": "BlackEnergy2"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "BE2/Sandworm",
+            "Target": "BlackEnergy3"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "BE2/Sandworm",
+            "Target": "Power generation facilities"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "target",
+            "Source": "BE2/Sandworm",
+            "Target": "Government agencies"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "BE2/Sandworm",
+            "Target": "Russian Ministry of Defense"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "BE2/Sandworm",
+            "Target": "Turkish Ministry of Interior"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "BE2/Sandworm",
+            "Target": "Cisco routers"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "BE2/Sandworm",
+            "Target": "SCADA networks"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "BlackEnergy2",
+            "Target": "weap_hwi"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "BlackEnergy2",
+            "Target": "ps"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "BlackEnergy2",
+            "Target": "vsnet"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "BlackEnergy2",
+            "Target": "dstr"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "BlackEnergy2",
+            "Target": "ciscoapi.tcl"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "BlackEnergy2",
+            "Target": "killint.tcl"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "belong_to",
+            "Source": "184.22.205.194",
+            "Target": "BlackEnergy2"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "belong_to",
+            "Source": "46.165.222.28",
+            "Target": "BlackEnergy2"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "belong_to",
+            "Source": "94.185.85.122",
+            "Target": "BlackEnergy2"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "belong_to",
+            "Source": "%system32%\\drivers\\winntd_.dat",
+            "Target": "BlackEnergy2"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "belong_to",
+            "Source": "%LOCALAPPDATA%\\adobe\\settings.sol",
+            "Target": "BlackEnergy2"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "belong_to",
+            "Source": "%USERPROFILE%\\NTUSER.LOG",
+            "Target": "BlackEnergy3"
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "belong_to",
+            "Source": "d57ccbb25882b16198a0f43285dafbb4",
+            "Target": "BlackEnergy2"
+        },
+        {
+            "RelationshipId": "relationship_22",
+            "RelationshipType": "belong_to",
+            "Source": "f0ebb6105c0981fdd15888122355398c",
+            "Target": "BlackEnergy3"
+        },
+        {
+            "RelationshipId": "relationship_23",
+            "RelationshipType": "belong_to",
+            "Source": "plus.google.com/115125387226417117030/",
+            "Target": "BlackEnergy2"
+        },
+        {
+            "RelationshipId": "relationship_24",
+            "RelationshipType": "affect",
+            "Source": "Siemens ccprojectmgr.exe",
+            "Target": "SCADA networks"
+        }
+    ]
+}

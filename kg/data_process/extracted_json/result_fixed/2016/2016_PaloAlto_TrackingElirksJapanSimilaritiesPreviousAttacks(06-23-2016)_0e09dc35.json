@@ -1,0 +1,269 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Scarlet Mimic",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Japanese Business",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Ministry of Taiwan",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "PlugX",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Elirks",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "FakeM",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "CVE-2011-0611",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "software": "Adobe Flash"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Spear Phishing",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "E-TKT",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "PDF with Flash exploit"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "ticket.doc",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "8587e3a0312a6c4374989cbcca48dc54ddcd3fbd54b48833afda991a6a2dfdea",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "755138308bbaa9fcb9c60f0b089032ed4fa1cece830a954ad574bd0c2fe1f104",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Japanese Blog Service",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Scarlet Mimic",
+            "Target": "Japanese Business"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Scarlet Mimic",
+            "Target": "Ministry of Taiwan"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Scarlet Mimic",
+            "Target": "PlugX"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Scarlet Mimic",
+            "Target": "Elirks"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Scarlet Mimic",
+            "Target": "FakeM"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Scarlet Mimic",
+            "Target": "Spear Phishing"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Scarlet Mimic",
+            "Target": "CVE-2011-0611"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "Scarlet Mimic",
+            "Target": "Japanese Business"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "Scarlet Mimic",
+            "Target": "Ministry of Taiwan"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Elirks",
+            "Target": "Japanese Blog Service"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2011-0611",
+            "Target": "E-TKT"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "affect",
+            "Source": "E-TKT",
+            "Target": "Japanese Business"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "affect",
+            "Source": "E-TKT",
+            "Target": "Ministry of Taiwan"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "Elirks",
+            "Target": "ticket.doc"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "belong_to",
+            "Source": "8587e3a0312a6c4374989cbcca48dc54ddcd3fbd54b48833afda991a6a2dfdea",
+            "Target": "Elirks"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "belong_to",
+            "Source": "755138308bbaa9fcb9c60f0b089032ed4fa1cece830a954ad574bd0c2fe1f104",
+            "Target": "E-TKT"
+        }
+    ]
+}

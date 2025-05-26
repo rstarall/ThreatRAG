@@ -1,0 +1,231 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Shamoon 3 Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0004",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "December 10, 2018",
+                "industry": "Oil and Gas",
+                "observe_time": "2018",
+                "report_name": "2018_PaloAlto_Shamoon3-Targets-Oil-and-Gas(12-13-2018)_8709eb52"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Saipem",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "impact": "300 systems crippled",
+                "industry": "Oil and Gas"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Disttrack malware",
+            "EntityVariantNames": [
+                "Shamoon malware"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0040"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "c3ab58b3154e5f5101ba74fccfd27a9ab445e41262cdf47e8cc3be7416a5904f",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Disttrack Dropper x86"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "0975eb436fb4adb9077c8e99ea6d34746807bc83a228b17d321d14dfbbe80b03",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Disttrack Dropper x64"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "391e7b90bf3f0bfeb2c2602cc65aa6be4dd1c01374b89c4a48425f2d22fe231c",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Disttrack Wiper module x86"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "ElDos RawDisk",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "%WINDOWS%\\inf\\mdmnis5tQ1.pnf",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "%WINDOWS%\\inf\\averbh_noav.pnf",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "MaintenaceSrv",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Shamoon 3 Attack Event",
+            "Target": "Saipem"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Shamoon 3 Attack Event",
+            "Target": "Disttrack malware"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "Disttrack malware",
+            "Target": "c3ab58b3154e5f5101ba74fccfd27a9ab445e41262cdf47e8cc3be7416a5904f"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "Disttrack malware",
+            "Target": "0975eb436fb4adb9077c8e99ea6d34746807bc83a228b17d321d14dfbbe80b03"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "Disttrack malware",
+            "Target": "391e7b90bf3f0bfeb2c2602cc65aa6be4dd1c01374b89c4a48425f2d22fe231c"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Disttrack malware",
+            "Target": "ElDos RawDisk"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "affect",
+            "Source": "Disttrack malware",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "belong_to",
+            "Source": "%WINDOWS%\\inf\\mdmnis5tQ1.pnf",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "belong_to",
+            "Source": "%WINDOWS%\\inf\\averbh_noav.pnf",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "Disttrack malware",
+            "Target": "MaintenaceSrv"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "has",
+            "Source": "Saipem",
+            "Target": "Windows System"
+        }
+    ]
+}

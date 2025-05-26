@@ -1,0 +1,203 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "DUBNIUM",
+            "EntityVariantNames": [
+                "DarkHotel"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0007",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "DUBNIUM Malware",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0005",
+                "TA0007"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "disguise": "SSH tool",
+                "technique": "String encoding, memory cleaning"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "dc3ab3f6af87405d889b6af2557c835d7b7ed588",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "decode_string",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "fill_memory_with_random_bytes",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "mshta.exe",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "OpenSSL",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "version": "openssl-1.0.1l-i386-win"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Chinese security products",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0007"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "processes": "QQPCRTP.exe, QQPCTray.exe, ZhuDongFangYu.exe, 360tray.exe, 360sd.exe"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Analysis tools detection",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005",
+                "TA0007"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "tools": "Pin, DynamoRIO, VMware, Virtualbox, Cuckoo Sandbox, Fiddler"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Command and Control server",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "DUBNIUM",
+            "Target": "DUBNIUM Malware"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "related_to",
+            "Source": "DUBNIUM Malware",
+            "Target": "dc3ab3f6af87405d889b6af2557c835d7b7ed588"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "DUBNIUM Malware",
+            "Target": "decode_string"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "DUBNIUM Malware",
+            "Target": "fill_memory_with_random_bytes"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "DUBNIUM Malware",
+            "Target": "OpenSSL"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "DUBNIUM Malware",
+            "Target": "mshta.exe"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "DUBNIUM Malware",
+            "Target": "Chinese security products"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "DUBNIUM Malware",
+            "Target": "Analysis tools detection"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "DUBNIUM Malware",
+            "Target": "Command and Control server"
+        }
+    ]
+}

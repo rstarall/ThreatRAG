@@ -1,0 +1,407 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT-29",
+            "EntityVariantNames": [
+                "The Dukes",
+                "Cozy Bear"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Russia"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Operation Ghost",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "2013-2019",
+                "observe_time": "2019",
+                "report_name": "2019_ESET_Operation_Ghost_Dukes(10-19-2019)_519f8690"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "European Ministries of Foreign Affairs",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "count": "3",
+                "location": "Europe"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Washington DC embassy",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "European Union"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "PolyglotDuke",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Downloader",
+                "SHA-1": "D09C4E7B641F8CB7CC86190FD9A778C6955FEA28"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "RegDuke",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "First-stage implant",
+                "SHA-1": "0A5A7DD4AD0F2E50F3577F8D43A4C55DDC1D80CF"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "MiniDuke",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "type": "Backdoor",
+                "SHA-1": "B05CABA461000C6EBD8B237F318577E9BCCD6047"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "FatDuke",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "type": "Backdoor",
+                "SHA-1": "DB19171B239EF6DE8E83B2926EADC652E74A5AFA"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "LiteDuke",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "type": "Backdoor",
+                "SHA-1": "AF2B46D4371CE632E2669FEA1959EE8AF4EC39CE"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Twitter",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Reddit",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Imgur",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Dropbox",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "ministernetwork[.]org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Steganography",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "WMI",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "PsExec",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "4"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation Ghost",
+            "Target": "APT-29"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Operation Ghost",
+            "Target": "European Ministries of Foreign Affairs"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "Operation Ghost",
+            "Target": "Washington DC embassy"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "PolyglotDuke"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "RegDuke"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "MiniDuke"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "FatDuke"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "LiteDuke"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "Steganography"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "WMI"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "PsExec"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "European Ministries of Foreign Affairs"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "Washington DC embassy"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "PolyglotDuke",
+            "Target": "Twitter"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "PolyglotDuke",
+            "Target": "Reddit"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "PolyglotDuke",
+            "Target": "Imgur"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "RegDuke",
+            "Target": "Dropbox"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "related_to",
+            "Source": "FatDuke",
+            "Target": "ministernetwork[.]org"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "related_to",
+            "Source": "PolyglotDuke",
+            "Target": "MiniDuke"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "related_to",
+            "Source": "RegDuke",
+            "Target": "MiniDuke"
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "related_to",
+            "Source": "MiniDuke",
+            "Target": "FatDuke"
+        },
+        {
+            "RelationshipId": "relationship_22",
+            "RelationshipType": "related_to",
+            "Source": "MiniDuke",
+            "Target": "LiteDuke"
+        },
+        {
+            "RelationshipId": "relationship_23",
+            "RelationshipType": "affect",
+            "Source": "PolyglotDuke",
+            "Target": "European Ministries of Foreign Affairs"
+        },
+        {
+            "RelationshipId": "relationship_24",
+            "RelationshipType": "affect",
+            "Source": "PolyglotDuke",
+            "Target": "Washington DC embassy"
+        }
+    ]
+}

@@ -1,0 +1,419 @@
+<Entitys>
+    <!-- Threat Actor -->
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>Lazarus Group</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>Lazarus APT</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="country">North Korea</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Attack Event -->
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>Naver-themed Campaign</EntityName>
+        <EntityType>event</EntityType>
+        <EntitySubType>event</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="time">2021-2022</Property>
+            <Property name="location">South Korea</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Victims -->
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>South Korean Users</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>user</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>Cryptocurrency Users</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>user</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+
+    <!-- Attack Infrastructure -->
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>222.112.127.9</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>ip</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="provider">KT Corporation</Property>
+        </Properties>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>23.81.246.131</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>ip</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>172.93.201.253</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>ip</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>45.147.231.213</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>ip</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+
+    <!-- C2 Domains -->
+    <Entity>
+        <EntityId>entity_9</EntityId>
+        <EntityName>navercorpservice.com</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_10</EntityId>
+        <EntityName>disneycareers.net</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_11</EntityId>
+        <EntityName>www.devguardmap.org</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+
+    <!-- Attack Tools -->
+    <Entity>
+        <EntityId>entity_12</EntityId>
+        <EntityName>Macro-based Document</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="hash">1a536709554860fcc2c147374556205d</Property>
+        </Properties>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_13</EntityId>
+        <EntityName>Compiled HTML File</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="hash">210db61d1b11c1d233fd8a0645946074</Property>
+            <Property name="path">C:\programdata\chmtemp\chmext.exe</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Email Accounts -->
+    <Entity>
+        <EntityId>entity_14</EntityId>
+        <EntityName>peterstewart0326@gmail.com</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>email</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+
+    <!-- Spoofed Entities -->
+    <Entity>
+        <EntityId>entity_15</EntityId>
+        <EntityName>Naver</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_16</EntityId>
+        <EntityName>KRNIC</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_17</EntityId>
+        <EntityName>Ahnlab</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_18</EntityId>
+        <EntityName>Binance</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+
+    <!-- Malicious Files -->
+    <Entity>
+        <EntityId>entity_19</EntityId>
+        <EntityName>IntelRST.exe</EntityName>
+        <EntityType>file</EntityType>
+        <EntitySubType>file</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="path">C:\ProgramData\Intel\IntelRST.exe</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Network Communication -->
+    <Entity>
+        <EntityId>entity_20</EntityId>
+        <EntityName>Dropbox C2 URL</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>url</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+        <Properties>
+            <Property name="url">https://dl.dropboxusercontent.com/s/k288s9tu2o53v41/zs_url.txt?dl=0</Property>
+        </Properties>
+    </Entity>
+</Entitys>
+<Relationships>
+    <!-- Event Relationships -->
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Naver-themed Campaign</Source>
+        <Target>Lazarus Group</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Naver-themed Campaign</Source>
+        <Target>South Korean Users</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Naver-themed Campaign</Source>
+        <Target>Cryptocurrency Users</Target>
+    </Relationship>
+
+    <!-- Attacker Relationships -->
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Lazarus Group</Source>
+        <Target>222.112.127.9</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Lazarus Group</Source>
+        <Target>Macro-based Document</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Lazarus Group</Source>
+        <Target>Compiled HTML File</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Lazarus Group</Source>
+        <Target>peterstewart0326@gmail.com</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Lazarus Group</Source>
+        <Target>Dropbox C2 URL</Target>
+    </Relationship>
+
+    <!-- Target Relationships -->
+    <Relationship>
+        <RelationshipId>relationship_9</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Lazarus Group</Source>
+        <Target>South Korean Users</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_10</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Lazarus Group</Source>
+        <Target>Cryptocurrency Users</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_11</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Lazarus Group</Source>
+        <Target>Naver</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_12</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Lazarus Group</Source>
+        <Target>Ahnlab</Target>
+    </Relationship>
+
+    <!-- Infrastructure Relationships -->
+    <Relationship>
+        <RelationshipId>relationship_13</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>23.81.246.131</Source>
+        <Target>navercorpservice.com</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_14</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>172.93.201.253</Source>
+        <Target>disneycareers.net</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_15</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>45.147.231.213</Source>
+        <Target>www.devguardmap.org</Target>
+    </Relationship>
+
+    <!-- File Relationships -->
+    <Relationship>
+        <RelationshipId>relationship_16</RelationshipId>
+        <RelationshipType>affect</RelationshipType>
+        <Source>IntelRST.exe</Source>
+        <Target>South Korean Users</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_17</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Compiled HTML File</Source>
+        <Target>IntelRST.exe</Target>
+    </Relationship>
+</Relationships>

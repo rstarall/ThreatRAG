@@ -1,0 +1,128 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Gauss",
+            "EntityVariantNames": [
+                "Gauss malware"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0005",
+                "TA0006",
+                "TA0007",
+                "TA0011"
+            ],
+            "Properties": {
+                "origin": "Nation-state sponsored",
+                "first_seen": "2011",
+                "target_regions": "Middle East"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Lebanese Banks",
+            "EntityVariantNames": [
+                "Bank of Beirut",
+                "Byblos Bank",
+                "Fransabank"
+            ],
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "industry": "Banking",
+                "country": "Lebanon"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "winshell.ocx",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0006",
+                "TA0007"
+            ],
+            "Properties": {
+                "function": "Banking credential theft",
+                "location": "%system32%"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "dskapi.ocx",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Properties": {
+                "function": "USB infection",
+                "location": "%system32%"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2010-2568",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "type": "LNK vulnerability"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "*.gowin7.com",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "ip": "109.71.45.115,182.18.166.116",
+                "location": "Portugal, India"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "*.secuurity.net",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "ip": "109.71.45.115,182.18.166.116",
+                "location": "Portugal, India"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Gauss Cyber Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0006",
+                "TA0011"
+            ],
+            "Properties": {
+                "timeframe": "2011-2012",
+                "primary_target": "Middle East"
+            }
+        }
+    ],
+    "Relationships": []
+}

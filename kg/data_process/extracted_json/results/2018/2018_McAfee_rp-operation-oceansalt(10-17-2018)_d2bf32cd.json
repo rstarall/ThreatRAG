@@ -1,0 +1,417 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Comment Crew",
+            "EntityVariantNames": [
+                "APT1"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0007",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China",
+                "year_active": "2010"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Operation Oceansalt",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0007",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "South Korea",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Government, Education, Infrastructure"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "United States",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "industry": "Financial, Healthcare, Government, Agriculture"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Canada",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "industry": "Telecommunications, Financial"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Operation Oceansalt Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0007",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "2018",
+                "location": "South Korea, United States, Canada",
+                "observe_time": "2018",
+                "report_name": "2018_McAfee_rp-operation-oceansalt(10-17-2018)_d2bf32cd"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Oceansalt",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0007",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "size": "76KB",
+                "origin": "Based on Seasalt malware"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Seasalt",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0007",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "year": "2010",
+                "origin": "Comment Crew"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Spear Phishing",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Malicious Excel Document",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "language": "Korean",
+                "author": "Lion"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Malicious Word Document",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "language": "Korean",
+                "author": "Lion"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "172.81.132.62",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "211.104.160.196",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "27.102.112.179",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "158.69.131.78",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "38216571e9a9364b509e52ec19fae61b",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "531dee019792a089a4589c2cce3dac95",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "Microsoft Office Macro Vulnerability",
+            "EntityType": "vul",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation Oceansalt Campaign",
+            "Target": "Operation Oceansalt"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Operation Oceansalt Campaign",
+            "Target": "South Korea"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "Operation Oceansalt Campaign",
+            "Target": "United States"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "involve",
+            "Source": "Operation Oceansalt Campaign",
+            "Target": "Canada"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Operation Oceansalt",
+            "Target": "Oceansalt"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Operation Oceansalt",
+            "Target": "Spear Phishing"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Operation Oceansalt",
+            "Target": "Malicious Excel Document"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Operation Oceansalt",
+            "Target": "Malicious Word Document"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Operation Oceansalt",
+            "Target": "Microsoft Office Macro Vulnerability"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "target",
+            "Source": "Operation Oceansalt",
+            "Target": "South Korea"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "target",
+            "Source": "Operation Oceansalt",
+            "Target": "United States"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "target",
+            "Source": "Operation Oceansalt",
+            "Target": "Canada"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "Oceansalt",
+            "Target": "Seasalt"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "Oceansalt",
+            "Target": "172.81.132.62"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "Oceansalt",
+            "Target": "211.104.160.196"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "Oceansalt",
+            "Target": "27.102.112.179"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "Oceansalt",
+            "Target": "158.69.131.78"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "related_to",
+            "Source": "Oceansalt",
+            "Target": "38216571e9a9364b509e52ec19fae61b"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "related_to",
+            "Source": "Oceansalt",
+            "Target": "531dee019792a089a4589c2cce3dac95"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "related_to",
+            "Source": "Comment Crew",
+            "Target": "Seasalt"
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "trigger",
+            "Source": "South Korea",
+            "Target": "Malicious Excel Document"
+        },
+        {
+            "RelationshipId": "relationship_22",
+            "RelationshipType": "trigger",
+            "Source": "South Korea",
+            "Target": "Malicious Word Document"
+        },
+        {
+            "RelationshipId": "relationship_23",
+            "RelationshipType": "exploit",
+            "Source": "Microsoft Office Macro Vulnerability",
+            "Target": "Malicious Excel Document"
+        },
+        {
+            "RelationshipId": "relationship_24",
+            "RelationshipType": "exploit",
+            "Source": "Microsoft Office Macro Vulnerability",
+            "Target": "Malicious Word Document"
+        }
+    ]
+}

@@ -1,0 +1,142 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Suckfly",
+            "EntityVariantNames": [
+                "Suckfly"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Properties": {
+                "type": "Advanced cyberespionage group"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Indian Organizations Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Properties": {
+                "time": "April 2014 - May 2016",
+                "location": "India"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Indian Government Organization #2",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "function": "Implementing network software for ministries"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Backdoor.Nidiran",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "type": "Custom backdoor"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2014-6332",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "impact": "Windows System"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Windows",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "aux.robertstockdill[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "ssl.2upgrades[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "176.58.96.234",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "dllhost.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "iviewers.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "msfied",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ]
+        }
+    ],
+    "Relationships": []
+}

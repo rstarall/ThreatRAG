@@ -1,0 +1,141 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "TA2541",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "category": "Cybercrime",
+                "first_observed": "2017"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Aviation Industry Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "time": "2017-2022"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Aviation Industry",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "sector": "Aviation, Aerospace, Transportation, Manufacturing, Defense"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Google Drive",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Visual Basic Script (VBS)",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "PowerShell",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "AsyncRAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "joelthomas[.]linkpc[.]net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "67250d5e5cb42df505b278e53ae346e7573ba60a06c3daac7ec05f853100e61c",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "DiscordApp",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "AgentTesla",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Imminent Monitor",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ]
+        }
+    ],
+    "Relationships": []
+}

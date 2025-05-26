@@ -1,0 +1,192 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Naikon APT",
+            "EntityVariantNames": [
+                "MsnMM",
+                "APT-29"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "region": "ASEAN",
+                "targets": "Government, Military, Energy"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "ASEAN Governments",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "countries": "Myanmar, Vietnam, Singapore, Laos, Malaysia, Philippines"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "sslMM",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0006",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "7b1199523a662a3844ba590f83b56dae",
+                "compilation_date": "2013-01-31"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "winMM",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0007"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "c8c81cca4645e71213f2310cec6c277d",
+                "compilation_date": "2012-11-01"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2012-0158",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "ahzx.eicp.net",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "ubaoyouxiang.gicp.net",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "MsnMM Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "2012-2015",
+                "observe_time": "2015",
+                "report_name": "2015_TheNaikonAPT-MsnMM2_66fe95e8"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "MsnMM Campaign",
+            "Target": "Naikon APT"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "MsnMM Campaign",
+            "Target": "ASEAN Governments"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Naikon APT",
+            "Target": "sslMM"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Naikon APT",
+            "Target": "winMM"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Naikon APT",
+            "Target": "CVE-2012-0158"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "Naikon APT",
+            "Target": "ASEAN Governments"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "sslMM",
+            "Target": "ahzx.eicp.net"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "winMM",
+            "Target": "ubaoyouxiang.gicp.net"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2012-0158",
+            "Target": "ASEAN Governments"
+        }
+    ]
+}

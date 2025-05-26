@@ -1,0 +1,236 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Chinese APT",
+            "EntityVariantNames": [
+                "Deep Panda",
+                "APT29"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China",
+                "affiliation": "PLA"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Anthem, Inc.",
+            "EntityVariantNames": [
+                "Wellpoint"
+            ],
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Healthcare"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Premera Blue Cross",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Anthem Breach Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "February 2015",
+                "observe_time": "2015",
+                "report_name": "2015_Anthem_hack_all_roads_lead_to_China_5bce1258"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Derusbi",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Sakula",
+            "EntityVariantNames": [
+                "Sakurel"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "we11point[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "prennera[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Song Yubo",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "affiliation": "Southeast University",
+                "role": "Professor"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Southeast University",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Nanjing, China"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Beijing Topsec",
+            "EntityVariantNames": [
+                "Beijing Topsec Network Security Technology Co."
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Anthem Breach Event",
+            "Target": "Chinese APT"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Anthem Breach Event",
+            "Target": "Anthem, Inc."
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "Chinese APT",
+            "Target": "Anthem, Inc."
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "target",
+            "Source": "Chinese APT",
+            "Target": "Premera Blue Cross"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Chinese APT",
+            "Target": "Derusbi"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Chinese APT",
+            "Target": "Sakula"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Derusbi",
+            "Target": "we11point[.]com"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Sakula",
+            "Target": "prennera[.]com"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "belong_to",
+            "Source": "Song Yubo",
+            "Target": "Southeast University"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "belong_to",
+            "Source": "Southeast University",
+            "Target": "Beijing Topsec"
+        }
+    ]
+}

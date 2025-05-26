@@ -1,0 +1,357 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "UAC-0056",
+            "EntityVariantNames": [
+                "SaintBear",
+                "UNC2589",
+                "TA471"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0007",
+                "TA0006"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Russia"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Ukraine Translation Software Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0007",
+                "TA0006"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "February 2022",
+                "location": "Ukraine",
+                "observe_time": "2022",
+                "report_name": "2022_Sentinelone_UAC-0056-Targeting-Ukraine-Fake-Translation-Software(03-15-2022)_6461118a"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Ukraine Government Agencies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Government"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Cobalt Strike",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "GrimPlant",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "GraphSteel",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0006",
+                "TA0007"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "dictionary-translator.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "2a60b4e1eb806f02031fe5f143c7e3b7",
+                "type": "Python compiled binary"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "dictionary-translator[.]eu",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "91.242.229.35:443/i",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "microsoft-cortana.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "d77421caae67f4955529f91f229b31317dff0a95",
+                "path": "C:\\Users\\user\\.java-sdk\\"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "oracle-java.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "ef5400f6dbf32bae79edb16c8f73a59999e605c7",
+                "path": "C:\\Users\\user\\.java-sdk\\"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "java-sdk.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "3eec65c8ac25682d9e7d293ca9033c8a841f4958",
+                "path": "\\Users\\user\\.java-sdk\\"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "netsh wlan show profiles",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0007"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Windows.Security.Credentials.PasswordVault",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "reg query HKCU\\Software\\SimonTatham\\Putty\\Sessions",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "HKU\\%SID%\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\Java-SDK",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Ukraine Translation Software Attack",
+            "Target": "UAC-0056"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Ukraine Translation Software Attack",
+            "Target": "Ukraine Government Agencies"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "UAC-0056",
+            "Target": "Cobalt Strike"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "UAC-0056",
+            "Target": "GrimPlant"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "UAC-0056",
+            "Target": "GraphSteel"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "UAC-0056",
+            "Target": "dictionary-translator.exe"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "UAC-0056",
+            "Target": "Ukraine Government Agencies"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "dictionary-translator.exe",
+            "Target": "dictionary-translator[.]eu"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "GraphSteel",
+            "Target": "microsoft-cortana.exe"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "GrimPlant",
+            "Target": "oracle-java.exe"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "GraphSteel",
+            "Target": "netsh wlan show profiles"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "GraphSteel",
+            "Target": "Windows.Security.Credentials.PasswordVault"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "GraphSteel",
+            "Target": "reg query HKCU\\Software\\SimonTatham\\Putty\\Sessions"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "belong_to",
+            "Source": "microsoft-cortana.exe",
+            "Target": "Ukraine Government Agencies"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "belong_to",
+            "Source": "oracle-java.exe",
+            "Target": "Ukraine Government Agencies"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "belong_to",
+            "Source": "java-sdk.exe",
+            "Target": "Ukraine Government Agencies"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "GrimPlant",
+            "Target": "91.242.229.35:443/i"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "affect",
+            "Source": "dictionary-translator.exe",
+            "Target": "Ukraine Government Agencies"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "has",
+            "Source": "Ukraine Government Agencies",
+            "Target": "HKU\\%SID%\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\Java-SDK"
+        }
+    ]
+}

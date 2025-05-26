@@ -1,0 +1,354 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT37",
+            "EntityVariantNames": [
+                "Reaper",
+                "Scarcruft",
+                "Group123"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "North Korea",
+                "sponsor": "North Korean government"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "APT37 Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "2012-2018",
+                "observe_time": "2018",
+                "report_name": "2018_Fireeye_rpt_APT37(02-20-2018)_57b0ccb4"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "South Korean entities",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "sectors": "Government, Military, Defense, Media"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CVE-2018-4878",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Adobe Flash zero-day"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2017-0199",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Microsoft Office vulnerability"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "DOGCALL",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "capabilities": "Backdoor, screenshots, keylogging, cloud storage APIs"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "RUHAPPY",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "capabilities": "Wiper, MBR overwrite"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "SHUTTERSPEED",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "md5": "7c2ebfc7960aac6f8d58b37e3f092a9c"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "KARAE",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "POORAIM",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "SLOWDRIFT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Hangul Word Processor",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Middle Eastern company",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "relationship": "Joint venture with North Korea"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "2016 Korean Reunification Conference Form",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "md5": "183be2035d5a546670d2b9deeca4eb59"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "pCloud",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Dropbox",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "APT37 Campaign",
+            "Target": "APT37"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "APT37 Campaign",
+            "Target": "South Korean entities"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "APT37 Campaign",
+            "Target": "Middle Eastern company"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "APT37",
+            "Target": "CVE-2018-4878"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "APT37",
+            "Target": "CVE-2017-0199"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "APT37",
+            "Target": "DOGCALL"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "APT37",
+            "Target": "RUHAPPY"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "APT37",
+            "Target": "SHUTTERSPEED"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "APT37",
+            "Target": "KARAE"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "APT37",
+            "Target": "POORAIM"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "APT37",
+            "Target": "SLOWDRIFT"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "target",
+            "Source": "APT37",
+            "Target": "South Korean entities"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "target",
+            "Source": "APT37",
+            "Target": "Middle Eastern company"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2018-4878",
+            "Target": "Hangul Word Processor"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "DOGCALL",
+            "Target": "pCloud"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "DOGCALL",
+            "Target": "Dropbox"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "belong_to",
+            "Source": "2016 Korean Reunification Conference Form",
+            "Target": "South Korean entities"
+        }
+    ]
+}

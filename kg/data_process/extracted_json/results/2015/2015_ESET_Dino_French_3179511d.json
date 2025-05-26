@@ -1,0 +1,322 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Animal Farm",
+            "EntityVariantNames": [
+                "APT-29",
+                "Cozy Bear"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "France",
+                "language": "French"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Dino",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0010"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "version": "1.2",
+                "hash": "BF551FBDCF5A982705C01094436883A6AD3B75BD",
+                "language": "French"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Iranian Targets",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Iran",
+                "year": "2013"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Casper",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0003"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Bunny",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0003"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Babar",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0003",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Cobalt Strike",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "ramFS",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "description": "Custom file system for stealthy operations"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "www.azhar.bf",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "url": "hXXp://www.azhar.bf/modules/mod_search/found/cache/postal.php"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "www.rsvniima.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "url": "hXXp://www.rsvniima.org/templates/rsv/icons/din12/postal.php"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "dneprorudnoe.info",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "url": "hXXp://dneprorudnoe.info/sxd/lang/i18n/charcodes/postal.php"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "wusvcd.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "path": "C:\\Program Files\\Common Files\\wusvcd\\wusvcd.exe"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "CRONTAB",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "description": "Task scheduling module similar to Unix cron"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "PSM",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "description": "Encrypted on-disk storage for Dino modules"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "FMGR",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0010"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "description": "File upload and download manager"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "Animal Farm",
+            "Target": "Dino"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "target",
+            "Source": "Animal Farm",
+            "Target": "Iranian Targets"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "Dino",
+            "Target": "Casper"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "Dino",
+            "Target": "Bunny"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "Dino",
+            "Target": "Babar"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Dino",
+            "Target": "ramFS"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Dino",
+            "Target": "CRONTAB"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Dino",
+            "Target": "PSM"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Dino",
+            "Target": "FMGR"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Dino",
+            "Target": "www.azhar.bf"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Dino",
+            "Target": "www.rsvniima.org"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Dino",
+            "Target": "dneprorudnoe.info"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "belong_to",
+            "Source": "wusvcd.exe",
+            "Target": "Dino"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "use",
+            "Source": "Animal Farm",
+            "Target": "Cobalt Strike"
+        }
+    ]
+}

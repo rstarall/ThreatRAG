@@ -1,0 +1,483 @@
+<Entitys>
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>Wicked Rose</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>Rose</EntityVariantName>
+            <EntityVariantName>MeiGui HeiKe</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>attacker</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="QQ">5372453</Property>
+            <Property name="website">www.mghacker.com</Property>
+            <Property name="university">Sichuan University of Science & Engineering</Property>
+            <Property name="location">Zigong, Sichuan, China</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>NCPH</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>Network Crack Program Hacker</EntityVariantName>
+            <EntityVariantName>NCPH Studio</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="website">www.ncph.net</Property>
+            <Property name="location">Zigong, Sichuan, China</Property>
+            <Property name="members">10</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>KuNgBiM</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>attacker</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="blog">http://kungbim.blogbus.com</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>Rodag</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>attacker</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="blog">http://rodag.blogbus.com</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>Charles</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>attacker</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="blog">http://www.cppblog.com/charles</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>WHG</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>Fig</EntityVariantName>
+            <EntityVariantName>Zhao Jibing</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>attacker</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="email">whg@163.com</Property>
+            <Property name="QQ">312016</Property>
+            <Property name="website">http://cnasm.com</Property>
+            <Property name="location">Sichuan, China</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>WZT</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>attacker</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="website">tthacker.cublog.cn</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>GinWui</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>NCPH remote control</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="version">3.0beta.3</Property>
+            <Property name="files">winguis.dll, SYS files</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_9</EntityId>
+        <EntityName>RipGof</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>RipGof.A</EntityVariantName>
+            <EntityVariantName>RipGof.B</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="C2">enjoy.irdet.com, enjoy.bmwsee.com</Property>
+            <Property name="port">80</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_10</EntityId>
+        <EntityName>Microsoft Word Malformed OLE Structure Code Execution</EntityName>
+        <EntityType>vul</EntityType>
+        <EntitySubType>others</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_11</EntityId>
+        <EntityName>Microsoft Excel Malformed BIFF Structure Code Execution</EntityName>
+        <EntityType>vul</EntityType>
+        <EntitySubType>others</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_12</EntityId>
+        <EntityName>Planning document 5-16-2006.doc</EntityName>
+        <EntityType>file</EntityType>
+        <EntitySubType>file</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_13</EntityId>
+        <EntityName>www.ncph.net</EntityName>
+        <EntityType>asset</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0042</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_14</EntityId>
+        <EntityName>www.mghacker.com</EntityName>
+        <EntityType>asset</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0042</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_15</EntityId>
+        <EntityName>windowsupdates.net</EntityName>
+        <EntityType>asset</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_16</EntityId>
+        <EntityName>US DoD Entity</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="country">United States</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_17</EntityId>
+        <EntityName>Japanese Organization</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="country">Japan</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_18</EntityId>
+        <EntityName>US Energy Sector Company</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>5</Time>
+        </Times>
+        <Properties>
+            <Property name="country">United States</Property>
+            <Property name="industry">Energy</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_19</EntityId>
+        <EntityName>Microsoft Word</EntityName>
+        <EntityType>env</EntityType>
+        <EntitySubType>software</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="version">2002</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_20</EntityId>
+        <EntityName>Evil Security Team</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_21</EntityId>
+        <EntityName>PcShare Trojan</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_22</EntityId>
+        <EntityName>Dasher worm</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+</Entitys>
+<Relationships>
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>Wicked Rose</Source>
+        <Target>NCPH</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>KuNgBiM</Source>
+        <Target>NCPH</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>Rodag</Source>
+        <Target>NCPH</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>Charles</Source>
+        <Target>NCPH</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>WHG</Source>
+        <Target>NCPH</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>WZT</Source>
+        <Target>NCPH</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Wicked Rose</Source>
+        <Target>GinWui</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Wicked Rose</Source>
+        <Target>RipGof</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_9</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>NCPH</Source>
+        <Target>Microsoft Word Malformed OLE Structure Code Execution</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_10</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>NCPH</Source>
+        <Target>Microsoft Excel Malformed BIFF Structure Code Execution</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_11</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>NCPH</Source>
+        <Target>US DoD Entity</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_12</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>NCPH</Source>
+        <Target>Japanese Organization</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_13</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>NCPH</Source>
+        <Target>US Energy Sector Company</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_14</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>GinWui</Source>
+        <Target>Microsoft Word Malformed OLE Structure Code Execution</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_15</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>RipGof</Source>
+        <Target>Microsoft Word Malformed OLE Structure Code Execution</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_16</RelationshipId>
+        <RelationshipType>affect</RelationshipType>
+        <Source>Planning document 5-16-2006.doc</Source>
+        <Target>Microsoft Word</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_17</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>www.ncph.net</Source>
+        <Target>NCPH</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_18</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>www.mghacker.com</Source>
+        <Target>Wicked Rose</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_19</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Evil Security Team</Source>
+        <Target>PcShare Trojan</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_20</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Evil Security Team</Source>
+        <Target>Dasher worm</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_21</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Wicked Rose</Source>
+        <Target>PcShare Trojan</Target>
+    </Relationship>
+</Relationships>

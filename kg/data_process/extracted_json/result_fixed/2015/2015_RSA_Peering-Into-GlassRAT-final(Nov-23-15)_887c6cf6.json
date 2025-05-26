@@ -1,0 +1,301 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "GlassRAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Remote Administration Tool",
+                "detection": "Zero detection",
+                "first_observed": "2012-09"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "APT-29",
+            "EntityVariantNames": [
+                "Cozy Bear"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Chinese nationals",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Multinational corporations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Flash.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Dropper",
+                "icon": "Adobe Flash player"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "updatef.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "location": "C:\\ProgramData\\Application Data\\"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "bits.foryousee.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "ip": "101.55.x.x"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "qx.rausers.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "112.175.x.x",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Mirage",
+            "EntityVariantNames": [
+                "MirageFox"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "PlugX",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "MagicFire",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Philippine military",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Mongolian government",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "RasAuto service",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "GlassRAT"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "Chinese nationals"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "Multinational corporations"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "GlassRAT",
+            "Target": "Flash.exe"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "GlassRAT",
+            "Target": "updatef.dll"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "GlassRAT",
+            "Target": "bits.foryousee.net"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "GlassRAT",
+            "Target": "qx.rausers.com"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "GlassRAT",
+            "Target": "112.175.x.x"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "GlassRAT",
+            "Target": "Mirage"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "GlassRAT",
+            "Target": "PlugX"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "GlassRAT",
+            "Target": "MagicFire"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "Philippine military"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "Mongolian government"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "affect",
+            "Source": "updatef.dll",
+            "Target": "RasAuto service"
+        }
+    ]
+}

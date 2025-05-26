@@ -1,0 +1,480 @@
+<Entitys>
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>Night Dragon</EntityName>
+        <EntityType>event</EntityType>
+        <EntitySubType>event</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0008</Label>
+            <Label>TA0010</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="time">November 2009 - 2011</Property>
+            <Property name="industry">Energy</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>Chinese attackers</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>APT group</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0008</Label>
+            <Label>TA0010</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="location">China</Property>
+            <Property name="working_hours">9am-5pm Beijing time</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>Global oil, energy, and petrochemical companies</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>SQL-injection</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>method</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>Spear-phishing</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>method</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>zwShell</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="password">zw.china</Property>
+            <Property name="compiled_date">2010-03-17</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>Gh0st RAT</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>gsecdump</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>tool</EntitySubType>
+        <Labels>
+            <Label>TA0006</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_9</EntityId>
+        <EntityName>Cain & Abel</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>tool</EntitySubType>
+        <Labels>
+            <Label>TA0006</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_10</EntityId>
+        <EntityName>ASPXSpy</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>tool</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_11</EntityId>
+        <EntityName>Hookmsgina</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>tool</EntitySubType>
+        <Labels>
+            <Label>TA0006</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_12</EntityId>
+        <EntityName>WinlogonHack</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>tool</EntitySubType>
+        <Labels>
+            <Label>TA0006</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_13</EntityId>
+        <EntityName>Microsoft Windows</EntityName>
+        <EntityType>env</EntityType>
+        <EntitySubType>os</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_14</EntityId>
+        <EntityName>Microsoft Active Directory</EntityName>
+        <EntityType>env</EntityType>
+        <EntitySubType>software</EntitySubType>
+        <Labels>
+            <Label>TA0006</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_15</EntityId>
+        <EntityName>SCADA systems</EntityName>
+        <EntityType>asset</EntityType>
+        <EntitySubType>bussiness</EntitySubType>
+        <Labels>
+            <Label>TA0009</Label>
+        </Labels>
+        <Times>
+            <Time>5</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_16</EntityId>
+        <EntityName>is-a-chef.com</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_17</EntityId>
+        <EntityName>thruhere.net</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_18</EntityId>
+        <EntityName>office-on-the.net</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_19</EntityId>
+        <EntityName>selfip.com</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_20</EntityId>
+        <EntityName>093640a69c8eafbc60343bf9cd1d3ad3</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>hash</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_21</EntityId>
+        <EntityName>85df6b3e2c1a4c6ce20fc8080e0b53e9</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>hash</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_22</EntityId>
+        <EntityName>A6CBA73405C77FEDEAF4722AD7D35D60</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>hash</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_23</EntityId>
+        <EntityName>6E31CCA77255F9CDE228A2DB9E2A3855</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>hash</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_24</EntityId>
+        <EntityName>Heze City, Shandong Province</EntityName>
+        <EntityType>event</EntityType>
+        <EntitySubType>location</EntitySubType>
+        <Labels>
+            <Label>TA0042</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+</Entitys>
+<Relationships>
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Night Dragon</Source>
+        <Target>Chinese attackers</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Night Dragon</Source>
+        <Target>Global oil, energy, and petrochemical companies</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Chinese attackers</Source>
+        <Target>Global oil, energy, and petrochemical companies</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Chinese attackers</Source>
+        <Target>SQL-injection</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Chinese attackers</Source>
+        <Target>Spear-phishing</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Chinese attackers</Source>
+        <Target>zwShell</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Chinese attackers</Source>
+        <Target>Gh0st RAT</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Chinese attackers</Source>
+        <Target>gsecdump</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_9</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Chinese attackers</Source>
+        <Target>Cain & Abel</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_10</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Chinese attackers</Source>
+        <Target>ASPXSpy</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_11</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Chinese attackers</Source>
+        <Target>Hookmsgina</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_12</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Chinese attackers</Source>
+        <Target>WinlogonHack</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_13</RelationshipId>
+        <RelationshipType>exploit</RelationshipType>
+        <Source>SQL-injection</Source>
+        <Target>Microsoft Windows</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_14</RelationshipId>
+        <RelationshipType>exploit</RelationshipType>
+        <Source>zwShell</Source>
+        <Target>Microsoft Windows</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_15</RelationshipId>
+        <RelationshipType>exploit</RelationshipType>
+        <Source>Gh0st RAT</Source>
+        <Target>Microsoft Windows</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_16</RelationshipId>
+        <RelationshipType>exploit</RelationshipType>
+        <Source>gsecdump</Source>
+        <Target>Microsoft Active Directory</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_17</RelationshipId>
+        <RelationshipType>exploit</RelationshipType>
+        <Source>Cain & Abel</Source>
+        <Target>Microsoft Active Directory</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_18</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Chinese attackers</Source>
+        <Target>SCADA systems</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_19</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>zwShell</Source>
+        <Target>is-a-chef.com</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_20</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>zwShell</Source>
+        <Target>thruhere.net</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_21</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>zwShell</Source>
+        <Target>office-on-the.net</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_22</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>zwShell</Source>
+        <Target>selfip.com</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_23</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>093640a69c8eafbc60343bf9cd1d3ad3</Source>
+        <Target>zwShell</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_24</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>85df6b3e2c1a4c6ce20fc8080e0b53e9</Source>
+        <Target>zwShell</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_25</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>A6CBA73405C77FEDEAF4722AD7D35D60</Source>
+        <Target>zwShell</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_26</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>6E31CCA77255F9CDE228A2DB9E2A3855</Source>
+        <Target>zwShell</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_27</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Chinese attackers</Source>
+        <Target>Heze City, Shandong Province</Target>
+    </Relationship>
+</Relationships>

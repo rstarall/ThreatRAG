@@ -1,0 +1,301 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Mongolian Government Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0005",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "2017",
+                "source": "FireEye",
+                "observe_time": "2017",
+                "report_name": "2017_Fireeye_SpearPhishing-Targeting-Mongolian-Government(02-22-2017)_20d5990d"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Mongolian Government",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Government",
+                "country": "Mongolia"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Poison Ivy",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "type": "RAT",
+                "capabilities": "keylogging, screen capture, file transfer"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Malicious Word Document",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Word Document with Macros"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "PowerShell",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0002",
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "AppLocker Bypass",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "technique": "regsvr32.exe execution"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "f0921.ps1",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "PowerShell Script"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "HKCU:\\Console\\FontSecurity",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "type": "Registry Key"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "HKCU\\CurrentVersion\\Run\\SecurityUpdate",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "type": "Registry Key"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "PowerSploit",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "type": "Exploitation Framework"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Inject-LocalShellCode",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "userinit.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "type": "Windows System File"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Spear Phishing Email",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Mongolian Government Attack Event",
+            "Target": "Mongolian Government"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "target",
+            "Source": "Unknown Attacker",
+            "Target": "Mongolian Government"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Unknown Attacker",
+            "Target": "Spear Phishing Email"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Unknown Attacker",
+            "Target": "Malicious Word Document"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Unknown Attacker",
+            "Target": "PowerShell"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Unknown Attacker",
+            "Target": "AppLocker Bypass"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Unknown Attacker",
+            "Target": "Poison Ivy"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "trigger",
+            "Source": "Mongolian Government",
+            "Target": "Malicious Word Document"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "PowerShell",
+            "Target": "f0921.ps1"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "PowerShell",
+            "Target": "HKCU:\\Console\\FontSecurity"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "PowerShell",
+            "Target": "HKCU\\CurrentVersion\\Run\\SecurityUpdate"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "PowerSploit",
+            "Target": "Inject-LocalShellCode"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "Poison Ivy",
+            "Target": "userinit.exe"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "belong_to",
+            "Source": "HKCU:\\Console\\FontSecurity",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "belong_to",
+            "Source": "HKCU\\CurrentVersion\\Run\\SecurityUpdate",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "has",
+            "Source": "Mongolian Government",
+            "Target": "Windows System"
+        }
+    ]
+}

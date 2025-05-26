@@ -1,0 +1,361 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Operation Beebus",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "February 2013",
+                "industry_target": "Aerospace and Defense",
+                "observe_time": "2013",
+                "report_name": "2013_FireEye_Operation-Beebus(Feb-1-13)_47618ed1"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Comment Group",
+            "EntityVariantNames": [
+                "Comment Team",
+                "Byzantine Candor"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Aerospace and Defense Companies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CVE-2011-0611",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2012-0158",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CVE-2009-0927",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "CVE-2010-3333",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "CVE-2012-0754",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "DLL search order hijacking",
+            "EntityType": "vul",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "impact": "Windows OS"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "ntshrui.DLL",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "location": "C:\\Windows"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Ghostscript",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "HTran",
+            "EntityVariantNames": [
+                "HUC Packet Transmit Tool"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "bee.businessconsults.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "68.96.31.136",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Windows OS",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "7ed557921ac60dfcb295ebabfd972301",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "d7ec457be3fad8057580e07cae74becb",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "TEMP~ISUN32.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "location": "C:\\Documents And Settings\\Administrator\\Local Setting\\Temp"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation Beebus",
+            "Target": "Comment Group"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Operation Beebus",
+            "Target": "Aerospace and Defense Companies"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Comment Group",
+            "Target": "CVE-2011-0611"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Comment Group",
+            "Target": "CVE-2012-0158"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Comment Group",
+            "Target": "CVE-2009-0927"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Comment Group",
+            "Target": "CVE-2010-3333"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Comment Group",
+            "Target": "CVE-2012-0754"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Comment Group",
+            "Target": "DLL search order hijacking"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Comment Group",
+            "Target": "Ghostscript"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "Comment Group",
+            "Target": "HTran"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "target",
+            "Source": "Comment Group",
+            "Target": "Aerospace and Defense Companies"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "exploit",
+            "Source": "DLL search order hijacking",
+            "Target": "Windows OS"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "ntshrui.DLL",
+            "Target": "DLL search order hijacking"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "HTran",
+            "Target": "bee.businessconsults.net"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "HTran",
+            "Target": "68.96.31.136"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "belong_to",
+            "Source": "ntshrui.DLL",
+            "Target": "Windows OS"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "belong_to",
+            "Source": "TEMP~ISUN32.exe",
+            "Target": "Windows OS"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "has",
+            "Source": "Aerospace and Defense Companies",
+            "Target": "Windows OS"
+        }
+    ]
+}

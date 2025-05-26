@@ -1,0 +1,190 @@
+<Entitys>
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>Charming Kitten</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>Flying Kitten</EntityVariantName>
+            <EntityVariantName>APT-29</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="country">Iran</Property>
+            <Property name="activity_period">2014-present</Property>
+        </Properties>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>Rocket Kitten</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="country">Iran</Property>
+        </Properties>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>Behzad Mesri</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>Skote Vahshat</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>attacker</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0010</EntityLabel>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="affiliation">Turk Black Hat</Property>
+            <Property name="country">Iran</Property>
+        </Properties>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>ArYaIeIrAN</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>Mohammadamin Keshvari</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>attacker</EntitySubType>
+        <Labels>
+            <Label>TA0042</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="email">aryaieiran@gmail.com</Property>
+            <Property name="affiliation">Turk Black Hat</Property>
+        </Properties>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>DownPaper</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="hash">be207941ce8a5e212be8dde83d05d38d</Property>
+            <Property name="type">Backdoor</Property>
+        </Properties>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>MAGICHOUND.RETRIEVER</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="hash">9d0e761f3803889dc83c180901dc7b22</Property>
+            <Property name="type">Downloader</Property>
+        </Properties>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>britishnews.com.co</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="purpose">Fake news agency</Property>
+        </Properties>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>46.17.97.37</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>ip</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+</Entitys>
+<Relationships>
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Charming Kitten</Source>
+        <Target>Rocket Kitten</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Charming Kitten</Source>
+        <Target>DownPaper</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Charming Kitten</Source>
+        <Target>britishnews.com.co</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Charming Kitten</Source>
+        <Target>46.17.97.37</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Behzad Mesri</Source>
+        <Target>Charming Kitten</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>ArYaIeIrAN</Source>
+        <Target>Charming Kitten</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>DownPaper</Source>
+        <Target>46.17.97.37</Target>
+    </Relationship>
+</Relationships>

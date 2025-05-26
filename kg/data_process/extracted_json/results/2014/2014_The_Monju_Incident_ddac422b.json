@@ -1,0 +1,228 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT-29",
+            "EntityVariantNames": [
+                "Cozy Bear"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "The Monju Incident",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "January 2014",
+                "observe_time": "2014",
+                "report_name": "2014_The_Monju_Incident_ddac422b"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Monju fast breeder reactor facility",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Nuclear",
+                "country": "Japan"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "GOM Player update server",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "domain": "app.gomlab.com"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Gh0st RAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "variant": "Miancha"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "PHP-based webshell",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "testqweasd.tk",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "ip": "211.43.220.89"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "www.fudousankaitori.jp",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "ip": "203.189.101.35"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "0ae82fd94836815a1e8d284ccb75109d",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "MD5",
+                "filename": "install.exe"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "The Monju Incident",
+            "Target": "APT-29"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "The Monju Incident",
+            "Target": "Monju fast breeder reactor facility"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "Gh0st RAT"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "PHP-based webshell"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "Monju fast breeder reactor facility"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "GOM Player update server"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Gh0st RAT",
+            "Target": "0ae82fd94836815a1e8d284ccb75109d"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "belong_to",
+            "Source": "0ae82fd94836815a1e8d284ccb75109d",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "has",
+            "Source": "Monju fast breeder reactor facility",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Gh0st RAT",
+            "Target": "testqweasd.tk"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Gh0st RAT",
+            "Target": "www.fudousankaitori.jp"
+        }
+    ]
+}

@@ -1,0 +1,320 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Dark Pink",
+            "EntityVariantNames": [
+                "Saaiwc Group"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Properties": {
+                "first_seen": "mid-2021",
+                "peak_activity": "mid-to-late 2022"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Dark Pink Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Properties": {
+                "timeframe": "June-December 2022"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "TelePowerBot",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "KamiKakaBot",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Cucky",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0006",
+                "TA0009"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Ctealer",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0006",
+                "TA0009"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "PowerSploit/Get-MicrophoneAudio",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0009"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "ZMsg",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0009"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "DLL Side-Loading",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Event Triggered Execution: Change Default File Association",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Telegram API",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Github account",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0042"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "MediaFire",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Dropbox",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0010"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "spear-phishing emails",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "ISO image",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "malicious DLL file",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "decoy document",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "signed executable file",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "PowerShell scripts",
+            "EntityType": "file",
+            "EntitySubType": "code",
+            "Labels": [
+                "TA0002",
+                "TA0008"
+            ]
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_22",
+            "EntityName": "religious organization in Vietnam",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "country": "Vietnam",
+                "attack_date": "June 2022"
+            }
+        },
+        {
+            "EntityId": "entity_23",
+            "EntityName": "Vietnamese non-profit organization",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "country": "Vietnam",
+                "attack_date": "August 2022"
+            }
+        },
+        {
+            "EntityId": "entity_24",
+            "EntityName": "Indonesian governmental organization",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "country": "Indonesia",
+                "attack_date": "December 2022"
+            }
+        },
+        {
+            "EntityId": "entity_25",
+            "EntityName": "military body in the Philippines",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "country": "Philippines"
+            }
+        },
+        {
+            "EntityId": "entity_26",
+            "EntityName": "military body in Malaysia",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "country": "Malaysia"
+            }
+        },
+        {
+            "EntityId": "entity_27",
+            "EntityName": "government agency in Cambodia",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "country": "Cambodia"
+            }
+        },
+        {
+            "EntityId": "entity_28",
+            "EntityName": "government agency in Bosnia and Herzegovina",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "country": "Bosnia and Herzegovina"
+            }
+        },
+        {
+            "EntityId": "entity_29",
+            "EntityName": "European state development agency based in Vietnam",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "country": "Vietnam",
+                "attack_date": "October 2022",
+                "status": "unsuccessful"
+            }
+        }
+    ],
+    "Relationships": []
+}

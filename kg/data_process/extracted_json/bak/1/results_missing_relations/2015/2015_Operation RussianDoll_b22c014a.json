@@ -1,0 +1,145 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT28",
+            "EntityVariantNames": [
+                "Operation RussianDoll"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0004",
+                "TA0011"
+            ],
+            "Properties": {
+                "country": "Russia"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Operation RussianDoll Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0004",
+                "TA0011"
+            ],
+            "Properties": {
+                "time": "April 13, 2015"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "International Government Entity",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CVE-2015-3043",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "description": "Buffer overflow in Adobe Flash Player when parsing malformed FLV objects",
+                "affected": "Adobe Flash Player (=17.0.0.134)"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2015-1701",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0004"
+            ],
+            "Properties": {
+                "description": "Local privilege escalation vulnerability in Windows kernel",
+                "affected": "Windows (pre-Windows 8)"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CHOPSTICK",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "CORESHELL",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "87.236.215.246",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "ssl-icloud.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Adobe Flash Player",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0004"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Malicious Flash Exploit",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Metasploit module for CVE-2014-0515",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002"
+            ]
+        }
+    ],
+    "Relationships": []
+}

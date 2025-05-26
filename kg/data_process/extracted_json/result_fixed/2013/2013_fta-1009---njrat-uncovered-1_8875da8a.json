@@ -1,0 +1,174 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "njRAT",
+            "EntityVariantNames": [
+                "MSIL/Bladabindi",
+                "Backdoor.LV"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "version": "0.5.0",
+                "developer": "njq8",
+                "website": "http://xnjq8x.com"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Authorization.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "md5": "1d3baedd747f6f9bf92c81eb9f63b34b",
+                "size": "110080 bytes",
+                "peid": "Microsoft Visual C# / Basic .NET"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "217.66.231.245",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "port": "1177",
+                "organization": "Palestinian Internet Services",
+                "country": "PS"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Authorization form may - 2013 - 115444.scr",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "md5": "63781fe1932e612c6c29225d25515111"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Windows XP Professional SP2",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Middle East organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "sectors": "Government, Telecom, Energy"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "EZIRIZ .NET Reactor",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "L517 v.0.994 Word List Generator",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "related_to",
+            "Source": "njRAT",
+            "Target": "Authorization.exe"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "belong_to",
+            "Source": "Authorization.exe",
+            "Target": "Windows XP Professional SP2"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "njRAT",
+            "Target": "217.66.231.245"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "target",
+            "Source": "njRAT",
+            "Target": "Middle East organizations"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "njRAT",
+            "Target": "EZIRIZ .NET Reactor"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "njRAT",
+            "Target": "L517 v.0.994 Word List Generator"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "trigger",
+            "Source": "Middle East organizations",
+            "Target": "Authorization form may - 2013 - 115444.scr"
+        }
+    ]
+}

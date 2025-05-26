@@ -1,0 +1,214 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Thallium",
+            "EntityVariantNames": [
+                "Kimsuky",
+                "Smoke Screen"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "North Korea"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Klip Customer Center Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "February 2022",
+                "observe_time": "2022",
+                "report_name": "2022_alyac_NKorea-digital-asset-wallet-customer-center(02-16-2022)_41179988"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Klip users",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "service": "Klip digital asset wallet"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "[Klip Customer Center] Mistransmission_Token Resolution_Guide.doc",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Malicious Word Document"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "asenal.medianewsonline[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "hxxp://asenal.medianewsonline[.]com/good/luck/flavor/list.php?query=1",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "hxxp://asenal.medianewsonline[.]com/good/luck/flavor/show.php",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Trojan.Downloader.DOC.Gen",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Malicious Macro",
+            "EntityType": "tool",
+            "EntitySubType": "code",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Dropped XML file",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Klip Customer Center Attack Event",
+            "Target": "Thallium"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Klip Customer Center Attack Event",
+            "Target": "Klip users"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Thallium",
+            "Target": "[Klip Customer Center] Mistransmission_Token Resolution_Guide.doc"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Thallium",
+            "Target": "Trojan.Downloader.DOC.Gen"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Thallium",
+            "Target": "asenal.medianewsonline[.]com"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "Thallium",
+            "Target": "Klip users"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "trigger",
+            "Source": "Klip users",
+            "Target": "[Klip Customer Center] Mistransmission_Token Resolution_Guide.doc"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "[Klip Customer Center] Mistransmission_Token Resolution_Guide.doc",
+            "Target": "Malicious Macro"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Malicious Macro",
+            "Target": "Dropped XML file"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Dropped XML file",
+            "Target": "asenal.medianewsonline[.]com"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Trojan.Downloader.DOC.Gen",
+            "Target": "[Klip Customer Center] Mistransmission_Token Resolution_Guide.doc"
+        }
+    ]
+}

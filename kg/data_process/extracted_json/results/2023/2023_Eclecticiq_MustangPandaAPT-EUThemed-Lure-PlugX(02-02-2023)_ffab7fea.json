@@ -1,0 +1,304 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Mustang Panda",
+            "EntityVariantNames": [
+                "APT group"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China",
+                "target": "Government and public sector organizations across Asia and Europe"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "European Commission-Themed Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "November 2022",
+                "observe_time": "2023",
+                "report_name": "2023_Eclecticiq_MustangPandaAPT-EUThemed-Lure-PlugX(02-02-2023)_ffab7fea"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "European Commission",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Government"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "PlugX Malware",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "draft letter to European Commission RUSSIAN OIL PRICE CAP sg de.iso",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "723d804cfc334cad788f86c39c7fb58b42f452a72191f7f39400cf05d980b4f3"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "draft letter to European Commission RUSSIAN OIL PRICE CAP sg de.doc.lnk",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "2c0273394cda1b07680913edd70d3438a098bb4468f16eebf2f50d060cdf4e96"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "LMIGuardianSvc.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "26c855264896db95ed46e502f2d318e5f2ad25b59bdc47bd7ffe92646102ae0d"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "LMIGuardianDll.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "ee2c8909089f53aafc421d9853c01856b0a9015eba12aa0382e98417d28aef3f"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "LMIGuardianDat.dat",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "8c4926dd32204b6a666b274a78ccfb16fe84bbd7d6bc218a5310970c4c5d9450"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "217.12.206.116",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "45.134.83.29",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Windows Registry Run Key",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "DLL Search Order Hijacking",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "XOR Encryption",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "European Commission-Themed Attack",
+            "Target": "Mustang Panda"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "European Commission-Themed Attack",
+            "Target": "European Commission"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Mustang Panda",
+            "Target": "PlugX Malware"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Mustang Panda",
+            "Target": "draft letter to European Commission RUSSIAN OIL PRICE CAP sg de.iso"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Mustang Panda",
+            "Target": "DLL Search Order Hijacking"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Mustang Panda",
+            "Target": "XOR Encryption"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "Mustang Panda",
+            "Target": "European Commission"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "PlugX Malware",
+            "Target": "LMIGuardianDll.dll"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "PlugX Malware",
+            "Target": "LMIGuardianDat.dat"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "PlugX Malware",
+            "Target": "217.12.206.116"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "PlugX Malware",
+            "Target": "45.134.83.29"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "affect",
+            "Source": "PlugX Malware",
+            "Target": "Windows Registry Run Key"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "belong_to",
+            "Source": "LMIGuardianDll.dll",
+            "Target": "PlugX Malware"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "belong_to",
+            "Source": "LMIGuardianDat.dat",
+            "Target": "PlugX Malware"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "trigger",
+            "Source": "European Commission",
+            "Target": "draft letter to European Commission RUSSIAN OIL PRICE CAP sg de.iso"
+        }
+    ]
+}

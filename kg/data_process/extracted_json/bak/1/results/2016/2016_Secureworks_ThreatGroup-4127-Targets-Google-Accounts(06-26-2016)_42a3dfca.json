@@ -1,0 +1,210 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "TG-4127",
+            "EntityVariantNames": [
+                "APT28",
+                "Sofacy",
+                "Sednit",
+                "Fancy Bear",
+                "Pawn Storm"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0006",
+                "TA0009",
+                "TA0010"
+            ],
+            "Properties": {
+                "country": "Russian Federation",
+                "motive": "Intelligence gathering"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Google Accounts Phishing Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0006",
+                "TA0009",
+                "TA0010"
+            ],
+            "Properties": {
+                "time": "2015-2016"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Hillary Clinton's email",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "U.S. Democrat National Committee",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "accoounts-google.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Fake Google Login Page",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Bitly URL-shortening service",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0001",
+                "TA0005"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Base64-encoded values",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Ukrainian prime minister spokesperson",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Syrian National Coalition leader",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Spearphishing",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Google Accounts Phishing Campaign",
+            "Target": "TG-4127"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Google Accounts Phishing Campaign",
+            "Target": "Hillary Clinton's email"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "Google Accounts Phishing Campaign",
+            "Target": "U.S. Democrat National Committee"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "TG-4127",
+            "Target": "accoounts-google.com"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "TG-4127",
+            "Target": "Fake Google Login Page"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "TG-4127",
+            "Target": "Bitly URL-shortening service"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "TG-4127",
+            "Target": "Base64-encoded values"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "TG-4127",
+            "Target": "Spearphishing"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "TG-4127",
+            "Target": "Hillary Clinton's email"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "target",
+            "Source": "TG-4127",
+            "Target": "U.S. Democrat National Committee"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "target",
+            "Source": "TG-4127",
+            "Target": "Ukrainian prime minister spokesperson"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "target",
+            "Source": "TG-4127",
+            "Target": "Syrian National Coalition leader"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "Bitly URL-shortening service",
+            "Target": "accoounts-google.com"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "Base64-encoded values",
+            "Target": "Fake Google Login Page"
+        }
+    ]
+}

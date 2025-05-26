@@ -1,0 +1,262 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Ajax Security Team",
+            "EntityVariantNames": [
+                "AjaxTM"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0005",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Iran",
+                "forum": "ashiyane[.]org, shabgard[.]org"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Operation Saffron Rose",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "2013-2014",
+                "observe_time": "2014",
+                "report_name": "2014_fireeye-operation-saffron-rose_9e38133b"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "HUrr!c4nE!",
+            "EntityVariantNames": [
+                "k3yv4n"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "email": "keyvan.ajaxtm@gmail[.]com"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Cair3x",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Stealer Malware",
+            "EntityVariantNames": [
+                "IntelRS.exe"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0005",
+                "TA0006",
+                "TA0009"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "encryption": "AES-256 with passphrase 'HavijeBaba'",
+                "components": "AppTransferWiz.dll, DelphiNative.dll"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "aeroconf2014[.]org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "registrant": "keyvan.ajaxtm@gmail[.]com"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "intel-update[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "ip": "88.150.227.197"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Defense Industrial Base Companies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "United States"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Iranian Anti-Censorship Users",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Iran",
+                "tools": "Psiphon, Ultrasurf"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Stealer Builder",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "compile_date": "2014-04-08"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Base64 Encoder Tool",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation Saffron Rose",
+            "Target": "Ajax Security Team"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Operation Saffron Rose",
+            "Target": "Defense Industrial Base Companies"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "Operation Saffron Rose",
+            "Target": "Iranian Anti-Censorship Users"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Ajax Security Team",
+            "Target": "Stealer Malware"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "HUrr!c4nE!",
+            "Target": "aeroconf2014[.]org"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Ajax Security Team",
+            "Target": "Stealer Builder"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Ajax Security Team",
+            "Target": "Base64 Encoder Tool"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "Ajax Security Team",
+            "Target": "Defense Industrial Base Companies"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "Ajax Security Team",
+            "Target": "Iranian Anti-Censorship Users"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Stealer Malware",
+            "Target": "intel-update[.]com"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Stealer Builder",
+            "Target": "Stealer Malware"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "belong_to",
+            "Source": "aeroconf2014[.]org",
+            "Target": "Ajax Security Team"
+        }
+    ]
+}

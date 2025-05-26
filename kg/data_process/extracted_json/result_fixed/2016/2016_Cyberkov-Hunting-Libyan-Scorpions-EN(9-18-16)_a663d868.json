@@ -1,0 +1,266 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Libyan Scorpions",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0007",
+                "TA0009",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Libya",
+                "motivation": "Political"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Libyan Influential Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0007",
+                "TA0009",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "August 2016",
+                "location": "Libya",
+                "observe_time": "2016",
+                "report_name": "2016_Cyberkov-Hunting-Libyan-Scorpions-EN(9-18-16)_a663d868"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Libyan Influential Person",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Voice Massege.apk",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "9d8e5ccd4cf543b4b41e4c6a1caae1409076a26ee74c61c148dffd3ce87d7787",
+                "type": "Android APK"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "URLShortener",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "legitimate": "true"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "winmeif.myq-see.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "ip": "41.208.110.46"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "41.208.110.46",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "isp": "Libya Telecom and Technology Backbone"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "JSocket/AlienSpy RAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "DroidJack",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Benghazi.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "1738ecf69b8303934bb10170bcef8926",
+                "type": "Windows Executable"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Telegram",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Android Device",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Libyan Influential Attack Event",
+            "Target": "Libyan Scorpions"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Libyan Influential Attack Event",
+            "Target": "Libyan Influential Person"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Libyan Scorpions",
+            "Target": "Voice Massege.apk"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Libyan Scorpions",
+            "Target": "JSocket/AlienSpy RAT"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Libyan Scorpions",
+            "Target": "DroidJack"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Libyan Scorpions",
+            "Target": "Telegram"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "Libyan Scorpions",
+            "Target": "Libyan Influential Person"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Voice Massege.apk",
+            "Target": "JSocket/AlienSpy RAT"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "belong_to",
+            "Source": "winmeif.myq-see.com",
+            "Target": "41.208.110.46"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "JSocket/AlienSpy RAT",
+            "Target": "winmeif.myq-see.com"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "DroidJack",
+            "Target": "41.208.110.46"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "affect",
+            "Source": "Voice Massege.apk",
+            "Target": "Android Device"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "trigger",
+            "Source": "Libyan Influential Person",
+            "Target": "Voice Massege.apk"
+        }
+    ]
+}

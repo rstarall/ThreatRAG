@@ -1,0 +1,250 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "SideCopy",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0009",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "region": "Indian subcontinent",
+                "target": "Government entities in India"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "APT36",
+            "EntityVariantNames": [
+                "Transparent Tribe",
+                "Mythic Leopard"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "SideCopy Campaign 2021",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0009",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "2021",
+                "location": "India",
+                "observe_time": "2021",
+                "report_name": "2021_Talos_InSideCopy(07-07-2021)_21a236b2"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Indian Ministry of Defense",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Indian Army",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CetaRAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0009"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "C#-based RAT",
+                "first_seen": "2019"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Allakore",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0009"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Delphi-based RAT",
+                "first_seen": "2015"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "DetaRAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0009"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "C#-based RAT"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "ReverseRAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "C#-based reverse shell"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Malicious LNK",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "freewindowssoftware[.]com",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Nodachi",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009",
+                "TA0010"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Golang-based credential stealer",
+                "target": "Kavach MFA"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "SideCopy Campaign 2021",
+            "Target": "SideCopy"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "target",
+            "Source": "SideCopy",
+            "Target": "Indian Ministry of Defense"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "SideCopy",
+            "Target": "CetaRAT"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "SideCopy",
+            "Target": "Allakore"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "SideCopy",
+            "Target": "Malicious LNK"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "SideCopy",
+            "Target": "APT36"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "belong_to",
+            "Source": "freewindowssoftware[.]com",
+            "Target": "SideCopy"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "SideCopy",
+            "Target": "Nodachi"
+        }
+    ]
+}

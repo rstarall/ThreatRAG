@@ -1,0 +1,333 @@
+<Entitys>
+    <!-- Attackers -->
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>APT-29</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>Cozy Bear</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0008</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="country">Russia</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Attack Event -->
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>Stuxnet Attack Event</EntityName>
+        <EntityType>event</EntityType>
+        <EntitySubType>event</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0008</Label>
+            <Label>TA0040</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="time">2009-2010</Property>
+            <Property name="primary_target">Iran</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Malware -->
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>W32.Stuxnet</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0008</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="type">Worm</Property>
+            <Property name="complexity">High</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Vulnerabilities -->
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>CVE-2010-2568</EntityName>
+        <EntityType>vul</EntityType>
+        <EntitySubType>cve</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>MS10-061</EntityName>
+        <EntityType>vul</EntityType>
+        <EntitySubType>cve</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>MS08-067</EntityName>
+        <EntityType>vul</EntityType>
+        <EntitySubType>cve</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>MS10-073</EntityName>
+        <EntityType>vul</EntityType>
+        <EntitySubType>cve</EntitySubType>
+        <Labels>
+            <Label>TA0004</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+
+    <!-- Tools -->
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>Cobalt Strike</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>tool</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+    </Entity>
+
+    <!-- Targets -->
+    <Entity>
+        <EntityId>entity_9</EntityId>
+        <EntityName>Siemens Step7</EntityName>
+        <EntityType>asset</EntityType>
+        <EntitySubType>bussiness</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_10</EntityId>
+        <EntityName>Siemens WinCC</EntityName>
+        <EntityType>asset</EntityType>
+        <EntitySubType>bussiness</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_11</EntityId>
+        <EntityName>Programmable Logic Controller (PLC)</EntityName>
+        <EntityType>asset</EntityType>
+        <EntitySubType>bussiness</EntitySubType>
+        <Labels>
+            <Label>TA0040</Label>
+        </Labels>
+        <Times>
+            <Time>5</Time>
+        </Times>
+    </Entity>
+
+    <!-- C2 Servers -->
+    <Entity>
+        <EntityId>entity_12</EntityId>
+        <EntityName>www.mypremierfutbol.com</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_13</EntityId>
+        <EntityName>www.todaysfutbol.com</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+    </Entity>
+
+    <!-- Compromised Certificates -->
+    <Entity>
+        <EntityId>entity_14</EntityId>
+        <EntityName>Realtek Semiconductor Corps Certificate</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>method</EntitySubType>
+        <Labels>
+            <Label>TA0005</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_15</EntityId>
+        <EntityName>JMicron Technology Corp Certificate</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>method</EntitySubType>
+        <Labels>
+            <Label>TA0005</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+</Entitys>
+<Relationships>
+    <!-- Attacker relationships -->
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Stuxnet Attack Event</Source>
+        <Target>APT-29</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>APT-29</Source>
+        <Target>W32.Stuxnet</Target>
+    </Relationship>
+
+    <!-- Malware relationships -->
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>W32.Stuxnet</Source>
+        <Target>CVE-2010-2568</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>W32.Stuxnet</Source>
+        <Target>MS10-061</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>W32.Stuxnet</Source>
+        <Target>MS08-067</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>W32.Stuxnet</Source>
+        <Target>MS10-073</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>W32.Stuxnet</Source>
+        <Target>Cobalt Strike</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>W32.Stuxnet</Source>
+        <Target>Realtek Semiconductor Corps Certificate</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_9</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>W32.Stuxnet</Source>
+        <Target>JMicron Technology Corp Certificate</Target>
+    </Relationship>
+
+    <!-- Target relationships -->
+    <Relationship>
+        <RelationshipId>relationship_10</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>W32.Stuxnet</Source>
+        <Target>Siemens Step7</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_11</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>W32.Stuxnet</Source>
+        <Target>Siemens WinCC</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_12</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>W32.Stuxnet</Source>
+        <Target>Programmable Logic Controller (PLC)</Target>
+    </Relationship>
+
+    <!-- C2 relationships -->
+    <Relationship>
+        <RelationshipId>relationship_13</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>W32.Stuxnet</Source>
+        <Target>www.mypremierfutbol.com</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_14</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>W32.Stuxnet</Source>
+        <Target>www.todaysfutbol.com</Target>
+    </Relationship>
+</Relationships>

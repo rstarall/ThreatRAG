@@ -1,0 +1,353 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "ScarCruft",
+            "EntityVariantNames": [
+                "ScarCruft APT",
+                "ScarCruft APT Group"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "description": "Relatively new APT group with professional tools and techniques"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Operation Daybreak",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "time": "March 2016",
+                "description": "Targeted attack using Adobe Flash zero-day exploit"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Operation Erebus",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Properties": {
+                "description": "Previous attack using CVE-2016-4117 through watering hole attacks"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Law enforcement agency in Asia",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Large trading company in Asia",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Mobile advertising company in USA",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Individuals related to IAAF",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Restaurant in Dubai mall",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "CVE-2016-1010",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "software": "Adobe Flash"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "CVE-2016-0147",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "software": "Adobe Flash",
+                "patched": "April 2016"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "CVE-2016-4117",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "software": "Adobe Flash"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "CVE-2016-4171",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "software": "Adobe Flash",
+                "description": "Vulnerability in ExecPolicy metadata parsing"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "yay_release.dll",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "type": "DLL"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "HEUR:Trojan.Win32.ScarCruft.gen",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "HEUR:Exploit.SWF.Agent.gen",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "china.pdf",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0005"
+            ],
+            "Properties": {
+                "language": "Korean",
+                "content": "Discusses China-North Korea nuclear disagreements"
+            }
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "Malicious VBS",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "CAB file (8844a537e7f533192ca8e81886e70fbc)",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "md5": "8844a537e7f533192ca8e81886e70fbc",
+                "contains": "4 malicious DLL files"
+            }
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "212.7.217.10",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "reg.flnet.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "webconncheck.myfw.us",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_22",
+            "EntityName": "hXXp://webconncheck.myfw.us:8080/8xrss.php",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_23",
+            "EntityName": "3e5ac6bbf108feec97e1cc36560ab0b6",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_24",
+            "EntityName": "a6f14b547d9a7190a1f9f1c06f906063",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "filename": "cfgifut.dll"
+            }
+        },
+        {
+            "EntityId": "entity_25",
+            "EntityName": "e51ce28c2e2d226365bc5315d3e5f83e",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "filename": "cldbct.dll"
+            }
+        },
+        {
+            "EntityId": "entity_26",
+            "EntityName": "067681b79756156ba26c12bc36bf835c",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "filename": "cryptbase.dll"
+            }
+        },
+        {
+            "EntityId": "entity_27",
+            "EntityName": "f8a2d4ddf9dc2de750c8b4b7ee45ba3f",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "filename": "msfte.dll"
+            }
+        },
+        {
+            "EntityId": "entity_28",
+            "EntityName": "Adobe Flash Player",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_29",
+            "EntityName": "Microsoft Internet Explorer",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_30",
+            "EntityName": "Windows DDE",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0005"
+            ],
+            "Properties": {
+                "description": "Used for bypassing security solutions"
+            }
+        },
+        {
+            "EntityId": "entity_31",
+            "EntityName": "Spear-phishing",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_32",
+            "EntityName": "Watering hole attack",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ]
+        }
+    ],
+    "Relationships": []
+}

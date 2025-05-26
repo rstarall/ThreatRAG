@@ -1,0 +1,5 @@
+CVE-2014-1747漏洞
+在 35.0.1916.114 之前的 Google Chrome 中使用，Blink 的 core/loader/DocumentLoader.cpp 中 DocumentLoader：：maybeCreateArchive 函数中存在跨站点脚本 （XSS） 漏洞，允许远程攻击者通过构建的 MHTML 内容（也称为“通用 XSS （UXSS）”）注入任意 Web 脚本或 HTML。
+漏洞：CVE-2014-3176
+低于 37.0.2062.94 的 Google Chrome 无法正确处理扩展、IPC、同步 API 和 Google V8 的交互，这允许远程攻击者通过不明向量执行任意代码，这是一个与 CVE-2014-3177 不同的漏洞。
+CVE-2014-6332漏洞

@@ -1,0 +1,421 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Moafee",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Guangdong Province, China",
+                "targets": "Governments, military organizations, US defense industrial base"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "DragonOK",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Jiangsu Province, China",
+                "targets": "High-tech and manufacturing companies in Japan and Taiwan"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Operation Quantum Entanglement",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "2014",
+                "observe_time": "2014",
+                "report_name": "2014_fireeye-operation-quantum-entanglement_88897cab"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "NewCT/CT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "version": "V2.1",
+                "sample": "46e55cdf507ef10b11d74dad6af8b94e"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Nflog",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "sample": "a3d3b0686e7bd13293ad0e63ebec67af"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Sysget/HelloBridge",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "sample": "57e3d002542e07f2eb09fd2b1b0eeab2"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Mongall",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "sample": "e8d77d19e1c6f462f4a5bf6fbe673a3c"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "PoisonIvy",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "sample": "65fcc9b9ff608801edc697552438cfee"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "HTRAN",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "description": "HUC Packet Transmit Tool"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Spear-phishing emails",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "description": "Primary attack vector using password-protected documents and embedded executables"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "CPU core check",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "description": "Detects virtualized environments by checking processor cores"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Password-protected documents",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "example": "888888"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Large null-padded files",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "58.64.201.229",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "group": "Moafee"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "206.161.216.219",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "group": "DragonOK"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "ph.moafee[.]com",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "www.ndbssh[.]com",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation Quantum Entanglement",
+            "Target": "Moafee"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Operation Quantum Entanglement",
+            "Target": "DragonOK"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Moafee",
+            "Target": "NewCT/CT"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Moafee",
+            "Target": "Nflog"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Moafee",
+            "Target": "Mongall"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Moafee",
+            "Target": "PoisonIvy"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Moafee",
+            "Target": "HTRAN"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "DragonOK",
+            "Target": "NewCT/CT"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "DragonOK",
+            "Target": "Nflog"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "DragonOK",
+            "Target": "Sysget/HelloBridge"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "DragonOK",
+            "Target": "Mongall"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "use",
+            "Source": "DragonOK",
+            "Target": "PoisonIvy"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "use",
+            "Source": "DragonOK",
+            "Target": "HTRAN"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "use",
+            "Source": "Moafee",
+            "Target": "Spear-phishing emails"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "use",
+            "Source": "DragonOK",
+            "Target": "Spear-phishing emails"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "use",
+            "Source": "Moafee",
+            "Target": "CPU core check"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "use",
+            "Source": "Moafee",
+            "Target": "Password-protected documents"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "use",
+            "Source": "Moafee",
+            "Target": "Large null-padded files"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "use",
+            "Source": "DragonOK",
+            "Target": "CPU core check"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "use",
+            "Source": "DragonOK",
+            "Target": "Password-protected documents"
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "use",
+            "Source": "DragonOK",
+            "Target": "Large null-padded files"
+        },
+        {
+            "RelationshipId": "relationship_22",
+            "RelationshipType": "related_to",
+            "Source": "NewCT/CT",
+            "Target": "CPU core check"
+        },
+        {
+            "RelationshipId": "relationship_23",
+            "RelationshipType": "related_to",
+            "Source": "Sysget/HelloBridge",
+            "Target": "CPU core check"
+        },
+        {
+            "RelationshipId": "relationship_24",
+            "RelationshipType": "belong_to",
+            "Source": "ph.moafee[.]com",
+            "Target": "58.64.201.229"
+        },
+        {
+            "RelationshipId": "relationship_25",
+            "RelationshipType": "belong_to",
+            "Source": "www.ndbssh[.]com",
+            "Target": "206.161.216.219"
+        }
+    ]
+}

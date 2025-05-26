@@ -1,0 +1,372 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Waterbug",
+            "EntityVariantNames": [
+                "APT-29",
+                "Cozy Bear"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Russia",
+                "state-sponsored": "true",
+                "active-since": "2005"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Waterbug Campaign 2013-2014",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "2013-2014",
+                "target-countries": "100+",
+                "compromised-computers": "4500+",
+                "observe_time": "2015",
+                "report_name": "2015_waterbug-attack-group_03bef7bb"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Trojan.Wipbot",
+            "EntityVariantNames": [
+                "Tavdig",
+                "Epic Turla"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Downloader",
+                "functionality": "Backdoor, command execution"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Trojan.Turla",
+            "EntityVariantNames": [
+                "Carbon",
+                "Uroburos",
+                "Snake"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0008",
+                "TA0009",
+                "TA0010"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Advanced persistent threat",
+                "variants": "4"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2013-5065",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "description": "Microsoft Windows Kernel 'NDProxy.sys' Local Privilege Escalation Vulnerability"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CVE-2013-3346",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "description": "Adobe Acrobat and Reader ToolButton Object Use-After-Free Remote Code Execution Vulnerability"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Spear-phishing",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Watering-hole",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Venom network",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001",
+                "TA0043"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "compromised-websites": "84"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Government institutions",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Embassies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Education and research facilities",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Cobalt Strike",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "PluginDetect",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0043"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "tcpdump32c.exe",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0007",
+                "TA0008"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "msnetsrv.exe",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "communityeu.xp3.biz",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "euassociate.6te.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Waterbug Campaign 2013-2014",
+            "Target": "Waterbug"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "target",
+            "Source": "Waterbug",
+            "Target": "Government institutions"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Waterbug",
+            "Target": "Trojan.Wipbot"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Waterbug",
+            "Target": "Trojan.Turla"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Waterbug",
+            "Target": "Spear-phishing"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Waterbug",
+            "Target": "Watering-hole"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Waterbug",
+            "Target": "CVE-2013-5065"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Waterbug",
+            "Target": "CVE-2013-3346"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Waterbug",
+            "Target": "Venom network"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Trojan.Wipbot",
+            "Target": "Trojan.Turla"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Trojan.Wipbot",
+            "Target": "CVE-2013-3346"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Venom network",
+            "Target": "PluginDetect"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "Trojan.Turla",
+            "Target": "Cobalt Strike"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "Trojan.Turla",
+            "Target": "communityeu.xp3.biz"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "Trojan.Turla",
+            "Target": "euassociate.6te.net"
+        }
+    ]
+}

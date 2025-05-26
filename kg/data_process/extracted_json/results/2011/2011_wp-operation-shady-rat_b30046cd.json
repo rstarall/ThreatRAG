@@ -1,0 +1,297 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Operation Shady RAT",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "2006-2011",
+                "victims": "71 organizations",
+                "observe_time": "2011",
+                "report_name": "2011_wp-operation-shady-rat_b30046cd"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "APT Group",
+            "EntityVariantNames": [
+                "Shady RAT operators"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "suspected_origin": "State-sponsored"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Spear-phishing email",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Generic Downloader.x",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Generic BackDoor.t",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Encrypted HTML comments",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "C&C server",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "United Nations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "location": "Switzerland",
+                "duration": "20 months"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "International Olympic Committee",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "location": "Switzerland",
+                "duration": "1 month"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "World Anti-Doping Agency",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "location": "Canada",
+                "duration": "14 months"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "US Federal Government Agencies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "count": "6 agencies"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "US Defense Contractors",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "count": "13 companies"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation Shady RAT",
+            "Target": "APT Group"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "APT Group",
+            "Target": "Spear-phishing email"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "APT Group",
+            "Target": "Generic Downloader.x"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "APT Group",
+            "Target": "Generic BackDoor.t"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "APT Group",
+            "Target": "Encrypted HTML comments"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "APT Group",
+            "Target": "C&amp;C server"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "involve",
+            "Source": "Operation Shady RAT",
+            "Target": "United Nations"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "involve",
+            "Source": "Operation Shady RAT",
+            "Target": "International Olympic Committee"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "involve",
+            "Source": "Operation Shady RAT",
+            "Target": "World Anti-Doping Agency"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "involve",
+            "Source": "Operation Shady RAT",
+            "Target": "US Federal Government Agencies"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "involve",
+            "Source": "Operation Shady RAT",
+            "Target": "US Defense Contractors"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "target",
+            "Source": "APT Group",
+            "Target": "United Nations"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "target",
+            "Source": "APT Group",
+            "Target": "International Olympic Committee"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "target",
+            "Source": "APT Group",
+            "Target": "World Anti-Doping Agency"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "target",
+            "Source": "APT Group",
+            "Target": "US Federal Government Agencies"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "target",
+            "Source": "APT Group",
+            "Target": "US Defense Contractors"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "Generic Downloader.x",
+            "Target": "C&amp;C server"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "related_to",
+            "Source": "Generic BackDoor.t",
+            "Target": "C&amp;C server"
+        }
+    ]
+}

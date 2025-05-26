@@ -1,0 +1,196 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT-29",
+            "EntityVariantNames": [
+                "Cozy Bear"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Russia"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Government Agency",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Government"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "BITTERBUG",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CVE-2023-1234",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "192.168.1.10",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "purpose": "Domain Controller"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Malicious Word Document",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "8a9f75d3b12efg56"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Government Agency Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "April 2023",
+                "observe_time": "2014",
+                "report_name": "2014_ThreatConnect_Operation_Arachnophobia_Report_6104cb41"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Government Agency Attack Event",
+            "Target": "APT-29"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Government Agency Attack Event",
+            "Target": "Government Agency"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "BITTERBUG"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "CVE-2023-1234"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "Government Agency"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "192.168.1.10"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2023-1234",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "has",
+            "Source": "Government Agency",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "has",
+            "Source": "Government Agency",
+            "Target": "192.168.1.10"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "trigger",
+            "Source": "Government Agency",
+            "Target": "Malicious Word Document"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "BITTERBUG",
+            "Target": "Malicious Word Document"
+        }
+    ]
+}

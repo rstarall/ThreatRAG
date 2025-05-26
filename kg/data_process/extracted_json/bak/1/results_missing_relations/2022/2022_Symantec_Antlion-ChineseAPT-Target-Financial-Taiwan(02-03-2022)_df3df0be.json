@@ -1,0 +1,383 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Antlion",
+            "EntityVariantNames": [
+                "Chinese APT"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0006",
+                "TA0008",
+                "TA0010"
+            ],
+            "Properties": {
+                "country": "China",
+                "activity_since": "2011"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Taiwan Financial Institutions Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0006",
+                "TA0008",
+                "TA0010"
+            ],
+            "Properties": {
+                "duration": "18 months",
+                "target_region": "Taiwan"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Taiwan Financial Institution",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "industry": "Financial",
+                "location": "Taiwan"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Taiwan Manufacturing Company",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "industry": "Manufacturing",
+                "location": "Taiwan"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "xPack",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003"
+            ],
+            "Properties": {
+                "type": ".NET loader",
+                "function": "Decrypts, loads, and executes .bin files",
+                "variant": "xPackSvc"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "EternalBlue",
+            "EntityType": "tool",
+            "EntitySubType": "exploit",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "CVE-2019-1458",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0004"
+            ],
+            "Properties": {
+                "description": "Windows Win32k elevation-of-privilege vulnerability"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "EHAGBPSL loader",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "language": "C++"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "JpgRun loader",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "language": "C++"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "CheckID",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "origin": "Based on BlackHole RAT loader"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "NetSessionEnum",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0007"
+            ],
+            "Properties": {
+                "function": "SMB session enumeration"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "ENCODE MMC",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0010"
+            ],
+            "Properties": {
+                "function": "Bind/reverse file transfer"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Kerberos golden ticket tool",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0006"
+            ],
+            "Properties": {
+                "origin": "Based on Mimikatz"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "PowerShell",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0002",
+                "TA0010"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "WMIC",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0002",
+                "TA0007"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "ProcDump",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0006"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "LSASS",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0006"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "PsExec",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002",
+                "TA0008"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "AnyDesk",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "WinRAR",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0010"
+            ]
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "Keylogger",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009"
+            ]
+        },
+        {
+            "EntityId": "entity_22",
+            "EntityName": "MSSQL service",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_23",
+            "EntityName": "Windows",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_24",
+            "EntityName": "htable.xsl",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0007"
+            ]
+        },
+        {
+            "EntityId": "entity_25",
+            "EntityName": "update.vbs",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_26",
+            "EntityName": "W22-009-099.tmp",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0010"
+            ]
+        },
+        {
+            "EntityId": "entity_27",
+            "EntityName": "85867a8b4de856a943dd5efaaf3b48aecd2082aa0ceba799df53ba479e4e81c5",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "associated_with": "checkID"
+            }
+        },
+        {
+            "EntityId": "entity_28",
+            "EntityName": "12425edb2c50eac79f06bf228cb2dd77bb1e847c4c4a2049c91e0c5b345df5f2",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "associated_with": "xPack"
+            }
+        },
+        {
+            "EntityId": "entity_29",
+            "EntityName": "789f0ec8e60fbc8645641a47bc821b11a4486f28892b6ce14f867a40247954ed",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0009"
+            ],
+            "Properties": {
+                "associated_with": "Keylogger"
+            }
+        },
+        {
+            "EntityId": "entity_30",
+            "EntityName": "443f4572ed2aec06d9fb3a190de21bfced37c0cd2ee03dd48a0a7be762858925",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "associated_with": "JpgRun"
+            }
+        },
+        {
+            "EntityId": "entity_31",
+            "EntityName": "e968e0d7e62fbc36ad95bc7b140cf7c32cd0f02fd6f4f914eeb7c7b87528cfe2",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "associated_with": "EHAGBPSL"
+            }
+        },
+        {
+            "EntityId": "entity_32",
+            "EntityName": "f01a4841f022e96a5af613eb76c6b72293400e52787ab228e0abb862e5a86874",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0010"
+            ],
+            "Properties": {
+                "associated_with": "MMC"
+            }
+        },
+        {
+            "EntityId": "entity_33",
+            "EntityName": "dfee6b3262e43d85f20f4ce2dfb69a8d0603bb261fb3dfa0b934543754d5128b",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0006"
+            ],
+            "Properties": {
+                "associated_with": "Mimikatz"
+            }
+        }
+    ],
+    "Relationships": []
+}

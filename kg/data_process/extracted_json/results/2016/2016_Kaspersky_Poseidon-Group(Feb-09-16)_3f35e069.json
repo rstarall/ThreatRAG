@@ -1,0 +1,243 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Poseidon Group",
+            "EntityVariantNames": [
+                "Poseidon",
+                "Poseidon APT"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "language": "Portuguese",
+                "country": "Brazil",
+                "activity_start": "2005"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Poseidon Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "2005-2016",
+                "observe_time": "2016",
+                "report_name": "2016_Kaspersky_Poseidon-Group(Feb-09-16)_3f35e069"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Victim Companies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "industries": "Energy, Telecommunications, Financial, Government, Media, Manufacturing",
+                "countries": "Brazil, USA, France, Kazakhstan, UAE, India, Russia"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "IGT Toolkit",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0007",
+                "TA0008",
+                "TA0009"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "size": "15MB",
+                "languages": "Delphi, PowerShell, SQL, Visual Basic 6, C#"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Spear-phishing Emails",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "lure": "Human Resources",
+                "file_types": "RTF, DOC"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "akamaihub[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "status": "Sinkholed"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "igdata[.]net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "status": "Sinkholed"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Windows Systems",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "versions": "Windows NT 4.0 to Windows 8.1, Server variants"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Domain Controllers",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "2ce818518ca5fd03cbacb26173aa60ce",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Poseidon Campaign",
+            "Target": "Poseidon Group"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Poseidon Campaign",
+            "Target": "Victim Companies"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Poseidon Group",
+            "Target": "IGT Toolkit"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Poseidon Group",
+            "Target": "Spear-phishing Emails"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "Poseidon Group",
+            "Target": "Victim Companies"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "Poseidon Group",
+            "Target": "Domain Controllers"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "IGT Toolkit",
+            "Target": "Windows Systems"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "has",
+            "Source": "Victim Companies",
+            "Target": "Domain Controllers"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "has",
+            "Source": "Victim Companies",
+            "Target": "Windows Systems"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "belong_to",
+            "Source": "akamaihub[.]com",
+            "Target": "Poseidon Group"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "igdata[.]net",
+            "Target": "Poseidon Group"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Spear-phishing Emails",
+            "Target": "2ce818518ca5fd03cbacb26173aa60ce"
+        }
+    ]
+}

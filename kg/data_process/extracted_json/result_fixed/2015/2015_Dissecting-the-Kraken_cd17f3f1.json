@@ -1,0 +1,284 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Unidentified Attackers",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0007",
+                "TA0009"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Multi-national Enterprise in UAE",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "United Arab Emirates"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Kraken Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0007",
+                "TA0009"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "January 2015",
+                "observe_time": "2015",
+                "report_name": "2015_Dissecting-the-Kraken_cd17f3f1"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Spear Phishing Email",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Malicious Word Document",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "08E834B6D4123F0AEA27D042FCEAF992"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CVE-2012-0158",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Kraken HTTP",
+            "EntityVariantNames": [
+                "Kraken"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0007",
+                "TA0009"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "3917107778F928A6F65DB34553D5082A",
+                "type": "Botnet",
+                "price": "$320"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Underground Market",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "0"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "aeCERT",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Bitcoin Monitor Plugin",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "price": "$20"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "File Stealer Plugin",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "price": "$50"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Form Grabber Plugin",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0006",
+                "TA0009"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "price": "$350"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Kraken Attack Event",
+            "Target": "Unidentified Attackers"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Kraken Attack Event",
+            "Target": "Multi-national Enterprise in UAE"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Unidentified Attackers",
+            "Target": "Spear Phishing Email"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Unidentified Attackers",
+            "Target": "Malicious Word Document"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Unidentified Attackers",
+            "Target": "Kraken HTTP"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "Unidentified Attackers",
+            "Target": "Multi-national Enterprise in UAE"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2012-0158",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Kraken HTTP",
+            "Target": "Malicious Word Document"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Kraken HTTP",
+            "Target": "Bitcoin Monitor Plugin"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Kraken HTTP",
+            "Target": "File Stealer Plugin"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Kraken HTTP",
+            "Target": "Form Grabber Plugin"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "has",
+            "Source": "Multi-national Enterprise in UAE",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "trigger",
+            "Source": "Multi-national Enterprise in UAE",
+            "Target": "Malicious Word Document"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "belong_to",
+            "Source": "Malicious Word Document",
+            "Target": "Windows System"
+        }
+    ]
+}

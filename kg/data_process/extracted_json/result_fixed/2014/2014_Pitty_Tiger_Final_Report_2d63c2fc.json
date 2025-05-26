@@ -1,0 +1,247 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Pitty Tiger",
+            "EntityVariantNames": [
+                "PittyTiger"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China",
+                "activity_start": "2011"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Operation Pitty Tiger",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "2011-2014",
+                "observe_time": "2014",
+                "report_name": "2014_Pitty_Tiger_Final_Report_2d63c2fc"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Defense Industry Company",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "industry": "Defense"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Government Academic Network",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "sector": "Government"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Troj/ReRol.A",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "e70c0479cdb9aa031a263740365e7939",
+                "exploit": "CVE-2012-0158, CVE-2014-1761"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "PittyTiger RAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "be18418cafdb9f86303f7e419a389cc9"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "CT RAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "f65dc0b3eeb3c393e89ab49a3fac95a8"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "avstore.com.tw",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "ip": "122.10.48.189, 66.220.4.100"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "skypetm.com.tw",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "ip": "173.252.198.103, 66.220.4.100"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Toot",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "email": "dyanmips@qq.com"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Cold & Snow",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation Pitty Tiger",
+            "Target": "Pitty Tiger"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "target",
+            "Source": "Pitty Tiger",
+            "Target": "Defense Industry Company"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Pitty Tiger",
+            "Target": "Troj/ReRol.A"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Pitty Tiger",
+            "Target": "PittyTiger RAT"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "PittyTiger RAT",
+            "Target": "CT RAT"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "belong_to",
+            "Source": "PittyTiger RAT",
+            "Target": "avstore.com.tw"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "belong_to",
+            "Source": "Troj/ReRol.A",
+            "Target": "skypetm.com.tw"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Toot",
+            "Target": "CT RAT"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Cold & Snow",
+            "Target": "CT RAT"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "involve",
+            "Source": "Operation Pitty Tiger",
+            "Target": "Government Academic Network"
+        }
+    ]
+}

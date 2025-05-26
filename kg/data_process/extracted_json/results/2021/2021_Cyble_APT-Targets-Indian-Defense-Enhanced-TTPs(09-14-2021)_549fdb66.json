@@ -1,0 +1,292 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Transparent Tribe",
+            "EntityVariantNames": [
+                "APT Group"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "target": "Indian Defense and Government sectors"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Side Copy",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "target": "Indian Defense and Government sectors"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Indian Defense Officials Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "observe_time": "2021",
+                "report_name": "2021_Cyble_APT-Targets-Indian-Defense-Enhanced-TTPs(09-14-2021)_549fdb66"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Indian Defense Officials",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "sector": "Defense",
+                "country": "India"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "AFD CSD APP.vhdx",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "5e645eb1a828cef61f70ecbd651dba5433e250b4724e1408702ac13d2b6ab836",
+                "type": "VHDX file"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CSD_AppLaunch.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "84841490ea2b637494257e9fe23922e5f827190ae3e4c32134cadb81319ebc34",
+                "architecture": "x86",
+                "language": ".NET"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "IntelWifi.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "124023c0cf0524a73dabd6e5bb3f7d61d42dfd3867d699c59770846aae1231ce",
+                "architecture": "x86",
+                "language": ".NET"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "https://secure256.net/ver4.mp3",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "45.147.228.195:5434",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Canteen Store Department (CSD) Logo",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "http://afd.csdindia.gov.in",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "http://icanhazip.com",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0007"
+            ],
+            "Times": [
+                "4"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Indian Defense Officials Attack Event",
+            "Target": "Transparent Tribe"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Indian Defense Officials Attack Event",
+            "Target": "Indian Defense Officials"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "Transparent Tribe",
+            "Target": "Indian Defense Officials"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Transparent Tribe",
+            "Target": "AFD CSD APP.vhdx"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Transparent Tribe",
+            "Target": "CSD_AppLaunch.exe"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Transparent Tribe",
+            "Target": "IntelWifi.exe"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Transparent Tribe",
+            "Target": "Canteen Store Department (CSD) Logo"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "belong_to",
+            "Source": "AFD CSD APP.vhdx",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "trigger",
+            "Source": "Indian Defense Officials",
+            "Target": "AFD CSD APP.vhdx"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "CSD_AppLaunch.exe",
+            "Target": "IntelWifi.exe"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "CSD_AppLaunch.exe",
+            "Target": "https://secure256.net/ver4.mp3"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "IntelWifi.exe",
+            "Target": "45.147.228.195:5434"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "IntelWifi.exe",
+            "Target": "http://icanhazip.com"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "CSD_AppLaunch.exe",
+            "Target": "http://afd.csdindia.gov.in"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "has",
+            "Source": "Indian Defense Officials",
+            "Target": "Windows System"
+        }
+    ]
+}

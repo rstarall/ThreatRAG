@@ -1,0 +1,135 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Duqu 2.0",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Properties": {
+                "version": "2.0",
+                "discovery_date": "2015"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "APT-29",
+            "EntityVariantNames": [
+                "Duqu Group"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0043",
+                "TA0001",
+                "TA0008"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Kaspersky Lab",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CVE-2015-2360",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2014-6324",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0008"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CVE-2014-4148",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "CTwoPENC.dll",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0004"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "KMART.dll",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0005"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "portserv.sys",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "MSI Package",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "klif.dll",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0005"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "P5+1 events",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0043"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "70th anniversary of Auschwitz liberation",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0043"
+            ]
+        }
+    ],
+    "Relationships": []
+}

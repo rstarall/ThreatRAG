@@ -1,0 +1,167 @@
+<Entitys>
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>People’s Liberation Army (PLA)</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0043</Label>
+            <Label>TA0042</Label>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0008</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="branches">PLA Ground Force, PLA Navy, PLA Air Force, Second Artillery Corps, PLA Reserved Force</Property>
+            <Property name="personnel">2.3 million active, 800,000 reserve, 3.9 million paramilitary</Property>
+        </Properties>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>China's Cyber Warfare Capability</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>method</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="description">Asymmetric warfare capability to leapfrog military competitiveness</Property>
+        </Properties>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>APT-29</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>Cozy Bear</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="country">Russia</Property>
+        </Properties>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>Titan Rain</EntityName>
+        <EntityType>event</EntityType>
+        <EntitySubType>event</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+        <Properties>
+            <Property name="timeframe">2003-2006</Property>
+            <Property name="targets">US defence and aerospace installations, Sandia National Laboratories, Lockheed Martin</Property>
+        </Properties>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>Second Artillery Corps (SAC)</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0040</Label>
+        </Labels>
+        <Times>
+            <Time>5</Time>
+        </Times>
+        <Properties>
+            <Property name="capabilities">Nuclear and conventional missile forces</Property>
+        </Properties>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>Unrestricted Warfare</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>method</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0040</Label>
+        </Labels>
+        <Times>
+            <Time>6</Time>
+        </Times>
+        <Properties>
+            <Property name="description">Military doctrine advocating combination of traditional and non-traditional warfare methods</Property>
+        </Properties>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>Assassin's Mace (shashoujian)</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>method</EntitySubType>
+        <Labels>
+            <Label>TA0040</Label>
+        </Labels>
+        <Times>
+            <Time>7</Time>
+        </Times>
+        <Properties>
+            <Property name="description">Asymmetric warfare tactic to deliver decisive blows</Property>
+        </Properties>
+    </Entity>
+</Entitys>
+<Relationships>
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>People’s Liberation Army (PLA)</Source>
+        <Target>China's Cyber Warfare Capability</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>China's Cyber Warfare Capability</Source>
+        <Target>Unrestricted Warfare</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>China's Cyber Warfare Capability</Source>
+        <Target>Assassin's Mace (shashoujian)</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Titan Rain</Source>
+        <Target>APT-29</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>People’s Liberation Army (PLA)</Source>
+        <Target>Second Artillery Corps (SAC)</Target>
+    </Relationship>
+</Relationships>

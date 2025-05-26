@@ -1,0 +1,242 @@
+<Entitys>
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>Uroburos</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>Ouroboros</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0005</Label>
+            <Label>TA0007</Label>
+            <Label>TA0009</Label>
+            <Label>TA0010</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="type">Rootkit</Property>
+            <Property name="components">Driver and encrypted virtual file system</Property>
+            <Property name="capabilities">Data theft, network traffic capture, arbitrary command execution</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>Russian Intelligence</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0043</Label>
+            <Label>TA0042</Label>
+            <Label>TA0001</Label>
+            <Label>TA0010</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="country">Russia</Property>
+            <Property name="suspected_connection">Agent.BTZ attack</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>Agent.BTZ</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0010</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="type">Worm</Property>
+            <Property name="connection">2008 US cyberattack</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>United States Department of Defense</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="industry">Government/Military</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>Ultra3.sys</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>msw32.sys</EntityVariantName>
+            <EntityVariantName>vstor32.sys</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>file</EntityType>
+        <EntitySubType>file</EntitySubType>
+        <Labels>
+            <Label>TA0003</Label>
+            <Label>TA0005</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="type">Driver file</Property>
+            <Property name="function">Rootkit component</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>Virtual File System (.dat)</EntityName>
+        <EntityType>file</EntityType>
+        <EntitySubType>file</EntitySubType>
+        <Labels>
+            <Label>TA0003</Label>
+            <Label>TA0009</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="encryption">CAST-128</Property>
+            <Property name="contents">Third party tools, scripts, logs</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>inj_snake_Win32.dll</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>inj_snake_Win64.dll</EntityVariantName>
+            <EntityVariantName>inj_services_Win32.dll</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>file</EntityType>
+        <EntitySubType>file</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+        <Properties>
+            <Property name="type">Injected library</Property>
+            <Property name="function">Userland control</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>Microsoft Windows</EntityName>
+        <EntityType>env</EntityType>
+        <EntitySubType>os</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="versions">32-bit and 64-bit</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_9</EntityId>
+        <EntityName>1dM3uu4j7Fw4sjnbcwlDqet4m5Imnxl1pzxI6as80cbLnmz54cs5Ldn4ri3do5L6gs923HL34x2f5cvd0fk6c1a0s</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>payload</EntitySubType>
+        <Labels>
+            <Label>TA0005</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="type">Obfuscation key</Property>
+            <Property name="shared_with">Agent.BTZ</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_10</EntityId>
+        <EntityName>winview.ocx</EntityName>
+        <EntityType>file</EntityType>
+        <EntitySubType>file</EntitySubType>
+        <Labels>
+            <Label>TA0009</Label>
+        </Labels>
+        <Times>
+            <Time>5</Time>
+        </Times>
+        <Properties>
+            <Property name="type">Log file</Property>
+            <Property name="shared_with">Agent.BTZ</Property>
+        </Properties>
+    </Entity>
+</Entitys>
+<Relationships>
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Russian Intelligence</Source>
+        <Target>Uroburos</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Uroburos</Source>
+        <Target>Agent.BTZ</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Russian Intelligence</Source>
+        <Target>United States Department of Defense</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>Ultra3.sys</Source>
+        <Target>Uroburos</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>Virtual File System (.dat)</Source>
+        <Target>Uroburos</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Uroburos</Source>
+        <Target>Microsoft Windows</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Uroburos</Source>
+        <Target>1dM3uu4j7Fw4sjnbcwlDqet4m5Imnxl1pzxI6as80cbLnmz54cs5Ldn4ri3do5L6gs923HL34x2f5cvd0fk6c1a0s</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Uroburos</Source>
+        <Target>winview.ocx</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_9</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Uroburos</Source>
+        <Target>inj_snake_Win32.dll</Target>
+    </Relationship>
+</Relationships>

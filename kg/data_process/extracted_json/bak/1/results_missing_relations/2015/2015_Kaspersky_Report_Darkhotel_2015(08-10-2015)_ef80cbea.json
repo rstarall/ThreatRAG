@@ -1,0 +1,330 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Darkhotel",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0005",
+                "TA0008",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Darkhotel 2015 Attacks",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0005",
+                "TA0008",
+                "TA0011"
+            ],
+            "Properties": {
+                "time": "2015"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "North Korea",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Russia",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "South Korea",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Japan",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Bangladesh",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Thailand",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "India",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Mozambique",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Germany",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "storyonboard[.]net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "tisone360[.]org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "openofficev[.]info",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "saytargetworld[.]net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "error-page[.]net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "eonlineworld[.]net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "enewsbank[.]net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "thewordusrapid[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "schedule(6.1~6).rar",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "hash": "5c74db6f755555ea99b51e1c68e796f9"
+            }
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "schedule(2.11~16).rar",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "hash": "c3ae70b3012cc9b5c9ceb060a251715a"
+            }
+        },
+        {
+            "EntityId": "entity_22",
+            "EntityName": "congratulation.rar",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "hash": "560d68c31980c26d2adab7406b61c651"
+            }
+        },
+        {
+            "EntityId": "entity_23",
+            "EntityName": "letter.rar",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "hash": "da0717899e3ccc1ba0e8d32774566219"
+            }
+        },
+        {
+            "EntityId": "entity_24",
+            "EntityName": "Hacking Team Flash 0day",
+            "EntityType": "vul",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_25",
+            "EntityName": "CVE-2014-0497",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_26",
+            "EntityName": "internet_explorer_Smart_recovery.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "054471f7e168e016c565412227acfe7f"
+            }
+        },
+        {
+            "EntityId": "entity_27",
+            "EntityName": "sendspace.servermsys.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_28",
+            "EntityName": "Xuchang Hongguang Technology Co. Ltd",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0006"
+            ]
+        },
+        {
+            "EntityId": "entity_29",
+            "EntityName": "tisone360.com/img_h/ims2/icon.swf",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "214709aa7c5e4e8b60759a175737bb2b"
+            }
+        },
+        {
+            "EntityId": "entity_30",
+            "EntityName": "tisone360.com/img_h/ims2/icon.jpg",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "42a837c4433ae6bd7490baec8aeb5091"
+            }
+        },
+        {
+            "EntityId": "entity_31",
+            "EntityName": "RealTemp.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "61cc019c3141281073181c4ef1f4e524"
+            }
+        },
+        {
+            "EntityId": "entity_32",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        }
+    ],
+    "Relationships": []
+}

@@ -1,0 +1,427 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "SBDH toolkit",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "description": "Espionage toolkit targeting governmental and public institutions in Central and Eastern Europe"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Phishing Email",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "technique": "Executable with double extension"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Governmental and Public Institutions",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "region": "Central and Eastern Europe",
+                "focus": "Economic growth and cooperation"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Backdoor Component",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Data Stealer",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009",
+                "TA0010"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "C&C Server",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "HTTP Protocol",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "SMTP Protocol",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Microsoft Outlook Express",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Fake Image Files",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0005",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "extensions": ".JPG, .GIF"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Free Blog Webpage",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Word Document Handler Replacement",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "B64SBDH",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Operation Buhtrap",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "observe_time": "2016",
+                "report_name": "2016_ESET_targeting-Central-and-EasternEurope(07-01-2016)_66908ec9"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "1345B6189441CD1ED9036EF098ADF12746ECF7CB",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "15B956FEEE0FA42F89C67CA568A182C348E20EAD",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "F2A1E4B58C9449776BD69F62A8F2BA7A72580DA2",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "7F32CAE8D6821FD50DE571C40A8342ACAF858541",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "5DDBDD3CF632F7325D6C261BCC516627D772381A",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "4B94E8A10C5BCA43797283ECD24DF24421E411D2",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "D2E9EB26F3212D96E341E4CBA7483EF46DF8A1BE",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_22",
+            "EntityName": "09C56B14DB3785033C8FDEC41F7EA9497350EDAE",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "target",
+            "Source": "SBDH toolkit",
+            "Target": "Governmental and Public Institutions"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "SBDH toolkit",
+            "Target": "Phishing Email"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "SBDH toolkit",
+            "Target": "Backdoor Component"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "SBDH toolkit",
+            "Target": "Data Stealer"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "SBDH toolkit",
+            "Target": "C&C Server"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Backdoor Component",
+            "Target": "HTTP Protocol"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Backdoor Component",
+            "Target": "SMTP Protocol"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Backdoor Component",
+            "Target": "Microsoft Outlook Express"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Backdoor Component",
+            "Target": "Fake Image Files"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "Backdoor Component",
+            "Target": "Free Blog Webpage"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "Backdoor Component",
+            "Target": "Word Document Handler Replacement"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "SBDH toolkit",
+            "Target": "B64SBDH"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "SBDH toolkit",
+            "Target": "Operation Buhtrap"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "belong_to",
+            "Source": "1345B6189441CD1ED9036EF098ADF12746ECF7CB",
+            "Target": "SBDH toolkit"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "belong_to",
+            "Source": "15B956FEEE0FA42F89C67CA568A182C348E20EAD",
+            "Target": "SBDH toolkit"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "belong_to",
+            "Source": "F2A1E4B58C9449776BD69F62A8F2BA7A72580DA2",
+            "Target": "SBDH toolkit"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "belong_to",
+            "Source": "7F32CAE8D6821FD50DE571C40A8342ACAF858541",
+            "Target": "SBDH toolkit"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "belong_to",
+            "Source": "5DDBDD3CF632F7325D6C261BCC516627D772381A",
+            "Target": "SBDH toolkit"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "belong_to",
+            "Source": "4B94E8A10C5BCA43797283ECD24DF24421E411D2",
+            "Target": "SBDH toolkit"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "belong_to",
+            "Source": "D2E9EB26F3212D96E341E4CBA7483EF46DF8A1BE",
+            "Target": "SBDH toolkit"
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "belong_to",
+            "Source": "09C56B14DB3785033C8FDEC41F7EA9497350EDAE",
+            "Target": "SBDH toolkit"
+        },
+        {
+            "RelationshipId": "relationship_22",
+            "RelationshipType": "has",
+            "Source": "Governmental and Public Institutions",
+            "Target": "Microsoft Outlook Express"
+        }
+    ]
+}

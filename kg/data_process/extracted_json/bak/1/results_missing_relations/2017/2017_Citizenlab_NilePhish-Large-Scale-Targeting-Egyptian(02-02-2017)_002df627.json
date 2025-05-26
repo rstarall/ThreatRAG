@@ -1,0 +1,268 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Nile Phish",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0006"
+            ],
+            "Properties": {
+                "country": "Egypt"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Egyptian Civil Society Phishing Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0006"
+            ],
+            "Properties": {
+                "time": "November 2016 - January 2017"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Egyptian Initiative for Personal Rights",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Association for Freedom of Thought and Expression",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Cairo Institute for Human Rights Studies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Egyptian Commission for Rights and Freedoms",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Nadeem Center for Rehabilitation of Victims of Violence",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Nazra for Feminist Studies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Case 173",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "gophish",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "108.61.176.96",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "104.238.191.204",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "176.123.26.42",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "dropboxsupport.servehttp.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "googledriver-sign.ddns.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "dropbox-service.serveftp.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "dropbox-sign.servehttp.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "mailgooglesign.servehttp.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "googleverify-signin.servehttp.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "googlesignin.servehttp.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "security-myaccount.servehttp.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_22",
+            "EntityName": "customerserviceonlineteam@gmail.com",
+            "EntityType": "ioc",
+            "EntitySubType": "email",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_23",
+            "EntityName": "dropbox.notfication@gmail.com",
+            "EntityType": "ioc",
+            "EntitySubType": "email",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_24",
+            "EntityName": "dropbox.notifications.mails@gmail.com",
+            "EntityType": "ioc",
+            "EntitySubType": "email",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_25",
+            "EntityName": "dropbox.noreplay@gmail.com",
+            "EntityType": "ioc",
+            "EntitySubType": "email",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_26",
+            "EntityName": "drive.noreply.mail@gmail.com",
+            "EntityType": "ioc",
+            "EntitySubType": "email",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_27",
+            "EntityName": "secure.policy.check@gmail.com",
+            "EntityType": "ioc",
+            "EntitySubType": "email",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_28",
+            "EntityName": "Azza Soliman",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ]
+        }
+    ],
+    "Relationships": []
+}

@@ -1,0 +1,140 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Darkhotel",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Kaspersky Global Research and Analysis Team",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0043"
+            ],
+            "Properties": {
+                "report_date": "November 2014",
+                "contact": "intelreports@kaspersky.com"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "41b816289a6a639f7f2a72b6c9e6a695",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "filename": "msieckc.exe",
+                "type": "Small Downloader"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "autolace.twilightparadox.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "automachine.servequake.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "864cd4a59215a7db2740dfbe4a648053",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0006"
+            ],
+            "Properties": {
+                "filename": "dmaUp3.exe",
+                "type": "Information Stealer"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "0fe3daf9e8b69255e592c8af97d24649",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "filename": "acroedit.exe",
+                "type": "Trojan.Win32.Karba.e"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "micronaoko.jumpingcrab.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "microchsse.strangled.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "microsoft-xpupdate.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "fcd2458376398b0be09eaa34f4f4d091",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "filename": "igfxext.exe",
+                "type": "Trojan-Dropper"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "86b18e99072ba72d5d36bce9a00fc052",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0006"
+            ],
+            "Properties": {
+                "filename": "ndiskpro.sys",
+                "type": "Keylogger"
+            }
+        }
+    ],
+    "Relationships": []
+}

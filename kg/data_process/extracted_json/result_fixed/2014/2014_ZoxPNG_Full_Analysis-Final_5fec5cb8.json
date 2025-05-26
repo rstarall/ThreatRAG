@@ -1,0 +1,231 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "ZoxPNG",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "RAT",
+                "carrier": "PNG image file format",
+                "commands": "13 native commands"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "C2 Server",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "WinInet API",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "VictimSystemData",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0007"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "size": "52 bytes",
+                "transmission": "Base64 encoded in Cookie header"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "HTTP GET/POST requests",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "pattern": "Specific URL structure with PNG parameters"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "PNG file format",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "data_offset": "0x21 for size, 0x29 for data",
+                "compression": "zlib deflate"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "CommandHeader",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "7"
+            ],
+            "Properties": {
+                "structure": "Contains CommandData and payload size"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "CommandData",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "8"
+            ],
+            "Properties": {
+                "fields": "dwCommandID, dwCommandSequenceID, dwLastError, dwPayloadSize"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "4NB Corp",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "9"
+            ],
+            "Properties": {
+                "country": "South Korea",
+                "role": "Certificate signer"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "ZoxRPC",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "10"
+            ],
+            "Properties": {
+                "relation": "Predecessor to ZoxPNG",
+                "exploit": "MS08-067 vulnerability"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "MS08-067",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "11"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "related_to",
+            "Source": "ZoxPNG",
+            "Target": "C2 Server"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "ZoxPNG",
+            "Target": "WinInet API"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "ZoxPNG",
+            "Target": "VictimSystemData"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "ZoxPNG",
+            "Target": "HTTP GET/POST requests"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "ZoxPNG",
+            "Target": "PNG file format"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "ZoxPNG",
+            "Target": "CommandHeader"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "ZoxPNG",
+            "Target": "CommandData"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "4NB Corp",
+            "Target": "ZoxPNG"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "ZoxPNG",
+            "Target": "ZoxRPC"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "ZoxRPC",
+            "Target": "MS08-067"
+        }
+    ]
+}

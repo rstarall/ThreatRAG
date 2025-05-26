@@ -1,0 +1,237 @@
+<Entitys>
+    <!-- Attackers -->
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>Icefog</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>APT-29</EntityVariantName>
+            <EntityVariantName>Fucobha</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0008</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="country">China</Property>
+            <Property name="activity">2011-present</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Attack Event -->
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>Icefog Campaign</EntityName>
+        <EntityType>event</EntityType>
+        <EntitySubType>event</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0008</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="time">2011-2013</Property>
+            <Property name="targets">Japan, South Korea</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Victims -->
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>Japanese House of Representatives</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="industry">Government</Property>
+        </Properties>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>House of Councillors</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="industry">Government</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Vulnerabilities -->
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>CVE-2012-1856</EntityName>
+        <EntityType>vul</EntityType>
+        <EntitySubType>cve</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="impact">Microsoft Office</Property>
+        </Properties>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>CVE-2012-0158</EntityName>
+        <EntityType>vul</EntityType>
+        <EntitySubType>cve</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="impact">Microsoft Office</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Malware -->
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>Icefog Backdoor</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="version">Type 1</Property>
+        </Properties>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>Macfog</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="platform">Mac OS X</Property>
+        </Properties>
+    </Entity>
+
+    <!-- C2 Servers -->
+    <Entity>
+        <EntityId>entity_9</EntityId>
+        <EntityName>appst0re.net</EntityName>
+        <EntityType>asset</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_10</EntityId>
+        <EntityName>cloudsbit.com</EntityName>
+        <EntityType>asset</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+    </Entity>
+</Entitys>
+<Relationships>
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Icefog Campaign</Source>
+        <Target>Icefog</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Icefog Campaign</Source>
+        <Target>Japanese House of Representatives</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Icefog</Source>
+        <Target>CVE-2012-1856</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Icefog</Source>
+        <Target>CVE-2012-0158</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipType>
+        <RelationshipType>use</RelationshipType>
+        <Source>Icefog</Source>
+        <Target>Icefog Backdoor</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Icefog</Source>
+        <Target>Macfog</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Icefog Backdoor</Source>
+        <Target>appst0re.net</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Icefog Backdoor</Source>
+        <Target>cloudsbit.com</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_9</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Icefog</Source>
+        <Target>Japanese House of Representatives</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_10</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Icefog</Source>
+        <Target>House of Councillors</Target>
+    </Relationship>
+</Relationships>

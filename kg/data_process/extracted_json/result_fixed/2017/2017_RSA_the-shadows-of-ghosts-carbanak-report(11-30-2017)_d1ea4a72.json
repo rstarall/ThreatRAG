@@ -1,0 +1,290 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "CARBANAK",
+            "EntityVariantNames": [
+                "FIN7"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0006"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "motivation": "Financial"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "CARBANAK Intrusion Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "April 2023",
+                "dwell_time": "35 days",
+                "observe_time": "2017",
+                "report_name": "2017_RSA_the-shadows-of-ghosts-carbanak-report(11-30-2017)_d1ea4a72"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "CVE-2017-5638",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "description": "Apache Struts Content-Type arbitrary command execution"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CVE-2016-5195",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0004"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "description": "Linux Kernel Copy-on-Write 'Dirty COW' privilege escalation"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "SSHDOOR",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0006"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "0810d239169a13fc0e2e53fc72d2e5f0",
+                "version": "OpenSSH 5.3p1 trojanized"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "AUDITUNNEL",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "b57dc2bc16dfdb3de55923aef9a98401",
+                "description": "Reverse tunneling tool with XOR encoding"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "GOTROJ",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "hash": "370d420948672e04ba8eac10bfe6fc9c",
+                "description": "Go-based Remote Access Trojan"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "TINYP",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "hash": "7393cb0f409f8f51b7745981ac30b8b6",
+                "description": "Modified PSEXEC for lateral movement"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "185.117.88.97",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "95.215.46.116",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "107.181.246.146",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "centos-repo.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "ALPHA",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Linux Web Server"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "DELTA",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "type": "Windows Domain Controller"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "CARBANAK Intrusion Event",
+            "Target": "CARBANAK"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "CARBANAK",
+            "Target": "CVE-2017-5638"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2017-5638",
+            "Target": "ALPHA"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "CARBANAK",
+            "Target": "SSHDOOR"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "SSHDOOR",
+            "Target": "centos-repo.org"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "CARBANAK",
+            "Target": "AUDITUNNEL"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "AUDITUNNEL",
+            "Target": "95.215.46.116"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "CARBANAK",
+            "Target": "GOTROJ"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "GOTROJ",
+            "Target": "107.181.246.146"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "CARBANAK",
+            "Target": "TINYP"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "target",
+            "Source": "CARBANAK",
+            "Target": "DELTA"
+        }
+    ]
+}

@@ -1,0 +1,392 @@
+<Entitys>
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>Operation Triangulation</EntityName>
+        <EntityType>event</EntityType>
+        <EntitySubType>event</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0005</Label>
+            <Label>TA0008</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="date">December 2023</Property>
+            <Property name="target">iOS devices up to iOS 16.2</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>CVE-2023-41990</EntityName>
+        <EntityType>vul</EntityType>
+        <EntitySubType>cve</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="description">Remote code execution vulnerability in Apple's undocumented ADJUST TrueType font instruction</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>CVE-2023-32434</EntityName>
+        <EntityType>vul</EntityType>
+        <EntitySubType>cve</EntitySubType>
+        <Labels>
+            <Label>TA0004</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="description">Integer overflow vulnerability in XNU's memory mapping syscalls (mach_make_memory_entry and vm_map)</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>CVE-2023-38606</EntityName>
+        <EntityType>vul</EntityType>
+        <EntitySubType>cve</EntitySubType>
+        <Labels>
+            <Label>TA0005</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+        <Properties>
+            <Property name="description">Hardware-based security protection bypass using MMIO registers</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>CVE-2023-32435</EntityName>
+        <EntityType>vul</EntityType>
+        <EntitySubType>cve</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>5</Time>
+        </Times>
+        <Properties>
+            <Property name="description">Safari exploit vulnerability</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>JavaScriptCore</EntityName>
+        <EntityType>env</EntityType>
+        <EntitySubType>software</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>DollarVM ($vm)</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>tool</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="description">JavaScriptCore debugging feature</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>GPU coprocessor</EntityName>
+        <EntityType>env</EntityType>
+        <EntitySubType>hardware</EntitySubType>
+        <Labels>
+            <Label>TA0005</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+        <Properties>
+            <Property name="model">Apple A12-A16 Bionic SoCs</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_9</EntityId>
+        <EntityName>0x206040000</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>payload</EntitySubType>
+        <Labels>
+            <Label>TA0005</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+        <Properties>
+            <Property name="type">MMIO register</Property>
+            <Property name="purpose">Controls CPU halting/unhalting</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_10</EntityId>
+        <EntityName>0x206140008</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>payload</EntitySubType>
+        <Labels>
+            <Label>TA0005</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+        <Properties>
+            <Property name="type">MMIO register</Property>
+            <Property name="purpose">Controls hardware feature enabling</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_11</EntityId>
+        <EntityName>0x206140108</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>payload</EntitySubType>
+        <Labels>
+            <Label>TA0005</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+        <Properties>
+            <Property name="type">MMIO register</Property>
+            <Property name="purpose">Controls hardware feature running</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_12</EntityId>
+        <EntityName>0x206150020</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>payload</EntitySubType>
+        <Labels>
+            <Label>TA0005</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+        <Properties>
+            <Property name="type">MMIO register</Property>
+            <Property name="purpose">Used for Apple A15/A16 Bionic SoCs</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_13</EntityId>
+        <EntityName>0x206150040</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>payload</EntitySubType>
+        <Labels>
+            <Label>TA0005</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+        <Properties>
+            <Property name="type">MMIO register</Property>
+            <Property name="purpose">Stores flags and physical address</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_14</EntityId>
+        <EntityName>0x206150048</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>payload</EntitySubType>
+        <Labels>
+            <Label>TA0005</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+        <Properties>
+            <Property name="type">MMIO register</Property>
+            <Property name="purpose">Stores data, address, hash and command</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_15</EntityId>
+        <EntityName>Custom hash algorithm</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>method</EntitySubType>
+        <Labels>
+            <Label>TA0005</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+        <Properties>
+            <Property name="description">20-bit hash using custom sbox table</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_16</EntityId>
+        <EntityName>IMAgent process</EntityName>
+        <EntityType>asset</EntityType>
+        <EntitySubType>bussiness</EntitySubType>
+        <Labels>
+            <Label>TA0003</Label>
+        </Labels>
+        <Times>
+            <Time>5</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_17</EntityId>
+        <EntityName>Safari process</EntityName>
+        <EntityType>asset</EntityType>
+        <EntitySubType>bussiness</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>6</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_18</EntityId>
+        <EntityName>Mach object file</EntityName>
+        <EntityType>file</EntityType>
+        <EntitySubType>file</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>7</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_19</EntityId>
+        <EntityName>Spyware</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0010</Label>
+        </Labels>
+        <Times>
+            <Time>8</Time>
+        </Times>
+    </Entity>
+</Entitys>
+<Relationships>
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Operation Triangulation</Source>
+        <Target>CVE-2023-41990</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Operation Triangulation</Source>
+        <Target>CVE-2023-32434</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Operation Triangulation</Source>
+        <Target>CVE-2023-38606</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Operation Triangulation</Source>
+        <Target>CVE-2023-32435</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>exploit</RelationshipType>
+        <Source>CVE-2023-41990</Source>
+        <Target>JavaScriptCore</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>DollarVM ($vm)</Source>
+        <Target>JavaScriptCore</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>exploit</RelationshipType>
+        <Source>CVE-2023-38606</Source>
+        <Target>GPU coprocessor</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>0x206040000</Source>
+        <Target>GPU coprocessor</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_9</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>0x206140008</Source>
+        <Target>GPU coprocessor</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_10</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>0x206140108</Source>
+        <Target>GPU coprocessor</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_11</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>0x206150020</Source>
+        <Target>GPU coprocessor</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_12</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>0x206150040</Source>
+        <Target>GPU coprocessor</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_13</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>0x206150048</Source>
+        <Target>GPU coprocessor</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_14</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Operation Triangulation</Source>
+        <Target>Custom hash algorithm</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_15</RelationshipId>
+        <RelationshipType>affect</RelationshipType>
+        <Source>Operation Triangulation</Source>
+        <Target>IMAgent process</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_16</RelationshipId>
+        <RelationshipType>affect</RelationshipType>
+        <Source>Operation Triangulation</Source>
+        <Target>Safari process</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_17</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Operation Triangulation</Source>
+        <Target>Mach object file</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_18</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Operation Triangulation</Source>
+        <Target>Spyware</Target>
+    </Relationship>
+</Relationships>

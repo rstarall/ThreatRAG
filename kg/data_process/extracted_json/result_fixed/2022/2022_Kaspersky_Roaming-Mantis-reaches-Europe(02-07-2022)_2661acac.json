@@ -1,0 +1,245 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Roaming Mantis",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0005",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "campaign_start": "2018"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Wroba.g",
+            "EntityVariantNames": [
+                "Wroba.o",
+                "Moqhao",
+                "XLoader"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0009"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Android Trojan",
+                "classification": "Trojan-Dropper.AndroidOS.Wroba.g"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Smishing Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0009"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "2021-2022",
+                "target_regions": "France, Germany, Japan, Taiwan, Korea",
+                "observe_time": "2022",
+                "report_name": "2022_Kaspersky_Roaming-Mantis-reaches-Europe(02-07-2022)_2661acac"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "France",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Country"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Germany",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Country"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "kuronekoyamato.apk",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Malicious APK"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "libdf.so",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "location": "\\lib\\armeaib-v7a\\libdf.so",
+                "function": "Payload decryption"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "get_photo",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "function": "Steals photos from infected devices"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "get_gallery",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "function": "Steals galleries from infected devices"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "527b5eebb6dbd3d0b777c714e707659c",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "type": "MD5"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Smishing Campaign",
+            "Target": "Roaming Mantis"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Smishing Campaign",
+            "Target": "France"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "Smishing Campaign",
+            "Target": "Germany"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Roaming Mantis",
+            "Target": "Wroba.g"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Roaming Mantis",
+            "Target": "kuronekoyamato.apk"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Roaming Mantis",
+            "Target": "get_photo"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Roaming Mantis",
+            "Target": "get_gallery"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "Roaming Mantis",
+            "Target": "France"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "Roaming Mantis",
+            "Target": "Germany"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Wroba.g",
+            "Target": "kuronekoyamato.apk"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Wroba.g",
+            "Target": "libdf.so"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Wroba.g",
+            "Target": "527b5eebb6dbd3d0b777c714e707659c"
+        }
+    ]
+}

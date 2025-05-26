@@ -1,0 +1,370 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Sednit Group",
+            "EntityVariantNames": [
+                "APT28",
+                "Fancy Bear",
+                "Sofacy",
+                "STRONTIUM",
+                "Tsar Team"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "activity_since": "2006",
+                "interest": "Geopolitics"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Serge Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "observe_time": "2016",
+                "report_name": "2016_ESET-Visiting_The_Bear_Den(6-21-2016)_e935e52c"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Serge",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "role": "Government employee"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "http://login.accoounts-google.com/",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Phishing URL"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "parepkyiv@gmail.com",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Pakistan Embassy Kyiv",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "SEDKIT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "activity_period": "September 2014 - Now"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "CVE-2013-1347",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "target": "Internet Explorer 8"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "CVE-2015-3043",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "target": "Adobe Flash",
+                "type": "0-day"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "SEDUPLOADER",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "aliases": "JHUHUGIT, JKEYSKW",
+                "activity_period": "March 2015 - Now"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "SEDRECO",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0007"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "activity_period": "2012 - Now"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "XAGENT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "7"
+            ],
+            "Properties": {
+                "aliases": "SPLM, CHOPSTICK",
+                "activity_period": "November 2012 - Now",
+                "platforms": "Windows, Linux, iOS"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "DOWNDELPH",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0005"
+            ],
+            "Times": [
+                "8"
+            ],
+            "Properties": {
+                "type": "Delphi downloader"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "XTUNNEL",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "9"
+            ],
+            "Properties": {
+                "type": "Network proxy tool",
+                "activity_period": "May 2013 - Now"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "kenlynton.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "role": "C&C server"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "softwaresupportsv.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "role": "C&C server"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Serge Attack Event",
+            "Target": "Sednit Group"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Serge Attack Event",
+            "Target": "Serge"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "Sednit Group",
+            "Target": "Serge"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Sednit Group",
+            "Target": "http://login.accoounts-google.com/"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Sednit Group",
+            "Target": "SEDKIT"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Sednit Group",
+            "Target": "CVE-2013-1347"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Sednit Group",
+            "Target": "CVE-2015-3043"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Sednit Group",
+            "Target": "SEDUPLOADER"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Sednit Group",
+            "Target": "SEDRECO"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "Sednit Group",
+            "Target": "XAGENT"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "Sednit Group",
+            "Target": "DOWNDELPH"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "use",
+            "Source": "Sednit Group",
+            "Target": "XTUNNEL"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "SEDUPLOADER",
+            "Target": "SEDRECO"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "SEDRECO",
+            "Target": "XAGENT"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "DOWNDELPH",
+            "Target": "XAGENT"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "XAGENT",
+            "Target": "kenlynton.com"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "XAGENT",
+            "Target": "softwaresupportsv.com"
+        }
+    ]
+}

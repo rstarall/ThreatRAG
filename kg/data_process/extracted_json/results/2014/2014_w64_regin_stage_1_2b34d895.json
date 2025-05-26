@@ -1,0 +1,208 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Regin",
+            "EntityVariantNames": [
+                "W64/Regin"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0005",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "version": "Stage #1",
+                "target": "64-bit Windows systems"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "wshnetc.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "description": "Winsock 2 Helper DLL (TL/IPv4)",
+                "type": "DLL"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "5191d7e28ffd1bc76ec7ed02d861679a77f2c239",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Microsoft Root Authority",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "KeyID": "41 68 26 6a 16 60 0f 36 41 19 af 06 f9 54 4d 06",
+                "SerialNumber": "0c ea ea 19 bb bd 4f 86 4e b7 e9 47 97 cf 74 a8"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Virtual Machine",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "purpose": "Payload retrieval and processing"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "NRV2E",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Compression algorithm"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "QuickPeParse64",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "function": "PE file parsing"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "version": "64-bit"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "wshtcpip.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Legitimate Windows DLL"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "related_to",
+            "Source": "Regin",
+            "Target": "wshnetc.dll"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "related_to",
+            "Source": "Regin",
+            "Target": "5191d7e28ffd1bc76ec7ed02d861679a77f2c239"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Regin",
+            "Target": "Microsoft Root Authority"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Regin",
+            "Target": "Virtual Machine"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Regin",
+            "Target": "NRV2E"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Regin",
+            "Target": "QuickPeParse64"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "Regin",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "wshnetc.dll",
+            "Target": "wshtcpip.dll"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "belong_to",
+            "Source": "wshnetc.dll",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "belong_to",
+            "Source": "wshtcpip.dll",
+            "Target": "Windows System"
+        }
+    ]
+}

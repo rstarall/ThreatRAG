@@ -1,0 +1,243 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT-29",
+            "EntityVariantNames": [
+                "Cozy Bear"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Russia"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "David Satter",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "occupation": "Journalist",
+                "affiliation": "Radio Liberty"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "CyberBerkut",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0010",
+                "TA0040"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "affiliation": "Pro-Russian"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "g.mail2017@yandex.com",
+            "EntityType": "ioc",
+            "EntitySubType": "email",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "annaablony@mail.com",
+            "EntityType": "ioc",
+            "EntitySubType": "email",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "id833.ga",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "89.40.181.119",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Romania"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Tiny.cc",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Phishing Campaign 2016",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "October 2016",
+                "targets": "200+",
+                "countries": "39",
+                "observe_time": "2017",
+                "report_name": "2017_Citizenlab_Tainted-Leaks-Disinformation-Phishing-With-Russian-Nexus(05-25-2017)_7c3c7636"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Alexei Navalny",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "role": "Anti-corruption activist"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Open Society Foundations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Phishing Campaign 2016",
+            "Target": "APT-29"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Phishing Campaign 2016",
+            "Target": "David Satter"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "g.mail2017@yandex.com"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "annaablony@mail.com"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "Tiny.cc"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "id833.ga"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "David Satter"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "Alexei Navalny"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "Open Society Foundations"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "CyberBerkut",
+            "Target": "APT-29"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "id833.ga",
+            "Target": "89.40.181.119"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "trigger",
+            "Source": "David Satter",
+            "Target": "Phishing Campaign 2016"
+        }
+    ]
+}

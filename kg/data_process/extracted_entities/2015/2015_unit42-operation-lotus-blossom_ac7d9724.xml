@@ -1,0 +1,306 @@
+<Entitys>
+    <!-- Attack Group -->
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>Lotus Blossom</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>APT Group</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0008</Label>
+            <Label>TA0010</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="region">Southeast Asia</Property>
+            <Property name="duration">2012-2015</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Attack Event -->
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>Operation Lotus Blossom</EntityName>
+        <EntityType>event</EntityType>
+        <EntitySubType>event</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0010</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="timeframe">2012-2015</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Malware -->
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>Elise</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>BKDR_ESILE</EntityVariantName>
+            <EntityVariantName>Page malware</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="type">Backdoor Trojan</Property>
+            <Property name="variants">A, B, C</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Vulnerability -->
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>CVE-2012-0158</EntityName>
+        <EntityType>vul</EntityType>
+        <EntitySubType>cve</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="product">Microsoft Office</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Targets -->
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>Vietnamese Government</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>Philippine Government</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>Taiwan Government</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>Hong Kong Government</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_9</EntityId>
+        <EntityName>Indonesian Government</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+
+    <!-- C2 Servers (sample) -->
+    <Entity>
+        <EntityId>entity_10</EntityId>
+        <EntityName>59.6.2.16</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>ip</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_11</EntityId>
+        <EntityName>cpcl2006.dyndns-free.com</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+
+    <!-- Delivery Method -->
+    <Entity>
+        <EntityId>entity_12</EntityId>
+        <EntityName>Spear Phishing</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>method</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+
+    <!-- Related Tools -->
+    <Entity>
+        <EntityId>entity_13</EntityId>
+        <EntityName>LStudio</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>tool</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_14</EntityId>
+        <EntityName>Evora</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>tool</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+    </Entity>
+</Entitys>
+<Relationships>
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Operation Lotus Blossom</Source>
+        <Target>Lotus Blossom</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Lotus Blossom</Source>
+        <Target>Elise</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Lotus Blossom</Source>
+        <Target>Spear Phishing</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipType>
+        <RelationshipType>use</RelationshipType>
+        <Source>Lotus Blossom</Source>
+        <Target>CVE-2012-0158</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Lotus Blossom</Source>
+        <Target>Vietnamese Government</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Lotus Blossom</Source>
+        <Target>Philippine Government</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Lotus Blossom</Source>
+        <Target>Taiwan Government</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Lotus Blossom</Source>
+        <Target>Hong Kong Government</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_9</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Lotus Blossom</Source>
+        <Target>Indonesian Government</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_10</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Elise</Source>
+        <Target>59.6.2.16</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_11</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Elise</Source>
+        <Target>cpcl2006.dyndns-free.com</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_12</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Elise</Source>
+        <Target>LStudio</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_13</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Elise</Source>
+        <Target>Evora</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_14</RelationshipId>
+        <RelationshipType>exploit</RelationshipType>
+        <Source>CVE-2012-0158</Source>
+        <Target>Microsoft Office</Target>
+    </Relationship>
+</Relationships>

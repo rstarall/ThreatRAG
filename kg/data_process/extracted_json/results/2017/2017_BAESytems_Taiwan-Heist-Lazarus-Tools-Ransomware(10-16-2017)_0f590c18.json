@@ -1,0 +1,251 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Lazarus Group",
+            "EntityVariantNames": [
+                "APT-29"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "North Korea"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "FEIB Bank Heist",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "October 2017",
+                "location": "Taiwan",
+                "observe_time": "2017",
+                "report_name": "2017_BAESytems_Taiwan-Heist-Lazarus-Tools-Ransomware(10-16-2017)_0f590c18"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Far Eastern International Bank",
+            "EntityVariantNames": [
+                "FEIB"
+            ],
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Banking",
+                "country": "Taiwan"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Hermes Ransomware",
+            "EntityVariantNames": [
+                "Hermes 2.1"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "version": "2.1",
+                "type": "Ransomware"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "bitsran.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0008"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "md5": "d08f1211fe0138134e822e31a47ec5d4"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "fdsvc.dll",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "SWIFT Network Access",
+            "EntityType": "vul",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "BM-2cVcZL1xfve1yGGKwEBgG1ge6xJ5PYGfGw@bitmessage.ch",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "10.49.*, 10.50.*, 10.51.*, 10.59.*",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Cobalt Strike",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "SWIFT Network",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0010"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Bank of Ceylon",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0010"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "country": "Sri Lanka"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "FEIB Bank Heist",
+            "Target": "Lazarus Group"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "FEIB Bank Heist",
+            "Target": "Far Eastern International Bank"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "Lazarus Group",
+            "Target": "Far Eastern International Bank"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Lazarus Group",
+            "Target": "Hermes Ransomware"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Lazarus Group",
+            "Target": "bitsran.exe"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Lazarus Group",
+            "Target": "fdsvc.dll"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "exploit",
+            "Source": "SWIFT Network Access",
+            "Target": "SWIFT Network"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Hermes Ransomware",
+            "Target": "BM-2cVcZL1xfve1yGGKwEBgG1ge6xJ5PYGfGw@bitmessage.ch"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "has",
+            "Source": "Far Eastern International Bank",
+            "Target": "SWIFT Network"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "target",
+            "Source": "Lazarus Group",
+            "Target": "Bank of Ceylon"
+        }
+    ]
+}

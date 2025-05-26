@@ -1,0 +1,285 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Duqu",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Trojan",
+                "purpose": "Information theft"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Stuxnet",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Worm",
+                "target": "Industrial systems"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Tilded Platform",
+            "EntityType": "tool",
+            "EntitySubType": "platform",
+            "Labels": [
+                "TA0042",
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "creation_date": "2007-2008"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "mrxcls.sys",
+            "EntityVariantNames": [
+                "MRxCls"
+            ],
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "size": "19840/26616 bytes",
+                "compilation_date": "01.01.2009",
+                "used_in": "Stuxnet"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "rtniczw.sys",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "size": "26872 bytes",
+                "compilation_date": "01.01.2009",
+                "md5": "546C4BBEBF02A1604EB2CAAAD4974DE0"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "rndismpc.sys",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "size": "19968 bytes",
+                "compilation_date": "20.01.2008",
+                "md5": "9AEC6E10C5EE9C05BED93221544C783E"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "jmidebs.sys",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "size": "25502 bytes",
+                "compilation_date": "14.07.2010"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Realtek Certificate",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "used_in": "mrxcls.sys, rtniczw.sys"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Jmicron Certificate",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "used_in": "jmidebs.sys"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Unknown Developers",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0042",
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Victim Computer",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "location": "China",
+                "infection_date": "August 2011"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "related_to",
+            "Source": "Duqu",
+            "Target": "Tilded Platform"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "related_to",
+            "Source": "Stuxnet",
+            "Target": "Tilded Platform"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Unknown Developers",
+            "Target": "Tilded Platform"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "Stuxnet",
+            "Target": "mrxcls.sys"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "belong_to",
+            "Source": "mrxcls.sys",
+            "Target": "Tilded Platform"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "belong_to",
+            "Source": "rtniczw.sys",
+            "Target": "Tilded Platform"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "belong_to",
+            "Source": "rndismpc.sys",
+            "Target": "Tilded Platform"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "belong_to",
+            "Source": "jmidebs.sys",
+            "Target": "Tilded Platform"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "mrxcls.sys",
+            "Target": "jmidebs.sys"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "jmidebs.sys",
+            "Target": "Duqu"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "mrxcls.sys",
+            "Target": "Realtek Certificate"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "use",
+            "Source": "rtniczw.sys",
+            "Target": "Realtek Certificate"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "use",
+            "Source": "jmidebs.sys",
+            "Target": "Jmicron Certificate"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "target",
+            "Source": "Unknown Developers",
+            "Target": "Victim Computer"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "affect",
+            "Source": "rtniczw.sys",
+            "Target": "Victim Computer"
+        }
+    ]
+}

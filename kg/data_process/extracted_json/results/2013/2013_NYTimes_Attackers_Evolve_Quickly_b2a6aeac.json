@@ -1,0 +1,236 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT12",
+            "EntityVariantNames": [
+                "Chinese hacking group"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China",
+                "alias": "APT12"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "New York Times Network Breach",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "Late last year",
+                "observe_time": "2013",
+                "report_name": "2013_NYTimes_Attackers_Evolve_Quickly_b2a6aeac"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "New York Times",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Media"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Aumlib",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "version": "Updated",
+                "hash": "832f5e01be536da71d5b3f7e41938cfb"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Ixeshe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "version": "Updated",
+                "hash": "aa873ed803ca800ce92a39d9a683c644"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "status.acmetoy.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "url": "status[.]acmetoy[.]com/DD/css.css"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "documents.myPicture.info",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Economic Policy Organization",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "industry": "Economic Policy"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Taiwan Entities",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "location": "Taiwan"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "cb3dcde34fd9ff0e19381d99b02f9692",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "New York Times Network Breach",
+            "Target": "APT12"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "New York Times Network Breach",
+            "Target": "New York Times"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "APT12",
+            "Target": "Aumlib"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "APT12",
+            "Target": "Ixeshe"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "APT12",
+            "Target": "New York Times"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "APT12",
+            "Target": "Economic Policy Organization"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "APT12",
+            "Target": "Taiwan Entities"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Aumlib",
+            "Target": "status.acmetoy.com"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Aumlib",
+            "Target": "documents.myPicture.info"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Aumlib",
+            "Target": "cb3dcde34fd9ff0e19381d99b02f9692"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "status.acmetoy.com",
+            "Target": "APT12"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "belong_to",
+            "Source": "documents.myPicture.info",
+            "Target": "APT12"
+        }
+    ]
+}

@@ -1,0 +1,294 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Naikon",
+            "EntityVariantNames": [
+                "APT-29"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "region": "Asia",
+                "targets": "South China Sea area"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "RARSTONE",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "user_agent": "NOKIAN95/WEB"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "CVE-2012-0158",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Hellsing",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0008"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "region": "APAC",
+                "targets": "South China Sea area"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Directory of ... Mar 31, 2014.scr",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "md5": "198fc1af5cd278091f36645a77c18ffa"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "philippinenews[.]mooo[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "msger",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "xweber",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "7"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "xrat",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0008"
+            ],
+            "Times": [
+                "8"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "clare",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "9"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "irene",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "10"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "xKat",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "11"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Government Agency",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "MH370 Tragedy Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "March 2014",
+                "observe_time": "2015",
+                "report_name": "2015_The Chronicles of the Hellsing APT_ the Empire Strikes Back - Securelist_6b4e7cc9"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "Naikon",
+            "Target": "RARSTONE"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Naikon",
+            "Target": "CVE-2012-0158"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "Naikon",
+            "Target": "Government Agency"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "involve",
+            "Source": "MH370 Tragedy Attack Event",
+            "Target": "Naikon"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "involve",
+            "Source": "MH370 Tragedy Attack Event",
+            "Target": "Government Agency"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "Hellsing",
+            "Target": "Naikon"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Hellsing",
+            "Target": "Directory of ... Mar 31, 2014.scr"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Directory of ... Mar 31, 2014.scr",
+            "Target": "philippinenews[.]mooo[.]com"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "msger",
+            "Target": "xweber"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "Hellsing",
+            "Target": "msger"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "Hellsing",
+            "Target": "xweber"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "use",
+            "Source": "Hellsing",
+            "Target": "xrat"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "use",
+            "Source": "Hellsing",
+            "Target": "clare"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "use",
+            "Source": "Hellsing",
+            "Target": "irene"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "use",
+            "Source": "Hellsing",
+            "Target": "xKat"
+        }
+    ]
+}

@@ -1,0 +1,225 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Tranchulas",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Pakistan",
+                "CEO": "Zubair Khan"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "South Asia Cyber Espionage Heats Up",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "July 2013",
+                "observe_time": "2013",
+                "report_name": "2013_India_Pak_Tranchulas_01f7a8ad"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Indian Government",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "sector": "Government"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "199.91.173.43",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "location": "Kansas City, Missouri"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "salary_revision.scr",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "SFX archive",
+                "url": "http://199.91.173.43/new_salary/salary_revision.scr"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "winsocks.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "callback": "http://199.91.173.43/fetch_updates_8765.php?compname=&lt;COMPUTERNAME&gt;"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Umair Aziz",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "affiliation": "Tranchulas"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "199.91.173.45",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "OBL_Leaked_Report.zip",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "url": "http://199.91.173.45/OBL_Leaked_Report.zip"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "windefender.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "MD5": "a21f2cb65a3467925c1615794cce7581",
+                "callback": "http://199.91.173.45/fetch_updates_8765_tb.php?compname=&lt;COMPUTERNAME&gt;"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "South Asia Cyber Espionage Heats Up",
+            "Target": "Tranchulas"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "South Asia Cyber Espionage Heats Up",
+            "Target": "Indian Government"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Tranchulas",
+            "Target": "salary_revision.scr"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Tranchulas",
+            "Target": "winsocks.exe"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "Tranchulas",
+            "Target": "Indian Government"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "belong_to",
+            "Source": "salary_revision.scr",
+            "Target": "199.91.173.43"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "winsocks.exe",
+            "Target": "salary_revision.scr"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "belong_to",
+            "Source": "OBL_Leaked_Report.zip",
+            "Target": "199.91.173.45"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Umair Aziz",
+            "Target": "windefender.exe"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "windefender.exe",
+            "Target": "OBL_Leaked_Report.zip"
+        }
+    ]
+}

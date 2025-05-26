@@ -1,0 +1,286 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Gaza Cybergang",
+            "EntityVariantNames": [
+                "Molerats",
+                "Arid Viper",
+                "Desert Falcons",
+                "APT-C-23"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "affiliation": "Hamas",
+                "region": "Middle East"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Pierogi++",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "language": "C++",
+                "delivery": "Macro-enabled Office documents"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Micropsia",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "variants": "Delphi, Python-based"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "WIRTE",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "TA402",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "BarbWire",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "obfuscation": "Custom Base64 algorithm"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Operation Bearded Barbie",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "April 2022",
+                "observe_time": "2023",
+                "report_name": "2023_Sentinelone_GazaCybergang -UnifiedFront-Targeting-Opposition(12-14-2023)_af2528bd"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Big Bang campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "2018",
+                "observe_time": "2023",
+                "report_name": "2023_Sentinelone_GazaCybergang -UnifiedFront-Targeting-Opposition(12-14-2023)_af2528bd"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Palestinian entities",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Israeli entities",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "bruce-ess[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "escanor[.]live",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "003bb055758a7d687f12b65fc802bac07368335e",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "20c10d0eff2ef68b637e22472f14d87a40c3c0bd",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "Gaza Cybergang",
+            "Target": "Pierogi++"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Gaza Cybergang",
+            "Target": "Micropsia"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "Gaza Cybergang",
+            "Target": "WIRTE"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "Gaza Cybergang",
+            "Target": "TA402"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "Gaza Cybergang",
+            "Target": "Palestinian entities"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "Gaza Cybergang",
+            "Target": "Israeli entities"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "involve",
+            "Source": "Operation Bearded Barbie",
+            "Target": "Gaza Cybergang"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "involve",
+            "Source": "Big Bang campaign",
+            "Target": "Gaza Cybergang"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Pierogi++",
+            "Target": "bruce-ess[.]com"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Micropsia",
+            "Target": "escanor[.]live"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "003bb055758a7d687f12b65fc802bac07368335e",
+            "Target": "Micropsia"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "belong_to",
+            "Source": "20c10d0eff2ef68b637e22472f14d87a40c3c0bd",
+            "Target": "Pierogi++"
+        }
+    ]
+}

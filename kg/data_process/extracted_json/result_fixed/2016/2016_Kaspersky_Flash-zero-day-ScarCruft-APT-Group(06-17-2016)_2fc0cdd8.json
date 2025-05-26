@@ -1,0 +1,415 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "ScarCruft",
+            "EntityVariantNames": [
+                "ScarCruft APT",
+                "ScarCruft APT group"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "activity": "Active since at least March 2016",
+                "targets": "Russia, Nepal, South Korea, China, India, Kuwait, Romania"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Operation Daybreak",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "March 2016",
+                "vector": "Spear-phishing emails",
+                "observe_time": "2016",
+                "report_name": "2016_Kaspersky_Flash-zero-day-ScarCruft-APT-Group(06-17-2016)_2fc0cdd8"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "CVE-2016-1010",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "software": "Adobe Flash Player"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CVE-2016-0147",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "software": "Adobe Flash Player"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2016-4117",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "software": "Adobe Flash Player"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CVE-2016-4171",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "software": "Adobe Flash Player",
+                "type": "Memory corruption"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "yay_release.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "DLL",
+                "function": "Payload execution"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "8844a537e7f533192ca8e81886e70fbc",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "type": "CAB file"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "212.7.217.10",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "reg.flnet.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "webconncheck.myfw.us",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "HEUR:Trojan.Win32.ScarCruft.gen",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Law enforcement agency in Asia",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "region": "Asia"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Large trading company in Asia",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "region": "Asia"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Mobile advertising company in USA",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "region": "USA"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "International Association of Athletics Federations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "Restaurant in Dubai mall",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "region": "Dubai"
+            }
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "china.pdf",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "language": "Korean",
+                "content": "China-North Korea nuclear program disagreements"
+            }
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "Adobe Flash Player",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "Windows DDE",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation Daybreak",
+            "Target": "ScarCruft"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "ScarCruft",
+            "Target": "CVE-2016-1010"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "ScarCruft",
+            "Target": "CVE-2016-0147"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "ScarCruft",
+            "Target": "CVE-2016-4117"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "ScarCruft",
+            "Target": "CVE-2016-4171"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "ScarCruft",
+            "Target": "yay_release.dll"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "ScarCruft",
+            "Target": "HEUR:Trojan.Win32.ScarCruft.gen"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "ScarCruft",
+            "Target": "Law enforcement agency in Asia"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "ScarCruft",
+            "Target": "Large trading company in Asia"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "target",
+            "Source": "ScarCruft",
+            "Target": "Mobile advertising company in USA"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "target",
+            "Source": "ScarCruft",
+            "Target": "International Association of Athletics Federations"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "target",
+            "Source": "ScarCruft",
+            "Target": "Restaurant in Dubai mall"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2016-4171",
+            "Target": "Adobe Flash Player"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "affect",
+            "Source": "yay_release.dll",
+            "Target": "Windows DDE"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "belong_to",
+            "Source": "212.7.217.10",
+            "Target": "ScarCruft"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "belong_to",
+            "Source": "reg.flnet.org",
+            "Target": "ScarCruft"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "belong_to",
+            "Source": "webconncheck.myfw.us",
+            "Target": "ScarCruft"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "related_to",
+            "Source": "HEUR:Trojan.Win32.ScarCruft.gen",
+            "Target": "8844a537e7f533192ca8e81886e70fbc"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "related_to",
+            "Source": "Operation Daybreak",
+            "Target": "china.pdf"
+        }
+    ]
+}

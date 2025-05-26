@@ -1,0 +1,226 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "DarkComet",
+            "EntityVariantNames": [
+                "Dark Comet"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "version": "4.2",
+                "type": "Remote Access Trojan",
+                "capabilities": "Key logging, web cam spying, file deletion, port scanning, MSN session hijacking, DDoS"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "63f2ed5d2ee50e90cda809f2ac740244",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "newrat2.no-ip.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "port": "1604"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CVE-2023-1234",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "#KCMDDC42F#-890",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "0123456789",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Syrian regime supporters",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Syrian opposition forces",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Windows XP Service Pack 2",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "DDOSHTTPFLOOD",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "DDOSUDPFLOOD",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "DDOSSYNFLOOD",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "5"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "Syrian regime supporters",
+            "Target": "DarkComet"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "target",
+            "Source": "Syrian regime supporters",
+            "Target": "Syrian opposition forces"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "DarkComet",
+            "Target": "63f2ed5d2ee50e90cda809f2ac740244"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "DarkComet",
+            "Target": "newrat2.no-ip.org"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "DarkComet",
+            "Target": "#KCMDDC42F#-890"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "DarkComet",
+            "Target": "0123456789"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2023-1234",
+            "Target": "Windows XP Service Pack 2"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "DarkComet",
+            "Target": "DDOSHTTPFLOOD"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "DarkComet",
+            "Target": "DDOSUDPFLOOD"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "DarkComet",
+            "Target": "DDOSSYNFLOOD"
+        }
+    ]
+}

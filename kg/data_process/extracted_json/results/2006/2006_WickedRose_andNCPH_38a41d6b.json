@@ -1,0 +1,485 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Wicked Rose",
+            "EntityVariantNames": [
+                "Rose",
+                "MeiGui HeiKe"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "QQ": "5372453",
+                "website": "www.mghacker.com",
+                "university": "Sichuan University of Science & Engineering",
+                "location": "Zigong, Sichuan, China"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "NCPH",
+            "EntityVariantNames": [
+                "Network Crack Program Hacker",
+                "NCPH Studio"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "website": "www.ncph.net",
+                "location": "Zigong, Sichuan, China",
+                "members": "10"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "KuNgBiM",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "blog": "http://kungbim.blogbus.com"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Rodag",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "blog": "http://rodag.blogbus.com"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Charles",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "blog": "http://www.cppblog.com/charles"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "WHG",
+            "EntityVariantNames": [
+                "Fig",
+                "Zhao Jibing"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "email": "whg@163.com",
+                "QQ": "312016",
+                "website": "http://cnasm.com",
+                "location": "Sichuan, China"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "WZT",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "website": "tthacker.cublog.cn"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "GinWui",
+            "EntityVariantNames": [
+                "NCPH remote control"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "version": "3.0beta.3",
+                "files": "winguis.dll, SYS files"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "RipGof",
+            "EntityVariantNames": [
+                "RipGof.A",
+                "RipGof.B"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "C2": "enjoy.irdet.com, enjoy.bmwsee.com",
+                "port": "80"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Microsoft Word Malformed OLE Structure Code Execution",
+            "EntityType": "vul",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Microsoft Excel Malformed BIFF Structure Code Execution",
+            "EntityType": "vul",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Planning document 5-16-2006.doc",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "www.ncph.net",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "www.mghacker.com",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "windowsupdates.net",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "US DoD Entity",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "country": "United States"
+            }
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "Japanese Organization",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "country": "Japan"
+            }
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "US Energy Sector Company",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "country": "United States",
+                "industry": "Energy"
+            }
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "Microsoft Word",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "version": "2002"
+            }
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "Evil Security Team",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "PcShare Trojan",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_22",
+            "EntityName": "Dasher worm",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "belong_to",
+            "Source": "Wicked Rose",
+            "Target": "NCPH"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "belong_to",
+            "Source": "KuNgBiM",
+            "Target": "NCPH"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "belong_to",
+            "Source": "Rodag",
+            "Target": "NCPH"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "belong_to",
+            "Source": "Charles",
+            "Target": "NCPH"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "belong_to",
+            "Source": "WHG",
+            "Target": "NCPH"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "belong_to",
+            "Source": "WZT",
+            "Target": "NCPH"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Wicked Rose",
+            "Target": "GinWui"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Wicked Rose",
+            "Target": "RipGof"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "NCPH",
+            "Target": "Microsoft Word Malformed OLE Structure Code Execution"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "NCPH",
+            "Target": "Microsoft Excel Malformed BIFF Structure Code Execution"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "target",
+            "Source": "NCPH",
+            "Target": "US DoD Entity"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "target",
+            "Source": "NCPH",
+            "Target": "Japanese Organization"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "target",
+            "Source": "NCPH",
+            "Target": "US Energy Sector Company"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "GinWui",
+            "Target": "Microsoft Word Malformed OLE Structure Code Execution"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "RipGof",
+            "Target": "Microsoft Word Malformed OLE Structure Code Execution"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "affect",
+            "Source": "Planning document 5-16-2006.doc",
+            "Target": "Microsoft Word"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "belong_to",
+            "Source": "www.ncph.net",
+            "Target": "NCPH"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "belong_to",
+            "Source": "www.mghacker.com",
+            "Target": "Wicked Rose"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "related_to",
+            "Source": "Evil Security Team",
+            "Target": "PcShare Trojan"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "related_to",
+            "Source": "Evil Security Team",
+            "Target": "Dasher worm"
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "related_to",
+            "Source": "Wicked Rose",
+            "Target": "PcShare Trojan"
+        }
+    ]
+}

@@ -1,0 +1,290 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Scarlet Mimic",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Tibetan Community",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "FakeM Custom SSL",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CVE-2012-0158",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2010-3333",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "news.firewall-gateway.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "ip": "109.169.77.230"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "detail43.myfirewall.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "ip": "109.169.77.230"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "sys.firewall-gateway.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "ip": "95.154.195.159"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "accountgoogle.firewall-gateway.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "ip": "95.154.195.171"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "filegoogle.firewall-gateway.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "ip": "95.154.195.171"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "8b83fc5d3a6a80281269f9e337fe3fff",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Google Drive Phishing Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0006"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "time": "November 2015 - December 2015",
+                "observe_time": "2016",
+                "report_name": "2016_TheCitizenLab_Shifting-Tactics-Tracking-changes-in-years-long-espionage-campaign-against-Tibetans(Mar-10-16)_ea1a92fc"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "iomart",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Google Drive Phishing Campaign",
+            "Target": "Scarlet Mimic"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Google Drive Phishing Campaign",
+            "Target": "Tibetan Community"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Scarlet Mimic",
+            "Target": "FakeM Custom SSL"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Scarlet Mimic",
+            "Target": "CVE-2012-0158"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Scarlet Mimic",
+            "Target": "CVE-2010-3333"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "Scarlet Mimic",
+            "Target": "Tibetan Community"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "FakeM Custom SSL",
+            "Target": "news.firewall-gateway.com"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "FakeM Custom SSL",
+            "Target": "detail43.myfirewall.org"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "FakeM Custom SSL",
+            "Target": "sys.firewall-gateway.net"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "belong_to",
+            "Source": "news.firewall-gateway.com",
+            "Target": "iomart"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "detail43.myfirewall.org",
+            "Target": "iomart"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "belong_to",
+            "Source": "sys.firewall-gateway.net",
+            "Target": "iomart"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "use",
+            "Source": "Scarlet Mimic",
+            "Target": "accountgoogle.firewall-gateway.com"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "use",
+            "Source": "Scarlet Mimic",
+            "Target": "filegoogle.firewall-gateway.com"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "belong_to",
+            "Source": "accountgoogle.firewall-gateway.com",
+            "Target": "iomart"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "belong_to",
+            "Source": "filegoogle.firewall-gateway.com",
+            "Target": "iomart"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "FakeM Custom SSL",
+            "Target": "8b83fc5d3a6a80281269f9e337fe3fff"
+        }
+    ]
+}

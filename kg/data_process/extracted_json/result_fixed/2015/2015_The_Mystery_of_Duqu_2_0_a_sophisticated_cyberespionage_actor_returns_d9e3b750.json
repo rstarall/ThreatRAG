@@ -1,0 +1,255 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Duqu 2.0",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "version": "2.0",
+                "discovery_date": "2015"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "APT-29",
+            "EntityVariantNames": [
+                "Duqu Group"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0043",
+                "TA0001",
+                "TA0008"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Kaspersky Lab",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CVE-2015-2360",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2014-6324",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CVE-2014-4148",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "CTwoPENC.dll",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0004"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "KMART.dll",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "portserv.sys",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "MSI Package",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "klif.dll",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "P5+1 events",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0043"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "observe_time": "2015",
+                "report_name": "2015_The_Mystery_of_Duqu_2_0_a_sophisticated_cyberespionage_actor_returns_d9e3b750"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "70th anniversary of Auschwitz liberation",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0043"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "observe_time": "2015",
+                "report_name": "2015_The_Mystery_of_Duqu_2_0_a_sophisticated_cyberespionage_actor_returns_d9e3b750"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "Duqu 2.0"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "Kaspersky Lab"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "Duqu 2.0",
+            "Target": "CVE-2015-2360"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "Duqu 2.0",
+            "Target": "CVE-2014-6324"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "Duqu 2.0",
+            "Target": "CVE-2014-4148"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Duqu 2.0",
+            "Target": "CTwoPENC.dll"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Duqu 2.0",
+            "Target": "KMART.dll"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Duqu 2.0",
+            "Target": "portserv.sys"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Duqu 2.0",
+            "Target": "MSI Package"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Duqu 2.0",
+            "Target": "klif.dll"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "involve",
+            "Source": "P5+1 events",
+            "Target": "APT-29"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "involve",
+            "Source": "70th anniversary of Auschwitz liberation",
+            "Target": "APT-29"
+        }
+    ]
+}

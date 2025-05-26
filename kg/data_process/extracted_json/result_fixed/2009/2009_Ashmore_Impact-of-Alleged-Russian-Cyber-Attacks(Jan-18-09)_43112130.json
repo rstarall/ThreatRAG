@@ -1,0 +1,168 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Russian Federation",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Estonia Cyber Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "April-May 2007",
+                "location": "Estonia",
+                "observe_time": "2009",
+                "report_name": "2009_Ashmore_Impact-of-Alleged-Russian-Cyber-Attacks(Jan-18-09)_43112130"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Estonia",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Distributed Denial of Service (DDoS)",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Botnet",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Bronze Soldier Monument",
+            "EntityType": "event",
+            "EntitySubType": "location",
+            "Labels": [
+                "TA0043"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "observe_time": "2009",
+                "report_name": "2009_Ashmore_Impact-of-Alleged-Russian-Cyber-Attacks(Jan-18-09)_43112130"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Nashi",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Estonian Computer Emergency Response Team (CERT)",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Estonia Cyber Attack",
+            "Target": "Russian Federation"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Estonia Cyber Attack",
+            "Target": "Estonia"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Russian Federation",
+            "Target": "Distributed Denial of Service (DDoS)"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Russian Federation",
+            "Target": "Botnet"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "Russian Federation",
+            "Target": "Estonia"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Distributed Denial of Service (DDoS)",
+            "Target": "Botnet"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "trigger",
+            "Source": "Bronze Soldier Monument",
+            "Target": "Estonia Cyber Attack"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Nashi",
+            "Target": "Distributed Denial of Service (DDoS)"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Estonian Computer Emergency Response Team (CERT)",
+            "Target": "Estonia"
+        }
+    ]
+}

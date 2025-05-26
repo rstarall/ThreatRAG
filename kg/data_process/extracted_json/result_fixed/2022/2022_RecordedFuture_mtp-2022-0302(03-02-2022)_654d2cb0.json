@@ -1,0 +1,231 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "HermeticWiper",
+            "EntityVariantNames": [
+                "FoxBlade"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "purpose": "Data destruction",
+                "target": "NTFS/FAT file systems",
+                "compiler": "Visual Studio 2008/2015",
+                "language": "C and assembly"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "PartyTicket",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "purpose": "Destructive ransomware (likely ruse)",
+                "email1": "vote2024forjb@protonmail.com",
+                "email2": "stephanie.jones2024@protonmail.com"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Ukrainian organizations attack event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "February 23, 2022",
+                "location": "Ukraine, Latvia, Lithuania",
+                "observe_time": "2022",
+                "report_name": "2022_RecordedFuture_mtp-2022-0302(03-02-2022)_654d2cb0"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Ukrainian organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "sector": "Finance and government contracting"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Hermetica Digital Ltd",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "role": "Code signing certificate issuer"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Russian state-associated actors",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "suspected": "True",
+                "similar_to": "Sandworm, NotPetya, WhisperGate"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Microsoft Exchange server",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "vulnerability": "SMB-based attack"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Apache Tomcat server",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "EaseUS Partition Master drivers",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "signer": "CHENGDU YIWO Tech Development Co., Ltd."
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Active Directory server",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Ukrainian organizations attack event",
+            "Target": "Ukrainian organizations"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Ukrainian organizations attack event",
+            "Target": "Russian state-associated actors"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Russian state-associated actors",
+            "Target": "HermeticWiper"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Russian state-associated actors",
+            "Target": "PartyTicket"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "Russian state-associated actors",
+            "Target": "Ukrainian organizations"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "HermeticWiper",
+            "Target": "PartyTicket"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "belong_to",
+            "Source": "HermeticWiper",
+            "Target": "Microsoft Exchange server"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "belong_to",
+            "Source": "HermeticWiper",
+            "Target": "Apache Tomcat server"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "HermeticWiper",
+            "Target": "EaseUS Partition Master drivers"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "has",
+            "Source": "Ukrainian organizations",
+            "Target": "Active Directory server"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "Russian state-associated actors",
+            "Target": "Hermetica Digital Ltd"
+        }
+    ]
+}

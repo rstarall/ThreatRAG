@@ -1,0 +1,136 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Linux/Moose",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Properties": {
+                "architecture": "MIPS, ARM",
+                "version": "20-31",
+                "target": "Linux-based embedded devices"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Consumer routers and modems",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "vendors": "Actiontec, Hik Vision, Netgear, Synology, TP-Link, ZyXEL, Zhone"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Social Network Fraud Operation",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0008",
+                "TA0010"
+            ],
+            "Properties": {
+                "timeframe": "2014-2015",
+                "targets": "Twitter, Facebook, Instagram, Youtube, Soundcloud"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Weak credentials",
+            "EntityType": "vul",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Port 10073",
+            "EntityType": "ioc",
+            "EntitySubType": "port",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Telnet (port 23)",
+            "EntityType": "ioc",
+            "EntitySubType": "port",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "elan2",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "10e2f7dd4b2bb4ac9ab2b0d136f48e5dc9acc451",
+                "type": "ELF binary"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "CC Servers",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "ips": "77.247.177.36:81, 93.190.140.221:80, 85.159.237.107:81, 85.159.237.108:81, 77.247.177.87:81"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Whitelisted IPs",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "ips": "27.124.41.11, 77.247.177.31, 85.159.237.107, 93.190.140.221, etc."
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "DNS Hijacking",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Social Network Cookies",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0006"
+            ],
+            "Properties": {
+                "cookies": "twll, twid, c_user, ds_user_id, SAPISID, APISID, PLAY_ACTIVE_ACCOUNT"
+            }
+        }
+    ],
+    "Relationships": []
+}

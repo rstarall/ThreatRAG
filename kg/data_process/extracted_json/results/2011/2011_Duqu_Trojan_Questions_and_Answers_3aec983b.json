@@ -1,0 +1,290 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Duqu",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Remote Access Trojan",
+                "discovery_date": "October 2011"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Stuxnet",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Worm",
+                "discovery_date": "2010"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "206.183.111.97",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "location": "India",
+                "status": "Shut down"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "kasperskychk.dyndns.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Windows kernel driver",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "function": "Decrypts and loads DLL files"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Encrypted DLL files",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "extension": ".PNF"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Keylogger",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "associated_files": "~DQ*"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "C-Media Electronics Incorporation",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "role": "Certificate provider"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "JMicron Technology Company",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "role": "Certificate provider"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "TCP port 80",
+            "EntityType": "asset",
+            "EntitySubType": "network",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "protocol": "HTTP"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "TCP port 443",
+            "EntityType": "asset",
+            "EntitySubType": "network",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "protocol": "Custom/HTTPS"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "SecureWorks Counter Threat Unit",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "role": "Research team"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "related_to",
+            "Source": "Duqu",
+            "Target": "Stuxnet"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "related_to",
+            "Source": "Duqu",
+            "Target": "Windows kernel driver"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "Duqu",
+            "Target": "Encrypted DLL files"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "Duqu",
+            "Target": "Keylogger"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "Duqu",
+            "Target": "206.183.111.97"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Duqu",
+            "Target": "kasperskychk.dyndns.org"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Duqu",
+            "Target": "TCP port 80"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Duqu",
+            "Target": "TCP port 443"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "C-Media Electronics Incorporation",
+            "Target": "Duqu"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "JMicron Technology Company",
+            "Target": "Stuxnet"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "exploit",
+            "Source": "Duqu",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "target",
+            "Source": "Duqu",
+            "Target": "SecureWorks Counter Threat Unit"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "belong_to",
+            "Source": "Encrypted DLL files",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "belong_to",
+            "Source": "Windows kernel driver",
+            "Target": "Windows System"
+        }
+    ]
+}

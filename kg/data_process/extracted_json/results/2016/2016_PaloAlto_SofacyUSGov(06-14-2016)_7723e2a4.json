@@ -1,0 +1,369 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Sofacy",
+            "EntityVariantNames": [
+                "APT28",
+                "Tsar Team"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "US Government Agency Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "May 28, 2016",
+                "observe_time": "2016",
+                "report_name": "2016_PaloAlto_SofacyUSGov(06-14-2016)_7723e2a4"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "United States Government",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Ministry of Foreign Affairs",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Exercise_Noble_Partner_16.rtf",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "03cb76bdc619fac422d2b954adfa511e7ecabc106adce804b1834581b5913bca"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CVE-2015-1641",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "btecache.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "c2551c4e6521ac72982cb952503a2e6f016356e02ee31dea36c713141d4f3785"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "svchost.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "69940a20ab9abb31a03fcefe6de92a16ed474bbdff3288498851afc12a834261"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Carberp",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "191.101.31.6",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "google.com",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "servicecdp.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "munimonoce.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "wscapi.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "tabsync.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "storsvc.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "Microsoft Office",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "Spear Phishing Email",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "US Government Agency Attack Event",
+            "Target": "Sofacy"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "US Government Agency Attack Event",
+            "Target": "United States Government"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "Sofacy",
+            "Target": "United States Government"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Sofacy",
+            "Target": "Exercise_Noble_Partner_16.rtf"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Sofacy",
+            "Target": "Spear Phishing Email"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Sofacy",
+            "Target": "CVE-2015-1641"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Sofacy",
+            "Target": "Carberp"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2015-1641",
+            "Target": "Microsoft Office"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Carberp",
+            "Target": "btecache.dll"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Carberp",
+            "Target": "svchost.dll"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "btecache.dll",
+            "Target": "Microsoft Office"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "belong_to",
+            "Source": "svchost.dll",
+            "Target": "Microsoft Office"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "Carberp",
+            "Target": "191.101.31.6"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "Carberp",
+            "Target": "servicecdp.com"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "Carberp",
+            "Target": "munimonoce.com"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "Carberp",
+            "Target": "wscapi.com"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "Carberp",
+            "Target": "tabsync.net"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "related_to",
+            "Source": "Carberp",
+            "Target": "storsvc.org"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "trigger",
+            "Source": "United States Government",
+            "Target": "Exercise_Noble_Partner_16.rtf"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "has",
+            "Source": "United States Government",
+            "Target": "Microsoft Office"
+        }
+    ]
+}

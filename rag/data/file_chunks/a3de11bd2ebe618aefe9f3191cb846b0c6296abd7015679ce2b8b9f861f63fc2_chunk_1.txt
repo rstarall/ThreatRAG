@@ -1,0 +1,5 @@
+CVE-2014-1701漏洞
+在 33.0.1750.149 之前的 Google Chrome 中使用的 Blink 中 bindings/scripts/code_generator_v8.pm 中的 GenerateFunction 函数没有对 EventTarget：:d ispatchEvent 函数实施特定的跨域限制，该函数允许远程攻击者通过涉及事件的向量进行通用 XSS （UXSS） 攻击。
+漏洞：CVE-2014-1705。
+在 OS X 和 Linux 上低于 33.0.1750.152 的 Google Chrome 以及 Windows 上低于 33.0.1750.154 的 Google Chrome 中使用了 Google V8，允许远程攻击者通过未知向量造成拒绝服务（内存损坏）或可能产生不明其他影响。
+CVE-2014-1747漏洞

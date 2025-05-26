@@ -1,0 +1,273 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Duqu 2.0",
+            "EntityVariantNames": [
+                "W32.Duqu.B"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0009",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Memory-resident worm",
+                "version": "2.0"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Duqu",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0009"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "version": "1.0"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Stuxnet",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Kaspersky Lab",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "industry": "Information Security"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "European Telecoms Operator",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "industry": "Telecommunications",
+                "location": "Europe"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "North African Telecoms Operator",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "industry": "Telecommunications",
+                "location": "North Africa"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "South East Asian Electronic Equipment Manufacturer",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "industry": "Electronics Manufacturing",
+                "location": "South East Asia"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Duqu Attack Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0009",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "June 2015",
+                "observe_time": "2015",
+                "report_name": "2015_Symantec_Duqu2-Reemergence-aggressive-cyberespionage-threat(06-10-2015)_ba5b0bd6"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Command and Control Server",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Microsoft URLs",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Duqu Attacker Group",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0009",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Duqu Attack Campaign",
+            "Target": "Duqu Attacker Group"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Duqu Attack Campaign",
+            "Target": "Kaspersky Lab"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "Duqu Attack Campaign",
+            "Target": "European Telecoms Operator"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "involve",
+            "Source": "Duqu Attack Campaign",
+            "Target": "North African Telecoms Operator"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "involve",
+            "Source": "Duqu Attack Campaign",
+            "Target": "South East Asian Electronic Equipment Manufacturer"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Duqu Attacker Group",
+            "Target": "Duqu 2.0"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Duqu Attacker Group",
+            "Target": "Duqu"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "Duqu Attacker Group",
+            "Target": "Kaspersky Lab"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "Duqu Attacker Group",
+            "Target": "European Telecoms Operator"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "target",
+            "Source": "Duqu Attacker Group",
+            "Target": "North African Telecoms Operator"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "target",
+            "Source": "Duqu Attacker Group",
+            "Target": "South East Asian Electronic Equipment Manufacturer"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Duqu 2.0",
+            "Target": "Duqu"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "Duqu",
+            "Target": "Stuxnet"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "Duqu 2.0",
+            "Target": "Command and Control Server"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "Duqu 2.0",
+            "Target": "Microsoft URLs"
+        }
+    ]
+}

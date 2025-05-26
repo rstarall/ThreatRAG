@@ -1,0 +1,249 @@
+<Entitys>
+    <!-- Attackers -->
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>Chinese APT</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>Deep Panda</EntityVariantName>
+            <EntityVariantName>APT29</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0010</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="country">China</Property>
+            <Property name="affiliation">PLA</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Victims -->
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>Anthem, Inc.</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>Wellpoint</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="industry">Healthcare</Property>
+        </Properties>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>Premera Blue Cross</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+
+    <!-- Events -->
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>Anthem Breach Event</EntityName>
+        <EntityType>event</EntityType>
+        <EntitySubType>event</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0010</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="date">February 2015</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Malware -->
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>Derusbi</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>Sakula</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>Sakurel</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+
+    <!-- Domains -->
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>we11point[.]com</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>prennera[.]com</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+
+    <!-- Individuals -->
+    <Entity>
+        <EntityId>entity_9</EntityId>
+        <EntityName>Song Yubo</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>attacker</EntitySubType>
+        <Labels>
+            <Label>TA0042</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="affiliation">Southeast University</Property>
+            <Property name="role">Professor</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Organizations -->
+    <Entity>
+        <EntityId>entity_10</EntityId>
+        <EntityName>Southeast University</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0042</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="location">Nanjing, China</Property>
+        </Properties>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_11</EntityId>
+        <EntityName>Beijing Topsec</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>Beijing Topsec Network Security Technology Co.</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0042</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+</Entitys>
+<Relationships>
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Anthem Breach Event</Source>
+        <Target>Chinese APT</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Anthem Breach Event</Source>
+        <Target>Anthem, Inc.</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Chinese APT</Source>
+        <Target>Anthem, Inc.</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Chinese APT</Source>
+        <Target>Premera Blue Cross</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Chinese APT</Source>
+        <Target>Derusbi</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Chinese APT</Source>
+        <Target>Sakula</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Derusbi</Source>
+        <Target>we11point[.]com</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Sakula</Source>
+        <Target>prennera[.]com</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_9</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>Song Yubo</Source>
+        <Target>Southeast University</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_10</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>Southeast University</Source>
+        <Target>Beijing Topsec</Target>
+    </Relationship>
+</Relationships>

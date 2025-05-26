@@ -1,0 +1,291 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Red October",
+            "EntityVariantNames": [
+                "Rocra"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "language": "Russian-speaking",
+                "duration": "5+ years"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Red October Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "start_date": "May 2007",
+                "discovery_date": "October 2012",
+                "observe_time": "2013",
+                "report_name": "2013_Securelist_RedOctober_f7d84d1d"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Diplomatic and Government Agencies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "sectors": "Government, Diplomatic, Research, Energy, Military",
+                "countries": "Eastern Europe, Central Asia, Western Europe, North America"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CVE-2009-3129",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "software": "MS Excel"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2010-3333",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "software": "MS Word"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CVE-2012-0158",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "software": "MS Word"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "MS08-067",
+            "EntityType": "vul",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Command and Control Servers",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "count": "60+",
+                "locations": "Germany, Russia"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Spear Phishing Emails",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Rocra Malware Framework",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "modules": "1000+",
+                "categories": "30"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Acid Cryptofiler",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "extensions": "acidcsa, acidsca, aciddsk, acidpvr, acidppr, acidssa"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Kaspersky Lab",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0007"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "role": "Investigator"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Red October Campaign",
+            "Target": "Red October"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Red October Campaign",
+            "Target": "Diplomatic and Government Agencies"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "Red October",
+            "Target": "Diplomatic and Government Agencies"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Red October",
+            "Target": "CVE-2009-3129"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Red October",
+            "Target": "CVE-2010-3333"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Red October",
+            "Target": "CVE-2012-0158"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Red October",
+            "Target": "MS08-067"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Red October",
+            "Target": "Spear Phishing Emails"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Red October",
+            "Target": "Rocra Malware Framework"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Rocra Malware Framework",
+            "Target": "Command and Control Servers"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "target",
+            "Source": "Red October",
+            "Target": "Acid Cryptofiler"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2009-3129",
+            "Target": "MS Excel"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2010-3333",
+            "Target": "MS Word"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2012-0158",
+            "Target": "MS Word"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "trigger",
+            "Source": "Diplomatic and Government Agencies",
+            "Target": "Spear Phishing Emails"
+        }
+    ]
+}

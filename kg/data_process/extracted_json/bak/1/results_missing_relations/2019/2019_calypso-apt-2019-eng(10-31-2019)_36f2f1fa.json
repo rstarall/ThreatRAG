@@ -1,0 +1,337 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Calypso APT",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Properties": {
+                "origin": "Asia",
+                "active_since": "September 2016"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Government institutions in Brazil, India, Kazakhstan, Russia, Thailand, and Turkey",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "46.166.129.241",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "tv.teldcomtv.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "ASPX web shell",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "36.44.74.47",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0043"
+            ],
+            "Properties": {
+                "provider": "China Telecom"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "103.224.82.47",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0043"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "www.sultris.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "46.105.227.110",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Calypso RAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "PlugX",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Byeby trojan",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "SysInternals",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0008"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Nbtscan",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0007"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Mimikatz",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0006"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "ZXPortMap",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0008"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "TCP Port Scanner",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0007"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "Netcat",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "QuarksPwDump",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0006"
+            ]
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "WmiExec",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "EarthWorm",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_22",
+            "EntityName": "OS_Check_445",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0007"
+            ]
+        },
+        {
+            "EntityId": "entity_23",
+            "EntityName": "DoublePulsar",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_24",
+            "EntityName": "EternalBlue",
+            "EntityType": "tool",
+            "EntitySubType": "exploit",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_25",
+            "EntityName": "EternalRomance",
+            "EntityType": "tool",
+            "EntitySubType": "exploit",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_26",
+            "EntityName": "MS17-010",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_27",
+            "EntityName": "DCSync",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0006"
+            ]
+        },
+        {
+            "EntityId": "entity_28",
+            "EntityName": "Hussar",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_29",
+            "EntityName": "FlyingDutchman",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011",
+                "TA0009"
+            ]
+        },
+        {
+            "EntityId": "entity_30",
+            "EntityName": "23.227.207.137",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_31",
+            "EntityName": "45.63.96.120",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_32",
+            "EntityName": "45.63.114.127",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_33",
+            "EntityName": "r01.etheraval.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_34",
+            "EntityName": "tc.streleases.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_35",
+            "EntityName": "krgod.qqm8.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        }
+    ],
+    "Relationships": []
+}

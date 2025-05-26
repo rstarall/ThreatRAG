@@ -1,0 +1,259 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Legion Loader",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "language": "MS Visual C++ 8",
+                "origin": "Russian-speaking developer",
+                "evasion": "VM/Sandbox evasion"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Vidar",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Info-stealer",
+                "availability": "Cybercrime marketplaces"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Predator the Thief",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Info-stealer",
+                "availability": "Cybercrime marketplaces"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Racoon stealer",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Info-stealer",
+                "availability": "Cybercrime marketplaces"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Crypto-Currency stealer",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009",
+                "TA0010"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "delivery": "PowerShell",
+                "target": "Crypto wallets"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "RDP backdoor",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0008"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "format": "NSIS installer",
+                "encryption": "Blowfish"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Invoke-PsUACme",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0004"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "purpose": "UAC bypass",
+                "origin": "GitHub"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "4tozahuinya2.info",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "legion1488.info",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "04682cf5670dfd8095d1fc9da7ff89f939c73a16c4ebe52dbff7afe5f1a8b89f",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "056a2eb3925ea9a3933ed5c8e1b482eae5a098f013b1af751ec9b956edca12e1",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Customer Environment",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "region": "United States and Europe"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "PowerShell",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "target",
+            "Source": "Legion Loader",
+            "Target": "Customer Environment"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Legion Loader",
+            "Target": "Vidar"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Legion Loader",
+            "Target": "Predator the Thief"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Legion Loader",
+            "Target": "Racoon stealer"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Legion Loader",
+            "Target": "Crypto-Currency stealer"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Legion Loader",
+            "Target": "RDP backdoor"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Legion Loader",
+            "Target": "4tozahuinya2.info"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Crypto-Currency stealer",
+            "Target": "legion1488.info"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "RDP backdoor",
+            "Target": "Invoke-PsUACme"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "Crypto-Currency stealer",
+            "Target": "PowerShell"
+        }
+    ]
+}

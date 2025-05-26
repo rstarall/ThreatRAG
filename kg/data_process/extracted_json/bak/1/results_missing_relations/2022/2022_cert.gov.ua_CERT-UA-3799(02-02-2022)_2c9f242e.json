@@ -1,0 +1,338 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "UAC-0056",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "National Police of Ukraine Email Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "National Police of Ukraine",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Crime Report (Belous Alexei Sergeevich).docx",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "hash": "4d01975268c215fc26ed79ebd17ec22d"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Report of a crime.docx",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "hash": "22c1d43016cb2b8b9e5e5e9895526354"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "GSU207@POLICE.GOV.UA - Message (2).js",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "12ed130045b2e731bc66c9261c88efaa",
+                "path": "%TEMP%"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "GSU207@POLICE.GOV.UA - Messages (17).js",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "0e3c3fe6167485807c4d36a904dfcae1"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "putty.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "259f06fcdb971f606d239b3178110981"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "putty.dmp.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "ccc3750d9270d1e8c95649d91f94033b",
+                "malware": "OutSteel"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "puttyjejfrwu.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "5fa2c64ed3e9944030b6fd9f3d3d7102"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "AutoIt.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "57a10dad336f1a6cb206dca7ddd3fcaf",
+                "malware": "OutSteel"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "1406.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "ab2a92e0fc5a6f63336e442f34089f16",
+                "malware": "SaintBot"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "load4849kd30.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "af9a60ea728985f492119ebf713e0716",
+                "malware": "SaintBot"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "f0d.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "247165c7d96bf443b6a7360a44b7dcfb"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "f1d.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "cd8915c63f3134425aa7c851f5f1e645"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "GoogleChromeUpdate.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "path": "%PUBLIC%"
+            }
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "rmm.bat",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "path": "%TEMP%"
+            }
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "svjhost.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "path": "%TEMP%"
+            }
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "powershell.exe",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "wscript.exe",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "WINWORD.EXE",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_22",
+            "EntityName": "OutSteel",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_23",
+            "EntityName": "SaintBot",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_24",
+            "EntityName": "Discord",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_25",
+            "EntityName": "hxxps://cdn.discordapp.com/attachments/932413459872747544/938291977735266344/putty.exe",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_26",
+            "EntityName": "hxxps://cdn.discordapp.com/attachments/932413459872747544/938317934026170408/puttyjejfrwu.exe",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_27",
+            "EntityName": "hxxp://185.244.41.109:8080/upld/",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_28",
+            "EntityName": "hxxp://eumr.site/load74h74830.exe",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_29",
+            "EntityName": "185.244.41.109",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_30",
+            "EntityName": "eumr.site",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_31",
+            "EntityName": "mariaparsons10811@gmail.com",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0001"
+            ]
+        }
+    ],
+    "Relationships": []
+}

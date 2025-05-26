@@ -1,0 +1,128 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "STTEAM",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Operation STTEAM",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008"
+            ],
+            "Properties": {
+                "date": "February 2014",
+                "location": "Middle East"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Oil  Gas industry",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "industry": "Oil  Gas"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "State government websites",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "sector": "Government"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "zehir4.asp",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Properties": {
+                "md5": "5b496a61363d304532bcf52ee21f5d55",
+                "sha1": "1d9b78b5b14b821139541cc0deb4cbbd994ce157",
+                "sha256": "b57bf397984545f419045391b56dcaf7b0bed8b6ee331b5c44cee35c92ffa13d",
+                "author": "zehir (zehirhacker@hotmail.com)"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "K-Shell/ZHC Shell 1.0/Aspx Shell",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Properties": {
+                "md5": "99c056056df9104fc547d9d274bbc8a2",
+                "sha1": "917f80730fcd158a5203c37a289bd7542670dd50",
+                "sha256": "cc608a7103d320eff5e02a220b309df948df60efd177c9a670f186d4248f7e42",
+                "authors": "XXx_Death_xXX and ZHC"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "46.165.220.223",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "192.168.1.1",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0008"
+            ],
+            "Properties": {
+                "role": "Victim server"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Windows NT 5.1",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Microsoft-IIS/5.1",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0002"
+            ]
+        }
+    ],
+    "Relationships": []
+}

@@ -1,0 +1,495 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Kimsuky",
+            "EntityVariantNames": [
+                "APT Kimsuky"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0005",
+                "TA0007",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "North Korea",
+                "origin": "Suspected"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "South Korean Think-Tank Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0005",
+                "TA0007",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "observe_time": "2013",
+                "report_name": "2013_Kimsuky_162eb343"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "The Sejong Institute",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "South Korea",
+                "type": "Think Tank"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Korea Institute For Defense Analyses",
+            "EntityVariantNames": [
+                "KIDA"
+            ],
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "South Korea",
+                "type": "Defense Research"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Ministry of Unification",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "South Korea",
+                "type": "Government"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Hyundai Merchant Marine",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "South Korea",
+                "type": "Shipping Company"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "mail.bg",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "country": "Bulgaria",
+                "purpose": "C2 Server"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "beautifl@mail.bg",
+            "EntityType": "ioc",
+            "EntitySubType": "email",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "iop110112@hotmail.com",
+            "EntityType": "ioc",
+            "EntitySubType": "email",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "rsh1213@hotmail.com",
+            "EntityType": "ioc",
+            "EntitySubType": "email",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "KBDLV2.DLL",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "path": "%windir%system32"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "AUTO.DLL",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "path": "%windir%system32"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "DriverManage",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Service"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Win7Elevate",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0004"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "origin": "Metasploit Framework"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Windows 7",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "HWP Document Stealer",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "target": "Hangul Word Processor files"
+            }
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "TeamViewer 5.0.9104",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "modification": "Patched"
+            }
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "Remote Access Service",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "type": "Service"
+            }
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "Jilin Province Network",
+            "EntityType": "asset",
+            "EntitySubType": "network",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "country": "China"
+            }
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "Liaoning Province Network",
+            "EntityType": "asset",
+            "EntitySubType": "network",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "country": "China"
+            }
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "3baaf1a873304d2d607dbedf47d3e2b4",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "South Korean Think-Tank Campaign",
+            "Target": "Kimsuky"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "South Korean Think-Tank Campaign",
+            "Target": "The Sejong Institute"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "South Korean Think-Tank Campaign",
+            "Target": "Korea Institute For Defense Analyses"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "involve",
+            "Source": "South Korean Think-Tank Campaign",
+            "Target": "Ministry of Unification"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "involve",
+            "Source": "South Korean Think-Tank Campaign",
+            "Target": "Hyundai Merchant Marine"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "Kimsuky",
+            "Target": "The Sejong Institute"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "Kimsuky",
+            "Target": "Korea Institute For Defense Analyses"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "Kimsuky",
+            "Target": "Ministry of Unification"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "Kimsuky",
+            "Target": "Hyundai Merchant Marine"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "Kimsuky",
+            "Target": "mail.bg"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "Kimsuky",
+            "Target": "beautifl@mail.bg"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "use",
+            "Source": "Kimsuky",
+            "Target": "iop110112@hotmail.com"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "use",
+            "Source": "Kimsuky",
+            "Target": "rsh1213@hotmail.com"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "use",
+            "Source": "Kimsuky",
+            "Target": "KBDLV2.DLL"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "use",
+            "Source": "Kimsuky",
+            "Target": "AUTO.DLL"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "use",
+            "Source": "Kimsuky",
+            "Target": "DriverManage"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "use",
+            "Source": "Kimsuky",
+            "Target": "Win7Elevate"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "use",
+            "Source": "Kimsuky",
+            "Target": "HWP Document Stealer"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "use",
+            "Source": "Kimsuky",
+            "Target": "TeamViewer 5.0.9104"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "use",
+            "Source": "Kimsuky",
+            "Target": "Remote Access Service"
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "related_to",
+            "Source": "KBDLV2.DLL",
+            "Target": "3baaf1a873304d2d607dbedf47d3e2b4"
+        },
+        {
+            "RelationshipId": "relationship_22",
+            "RelationshipType": "belong_to",
+            "Source": "beautifl@mail.bg",
+            "Target": "mail.bg"
+        },
+        {
+            "RelationshipId": "relationship_23",
+            "RelationshipType": "affect",
+            "Source": "KBDLV2.DLL",
+            "Target": "Windows 7"
+        },
+        {
+            "RelationshipId": "relationship_24",
+            "RelationshipType": "has",
+            "Source": "The Sejong Institute",
+            "Target": "Windows 7"
+        },
+        {
+            "RelationshipId": "relationship_25",
+            "RelationshipType": "has",
+            "Source": "Korea Institute For Defense Analyses",
+            "Target": "Windows 7"
+        },
+        {
+            "RelationshipId": "relationship_26",
+            "RelationshipType": "has",
+            "Source": "Ministry of Unification",
+            "Target": "Windows 7"
+        },
+        {
+            "RelationshipId": "relationship_27",
+            "RelationshipType": "has",
+            "Source": "Hyundai Merchant Marine",
+            "Target": "Windows 7"
+        }
+    ]
+}

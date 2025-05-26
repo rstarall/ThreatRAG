@@ -1,0 +1,391 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Seedworm",
+            "EntityVariantNames": [
+                "Muddywater"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Iran",
+                "affiliation": "Ministry of Intelligence and Security (MOIS)"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Telecoms Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "November 2023",
+                "location": "North and East Africa",
+                "observe_time": "2023",
+                "report_name": "2023_Symantec_Seedworm-Iranian-Hackers-Target-Telecoms-Orgs-North-East-Africa(12-19-2023)_dbe416bc"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Telecommunications Organization",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Telecommunications",
+                "region": "Egypt, Sudan, Tanzania"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "MuddyC2Go",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Backdoor",
+                "language": "Go"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "vcruntime140.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "1a0827082d4b517b643c86ee678eaa53f85f1b33ad409a23c50164c3909fdaca",
+                "location": "csidl_common_appdata\\javax"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "jabswitch.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "25b985ce5d7bf15015553e30927691e7673a68ad071693bf6d0284b069ca6d6a",
+                "type": "Legitimate Java executable"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "SimpleHelp",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Remote access tool"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Venom Proxy",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Proxy tool",
+                "language": "Go"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Custom Keylogger",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "eac8e7989c676b9a894ef366357f1cf8e285abde083fbdf92b3619f707ce292f"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Revsocks",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "SOCKS5 proxy",
+                "language": "C"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "AnyDesk",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Remote desktop tool"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "PowerShell",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "95.164.38.99",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "C&C server",
+                "port": "443"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "146.70.124.102",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "SimpleHelp C&C server"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "94.131.3.160",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "GoSOCKS5proxy C&C server",
+                "port": "443"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Windows Registry",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "key": "HKLM\\SYSTEM\\CurrentControlSet\\Services\\Tcpip"
+            }
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "Stark Industries",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "VPS provider"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Telecoms Attack Event",
+            "Target": "Seedworm"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Telecoms Attack Event",
+            "Target": "Telecommunications Organization"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "Seedworm",
+            "Target": "Telecommunications Organization"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Seedworm",
+            "Target": "MuddyC2Go"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Seedworm",
+            "Target": "SimpleHelp"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Seedworm",
+            "Target": "Venom Proxy"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Seedworm",
+            "Target": "Custom Keylogger"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Seedworm",
+            "Target": "Revsocks"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Seedworm",
+            "Target": "AnyDesk"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "Seedworm",
+            "Target": "PowerShell"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "MuddyC2Go",
+            "Target": "vcruntime140.dll"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "belong_to",
+            "Source": "vcruntime140.dll",
+            "Target": "Windows Registry"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "MuddyC2Go",
+            "Target": "jabswitch.exe"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "MuddyC2Go",
+            "Target": "95.164.38.99"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "SimpleHelp",
+            "Target": "146.70.124.102"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "Revsocks",
+            "Target": "94.131.3.160"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "Seedworm",
+            "Target": "Stark Industries"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "has",
+            "Source": "Telecommunications Organization",
+            "Target": "Windows Registry"
+        }
+    ]
+}

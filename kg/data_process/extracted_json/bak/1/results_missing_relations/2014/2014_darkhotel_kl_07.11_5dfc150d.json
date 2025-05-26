@@ -1,0 +1,174 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Darkhotel APT",
+            "EntityVariantNames": [
+                "Tapaoux",
+                "Pioneer",
+                "Karba",
+                "Nemim"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Properties": {
+                "activity_period": "2007-2014",
+                "region": "Asia"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Hotel Wi-Fi Attacks",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Properties": {
+                "time_period": "2007-2014"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Corporate Executives",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Government Agencies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "NGO Organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Backdoor.Win32.Agent.dgrn",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "alias": "Catch.exe"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "microdelta.crabdance.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "CVE-2010-0188",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "CVE-2014-0497",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Ndiskpro.sys",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0006"
+            ],
+            "Properties": {
+                "type": "Kernel-level keylogger"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "msieckc.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Properties": {
+                "path": "%AppDATA%\\Microsoft\\Crypto\\DES64v7\\"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "DmaUp3.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0006",
+                "TA0009"
+            ],
+            "Properties": {
+                "path": "%AppDATA%\\Microsoft\\Display\\"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "igfxext.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0008"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "42world.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "hxxp://officerevision.com/update/files22/update.exe",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0002"
+            ]
+        }
+    ],
+    "Relationships": []
+}

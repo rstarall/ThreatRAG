@@ -1,0 +1,214 @@
+<Entitys>
+    <!-- Threat Actor -->
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>Stealth Falcon</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="country">UAE</Property>
+            <Property name="suspected_sponsor">UAE government</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Attack Event -->
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>UAEDissidents Targeting Campaign</EntityName>
+        <EntityType>event</EntityType>
+        <EntitySubType>event</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="timeframe">2012-2016</Property>
+            <Property name="target_region">UAE</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Primary Victim -->
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>Rori Donaghy</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>user</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="occupation">Journalist</Property>
+            <Property name="affiliation">Middle East Eye</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Attack Tool -->
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>Malicious Word Document</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="filename">right2fight.docm</Property>
+            <Property name="hash">80e8ef78b9e28015cde4205aaa65da97</Property>
+        </Properties>
+    </Entity>
+
+    <!-- C2 Infrastructure -->
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>adhostingcache.com</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+        <Properties>
+            <Property name="ip">95.215.44.37</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Fake Persona -->
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>Andrew Dwight</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>attacker</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="email">andrew.dwight389@outlook.com</Property>
+            <Property name="twitter">@Dwight389</Property>
+        </Properties>
+    </Entity>
+
+    <!-- URL Shortener -->
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>aax.me</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>method</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="purpose">URL shortening with profiling</Property>
+        </Properties>
+    </Entity>
+
+    <!-- PowerShell Backdoor -->
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>IEWebCache.vbs</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+        </Labels>
+        <Times>
+            <Time>5</Time>
+        </Times>
+        <Properties>
+            <Property name="delivery_method">Scheduled Task</Property>
+        </Properties>
+    </Entity>
+</Entitys>
+<Relationships>
+    <!-- Stealth Falcon conducted the attack campaign -->
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>UAEDissidents Targeting Campaign</Source>
+        <Target>Stealth Falcon</Target>
+    </Relationship>
+
+    <!-- Campaign targeted Rori Donaghy -->
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>Stealth Falcon</Source>
+        <Target>Rori Donaghy</Target>
+    </Relationship>
+
+    <!-- Used malicious Word document -->
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Stealth Falcon</Source>
+        <Target>Malicious Word Document</Target>
+    </Relationship>
+
+    <!-- Used fake persona -->
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Stealth Falcon</Source>
+        <Target>Andrew Dwight</Target>
+    </Relationship>
+
+    <!-- Used C2 infrastructure -->
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Stealth Falcon</Source>
+        <Target>adhostingcache.com</Target>
+    </Relationship>
+
+    <!-- Malware connects to C2 -->
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Malicious Word Document</Source>
+        <Target>adhostingcache.com</Target>
+    </Relationship>
+
+    <!-- Used URL shortener -->
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>Stealth Falcon</Source>
+        <Target>aax.me</Target>
+    </Relationship>
+
+    <!-- Malware drops backdoor -->
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Malicious Word Document</Source>
+        <Target>IEWebCache.vbs</Target>
+    </Relationship>
+</Relationships>

@@ -1,0 +1,284 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "FIN7",
+            "EntityVariantNames": [
+                "Carbon Spider",
+                "Gold Niagara",
+                "Calcium"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0005",
+                "TA0007",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "region": "Eastern Europe",
+                "motivation": "Financial",
+                "target": "US companies"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Windows 11 Alpha-Themed Docs Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0005",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "June-July 2021",
+                "observe_time": "2021",
+                "report_name": "2021_Anomali_FIN7-Windows11-Themed-Drop-Javascript-Backdoor(09-02-2021)_bf4be279"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "US-based companies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Retail, Hospitality"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Users-Progress-072021-1.doc",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "d60b6a8310373c9b84e6760c24185535",
+                "type": "Word Document"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "VBA Macro",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "technique": "T1059.005"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "word_data.js",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "0d12e8754adacc645a981426e69b91ec",
+                "type": "JavaScript Backdoor"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "JavaScript Backdoor",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "technique": "T1059.007"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "tnskvggujjqfcskwk.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "bypassociation.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "CLEARMIND",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0007"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "type": "Point-of-Sale service provider"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "85.14.253.178",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Windows 11 Alpha-Themed Docs Campaign",
+            "Target": "FIN7"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Windows 11 Alpha-Themed Docs Campaign",
+            "Target": "US-based companies"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "FIN7",
+            "Target": "Users-Progress-072021-1.doc"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "FIN7",
+            "Target": "VBA Macro"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "FIN7",
+            "Target": "JavaScript Backdoor"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "FIN7",
+            "Target": "US-based companies"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "FIN7",
+            "Target": "CLEARMIND"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "VBA Macro",
+            "Target": "Users-Progress-072021-1.doc"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "JavaScript Backdoor",
+            "Target": "word_data.js"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "JavaScript Backdoor",
+            "Target": "tnskvggujjqfcskwk.com"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "JavaScript Backdoor",
+            "Target": "bypassociation.com"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "belong_to",
+            "Source": "word_data.js",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "has",
+            "Source": "US-based companies",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "has",
+            "Source": "US-based companies",
+            "Target": "CLEARMIND"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "trigger",
+            "Source": "US-based companies",
+            "Target": "Users-Progress-072021-1.doc"
+        }
+    ]
+}

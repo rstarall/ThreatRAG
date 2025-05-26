@@ -1,0 +1,183 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "PortDoor Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0007",
+                "TA0011"
+            ],
+            "Properties": {
+                "date": "April 2021"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Chinese APT Group",
+            "EntityVariantNames": [
+                "Tick",
+                "Tonto Team",
+                "TA428",
+                "Goblin Panda",
+                "Rancor"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "country": "China",
+                "sponsor": "State-sponsored"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Rubin Design Bureau",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "industry": "Defense",
+                "country": "Russia"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "RoyalRoad",
+            "EntityVariantNames": [
+                "8.t Dropper",
+                "RTFexploit builder"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Properties": {
+                "version": "v7"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "PortDoor",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0007",
+                "TA0011"
+            ],
+            "Properties": {
+                "type": "Backdoor"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CVE-2017-11882",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "CVE-2018-0798",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "CVE-2018-0802",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "e.o",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "winlog.wll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "45.63.27.162",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "role": "C2 Server"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "58097616.tmp",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Microsoft Word",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Spear-phishing Email",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ]
+        }
+    ],
+    "Relationships": []
+}

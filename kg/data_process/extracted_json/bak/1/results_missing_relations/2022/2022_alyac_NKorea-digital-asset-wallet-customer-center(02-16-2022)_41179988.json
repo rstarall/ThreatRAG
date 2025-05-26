@@ -1,0 +1,115 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Thallium",
+            "EntityVariantNames": [
+                "Kimsuky",
+                "Smoke Screen"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "country": "North Korea"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Klip Customer Center Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "time": "February 2022"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Klip users",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "service": "Klip digital asset wallet"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "[Klip Customer Center] Mistransmission_Token Resolution_Guide.doc",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "type": "Malicious Word Document"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "asenal.medianewsonline[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "hxxp://asenal.medianewsonline[.]com/good/luck/flavor/list.php?query=1",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "hxxp://asenal.medianewsonline[.]com/good/luck/flavor/show.php",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Trojan.Downloader.DOC.Gen",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Malicious Macro",
+            "EntityType": "tool",
+            "EntitySubType": "code",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Dropped XML file",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ]
+        }
+    ],
+    "Relationships": []
+}

@@ -1,0 +1,219 @@
+<Entitys>
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>PlugX</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>Gulpix</EntityVariantName>
+            <EntityVariantName>Korplug</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0008</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="version">7.0</Property>
+            <Property name="codename">fking</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>update.exe</EntityName>
+        <EntityType>file</EntityType>
+        <EntitySubType>file</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="MD5">f1f48360f95e1b43e9fba0fec5a2afb8</Property>
+            <Property name="SHA1">70ceb467db7b0161d22e4545479f747417b9705a</Property>
+            <Property name="SHA-256">2bc5ce39dd9afe2157448d3f6d8cb9c549ed39543d159616e38480b9e6c11c49</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>mcvsmap.exe</EntityName>
+        <EntityType>file</EntityType>
+        <EntitySubType>file</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="MD5">4e1e0b8b0673937415599bf2f24c44ad</Property>
+            <Property name="SHA1">9224de3af2a246011c6294f64f27206d165317ba</Property>
+            <Property name="SHA-256">ae16e10e621d6610a3f7f2c7122f9d1263700ba02d1b90e42798decb2fe84096</Property>
+            <Property name="signer">McAfee, Inc.</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>McUtil.DLL</EntityName>
+        <EntityType>file</EntityType>
+        <EntitySubType>file</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="MD5">ad4a646b38a482cc07d5b09b4fffd3b3</Property>
+            <Property name="SHA1">ae0f9bf2740d00c5d485827eb32aca33feaa3a90</Property>
+            <Property name="SHA-256">0a99238e1ebebc47d7a89b2ccddfae537479f7f77322b5d4941315d3f7e5ca48</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>McUtil.DLL.PPT</EntityName>
+        <EntityType>file</EntityType>
+        <EntitySubType>file</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="MD5">545bb4365a9b7cdb6d22844ebeedda93</Property>
+            <Property name="SHA1">a267f1183b4ff843d68a63264846abf78cc71d1f</Property>
+            <Property name="SHA-256">d4fe890a08d4dd44b58a3b85b2a7e89536338099c1c42a9b7e85f4007b0a37b7</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>UAC.TMP</EntityName>
+        <EntityType>file</EntityType>
+        <EntitySubType>file</EntitySubType>
+        <Labels>
+            <Label>TA0005</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+        <Properties>
+            <Property name="MD5">52df5c2c07433e2a8f054c2347acb3b4</Property>
+            <Property name="SHA1">8051474c1fc0d8f404a42ea32eca1699e54f02e1</Property>
+            <Property name="SHA-256">dc09091e5d0ce03c6144748f17bd636f2f0b2ca56f88b550c1d48860596dbdb1</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>help.yahoo-upgrade.com</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>5</Time>
+        </Times>
+        <Properties>
+            <Property name="IP">122.199.194.197</Property>
+        </Properties>
+    </Entity>
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>122.199.194.197</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>ip</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>5</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_9</EntityId>
+        <EntityName>Windows System</EntityName>
+        <EntityType>env</EntityType>
+        <EntitySubType>os</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+    <Entity>
+        <EntityId>entity_10</EntityId>
+        <EntityName>C:\Documents and Settings\All Users\VirusMap\NvSmart.hlp</EntityName>
+        <EntityType>file</EntityType>
+        <EntitySubType>file</EntitySubType>
+        <Labels>
+            <Label>TA0009</Label>
+        </Labels>
+        <Times>
+            <Time>6</Time>
+        </Times>
+    </Entity>
+</Entitys>
+<Relationships>
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>PlugX</Source>
+        <Target>update.exe</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>PlugX</Source>
+        <Target>mcvsmap.exe</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>PlugX</Source>
+        <Target>McUtil.DLL</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>PlugX</Source>
+        <Target>McUtil.DLL.PPT</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>PlugX</Source>
+        <Target>UAC.TMP</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>PlugX</Source>
+        <Target>help.yahoo-upgrade.com</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>PlugX</Source>
+        <Target>122.199.194.197</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
+        <RelationshipType>affect</RelationshipType>
+        <Source>PlugX</Source>
+        <Target>Windows System</Target>
+    </Relationship>
+    <Relationship>
+        <RelationshipId>relationship_9</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>PlugX</Source>
+        <Target>C:\Documents and Settings\All Users\VirusMap\NvSmart.hlp</Target>
+    </Relationship>
+</Relationships>

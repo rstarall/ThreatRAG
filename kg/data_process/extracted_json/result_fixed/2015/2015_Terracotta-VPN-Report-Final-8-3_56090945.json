@@ -1,0 +1,341 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Terracotta VPN",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "description": "Malware-supported VPN network used by APT actors",
+                "origin": "People's Republic of China"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Shell_Crew",
+            "EntityVariantNames": [
+                "DeepPanda"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Gh0st RAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "variant": "MM523",
+                "md5": "bccbba3ed45ead051f56fc62fef005a6"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Mitozhan RAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "md5": "7b18614df95e71032909beb25a7b1e87"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Liudoor Backdoor",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "md5": "531d30c8ee27d62e6fbe855299d0e7de"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "WEI-270FBC26C38",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Dongguan, China"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "QT-201312081446",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Wuhan, China"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "vps.mm523.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "gds520.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "1.8800free.info",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "2.8800free.info",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Fortune 500 hotel chain",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "U.S. state department of transportation",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "High tech manufacturer",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Defense contractor",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Windows Server 2008 R2",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "Port 135",
+            "EntityType": "vul",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "description": "DCOM Windows Management Interface (WMI) vulnerability"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "Shell_Crew",
+            "Target": "Terracotta VPN"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "WEI-270FBC26C38",
+            "Target": "Gh0st RAT"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "WEI-270FBC26C38",
+            "Target": "Mitozhan RAT"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "WEI-270FBC26C38",
+            "Target": "Liudoor Backdoor"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "WEI-270FBC26C38",
+            "Target": "Fortune 500 hotel chain"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "WEI-270FBC26C38",
+            "Target": "U.S. state department of transportation"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "WEI-270FBC26C38",
+            "Target": "High tech manufacturer"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "WEI-270FBC26C38",
+            "Target": "Defense contractor"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "exploit",
+            "Source": "WEI-270FBC26C38",
+            "Target": "Port 135"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Gh0st RAT",
+            "Target": "vps.mm523.net"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Gh0st RAT",
+            "Target": "gds520.com"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Terracotta VPN",
+            "Target": "1.8800free.info"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "Terracotta VPN",
+            "Target": "2.8800free.info"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "has",
+            "Source": "Fortune 500 hotel chain",
+            "Target": "Windows Server 2008 R2"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "has",
+            "Source": "U.S. state department of transportation",
+            "Target": "Windows Server 2008 R2"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "has",
+            "Source": "High tech manufacturer",
+            "Target": "Windows Server 2008 R2"
+        }
+    ]
+}

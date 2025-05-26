@@ -1,0 +1,273 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Derusbi Server Variant",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "RAT",
+                "variant": "Server-client model",
+                "functionality": "Remote access, file management, network tunneling"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Windows Firewall Hooking Driver",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0005",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "filename": "{93144EB0-8E3E-4591-B307-8EEBFE7DB28F}.sys",
+                "location": "%SYSDIR%\\Drivers\\",
+                "technique": "Windows Firewall hooking"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "PCC_SOCK",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "purpose": "Communication subsystem abstraction",
+                "port_range": "40000-45000"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "PCC_CMD",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "module_id": "0x81",
+                "functionality": "Remote shell and program execution"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "PCC_FILE",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "module_id": "0x84",
+                "functionality": "File system administration"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "PCC_PROXY",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "module_id": "0x82",
+                "functionality": "Network tunneling"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Windows Firewall",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "component": "Security"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Windows Filtering Platform",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "version": "Windows Vista and later"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "IOCTL_IP_SET_FIREWALL_HOOK",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "target": "Windows XP and older",
+                "device": "\\Device\\IP"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Derusbi Handshake",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "size": "64 bytes",
+                "pattern": "DWORD3 == ~DWORD0, DWORD8 == ROR(DWORD0, 7)"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "HKLM\\SOFTWARE\\Microsoft\\Rpc\\Security",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Registry key",
+                "purpose": "Stores infection ID"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "ZhuDongFangYu.exe",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "vendor": "360 Antivirus"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "related_to",
+            "Source": "Derusbi Server Variant",
+            "Target": "Windows Firewall Hooking Driver"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "related_to",
+            "Source": "Derusbi Server Variant",
+            "Target": "PCC_SOCK"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "Derusbi Server Variant",
+            "Target": "PCC_CMD"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "Derusbi Server Variant",
+            "Target": "PCC_FILE"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "Derusbi Server Variant",
+            "Target": "PCC_PROXY"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Windows Firewall Hooking Driver",
+            "Target": "Windows Firewall"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Windows Firewall Hooking Driver",
+            "Target": "Windows Filtering Platform"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Windows Firewall Hooking Driver",
+            "Target": "IOCTL_IP_SET_FIREWALL_HOOK"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "PCC_SOCK",
+            "Target": "Derusbi Handshake"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "belong_to",
+            "Source": "Derusbi Handshake",
+            "Target": "Derusbi Server Variant"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "affect",
+            "Source": "Derusbi Server Variant",
+            "Target": "HKLM\\SOFTWARE\\Microsoft\\Rpc\\Security"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "target",
+            "Source": "Derusbi Server Variant",
+            "Target": "ZhuDongFangYu.exe"
+        }
+    ]
+}

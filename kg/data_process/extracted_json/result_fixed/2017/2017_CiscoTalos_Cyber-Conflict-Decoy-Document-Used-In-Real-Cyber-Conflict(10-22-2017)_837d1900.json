@@ -1,0 +1,261 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Group 74",
+            "EntityVariantNames": [
+                "Tsar Team",
+                "Sofacy",
+                "APT28",
+                "Fancy Bear"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Cyber Conflict U.S. Conference Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "October 2017",
+                "observe_time": "2017",
+                "report_name": "2017_CiscoTalos_Cyber-Conflict-Decoy-Document-Used-In-Real-Cyber-Conflict(10-22-2017)_837d1900"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Cyber Conflict U.S. conference",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Conference_on_Cyber_Conflict.doc",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "c4be15f9ccfecf7a463f3b1d4a17e7b4f95de939e057662c3f97b52f7fa3c52f",
+                "type": "Word Document"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "VBA Macro",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Seduploader",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0007",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "variant": "New variant",
+                "hash": "ef027405492bc0719437eb58c3d2774cc87845f30c40040bbebbcc09a4e3dd18"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "netwf.dat",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "netwf.bat",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "netwf.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "myinvestgroup[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "MMDeviceEnumerator",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "FG00nxojVs4gLBnwKc7HhmdK0h",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Cyber Conflict U.S. Conference Attack",
+            "Target": "Group 74"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Cyber Conflict U.S. Conference Attack",
+            "Target": "Cyber Conflict U.S. conference"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Group 74",
+            "Target": "Conference_on_Cyber_Conflict.doc"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Group 74",
+            "Target": "VBA Macro"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Group 74",
+            "Target": "Seduploader"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "Group 74",
+            "Target": "Cyber Conflict U.S. conference"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "VBA Macro",
+            "Target": "Conference_on_Cyber_Conflict.doc"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Seduploader",
+            "Target": "netwf.dat"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Seduploader",
+            "Target": "netwf.bat"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Seduploader",
+            "Target": "netwf.dll"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Seduploader",
+            "Target": "myinvestgroup[.]com"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Seduploader",
+            "Target": "MMDeviceEnumerator"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "Seduploader",
+            "Target": "FG00nxojVs4gLBnwKc7HhmdK0h"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "trigger",
+            "Source": "Cyber Conflict U.S. conference",
+            "Target": "Conference_on_Cyber_Conflict.doc"
+        }
+    ]
+}

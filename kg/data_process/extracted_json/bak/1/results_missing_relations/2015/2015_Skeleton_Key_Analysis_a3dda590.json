@@ -1,0 +1,272 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Skeleton Key",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0006"
+            ],
+            "Properties": {
+                "description": "Authentication bypass malware for Active Directory systems",
+                "persistence": "No persistence mechanism"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "ole64.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "MD5": "bf45086e6334f647fda33576e2a05826",
+                "SHA1": "5083b17ccc50dd0557dfc544f84e2ab55d6acd92",
+                "compile_time": "2014-02-19 09:31:29",
+                "size": "49664 bytes"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "msuta64.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "MD5": "66da7ed621149975f6e643b4f9886cfd",
+                "SHA1": "ad61e8daeeba43e442514b177a1b41ad4b7c6727",
+                "compile_time": "2012-09-20 08:07:12",
+                "size": "50688 bytes"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "PsExec",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "usage": "Used to deploy Skeleton Key remotely"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Active Directory",
+            "EntityType": "env",
+            "EntitySubType": "network",
+            "Labels": [
+                "TA0001",
+                "TA0006"
+            ],
+            "Properties": {
+                "authentication": "Single-factor (password only)"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Domain Controller",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003"
+            ],
+            "Properties": {
+                "role": "Authentication server"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "LSASS",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002",
+                "TA0006"
+            ],
+            "Properties": {
+                "description": "Local Security Authority Subsystem Service"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Jump Host",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Properties": {
+                "role": "Previously compromised system used for staging attacks"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Domain Administrator Credentials",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0006"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "NTLM password hash",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0006"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Dell SecureWorks CTU",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "role": "Security research organization"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Client Network",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Skeleton Key Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0006"
+            ],
+            "Properties": {
+                "timeframe": "April - July 2014"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Windows Server 2008 R2",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Windows Server 2008",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Windows Server 2003 R2",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "CDLocateCSystem",
+            "EntityType": "file",
+            "EntitySubType": "code",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "location": "cryptdll.dll"
+            }
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "SamIRetrieveMultiplePrimaryCredentials",
+            "EntityType": "file",
+            "EntitySubType": "code",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "location": "samsrv.dll"
+            }
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "SamIRetrievePrimaryCredentials",
+            "EntityType": "file",
+            "EntitySubType": "code",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "location": "samsrv.dll"
+            }
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "SeDebugPrivilege",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "VirtualProtectEx",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_22",
+            "EntityName": "WriteProcessMemory",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_23",
+            "EntityName": "YARA signature",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0043"
+            ],
+            "Properties": {
+                "purpose": "Detection of Skeleton Key"
+            }
+        }
+    ],
+    "Relationships": []
+}

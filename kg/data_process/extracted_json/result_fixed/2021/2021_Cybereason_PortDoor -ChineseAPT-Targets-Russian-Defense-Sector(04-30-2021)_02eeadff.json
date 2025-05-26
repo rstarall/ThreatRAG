@@ -1,0 +1,351 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "PortDoor Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0007",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "April 2021",
+                "observe_time": "2021",
+                "report_name": "2021_Cybereason_PortDoor -ChineseAPT-Targets-Russian-Defense-Sector(04-30-2021)_02eeadff"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Chinese APT Group",
+            "EntityVariantNames": [
+                "Tick",
+                "Tonto Team",
+                "TA428",
+                "Goblin Panda",
+                "Rancor"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China",
+                "sponsor": "State-sponsored"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Rubin Design Bureau",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Defense",
+                "country": "Russia"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "RoyalRoad",
+            "EntityVariantNames": [
+                "8.t Dropper",
+                "RTFexploit builder"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "version": "v7"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "PortDoor",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0007",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Backdoor"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CVE-2017-11882",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "CVE-2018-0798",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "CVE-2018-0802",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "e.o",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "winlog.wll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "45.63.27.162",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "role": "C2 Server"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "58097616.tmp",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Microsoft Word",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Spear-phishing Email",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "PortDoor Attack Event",
+            "Target": "Chinese APT Group"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "PortDoor Attack Event",
+            "Target": "Rubin Design Bureau"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Chinese APT Group",
+            "Target": "RoyalRoad"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Chinese APT Group",
+            "Target": "PortDoor"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Chinese APT Group",
+            "Target": "Spear-phishing Email"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "Chinese APT Group",
+            "Target": "Rubin Design Bureau"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "RoyalRoad",
+            "Target": "CVE-2017-11882"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "RoyalRoad",
+            "Target": "CVE-2018-0798"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "RoyalRoad",
+            "Target": "CVE-2018-0802"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "RoyalRoad",
+            "Target": "e.o"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "PortDoor",
+            "Target": "winlog.wll"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "PortDoor",
+            "Target": "45.63.27.162"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "PortDoor",
+            "Target": "58097616.tmp"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2017-11882",
+            "Target": "Microsoft Word"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2018-0798",
+            "Target": "Microsoft Word"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2018-0802",
+            "Target": "Microsoft Word"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "has",
+            "Source": "Rubin Design Bureau",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "belong_to",
+            "Source": "winlog.wll",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "belong_to",
+            "Source": "58097616.tmp",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "trigger",
+            "Source": "Rubin Design Bureau",
+            "Target": "Spear-phishing Email"
+        }
+    ]
+}

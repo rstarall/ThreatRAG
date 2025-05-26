@@ -1,0 +1,224 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Tor Exit Node in Russia",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0001",
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "ip": "78.24.222.229",
+                "country": "Russia"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Binary Patching Framework (BDF)",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002",
+                "TA0005"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "BDFProxy",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002",
+                "TA0005"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Microsoft Windows Automatic Updates",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Error Code 0×80200053",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Nullsoft Scriptable Install System (NSIS)",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "exitmap",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0043"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "patchingCheck.py",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0043"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "ExitNode 8361A794DFA231D863E109FC9EEEF21F4CF09DDD",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Binary Patching Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0005"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "2014-10-22",
+                "observe_time": "2014",
+                "report_name": "2014_Modified_Binaries_Tor_895f6ac6"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Windows PE files",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "MS 'Fixit' solution executable",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "Binary Patching Event",
+            "Target": "Tor Exit Node in Russia"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Binary Patching Event",
+            "Target": "BDFProxy"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "Binary Patching Event",
+            "Target": "Microsoft Windows Automatic Updates"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "target",
+            "Source": "Binary Patching Event",
+            "Target": "Nullsoft Scriptable Install System (NSIS)"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "BDFProxy",
+            "Target": "Binary Patching Framework (BDF)"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "exitmap",
+            "Target": "patchingCheck.py"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "affect",
+            "Source": "Tor Exit Node in Russia",
+            "Target": "Windows PE files"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "affect",
+            "Source": "Tor Exit Node in Russia",
+            "Target": "MS 'Fixit' solution executable"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "belong_to",
+            "Source": "ExitNode 8361A794DFA231D863E109FC9EEEF21F4CF09DDD",
+            "Target": "Tor Exit Node in Russia"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "belong_to",
+            "Source": "Error Code 0×80200053",
+            "Target": "Microsoft Windows Automatic Updates"
+        }
+    ]
+}

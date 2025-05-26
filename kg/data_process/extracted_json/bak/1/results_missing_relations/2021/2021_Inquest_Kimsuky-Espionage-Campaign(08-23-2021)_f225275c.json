@@ -1,0 +1,162 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Kimsuky",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0009"
+            ],
+            "Properties": {
+                "category": "APT",
+                "region": "North Korea"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Kimsuky Espionage Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0009"
+            ],
+            "Properties": {
+                "date": "June 2021"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Korean Foreign Ministry",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "20eff877aeff0afaa8a5d29fe272bdd61e49779b9e308c4a202ad868a901a5cd",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "type": "Javascript file",
+                "size": "27.31 MB"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "3251c02ff0fc90dccd79b94fb2064fb3d7f870c69192ac1f10ad136a43c1ccea",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0005"
+            ],
+            "Properties": {
+                "type": "PDF",
+                "size": "20.23 MB",
+                "role": "Decoy"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "0a4f2cff4d4613c08b39c9f18253af0fd356697368eecddf7c0fa560386377e6",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "type": "DLL x64",
+                "size": "190.00 KB",
+                "packer": "UPX"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "ae50cf4339ff2f2b3a50cf8e8027b818b18a0582e143e842bf41fdb00e0bfba5",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0009"
+            ],
+            "Properties": {
+                "type": "DLL x64",
+                "size": "474.50 KB",
+                "description": "Kimsuky Spy Tool"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "hxxp://texts.letterpaper[.]press",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "PowerShell Script",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Document Search Functionality",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009"
+            ],
+            "Properties": {
+                "targets": ".hwp, .pdf, .doc, .xls, .ppt, .txt"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Registry Persistence Mechanism",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0003"
+            ],
+            "Properties": {
+                "keys": "\\REGISTRY\\USER\\[...]\\RunOnce\\ESTsoftAutoUpdate"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Keylogger Functionality",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009"
+            ]
+        }
+    ],
+    "Relationships": []
+}

@@ -1,0 +1,218 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "CopyKittens",
+            "EntityVariantNames": [
+                "CopyKittens",
+                "Operation Wilted Tulip"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Iran",
+                "activity_since": "2013"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Operation Wilted Tulip",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "July 2017",
+                "report_authors": "ClearSky Cyber Security, Trend Micro",
+                "observe_time": "2017",
+                "report_name": "2017_Clearsky_Operation_Wilted_Tulip(07-25-2017)_a3a8c92d"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Israeli Government",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Government",
+                "country": "Israel"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Turkish Ministry of Foreign Affairs",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Government",
+                "country": "Turkey"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "TDTESS",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "113ca319e85778b62145019359380a08",
+                "type": "Backdoor"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Vminst",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "a60a32f21ac1a2ec33135a650aa8dc71",
+                "type": "Lateral Movement Tool"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Cobalt Strike",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "version": "Trial"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "CVE-2017-0199",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "akamaitechnology[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "38.130.75.20",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation Wilted Tulip",
+            "Target": "CopyKittens"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "target",
+            "Source": "CopyKittens",
+            "Target": "Israeli Government"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "CopyKittens",
+            "Target": "Cobalt Strike"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "CopyKittens",
+            "Target": "TDTESS"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "CopyKittens",
+            "Target": "CVE-2017-0199"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Cobalt Strike",
+            "Target": "akamaitechnology[.]com"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "belong_to",
+            "Source": "akamaitechnology[.]com",
+            "Target": "38.130.75.20"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "CopyKittens",
+            "Target": "Vminst"
+        }
+    ]
+}

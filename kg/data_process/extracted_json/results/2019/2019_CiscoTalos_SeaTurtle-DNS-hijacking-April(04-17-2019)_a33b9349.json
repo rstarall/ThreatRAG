@@ -1,0 +1,451 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Sea Turtle",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0006",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "region": "Middle East and North Africa",
+                "timeframe": "January 2017 - Q1 2019"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Sea Turtle Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0006",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "victims": "40 organizations across 13 countries",
+                "observe_time": "2019",
+                "report_name": "2019_CiscoTalos_SeaTurtle-DNS-hijacking-April(04-17-2019)_a33b9349"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Primary Victims",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "types": "National security organizations, ministries of foreign affairs, military organizations, intelligence agencies, prominent energy organizations",
+                "region": "Middle East and North Africa"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Secondary Victims",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "types": "Telecommunications organizations, internet service providers, IT firms, registrars, one registry"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2009-1151",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "description": "PHP code injection vulnerability affecting phpMyAdmin"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CVE-2014-6271",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "description": "RCE affecting GNU bash system (Shellshock)"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "CVE-2017-3881",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "description": "RCE by unauthenticated user with elevated privileges Cisco switches"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "CVE-2017-6736",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "description": "Remote Code Exploit (RCE) for Cisco integrated Service Router 2811"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "CVE-2017-12617",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "description": "RCE affecting Apache web servers running Tomcat"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "CVE-2018-0296",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "description": "Directory traversal allowing unauthorized access to Cisco ASAs and firewalls"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "CVE-2018-7600",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "description": "RCE for Website built with Drupal (Drupalgeddon)"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "ns1.intersecdns.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "ip": "95.179.150.101",
+                "timeframe": "March - April 2019"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "ns2.intersecdns.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "ip": "95.179.150.101",
+                "timeframe": "March - April 2019"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "ns1.lcjcomputing.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "ip": "95.179.150.101",
+                "timeframe": "January 2019"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "ns2.lcjcomputing.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "ip": "95.179.150.101",
+                "timeframe": "January 2019"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "199.247.3.191",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "timeframe": "November 2018",
+                "targets": "Albania, Iraq"
+            }
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "37.139.11.155",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "timeframe": "November 2018",
+                "targets": "Albania, UAE"
+            }
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "DNS Hijacking",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "description": "Modifying DNS records to point to actor-controlled servers"
+            }
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "Certificate Impersonation",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "description": "Obtaining certificates from different providers for same domain"
+            }
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": ".am ccTLD",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "registrar": "Amnic"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Sea Turtle Campaign",
+            "Target": "Sea Turtle"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Sea Turtle Campaign",
+            "Target": "Primary Victims"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "Sea Turtle Campaign",
+            "Target": "Secondary Victims"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Sea Turtle",
+            "Target": "DNS Hijacking"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Sea Turtle",
+            "Target": "Certificate Impersonation"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Sea Turtle",
+            "Target": "CVE-2009-1151"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Sea Turtle",
+            "Target": "CVE-2014-6271"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Sea Turtle",
+            "Target": "CVE-2017-3881"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Sea Turtle",
+            "Target": "CVE-2017-6736"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "Sea Turtle",
+            "Target": "CVE-2017-12617"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "Sea Turtle",
+            "Target": "CVE-2018-0296"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "use",
+            "Source": "Sea Turtle",
+            "Target": "CVE-2018-7600"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "target",
+            "Source": "Sea Turtle",
+            "Target": "Primary Victims"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "target",
+            "Source": "Sea Turtle",
+            "Target": "Secondary Victims"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "target",
+            "Source": "Sea Turtle",
+            "Target": ".am ccTLD"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "DNS Hijacking",
+            "Target": "ns1.intersecdns.com"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "DNS Hijacking",
+            "Target": "ns2.intersecdns.com"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "related_to",
+            "Source": "DNS Hijacking",
+            "Target": "ns1.lcjcomputing.com"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "related_to",
+            "Source": "DNS Hijacking",
+            "Target": "ns2.lcjcomputing.com"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "belong_to",
+            "Source": "ns1.intersecdns.com",
+            "Target": "199.247.3.191"
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "belong_to",
+            "Source": "ns2.intersecdns.com",
+            "Target": "37.139.11.155"
+        }
+    ]
+}

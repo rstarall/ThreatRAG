@@ -1,0 +1,231 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Madi",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0009",
+                "TA0010",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Infostealer",
+                "language": "Delphi",
+                "packer": "UPX 3.08"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "UpdateOffice.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Printhood directory"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "nam.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "location": "Templates directory",
+                "purpose": "BOT prefix/build"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "C&amp;C Server",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "url": "http://[C&amp;C address]/ASLK/asgari/mah/UeUeUeUe.htm"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "iexplore.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "location": "Templates directory",
+                "purpose": "Infostealer executable"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Keylogger",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "function": "Intercepts keystrokes",
+                "method": "SetWindowsHookEx with WH_KEYBOARD_LL"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Cobalt Strike",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Middle East Targets",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "countries": "Iran, Israel, Afghanistan"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Social Engineering",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "technique": "Displaying pictures, movies, documents"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Resource Hacker",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "file": "res.exe"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "Madi",
+            "Target": "UpdateOffice.exe"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "related_to",
+            "Source": "Madi",
+            "Target": "nam.dll"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "Madi",
+            "Target": "C&amp;C Server"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "Madi",
+            "Target": "iexplore.exe"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Madi",
+            "Target": "Keylogger"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Madi",
+            "Target": "Cobalt Strike"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "Madi",
+            "Target": "Middle East Targets"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Madi",
+            "Target": "Social Engineering"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Madi",
+            "Target": "Resource Hacker"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "belong_to",
+            "Source": "nam.dll",
+            "Target": "C&amp;C Server"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "iexplore.exe",
+            "Target": "C&amp;C Server"
+        }
+    ]
+}

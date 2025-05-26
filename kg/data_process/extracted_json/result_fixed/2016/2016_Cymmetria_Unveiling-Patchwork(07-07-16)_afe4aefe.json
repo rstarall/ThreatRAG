@@ -1,0 +1,226 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Patchwork",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "first_observed": "December 2015",
+                "targets": "Military and political personnel in Southeast Asia and South China Sea"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Government organization in Europe",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Government",
+                "location": "Europe"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "CVE-2014-4114",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "alias": "Sandworm",
+                "affected_software": "Microsoft Office PowerPoint 2003 and 2007"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "sysvolinfo.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "f5e4d5d5fde978968dce4db4120ecbb68898d5fdf55860e61058d91db29b7d91",
+                "type": "AutoIt compiled script"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "PowerSploit",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Meterpreter",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "type": "Reverse HTTPS",
+                "host": "45.43.192.172",
+                "port": "8443"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "7zip.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0007"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "hash": "9dae4a24095b9a3870579a63c94c73fe8de205c70d95dfdb0dc9c87709215953",
+                "persistence": "Copies to netvmon.exe in SysWOW64"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "212.129.13.110",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "purpose": "C2 server for AutoIt script"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "212.83.191.156",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "purpose": "C2 server for 7zip.exe"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "UACME",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0004"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "description": "UAC bypass method"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "target",
+            "Source": "Patchwork",
+            "Target": "Government organization in Europe"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Patchwork",
+            "Target": "CVE-2014-4114"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Patchwork",
+            "Target": "sysvolinfo.exe"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Patchwork",
+            "Target": "PowerSploit"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Patchwork",
+            "Target": "Meterpreter"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Patchwork",
+            "Target": "7zip.exe"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Patchwork",
+            "Target": "UACME"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "sysvolinfo.exe",
+            "Target": "212.129.13.110"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "7zip.exe",
+            "Target": "212.83.191.156"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2014-4114",
+            "Target": "Microsoft Office PowerPoint 2003 and 2007"
+        }
+    ]
+}

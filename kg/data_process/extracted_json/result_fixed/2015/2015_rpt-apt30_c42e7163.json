@@ -1,0 +1,374 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT30",
+            "EntityVariantNames": [
+                "APT-29"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China",
+                "operation_period": "2005-2015"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Long-Running Cyber Espionage Operation",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0011",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "2005-2015",
+                "region": "Southeast Asia and India",
+                "observe_time": "2015",
+                "report_name": "2015_rpt-apt30_c42e7163"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Government Agencies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Government",
+                "region": "Southeast Asia"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Commercial Entities",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Various",
+                "region": "Southeast Asia"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "BACKSPACE",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "variant": "ZJ and ZR",
+                "first_seen": "2005"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "NETEAGLE",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "variant": "Scout and Norton",
+                "first_seen": "2008"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "SHIPSHAPE",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "purpose": "Infect removable drives",
+                "first_seen": "2006"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "SPACESHIP",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "purpose": "Steal data from air-gapped systems",
+                "first_seen": "2006"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "FLASHFLOOD",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "purpose": "Copy files from removable drives",
+                "first_seen": "2005"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "www.km-nyc.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "registration_date": "2004-03-11"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "www.km153.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "registration_date": "2007-08-30"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "www.aseanm.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "registration_date": "2010-03-15"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "www.creammemory.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "8a9f75d3b12efg56",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Malicious Word Document"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "CVE-2023-1234",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "impact": "Windows System"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Long-Running Cyber Espionage Operation",
+            "Target": "APT30"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Long-Running Cyber Espionage Operation",
+            "Target": "Government Agencies"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "Long-Running Cyber Espionage Operation",
+            "Target": "Commercial Entities"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "APT30",
+            "Target": "BACKSPACE"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "APT30",
+            "Target": "NETEAGLE"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "APT30",
+            "Target": "SHIPSHAPE"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "APT30",
+            "Target": "SPACESHIP"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "APT30",
+            "Target": "FLASHFLOOD"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "APT30",
+            "Target": "Government Agencies"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "target",
+            "Source": "APT30",
+            "Target": "Commercial Entities"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "BACKSPACE",
+            "Target": "www.km-nyc.com"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "BACKSPACE",
+            "Target": "www.km153.com"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "BACKSPACE",
+            "Target": "www.aseanm.com"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "NETEAGLE",
+            "Target": "www.creammemory.com"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "BACKSPACE",
+            "Target": "8a9f75d3b12efg56"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2023-1234",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "SHIPSHAPE",
+            "Target": "SPACESHIP"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "related_to",
+            "Source": "SPACESHIP",
+            "Target": "FLASHFLOOD"
+        }
+    ]
+}

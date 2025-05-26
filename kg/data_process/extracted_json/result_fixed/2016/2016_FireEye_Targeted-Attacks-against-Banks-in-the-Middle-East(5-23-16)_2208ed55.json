@@ -1,0 +1,289 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Banks in Middle East Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0043",
+                "TA0001",
+                "TA0002",
+                "TA0006",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "May 2016",
+                "location": "Middle East",
+                "observe_time": "2016",
+                "report_name": "2016_FireEye_Targeted-Attacks-against-Banks-in-the-Middle-East(5-23-16)_2208ed55"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Unidentified Threat Actor",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0043",
+                "TA0001",
+                "TA0002",
+                "TA0006",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Middle East Banks",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Banking",
+                "region": "Middle East"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Macro-enabled XLS file",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Excel Document",
+                "technique": "Macro-enabled"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "update.vbs",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "path": "%PUBLIC%\\Libraries\\update.vbs"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "dns.ps1",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0010"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "path": "%PUBLIC%\\Libraries\\dns.ps1"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "go0gIe[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Custom Mimikatz",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "BAT Script",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0007"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Windows Vista+",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "GoogleUpdateTaskMachineUI",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Scheduled Task"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "DNS Exfiltration",
+            "EntityType": "method",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0010"
+            ],
+            "Times": [
+                "6"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Banks in Middle East Attack Event",
+            "Target": "Unidentified Threat Actor"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Banks in Middle East Attack Event",
+            "Target": "Middle East Banks"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Unidentified Threat Actor",
+            "Target": "Macro-enabled XLS file"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Unidentified Threat Actor",
+            "Target": "Custom Mimikatz"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Unidentified Threat Actor",
+            "Target": "DNS Exfiltration"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "Unidentified Threat Actor",
+            "Target": "Middle East Banks"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "trigger",
+            "Source": "Middle East Banks",
+            "Target": "Macro-enabled XLS file"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Macro-enabled XLS file",
+            "Target": "update.vbs"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Macro-enabled XLS file",
+            "Target": "dns.ps1"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "belong_to",
+            "Source": "update.vbs",
+            "Target": "Windows Vista+"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "dns.ps1",
+            "Target": "Windows Vista+"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "update.vbs",
+            "Target": "go0gIe[.]com"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "dns.ps1",
+            "Target": "go0gIe[.]com"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "Custom Mimikatz",
+            "Target": "go0gIe[.]com"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "BAT Script",
+            "Target": "go0gIe[.]com"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "DNS Exfiltration",
+            "Target": "go0gIe[.]com"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "GoogleUpdateTaskMachineUI",
+            "Target": "update.vbs"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "has",
+            "Source": "Middle East Banks",
+            "Target": "Windows Vista+"
+        }
+    ]
+}

@@ -1,0 +1,428 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Scarlet Mimic",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China",
+                "motivation": "Information gathering on minority activists"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Scarlet Mimic Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "duration": "4+ years",
+                "start_date": "2012",
+                "observe_time": "2016",
+                "report_name": "2016_PaloAlto_Scarlet-Mimic(Jan-24-16)_d7809593"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Uyghur and Tibetan activists",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "FakeM",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Windows backdoor",
+                "first_seen": "2013"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2012-0158",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CVE-2010-3333",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "CVE-2010-2883",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "CVE-2010-2572",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "CVE-2009-3129",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "spear-phishing",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "watering hole",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "MNKit",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "WingD",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Tran Duy Linh",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "CallMe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "target_os": "OS X"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "MobileOrder",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "target_os": "Android"
+            }
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "Psylo",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "HTRAN",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "Russian Federal Security Service",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "Indian government organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Scarlet Mimic Campaign",
+            "Target": "Scarlet Mimic"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Scarlet Mimic Campaign",
+            "Target": "Uyghur and Tibetan activists"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "Scarlet Mimic Campaign",
+            "Target": "Russian Federal Security Service"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "involve",
+            "Source": "Scarlet Mimic Campaign",
+            "Target": "Indian government organizations"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Scarlet Mimic",
+            "Target": "FakeM"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Scarlet Mimic",
+            "Target": "spear-phishing"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Scarlet Mimic",
+            "Target": "watering hole"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Scarlet Mimic",
+            "Target": "CVE-2012-0158"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Scarlet Mimic",
+            "Target": "CVE-2010-3333"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "Scarlet Mimic",
+            "Target": "CVE-2010-2883"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "Scarlet Mimic",
+            "Target": "CVE-2010-2572"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "use",
+            "Source": "Scarlet Mimic",
+            "Target": "CVE-2009-3129"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "use",
+            "Source": "Scarlet Mimic",
+            "Target": "MNKit"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "use",
+            "Source": "Scarlet Mimic",
+            "Target": "WingD"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "use",
+            "Source": "Scarlet Mimic",
+            "Target": "Tran Duy Linh"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "use",
+            "Source": "Scarlet Mimic",
+            "Target": "CallMe"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "use",
+            "Source": "Scarlet Mimic",
+            "Target": "MobileOrder"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "use",
+            "Source": "Scarlet Mimic",
+            "Target": "Psylo"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "use",
+            "Source": "Scarlet Mimic",
+            "Target": "HTRAN"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "target",
+            "Source": "Scarlet Mimic",
+            "Target": "Uyghur and Tibetan activists"
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "target",
+            "Source": "Scarlet Mimic",
+            "Target": "Russian Federal Security Service"
+        },
+        {
+            "RelationshipId": "relationship_22",
+            "RelationshipType": "target",
+            "Source": "Scarlet Mimic",
+            "Target": "Indian government organizations"
+        },
+        {
+            "RelationshipId": "relationship_23",
+            "RelationshipType": "related_to",
+            "Source": "FakeM",
+            "Target": "CallMe"
+        },
+        {
+            "RelationshipId": "relationship_24",
+            "RelationshipType": "related_to",
+            "Source": "FakeM",
+            "Target": "Psylo"
+        },
+        {
+            "RelationshipId": "relationship_25",
+            "RelationshipType": "related_to",
+            "Source": "FakeM",
+            "Target": "MobileOrder"
+        }
+    ]
+}

@@ -1,0 +1,132 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "HermeticWiper",
+            "EntityVariantNames": [
+                "FoxBlade"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Properties": {
+                "purpose": "Data destruction",
+                "target": "NTFS/FAT file systems",
+                "compiler": "Visual Studio 2008/2015",
+                "language": "C and assembly"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "PartyTicket",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Properties": {
+                "purpose": "Destructive ransomware (likely ruse)",
+                "email1": "vote2024forjb@protonmail.com",
+                "email2": "stephanie.jones2024@protonmail.com"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Ukrainian organizations attack event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0040"
+            ],
+            "Properties": {
+                "date": "February 23, 2022",
+                "location": "Ukraine, Latvia, Lithuania"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Ukrainian organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "sector": "Finance and government contracting"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Hermetica Digital Ltd",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0042"
+            ],
+            "Properties": {
+                "role": "Code signing certificate issuer"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Russian state-associated actors",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0040"
+            ],
+            "Properties": {
+                "suspected": "True",
+                "similar_to": "Sandworm, NotPetya, WhisperGate"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Microsoft Exchange server",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "vulnerability": "SMB-based attack"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Apache Tomcat server",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "EaseUS Partition Master drivers",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0005"
+            ],
+            "Properties": {
+                "signer": "CHENGDU YIWO Tech Development Co., Ltd."
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Active Directory server",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0008"
+            ]
+        }
+    ],
+    "Relationships": []
+}

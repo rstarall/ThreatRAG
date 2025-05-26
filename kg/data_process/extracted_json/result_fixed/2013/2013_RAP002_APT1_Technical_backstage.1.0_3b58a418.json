@@ -1,0 +1,246 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT1",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "China"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Poison Ivy",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "version": "2.3.2",
+                "port": "3460"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Terminator RAT",
+            "EntityVariantNames": [
+                "Fakem RAT"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "version": "3.6"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "113.10.246.0/24",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "ISP": "NWT Broadband Service"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "202.65.220.0/24",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "ISP": "Pacific Scene"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "202.67.215.0/24",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "ISP": "HKNet Company"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "210.3.0.0/17",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "ISP": "Hutchison Global Communications"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "219.76.239.216/29",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "ISP": "WINCOME CROWN LIMITED"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "70.39.64.0/18",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "ISP": "Sharktech"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "xPort.exe",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "MD5": "2aabd170dae5982e5d93dc6fd9f2723a"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Government Agency",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "6"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "APT1",
+            "Target": "Poison Ivy"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "APT1",
+            "Target": "Terminator RAT"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "APT1",
+            "Target": "xPort.exe"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "target",
+            "Source": "APT1",
+            "Target": "Government Agency"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "belong_to",
+            "Source": "113.10.246.0/24",
+            "Target": "APT1"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "belong_to",
+            "Source": "202.65.220.0/24",
+            "Target": "APT1"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "belong_to",
+            "Source": "202.67.215.0/24",
+            "Target": "APT1"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "belong_to",
+            "Source": "210.3.0.0/17",
+            "Target": "APT1"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "belong_to",
+            "Source": "219.76.239.216/29",
+            "Target": "APT1"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "belong_to",
+            "Source": "70.39.64.0/18",
+            "Target": "APT1"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Poison Ivy",
+            "Target": "Terminator RAT"
+        }
+    ]
+}

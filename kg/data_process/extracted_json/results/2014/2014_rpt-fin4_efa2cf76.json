@@ -1,0 +1,226 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "FIN4",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0006",
+                "TA0007",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "activity_period": "Since mid-2013",
+                "target_industries": "Healthcare, Pharmaceuticals, Financial Advisory"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Healthcare and Pharmaceutical Companies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "count": "100+",
+                "percentage": "68% of targets"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Advisory Firms",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "percentage": "20% of targets",
+                "types": "Legal counsel, Investment banking, Investor relations"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "VBA Macros",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "function": "Credential theft",
+                "delivery": "Embedded in legitimate documents"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Fake OWA Login Pages",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001",
+                "TA0006"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "junomaat81[.]us",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "C2 domain"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "lifehealthsanfrancisco2015[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "C2 domain"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Tor Network",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "purpose": "Anonymize email access"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Outlook Email Rules",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "function": "Delete security alert emails",
+                "keywords": "hacked, phish, malware"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Campaign Codes",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0007"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "examples": "CEO_CFO_COO_CORPDEV, SCIENTISTS_AND_RESEARCH",
+                "count": "70+ unique codes"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "target",
+            "Source": "FIN4",
+            "Target": "Healthcare and Pharmaceutical Companies"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "target",
+            "Source": "FIN4",
+            "Target": "Advisory Firms"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "FIN4",
+            "Target": "VBA Macros"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "FIN4",
+            "Target": "Fake OWA Login Pages"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "VBA Macros",
+            "Target": "Campaign Codes"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "belong_to",
+            "Source": "Campaign Codes",
+            "Target": "VBA Macros"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "FIN4",
+            "Target": "Tor Network"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "FIN4",
+            "Target": "Outlook Email Rules"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "VBA Macros",
+            "Target": "junomaat81[.]us"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "VBA Macros",
+            "Target": "lifehealthsanfrancisco2015[.]com"
+        }
+    ]
+}

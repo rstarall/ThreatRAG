@@ -1,0 +1,222 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT41",
+            "EntityVariantNames": [
+                "BARIUM",
+                "Winnti"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China",
+                "motivation": "Dual (Espionage and Financial)",
+                "activity_start": "2014"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Zhang Xuguang",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "alias": "Wolfzhi",
+                "forum_activity": "Chinese-language forums"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Healthcare Sector",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "industry": "Healthcare"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Video Game Industry",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0010"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "industry": "Gaming",
+                "target": "Virtual currencies, source code"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CHM Files",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Compiled HTML",
+                "usage": "Spear-phishing attachments"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "MBR Bootkits",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0005"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "type": "Rootkit",
+                "purpose": "Persistence, stealth"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Digital Certificates",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "usage": "Malware signing"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Supply Chain Compromise",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "technique": "Code injection into legitimate files"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "China's Five-Year Economic Development Plans",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0043"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "role": "Targeting alignment",
+                "observe_time": "2019",
+                "report_name": "2019_Fireeye_APT41-Dual-Espionage-Cyber-Crime-WebPage(08-07-2019)_ce9054db"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "APT41",
+            "Target": "Zhang Xuguang"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "target",
+            "Source": "APT41",
+            "Target": "Healthcare Sector"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "APT41",
+            "Target": "Video Game Industry"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "APT41",
+            "Target": "CHM Files"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "APT41",
+            "Target": "MBR Bootkits"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "APT41",
+            "Target": "Digital Certificates"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "APT41",
+            "Target": "Supply Chain Compromise"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Supply Chain Compromise",
+            "Target": "Digital Certificates"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "China's Five-Year Economic Development Plans",
+            "Target": "Healthcare Sector"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "China's Five-Year Economic Development Plans",
+            "Target": "Video Game Industry"
+        }
+    ]
+}

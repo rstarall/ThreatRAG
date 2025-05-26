@@ -1,0 +1,335 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Molerats APT",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0007",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "region": "Middle East"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Middle East Espionage Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0007",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "July 2021 - December 2021",
+                "observe_time": "2022",
+                "report_name": "2022_Zscaler_Molerats-APT-targeting-Middle-East(01-20-2022)_51172f35"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Banking Sector in Palestine",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Palestinian Political Parties",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Human Rights Activists in Turkey",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Journalists in Turkey",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "46e03f21a95afa321b88e44e7e399ec3",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Macro-based MS Office file"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "http://45.63.49.202/document.html",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "servicehost.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "path": "C:\\ProgramData\\servicehost.exe",
+                "packer": "ConfuserEx"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Dropbox API",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011",
+                "TA0010"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "msupdata.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "45.63.49.202",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "185.244.39.165",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Spark backdoor",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "7"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Middle East Espionage Attack",
+            "Target": "Molerats APT"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Middle East Espionage Attack",
+            "Target": "Banking Sector in Palestine"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "Middle East Espionage Attack",
+            "Target": "Palestinian Political Parties"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "involve",
+            "Source": "Middle East Espionage Attack",
+            "Target": "Human Rights Activists in Turkey"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "involve",
+            "Source": "Middle East Espionage Attack",
+            "Target": "Journalists in Turkey"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Molerats APT",
+            "Target": "46e03f21a95afa321b88e44e7e399ec3"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Molerats APT",
+            "Target": "Dropbox API"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Molerats APT",
+            "Target": "Spark backdoor"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "Molerats APT",
+            "Target": "Banking Sector in Palestine"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "target",
+            "Source": "Molerats APT",
+            "Target": "Palestinian Political Parties"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "target",
+            "Source": "Molerats APT",
+            "Target": "Human Rights Activists in Turkey"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "target",
+            "Source": "Molerats APT",
+            "Target": "Journalists in Turkey"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "46e03f21a95afa321b88e44e7e399ec3",
+            "Target": "http://45.63.49.202/document.html"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "http://45.63.49.202/document.html",
+            "Target": "servicehost.exe"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "belong_to",
+            "Source": "msupdata.com",
+            "Target": "45.63.49.202"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "belong_to",
+            "Source": "msupdata.com",
+            "Target": "185.244.39.165"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "affect",
+            "Source": "servicehost.exe",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "has",
+            "Source": "Banking Sector in Palestine",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "has",
+            "Source": "Palestinian Political Parties",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "has",
+            "Source": "Human Rights Activists in Turkey",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "has",
+            "Source": "Journalists in Turkey",
+            "Target": "Windows System"
+        }
+    ]
+}

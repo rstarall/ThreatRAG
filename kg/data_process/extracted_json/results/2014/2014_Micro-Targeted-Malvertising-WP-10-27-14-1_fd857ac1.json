@@ -1,0 +1,354 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Operation DeathClick",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "September-October 2014",
+                "target": "US Defense Industrial Base",
+                "observe_time": "2014",
+                "report_name": "2014_Micro-Targeted-Malvertising-WP-10-27-14-1_fd857ac1"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "APT-29",
+            "EntityVariantNames": [
+                "Cozy Bear"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Russia"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "US Defense Industrial Base",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Real-Time Bidding Networks",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "description": "Micro-targeting advertising platform"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "DoubleClick",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Pubmatic",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "First-Impression.com",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "fvJcrgR0.exe",
+            "EntityType": "malware",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "8a9f75d3b12efg56",
+                "type": "Backdoor Trojan"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "CryptoWall 2.0",
+            "EntityType": "malware",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0040"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Ransomware"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Fleaflicker.com",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Gpokr.com",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Webmail.earthlink.net",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "24.234.123.133",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Java-based exploit",
+            "EntityType": "tool",
+            "EntitySubType": "exploit",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Invincea",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "type": "Endpoint Protection"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation DeathClick",
+            "Target": "APT-29"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Operation DeathClick",
+            "Target": "US Defense Industrial Base"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "Real-Time Bidding Networks"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "DoubleClick"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "Pubmatic"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "First-Impression.com"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "fvJcrgR0.exe"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "CryptoWall 2.0"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "Java-based exploit"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "US Defense Industrial Base"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "Fleaflicker.com"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "Gpokr.com"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "Webmail.earthlink.net"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "Real-Time Bidding Networks",
+            "Target": "DoubleClick"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "Real-Time Bidding Networks",
+            "Target": "Pubmatic"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "Real-Time Bidding Networks",
+            "Target": "First-Impression.com"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "Java-based exploit",
+            "Target": "fvJcrgR0.exe"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "belong_to",
+            "Source": "fvJcrgR0.exe",
+            "Target": "24.234.123.133"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "affect",
+            "Source": "fvJcrgR0.exe",
+            "Target": "US Defense Industrial Base"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "affect",
+            "Source": "CryptoWall 2.0",
+            "Target": "US Defense Industrial Base"
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "has",
+            "Source": "US Defense Industrial Base",
+            "Target": "Fleaflicker.com"
+        },
+        {
+            "RelationshipId": "relationship_22",
+            "RelationshipType": "has",
+            "Source": "US Defense Industrial Base",
+            "Target": "Gpokr.com"
+        },
+        {
+            "RelationshipId": "relationship_23",
+            "RelationshipType": "has",
+            "Source": "US Defense Industrial Base",
+            "Target": "Webmail.earthlink.net"
+        }
+    ]
+}

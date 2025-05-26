@@ -1,0 +1,128 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Winnti Group",
+            "EntityVariantNames": [
+                "APT-29",
+                "Cozy Bear",
+                "YDTeam"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Properties": {
+                "country": "China",
+                "activity": "Since 2009"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "CompanyXYZ",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "industry": "Online Gaming"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Backdoor.Win32.Winnti",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "PlugX",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "AheadLib",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "211.60.126.164",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "location": "Seoul, South Korea"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "113.196.70.169",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "location": "Taipei, Taiwan"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "googlefiles.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "CompanyXYZ Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003"
+            ],
+            "Properties": {
+                "date": "September 2012"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "KOG Co., Ltd Certificate",
+            "EntityType": "vul",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "serial": "66 e3 f0 b4 45 9f 15 ac 7f 2a 2b 44 99 0d d7 09"
+            }
+        }
+    ],
+    "Relationships": []
+}

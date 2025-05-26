@@ -1,0 +1,268 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Visa",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Credit Card"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Oracle MICROS Breach",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0006",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "August 2016",
+                "observe_time": "2016",
+                "report_name": "2016_BrianKrebs_Carbanak-Oracle-breach(08-13-2016)_3f016a9a"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Oracle",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "division": "MICROS"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Carbanak Gang",
+            "EntityVariantNames": [
+                "Eastern European organized cybercrime gang"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0006",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "region": "Eastern Europe"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "MalumPOS",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0006"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "target": "MICROS POS systems"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "WSO Web Shell",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "MICROS point-of-sale systems",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "count": "330,000+"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Oracle MICROS support portal",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Manassas, Va data center",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Virginia, USA"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Kimpton Hotels",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "industry": "Hospitality"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "HTNG",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "industry": "Hospitality Technology"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "192.169.82.86",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Oracle MICROS Breach",
+            "Target": "Oracle"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Oracle MICROS Breach",
+            "Target": "Carbanak Gang"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "Carbanak Gang",
+            "Target": "Oracle"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Carbanak Gang",
+            "Target": "MalumPOS"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Carbanak Gang",
+            "Target": "WSO Web Shell"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "Carbanak Gang",
+            "Target": "MICROS point-of-sale systems"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "Carbanak Gang",
+            "Target": "Oracle MICROS support portal"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "has",
+            "Source": "Oracle",
+            "Target": "MICROS point-of-sale systems"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "has",
+            "Source": "Oracle",
+            "Target": "Oracle MICROS support portal"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "has",
+            "Source": "Oracle",
+            "Target": "Manassas, Va data center"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "MalumPOS",
+            "Target": "MICROS point-of-sale systems"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "WSO Web Shell",
+            "Target": "Oracle MICROS support portal"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "belong_to",
+            "Source": "192.169.82.86",
+            "Target": "Carbanak Gang"
+        }
+    ]
+}

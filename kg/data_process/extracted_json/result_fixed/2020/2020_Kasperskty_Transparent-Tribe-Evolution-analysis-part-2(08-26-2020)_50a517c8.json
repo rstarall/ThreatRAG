@@ -1,0 +1,307 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Transparent Tribe",
+            "EntityVariantNames": [
+                "PROJECTM",
+                "MYTHIC LEOPARD"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0009",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Pakistan",
+                "target": "Indian military and government personnel"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Indian military and government personnel",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Crimson RAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0009"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "AhMyth Android RAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0009"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "ObliqueRAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0009"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "sharingmymedia[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "ip": "89.45.67.160",
+                "registration_date": "2020-01-10"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "89.45.67.160",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "sharemydrives[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "ip": "89.45.67.160",
+                "registration_date": "2020-01-03"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "tryanotherhorse[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "212.8.240.221",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Desi-porn.apk",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "0294F46D0E8CB5377F97B49EA3593C25"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Aarogya Setu.apk",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "5F563A38E3B98A7BC6C65555D0AD5CFD"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "wifeexchange.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "D7D6889BFA96724F7B3F951BC06E8C02"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "WhatsApp",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "target",
+            "Source": "Transparent Tribe",
+            "Target": "Indian military and government personnel"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Transparent Tribe",
+            "Target": "Crimson RAT"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Transparent Tribe",
+            "Target": "AhMyth Android RAT"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Transparent Tribe",
+            "Target": "ObliqueRAT"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Transparent Tribe",
+            "Target": "sharingmymedia[.]com"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Transparent Tribe",
+            "Target": "sharemydrives[.]com"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Transparent Tribe",
+            "Target": "tryanotherhorse[.]com"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Transparent Tribe",
+            "Target": "212.8.240.221"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Transparent Tribe",
+            "Target": "Desi-porn.apk"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "Transparent Tribe",
+            "Target": "Aarogya Setu.apk"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "Transparent Tribe",
+            "Target": "wifeexchange.exe"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "use",
+            "Source": "Transparent Tribe",
+            "Target": "WhatsApp"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "AhMyth Android RAT",
+            "Target": "Desi-porn.apk"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "AhMyth Android RAT",
+            "Target": "Aarogya Setu.apk"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "ObliqueRAT",
+            "Target": "wifeexchange.exe"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "belong_to",
+            "Source": "Desi-porn.apk",
+            "Target": "sharemydrives[.]com"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "belong_to",
+            "Source": "wifeexchange.exe",
+            "Target": "sharemydrives[.]com"
+        }
+    ]
+}

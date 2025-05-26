@@ -1,0 +1,225 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Regin",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Hopscotch",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0008",
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "MD5": "6c34031d7a5fc2b091b623981a8ae61c",
+                "Size": "36864 bytes",
+                "Type": "Win32 EXE",
+                "Compiled": "2006.03.22 19:09:29 (GMT)"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "SVCSTAT.EXE",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "MD5": "42eaf2ab25c9ead201f25ecbdc96fb60",
+                "Size": "18432 bytes",
+                "Type": "Win32 EXE",
+                "Compiled": "2006.03.22 19:09:29 (GMT)"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Legspin",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0007",
+                "TA0009"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "MD5": "29105f46e4d33f66fee346cfd099d1cc",
+                "Size": "67584 bytes",
+                "Type": "Win32 EXE",
+                "Compiled": "2003.03.17 08:33:50 (GMT)"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "IPC$",
+            "EntityType": "asset",
+            "EntitySubType": "network",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "ADMIN$",
+            "EntityType": "asset",
+            "EntitySubType": "network",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "RC4",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "dllhost.exe",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "svchost.exe",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "NetBIOS",
+            "EntityType": "env",
+            "EntitySubType": "network",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Service Control Manager",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "related_to",
+            "Source": "Regin",
+            "Target": "Hopscotch"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "related_to",
+            "Source": "Regin",
+            "Target": "Legspin"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "Hopscotch",
+            "Target": "SVCSTAT.EXE"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "Hopscotch",
+            "Target": "IPC$"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "Hopscotch",
+            "Target": "ADMIN$"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Hopscotch",
+            "Target": "RC4"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "SVCSTAT.EXE",
+            "Target": "dllhost.exe"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "SVCSTAT.EXE",
+            "Target": "svchost.exe"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "SVCSTAT.EXE",
+            "Target": "Service Control Manager"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Legspin",
+            "Target": "NetBIOS"
+        }
+    ]
+}

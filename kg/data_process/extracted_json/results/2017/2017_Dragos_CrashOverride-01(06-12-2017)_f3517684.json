@@ -1,0 +1,341 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "ELECTRUM",
+            "EntityVariantNames": [
+                "Sandworm team"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "CRASHOVERRIDE",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0040"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Ukraine transmission substation attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "December 17, 2016",
+                "location": "Kiev, Ukraine",
+                "observe_time": "2017",
+                "report_name": "2017_Dragos_CrashOverride-01(06-12-2017)_f3517684"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Ukrainian power companies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "195.16.88.6",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "C2 server"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "93.115.27.57",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "C2 server"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "5.39.218.152",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "C2 server"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "CVE-2015-5374",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "impact": "Siemens SIPROTEC digital relay DoS"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "IEC 104 protocol",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "IEC 61850 protocol",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "OPC protocol",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0007"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "ABB PCM600",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Siemens SIPROTEC",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Data Wiper Module",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Launcher Module",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Backdoor/RAT Module",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Ukraine transmission substation attack",
+            "Target": "ELECTRUM"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Ukraine transmission substation attack",
+            "Target": "Ukrainian power companies"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "ELECTRUM",
+            "Target": "CRASHOVERRIDE"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "target",
+            "Source": "ELECTRUM",
+            "Target": "Ukrainian power companies"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "CRASHOVERRIDE",
+            "Target": "Backdoor/RAT Module"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "CRASHOVERRIDE",
+            "Target": "Launcher Module"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "CRASHOVERRIDE",
+            "Target": "Data Wiper Module"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "CRASHOVERRIDE",
+            "Target": "IEC 104 protocol"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "CRASHOVERRIDE",
+            "Target": "IEC 61850 protocol"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "CRASHOVERRIDE",
+            "Target": "OPC protocol"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "ELECTRUM",
+            "Target": "195.16.88.6"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "use",
+            "Source": "ELECTRUM",
+            "Target": "93.115.27.57"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "use",
+            "Source": "ELECTRUM",
+            "Target": "5.39.218.152"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2015-5374",
+            "Target": "Siemens SIPROTEC"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "use",
+            "Source": "ELECTRUM",
+            "Target": "CVE-2015-5374"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "affect",
+            "Source": "Data Wiper Module",
+            "Target": "ABB PCM600"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "has",
+            "Source": "Ukrainian power companies",
+            "Target": "ABB PCM600"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "has",
+            "Source": "Ukrainian power companies",
+            "Target": "Siemens SIPROTEC"
+        }
+    ]
+}

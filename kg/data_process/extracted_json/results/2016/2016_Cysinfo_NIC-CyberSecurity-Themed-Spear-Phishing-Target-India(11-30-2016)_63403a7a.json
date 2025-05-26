@@ -1,0 +1,313 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Unknown Attacker Group",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "target": "Indian Government Organizations"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "NIC Cyber Security Spear Phishing Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "1 month ago",
+                "location": "India",
+                "observe_time": "2016",
+                "report_name": "2016_Cysinfo_NIC-CyberSecurity-Themed-Spear-Phishing-Target-India(11-30-2016)_63403a7a"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Indian Government Organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "sector": "Government"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "NIC-Cyber Security SOP.doc",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Malicious Word Document"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "WINWORD.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "4dc28faeb77550174b936d9ba97d4679",
+                "location": "Startup directory"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "webmail[.]duia[.]in",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "95[.]23[.]26[.]28",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "185[.]100[.]86[.]174",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "hxxps://webmail[.]duia[.]in/webmail.php",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Malicious Macro Code",
+            "EntityType": "file",
+            "EntitySubType": "code",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "MS015-0012.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "location": "%Temp%\\WindowsUpdates"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "MS015-0012.vbs",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "location": "%Temp%\\WindowsUpdates"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "MS015-0012.vbe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "location": "%Temp%\\WindowsUpdates"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Spoofed Ministry of Defence Email",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "http://meity.gov.in/sites/upload_files/dit/files/Plan_Report_on_Cyber_Security.pdf",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Legitimate PDF Document"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "NIC Cyber Security Spear Phishing Attack",
+            "Target": "Unknown Attacker Group"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "NIC Cyber Security Spear Phishing Attack",
+            "Target": "Indian Government Organizations"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "Unknown Attacker Group",
+            "Target": "Indian Government Organizations"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Unknown Attacker Group",
+            "Target": "NIC-Cyber Security SOP.doc"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Unknown Attacker Group",
+            "Target": "Spoofed Ministry of Defence Email"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Unknown Attacker Group",
+            "Target": "http://meity.gov.in/sites/upload_files/dit/files/Plan_Report_on_Cyber_Security.pdf"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "NIC-Cyber Security SOP.doc",
+            "Target": "Malicious Macro Code"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "affect",
+            "Source": "Malicious Macro Code",
+            "Target": "WINWORD.exe"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "belong_to",
+            "Source": "WINWORD.exe",
+            "Target": "webmail[.]duia[.]in"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "belong_to",
+            "Source": "webmail[.]duia[.]in",
+            "Target": "95[.]23[.]26[.]28"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "webmail[.]duia[.]in",
+            "Target": "185[.]100[.]86[.]174"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "WINWORD.exe",
+            "Target": "MS015-0012.exe"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "WINWORD.exe",
+            "Target": "MS015-0012.vbs"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "WINWORD.exe",
+            "Target": "MS015-0012.vbe"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "trigger",
+            "Source": "Indian Government Organizations",
+            "Target": "NIC-Cyber Security SOP.doc"
+        }
+    ]
+}

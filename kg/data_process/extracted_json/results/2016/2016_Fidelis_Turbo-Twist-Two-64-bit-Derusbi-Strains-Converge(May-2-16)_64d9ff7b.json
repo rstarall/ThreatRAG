@@ -1,0 +1,273 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "C0d0s0 Team",
+            "EntityVariantNames": [
+                "Sunshop Group"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Turbo Twist Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "May 2016",
+                "observe_time": "2016",
+                "report_name": "2016_Fidelis_Turbo-Twist-Two-64-bit-Derusbi-Strains-Converge(May-2-16)_64d9ff7b"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Derusbi PGV_PVID",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "64-bit Windows variant",
+                "compiled_date": "2013-2014"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Bergard APT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Rekaf",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "google-dash[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "first_seen": "04-09-2016",
+                "last_seen": "04-19-2016"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "office365e[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "first_seen": "04-25-2016",
+                "last_seen": "04-29-2016"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "121.54.168[.]216",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "3e4fbb9190227848af32dacb17e9fd17",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "compiled_date": "12/4/14"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "b93197e2aa147fe6b70695ae7bb298b0",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "compiled_date": "12/4/14"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "payload_service_x64.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Yara detection rule",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0007"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "U.S. defense contractors",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Defense"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Turbo Twist Attack Event",
+            "Target": "C0d0s0 Team"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "C0d0s0 Team",
+            "Target": "Derusbi PGV_PVID"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "C0d0s0 Team",
+            "Target": "Bergard APT"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "C0d0s0 Team",
+            "Target": "Rekaf"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "C0d0s0 Team",
+            "Target": "U.S. defense contractors"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Derusbi PGV_PVID",
+            "Target": "Bergard APT"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Derusbi PGV_PVID",
+            "Target": "Rekaf"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "belong_to",
+            "Source": "google-dash[.]com",
+            "Target": "Derusbi PGV_PVID"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "belong_to",
+            "Source": "office365e[.]com",
+            "Target": "Derusbi PGV_PVID"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "belong_to",
+            "Source": "3e4fbb9190227848af32dacb17e9fd17",
+            "Target": "Derusbi PGV_PVID"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "b93197e2aa147fe6b70695ae7bb298b0",
+            "Target": "Derusbi PGV_PVID"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Yara detection rule",
+            "Target": "Derusbi PGV_PVID"
+        }
+    ]
+}

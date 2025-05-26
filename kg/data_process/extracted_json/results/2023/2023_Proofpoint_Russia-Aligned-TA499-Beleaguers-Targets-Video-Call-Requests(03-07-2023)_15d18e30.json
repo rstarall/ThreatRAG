@@ -1,0 +1,241 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "TA499",
+            "EntityVariantNames": [
+                "Vovan",
+                "Lexus"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0043",
+                "TA0001",
+                "TA0005"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "alignment": "Russia-aligned",
+                "activity_start": "2021"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "TA499 Video Call Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0043",
+                "TA0001",
+                "TA0005"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "2021-2023",
+                "target_region": "North America, Europe",
+                "observe_time": "2023",
+                "report_name": "2023_Proofpoint_Russia-Aligned-TA499-Beleaguers-Targets-Video-Call-Requests(03-07-2023)_15d18e30"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "High-profile Targets",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Government officials, CEOs, celebrities",
+                "criteria": "Opposed Russian actions or supported Ukraine"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "oleksandrmerezhko[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "usage": "2021 & 2022 campaigns"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "office@oleksandrmerezhko[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "email",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "usage": "2021 & 2022 campaigns"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "embassy.usa@ukr[.]net",
+            "EntityType": "ioc",
+            "EntitySubType": "email",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "impersonation": "Embassy of Ukraine to the US"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "iaea[.]co[.]uk",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "impersonation": "International Atomic Energy Agency"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Video Call Requests",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "purpose": "Social engineering for propaganda"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Deepfake Technology",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "7"
+            ],
+            "Properties": {
+                "usage": "Impersonation in video calls"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "YouTube/RUTUBE",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0010"
+            ],
+            "Times": [
+                "8"
+            ],
+            "Properties": {
+                "usage": "Propaganda dissemination"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "TA499 Video Call Campaign",
+            "Target": "TA499"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "TA499 Video Call Campaign",
+            "Target": "High-profile Targets"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "TA499",
+            "Target": "oleksandrmerezhko[.]com"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "TA499",
+            "Target": "office@oleksandrmerezhko[.]com"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "TA499",
+            "Target": "embassy.usa@ukr[.]net"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "TA499",
+            "Target": "iaea[.]co[.]uk"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "TA499",
+            "Target": "Video Call Requests"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "TA499",
+            "Target": "Deepfake Technology"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "TA499",
+            "Target": "High-profile Targets"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Video Call Requests",
+            "Target": "Deepfake Technology"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "oleksandrmerezhko[.]com",
+            "Target": "TA499"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "affect",
+            "Source": "Deepfake Technology",
+            "Target": "High-profile Targets"
+        }
+    ]
+}

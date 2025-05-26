@@ -1,0 +1,279 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Trojan.APT.Seinup",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Backdoor",
+                "function": "Remote control"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Spear Phishing Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "target": "ASEAN countries",
+                "observe_time": "2013",
+                "report_name": "2013_Trojan.APT.Seinup_26fb717e"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "ASEAN Countries",
+            "EntityVariantNames": [
+                "Brunei",
+                "Cambodia",
+                "Indonesia",
+                "Laos",
+                "Malaysia",
+                "Myanmar",
+                "Philippines",
+                "Singapore",
+                "Thailand",
+                "Vietnam"
+            ],
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CVE-2012-0158",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "exp1ore.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "md5": "137F3D11559E9D986D510AF34CB61FBC",
+                "role": "Dropper"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "wab.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "md5": "CE67AAA163A4915BA408B2C1D5CCC7CC",
+                "role": "Benign Address Book Application"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "wab32res.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "md5": "FB2FA42F052D0A86CBDCE03F5C46DD4D",
+                "technique": "DLL side-loading"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "msnetrsvw.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "md5": "FB2FA42F052D0A86CBDCE03F5C46DD4D",
+                "role": "Windows service"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "elizabearden.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "ip": "124.172.243.211",
+                "country": "CN",
+                "registrar": "XIN NET TECHNOLOGY CORPORATION"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "dnsserviceonline.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "ip": "50.117.115.83",
+                "country": "CN",
+                "registrar": "XIN NET TECHNOLOGY CORPORATION"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Google Docs",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0011",
+                "TA0005"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "purpose": "Command and control redirection"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Spear Phishing Attack",
+            "Target": "ASEAN Countries"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2012-0158",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "Trojan.APT.Seinup",
+            "Target": "exp1ore.exe"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "Trojan.APT.Seinup",
+            "Target": "wab32res.dll"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "Trojan.APT.Seinup",
+            "Target": "msnetrsvw.exe"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "belong_to",
+            "Source": "wab32res.dll",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "belong_to",
+            "Source": "msnetrsvw.exe",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Trojan.APT.Seinup",
+            "Target": "Google Docs"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Trojan.APT.Seinup",
+            "Target": "elizabearden.com"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Trojan.APT.Seinup",
+            "Target": "dnsserviceonline.com"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "affect",
+            "Source": "exp1ore.exe",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "affect",
+            "Source": "wab.exe",
+            "Target": "Windows System"
+        }
+    ]
+}

@@ -1,0 +1,234 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "FinFisher",
+            "EntityVariantNames": [
+                "FinSpy",
+                "FinFisher remote monitoring solution"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "developer": "Gamma International GmbH"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Gamma International GmbH",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Munich, Germany"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "FinSpy Command & Control Servers",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "count": "36",
+                "countries": "25"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Ethiopian FinSpy Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "target": "Ginbot 7 opposition group",
+                "observe_time": "2013",
+                "report_name": "2013_15-2013-youonlyclicktwice_6028415e"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Ginbot 7",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "country": "Ethiopia"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Vietnamese FinSpy Mobile Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "platform": "Android",
+                "observe_time": "2013",
+                "report_name": "2013_15-2013-youonlyclicktwice_6028415e"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "FinSpy Mobile",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "platforms": "iOS, Android, Windows Mobile, Symbian, Blackberry"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "213.55.99.74",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "provider": "Ethio Telecom",
+                "country": "Ethiopia"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "183.91.2.199",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "provider": "CMC Telecom Infrastructure Company",
+                "country": "Vietnam"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "+841257725403",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0010"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "type": "SMS command and control"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "Gamma International GmbH",
+            "Target": "FinFisher"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "related_to",
+            "Source": "FinFisher",
+            "Target": "FinSpy Command & Control Servers"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "Ethiopian FinSpy Campaign",
+            "Target": "Gamma International GmbH"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "involve",
+            "Source": "Ethiopian FinSpy Campaign",
+            "Target": "Ginbot 7"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "Gamma International GmbH",
+            "Target": "Ginbot 7"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "belong_to",
+            "Source": "FinSpy Command & Control Servers",
+            "Target": "213.55.99.74"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "involve",
+            "Source": "Vietnamese FinSpy Mobile Campaign",
+            "Target": "Gamma International GmbH"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Vietnamese FinSpy Mobile Campaign",
+            "Target": "FinSpy Mobile"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "belong_to",
+            "Source": "FinSpy Command & Control Servers",
+            "Target": "183.91.2.199"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "FinSpy Mobile",
+            "Target": "+841257725403"
+        }
+    ]
+}

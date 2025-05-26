@@ -1,0 +1,483 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT15",
+            "EntityVariantNames": [
+                "Ke3chang",
+                "Mirage",
+                "Vixen Panda GREF",
+                "Playful Dragon"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0006",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "UK Government Network Compromise",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0006",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "May 2017",
+                "observe_time": "2018",
+                "report_name": "2018_NCCGroup_APT15-alive-analysis-RoyalCli-RoyalDNS(03-10-2018)_70b90f23"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "UK Government Service Provider",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Government Services"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "RoyalCli",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "6df9b712ff56009810c4000a0ad47e41b7a6183b69416251e060b5c80cd05785"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "RoyalDNS",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "bc937f6e958b339f6925023bc2af375d669084e9551fd3753e501ef26e36b39d"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "BS2005",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "6ea9cc475d41ca07fa206eb84b10cf2bbd2392366890de5ae67241afa2f4269f"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "spwebmember",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0007",
+                "TA0009"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "16b868d1bef6be39f69b4e976595e7bd46b6c0595cf6bc482229dbb9e64f1bce"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Mimikatz",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "RemoteExec",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "WinRAR",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "news.memozilla.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "video.memozilla.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "run.linodepower.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "singa.linodepower.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "log.autocount.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "andspurs.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "Nwsapagent",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "Corporate VPN",
+            "EntityType": "asset",
+            "EntitySubType": "network",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "7"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "Microsoft SharePoint",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0007"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "Microsoft Exchange",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "AS63949",
+            "EntityType": "asset",
+            "EntitySubType": "network",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_22",
+            "EntityName": "Linode",
+            "EntityType": "asset",
+            "EntitySubType": "network",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_23",
+            "EntityName": "Google Cloud",
+            "EntityType": "asset",
+            "EntitySubType": "network",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "UK Government Network Compromise",
+            "Target": "APT15"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "UK Government Network Compromise",
+            "Target": "UK Government Service Provider"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "APT15",
+            "Target": "RoyalCli"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "APT15",
+            "Target": "RoyalDNS"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "APT15",
+            "Target": "BS2005"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "APT15",
+            "Target": "spwebmember"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "APT15",
+            "Target": "Mimikatz"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "APT15",
+            "Target": "RemoteExec"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "APT15",
+            "Target": "WinRAR"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "target",
+            "Source": "APT15",
+            "Target": "UK Government Service Provider"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "target",
+            "Source": "APT15",
+            "Target": "Corporate VPN"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "RoyalCli",
+            "Target": "news.memozilla.org"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "RoyalCli",
+            "Target": "video.memozilla.org"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "BS2005",
+            "Target": "run.linodepower.com"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "BS2005",
+            "Target": "singa.linodepower.com"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "BS2005",
+            "Target": "log.autocount.org"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "RoyalDNS",
+            "Target": "andspurs.com"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "related_to",
+            "Source": "RoyalDNS",
+            "Target": "Nwsapagent"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "has",
+            "Source": "UK Government Service Provider",
+            "Target": "Microsoft SharePoint"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "has",
+            "Source": "UK Government Service Provider",
+            "Target": "Microsoft Exchange"
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "has",
+            "Source": "UK Government Service Provider",
+            "Target": "Corporate VPN"
+        },
+        {
+            "RelationshipId": "relationship_22",
+            "RelationshipType": "belong_to",
+            "Source": "news.memozilla.org",
+            "Target": "Linode"
+        },
+        {
+            "RelationshipId": "relationship_23",
+            "RelationshipType": "belong_to",
+            "Source": "video.memozilla.org",
+            "Target": "Linode"
+        },
+        {
+            "RelationshipId": "relationship_24",
+            "RelationshipType": "belong_to",
+            "Source": "run.linodepower.com",
+            "Target": "Linode"
+        },
+        {
+            "RelationshipId": "relationship_25",
+            "RelationshipType": "belong_to",
+            "Source": "singa.linodepower.com",
+            "Target": "Linode"
+        },
+        {
+            "RelationshipId": "relationship_26",
+            "RelationshipType": "belong_to",
+            "Source": "log.autocount.org",
+            "Target": "Google Cloud"
+        },
+        {
+            "RelationshipId": "relationship_27",
+            "RelationshipType": "belong_to",
+            "Source": "andspurs.com",
+            "Target": "AS63949"
+        }
+    ]
+}

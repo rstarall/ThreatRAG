@@ -1,0 +1,354 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Chinese APT actors",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Permanent Court of Arbitration Flash Exploit",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "July 2015",
+                "observe_time": "2015",
+                "report_name": "2015_China_Peace_Palace_5efa3f12"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Permanent Court of Arbitration",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "The Hague, Netherlands"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CVE-2015-5119",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "software": "Adobe Flash Player"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "pic.nicklockluckydog.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "192.243.116.241",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "location": "Phoenix, Arizona, US",
+                "provider": "IT7 Networks, Inc."
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "108.61.117.9",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "location": "Haarlem, Netherlands"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "B4522D05A9E3A034AF481A7797A445EA",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "type": "Rdws.exe"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "DFDC5B09C4DEA79EB7F5B9E4E76EECF9",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "type": "LMS.exe"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "2EE25DE7BD6A2705F3F8DDE0DD681E96",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "type": "dbghelp.dll"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "16E5A27BD55E0B4E595C9743F4C75611",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "type": "ticrf.rat"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "ssl.nicklockluckydog.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "175.45.233.205",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "location": "Seoul, South Korea"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "books.blueworldlink2015.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "7"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "vpn.nicklockluckydog.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "7"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "nicklock2004@aol.com",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "8"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "Adobe Flash Player",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "Republic of the Philippines",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Permanent Court of Arbitration Flash Exploit",
+            "Target": "Chinese APT actors"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Permanent Court of Arbitration Flash Exploit",
+            "Target": "Permanent Court of Arbitration"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Chinese APT actors",
+            "Target": "CVE-2015-5119"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Chinese APT actors",
+            "Target": "pic.nicklockluckydog.org"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "Chinese APT actors",
+            "Target": "Permanent Court of Arbitration"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "Chinese APT actors",
+            "Target": "Republic of the Philippines"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2015-5119",
+            "Target": "Adobe Flash Player"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "belong_to",
+            "Source": "pic.nicklockluckydog.org",
+            "Target": "192.243.116.241"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "belong_to",
+            "Source": "pic.nicklockluckydog.org",
+            "Target": "108.61.117.9"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "B4522D05A9E3A034AF481A7797A445EA",
+            "Target": "DFDC5B09C4DEA79EB7F5B9E4E76EECF9"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "DFDC5B09C4DEA79EB7F5B9E4E76EECF9",
+            "Target": "2EE25DE7BD6A2705F3F8DDE0DD681E96"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "2EE25DE7BD6A2705F3F8DDE0DD681E96",
+            "Target": "16E5A27BD55E0B4E595C9743F4C75611"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "belong_to",
+            "Source": "ssl.nicklockluckydog.org",
+            "Target": "175.45.233.205"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "nicklock2004@aol.com",
+            "Target": "books.blueworldlink2015.net"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "nicklock2004@aol.com",
+            "Target": "nicklockluckydog.org"
+        }
+    ]
+}

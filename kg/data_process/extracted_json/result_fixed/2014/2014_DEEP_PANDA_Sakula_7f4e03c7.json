@@ -1,0 +1,452 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "DEEP PANDA",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Sakula Malware Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "July-August 2014",
+                "observe_time": "2014",
+                "report_name": "2014_DEEP_PANDA_Sakula_7f4e03c7"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "U.S. Defense Industrial Base",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "sector": "Defense"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Healthcare Organization",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "sector": "Healthcare"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Government Entity",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Mongolia"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Technology Company",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "sector": "Technology"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Sakula Malware",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "variant": "Signed with stolen certificates"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "MediaSoft.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "d00b3169f45e74bb22a1cd684341b14a"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "msi.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "ae6f33f6cdc25dc4bda24b2bccff79fe"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Sakula executable",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "0c2674c3a97c53082187d930efb645c2",
+                "certificate": "DTOPTOOLZ Co., Ltd."
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "180.210.206.246",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "DTOPTOOLZ Co., Ltd.",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Career Credit Co., Ltd.",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "www.xha-mster.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "registrant": "tonyy starke",
+                "email": "wendellom@yahoo.com"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "198.200.45.112",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Derusbi malware",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "certificate": "DTOPTOOLZ Co., Ltd."
+            }
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "vpn.foundationssl.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "Scanbox",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "type": "Strategic Web Compromise (SWC) framework"
+            }
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "news.foundationssl.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "DLL side-loading",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "Phishing Email",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Sakula Malware Campaign",
+            "Target": "DEEP PANDA"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Sakula Malware Campaign",
+            "Target": "U.S. Defense Industrial Base"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "Sakula Malware Campaign",
+            "Target": "Healthcare Organization"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "involve",
+            "Source": "Sakula Malware Campaign",
+            "Target": "Government Entity"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "involve",
+            "Source": "Sakula Malware Campaign",
+            "Target": "Technology Company"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "DEEP PANDA",
+            "Target": "Sakula Malware"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "DEEP PANDA",
+            "Target": "DLL side-loading"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "DEEP PANDA",
+            "Target": "Phishing Email"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "DEEP PANDA",
+            "Target": "Derusbi malware"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "DEEP PANDA",
+            "Target": "Scanbox"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "target",
+            "Source": "DEEP PANDA",
+            "Target": "U.S. Defense Industrial Base"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "target",
+            "Source": "DEEP PANDA",
+            "Target": "Healthcare Organization"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "target",
+            "Source": "DEEP PANDA",
+            "Target": "Government Entity"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "target",
+            "Source": "DEEP PANDA",
+            "Target": "Technology Company"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "Sakula Malware",
+            "Target": "MediaSoft.exe"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "Sakula Malware",
+            "Target": "msi.dll"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "Sakula Malware",
+            "Target": "Sakula executable"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "related_to",
+            "Source": "Sakula Malware",
+            "Target": "180.210.206.246"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "related_to",
+            "Source": "Sakula Malware",
+            "Target": "DTOPTOOLZ Co., Ltd."
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "related_to",
+            "Source": "Sakula Malware",
+            "Target": "Career Credit Co., Ltd."
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "related_to",
+            "Source": "Sakula Malware",
+            "Target": "www.xha-mster.com"
+        },
+        {
+            "RelationshipId": "relationship_22",
+            "RelationshipType": "related_to",
+            "Source": "Derusbi malware",
+            "Target": "vpn.foundationssl.com"
+        },
+        {
+            "RelationshipId": "relationship_23",
+            "RelationshipType": "related_to",
+            "Source": "Scanbox",
+            "Target": "news.foundationssl.com"
+        },
+        {
+            "RelationshipId": "relationship_24",
+            "RelationshipType": "belong_to",
+            "Source": "198.200.45.112",
+            "Target": "DEEP PANDA"
+        }
+    ]
+}

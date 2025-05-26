@@ -1,0 +1,208 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Operation Lotus Blossom",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "June 2015",
+                "observe_time": "2016",
+                "report_name": "2016_PaloAlto_Emissary-Trojan-Changelog-Did-Operation-Lotus-Blossom-Cause-It-to-Evolve(Feb-03-16)_1e23efb4"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Emissary Trojan",
+            "EntityVariantNames": [
+                "WinDLL.dll",
+                "Generic.dll",
+                "IISDLL.dll"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "first_seen": "2009",
+                "version": "1.0-5.4"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Taiwanese Government",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Government",
+                "location": "Taiwan"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Hong Kong Targets",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "location": "Hong Kong"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "101.55.33.92",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "210.209.121.92",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "groupspace.findhere.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Democratic Progressive Party website",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Traditional Chinese decoys",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Syncmgr.dll",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation Lotus Blossom",
+            "Target": "Emissary Trojan"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "target",
+            "Source": "Emissary Trojan",
+            "Target": "Taiwanese Government"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "Emissary Trojan",
+            "Target": "Hong Kong Targets"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "Emissary Trojan",
+            "Target": "101.55.33.92"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "Emissary Trojan",
+            "Target": "210.209.121.92"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Emissary Trojan",
+            "Target": "groupspace.findhere.org"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Emissary Trojan",
+            "Target": "Traditional Chinese decoys"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Emissary Trojan",
+            "Target": "Syncmgr.dll"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "Emissary Trojan",
+            "Target": "Democratic Progressive Party website"
+        }
+    ]
+}

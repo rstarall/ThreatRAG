@@ -1,0 +1,208 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Operation GreedyWonk",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "date": "February 2014"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "CVE-2014-0502",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "vendor": "Adobe",
+                "product": "Flash Player"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "PlugX/Kaba",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "hash": "507aed81e3106da8c50efb3a045c5e2b",
+                "type": "RAT"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Peter G. Peterson Institute for International Economics",
+            "EntityVariantNames": [
+                "www.piie.com"
+            ],
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "sector": "Nonprofit",
+                "focus": "International Economics"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "American Research Center in Egypt",
+            "EntityVariantNames": [
+                "www.arce.org"
+            ],
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "sector": "Nonprofit",
+                "focus": "Cultural Research"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Smith Richardson Foundation",
+            "EntityVariantNames": [
+                "www.srf.org"
+            ],
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "sector": "Nonprofit",
+                "focus": "Public Policy"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "74.126.177.68",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "192.74.246.219",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "103.246.246.103",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "java.ns1.name",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "adservice.no-ip.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "wmi.ns01.us",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Windows XP",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Windows 7",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Java 1.6",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Microsoft Office 2007/2010",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "Poison Ivy",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "Unknown Threat Actor",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "capability": "Zero-day access"
+            }
+        }
+    ],
+    "Relationships": []
+}

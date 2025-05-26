@@ -1,0 +1,249 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Pacifier APT",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Romanian Institutions Cyber-Espionage",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "2014-2016",
+                "location": "Romania, Iran, India, Philippines, Russia, Lithuania, Thailand, Vietnam, Hungary",
+                "observe_time": "2016",
+                "report_name": "2016_Bitdefender_Pacifier-APT(7-1-2016)_142e5506"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Romanian Institutions",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Government"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Malicious Word Document",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Word Document with Macros"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "MSWord.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "path": "%appdata%\\Microsoft\\Word\\MSWord.exe"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "ubfic.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "path": "%appdata%\\Axpim\\ubfic.exe"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "ntlm.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "path": "%temp%\\ntlm.exe"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "msvck.dll",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "path": "%temp%\\msvck.dll",
+                "function": "Main backdoor"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "88.208.0.130/rss.php",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "7"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "78.47.51.238/rss.php",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "7"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Spear Phishing Email",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\svchostUpdate",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "5"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Romanian Institutions Cyber-Espionage",
+            "Target": "Pacifier APT"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Romanian Institutions Cyber-Espionage",
+            "Target": "Romanian Institutions"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Pacifier APT",
+            "Target": "Spear Phishing Email"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "target",
+            "Source": "Pacifier APT",
+            "Target": "Romanian Institutions"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "Spear Phishing Email",
+            "Target": "Malicious Word Document"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Malicious Word Document",
+            "Target": "MSWord.exe"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "MSWord.exe",
+            "Target": "ubfic.exe"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "ubfic.exe",
+            "Target": "ntlm.exe"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "ubfic.exe",
+            "Target": "msvck.dll"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "msvck.dll",
+            "Target": "88.208.0.130/rss.php"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "ntlm.exe",
+            "Target": "HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\svchostUpdate"
+        }
+    ]
+}

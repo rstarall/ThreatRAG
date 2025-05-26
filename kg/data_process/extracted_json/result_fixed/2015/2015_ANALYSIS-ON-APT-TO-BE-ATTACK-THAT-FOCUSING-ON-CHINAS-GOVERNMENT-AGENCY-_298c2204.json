@@ -1,0 +1,270 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT-TOCS",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "May 2015",
+                "target": "China's Government Agency",
+                "observe_time": "2015",
+                "report_name": "2015_ANALYSIS-ON-APT-TO-BE-ATTACK-THAT-FOCUSING-ON-CHINAS-GOVERNMENT-AGENCY-_298c2204"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "China's Government Agency",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Government"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Cobalt Strike",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Automated attack testing platform",
+                "creator": "Raphael Mudge"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Trojan/Win32.MSShell",
+            "EntityVariantNames": [
+                "ab.exe"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "MD5": "44BCF2DD262F12222ADEAB6F59B2975B",
+                "size": "73,802 bytes",
+                "language": "Microsoft Visual C++"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "powershell.exe",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "usage": "Execute Shellcode scripts"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "146.0.43.107",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "location": "Romania"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "dc.******69.info",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "ip": "146.0.***.***",
+                "location": "Romania"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Beacon",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "function": "Backdoor communication",
+                "interval": "60 seconds heartbeat"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "WinExec",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "rundll32.exe",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "7"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Social Engineering Emails",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Raphael Mudge",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "0"
+            ],
+            "Properties": {
+                "organization": "Strategic Cyber LLC",
+                "position": "Founder"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "APT-TOCS",
+            "Target": "China's Government Agency"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "APT-TOCS",
+            "Target": "Cobalt Strike"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "APT-TOCS",
+            "Target": "Trojan/Win32.MSShell"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "APT-TOCS",
+            "Target": "powershell.exe"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "Cobalt Strike",
+            "Target": "Beacon"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Beacon",
+            "Target": "146.0.43.107"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Beacon",
+            "Target": "dc.******69.info"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Trojan/Win32.MSShell",
+            "Target": "WinExec"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Trojan/Win32.MSShell",
+            "Target": "powershell.exe"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "APT-TOCS",
+            "Target": "Social Engineering Emails"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Cobalt Strike",
+            "Target": "Raphael Mudge"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "use",
+            "Source": "APT-TOCS",
+            "Target": "rundll32.exe"
+        }
+    ]
+}

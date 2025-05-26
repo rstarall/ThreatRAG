@@ -1,0 +1,379 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT28",
+            "EntityVariantNames": [
+                "Sofacy"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0009",
+                "TA0010",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "first_seen": "2007"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "XAgent",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0009",
+                "TA0010",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "platform": "Mac OS X",
+                "type": "Modular backdoor"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Komplex",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Trojan",
+                "components": "Binder, Dropper, Payload"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "roskosmos_2015-2025.app",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "role": "Komplex Binder"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "roskosmos_2015-2025.pdf",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "role": "Decoy file"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "apple-iclods.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "23.227.196.215",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "KERNEL_CRYPTO_MAIN_KEY",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "algorithm": "RC4"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "BootXLoader",
+            "EntityType": "tool",
+            "EntitySubType": "module",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "function": "Initialization module"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "MainHandler",
+            "EntityType": "tool",
+            "EntitySubType": "module",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "function": "Command execution module"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "HTTPChannel",
+            "EntityType": "tool",
+            "EntitySubType": "module",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "function": "C&C communication module"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Password",
+            "EntityType": "tool",
+            "EntitySubType": "module",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "function": "Password stealing module",
+                "target": "Firefox"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "FileSystem",
+            "EntityType": "tool",
+            "EntitySubType": "module",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "function": "File management module"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "FTPManager",
+            "EntityType": "tool",
+            "EntitySubType": "module",
+            "Labels": [
+                "TA0010"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "function": "File exfiltration module"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Keylogger",
+            "EntityType": "tool",
+            "EntitySubType": "module",
+            "Labels": [
+                "TA0009"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "function": "Keystroke logging module"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Mac OS X",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "Mac OS X Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0009",
+                "TA0010",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "February 2017",
+                "observe_time": "2017",
+                "report_name": "2017_Bitdefender-Whitepaper-APT-Mac-A4-en-EN-web(02-23-2017)_5f781c02"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Mac OS X Attack Event",
+            "Target": "APT28"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "APT28",
+            "Target": "XAgent"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "APT28",
+            "Target": "Komplex"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "Komplex",
+            "Target": "XAgent"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "Komplex",
+            "Target": "roskosmos_2015-2025.app"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Komplex",
+            "Target": "roskosmos_2015-2025.pdf"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "XAgent",
+            "Target": "BootXLoader"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "XAgent",
+            "Target": "MainHandler"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "XAgent",
+            "Target": "HTTPChannel"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "XAgent",
+            "Target": "Password"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "XAgent",
+            "Target": "FileSystem"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "XAgent",
+            "Target": "FTPManager"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "XAgent",
+            "Target": "Keylogger"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "XAgent",
+            "Target": "KERNEL_CRYPTO_MAIN_KEY"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "XAgent",
+            "Target": "apple-iclods.org"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "XAgent",
+            "Target": "23.227.196.215"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "exploit",
+            "Source": "XAgent",
+            "Target": "Mac OS X"
+        }
+    ]
+}

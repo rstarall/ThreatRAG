@@ -1,0 +1,222 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "CVE-2014-1776",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "impact": "Internet Explorer 6-11",
+                "bypass": "ASLR and DEP"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Operation Clandestine Fox",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "observe_time": "2014",
+                "report_name": "2014_Op_Clandestine_Fox_1c9befef"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "APT Group",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "capability": "Browser 0-day exploits",
+                "tool": "Pirpi backdoor"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Internet Explorer 9-11",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "version": "9-11",
+                "market_share": "26.25%"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Flash Exploitation Technique",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "technique": "Heap Feng Shui"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Flash SWF File",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "purpose": "Memory manipulation"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "ROP Chain",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "purpose": "Bypass DEP/ASLR"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Shellcode",
+            "EntityType": "file",
+            "EntitySubType": "code",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "function": "Payload delivery"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Pirpi",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "URLDownloadToCacheFileA",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0002",
+                "TA0010"
+            ],
+            "Times": [
+                "7"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation Clandestine Fox",
+            "Target": "APT Group"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "APT Group",
+            "Target": "CVE-2014-1776"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "APT Group",
+            "Target": "Flash Exploitation Technique"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "APT Group",
+            "Target": "Pirpi"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2014-1776",
+            "Target": "Internet Explorer 9-11"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Flash Exploitation Technique",
+            "Target": "Flash SWF File"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Flash SWF File",
+            "Target": "ROP Chain"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "ROP Chain",
+            "Target": "Shellcode"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Shellcode",
+            "Target": "URLDownloadToCacheFileA"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "target",
+            "Source": "APT Group",
+            "Target": "Internet Explorer 9-11"
+        }
+    ]
+}

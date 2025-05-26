@@ -1,0 +1,169 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "CARBANAK",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "Backdoor",
+                "features": "Full-featured"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "FIN7",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "kb3r1p",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "RAR archive"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "apwmie",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "RAR archive"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "botcmd.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "PJW hash",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "purpose": "Obfuscated import resolution"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "named pipes",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "purpose": "Command and Control communication"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Financial institutions",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "impact": "Millions of dollars in financial crimes"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "FIN7",
+            "Target": "CARBANAK"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "related_to",
+            "Source": "CARBANAK",
+            "Target": "kb3r1p"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "CARBANAK",
+            "Target": "apwmie"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "CARBANAK",
+            "Target": "botcmd.exe"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "CARBANAK",
+            "Target": "named pipes"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "CARBANAK",
+            "Target": "PJW hash"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "FIN7",
+            "Target": "Financial institutions"
+        }
+    ]
+}

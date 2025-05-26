@@ -1,0 +1,188 @@
+<Entitys>
+    <!-- Attackers -->
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>APT-29</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>Cozy Bear</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0008</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="country">Russia</Property>
+        </Properties>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>PLA Unit 61398</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0003</Label>
+            <Label>TA0008</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="country">China</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Victims -->
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>Saudi Aramco</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+        <Properties>
+            <Property name="industry">Oil &amp; Gas</Property>
+            <Property name="country">Saudi Arabia</Property>
+        </Properties>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>BP</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+        <Properties>
+            <Property name="industry">Oil &amp; Gas</Property>
+            <Property name="country">United Kingdom</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Tools -->
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>Shamoon</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0040</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>Night Dragon</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+        </Labels>
+        <Times>
+            <Time>5</Time>
+        </Times>
+    </Entity>
+
+    <!-- Vulnerabilities -->
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>SCADA vulnerabilities</EntityName>
+        <EntityType>vul</EntityType>
+        <EntitySubType>others</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>6</Time>
+        </Times>
+    </Entity>
+
+    <!-- Events -->
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>Deepwater Horizon Incident</EntityName>
+        <EntityType>event</EntityType>
+        <EntitySubType>event</EntitySubType>
+        <Labels>
+            <Label>TA0040</Label>
+        </Labels>
+        <Times>
+            <Time>7</Time>
+        </Times>
+        <Properties>
+            <Property name="date">2010-04-20</Property>
+            <Property name="location">Gulf of Mexico</Property>
+        </Properties>
+    </Entity>
+</Entitys>
+<Relationships>
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>APT-29</Source>
+        <Target>Saudi Aramco</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>APT-29</Source>
+        <Target>Shamoon</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>PLA Unit 61398</Source>
+        <Target>BP</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>PLA Unit 61398</Source>
+        <Target>Night Dragon</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>exploit</RelationshipType>
+        <Source>Night Dragon</Source>
+        <Target>SCADA vulnerabilities</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Deepwater Horizon Incident</Source>
+        <Target>BP</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>affect</RelationshipType>
+        <Source>Shamoon</Source>
+        <Target>Saudi Aramco</Target>
+    </Relationship>
+</Relationships>

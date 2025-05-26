@@ -1,0 +1,318 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Group 72",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "sophistication": "High",
+                "target_sectors": "Manufacturing, Industrial, Aerospace, Defense, Media"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Operation SMN",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "observe_time": "2014",
+                "report_name": "2014_Group72_Opening_ZxShell_3a3b733c"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "ZxShell",
+            "EntityVariantNames": [
+                "Sensocode"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "version": "3.10",
+                "type": "RAT"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "LZX",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "role": "Original author"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2011-2462",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CVE-2013-3163",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "CVE-2014-0322",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "loveusd.sys",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "sha256": "1e200d0d3de360d9c32e30d4c98f07e100f6260a86a817943a8fb06995c15335"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "commhlp32.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "location": "c:\\Windows\\System32\\"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "3322.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "vicp.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "e3878d541d17b156b7ca447eeb49d96a",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "1eda7e556181e46ba6e36f1a6bfe18ff5566f9d5e51c53b41d08f9459342e26c",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Windows Firewall",
+            "EntityType": "env",
+            "EntitySubType": "network",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\SvcHost",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0003"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "HKLM\\SYSTEM\\CurrentControlSet\\Services\\SharedAccess\\Parameters\\FirewallPolicy\\StandardProfile",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation SMN",
+            "Target": "Group 72"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Group 72",
+            "Target": "ZxShell"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "ZxShell",
+            "Target": "CVE-2011-2462"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "ZxShell",
+            "Target": "CVE-2013-3163"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "ZxShell",
+            "Target": "CVE-2014-0322"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "ZxShell",
+            "Target": "loveusd.sys"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "ZxShell",
+            "Target": "commhlp32.dll"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "ZxShell",
+            "Target": "3322.org"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "ZxShell",
+            "Target": "vicp.net"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "exploit",
+            "Source": "ZxShell",
+            "Target": "Windows Firewall"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "exploit",
+            "Source": "ZxShell",
+            "Target": "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\SvcHost"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "exploit",
+            "Source": "ZxShell",
+            "Target": "HKLM\\SYSTEM\\CurrentControlSet\\Services\\SharedAccess\\Parameters\\FirewallPolicy\\StandardProfile"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "belong_to",
+            "Source": "loveusd.sys",
+            "Target": "ZxShell"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "belong_to",
+            "Source": "commhlp32.dll",
+            "Target": "ZxShell"
+        }
+    ]
+}

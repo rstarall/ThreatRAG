@@ -1,0 +1,263 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "KeyBoy",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0006",
+                "TA0009",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Vietnam Targeted Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0006",
+                "TA0009",
+                "TA0011"
+            ],
+            "Properties": {
+                "time": "April 2013",
+                "location": "Vietnam"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "India Targeted Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0006",
+                "TA0009",
+                "TA0011"
+            ],
+            "Properties": {
+                "time": "April 2013",
+                "location": "India"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Vietnamese Academic Community",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "industry": "Education"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Indian Telecommunications/Govt",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "industry": "Telecommunications/Government"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "THAM luan- GD- NCKH2.doc",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "MD5": "161c840748df9b49fda878394398425a",
+                "SHA1": "e3cc84a4dc66e43453a039c3c983fcef92eafa7d",
+                "SHA256": "5ba8c42807bee050aa474fe3c876936d196c65dca9895ccd2e317133188c905e",
+                "author": "Nguyen Anh Tuan"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "iafbsnl.doc",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "MD5": "dff54d302900e323c8988c725bbe2299",
+                "SHA1": "c5c0bae48c326006b9dcc99855646d3be0b474c1",
+                "SHA256": "1595ea659a87677c59a195a3aeec9e3ef135c808ec353222e8eaa662117c9362",
+                "author": "Amir Kumar Gupta"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "MS12-060",
+            "EntityType": "vul",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "CVE-2012-0158",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "svchost.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "MD5": "1f4d22e5131a66aa24f44eb0d4f1b54d",
+                "SHA1": "2c8a144331ec124755413f31a83e21015c74f2ec",
+                "SHA256": "1c076413cca929b7004863f1a3992afda665786d6e179b9886ddeb8062194049",
+                "location": "%Temp%\\svchost.exe"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "CREDRIVER.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003",
+                "TA0006",
+                "TA0009",
+                "TA0011"
+            ],
+            "Properties": {
+                "MD5": "2df60de8cb6b9fe7db1ea10581cfcda4",
+                "SHA1": "fb8057595f2bb53331620c717775751df781c151",
+                "SHA256": "ba4863d8a22864fa50a32aa85bc808371f05e8953167d34251cbd779d33e2d6d",
+                "location": "C:\\WINDOWS\\system32\\CREDRIVER.dll"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "MdAdum",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003"
+            ],
+            "Properties": {
+                "type": "Windows Service"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "silence.phdns01.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "IP": "199.193.66.51",
+                "ASN": "6939 - HURRICANE"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "cpnet.phmail.us",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "IP": "199.193.66.51",
+                "ASN": "6939 - HURRICANE"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "imlang.phmail.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "IP": "199.193.66.51",
+                "ASN": "6939 - HURRICANE"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "cresy.zyns.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "preter.epac.to",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "IP": "1.235.10.28, 113.160.44.154",
+                "ASN": "9318 - HANARO, 45899 - VNPT"
+            }
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "backto.ddns.name",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "Keylogger",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009"
+            ],
+            "Properties": {
+                "hook": "WH_KEYBOARD_LL"
+            }
+        }
+    ],
+    "Relationships": []
+}

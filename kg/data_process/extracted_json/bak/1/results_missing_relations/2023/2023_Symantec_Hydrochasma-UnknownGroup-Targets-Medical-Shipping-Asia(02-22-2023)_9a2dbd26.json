@@ -1,0 +1,329 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Hydrochasma",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0009"
+            ],
+            "Properties": {
+                "interest": "COVID-19-related treatments or vaccines"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Medical and Shipping Organizations in Asia",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "industry": "Medical and Shipping",
+                "region": "Asia"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Phishing Email",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Product Specification-Freight-Company Qualification Information wps-pdf Export.pdf.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "University-Development Engineer.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Fast Reverse Proxy (FRP)",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "hash": "9ebd789e8ca8b96ed55fc8e95c98a45a61baea3805fd440f50f2bde5ffd7a372"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "MicrosoftEdgeUpdate.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003"
+            ],
+            "Properties": {
+                "path": "%TEMP%"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "msedgeupdate.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "path": "%TEMP%",
+                "description": "Meterpreter"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "GoGo Scanning Tool",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0007"
+            ],
+            "Properties": {
+                "hash": "981e5f7219a2f92a908459529c42747ac5f5a820995f66234716c538b19993eb"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Process Dumper (lsass.exe)",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0006"
+            ],
+            "Properties": {
+                "hash": "7f0807d40e9417141bf274ef8467a240e20109a489524e62b090bccdb4998bc6"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Cobalt Strike Beacon",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011",
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "de01492b44372f2e4e38354845e7f86e0be5fb8f5051baafd004ec5c1567039f"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "AlliN Scanning Tool",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0007"
+            ],
+            "Properties": {
+                "hash": "a0f5966fcc64ce2d10f24e02ae96cdc91590452b9a96b3b1d4a2f66c722eec34"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Fscan",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0007"
+            ],
+            "Properties": {
+                "hash": "cb03b5d517090b20749905a330c55df9eb4d1c6b37b1b31fae1982e32fd10009"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Dogz Proxy Tool",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "hash": "fc4b5f2ee9da1fe105bb1b7768754d48f798bf181cbc53583387578a5ebc7b56"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Shellcode Loader",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "d1c4968e7690fd40809491acc8787389de0b7cbc672c235639ae7b4d07d04dd4"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "PE File",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "e378d8b5a35d4ec75cae7524e64c1d605f1511f9630c671321ee46aa7c4d378b",
+                "description": "corrupted portable executable"
+            }
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "SoftEtherVPN",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "Procdump",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0006"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "BrowserGhost",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0006"
+            ]
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "Gost proxy",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "Ntlmrelay",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0006"
+            ]
+        },
+        {
+            "EntityId": "entity_22",
+            "EntityName": "Task Scheduler",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0003"
+            ]
+        },
+        {
+            "EntityId": "entity_23",
+            "EntityName": "Go-strip",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0005"
+            ]
+        },
+        {
+            "EntityId": "entity_24",
+            "EntityName": "HackBrowserData",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0006"
+            ]
+        },
+        {
+            "EntityId": "entity_25",
+            "EntityName": "39.101.194.61",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "purpose": "Cobalt Strike Beacon CC"
+            }
+        },
+        {
+            "EntityId": "entity_26",
+            "EntityName": "47.92.138.241",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "purpose": "Cobalt Strike Beacon CC"
+            }
+        },
+        {
+            "EntityId": "entity_27",
+            "EntityName": "alidocs.dingtalk.com.wswebpic.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "purpose": "Cobalt Strike Beacon CC"
+            }
+        },
+        {
+            "EntityId": "entity_28",
+            "EntityName": "csc.zte.com.cn.wswebpic.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "purpose": "Cobalt Strike Beacon CC"
+            }
+        },
+        {
+            "EntityId": "entity_29",
+            "EntityName": "taoche.cn.wswebpic.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "purpose": "Cobalt Strike Beacon CC"
+            }
+        }
+    ],
+    "Relationships": []
+}

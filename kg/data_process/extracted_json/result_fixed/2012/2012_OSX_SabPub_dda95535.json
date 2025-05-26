@@ -1,0 +1,259 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "LuckyCat",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "SabPub APT Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "April 2012",
+                "observe_time": "2012",
+                "report_name": "2012_OSX_SabPub_dda95535"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "199.192.152.*",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "rt*****.onedumb.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "SabPub",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "variant": "At least two variants",
+                "size": "42556-42580 bytes"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CVE-2009-0563",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "10th March Statemnet.doc",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "md5": "40C8786A4887A763D8F3E5243724D1C9",
+                "type": "Microsoft Word Document"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "MaControl",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "7"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Mac OS X",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "8"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Windows",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "9"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Spear-phishing",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "10"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Tibetan Community",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "11"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "SabPub APT Attack",
+            "Target": "LuckyCat"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "LuckyCat",
+            "Target": "SabPub"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "LuckyCat",
+            "Target": "199.192.152.*"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "LuckyCat",
+            "Target": "rt*****.onedumb.com"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "LuckyCat",
+            "Target": "CVE-2009-0563"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "LuckyCat",
+            "Target": "10th March Statemnet.doc"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "LuckyCat",
+            "Target": "Spear-phishing"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "LuckyCat",
+            "Target": "Tibetan Community"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "LuckyCat",
+            "Target": "Mac OS X"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "target",
+            "Source": "LuckyCat",
+            "Target": "Windows"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "SabPub",
+            "Target": "10th March Statemnet.doc"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "SabPub",
+            "Target": "MaControl"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2009-0563",
+            "Target": "Windows"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "belong_to",
+            "Source": "10th March Statemnet.doc",
+            "Target": "Windows"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "trigger",
+            "Source": "Tibetan Community",
+            "Target": "10th March Statemnet.doc"
+        }
+    ]
+}

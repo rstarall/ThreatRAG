@@ -1,0 +1,410 @@
+<Entitys>
+    <!-- Attackers -->
+    <Entity>
+        <EntityId>entity_1</EntityId>
+        <EntityName>APT-29</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>Cozy Bear</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+
+    <!-- Malware Families -->
+    <Entity>
+        <EntityId>entity_2</EntityId>
+        <EntityName>Enfal</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>EtenFalcon</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_3</EntityId>
+        <EntityName>RegSubsDat</EntityName>
+        <EntityVariantNames>
+            <EntityVariantName>RegSubDat</EntityVariantName>
+            <EntityVariantName>Kirpich</EntityVariantName>
+        </EntityVariantNames>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_4</EntityId>
+        <EntityName>Murcy</EntityName>
+        <EntityType>tool</EntityType>
+        <EntitySubType>malware</EntitySubType>
+        <Labels>
+            <Label>TA0002</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+
+    <!-- Domains -->
+    <Entity>
+        <EntityId>entity_5</EntityId>
+        <EntityName>windowsaupdate.com</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_6</EntityId>
+        <EntityName>windowsaupdate.net</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>2</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_7</EntityId>
+        <EntityName>asia-online.us</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>domain</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+
+    <!-- Email Addresses -->
+    <Entity>
+        <EntityId>entity_8</EntityId>
+        <EntityName>jeno_1980@hotmail.com</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>attacker</EntitySubType>
+        <Labels>
+            <Label>TA0042</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_9</EntityId>
+        <EntityName>king_public@hotmail.com</EntityName>
+        <EntityType>attcker</EntityType>
+        <EntitySubType>attacker</EntitySubType>
+        <Labels>
+            <Label>TA0042</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+
+    <!-- IP Addresses -->
+    <Entity>
+        <EntityId>entity_10</EntityId>
+        <EntityName>123.120.96.0/19</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>ip</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_11</EntityId>
+        <EntityName>114.248.80.0/20</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>ip</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_12</EntityId>
+        <EntityName>114.248.96.0/20</EntityName>
+        <EntityType>ioc</EntityType>
+        <EntitySubType>ip</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+
+    <!-- Victims -->
+    <Entity>
+        <EntityId>entity_13</EntityId>
+        <EntityName>Government Ministries in Vietnam, Brunei, Myanmar</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_14</EntityId>
+        <EntityName>Regional Petroleum Companies</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_15</EntityId>
+        <EntityName>Newspaper</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_16</EntityId>
+        <EntityName>Government Ministries in Europe and Middle East</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_17</EntityId>
+        <EntityName>Embassy in Mainland China</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+    </Entity>
+
+    <Entity>
+        <EntityId>entity_18</EntityId>
+        <EntityName>Nuclear Safety Agency</EntityName>
+        <EntityType>vctim</EntityType>
+        <EntitySubType>org</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+        </Labels>
+        <Times>
+            <Time>4</Time>
+        </Times>
+    </Entity>
+
+    <!-- Event -->
+    <Entity>
+        <EntityId>entity_19</EntityId>
+        <EntityName>Sin Digoo Affair</EntityName>
+        <EntityType>event</EntityType>
+        <EntitySubType>event</EntitySubType>
+        <Labels>
+            <Label>TA0001</Label>
+            <Label>TA0002</Label>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>1</Time>
+        </Times>
+        <Properties>
+            <Property name="date">February 29, 2012</Property>
+            <Property name="url">http://www.secureworks.com/research/threats/sindigoo/</Property>
+        </Properties>
+    </Entity>
+
+    <!-- Network -->
+    <Entity>
+        <EntityId>entity_20</EntityId>
+        <EntityName>China Beijing Province Network (AS4808)</EntityName>
+        <EntityType>asset</EntityType>
+        <EntitySubType>network</EntitySubType>
+        <Labels>
+            <Label>TA0011</Label>
+        </Labels>
+        <Times>
+            <Time>3</Time>
+        </Times>
+    </Entity>
+</Entitys>
+<Relationships>
+    <Relationship>
+        <RelationshipId>relationship_1</RelationshipId>
+        <RelationshipType>involve</RelationshipType>
+        <Source>Sin Digoo Affair</Source>
+        <Target>APT-29</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_2</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>APT-29</Source>
+        <Target>Enfal</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_3</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>APT-29</Source>
+        <Target>RegSubsDat</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_4</RelationshipId>
+        <RelationshipType>use</RelationshipType>
+        <Source>APT-29</Source>
+        <Target>Murcy</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_5</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Enfal</Source>
+        <Target>windowsaupdate.net</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_6</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>RegSubsDat</Source>
+        <Target>asia-online.us</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_7</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>Murcy</Source>
+        <Target>asia-online.us</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_8</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>windowsaupdate.net</Source>
+        <Target>China Beijing Province Network (AS4808)</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_9</RelationshipId>
+        <RelationshipType>belong_to</RelationshipType>
+        <Source>asia-online.us</Source>
+        <Target>China Beijing Province Network (AS4808)</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_10</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>APT-29</Source>
+        <Target>Government Ministries in Vietnam, Brunei, Myanmar</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_11</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>APT-29</Source>
+        <Target>Regional Petroleum Companies</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_12</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>APT-29</Source>
+        <Target>Newspaper</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_13</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>APT-29</Source>
+        <Target>Government Ministries in Europe and Middle East</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_14</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>APT-29</Source>
+        <Target>Embassy in Mainland China</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_15</RelationshipId>
+        <RelationshipType>target</RelationshipType>
+        <Source>APT-29</Source>
+        <Target>Nuclear Safety Agency</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_16</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>jeno_1980@hotmail.com</Source>
+        <Target>APT-29</Target>
+    </Relationship>
+
+    <Relationship>
+        <RelationshipId>relationship_17</RelationshipId>
+        <RelationshipType>related_to</RelationshipType>
+        <Source>king_public@hotmail.com</Source>
+        <Target>APT-29</Target>
+    </Relationship>
+</Relationships>

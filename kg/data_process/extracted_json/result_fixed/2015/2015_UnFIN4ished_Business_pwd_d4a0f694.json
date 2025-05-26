@@ -1,0 +1,228 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "FIN4",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0006",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "motivation": "Financial",
+                "industry_focus": "Healthcare and Pharmaceutical"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "FIN4 Attack Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0006",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "Since mid-2013",
+                "target_count": "100+ organizations",
+                "observe_time": "2015",
+                "report_name": "2015_UnFIN4ished_Business_pwd_d4a0f694"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "NASDAQ and NYSE listed companies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Financial Services"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Healthcare and Pharmaceutical companies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Malicious Microsoft Office documents",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Phishing pages mimicking Outlook Web App",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "UpDocX",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0006"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "d102693540b53f9a564e3a550f938709",
+                "language": "VB.NET",
+                "functionality": "Backdoor, keylogging, document exfiltration"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "WINWORD32.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "http://www.advantarlabs.com/plugins/extension-xtd/WINWORD32.exe",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Securities and Exchange Commission",
+            "EntityType": "org",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0043"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "role": "Investigating body"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "FIN4 Attack Campaign",
+            "Target": "FIN4"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "FIN4 Attack Campaign",
+            "Target": "NASDAQ and NYSE listed companies"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "FIN4 Attack Campaign",
+            "Target": "Healthcare and Pharmaceutical companies"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "FIN4",
+            "Target": "Malicious Microsoft Office documents"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "FIN4",
+            "Target": "Phishing pages mimicking Outlook Web App"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "FIN4",
+            "Target": "UpDocX"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "FIN4",
+            "Target": "NASDAQ and NYSE listed companies"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "FIN4",
+            "Target": "Healthcare and Pharmaceutical companies"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "UpDocX",
+            "Target": "WINWORD32.exe"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "belong_to",
+            "Source": "WINWORD32.exe",
+            "Target": "http://www.advantarlabs.com/plugins/extension-xtd/WINWORD32.exe"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "UpDocX",
+            "Target": "http://www.advantarlabs.com/plugins/extension-xtd/WINWORD32.exe"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "involve",
+            "Source": "FIN4 Attack Campaign",
+            "Target": "Securities and Exchange Commission"
+        }
+    ]
+}

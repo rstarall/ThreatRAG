@@ -1,0 +1,239 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "COBALT GYPSY",
+            "EntityVariantNames": [
+                "Threat Group-2889"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Iran",
+                "affiliation": "Iranian government"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "PupyRAT Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "January 2017",
+                "location": "Middle East",
+                "observe_time": "2017",
+                "report_name": "2017_Secureworks_Iranian-PupyRAT-Middle-Eastern-Organizations(02-15-2017)_da16ee0e"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Middle Eastern Organization",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Various",
+                "region": "Middle East"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "PupyRAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Remote Access Trojan",
+                "platform": "Multi-platform"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "ntg-sa.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "legitimate_domain": "ntg.com.sa",
+                "organization": "National Technology Group"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "itworx.com-ho.me",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "legitimate_domain": "itworx.com",
+                "organization": "ITWorx"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "45.32.186.33",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "purpose": "Hosting spoofed domains"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "43fad2d62bc23ffdc6d301571135222c",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "file_type": "Word document",
+                "theme": "Job offer"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Microsoft Office",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "PowerShell",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "PupyRAT Campaign",
+            "Target": "COBALT GYPSY"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "PupyRAT Campaign",
+            "Target": "Middle Eastern Organization"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "COBALT GYPSY",
+            "Target": "PupyRAT"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "COBALT GYPSY",
+            "Target": "ntg-sa.com"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "COBALT GYPSY",
+            "Target": "itworx.com-ho.me"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "COBALT GYPSY",
+            "Target": "PowerShell"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "COBALT GYPSY",
+            "Target": "Middle Eastern Organization"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "PupyRAT",
+            "Target": "43fad2d62bc23ffdc6d301571135222c"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "belong_to",
+            "Source": "ntg-sa.com",
+            "Target": "45.32.186.33"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "belong_to",
+            "Source": "itworx.com-ho.me",
+            "Target": "45.32.186.33"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "trigger",
+            "Source": "Middle Eastern Organization",
+            "Target": "43fad2d62bc23ffdc6d301571135222c"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "belong_to",
+            "Source": "43fad2d62bc23ffdc6d301571135222c",
+            "Target": "Microsoft Office"
+        }
+    ]
+}

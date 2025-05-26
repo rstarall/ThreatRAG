@@ -1,0 +1,347 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Lazarus",
+            "EntityVariantNames": [
+                "Hidden Cobra"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "North Korea",
+                "sponsor": "State-sponsored"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Andariel",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "parent": "Lazarus",
+                "target": "South Korea"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Bluenoroff",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "parent": "Lazarus",
+                "focus": "Monetization"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Russian Companies Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "February 20, 2019",
+                "location": "Russia",
+                "observe_time": "2019",
+                "report_name": "2019_SecureSoft_Lazarus_Russia(02-20-2019)_923e9e8f"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Russian Companies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Russia"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Microsoft Windows Operating Systems",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "NDA_USA.pdf",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "PDF Document",
+                "content": "StarForce Technologies agreement"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Malicious Word Document",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Word Document with Macros"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "VBS Script",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "KEYMARBLE",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "type": "Remote Administration Tool (RAT)",
+                "functionality": "Information retrieval, command execution"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "194.45.8.41",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "37.238.135.70",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "dc3fff0873c3e8e853f6c5e01aa94fcf",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "algorithm": "MD5"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "1c4745c82fdcb9d05e210eff346d7bee2f087357b17bfcf7c2038c854f0dee61",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "algorithm": "SHA256"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Dropbox URL",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "StarForce Technologies",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Software Protection",
+                "country": "Russia"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Russian Companies Attack Event",
+            "Target": "Lazarus"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Russian Companies Attack Event",
+            "Target": "Russian Companies"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "target",
+            "Source": "Lazarus",
+            "Target": "Russian Companies"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Lazarus",
+            "Target": "Malicious Word Document"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Lazarus",
+            "Target": "VBS Script"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Lazarus",
+            "Target": "KEYMARBLE"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "has",
+            "Source": "Russian Companies",
+            "Target": "Microsoft Windows Operating Systems"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "belong_to",
+            "Source": "NDA_USA.pdf",
+            "Target": "StarForce Technologies"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Malicious Word Document",
+            "Target": "VBS Script"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "VBS Script",
+            "Target": "KEYMARBLE"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "KEYMARBLE",
+            "Target": "194.45.8.41"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "KEYMARBLE",
+            "Target": "37.238.135.70"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "trigger",
+            "Source": "Russian Companies",
+            "Target": "Malicious Word Document"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "affect",
+            "Source": "KEYMARBLE",
+            "Target": "Microsoft Windows Operating Systems"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "belong_to",
+            "Source": "Andariel",
+            "Target": "Lazarus"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "belong_to",
+            "Source": "Bluenoroff",
+            "Target": "Lazarus"
+        }
+    ]
+}

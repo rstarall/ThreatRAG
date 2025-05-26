@@ -1,0 +1,127 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Pawn Storm",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "DustySky",
+            "EntityVariantNames": [
+                "Gaza hackers"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "VPS hosting provider",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "location": "Netherlands, Romania",
+                "registration": "Dubai, UAE"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Carbanak",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0006"
+            ],
+            "Properties": {
+                "type": "Banking malware"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Maxided",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "type": "Bulletproof hosting provider"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "BGP routing tricks",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Spear-phishing campaigns",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Credential phishing sites",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001",
+                "TA0006"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "UAE government",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "UAE armed forces",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Cyber attacks timeline",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "time": "Since early 2015"
+            }
+        }
+    ],
+    "Relationships": []
+}

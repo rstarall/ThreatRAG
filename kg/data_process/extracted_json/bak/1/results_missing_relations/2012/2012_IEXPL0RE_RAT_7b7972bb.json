@@ -1,0 +1,302 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "IEXPL0RE RAT",
+            "EntityVariantNames": [
+                "Sharky RAT",
+                "c0d0so0",
+                "Backdoor.Briba"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0009",
+                "TA0011"
+            ],
+            "Properties": {
+                "type": "Remote Access Trojan",
+                "capabilities": "Keylogging, file manipulation, remote control"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "APT-29",
+            "EntityVariantNames": [
+                "Cozy Bear"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0009",
+                "TA0011"
+            ],
+            "Properties": {
+                "country": "Russia"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Human Rights NGO",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "News Organization",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "focus": "China developments"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Tibet-related Organization",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Social Engineering",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Phishing Email",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "d7c826ac94522416a0aecf5b7a5d2afe",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "type": "MD5 hash",
+                "target": "Organization 1"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "66e1aff355c29c6f39b21aedbbed2d5c",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "type": "MD5 hash",
+                "target": "Organization 2"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Cobalt Strike",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "update.microsoft.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "purpose": "C2 communication"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "svchost.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0005"
+            ],
+            "Properties": {
+                "abuse": "Process injection"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "perf*.dat",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "location": "%temp% folder"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "ContainerV2",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "client.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0009"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "IEXPL0RE.EXE",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Properties": {
+                "location": "Application Data\\Microsoft\\Internet Explorer"
+            }
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "IEXPL0RE.LNK",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003"
+            ],
+            "Properties": {
+                "location": "Start Menu\\Programs\\Startup"
+            }
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "lock.dat",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0009"
+            ],
+            "Properties": {
+                "location": "C:\\WINDOWS\\system"
+            }
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "MSMAPI32.SRG",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0009"
+            ],
+            "Properties": {
+                "location": "C:\\WINDOWS\\system"
+            }
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "STREAM.SYS",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0009"
+            ],
+            "Properties": {
+                "location": "C:\\WINDOWS\\system32"
+            }
+        },
+        {
+            "EntityId": "entity_22",
+            "EntityName": "Command and Control Server",
+            "EntityType": "asset",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "location": "China"
+            }
+        },
+        {
+            "EntityId": "entity_23",
+            "EntityName": "XOR 0xCD",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0005"
+            ],
+            "Properties": {
+                "purpose": "Encryption"
+            }
+        },
+        {
+            "EntityId": "entity_24",
+            "EntityName": "StrokeIt",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "vulnerability": "DLL injection"
+            }
+        },
+        {
+            "EntityId": "entity_25",
+            "EntityName": "config.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ]
+        }
+    ],
+    "Relationships": []
+}

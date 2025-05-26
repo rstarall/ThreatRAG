@@ -1,0 +1,334 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "STONE PANDA",
+            "EntityVariantNames": [
+                "APT10"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0007",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China",
+                "sectors": "Aerospace & Defense, Government, Healthcare, Technology, Telecommunications"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "MSS Tianjin Bureau",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0042",
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "address": "85 Zhujiang Road, Tianjin"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "ZHANG Shilong",
+            "EntityVariantNames": [
+                "baobeilong",
+                "张世龙"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0042",
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "location": "Tianjin",
+                "email": "long@xiaohong[.]org, baobei@xiaohong[.]org, atreexp@yahoo[.]com.cn, robin4700@foxmail[.]com, eshilong@vip.qq[.]com"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "GAO Qiang",
+            "EntityVariantNames": [
+                "fisherxp",
+                "高强",
+                "郜强",
+                "肥猪"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0042",
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "QQ": "420192"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Tianjin Huaying Haitai Science and Technology Development Company",
+            "EntityVariantNames": [
+                "Huaying Haitai",
+                "天津华盈海泰科技发展有限公司"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "address": "1906 Fuyu Mansion, Tianjin"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Laoying Baichen Instruments",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "address": "Room 1102, Guanfu Mansion, 46 Xinkai Road, Hedong District, Tianjin"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "DarkComet RAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Gh0st RAT 3.6",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "zxarps",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "lcx.exe",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Quasar RAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Trochilus RAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "RedLeaves",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "targets": "Japan, Russia, DPRK"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "xiaohong[.]org",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "IntrusionTruth",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Japanese defense firms",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "7"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "belong_to",
+            "Source": "STONE PANDA",
+            "Target": "MSS Tianjin Bureau"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "STONE PANDA",
+            "Target": "ZHANG Shilong"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "STONE PANDA",
+            "Target": "GAO Qiang"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "STONE PANDA",
+            "Target": "Tianjin Huaying Haitai Science and Technology Development Company"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "STONE PANDA",
+            "Target": "Laoying Baichen Instruments"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "GAO Qiang",
+            "Target": "DarkComet RAT"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "GAO Qiang",
+            "Target": "Gh0st RAT 3.6"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "GAO Qiang",
+            "Target": "zxarps"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "GAO Qiang",
+            "Target": "lcx.exe"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "use",
+            "Source": "ZHANG Shilong",
+            "Target": "Quasar RAT"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "use",
+            "Source": "ZHANG Shilong",
+            "Target": "Trochilus RAT"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Trochilus RAT",
+            "Target": "RedLeaves"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "belong_to",
+            "Source": "xiaohong[.]org",
+            "Target": "ZHANG Shilong"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "target",
+            "Source": "STONE PANDA",
+            "Target": "Japanese defense firms"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "target",
+            "Source": "STONE PANDA",
+            "Target": "IntrusionTruth"
+        }
+    ]
+}

@@ -1,0 +1,118 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "CARBANAK",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0009"
+            ],
+            "Properties": {
+                "capability": "Desktop video recording"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "FIN7",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0009"
+            ],
+            "Properties": {
+                "front_company": "Combi Security"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Targeted Banks",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "industry": "Financial"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "CARBANAK C2 Server",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ],
+            "Properties": {
+                "function": "Video data processing"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CARBANAK Video Player",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0009"
+            ],
+            "Properties": {
+                "file_format": ".frm"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "tinymet command",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "function": "Spawn Meterpreter instances"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Meterpreter",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "CARBANAK Week Blog Series",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0043"
+            ],
+            "Properties": {
+                "source": "FireEye",
+                "url": "fireeye.com/blog/threat-research/2019/04/carbanak-week-part-four-desktop-video-player.html"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Combi Security",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0042"
+            ],
+            "Properties": {
+                "role": "Front company"
+            }
+        }
+    ],
+    "Relationships": []
+}

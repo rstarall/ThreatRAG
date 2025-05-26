@@ -1,0 +1,360 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT27",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "activity_since": "2010",
+                "target": "German economic enterprises"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "German Economic Enterprises Cyber Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "Since March 2021",
+                "location": "Germany",
+                "observe_time": "2022",
+                "report_name": "2022_bfv_cyber-brief-Nr1(01-26-2022)_b7a70c36"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "German Economic Enterprises",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Various economic sectors"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "HYPERBRO",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Remote Access Tool (RAT)",
+                "components": "Loader, Malicious DLL, Payload, Config file"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2021-40539",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "software": "Zoho Manage Engine ADSelfService Plus"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CVE-2021-26855",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "software": "Microsoft Exchange Server"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "CVE-2021-26857",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "software": "Microsoft Exchange Server"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "CVE-2021-26858",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "software": "Microsoft Exchange Server"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "CVE-2021-27065",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "software": "Microsoft Exchange Server"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "104.168.236.46",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "function": "C2 Server"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "103.79.77.200",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "function": "C2 Server"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "87.98.190.184",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "function": "C2 Server"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "Microsoft Exchange Server",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "versions": "2013, 2016, 2019"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Zoho Manage Engine ADSelfService Plus",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Windows Defender",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "German Economic Enterprises Cyber Attack",
+            "Target": "APT27"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "German Economic Enterprises Cyber Attack",
+            "Target": "German Economic Enterprises"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "APT27",
+            "Target": "HYPERBRO"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "APT27",
+            "Target": "CVE-2021-40539"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "APT27",
+            "Target": "CVE-2021-26855"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "APT27",
+            "Target": "CVE-2021-26857"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "APT27",
+            "Target": "CVE-2021-26858"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "APT27",
+            "Target": "CVE-2021-27065"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "APT27",
+            "Target": "German Economic Enterprises"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2021-40539",
+            "Target": "Zoho Manage Engine ADSelfService Plus"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2021-26855",
+            "Target": "Microsoft Exchange Server"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2021-26857",
+            "Target": "Microsoft Exchange Server"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2021-26858",
+            "Target": "Microsoft Exchange Server"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2021-27065",
+            "Target": "Microsoft Exchange Server"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "HYPERBRO",
+            "Target": "104.168.236.46"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "HYPERBRO",
+            "Target": "103.79.77.200"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "HYPERBRO",
+            "Target": "87.98.190.184"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "affect",
+            "Source": "HYPERBRO",
+            "Target": "Windows Defender"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "has",
+            "Source": "German Economic Enterprises",
+            "Target": "Microsoft Exchange Server"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "has",
+            "Source": "German Economic Enterprises",
+            "Target": "Zoho Manage Engine ADSelfService Plus"
+        }
+    ]
+}

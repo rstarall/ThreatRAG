@@ -1,0 +1,138 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Grabit",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0009",
+                "TA0010"
+            ],
+            "Properties": {
+                "platform": "Windows 32-bit",
+                "framework": "Microsoft .NET Framework (Visual Basic/C#)",
+                "compilation_date": "March 7-9, 2015"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "HawkEye",
+            "EntityVariantNames": [
+                "HawkEyeProducts",
+                "HawkEye Logger"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0009",
+                "TA0010"
+            ],
+            "Properties": {
+                "type": "Keylogger",
+                "delivery_methods": "FTP, SMTP, Web-Panel"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "DarkComet",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Grabit Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0009",
+                "TA0010"
+            ],
+            "Properties": {
+                "start_date": "Late February 2015",
+                "end_date": "Mid-March 2015",
+                "origin_countries": "India, United States, Israel"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Malicious Word Document",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "extension": ".doc",
+                "macro": "AutoOpen"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Affected Organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "countries": "Thailand, India",
+                "infected_count": "Approximately 10,000"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "31.220.16.147",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "204.152.219.78",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "3f77403a64a2dde60c4962a6752de601d56a621a",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "9b48a2e82d8a82c1717f135fa750ba774403e972b6edb2a522f9870bed57e72a",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        }
+    ],
+    "Relationships": []
+}

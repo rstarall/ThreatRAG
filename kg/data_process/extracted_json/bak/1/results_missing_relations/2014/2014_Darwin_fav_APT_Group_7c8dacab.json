@@ -1,0 +1,194 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT12",
+            "EntityVariantNames": [
+                "IXESHE",
+                "DynCalc",
+                "DNSCALC"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011",
+                "TA0010"
+            ],
+            "Properties": {
+                "affiliation": "Chinese People's Liberation Army",
+                "region": "China"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Japan and Taiwan Targeting Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011",
+                "TA0010"
+            ],
+            "Properties": {
+                "timeframe": "August 2014",
+                "location": "Japan, Taiwan"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Taiwanese Government",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Japanese Technology Company",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "RIPTIDE",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "type": "Proxy-aware backdoor",
+                "communication": "HTTP"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "HIGHTIDE",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "md5": "6e59861931fa2796ee107dc27bfdd480",
+                "size": "75264 bytes",
+                "compile_time": "2014-08-23 08:22:49"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "THREEBYTE",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "md5": "16e627dbe730488b1c3d448bfc9096e2",
+                "size": "75776 bytes",
+                "compile_time": "2014-08-25 01:22:20"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "WATERSPOUT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "md5": "f9cfda6062a8ac9e332186a7ec0e706a",
+                "size": "49152 bytes",
+                "compile_time": "2014-08-25 02:10:11"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "CVE-2012-0158",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Tran Duy Linh Exploit Kit",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "141.108.2.157",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "video.csmcpr.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "icc.ignorelist.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "f6fafb7c30b1114befc93f39d0698560",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "type": "Malicious Word Document"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "lilywang823@gmail.com",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        }
+    ],
+    "Relationships": []
+}

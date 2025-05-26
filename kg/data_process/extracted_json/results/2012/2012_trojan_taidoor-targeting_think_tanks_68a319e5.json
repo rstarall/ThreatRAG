@@ -1,0 +1,204 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Taidoor",
+            "EntityVariantNames": [
+                "Trojan.Taidoor"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "first_seen": "March 2008",
+                "versions": "14"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "APT-29",
+            "EntityVariantNames": [
+                "Cozy Bear"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Russia"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "US-Taiwan Think Tanks",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Think Tanks",
+                "focus": "US-Taiwan affairs"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Phishing Email",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "BID 47314",
+            "EntityType": "vul",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "description": "Adobe Reader vulnerability"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Cobalt Strike",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "110.142.12.95",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "country": "Australia"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Mr. X",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "organization": "Think Tank"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "US-Taiwan Defense Industry Conference",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "September 2011",
+                "observe_time": "2012",
+                "report_name": "2012_trojan_taidoor-targeting_think_tanks_68a319e5"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "Taidoor"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "US-Taiwan Think Tanks"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "Phishing Email"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "exploit",
+            "Source": "BID 47314",
+            "Target": "Taidoor"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "Cobalt Strike"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Taidoor",
+            "Target": "110.142.12.95"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "Mr. X"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "involve",
+            "Source": "US-Taiwan Defense Industry Conference",
+            "Target": "APT-29"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "involve",
+            "Source": "US-Taiwan Defense Industry Conference",
+            "Target": "US-Taiwan Think Tanks"
+        }
+    ]
+}

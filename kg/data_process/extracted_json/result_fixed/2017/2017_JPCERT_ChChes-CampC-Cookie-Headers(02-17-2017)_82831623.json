@@ -1,0 +1,183 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "ChChes",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "first_seen": "October 2016",
+                "origin": "Japan"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Japanese organisations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "ZIP file with executable",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "disguise": "Word document icon"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "HT Srl",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Italy",
+                "certificate": "VeriSign Class 3 Code Signing 2010 CA"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "area.wthelpdesk.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "dick.ccfchrist.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "5961861d2b9f50d05055814e6bfd1c6291b30719f8a4d02d4cf80c2e87753fa1",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "HTTP Cookie communication",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "encryption": "RC4 with MD5-derived key"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "AES encryption module",
+            "EntityType": "tool",
+            "EntitySubType": "module",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "use",
+            "Source": "HT Srl",
+            "Target": "ChChes"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "target",
+            "Source": "HT Srl",
+            "Target": "Japanese organisations"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "ChChes",
+            "Target": "ZIP file with executable"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "trigger",
+            "Source": "Japanese organisations",
+            "Target": "ZIP file with executable"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "ChChes",
+            "Target": "HTTP Cookie communication"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "ChChes",
+            "Target": "area.wthelpdesk.com"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "ChChes",
+            "Target": "dick.ccfchrist.com"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "ChChes",
+            "Target": "AES encryption module"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "belong_to",
+            "Source": "5961861d2b9f50d05055814e6bfd1c6291b30719f8a4d02d4cf80c2e87753fa1",
+            "Target": "ChChes"
+        }
+    ]
+}

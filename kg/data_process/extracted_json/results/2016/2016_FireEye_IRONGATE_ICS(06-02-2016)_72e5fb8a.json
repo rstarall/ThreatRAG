@@ -1,0 +1,211 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "IRONGATE",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0005"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "ICS-focused malware",
+                "target": "Siemens control system simulation"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "FireEye Labs Advanced Reverse Engineering",
+            "EntityType": "org",
+            "EntitySubType": "research",
+            "Labels": [
+                "TA0043"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Siemens ProductCERT",
+            "EntityType": "org",
+            "EntitySubType": "security",
+            "Labels": [
+                "TA0043"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Stuxnet",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "PyInstaller",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "scada.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Step7ProSim.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "biogas.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Siemens PLCSIM",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "VMware",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Cuckoo Sandbox",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "related_to",
+            "Source": "IRONGATE",
+            "Target": "Stuxnet"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "related_to",
+            "Source": "IRONGATE",
+            "Target": "PyInstaller"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "IRONGATE",
+            "Target": "scada.exe"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "IRONGATE",
+            "Target": "Step7ProSim.dll"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "IRONGATE",
+            "Target": "biogas.exe"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "IRONGATE",
+            "Target": "Siemens PLCSIM"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "affect",
+            "Source": "scada.exe",
+            "Target": "Siemens PLCSIM"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "affect",
+            "Source": "Step7ProSim.dll",
+            "Target": "Siemens PLCSIM"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "affect",
+            "Source": "biogas.exe",
+            "Target": "Siemens PLCSIM"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "IRONGATE",
+            "Target": "VMware"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "IRONGATE",
+            "Target": "Cuckoo Sandbox"
+        }
+    ]
+}

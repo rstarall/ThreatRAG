@@ -1,0 +1,350 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "COZY BEAR",
+            "EntityVariantNames": [
+                "APT29",
+                "The Dukes"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0005",
+                "TA0006",
+                "TA0007",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Russia",
+                "affiliation": "SVR"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "StellarParticle Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0005",
+                "TA0006",
+                "TA0007",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "2019-2022",
+                "observe_time": "2022",
+                "report_name": "2022_Crowdstrike_StellarParticle-Campaign-Novel-Tactics-Techniques(01-27-2022)_b197f729"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "TrailBlazer",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "1326932d63485e299ba8e03bfcd23057f7897c3ae0d26ed1235c4fb108adb105",
+                "persistence": "WMI"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "GoldMax Linux Variant",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "2a3b660e19b56dad92ba45dd164d300e9bd9c3b17736004878f45ee23a0177ac",
+                "persistence": "crontab"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Get-ADReplAccount",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Mimikatz",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "AdFind",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0007"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Credential Hopping",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0008"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Cookie Theft",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Service Principal Hijacking",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0003",
+                "TA0004"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "http://satkas.waw.pl/rainloop/forecast",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "vm-srv-1.gel.ulaval.ca",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "156.96.46.116",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "188.34.185.85",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "O365 Environment",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "Active Directory",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "Chrome Browser",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0006"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "Windows Server",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "StellarParticle Campaign",
+            "Target": "COZY BEAR"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "COZY BEAR",
+            "Target": "TrailBlazer"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "COZY BEAR",
+            "Target": "GoldMax Linux Variant"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "COZY BEAR",
+            "Target": "Get-ADReplAccount"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "COZY BEAR",
+            "Target": "Mimikatz"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "COZY BEAR",
+            "Target": "Credential Hopping"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "COZY BEAR",
+            "Target": "O365 Environment"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "COZY BEAR",
+            "Target": "Active Directory"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "TrailBlazer",
+            "Target": "http://satkas.waw.pl/rainloop/forecast"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "GoldMax Linux Variant",
+            "Target": "vm-srv-1.gel.ulaval.ca"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Cookie Theft",
+            "Target": "Chrome Browser"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Service Principal Hijacking",
+            "Target": "O365 Environment"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "belong_to",
+            "Source": "156.96.46.116",
+            "Target": "COZY BEAR"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "belong_to",
+            "Source": "188.34.185.85",
+            "Target": "COZY BEAR"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "has",
+            "Source": "Active Directory",
+            "Target": "Windows Server"
+        }
+    ]
+}

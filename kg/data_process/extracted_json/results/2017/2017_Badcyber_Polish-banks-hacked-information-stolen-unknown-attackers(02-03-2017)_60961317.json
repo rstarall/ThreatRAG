@@ -1,0 +1,416 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Unknown Attackers",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Polish Banks Hack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "February 2017",
+                "location": "Poland",
+                "observe_time": "2017",
+                "report_name": "2017_Badcyber_Polish-banks-hacked-information-stolen-unknown-attackers(02-03-2017)_60961317"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Polish Banks",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Financial",
+                "country": "Poland"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Polish Financial Supervision Authority",
+            "EntityVariantNames": [
+                "KNF"
+            ],
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "website": "www.knf.gov.pl"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "www.knf.gov.pl",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "accordian-src.js",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "url": "http://www.knf.gov.pl/DefaultDesign/Layouts/KNF2013/resources/accordian-src.js?ver=11"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Custom RAT Malware",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "RAT",
+                "packed": "Yes",
+                "obfuscated": "Yes"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "125.214.195.17",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "196.29.166.218",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "http://sap.misapor.ch/vishop/view.jsp?pagenum=1",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "https://www.eye-watch.in/design/fancybox/Pnf.action",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "C1364BBF63B3617B25B58209E4529D8C",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "85D316590EDFB4212049C4490DB08C4B",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "1BFBC0C9E0D9CEB5C3F4F6CED6BCFEAE",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "496207DB444203A6A9C02A32AFF28D563999736C",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "4F0D7A33D23D53C0EB8B34D102CDD660FC5323A2",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "BEDCEAFA2109139C793CB158CEC9FA48F980FF2B",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "FC8607C155617E09D540C5030EABAD9A9512F656F16B38682FD50B2007583E9B",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "D4616F9706403A0D5A2F9A8726230A4693E4C95C58DF5C753CCC684F1D3542E2",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "CC6A731E9DAFF84BAE4214603E1C3BAD8D6735B0CBB2A0EC1635B36E6A38CB3A",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Polish Banks Hack Event",
+            "Target": "Unknown Attackers"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Polish Banks Hack Event",
+            "Target": "Polish Banks"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "Polish Banks Hack Event",
+            "Target": "Polish Financial Supervision Authority"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "target",
+            "Source": "Unknown Attackers",
+            "Target": "Polish Banks"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "Unknown Attackers",
+            "Target": "Polish Financial Supervision Authority"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Unknown Attackers",
+            "Target": "Custom RAT Malware"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Unknown Attackers",
+            "Target": "accordian-src.js"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Unknown Attackers",
+            "Target": "http://sap.misapor.ch/vishop/view.jsp?pagenum=1"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "use",
+            "Source": "Unknown Attackers",
+            "Target": "https://www.eye-watch.in/design/fancybox/Pnf.action"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "has",
+            "Source": "Polish Financial Supervision Authority",
+            "Target": "www.knf.gov.pl"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "accordian-src.js",
+            "Target": "www.knf.gov.pl"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Custom RAT Malware",
+            "Target": "125.214.195.17"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "Custom RAT Malware",
+            "Target": "196.29.166.218"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "Custom RAT Malware",
+            "Target": "C1364BBF63B3617B25B58209E4529D8C"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "Custom RAT Malware",
+            "Target": "85D316590EDFB4212049C4490DB08C4B"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "Custom RAT Malware",
+            "Target": "1BFBC0C9E0D9CEB5C3F4F6CED6BCFEAE"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "Custom RAT Malware",
+            "Target": "496207DB444203A6A9C02A32AFF28D563999736C"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "related_to",
+            "Source": "Custom RAT Malware",
+            "Target": "4F0D7A33D23D53C0EB8B34D102CDD660FC5323A2"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "related_to",
+            "Source": "Custom RAT Malware",
+            "Target": "BEDCEAFA2109139C793CB158CEC9FA48F980FF2B"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "related_to",
+            "Source": "Custom RAT Malware",
+            "Target": "FC8607C155617E09D540C5030EABAD9A9512F656F16B38682FD50B2007583E9B"
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "related_to",
+            "Source": "Custom RAT Malware",
+            "Target": "D4616F9706403A0D5A2F9A8726230A4693E4C95C58DF5C753CCC684F1D3542E2"
+        },
+        {
+            "RelationshipId": "relationship_22",
+            "RelationshipType": "related_to",
+            "Source": "Custom RAT Malware",
+            "Target": "CC6A731E9DAFF84BAE4214603E1C3BAD8D6735B0CBB2A0EC1635B36E6A38CB3A"
+        },
+        {
+            "RelationshipId": "relationship_23",
+            "RelationshipType": "trigger",
+            "Source": "Polish Banks",
+            "Target": "accordian-src.js"
+        }
+    ]
+}

@@ -1,0 +1,259 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Russian State-Sponsored Actors",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Russia"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Ukraine Disk-Wiping Attacks",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0040"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "February 2022",
+                "location": "Ukraine, Lithuania",
+                "observe_time": "2022",
+                "report_name": "2022_Symantec_Ukraine-Disk-wiping-Russian-Invasion(02-24-2022)_558850b5"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Ukrainian Organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "sectors": "Financial, Defense, Aviation, IT Services"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Trojan.Killdisk",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "type": "Disk-wiping malware",
+                "signature": "Signed by Hermetica Digital Ltd"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Microsoft Exchange Server",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Tomcat",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "192.168.3.13",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "postgresql.exe",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "trustsecpro[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "whatismyip[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "confluence[.]novus[.]ua",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Ransomware",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "files": "client.exe, cdir.exe, cname.exe, connh.exe, intpub.exe"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "WhisperGate",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0040"
+            ],
+            "Times": [
+                "5"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Ukraine Disk-Wiping Attacks",
+            "Target": "Russian State-Sponsored Actors"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Ukraine Disk-Wiping Attacks",
+            "Target": "Ukrainian Organizations"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Russian State-Sponsored Actors",
+            "Target": "Trojan.Killdisk"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Russian State-Sponsored Actors",
+            "Target": "Ransomware"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "target",
+            "Source": "Russian State-Sponsored Actors",
+            "Target": "Ukrainian Organizations"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "Russian State-Sponsored Actors",
+            "Target": "Microsoft Exchange Server"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "Russian State-Sponsored Actors",
+            "Target": "Tomcat"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "has",
+            "Source": "Ukrainian Organizations",
+            "Target": "Microsoft Exchange Server"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "has",
+            "Source": "Ukrainian Organizations",
+            "Target": "Tomcat"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "belong_to",
+            "Source": "postgresql.exe",
+            "Target": "Microsoft Exchange Server"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Trojan.Killdisk",
+            "Target": "Ransomware"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Trojan.Killdisk",
+            "Target": "WhisperGate"
+        }
+    ]
+}

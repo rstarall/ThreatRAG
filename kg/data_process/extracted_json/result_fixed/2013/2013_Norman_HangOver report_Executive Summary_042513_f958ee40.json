@@ -1,0 +1,293 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Operation Hangover",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0009",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "duration": "Over 3 years",
+                "discovery_date": "March 2013",
+                "observe_time": "2013",
+                "report_name": "2013_Norman_HangOver report_Executive Summary_042513_f958ee40"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Indian Cyberattack Group",
+            "EntityVariantNames": [
+                "Operation Hangover actors"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0009",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "origin": "India",
+                "sponsorship": "Private actors"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Telenor",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "industry": "Telecommunications",
+                "country": "Norway"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Spear Phishing",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "technique": "Social engineering"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Malicious Documents",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "type": "Infected documents"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Java Vulnerabilities",
+            "EntityType": "vul",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Word Document Vulnerabilities",
+            "EntityType": "vul",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Web Browser Vulnerabilities",
+            "EntityType": "vul",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Malicious Websites",
+            "EntityType": "ioc",
+            "EntitySubType": "url",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "technique": "Typosquatting"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Pakistan Targets",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "sector": "Government, Military"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "US Targets",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "sector": "Government, Military"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Norman Shark",
+            "EntityType": "org",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0043"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "role": "Security analyst"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Operation Hangover",
+            "Target": "Indian Cyberattack Group"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Operation Hangover",
+            "Target": "Telenor"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Indian Cyberattack Group",
+            "Target": "Spear Phishing"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Indian Cyberattack Group",
+            "Target": "Malicious Documents"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Indian Cyberattack Group",
+            "Target": "Java Vulnerabilities"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Indian Cyberattack Group",
+            "Target": "Word Document Vulnerabilities"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Indian Cyberattack Group",
+            "Target": "Web Browser Vulnerabilities"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Indian Cyberattack Group",
+            "Target": "Malicious Websites"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "Indian Cyberattack Group",
+            "Target": "Telenor"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "target",
+            "Source": "Indian Cyberattack Group",
+            "Target": "Pakistan Targets"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "target",
+            "Source": "Indian Cyberattack Group",
+            "Target": "US Targets"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Spear Phishing",
+            "Target": "Malicious Documents"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "Spear Phishing",
+            "Target": "Malicious Websites"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "trigger",
+            "Source": "Telenor",
+            "Target": "Malicious Documents"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "exploit",
+            "Source": "Java Vulnerabilities",
+            "Target": "Malicious Documents"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "exploit",
+            "Source": "Word Document Vulnerabilities",
+            "Target": "Malicious Documents"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "exploit",
+            "Source": "Web Browser Vulnerabilities",
+            "Target": "Malicious Websites"
+        }
+    ]
+}

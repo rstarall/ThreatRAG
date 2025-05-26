@@ -1,0 +1,232 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Operation Dust Storm",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Properties": {
+                "operational_since": "2010",
+                "primary_targets": "Japanese critical infrastructure"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Operation Dust Storm Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008"
+            ],
+            "Properties": {
+                "timeframe": "2010-2015",
+                "locations": "Japan, South Korea, US, Europe, Southeast Asia"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Misdat Backdoor",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "first_seen": "2010",
+                "language": "Delphi"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "S-Type Backdoor",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "first_seen": "2013"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Zlib Backdoor",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "first_seen": "2014",
+                "language": "Visual C++ 6"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Poison Ivy",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Gh0st RAT",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "CVE-2011-1255",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "affected_software": "Internet Explorer 8"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "CVE-2011-0611",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "affected_software": "Adobe Flash"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "CVE-2010-1885",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "CVE-2012-1889",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "affected_software": "Internet Explorer"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "CVE-2013-5990",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "affected_software": "Ichitaro"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "CVE-2014-0322",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "affected_software": "Internet Explorer"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "323332.3322.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "msejake.7766.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "mail.glkjcorp.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "ssl.projectscorp.net",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "218.106.246.195",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "114.108.150.38",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "Japanese Critical Infrastructure",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "sectors": "Electricity, Oil/Gas, Finance, Transportation, Construction"
+            }
+        }
+    ],
+    "Relationships": []
+}

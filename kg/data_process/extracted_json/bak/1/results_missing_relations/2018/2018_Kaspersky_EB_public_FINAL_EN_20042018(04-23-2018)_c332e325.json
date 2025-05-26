@@ -1,0 +1,349 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Energetic Bear",
+            "EntityVariantNames": [
+                "Crouching Yeti"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0040"
+            ],
+            "Properties": {
+                "country": "Russia",
+                "sectors": "Energy, Industrial",
+                "active_since": "2010"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Server Attacks Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0040"
+            ],
+            "Properties": {
+                "time": "2016-2017"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Nmap",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0043"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Dirsearch",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0043"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Sqlmap",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Sublist3r",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0043"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Wpscan",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0043"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "Impacket",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0006"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "SMBTrap",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0006"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Commix",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Subbrute",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0043"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "PHPMailer",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0001"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "ftpChecker.py",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0043"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "ini.php",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "f3e3e25a822012023c6e81b206711865",
+                "type": "WSO shell + mail"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "mysql.php",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "f3e3e25a822012023c6e81b206711865",
+                "type": "WSO shell + mail"
+            }
+        },
+        {
+            "EntityId": "entity_16",
+            "EntityName": "opts.php",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "c76470e85b7f3da46539b40e5c552712",
+                "type": "WSO shell"
+            }
+        },
+        {
+            "EntityId": "entity_17",
+            "EntityName": "error_log.php",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "155385cc19e3092765bcfed034b82ccb",
+                "type": "WSO shell"
+            }
+        },
+        {
+            "EntityId": "entity_18",
+            "EntityName": "code29.php",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "1644af9b6424e8f58f39c7fa5e76de51",
+                "type": "Web shell"
+            }
+        },
+        {
+            "EntityId": "entity_19",
+            "EntityName": "proxy87.php",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "1644af9b6424e8f58f39c7fa5e76de51",
+                "type": "Web shell"
+            }
+        },
+        {
+            "EntityId": "entity_20",
+            "EntityName": "theme.php",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "2292f5db385068e161ae277531b2e114",
+                "type": "WSO shell"
+            }
+        },
+        {
+            "EntityId": "entity_21",
+            "EntityName": "sma.php",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "hash": "7ec514bbdc6dd8f606f803d39af8883f",
+                "type": "PHPMailer"
+            }
+        },
+        {
+            "EntityId": "entity_22",
+            "EntityName": "media.php",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Properties": {
+                "hash": "78c31eff38fdb72ea3b1800ea917940f",
+                "type": "WSO shell"
+            }
+        },
+        {
+            "EntityId": "entity_23",
+            "EntityName": "Modified sshd",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0003"
+            ],
+            "Properties": {
+                "location": "/usr/sbin/sshd",
+                "log_location": "/var/tmp/.pipe.sock"
+            }
+        },
+        {
+            "EntityId": "entity_24",
+            "EntityName": "Russian Opposition Political Website",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "country": "Russia",
+                "role": "Waterhole"
+            }
+        },
+        {
+            "EntityId": "entity_25",
+            "EntityName": "Ukrainian Electric Power Sector Company",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "country": "Ukraine",
+                "role": "Waterhole"
+            }
+        },
+        {
+            "EntityId": "entity_26",
+            "EntityName": "UK Aerospace Company",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "country": "UK",
+                "role": "Waterhole"
+            }
+        },
+        {
+            "EntityId": "entity_27",
+            "EntityName": "German Software Developer",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "country": "Germany",
+                "role": "Waterhole"
+            }
+        },
+        {
+            "EntityId": "entity_28",
+            "EntityName": "Turkish Oil and Gas Sector Enterprise",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "country": "Turkey",
+                "role": "Waterhole"
+            }
+        },
+        {
+            "EntityId": "entity_29",
+            "EntityName": "US Oil and Gas Sector Enterprise",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "country": "USA",
+                "role": "Waterhole"
+            }
+        }
+    ],
+    "Relationships": []
+}

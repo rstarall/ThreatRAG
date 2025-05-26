@@ -1,0 +1,140 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Tortoiseshell",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0007",
+                "TA0008"
+            ],
+            "Properties": {
+                "first_seen": "July 2018",
+                "last_seen": "July 2019"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "IT Providers in Saudi Arabia",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "location": "Saudi Arabia",
+                "count": "11"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Backdoor.Syskit",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Properties": {
+                "type": "Backdoor",
+                "languages": "Delphi, .NET"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Infostealer/Sha.exe/Sha432.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0007",
+                "TA0009"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Infostealer/stereoversioncontrol.exe",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0007",
+                "TA0009"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "get-logon-history.ps1",
+            "EntityType": "tool",
+            "EntitySubType": "shell",
+            "Labels": [
+                "TA0007"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "64.235.60.123",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "64.235.39.45",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "d9ac9c950e5495c9005b04843a40f01fa49d5fd49226cb5b03a055232ffc36f3",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0001"
+            ],
+            "Properties": {
+                "type": "Web shell"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "Poison Frog",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Properties": {
+                "related_group": "APT34/Oilrig"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Domain Controller",
+            "EntityType": "asset",
+            "EntitySubType": "bussiness",
+            "Labels": [
+                "TA0008"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Windows",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ]
+        }
+    ],
+    "Relationships": []
+}

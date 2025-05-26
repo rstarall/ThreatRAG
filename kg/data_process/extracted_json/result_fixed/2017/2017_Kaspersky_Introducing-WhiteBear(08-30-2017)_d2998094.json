@@ -1,0 +1,367 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "WhiteBear",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "description": "APT malware platform with complex components",
+                "family": "Turla"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Turla",
+            "EntityVariantNames": [
+                "Skipper Turla",
+                "APT-29"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Russia"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "WhiteBear Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "time": "February 2016 - June 2017",
+                "observe_time": "2017",
+                "report_name": "2017_Kaspersky_Introducing-WhiteBear(08-30-2017)_d2998094"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Embassies and Diplomatic Organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "sector": "Diplomatic/Foreign Affairs"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Defense-related Organizations",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "sector": "Defense"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "WhiteBear Binary Loader",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "md5": "b099b82acb860d9a9a571515024b35f0",
+                "signature": "Solid Loop Ltd"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "WhiteBear Main Module",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "md5": "06bd89448a10aa5c2f4ca46b4709a879"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "WhiteBear Transport Library",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "md5": "19ce5c912768958aa3ee7bc19b2b032c",
+                "signature": "Solid Loop Ltd"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "169.255.137.203",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "7"
+            ],
+            "Properties": {
+                "location": "South Sudan"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "217.171.86.137",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "7"
+            ],
+            "Properties": {
+                "location": "Congo"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "66.178.107.140",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "7"
+            ],
+            "Properties": {
+                "location": "Likely Africa"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "soligro.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "7"
+            ]
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "mydreamhoroscope.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "7"
+            ]
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Solid Loop Ltd",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "role": "Front organization for code signing"
+            }
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Spearphishing PDF",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "WhiteBear Attack Event",
+            "Target": "Turla"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "WhiteBear Attack Event",
+            "Target": "Embassies and Diplomatic Organizations"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "WhiteBear Attack Event",
+            "Target": "Defense-related Organizations"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Turla",
+            "Target": "WhiteBear"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Turla",
+            "Target": "WhiteBear Binary Loader"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Turla",
+            "Target": "WhiteBear Main Module"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Turla",
+            "Target": "WhiteBear Transport Library"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "use",
+            "Source": "Turla",
+            "Target": "Spearphishing PDF"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "Turla",
+            "Target": "Embassies and Diplomatic Organizations"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "target",
+            "Source": "Turla",
+            "Target": "Defense-related Organizations"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "WhiteBear",
+            "Target": "WhiteBear Binary Loader"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "WhiteBear",
+            "Target": "WhiteBear Main Module"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "WhiteBear",
+            "Target": "WhiteBear Transport Library"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "WhiteBear Transport Library",
+            "Target": "169.255.137.203"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "related_to",
+            "Source": "WhiteBear Transport Library",
+            "Target": "217.171.86.137"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "related_to",
+            "Source": "WhiteBear Transport Library",
+            "Target": "66.178.107.140"
+        },
+        {
+            "RelationshipId": "relationship_17",
+            "RelationshipType": "related_to",
+            "Source": "WhiteBear Transport Library",
+            "Target": "soligro.com"
+        },
+        {
+            "RelationshipId": "relationship_18",
+            "RelationshipType": "related_to",
+            "Source": "WhiteBear Transport Library",
+            "Target": "mydreamhoroscope.com"
+        },
+        {
+            "RelationshipId": "relationship_19",
+            "RelationshipType": "use",
+            "Source": "Turla",
+            "Target": "Solid Loop Ltd"
+        },
+        {
+            "RelationshipId": "relationship_20",
+            "RelationshipType": "related_to",
+            "Source": "WhiteBear Binary Loader",
+            "Target": "Solid Loop Ltd"
+        },
+        {
+            "RelationshipId": "relationship_21",
+            "RelationshipType": "related_to",
+            "Source": "WhiteBear Transport Library",
+            "Target": "Solid Loop Ltd"
+        }
+    ]
+}

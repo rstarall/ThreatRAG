@@ -1,0 +1,188 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Stealth Falcon",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "UAE",
+                "suspected_sponsor": "UAE government"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "UAEDissidents Targeting Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "2012-2016",
+                "target_region": "UAE",
+                "observe_time": "2016",
+                "report_name": "2016_CitizenLab-Stealth_Falcon(05-29-2016)_14fecf0b"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Rori Donaghy",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "occupation": "Journalist",
+                "affiliation": "Middle East Eye"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Malicious Word Document",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "filename": "right2fight.docm",
+                "hash": "80e8ef78b9e28015cde4205aaa65da97"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "adhostingcache.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "ip": "95.215.44.37"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Andrew Dwight",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "email": "andrew.dwight389@outlook.com",
+                "twitter": "@Dwight389"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "aax.me",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "purpose": "URL shortening with profiling"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "IEWebCache.vbs",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0003"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "delivery_method": "Scheduled Task"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "UAEDissidents Targeting Campaign",
+            "Target": "Stealth Falcon"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "target",
+            "Source": "Stealth Falcon",
+            "Target": "Rori Donaghy"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Stealth Falcon",
+            "Target": "Malicious Word Document"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Stealth Falcon",
+            "Target": "Andrew Dwight"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Stealth Falcon",
+            "Target": "adhostingcache.com"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Malicious Word Document",
+            "Target": "adhostingcache.com"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "Stealth Falcon",
+            "Target": "aax.me"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Malicious Word Document",
+            "Target": "IEWebCache.vbs"
+        }
+    ]
+}

@@ -1,0 +1,285 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "APT-29",
+            "EntityVariantNames": [
+                "Regin",
+                "Cozy Bear"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "sophistication": "High",
+                "attribution": "Nation-state"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Telecom Operators",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Government Institutions",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Jean Jacques Quisquater",
+            "EntityType": "vctim",
+            "EntitySubType": "user",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "occupation": "Cryptographer",
+                "nationality": "Belgian"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Regin Platform",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "modular": "True",
+                "sophistication": "High"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Cobalt Strike",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "NTFS Extended Attributes",
+            "EntityType": "vul",
+            "EntitySubType": "others",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "61.67.114.73",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "location": "Taichung, Taiwan"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "202.71.144.113",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "location": "Chetput, India"
+            }
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "203.199.89.80",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "location": "Thane, India"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "194.183.237.145",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "location": "Brussels, Belgium"
+            }
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Regin GSM Attack",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0008",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "2008-2014",
+                "observe_time": "2014",
+                "report_name": "2014_Kaspersky_Lab_whitepaper_Regin_platform_eng_36a47805"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Regin GSM Attack",
+            "Target": "APT-29"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Regin GSM Attack",
+            "Target": "Telecom Operators"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "involve",
+            "Source": "Regin GSM Attack",
+            "Target": "Government Institutions"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "involve",
+            "Source": "Regin GSM Attack",
+            "Target": "Jean Jacques Quisquater"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "Regin Platform"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "Cobalt Strike"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "use",
+            "Source": "APT-29",
+            "Target": "NTFS Extended Attributes"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "Telecom Operators"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "Government Institutions"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "target",
+            "Source": "APT-29",
+            "Target": "Jean Jacques Quisquater"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Regin Platform",
+            "Target": "61.67.114.73"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Regin Platform",
+            "Target": "202.71.144.113"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "Regin Platform",
+            "Target": "203.199.89.80"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "Regin Platform",
+            "Target": "194.183.237.145"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "exploit",
+            "Source": "NTFS Extended Attributes",
+            "Target": "Windows System"
+        }
+    ]
+}

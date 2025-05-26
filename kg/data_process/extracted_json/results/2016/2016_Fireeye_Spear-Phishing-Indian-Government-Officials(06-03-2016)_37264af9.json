@@ -1,0 +1,275 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Pakistan-based APT group",
+            "EntityVariantNames": [
+                "Transparent Tribe"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Pakistan",
+                "target_region": "South Asia"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Spear Phishing Attack on Indian Government",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "May 18, 2016",
+                "observe_time": "2016",
+                "report_name": "2016_Fireeye_Spear-Phishing-Indian-Government-Officials(06-03-2016)_37264af9"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Indian Government Officials",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "India",
+                "sector": "Government"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "timesofindiaa[.]in",
+            "EntityType": "asset",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "Fake news domain",
+                "registration_date": "May 18, 2016"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Malicious Microsoft Word Document",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "exploit": "CVE-2012-0158",
+                "lure": "7th Central Pay Commission"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "CVE-2012-0158",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Breach Remote Administration Tool",
+            "EntityVariantNames": [
+                "BreachRAT"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "language": "C++",
+                "c2": "5.189.145.248:10500"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "5.189.145.248",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "port": "10500",
+                "protocol": "TCP"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "UPDATESEE",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "DarkComet",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "NJRAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Microsoft Word",
+            "EntityType": "env",
+            "EntitySubType": "software",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Spear Phishing Attack on Indian Government",
+            "Target": "Pakistan-based APT group"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Spear Phishing Attack on Indian Government",
+            "Target": "Indian Government Officials"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Pakistan-based APT group",
+            "Target": "timesofindiaa[.]in"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Pakistan-based APT group",
+            "Target": "Malicious Microsoft Word Document"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Pakistan-based APT group",
+            "Target": "CVE-2012-0158"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "use",
+            "Source": "Pakistan-based APT group",
+            "Target": "Breach Remote Administration Tool"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "Pakistan-based APT group",
+            "Target": "Indian Government Officials"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "exploit",
+            "Source": "CVE-2012-0158",
+            "Target": "Microsoft Word"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Breach Remote Administration Tool",
+            "Target": "5.189.145.248"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Pakistan-based APT group",
+            "Target": "UPDATESEE"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "Pakistan-based APT group",
+            "Target": "DarkComet"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "Pakistan-based APT group",
+            "Target": "NJRAT"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "trigger",
+            "Source": "Indian Government Officials",
+            "Target": "Malicious Microsoft Word Document"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "belong_to",
+            "Source": "Malicious Microsoft Word Document",
+            "Target": "Microsoft Word"
+        }
+    ]
+}

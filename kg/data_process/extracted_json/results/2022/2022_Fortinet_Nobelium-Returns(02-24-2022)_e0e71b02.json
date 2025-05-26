@@ -1,0 +1,296 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Nobelium",
+            "EntityVariantNames": [
+                "APT29",
+                "Cozy Bear"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "Russia",
+                "sponsor": "Russian-sponsored"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Embassy Attack Event",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "February 2022",
+                "target": "Embassies",
+                "observe_time": "2022",
+                "report_name": "2022_Fortinet_Nobelium-Returns(02-24-2022)_e0e71b02"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Turkish Embassy",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ]
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Covid.html",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "A896C2D16CADCDEDD10390C3AF3399361914DB57BDE1673E46180244E806A1D0",
+                "type": "HTML"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "Covid.iso",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "3CB0D2CFF9DB85C8E816515DDC380EA73850846317B0BB73EA6145C026276948",
+                "type": "ISO"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "DeleteDateConnectionPosition.dll",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ],
+            "Properties": {
+                "hash": "6EE1E629494D7B5138386D98BD718B010EE774FE4A4C9D0E069525408BB7B1F7",
+                "type": "DLL"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Cobalt Strike",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "EnvyScout",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "sinitude[.]com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "JARM Signature",
+            "EntityType": "ioc",
+            "EntitySubType": "payload",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "6"
+            ],
+            "Properties": {
+                "value": "2ad2ad0002ad2ad0002ad2ad2ad2ade1a3c0d7ca6ad8388057924be83dfc6a"
+            }
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "Windows",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "Kharkiv IP address",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "7"
+            ],
+            "Properties": {
+                "location": "Kharkiv, Ukraine"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "BazarLoader",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "6"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Embassy Attack Event",
+            "Target": "Nobelium"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "Embassy Attack Event",
+            "Target": "Turkish Embassy"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Nobelium",
+            "Target": "Covid.html"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Nobelium",
+            "Target": "EnvyScout"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Nobelium",
+            "Target": "Cobalt Strike"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "Nobelium",
+            "Target": "Turkish Embassy"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Covid.html",
+            "Target": "Covid.iso"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Covid.iso",
+            "Target": "DeleteDateConnectionPosition.dll"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "DeleteDateConnectionPosition.dll",
+            "Target": "Cobalt Strike"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "Cobalt Strike",
+            "Target": "sinitude[.]com"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "related_to",
+            "Source": "sinitude[.]com",
+            "Target": "JARM Signature"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "related_to",
+            "Source": "sinitude[.]com",
+            "Target": "Kharkiv IP address"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "related_to",
+            "Source": "sinitude[.]com",
+            "Target": "BazarLoader"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "affect",
+            "Source": "Covid.iso",
+            "Target": "Windows"
+        },
+        {
+            "RelationshipId": "relationship_15",
+            "RelationshipType": "has",
+            "Source": "Turkish Embassy",
+            "Target": "Windows"
+        },
+        {
+            "RelationshipId": "relationship_16",
+            "RelationshipType": "trigger",
+            "Source": "Turkish Embassy",
+            "Target": "Covid.html"
+        }
+    ]
+}

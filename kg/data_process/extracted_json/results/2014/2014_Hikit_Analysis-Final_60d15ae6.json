@@ -1,0 +1,199 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Hikit",
+            "EntityVariantNames": [
+                "Gen 1",
+                "Gen 2"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "type": "RAT",
+                "generations": "Gen 1.0, Gen 1.1, Gen 1.2, Gen 2.0 Alpha, Gen 2.0 Beta, Gen 2.1, Gen 2.2, Gen 2.3"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Hikit DLL",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "functionality": "Remote command shell, file management, network proxy, port forwarding"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Hikit Driver",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0005",
+                "TA0007"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "type": "NDIS driver (Gen 1), Rootkit driver (Gen 2)"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Hikit Loader",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "function": "Loads and decrypts embedded DLL"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "CVE-2023-1234",
+            "EntityType": "vul",
+            "EntitySubType": "cve",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "PassThruEx",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "usage": "Basis for Gen 1 Driver"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Agony Rootkit",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "usage": "Basis for Gen 2 Driver"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "LZO1X",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "usage": "Compression algorithm used by Loader"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "1"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "related_to",
+            "Source": "Hikit",
+            "Target": "Hikit DLL"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "related_to",
+            "Source": "Hikit",
+            "Target": "Hikit Driver"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "Hikit",
+            "Target": "Hikit Loader"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "exploit",
+            "Source": "Hikit",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "Hikit Driver",
+            "Target": "PassThruEx"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "Hikit Driver",
+            "Target": "Agony Rootkit"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "Hikit Loader",
+            "Target": "LZO1X"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "affect",
+            "Source": "Hikit DLL",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "affect",
+            "Source": "Hikit Driver",
+            "Target": "Windows System"
+        }
+    ]
+}

@@ -1,0 +1,301 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "ByeBye Shell Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "Since beginning of 2013",
+                "region": "Asia and South Asia",
+                "observe_time": "2013",
+                "report_name": "2013_ByeBye_Shell_target_e24c1dfd"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Unknown Attacker Group",
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "target": "Pakistan"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Pakistani Targets",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "industry": "Government/Military"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Spearphishing Email",
+            "EntityType": "tool",
+            "EntitySubType": "method",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ]
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": ".scr file",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "technique": "Left-to-Right Override Unicode character"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Batch Script",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "location": "%Temp% subfolder"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "Cabinet Self-Extractor",
+            "EntityType": "tool",
+            "EntitySubType": "tool",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "8b4224dac114a9b8433913a1977f88b2",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "469cf94c457c17d8f24dacf9f9d41f33",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "6b349e439a17c4b66fb2a25965432aa9",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_11",
+            "EntityName": "d36da5c48d8fb7ee8c736ae183bf3f8a",
+            "EntityType": "ioc",
+            "EntitySubType": "hash",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_12",
+            "EntityName": "ByeBye Shell",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "type": "Reverse shell",
+                "features": "shell, comd, sleep, quit, kill commands"
+            }
+        },
+        {
+            "EntityId": "entity_13",
+            "EntityName": "46.165.207.134",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "5"
+            ],
+            "Properties": {
+                "host": "Leaseweb Germany GmbH",
+                "port": "80"
+            }
+        },
+        {
+            "EntityId": "entity_14",
+            "EntityName": "Invalid Microsoft Windows Certificate",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0005"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_15",
+            "EntityName": "Windows System",
+            "EntityType": "env",
+            "EntitySubType": "os",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "ByeBye Shell Campaign",
+            "Target": "Unknown Attacker Group"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "ByeBye Shell Campaign",
+            "Target": "Pakistani Targets"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "use",
+            "Source": "Unknown Attacker Group",
+            "Target": "Spearphishing Email"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "Unknown Attacker Group",
+            "Target": ".scr file"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "Unknown Attacker Group",
+            "Target": "ByeBye Shell"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "Unknown Attacker Group",
+            "Target": "Pakistani Targets"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": ".scr file",
+            "Target": "Batch Script"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "Batch Script",
+            "Target": "Cabinet Self-Extractor"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "Cabinet Self-Extractor",
+            "Target": "ByeBye Shell"
+        },
+        {
+            "RelationshipId": "relationship_10",
+            "RelationshipType": "related_to",
+            "Source": "ByeBye Shell",
+            "Target": "46.165.207.134"
+        },
+        {
+            "RelationshipId": "relationship_11",
+            "RelationshipType": "belong_to",
+            "Source": "ByeBye Shell",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_12",
+            "RelationshipType": "has",
+            "Source": "Pakistani Targets",
+            "Target": "Windows System"
+        },
+        {
+            "RelationshipId": "relationship_13",
+            "RelationshipType": "trigger",
+            "Source": "Pakistani Targets",
+            "Target": ".scr file"
+        },
+        {
+            "RelationshipId": "relationship_14",
+            "RelationshipType": "related_to",
+            "Source": "ByeBye Shell",
+            "Target": "Invalid Microsoft Windows Certificate"
+        }
+    ]
+}

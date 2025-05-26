@@ -1,0 +1,232 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "PUTTER PANDA",
+            "EntityVariantNames": [
+                "Unit 61486",
+                "12th Bureau of PLA 3rd GSD"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0008",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "country": "China",
+                "location": "Shanghai",
+                "mission": "Space surveillance and SIGINT"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Chen Ping",
+            "EntityVariantNames": [
+                "cpyy",
+                "cpiyy",
+                "cpyy.chen"
+            ],
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0042"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "dob": "1979-05-29",
+                "email": "cpyy@sina.com",
+                "affiliation": "PLA Unit 61486"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "US Defense Industry",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "industry": "Defense",
+                "country": "United States"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "European Satellite Industry",
+            "EntityType": "vctim",
+            "EntitySubType": "org",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "industry": "Aerospace",
+                "region": "Europe"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "4H RAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "a76419a2FCa12427C887895E12a3442B",
+                "first_seen": "2007"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "3Para RAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "BC4E9dad71B844dd3233CFBBB96C1Bd3"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "PNGDowner",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0002"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "hash": "687424F0923dF9049CC3a56C685EB9a5"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "100.42.216.230",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "nsc.adomhn.com",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "PLA Cyber Espionage Campaign",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0010"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "timeframe": "2007-2014",
+                "targets": "Technology, Aerospace, Defense",
+                "observe_time": "2014",
+                "report_name": "2014_putter-panda_139bdb1d"
+            }
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "PLA Cyber Espionage Campaign",
+            "Target": "PUTTER PANDA"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "involve",
+            "Source": "PLA Cyber Espionage Campaign",
+            "Target": "Chen Ping"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "belong_to",
+            "Source": "Chen Ping",
+            "Target": "PUTTER PANDA"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "use",
+            "Source": "PUTTER PANDA",
+            "Target": "4H RAT"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "use",
+            "Source": "PUTTER PANDA",
+            "Target": "3Para RAT"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "target",
+            "Source": "PUTTER PANDA",
+            "Target": "US Defense Industry"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "target",
+            "Source": "PUTTER PANDA",
+            "Target": "European Satellite Industry"
+        },
+        {
+            "RelationshipId": "relationship_8",
+            "RelationshipType": "related_to",
+            "Source": "4H RAT",
+            "Target": "100.42.216.230"
+        },
+        {
+            "RelationshipId": "relationship_9",
+            "RelationshipType": "related_to",
+            "Source": "3Para RAT",
+            "Target": "nsc.adomhn.com"
+        }
+    ]
+}

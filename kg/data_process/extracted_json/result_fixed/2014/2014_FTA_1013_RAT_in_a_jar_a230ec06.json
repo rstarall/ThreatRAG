@@ -1,0 +1,214 @@
+{
+    "Entities": [
+        {
+            "EntityId": "entity_1",
+            "EntityName": "Unrecom RAT",
+            "EntityVariantNames": [
+                "Frutas RAT",
+                "Adwind RAT"
+            ],
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0003",
+                "TA0009",
+                "TA0011"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "version": "3.2",
+                "platform": "Java-based",
+                "price": "$200-$500",
+                "website": "unrecom[.]net"
+            }
+        },
+        {
+            "EntityId": "entity_2",
+            "EntityName": "Phishing Campaign May 2014",
+            "EntityType": "event",
+            "EntitySubType": "event",
+            "Labels": [
+                "TA0001",
+                "TA0002",
+                "TA0011"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "date": "May 2014",
+                "sectors": "Government, Technology, Advisory Services, Health, Financial",
+                "countries": "US, Saudi Arabia, Russia",
+                "observe_time": "2014",
+                "report_name": "2014_FTA_1013_RAT_in_a_jar_a230ec06"
+            }
+        },
+        {
+            "EntityId": "entity_3",
+            "EntityName": "Sarah Alexander",
+            "EntityType": "attcker",
+            "EntitySubType": "attacker",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "1"
+            ],
+            "Properties": {
+                "email": "mthomas3@mybluelight[.]com",
+                "ip": "87.117.232[.]203"
+            }
+        },
+        {
+            "EntityId": "entity_4",
+            "EntityName": "Invitation.jar",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "859c4c667dd0f44f80b60242d93c4b0f",
+                "sha1": "40859bc18ea0ffa9bcf5af699336fbdbfd6be7f1",
+                "size": "43866 bytes"
+            }
+        },
+        {
+            "EntityId": "entity_5",
+            "EntityName": "magnumbiz.no-ip.biz",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "port": "1505"
+            }
+        },
+        {
+            "EntityId": "entity_6",
+            "EntityName": "Payment details.jar",
+            "EntityType": "file",
+            "EntitySubType": "file",
+            "Labels": [
+                "TA0001"
+            ],
+            "Times": [
+                "2"
+            ],
+            "Properties": {
+                "hash": "bd0aba05d8263fb1a9a3adcae01fc3b7",
+                "sha1": "c60551e65cbe54899d1cd1f637b572455dc33b1b",
+                "size": "43887 bytes"
+            }
+        },
+        {
+            "EntityId": "entity_7",
+            "EntityName": "morechedder.no-ip.org",
+            "EntityType": "ioc",
+            "EntitySubType": "domain",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "port": "100"
+            }
+        },
+        {
+            "EntityId": "entity_8",
+            "EntityName": "184.22.201.27",
+            "EntityType": "ioc",
+            "EntitySubType": "ip",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "3"
+            ],
+            "Properties": {
+                "port": "3030"
+            }
+        },
+        {
+            "EntityId": "entity_9",
+            "EntityName": "DarkComet",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        },
+        {
+            "EntityId": "entity_10",
+            "EntityName": "ArcomRAT",
+            "EntityType": "tool",
+            "EntitySubType": "malware",
+            "Labels": [
+                "TA0011"
+            ],
+            "Times": [
+                "4"
+            ]
+        }
+    ],
+    "Relationships": [
+        {
+            "RelationshipId": "relationship_1",
+            "RelationshipType": "involve",
+            "Source": "Phishing Campaign May 2014",
+            "Target": "Unrecom RAT"
+        },
+        {
+            "RelationshipId": "relationship_2",
+            "RelationshipType": "use",
+            "Source": "Sarah Alexander",
+            "Target": "Invitation.jar"
+        },
+        {
+            "RelationshipId": "relationship_3",
+            "RelationshipType": "related_to",
+            "Source": "Invitation.jar",
+            "Target": "magnumbiz.no-ip.biz"
+        },
+        {
+            "RelationshipId": "relationship_4",
+            "RelationshipType": "related_to",
+            "Source": "Payment details.jar",
+            "Target": "morechedder.no-ip.org"
+        },
+        {
+            "RelationshipId": "relationship_5",
+            "RelationshipType": "related_to",
+            "Source": "Unrecom RAT",
+            "Target": "184.22.201.27"
+        },
+        {
+            "RelationshipId": "relationship_6",
+            "RelationshipType": "related_to",
+            "Source": "DarkComet",
+            "Target": "184.22.201.27"
+        },
+        {
+            "RelationshipId": "relationship_7",
+            "RelationshipType": "related_to",
+            "Source": "ArcomRAT",
+            "Target": "184.22.201.27"
+        }
+    ]
+}
