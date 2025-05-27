@@ -179,7 +179,7 @@ class Retriever:
         if refs["meta"].get("use_graph"):
             entity_extraction_prompt = entity_template.format(text=query)
             entities = model.predict(entity_extraction_prompt).content.split("<->")
-            # entities = [entity for entity in entities if all(char.isalnum() or char in "汉字" for char in entity)]
+            #entities = [entity for entity in entities if all(char.isalnum() or char in "汉字" for char in entity)]
 
         return entities
 

@@ -65,6 +65,9 @@ NEO4J_USER=neo4j
 NEO4J_PASSWORD=12345678
 NEO4J_DATABASE=neo4j
 ```
+网页端路径:
+http://localhost:7474/browser/
+
 
 ### 启动服务
 
@@ -98,7 +101,13 @@ milvus-server --data ./milvus_lite
 
 ## 模块说明
 
+<<<<<<< HEAD
 ### RAG模块
+=======
+### PgSQL说明
+PgSQL用于存储知识库文档的文本信息，存储在text字段
+
+>>>>>>> aision
 
 RAG模块基于LangChain实现，支持多种文档格式和向量数据库，提供智能检索和对话功能。
 

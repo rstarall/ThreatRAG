@@ -9,7 +9,7 @@ from pymilvus import MilvusClient, MilvusException
 from .. import config
 from ..utils import logger, hashstr
 from .indexing import chunk, read_text
-from .kb_db_manager import kb_db_manager
+from ..manager.kb_db_manager import kb_db_manager
 from .migrate_kb_to_sqlite import migrate_json_to_sqlite
 
 class KnowledgeBase:
@@ -60,7 +60,7 @@ class KnowledgeBase:
         if not self.connect_to_milvus():
             raise ConnectionError("Failed to connect to Milvus")
 
-    
+
     def create_database(self, database_name, description, dimension=None):
         """创建一个数据库"""
         dimension = dimension or self.embed_model.get_dimension()
@@ -133,7 +133,7 @@ class KnowledgeBase:
     def get_database_info(self, db_id):
         # 添加日志记录数据库ID的查询
         logger.info(f"尝试获取数据库信息，数据库ID: {db_id}")
-        
+
         db_dict = self.db_manager.get_database_by_id(db_id)
         if db_dict is None:
             logger.warning(f"数据库不存在，ID: {db_id}")
@@ -187,7 +187,7 @@ class KnowledgeBase:
         db = self.db_manager.get_database_by_id(db_id)
         if db is None:
             raise Exception(f"database not found, {db_id}")
-        
+
         return self.db_manager.get_files_by_database(db_id)
 
     def get_file_by_id(self, file_id):
@@ -240,12 +240,12 @@ class KnowledgeBase:
     def add_chunks(self, db_id, file_chunks):
         """添加分块"""
         db = self.get_kb_by_id(db_id)
-        
+
         # 检查数据库是否存在
         if db is None:
             logger.error(f"数据库不存在，db_id: {db_id}")
             return {"message": f"数据库不存在，db_id: {db_id}", "status": "failed"}
-        
+
         # 检查嵌入模型是否匹配
         if db["embed_model"] != self.embed_model.embed_model_fullname:
             logger.error(f"Embed model not match, {db['embed_model']} != {self.embed_model.embed_model_fullname}")
@@ -279,12 +279,12 @@ class KnowledgeBase:
 
     def add_files(self, db_id, files, params=None):
         db = self.get_kb_by_id(db_id)
-        
+
         # 检查数据库是否存在
         if db is None:
             logger.error(f"数据库不存在，db_id: {db_id}")
             return {"message": f"数据库不存在，db_id: {db_id}", "status": "failed"}
-        
+
         if not self.check_embed_model(db_id):
             logger.error(f"Embed model not match, {db['embed_model']} != {self.embed_model.embed_model_fullname}")
             return {"message": f"Embed model not match, cur: {self.embed_model.embed_model_fullname}, req: {db['embed_model']}", "status": "failed"}
@@ -419,17 +419,24 @@ class KnowledgeBase:
     def connect_to_milvus(self):
         """
         连接到 Milvus 服务。
-        使用配置中的 URI，如果没有配置，则使用默认值。
+        使用标准的 Milvus 连接方式。
         """
         try:
-            uri = os.getenv('MILVUS_URI', config.get('milvus_uri', "http://127.0.0.1:19530"))
+            # 获取milvus配置
+            milvus_config = config.get('milvus', {})
+            host = milvus_config.get('host', '127.0.0.1')
+            port = milvus_config.get('port', 19530)
+
+            # 使用标准连接方式
+            uri = f"http://{host}:{port}"
             self.client = MilvusClient(uri=uri)
-            # 可以添加一个简单的测试来确保连接成功
+            
+            # 测试连接
             self.client.list_collections()
             logger.info(f"Successfully connected to Milvus at {uri}")
             return True
         except MilvusException as e:
-            logger.error(f"Failed to connect to Milvus: {e}，请检查 milvus 的容器是否正常运行，如果已退出，请重新启动 `docker restart milvus-standalone-dev`")
+            logger.error(f"Failed to connect to Milvus: {e}")
             return False
 
     def get_collection_names(self):
@@ -465,10 +472,74 @@ class KnowledgeBase:
             logger.warning(f"Collection {collection_name} already exists, drop it")
             self.client.drop_collection(collection_name=collection_name)
 
+        # 创建集合
         self.client.create_collection(
             collection_name=collection_name,
             dimension= dimension,  # The vectors we will use in this demo has 768 dimensions
         )
+
+        # 创建索引（如果需要）
+        try:
+            # 检查是否已有索引
+            index_info = self.client.list_indexes(collection_name=collection_name)
+            if not index_info:
+                # 创建向量索引
+                index_params = {
+                    "index_type": "AUTOINDEX",
+                    "metric_type": "COSINE",
+                }
+                self.client.create_index(
+                    collection_name=collection_name,
+                    field_name="vector",
+                    index_params=index_params
+                )
+                logger.info(f"Index created for collection {collection_name}")
+        except Exception as e:
+            logger.warning(f"Failed to create index for collection {collection_name}: {e}")
+
+        # 创建集合后立即加载到内存中
+        try:
+            self.client.load_collection(collection_name=collection_name)
+            logger.info(f"Collection {collection_name} created and loaded successfully")
+        except Exception as e:
+            logger.error(f"Failed to load collection {collection_name}: {e}")
+            raise
+
+    def ensure_collection_loaded(self, collection_name):
+        """确保集合已加载到内存中"""
+        try:
+            # 检查集合是否存在
+            if not self.client.has_collection(collection_name=collection_name):
+                logger.error(f"Collection {collection_name} does not exist")
+                return False
+
+            # 检查是否有索引，如果没有则创建
+            try:
+                index_info = self.client.list_indexes(collection_name=collection_name)
+                if not index_info:
+                    logger.info(f"Collection {collection_name} has no index, creating one...")
+                    # 创建向量索引
+                    index_params = {
+                        "index_type": "AUTOINDEX",
+                        "metric_type": "COSINE",
+                    }
+                    self.client.create_index(
+                        collection_name=collection_name,
+                        field_name="vector",
+                        index_params=index_params
+                    )
+                    logger.info(f"Index created for collection {collection_name}")
+            except Exception as index_e:
+                logger.warning(f"Failed to check/create index for collection {collection_name}: {index_e}")
+
+            # 尝试加载集合（如果已加载，这个操作是安全的）
+            self.client.load_collection(collection_name=collection_name)
+            logger.debug(f"Collection {collection_name} is loaded and ready")
+            return True
+
+        except Exception as e:
+            logger.error(f"Failed to ensure collection {collection_name} is loaded: {e}")
+            return False
 
     def add_documents(self, docs, collection_name, chunk_infos=None, **kwargs):
         """添加已经分块之后的文本"""
@@ -477,6 +548,9 @@ class KnowledgeBase:
         if not self.client.has_collection(collection_name=collection_name):
             logger.error(f"Collection {collection_name} not found, create it")
             # self.add_collection(collection_name)
+        else:
+            # 确保集合已加载
+            self.ensure_collection_loaded(collection_name)
 
         chunk_infos = chunk_infos or [{}] * len(docs)
 
@@ -500,6 +574,10 @@ class KnowledgeBase:
         return self.search_by_vector(query_vectors[0], collection_name, limit)
 
     def search_by_vector(self, vector, collection_name, limit=3):
+        # 确保集合已加载
+        if not self.ensure_collection_loaded(collection_name):
+            raise Exception(f"Collection {collection_name} is not available for search")
+
         res = self.client.search(
             collection_name=collection_name,  # target collection
             data=[vector],  # query vectors
@@ -510,14 +588,22 @@ class KnowledgeBase:
         return res[0]
 
     def examples(self, collection_name, limit=20):
+        # 确保集合已加载
+        if not self.ensure_collection_loaded(collection_name):
+            raise Exception(f"Collection {collection_name} is not available for query")
+
         res = self.client.query(
             collection_name=collection_name,
-            limit=10,
+            limit=limit,
             output_fields=["id", "text"],
         )
         return res
 
     def search_by_id(self, collection_name, id, output_fields=["id", "text"]):
+        # 确保集合已加载
+        if not self.ensure_collection_loaded(collection_name):
+            raise Exception(f"Collection {collection_name} is not available for search")
+
         res = self.client.get(collection_name, id, output_fields=output_fields)
         return res
 

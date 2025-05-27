@@ -17,5 +17,5 @@ fastapi_server.add_middleware(
 
 @fastapi_server.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "status", "status": "ok"}
 

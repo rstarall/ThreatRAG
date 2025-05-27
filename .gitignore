@@ -3,15 +3,15 @@ models/*/
 experiment/dataset/*
 milvus_lite/
 #忽略情报文档爬虫
-data_spider/**/*.json
-data_spider/**/*.pdf
-data_spider/**/*.txt
-# 忽略kg目录下的JSON和XML文件
-kg/**/*.jsonl
-kg/**/*.json
-kg/**/*.xml
-kg/**/*.pdf
-kg/**/*.txt
+kg/data_spider/
+
+kg/data_process/**/*.xml
+kg/data_process/**/*.json
+kg/data_process/**/*.csv
+kg/data_process/**/*.jsonl
+saves/**/*pdf
+
+
 
 # ignore dataset files in the apt folder
 apt/*

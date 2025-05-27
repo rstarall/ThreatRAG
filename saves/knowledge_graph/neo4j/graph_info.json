@@ -20,6 +20,7 @@
   ],
   "status": "open",
   "embed_model_name": null,
+<<<<<<< HEAD
   "unindexed_node_count": [
     "C&amp;C server",
     "Windows systems",
@@ -65,4 +66,8 @@
     "WinRAR"
   ],
   "last_updated": "2025-05-26T22:18:47.309908"
+=======
+  "unindexed_node_count": [],
+  "last_updated": "2025-05-27T19:51:33.369278"
+>>>>>>> aision
 }

@@ -39,8 +39,16 @@ class Config(SimpleConfig):
         # 使用项目根目录的相对路径
         project_root = get_project_root()
         self.save_dir = os.path.join(project_root, "saves")
-        self.filename = str(Path(self.save_dir) / "config" / "base.yaml")
-        os.makedirs(os.path.dirname(self.filename), exist_ok=True)
+
+        # 优先使用根目录的config.yaml，如果不存在则使用saves/config/base.yaml
+        root_config = os.path.join(project_root, "config.yaml")
+        fallback_config = str(Path(self.save_dir) / "config" / "base.yaml")
+
+        if os.path.exists(root_config):
+            self.filename = root_config
+        else:
+            self.filename = fallback_config
+            os.makedirs(os.path.dirname(self.filename), exist_ok=True)
 
         self._update_models_from_file()
 
@@ -86,7 +94,7 @@ class Config(SimpleConfig):
 
     def _update_models_from_file(self):
         """
-        从 models.yaml 和 models.private.yml 中更新 MODEL_NAMES
+        从 models.yaml 和 models.yml 中更新 MODEL_NAMES
         """
         # 使用项目根目录的相对路径
         project_root = get_project_root()
@@ -97,12 +105,12 @@ class Config(SimpleConfig):
 
         # 尝试打开一个 models.private.yml 文件，用来覆盖 models.yaml 中的配置
         try:
-            with open(os.path.join(static_dir, "models.private.yml"), 'r', encoding='utf-8') as f:
+            with open(os.path.join(static_dir, "models.yml"), 'r', encoding='utf-8') as f:
                 _models_private = yaml.safe_load(f)
         except FileNotFoundError:
             _models_private = {}
 
-        # 只保留 deepseek 和 zhipuai 的模型
+        # 保留 deepseek、zhipu 和 local 的模型
         filtered_models = {
             "MODEL_NAMES": {
                 k: v for k, v in _models["MODEL_NAMES"].items()
@@ -110,11 +118,11 @@ class Config(SimpleConfig):
             },
             "EMBED_MODEL_INFO": {
                 k: v for k, v in _models["EMBED_MODEL_INFO"].items()
-                if k in ["deepseek", "zhipu"]
+                if k.startswith(("deepseek/", "zhipu/", "local/")) or k in ["deepseek", "zhipu", "local"]
             },
             "RERANKER_LIST": {
                 k: v for k, v in _models["RERANKER_LIST"].items()
-                if k in ["deepseek", "zhipu"]
+                if k.startswith(("deepseek/", "zhipu/", "local/")) or k in ["deepseek", "zhipu", "local"]
             }
         }
 
@@ -134,7 +142,7 @@ class Config(SimpleConfig):
         project_root = get_project_root()
         static_dir = os.path.join(project_root, "packages", "static")
 
-        with open(os.path.join(static_dir, "models.private.yml"), 'w', encoding='utf-8') as f:
+        with open(os.path.join(static_dir, "models.yml"), 'w', encoding='utf-8') as f:
             yaml.dump(_models, f, indent=2, allow_unicode=True)
 
     def handle_self(self):
@@ -152,7 +160,7 @@ class Config(SimpleConfig):
                 logger.warning(f"提醒：MODEL_DIR （{self.model_dir}） 不存在，如果未配置，请忽略，如果配置了，请检查是否配置正确，比如 docker-compose 文件中的映射")
 
         # 检查模型提供商是否存在
-        if self.model_provider not in ["deepseek", "zhipu"]:
+        if self.model_provider not in ["deepseek"]:
             logger.warning(f"Model provider {self.model_provider} not supported, using default model provider")
             self.model_provider = "deepseek"  # 默认使用 deepseek
             model_provider_info = self.model_names.get(self.model_provider, {})
@@ -165,7 +173,7 @@ class Config(SimpleConfig):
         # 检查模型提供商的环境变量
         conds = {}
         self.model_provider_status = {}
-        for provider in ["deepseek", "zhipu"]:  # 只检查这两个提供商
+        for provider in ["deepseek"]:  # 只检查这两个提供商
             conds[provider] = self.model_names[provider]["env"]
             conds_bool = [bool(os.getenv(_k)) for _k in conds[provider]]
             self.model_provider_status[provider] = all(conds_bool)

@@ -25,3 +25,12 @@ psutil>=5.9.0
 neo4j>=5.0.0
 python-dotenv>=1.0.0
 # 如果你使用其他大模型, 请替换 openai 或添加相应库
+<<<<<<< HEAD
+=======
+# 添加Redis相关依赖
+redis[hiredis]>=4.5.0
+redis>=4.5.0
+# PostgreSQL数据库驱动
+psycopg2-binary>=2.9.0
+sqlalchemy>=1.4.0
+>>>>>>> aision

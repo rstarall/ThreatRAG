@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, DateTime, JSON, Float, ForeignKey, Text
+from sqlalchemy import Column, Integer, String, DateTime, JSON, ForeignKey, Text
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.sql import func
@@ -48,7 +48,7 @@ class KnowledgeFile(Base):
     __tablename__ = 'knowledge_files'
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    file_id = Column(String, nullable=False, index=True)  # 文件ID
+    file_id = Column(String, nullable=False, unique=True, index=True)  # 文件ID，添加唯一约束
     database_id = Column(String, ForeignKey('knowledge_databases.db_id'), nullable=False)  # 所属数据库ID
     filename = Column(String, nullable=False)  # 文件名
     path = Column(String, nullable=False)  # 文件路径
