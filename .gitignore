@@ -9,7 +9,7 @@ kg/data_process/**/*.xml
 kg/data_process/**/*.json
 kg/data_process/**/*.csv
 kg/data_process/**/*.jsonl
-
+saves/**/*pdf
 
 
 
