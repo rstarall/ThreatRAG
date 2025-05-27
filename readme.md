@@ -41,6 +41,9 @@ NEO4J_USERNAME=neo4j
 NEO4J_PASSWORD=12345678
 NEO4J_DATABASE=neo4j
 ```
+网页端路径:
+http://localhost:7474/browser/
+
 
 **注意：**
 - Neo4j需要手动安装和启动，不会自动启动
@@ -85,6 +88,9 @@ milvus:
   host: 127.0.0.1          # 监听地址
   port: 19530              # 监听端口
 ```
+
+### PgSQL说明
+PgSQL用于存储知识库文档的文本信息，存储在text字段
 
 
 

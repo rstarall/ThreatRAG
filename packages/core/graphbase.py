@@ -8,7 +8,6 @@ from neo4j import GraphDatabase as GD
 
 from .. import config
 from ..utils import logger
-from .knowledgebase import KnowledgeBase
 
 warnings.filterwarnings("ignore", category=UserWarning)
 
@@ -416,19 +415,23 @@ class GraphDatabase:
             return session.execute_read(query, node_name, hops)
 
     async def aget_embedding(self, text):
+        # 导入全局的knowledge_base实例
+        from .. import knowledge_base
         if isinstance(text, list):
-            outputs = await KnowledgeBase.embed_model.abatch_encode(text, batch_size=40)
+            outputs = await knowledge_base.embed_model.abatch_encode(text, batch_size=40)
             return outputs
         else:
-            outputs = await KnowledgeBase.embed_model.aencode(text)
+            outputs = await knowledge_base.embed_model.aencode(text)
             return outputs
 
     def get_embedding(self, text):
+        # 导入全局的knowledge_base实例
+        from .. import knowledge_base
         if isinstance(text, list):
-            outputs = KnowledgeBase.embed_model.batch_encode(text, batch_size=40)
+            outputs = knowledge_base.embed_model.batch_encode(text, batch_size=40)
             return outputs
         else:
-            outputs = KnowledgeBase.embed_model.encode([text])[0]
+            outputs = knowledge_base.embed_model.encode([text])[0]
             return outputs
 
     def set_embedding(self, tx, entity_name, embedding):
@@ -694,5 +697,9 @@ def clean_triples_embedding(triples):
         if hasattr(item[2], '_properties'):
             item[2]._properties['embedding'] = None
     return triples
+
+
+# 创建全局图数据库实例
+graph_base = GraphDatabase()
 
 

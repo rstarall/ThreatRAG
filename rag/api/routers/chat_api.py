@@ -6,14 +6,31 @@ import uuid
 from fastapi import APIRouter, Body, Depends, HTTPException
 from fastapi.responses import StreamingResponse
 from langchain_core.messages import AIMessageChunk
-from packages import executor,retriever,config
+from packages import executor, retriever, config
 from packages.core import HistoryManager
-#from rag.src.agents import agent_manager
 from packages.models import select_model
 from packages.utils.logging_config import logger
-#from rag.src.agents.tools_factory import get_all_tools
+from rag.cache.redis_session import RedisSessionManager
+from rag.utils.coroutine_pool import CoroutinePool
+from typing import Optional, Dict, List, Any
+from dotenv import load_dotenv
 
+# 加载环境变量
+load_dotenv()
+
+# 创建路由
 chat = APIRouter(prefix="/chat")
+
+# 初始化Redis会话管理器
+redis_session = RedisSessionManager(
+    redis_url=os.getenv("REDIS_URL", "redis://localhost:6379"),
+    expire_time=int(os.getenv("SESSION_EXPIRE_TIME", "3600"))
+)
+
+# 初始化协程池
+coroutine_pool = CoroutinePool(
+    max_workers=int(os.getenv("MAX_CONCURRENT_CHATS", "20"))
+)
 
 @chat.get("/")
 async def chat_get():
@@ -37,19 +54,28 @@ async def chat_post(
         history: 对话历史记录列表
         thread_id: 对话线程ID
     Returns:
-        StreamingResponse: 返回一个流式响应，包含以下状态：
-            - searching: 正在搜索知识库
-            - generating: 正在生成回答
-            - reasoning: 正在推理
-            - loading: 正在加载回答
-            - finished: 回答完成
-            - error: 发生错误
-    Raises:
-        HTTPException: 当检索器或模型发生错误时抛出
+        StreamingResponse: 返回一个流式响应
     """
-
+    meta = meta or {}
     model = select_model()
     meta["server_model_name"] = model.model_name
+    
+    # 如果提供了thread_id，尝试从Redis获取历史记录
+    if thread_id:
+        try:
+            # 从Redis获取会话历史
+            cached_history = await redis_session.get_history(thread_id)
+            if cached_history and not history:
+                history = cached_history
+                logger.debug(f"Using cached history for thread_id: {thread_id}")
+        except Exception as e:
+            logger.error(f"Error fetching history from Redis: {e}")
+    else:
+        # 如果没有thread_id，创建新会话
+        thread_id = await redis_session.create_session(system_prompt=meta.get("system_prompt"))
+        logger.debug(f"Created new session with thread_id: {thread_id}")
+    
+    # 初始化历史管理器
     history_manager = HistoryManager(history, system_prompt=meta.get("system_prompt"))
     logger.debug(f"Received query: {query} with meta: {meta}")
 
@@ -57,23 +83,27 @@ async def chat_post(
         return json.dumps({
             "response": content,
             "meta": meta,
+            "thread_id": thread_id,  # 返回thread_id给客户端
             **kwargs
         }, ensure_ascii=False).encode('utf-8') + b"\n"
 
     def need_retrieve(meta):
         return meta.get("use_web") or meta.get("use_graph") or meta.get("db_id")
 
-    def generate_response():
+    async def process_chat():
         modified_query = query
         refs = None
 
         # 处理知识库检索
         if meta and need_retrieve(meta):
-            chunk = make_chunk(status="searching")
-            yield chunk
+            yield make_chunk(status="searching")
 
             try:
-                modified_query, refs = retriever(modified_query, history_manager.messages, meta)
+                # 使用协程池提交检索任务
+                retrieval_result = await coroutine_pool.submit(
+                    retriever(modified_query, history_manager.messages, meta)
+                )
+                modified_query, refs = retrieval_result
             except Exception as e:
                 logger.error(f"Retriever error: {e}, {traceback.format_exc()}")
                 yield make_chunk(message=f"Retriever error: {e}", status="error")
@@ -83,11 +113,20 @@ async def chat_post(
 
         messages = history_manager.get_history_with_msg(modified_query, max_rounds=meta.get('history_round'))
         history_manager.add_user(query)  # 注意这里使用原始查询
+        
+        # 更新Redis中的会话历史
+        try:
+            await redis_session.add_message(thread_id, "user", query)
+        except Exception as e:
+            logger.error(f"Error updating Redis history: {e}")
 
         content = ""
         reasoning_content = ""
         try:
-            for delta in model.predict(messages, stream=True):
+            # 使用协程池提交模型预测任务
+            model_stream = model.predict(messages, stream=True)
+            
+            for delta in model_stream:
                 if not delta.content and hasattr(delta, 'reasoning_content'):
                     reasoning_content += delta.reasoning_content or ""
                     chunk = make_chunk(reasoning_content=reasoning_content, status="reasoning")
@@ -105,6 +144,13 @@ async def chat_post(
 
             logger.debug(f"Final response: {content}")
             logger.debug(f"Final reasoning response: {reasoning_content}")
+            
+            # 更新Redis中的会话历史
+            try:
+                await redis_session.add_message(thread_id, "assistant", content)
+            except Exception as e:
+                logger.error(f"Error updating Redis history: {e}")
+                
             yield make_chunk(status="finished",
                             history=history_manager.update_ai(content),
                             refs=refs)
@@ -113,98 +159,63 @@ async def chat_post(
             yield make_chunk(message=f"Model error: {e}", status="error")
             return
 
-    return StreamingResponse(generate_response(), media_type='application/json')
+    # 使用StreamingResponse返回异步生成器
+    return StreamingResponse(process_chat(), media_type='application/json')
 
 @chat.post("/call")
 async def call(query: str = Body(...), meta: dict = Body(None)):
     meta = meta or {}
     model = select_model(model_provider=meta.get("model_provider"), model_name=meta.get("model_name"))
+    
     async def predict_async(query):
-        loop = asyncio.get_event_loop()
-        return await loop.run_in_executor(executor, model.predict, query)
+        # 使用协程池提交预测任务
+        return await coroutine_pool.submit(
+            asyncio.to_thread(model.predict, query)
+        )
 
     response = await predict_async(query)
     logger.debug({"query": query, "response": response.content})
 
     return {"response": response.content}
 
-# @chat.get("/agent")
-# async def get_agent():
-#     agents = [agent.get_info() for agent in agent_manager.agents.values()]
-#     return {"agents": agents}
+@chat.get("/sessions/{thread_id}")
+async def get_session(thread_id: str):
+    """获取指定会话的历史记录
+    
+    Args:
+        thread_id: 会话ID
+        
+    Returns:
+        会话历史记录
+    """
+    try:
+        session = await redis_session.get_session(thread_id)
+        if not session:
+            raise HTTPException(status_code=404, detail="Session not found")
+        return session
+    except Exception as e:
+        logger.error(f"Error getting session: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
 
-# @chat.post("/agent/{agent_name}")
-# def chat_agent(agent_name: str,
-#                query: str = Body(...),
-#                history: list = Body(...),
-#                config: dict = Body({}),
-#                meta: dict = Body({})):
+@chat.delete("/sessions/{thread_id}")
+async def delete_session(thread_id: str):
+    """删除指定会话
+    
+    Args:
+        thread_id: 会话ID
+        
+    Returns:
+        删除结果
+    """
+    try:
+        result = await redis_session.delete_session(thread_id)
+        if not result:
+            raise HTTPException(status_code=404, detail="Session not found")
+        return {"success": True}
+    except Exception as e:
+        logger.error(f"Error deleting session: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
 
-#     meta.update({
-#         "query": query,
-#         "agent_name": agent_name,
-#         "server_model_name": config.get("model", agent_name) ,
-#         "thread_id": config.get("thread_id"),
-#     })
-
-#     # 将meta和thread_id整合到config中
-#     def make_chunk(content=None, **kwargs):
-
-#         return json.dumps({
-#             "request_id": meta.get("request_id"),
-#             "response": content,
-#             **kwargs
-#         }, ensure_ascii=False).encode('utf-8') + b"\n"
-
-
-
-#     def stream_messages():
-
-#         # 代表服务端已经收到了请求
-#         yield make_chunk(status="init", meta=meta)
-
-#         try:
-#             agent = agent_manager.get_runnable_agent(agent_name)
-#         except Exception as e:
-#             logger.error(f"Error getting agent {agent_name}: {e}, {traceback.format_exc()}")
-#             yield make_chunk(message=f"Error getting agent {agent_name}: {e}", status="error")
-#             return
-
-#         # 从config中获取history_round
-#         history_round = config.get("history_round")
-#         history_manager = HistoryManager(history)
-#         messages = history_manager.get_history_with_msg(query, max_rounds=history_round)
-#         history_manager.add_user(query)
-
-#         # 构造运行时配置，如果没有thread_id则生成一个
-#         if "thread_id" not in config or not config["thread_id"]:
-#             config["thread_id"] = str(uuid.uuid4())
-
-#         runnable_config = {"configurable": {**config}}
-
-#         content = ""
-
-#         try:
-#             for msg, metadata in agent.stream_messages(messages, config_schema=runnable_config):
-#                 if isinstance(msg, AIMessageChunk) and msg.content != "<tool_call>":
-#                     content += msg.content
-#                     yield make_chunk(content=msg.content,
-#                                     msg=msg.model_dump(),
-#                                     metadata=metadata,
-#                                     status="loading")
-#                 else:
-#                     yield make_chunk(msg=msg.model_dump(),
-#                                     metadata=metadata,
-#                                     status="loading")
-
-#             yield make_chunk(status="finished",
-#                             history=history_manager.update_ai(content),
-#                             meta=meta)
-#         except Exception as e:
-#             logger.error(f"Error streaming messages: {e}, {traceback.format_exc()}")
-#             yield make_chunk(message=f"Error streaming messages: {e}", status="error")
-
-#     return StreamingResponse(stream_messages(), media_type='application/json')
 
 @chat.get("/models")
 async def get_chat_models(model_provider: str):
@@ -219,7 +230,3 @@ async def update_chat_models(model_provider: str, model_names: list[str]):
     config._save_models_to_file()
     return {"models": config.model_names[model_provider]["models"]}
 
-# @chat.get("/tools")
-# async def get_tools():
-#     """获取所有工具"""
-#     return {"tools": list(get_all_tools().keys())}

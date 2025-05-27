@@ -8,6 +8,7 @@ import shutil
 from packages.utils import logger, hashstr
 from packages import config
 from packages import executor, retriever, knowledge_base, graph_base
+from packages.core.graph_indexer import graph_indexer
 
 data = APIRouter(prefix="/data")
 
@@ -240,4 +241,70 @@ async def delete_file_by_id(db_id: str = Body(...), file_id: str = Body(...)):
     except Exception as e:
         logger.error(f"删除文件失败: {e}, {traceback.format_exc()}")
         return {"message": f"删除文件失败: {e}", "status": "failed"}
+
+@data.post("/graph/start-indexer")
+async def start_graph_indexer(interval: Optional[int] = Body(3600), 
+                             batch_size: Optional[int] = Body(100),
+                             kgdb_name: Optional[str] = Body("neo4j")):
+    """启动图数据库索引器"""
+    if not config.enable_knowledge_graph:
+        return {"message": "知识图谱未启用", "status": "failed"}
+    
+    if not graph_base.is_running():
+        return {"message": "图数据库未启动", "status": "failed"}
+    
+    # 更新索引器配置
+    graph_indexer.interval = interval
+    graph_indexer.batch_size = batch_size
+    graph_indexer.kgdb_name = kgdb_name
+    
+    # 启动索引器
+    success = graph_indexer.start()
+    if success:
+        return {"message": f"图数据库索引器已启动，扫描间隔: {interval}秒", "status": "success"}
+    else:
+        return {"message": "图数据库索引器启动失败", "status": "failed"}
+
+@data.post("/graph/stop-indexer")
+async def stop_graph_indexer():
+    """停止图数据库索引器"""
+    graph_indexer.stop()
+    return {"message": "图数据库索引器已停止", "status": "success"}
+
+@data.get("/graph/indexer-status")
+async def get_graph_indexer_status():
+    """获取图数据库索引器状态"""
+    return graph_indexer.get_status()
+
+@data.post("/graph/run-indexer-now")
+async def run_graph_indexer_now(batch_size: Optional[int] = Body(None), 
+                               kgdb_name: Optional[str] = Body(None)):
+    """立即运行一次索引"""
+    if not config.enable_knowledge_graph:
+        return {"message": "知识图谱未启用", "status": "failed"}
+    
+    if not graph_base.is_running():
+        return {"message": "图数据库未启动", "status": "failed"}
+    
+    # 临时更新批处理大小和数据库名称（如果提供）
+    original_batch_size = graph_indexer.batch_size
+    original_kgdb_name = graph_indexer.kgdb_name
+    
+    if batch_size is not None:
+        graph_indexer.batch_size = batch_size
+    if kgdb_name is not None:
+        graph_indexer.kgdb_name = kgdb_name
+    
+    try:
+        # 运行索引
+        indexed_count = graph_indexer._index_nodes()
+        return {
+            "message": f"索引完成，共为 {indexed_count} 个节点添加了嵌入向量", 
+            "status": "success",
+            "indexed_count": indexed_count
+        }
+    finally:
+        # 恢复原始配置
+        graph_indexer.batch_size = original_batch_size
+        graph_indexer.kgdb_name = original_kgdb_name
 

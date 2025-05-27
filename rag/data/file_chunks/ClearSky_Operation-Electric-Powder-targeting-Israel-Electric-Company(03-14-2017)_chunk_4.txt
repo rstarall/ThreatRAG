@@ -1,6 +1,0 @@
-e
-s[.]com
- (note the extra e). This domain
-impersonates ynetnews.com, the English version of ynet.co.il – one of Israel’s most popular news sites.
-Certain pages within the domain would load the legitimate Ynet website:
-1/13

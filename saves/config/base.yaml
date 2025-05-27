@@ -5,8 +5,9 @@ enable_reranker: true
 enable_knowledge_base: true
 enable_knowledge_graph: true
 enable_web_search: false
+
 # 查询配置
-use_rewrite_query: "on" # 是否使用重写查询
+use_rewrite_query: "on"  # 是否使用重写查询
 
 # 模型配置
 model_provider: "deepseek"
@@ -22,6 +23,3 @@ model_local_paths:
 
 # 设备配置
 device: "cuda"
-
-# 查询配置
-use_rewrite_query: "on" 
