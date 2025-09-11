@@ -23,3 +23,11 @@ model_local_paths:
 
 # 设备配置
 device: "cuda"
+
+# MySQL配置
+mysql:
+  host: localhost
+  port: 3308
+  user: root
+  password: 123456
+  database: knowledge_db

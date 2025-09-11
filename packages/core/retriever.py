@@ -47,6 +47,13 @@ class Retriever:
         if not refs or len(refs) == 0:
             return query
 
+        # 检查是否显示检索结果信息
+        show_retrieval_info = meta.get("show_retrieval_info", False)
+        
+        if not show_retrieval_info:
+            # 如果不显示检索结果信息，直接返回原始查询
+            return query
+
         external_parts = []
 
         # 解析知识库的结果

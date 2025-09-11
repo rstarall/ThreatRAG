@@ -11,10 +11,10 @@ class KnowledgeDatabase(Base):
     __tablename__ = 'knowledge_databases'
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    db_id = Column(String, nullable=False, unique=True, index=True)  # 数据库ID
-    name = Column(String, nullable=False)  # 数据库名称
+    db_id = Column(String(255), nullable=False, unique=True, index=True)  # 数据库ID
+    name = Column(String(255), nullable=False)  # 数据库名称
     description = Column(Text, nullable=True)  # 描述
-    embed_model = Column(String, nullable=True)  # 嵌入模型名称
+    embed_model = Column(String(255), nullable=True)  # 嵌入模型名称
     dimension = Column(Integer, nullable=True)  # 向量维度
     meta_info = Column(JSON, nullable=True)  # 元数据
     created_at = Column(DateTime, default=func.now())  # 创建时间
@@ -48,12 +48,12 @@ class KnowledgeFile(Base):
     __tablename__ = 'knowledge_files'
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    file_id = Column(String, nullable=False, unique=True, index=True)  # 文件ID，添加唯一约束
-    database_id = Column(String, ForeignKey('knowledge_databases.db_id'), nullable=False)  # 所属数据库ID
-    filename = Column(String, nullable=False)  # 文件名
-    path = Column(String, nullable=False)  # 文件路径
-    file_type = Column(String, nullable=False)  # 文件类型
-    status = Column(String, nullable=False)  # 处理状态
+    file_id = Column(String(255), nullable=False, unique=True, index=True)  # 文件ID，添加唯一约束
+    database_id = Column(String(255), ForeignKey('knowledge_databases.db_id'), nullable=False)  # 所属数据库ID
+    filename = Column(String(255), nullable=False)  # 文件名
+    path = Column(String(1024), nullable=False)  # 文件路径
+    file_type = Column(String(50), nullable=False)  # 文件类型
+    status = Column(String(50), nullable=False)  # 处理状态
     created_at = Column(DateTime, default=func.now())  # 创建时间
 
     # 关系
@@ -85,9 +85,9 @@ class KnowledgeNode(Base):
     __tablename__ = 'knowledge_nodes'
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    file_id = Column(String, ForeignKey('knowledge_files.file_id'), nullable=False)  # 所属文件ID
+    file_id = Column(String(255), ForeignKey('knowledge_files.file_id'), nullable=False)  # 所属文件ID
     text = Column(Text, nullable=False)  # 文本内容
-    hash = Column(String, nullable=True)  # 文本哈希值
+    hash = Column(String(255), nullable=True)  # 文本哈希值
     start_char_idx = Column(Integer, nullable=True)  # 开始字符索引
     end_char_idx = Column(Integer, nullable=True)  # 结束字符索引
     meta_info = Column(JSON, nullable=True)  # 元数据

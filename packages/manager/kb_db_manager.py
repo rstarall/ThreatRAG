@@ -17,15 +17,15 @@ class KBDBManager:
         self.ensure_db_dir()
 
         # 创建SQLAlchemy引擎
-        # 从配置中获取PostgreSQL连接信息
-        pg_host = config.get("postgres", {}).get("host", "localhost")
-        pg_port = config.get("postgres", {}).get("port", 5432)
-        pg_user = config.get("postgres", {}).get("user", "postgres")
-        pg_password = config.get("postgres", {}).get("password", "password")
-        pg_db = config.get("postgres", {}).get("database", "knowledge_db")
+        # 从配置中获取MySQL连接信息
+        mysql_host = config.get("mysql", {}).get("host", "localhost")
+        mysql_port = config.get("mysql", {}).get("port", 3308)
+        mysql_user = config.get("mysql", {}).get("user", "root")
+        mysql_password = config.get("mysql", {}).get("password", "123456")
+        mysql_db = config.get("mysql", {}).get("database", "knowledge_db")
         
         # 构建连接字符串
-        db_url = f"postgresql://{pg_user}:{pg_password}@{pg_host}:{pg_port}/{pg_db}"
+        db_url = f"mysql+pymysql://{mysql_user}:{mysql_password}@{mysql_host}:{mysql_port}/{mysql_db}"
         self.engine = create_engine(db_url)
 
         # 创建会话工厂

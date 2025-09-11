@@ -30,7 +30,7 @@ python-dotenv>=1.0.0
 # 添加Redis相关依赖
 redis[hiredis]>=4.5.0
 redis>=4.5.0
-# PostgreSQL数据库驱动
-psycopg2-binary>=2.9.0
+# MySQL数据库驱动
+pymysql>=1.0.2
 sqlalchemy>=1.4.0
 >>>>>>> aision

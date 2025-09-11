@@ -47,7 +47,7 @@ class Neo4jManager:
                 try:
                     from neo4j import GraphDatabase
                     driver = GraphDatabase.driver(f"bolt://{self.host}:{self.port}", 
-                                                auth=("neo4j", "12345678"))
+                                                auth=("neo4j", "1234567890"))
                     with driver.session() as session:
                         session.run("RETURN 1")
                     driver.close()
@@ -178,7 +178,7 @@ class Neo4jManager:
         try:
             from neo4j import GraphDatabase
             driver = GraphDatabase.driver(f"bolt://{self.host}:{self.port}", 
-                                        auth=("neo4j", "12345678"))
+                                        auth=("neo4j", "1234567890"))
             with driver.session() as session:
                 result = session.run("MATCH (n) RETURN count(n) as node_count")
                 node_count = result.single()["node_count"]

@@ -78,6 +78,10 @@ async def chat_post(
     # 初始化历史管理器
     history_manager = HistoryManager(history, system_prompt=meta.get("system_prompt"))
     logger.debug(f"Received query: {query} with meta: {meta}")
+    
+    # 确保meta中包含show_retrieval_info参数，默认为False
+    if "show_retrieval_info" not in meta:
+        meta["show_retrieval_info"] = False
 
     def make_chunk(content=None, **kwargs):
         return json.dumps({
@@ -101,7 +105,7 @@ async def chat_post(
             try:
                 # 使用协程池提交检索任务
                 retrieval_result = await coroutine_pool.submit(
-                    retriever(modified_query, history_manager.messages, meta)
+                    asyncio.to_thread(retriever, modified_query, history_manager.messages, meta)
                 )
                 modified_query, refs = retrieval_result
             except Exception as e:
