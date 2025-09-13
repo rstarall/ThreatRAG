@@ -1,3 +1,4 @@
+from neo4j._sync.auth_management import Neo4jAuthTokenManager
 import uvicorn
 import threading
 from rag.vector.vector_database import create_vector_database_instance
@@ -10,6 +11,8 @@ from packages.manager.milvus_manager import get_milvus_manager
 from packages.core.graph_indexer import graph_indexer
 from rag.cache.redis_session import RedisSessionManager
 import redis
+MILVUE_HOST="milvus-standalone"
+Neo4j_HOST="neo4j"
 
 config = None
 milvus_manager = None

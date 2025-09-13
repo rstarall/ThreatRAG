@@ -26,21 +26,21 @@ device: "cuda"
 
 # FastAPI服务器配置
 fastapi_server:
-  host: localhost
+  host: 0.0.0.0  # 修改为0.0.0.0以允许外部访问
   port: 8000
 
 # 向量数据库配置
 vector_database:
-  path: /rag/data/vector_db
+  path: /app/data/vector_db
 
 # 文件上传配置
 file_upload:
-  path: /rag/data/file_uploads
+  path: /app/data/file_uploads
 
 # 模型路径配置
 model:
   embedding_model:
-    path: /rag/data/embedding_model
+    path: /app/data/embedding_model
 
 # Milvus配置
 milvus:
@@ -61,10 +61,3 @@ neo4j:
   index_batch_size: 200  # 每次处理的实体数量
   auto_index: true  # 是否自动启动索引器
 
-# PostgreSQL配置
-postgres:
-  host: localhost
-  port: 5432
-  user: postgres
-  password: 12345678
-  database: knowledge_db

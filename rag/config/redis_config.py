@@ -6,7 +6,7 @@ load_dotenv()
 
 # Redis配置
 REDIS_CONFIG = {
-    "url": os.getenv("REDIS_URL", "redis://localhost:6379"),
+    "url": os.getenv("REDIS_URL", "redis:6379"),
     "db": int(os.getenv("REDIS_DB", "0")),
     "password": os.getenv("REDIS_PASSWORD", None),
     "socket_timeout": float(os.getenv("REDIS_SOCKET_TIMEOUT", "5.0")),

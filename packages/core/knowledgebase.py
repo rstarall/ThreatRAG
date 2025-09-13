@@ -364,6 +364,7 @@ class KnowledgeBase:
         db_result = [r for r in all_db_result if r["distance"] > distance_threshold]
 
         if config.enable_reranker and len(db_result) > 0 and self.reranker:
+            logger.debug(f"开始重排序，原始结果数量: {len(db_result)}")
             texts = [r["entity"]["text"] for r in db_result]
             # 修复reranker输入格式：FlagReranker需要[[query, text1], [query, text2], ...]的格式
             query_text_pairs = [[query, text] for text in texts]
@@ -372,6 +373,11 @@ class KnowledgeBase:
                 r["rerank_score"] = rerank_scores[i]
             db_result.sort(key=lambda x: x["rerank_score"], reverse=True)
             db_result = [_res for _res in db_result if _res["rerank_score"] > rerank_threshold]
+            logger.debug(f"重排序完成，过滤后结果数量: {len(db_result)}")
+        elif config.enable_reranker and len(db_result) > 0 and not self.reranker:
+            logger.warning("重排序已启用但重排序器未初始化")
+        elif not config.enable_reranker:
+            logger.debug("重排序未启用")
 
         if kwargs.get("top_k", None):
             db_result = db_result[:kwargs["top_k"]]
@@ -541,7 +547,7 @@ class KnowledgeBase:
             logger.error(f"Failed to ensure collection {collection_name} is loaded: {e}")
             return False
 
-    def add_documents(self, docs, collection_name, chunk_infos=None, **kwargs):
+    def add_documents(self, docs, collection_name, chunk_infos=None, file_id=None, **kwargs):
         """添加已经分块之后的文本"""
         # 检查 collection 是否存在
         import random
@@ -561,6 +567,7 @@ class KnowledgeBase:
             "vector": vectors[i],
             "text": docs[i],
             "hash": hashstr(docs[i], with_salt=True),
+            "file_id": file_id,
             **kwargs,
             **chunk_infos[i]
         } for i in range(len(vectors))]

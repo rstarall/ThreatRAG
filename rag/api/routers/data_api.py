@@ -133,56 +133,11 @@ async def upload_file(
     with open(file_path, "wb") as buffer:
         buffer.write(await file.read())
 
-    return {"message": "File successfully uploaded", "file_path": file_path, "db_id": db_id}
+    # 返回文件路径，但使用相对路径而不是绝对路径，提高安全性
+    relative_path = os.path.relpath(file_path, config.save_dir) if config.save_dir in file_path else filename
+    return {"message": "File successfully uploaded", "file_path": relative_path, "db_id": db_id}
 
-@data.get("/graph")
-async def get_graph_info():
-    graph_info = graph_base.get_graph_info()
-    if graph_info is None:
-        raise HTTPException(status_code=400, detail="图数据库获取出错")
-    return graph_info
 
-@data.post("/graph/index-nodes")
-async def index_nodes(data: dict = Body(default={})):
-    if not graph_base.is_running():
-        raise HTTPException(status_code=400, detail="图数据库未启动")
-
-    # 获取参数或使用默认值
-    kgdb_name = data.get('kgdb_name', 'neo4j')
-
-    # 调用GraphDatabase的add_embedding_to_nodes方法
-    count = graph_base.add_embedding_to_nodes(kgdb_name=kgdb_name)
-
-    return {"status": "success", "message": f"已成功为{count}个节点添加嵌入向量", "indexed_count": count}
-
-@data.get("/graph/node")
-async def get_graph_node(entity_name: str):
-    result = graph_base.query_node(entity_name=entity_name)
-    return {"result": graph_base.format_query_result_to_graph(result), "message": "success"}
-
-@data.get("/graph/nodes")
-async def get_graph_nodes(kgdb_name: str, num: int):
-    if not config.enable_knowledge_graph:
-        raise HTTPException(status_code=400, detail="Knowledge graph is not enabled")
-
-    logger.debug(f"Get graph nodes in {kgdb_name} with {num} nodes")
-    result = graph_base.get_sample_nodes(kgdb_name, num)
-    return {"result": graph_base.format_general_results(result), "message": "success"}
-
-@data.post("/graph/add-by-jsonl")
-async def add_graph_entity(file_path: str = Body(...), kgdb_name: Optional[str] = Body(None)):
-    if not config.enable_knowledge_graph:
-        return {"message": "知识图谱未启用", "status": "failed"}
-
-    if not file_path.endswith('.jsonl'):
-        return {"message": "文件格式错误，请上传jsonl文件", "status": "failed"}
-
-    try:
-        await graph_base.jsonl_file_add_entity(file_path, kgdb_name)
-        return {"message": "实体添加成功", "status": "success"}
-    except Exception as e:
-        logger.error(f"添加实体失败: {e}, {traceback.format_exc()}")
-        return {"message": f"添加实体失败: {e}", "status": "failed"}
 
 @data.get("/files")
 async def get_files_list(db_id: str):
@@ -242,69 +197,5 @@ async def delete_file_by_id(db_id: str = Body(...), file_id: str = Body(...)):
         logger.error(f"删除文件失败: {e}, {traceback.format_exc()}")
         return {"message": f"删除文件失败: {e}", "status": "failed"}
 
-@data.post("/graph/start-indexer")
-async def start_graph_indexer(interval: Optional[int] = Body(3600), 
-                             batch_size: Optional[int] = Body(100),
-                             kgdb_name: Optional[str] = Body("neo4j")):
-    """启动图数据库索引器"""
-    if not config.enable_knowledge_graph:
-        return {"message": "知识图谱未启用", "status": "failed"}
-    
-    if not graph_base.is_running():
-        return {"message": "图数据库未启动", "status": "failed"}
-    
-    # 更新索引器配置
-    graph_indexer.interval = interval
-    graph_indexer.batch_size = batch_size
-    graph_indexer.kgdb_name = kgdb_name
-    
-    # 启动索引器
-    success = graph_indexer.start()
-    if success:
-        return {"message": f"图数据库索引器已启动，扫描间隔: {interval}秒", "status": "success"}
-    else:
-        return {"message": "图数据库索引器启动失败", "status": "failed"}
 
-@data.post("/graph/stop-indexer")
-async def stop_graph_indexer():
-    """停止图数据库索引器"""
-    graph_indexer.stop()
-    return {"message": "图数据库索引器已停止", "status": "success"}
-
-@data.get("/graph/indexer-status")
-async def get_graph_indexer_status():
-    """获取图数据库索引器状态"""
-    return graph_indexer.get_status()
-
-@data.post("/graph/run-indexer-now")
-async def run_graph_indexer_now(batch_size: Optional[int] = Body(None), 
-                               kgdb_name: Optional[str] = Body(None)):
-    """立即运行一次索引"""
-    if not config.enable_knowledge_graph:
-        return {"message": "知识图谱未启用", "status": "failed"}
-    
-    if not graph_base.is_running():
-        return {"message": "图数据库未启动", "status": "failed"}
-    
-    # 临时更新批处理大小和数据库名称（如果提供）
-    original_batch_size = graph_indexer.batch_size
-    original_kgdb_name = graph_indexer.kgdb_name
-    
-    if batch_size is not None:
-        graph_indexer.batch_size = batch_size
-    if kgdb_name is not None:
-        graph_indexer.kgdb_name = kgdb_name
-    
-    try:
-        # 运行索引
-        indexed_count = graph_indexer._index_nodes()
-        return {
-            "message": f"索引完成，共为 {indexed_count} 个节点添加了嵌入向量", 
-            "status": "success",
-            "indexed_count": indexed_count
-        }
-    finally:
-        # 恢复原始配置
-        graph_indexer.batch_size = original_batch_size
-        graph_indexer.kgdb_name = original_kgdb_name
 

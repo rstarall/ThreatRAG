@@ -9,6 +9,9 @@ from .. import config
 from ..models.kb_models import Base, KnowledgeDatabase, KnowledgeFile, KnowledgeNode
 from ..utils import logger
 
+MYSQL_HOST = "mysql"
+
+
 class KBDBManager:
     """知识库数据库管理器"""
 

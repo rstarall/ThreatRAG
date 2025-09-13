@@ -51,6 +51,9 @@ async def chat_post(
             - db_id: 数据库ID
             - history_round: 历史对话轮数限制
             - system_prompt: 系统提示词（str，不含变量）
+            - search_mode: 图搜索模式 (local/global/hybrid，默认hybrid)
+            - top_k: 搜索结果数量限制 (默认10)
+            - threshold: 相似度阈值 (默认0.7)
         history: 对话历史记录列表
         thread_id: 对话线程ID
     Returns:
@@ -79,9 +82,9 @@ async def chat_post(
     history_manager = HistoryManager(history, system_prompt=meta.get("system_prompt"))
     logger.debug(f"Received query: {query} with meta: {meta}")
     
-    # 确保meta中包含show_retrieval_info参数，默认为False
+    # 确保meta中包含show_retrieval_info参数，默认为True
     if "show_retrieval_info" not in meta:
-        meta["show_retrieval_info"] = False
+        meta["show_retrieval_info"] = True
 
     def make_chunk(content=None, **kwargs):
         return json.dumps({
@@ -155,9 +158,19 @@ async def chat_post(
             except Exception as e:
                 logger.error(f"Error updating Redis history: {e}")
                 
+            # 只返回refs的摘要信息，避免输出大量数据
+            refs_summary = None
+            if refs:
+                refs_summary = {
+                    "knowledge_base_count": len(refs.get("knowledge_base", {}).get("results", [])),
+                    "graph_base_count": len(refs.get("graph_base", {}).get("results", [])),
+                    "web_search_count": len(refs.get("web_search", {}).get("results", [])),
+                    "entities": refs.get("entities", [])[:5]  # 只返回前5个实体
+                }
+            
             yield make_chunk(status="finished",
                             history=history_manager.update_ai(content),
-                            refs=refs)
+                            refs=refs_summary)
         except Exception as e:
             logger.error(f"Model error: {e}, {traceback.format_exc()}")
             yield make_chunk(message=f"Model error: {e}", status="error")

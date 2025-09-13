@@ -1,0 +1,2 @@
+{"time": 1744213917.7347934, "src": "192.168.0.238", "dst": "111.230.0.147", "device_type": "蜜点", "sub_device_type": "外蜜点", "protocol": "TCP", "sport": 41084, "dport": 80, "action": "TCP", "payload": {}, "url": null, "attack": "尝试SYN握手"}
+{"time": 1744213917.7349808, "src": "154.81.156.35", "dst": "111.230.0.147", "device_type": "蜜点", "sub_device_type": "外蜜点", "protocol": "HTTP", "sport": 41084, "dport": 80, "action": "HTTP_GET", "payload": {"X_Forwarded_For": "154.81.156.35, 154.81.156.35", "GET": "/"}, "url": "/", "attack": "HTTP GET请求访问"}

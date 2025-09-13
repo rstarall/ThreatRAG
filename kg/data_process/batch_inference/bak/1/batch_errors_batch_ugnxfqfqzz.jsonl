@@ -1,5 +1,0 @@
-{"id":"lvgfnwru","custom_id":"2015_Microsoft_Security_Intelligence_Report_Volume_19_English(11-16-2015)_62566994","response":null,"error":"length of prompt_tokens (67197) must be less than max_seq_len (65536)."}
-{"id":"adzcuuoo","custom_id":"2015_NATO_CCDCOE_CyberWarinPerspective_full_book(08-03-2015)_989acdc8","response":null,"error":"length of prompt_tokens (112267) must be less than max_seq_len (65536)."}
-{"id":"drfyqhwm","custom_id":"2017_US-CERT-AR-17-20045_Enhanced_Analysis_of_GRIZZLY_STEPPE_Activity(02-10-2017)_f8c2a730","response":null,"error":"length of prompt_tokens (96130) must be less than max_seq_len (65536)."}
-{"id":"mhgadsio","custom_id":"2019_ThaiCERT-A_Threat_Actor_Encyclopedia(06-19-2019)_0ae559c8","response":null,"error":"length of prompt_tokens (130397) must be less than max_seq_len (65536)."}
-{"id":"qwglabfq","custom_id":"2023_Kaspersky_Modern-Asian-APT-groups-TTPs_report_eng(11-09-2023)_edd11cea","response":null,"error":"length of prompt_tokens (155701) must be less than max_seq_len (65536)."}

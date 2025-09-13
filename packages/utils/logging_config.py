@@ -37,7 +37,8 @@ def setup_logger(name, level=logging.DEBUG, console=True):
         else:
             console_handler = logging.StreamHandler()
             
-        console_handler.setLevel(level)
+        # 控制台输出级别设为INFO，减少输出量
+        console_handler.setLevel(logging.INFO)
         console_handler.setFormatter(formatter)
         logger.addHandler(console_handler)
 

@@ -1,8 +1,8 @@
 {
   "graph_name": "neo4j",
-  "entity_count": 1,
-  "relationship_count": 0,
-  "triples_count": 0,
+  "entity_count": 54,
+  "relationship_count": 64,
+  "triples_count": 64,
   "labels": [
     "IoC",
     "Malware",
@@ -11,10 +11,11 @@
     "Technique",
     "Document",
     "ThreatActor",
-    "STIXEntity"
+    "STIXEntity",
+    "Entity"
   ],
   "status": "open",
-  "embed_model_name": null,
+  "embed_model_name": "BAAI/bge-m3",
   "unindexed_node_count": [],
-  "last_updated": "2025-09-11T14:50:46.479065"
+  "last_updated": "2025-09-13T19:33:32.021301"
 }
