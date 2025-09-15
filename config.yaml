@@ -19,7 +19,7 @@ embed_model: "local/BAAI/bge-m3"
 # Reranker 模型 - 使用相同的bge-m3模型
 reranker: "local/BAAI/bge-m3"
 model_local_paths:
-  local/BAAI/bge-m3: "models/embedding_model/bge-m3"
+  local/BAAI/bge-m3: "/app/models/embedding_model/bge-m3"
 
 # 设备配置
 device: "cuda"
@@ -46,14 +46,14 @@ model:
 milvus:
   auto_start: false
   data_dir: ./milvus_lite
-  host: localhost
+  host: milvus-standalone
   port: 19530
 
 # Neo4j配置
 neo4j:
   auto_start: false
   data_dir: ./neo4j_data
-  host: 127.0.0.1
+  host: neo4j
   port: 7687
   http_port: 7474
   # 添加索引器配置

@@ -19,3 +19,8 @@ fastapi_server.add_middleware(
 async def root():
     return {"message": "status", "status": "ok"}
 
+
+@fastapi_server.get("/health")
+async def health():
+    return {"message": "status", "status": "ok"}
+

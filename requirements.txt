@@ -5,32 +5,61 @@ langchain>=0.1.0
 langchain-openai>=0.0.2
 faiss-cpu>=1.7.4
 python-dotenv>=1.0.0
-uvicorn>=0.23.2
+uvicorn[standard]>=0.23.2
 fastapi>=0.104.1
 pyyaml>=6.0.1
 neo4j-driver>=5.14.0
 requests>=2.31.0
 python-magic>=0.4.27
 huggingface-hub>=0.19.4
-fastapi>=0.100.0
-uvicorn[standard]>=0.20.0
 python-multipart>=0.0.6
 pypdf>=3.10.0
 sentence-transformers>=2.2.2
 chromadb>=0.4.15
 openai>=1.0.0
-langchain>=0.1.0
 pymilvus>=2.3.0
 psutil>=5.9.0
-neo4j>=5.0.0
-python-dotenv>=1.0.0
-# 如果你使用其他大模型, 请替换 openai 或添加相应库
-<<<<<<< HEAD
-=======
-# 添加Redis相关依赖
+
+# Redis
 redis[hiredis]>=4.5.0
-redis>=4.5.0
-# MySQL数据库驱动
+
+# MySQL
 pymysql>=1.0.2
 sqlalchemy>=1.4.0
->>>>>>> aision
+
+# LlamaIndex（满足 from llama_index.core import Document）
+llama-index>=0.10.0
+
+# OCR/文件处理依赖（packages/plugins/_ocr.py 用到）
+PyMuPDF>=1.23.0
+numpy>=1.24.0
+Pillow>=9.5.0
+tqdm>=4.65.0
+rapidocr-onnxruntime>=1.3.23
+
+# MySQL 认证所需（PyMySQL caching_sha2_password）
+cryptography>=41.0.0
+
+# 向量/Embedding 相关（修复 No module named 'FlagEmbedding'）
+FlagEmbedding>=1.2.10
+
+# Web 搜索（修复 No module named 'tavily'）
+tavily-python>=0.5.0
+
+# 国内大模型 SDK
+zhipuai>=2.1.5
+
+# 常用补充依赖（按需使用，不升级现有主依赖）
+aiohttp>=3.8.0
+httpx>=0.24.0
+httpx-sse>=0.4.0
+pandas>=2.0.0
+protobuf>=4.22.0
+orjson>=3.9.0
+ujson>=5.7.0
+websocket-client>=1.6.0
+tiktoken>=0.5.0
+zstandard>=0.21.0
+xxhash>=3.4.0
+dashscope>=1.10.0
+dataclasses-json>=0.6.0

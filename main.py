@@ -44,7 +44,7 @@ def start_milvus():
         print("正在启动Milvus服务器...")
         milvus_config = config.get("milvus", {})
         data_dir = milvus_config.get("data_dir", "./milvus_lite")
-        host = milvus_config.get("host", "127.0.0.1")
+        host = milvus_config.get("host", "milvus-standalone")
         port = milvus_config.get("port", 19530)
 
         milvus_manager = get_milvus_manager(data_dir, port, host)
@@ -82,7 +82,7 @@ def signal_handler(sig, frame):
 def check_redis():
     """检查Redis是否已启动"""
     try:
-        r = redis.Redis(host='localhost', port=6379, db=0, socket_connect_timeout=1)
+        r = redis.Redis(host='redis', port=6379, db=0, socket_connect_timeout=1)
         r.ping()
         print("Redis服务器已在运行")
         return True
@@ -118,7 +118,7 @@ if __name__ == "__main__":
             data_dir=config.get("neo4j", {}).get("data_dir", "./neo4j_data"),
             port=config.get("neo4j", {}).get("port", 7687),
             http_port=config.get("neo4j", {}).get("http_port", 7474),
-            host=config.get("neo4j", {}).get("host", "127.0.0.1")
+            host=config.get("neo4j", {}).get("host", "neo4j")
         )
 
     # 启动图数据库索引器（如果启用了知识图谱）

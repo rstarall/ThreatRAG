@@ -43,14 +43,14 @@ EMBED_MODEL_INFO:
   local/BAAI/bge-m3:
     name: BAAI/bge-m3
     dimension: 1024
-    local_path: models\embedding_model\bge-m3 #也可以在这里配置
+    local_path: /app/models/embedding_model/bge-m3 #也可以在这里配置
 
 
 RERANKER_LIST:
 
   local/BAAI/bge-m3:
     name: BAAI/bge-m3
-    local_path: models\embedding_model\bge-m3 #也可以在这里配置
+    local_path: /app/models/embedding_model/bge-m3 #也可以在这里配置
 
   # siliconflow/BAAI/bge-reranker-v2-m3:
   #   name: BAAI/bge-reranker-v2-m3

@@ -80,6 +80,13 @@ class LocalEmbeddingModel(FlagModel, BaseEmbeddingModel):
 
         self.model = config.model_local_paths.get(info["name"], info.get("local_path"))
         self.model = self.model or info["name"]
+        # 规范本地路径分隔符并补全容器内绝对路径
+        if isinstance(self.model, str):
+            _m = self.model.replace('\\\
+','/')
+            if _m.startswith('models/'):
+                _m = '/app/' + _m
+            self.model = _m
         self.dimension = info["dimension"]
         self.embed_model_fullname = config.embed_model
 

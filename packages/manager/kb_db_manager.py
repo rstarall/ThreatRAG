@@ -20,16 +20,35 @@ class KBDBManager:
         self.ensure_db_dir()
 
         # 创建SQLAlchemy引擎
-        # 从配置中获取MySQL连接信息
-        mysql_host = config.get("mysql", {}).get("host", "localhost")
-        mysql_port = config.get("mysql", {}).get("port", 3308)
-        mysql_user = config.get("mysql", {}).get("user", "root")
-        mysql_password = config.get("mysql", {}).get("password", "123456")
-        mysql_db = config.get("mysql", {}).get("database", "knowledge_db")
+        # 优先读取环境变量，其次读取配置文件，最后采用容器内合理默认值
+        mysql_host = os.getenv("MYSQL_HOST", config.get("mysql", {}).get("host", "mysql"))
+        mysql_port = int(os.getenv("MYSQL_PORT", config.get("mysql", {}).get("port", 3306)))
+        mysql_user = os.getenv("MYSQL_USER", config.get("mysql", {}).get("user", "mysql"))
+        mysql_password = os.getenv("MYSQL_PASSWORD", config.get("mysql", {}).get("password", "12345678"))
+        mysql_db = os.getenv("MYSQL_DB", config.get("mysql", {}).get("database", "knowledge_db"))
         
         # 构建连接字符串
         db_url = f"mysql+pymysql://{mysql_user}:{mysql_password}@{mysql_host}:{mysql_port}/{mysql_db}"
-        self.engine = create_engine(db_url)
+        # 尝试多次连接，等待数据库就绪
+        attempts = 10
+        last_exc = None
+        for _ in range(attempts):
+            try:
+                self.engine = create_engine(
+                    db_url,
+                    pool_pre_ping=True,
+                    pool_recycle=1800,
+                )
+                # 试探连接
+                conn = self.engine.connect()
+                conn.close()
+                break
+            except Exception as e:
+                last_exc = e
+                import time
+                time.sleep(2)
+        else:
+            raise last_exc
 
         # 创建会话工厂
         self.Session = sessionmaker(bind=self.engine)

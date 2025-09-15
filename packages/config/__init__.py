@@ -72,6 +72,31 @@ class Config(SimpleConfig):
         ### <<< 默认配置结束
 
         self.load()
+        # 统一规范路径分隔符，避免 Windows 风格反斜杠导致的仓库 ID 校验失败
+        try:
+            def _normalize_path(p: str) -> str:
+                if not isinstance(p, str):
+                    return p
+                q = p.replace('\\', '/')
+                # 将相对的 models/ 前缀提升为容器内绝对路径，保持向后兼容
+                if q.startswith('models/'):
+                    q = '/app/' + q
+                return q
+
+            if isinstance(self.model_local_paths, dict):
+                for _k, _v in list(self.model_local_paths.items()):
+                    self.model_local_paths[_k] = _normalize_path(_v)
+
+            # 同步规范静态模型表中的 local_path（若已经载入到内存）
+            for _table in (getattr(self, 'embed_model_names', {}), getattr(self, 'reranker_names', {})):
+                if isinstance(_table, dict):
+                    for _k, _v in _table.items():
+                        if isinstance(_v, dict) and 'local_path' in _v:
+                            _v['local_path'] = _normalize_path(_v['local_path'])
+        except Exception:
+            # 规范化失败不应阻断启动
+            pass
+
         self.handle_self()
 
     def add_item(self, key, default, des=None, choices=None):

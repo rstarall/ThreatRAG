@@ -187,3 +187,9 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# data
+saves/**/*
+
+#sql
+*.sql
