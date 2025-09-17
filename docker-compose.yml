@@ -179,8 +179,8 @@ services:
       - threatrag-network
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://localhost:8000/health" ]
-      interval: 30s
-      start_period: 60s
+      interval: 300s
+      start_period: 600s
       timeout: 10s
       retries: 3
     logging:

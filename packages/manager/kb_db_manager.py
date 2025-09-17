@@ -29,26 +29,11 @@ class KBDBManager:
         
         # 构建连接字符串
         db_url = f"mysql+pymysql://{mysql_user}:{mysql_password}@{mysql_host}:{mysql_port}/{mysql_db}"
-        # 尝试多次连接，等待数据库就绪
-        attempts = 10
-        last_exc = None
-        for _ in range(attempts):
-            try:
-                self.engine = create_engine(
-                    db_url,
-                    pool_pre_ping=True,
-                    pool_recycle=1800,
-                )
-                # 试探连接
-                conn = self.engine.connect()
-                conn.close()
-                break
-            except Exception as e:
-                last_exc = e
-                import time
-                time.sleep(2)
-        else:
-            raise last_exc
+        self.engine = create_engine(
+            db_url,
+            pool_pre_ping=True,
+            pool_recycle=1800,
+        )
 
         # 创建会话工厂
         self.Session = sessionmaker(bind=self.engine)

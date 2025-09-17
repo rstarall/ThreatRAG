@@ -19,6 +19,7 @@ RUN apt-get update && apt-get install -y \
     libsm6 \
     libxext6 \
     libxrender1 \
+    antiword \
     && rm -rf /var/lib/apt/lists/*
 
 # 复制requirements文件

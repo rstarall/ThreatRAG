@@ -215,11 +215,14 @@ class KnowledgeBase:
 
             file_type = file.split(".")[-1].lower()
 
-            if file_type == "pdf":
-                texts = read_text(file)
-                nodes = chunk(texts, params=params)
+            # 将前端传入的相对路径（相对 config.save_dir）转换为绝对路径
+            if os.path.isabs(file):
+                abs_file_path = file
             else:
-                nodes = chunk(file, params=params)
+                abs_file_path = os.path.normpath(os.path.join(config.save_dir, file))
+
+            # 统一使用chunk函数处理所有文件类型
+            nodes = chunk(abs_file_path, params=params)
 
             file_infos[file_id] = {
                 "file_id": file_id,

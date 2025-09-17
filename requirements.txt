@@ -63,3 +63,10 @@ zstandard>=0.21.0
 xxhash>=3.4.0
 dashscope>=1.10.0
 dataclasses-json>=0.6.0
+
+
+# DOCX 解析（llama_index DocxReader 依赖）
+docx2txt>=0.8.0
+
+# Excel 解析引擎（pandas read_excel 需要）
+openpyxl>=3.1.0
