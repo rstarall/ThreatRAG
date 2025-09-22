@@ -167,31 +167,24 @@ class EntityExtractor:
             
             try:
                 if parts[0] == "(entity":
-                    # 格式: (entity, entity_name, entity_type, entity_description, entity_properties)
-                    if len(parts) >= 5:
+                    # 仅输出四个属性：id, type, name, description；type 使用 STIX_ENTITY_TYPES 映射值
+                    if len(parts) >= 4:
+                        # parts 可能为 (entity, name, type, description, [properties])
                         # 验证和转换STIX类型
                         stix_type = self._validate_and_convert_stix_type(parts[2])
-                        
+
                         # 生成STIX标准ID
                         import uuid
                         stix_id = f"{stix_type}--{str(uuid.uuid4())}"
-                        
+
+                        # 构建仅包含通用属性的实体
                         entity = {
-                            "id": stix_id,  # STIX标准ID
-                            "type": stix_type,  # 使用转换后的STIX类型
-                            "name": parts[1],  # 实体名称
-                            "description": parts[3]  # 实体描述
+                            "id": stix_id,
+                            "type": stix_type,
+                            "name": parts[1],
+                            "description": parts[3] if len(parts) >= 4 else ""
                         }
-                        
-                        # 尝试解析属性JSON
-                        try:
-                            if parts[4].strip():
-                                entity["properties"] = json.loads(parts[4])
-                            else:
-                                entity["properties"] = {}
-                        except json.JSONDecodeError:
-                            entity["properties"] = {"raw_text": parts[4]}
-                            
+
                         entities.append(entity)
                         
                 elif parts[0] == "(relationship":

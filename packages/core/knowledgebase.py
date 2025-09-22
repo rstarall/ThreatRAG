@@ -388,6 +388,7 @@ class KnowledgeBase:
         return {
             "results": db_result,
             "all_results": all_db_result,
+            "message": "查询成功"
         }
 
     def get_retriever_by_db_id(self, db_id):

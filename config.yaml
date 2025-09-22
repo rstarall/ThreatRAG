@@ -1,10 +1,10 @@
 # ThreatRAG 统一配置文件
 
 # 功能开关
-enable_reranker: true
+enable_reranker: false
 enable_knowledge_base: true
 enable_knowledge_graph: true
-enable_web_search: false
+enable_web_search: true
 
 # 查询配置
 use_rewrite_query: "on"  # 是否使用重写查询

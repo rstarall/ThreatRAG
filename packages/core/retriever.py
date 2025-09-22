@@ -291,6 +291,7 @@ class Retriever:
         response["results"] = query_result["results"]
         response["all_results"] = query_result["all_results"]
         response["rw_query"] = rw_query
+        response["message"] = query_result["message"]
 
         return response
 

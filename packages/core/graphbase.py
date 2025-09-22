@@ -260,13 +260,12 @@ class GraphDatabase:
         return kgdb_name
 
     async def add_entities_and_relationships(self, entities, relationships, kgdb_name='neo4j'):
-        """添加实体和关系到Neo4j
+        """添加实体和关系到Neo4j（直接写入节点属性，不再使用 IS_TYPE / HAS_DESCRIPTION）
         
         Args:
-            entities: 实体列表，每个实体是一个字典，包含name、type、description等
-            relationships: 关系列表，每个关系是一个字典，包含source、target、type、description等
+            entities: [{id,type,name,description}]
+            relationships: [{source,target,type,description}]
             kgdb_name: 图数据库名称
-            
         Returns:
             tuple: (成功添加的实体数量, 成功添加的关系数量)
         """
@@ -275,58 +274,109 @@ class GraphDatabase:
             self.use_database(kgdb_name)
             logger.info(f"开始添加实体和关系到{kgdb_name}")
             logger.info(f"实体数量: {len(entities)}, 关系数量: {len(relationships)}")
-            
-            # 将STIX实体转换为Neo4j三元组
-            triples = []
-            
-            # 首先添加实体类型关系
-            for entity in entities:
-                entity_name = entity.get("name", "")
-                entity_type = entity.get("type", "UNKNOWN")
-                if entity_name and entity_type:
-                    triples.append({
-                        'h': entity_name,
-                        't': entity_type,
-                        'r': 'IS_TYPE'
-                    })
-                    logger.debug(f"添加实体类型关系: {entity_name} -> {entity_type}")
-                    
-                    # 添加描述关系（如果有）
-                    description = entity.get("description", "")
-                    if description:
-                        triples.append({
-                            'h': entity_name,
-                            't': description,
-                            'r': 'HAS_DESCRIPTION'
-                        })
-                        logger.debug(f"添加实体描述关系: {entity_name} -> {description[:50]}...")
-            
-            # 添加实体之间的关系
-            for rel in relationships:
-                source = rel.get("source", "")
-                target = rel.get("target", "")
-                rel_type = rel.get("type", "RELATED_TO")
-                if source and target and rel_type:
-                    triples.append({
-                        'h': source,
-                        't': target,
-                        'r': rel_type
-                    })
-                    logger.debug(f"添加实体关系: {source} -> {target} ({rel_type})")
-            
-            logger.info(f"总共生成{len(triples)}个三元组")
-            
-            # 添加三元组到Neo4j
-            if triples:
-                await self.txt_add_vector_entity(triples, kgdb_name)
-                logger.info(f"成功添加{len(triples)}个三元组到Neo4j")
+
+            def _upsert_entities(tx, entity_list):
+                for e in entity_list:
+                    name = e.get("name")
+                    etype = e.get("type", "UNKNOWN")
+                    desc = e.get("description", "")
+                    if not name:
+                        continue
+                    tx.run(
+                        """
+                        MERGE (n:Entity {name: $name})
+                        SET n.type = $type,
+                            n.description = $description
+                        """,
+                        name=name, type=etype, description=desc
+                    )
+
+            def _create_relationships(tx, rel_list):
+                for rel in rel_list:
+                    src = rel.get("source") or rel.get("source_ref")
+                    tgt = rel.get("target") or rel.get("target_ref")
+                    # 优先使用具体的 relationship_type，其次才是通用的 type
+                    rtype = rel.get("relationship_type") or rel.get("type") or "RELATED_TO"
+                    if not (src and tgt):
+                        continue
+                    tx.run(
+                        """
+                        MATCH (s:Entity {name: $src}), (t:Entity {name: $tgt})
+                        MERGE (s)-[r:RELATION {type: $rtype, relationship_type: $rtype}]->(t)
+                        """,
+                        src=src, tgt=tgt, rtype=rtype
+                    )
+
+            def _index_exists(tx, index_name):
+                result = tx.run("SHOW INDEXES")
+                for record in result:
+                    if record["name"] == index_name:
+                        return True
+                return False
+
+            def _create_vector_index(tx, dim):
+                index_name = "entityEmbeddings"
+                if not _index_exists(tx, index_name):
+                    tx.run(f"""
+                    CREATE VECTOR INDEX {index_name}
+                    FOR (n: Entity) ON (n.embedding)
+                    OPTIONS {{indexConfig: {{
+                    `vector.dimensions`: {dim},
+                    `vector.similarity_function`: 'cosine'
+                    }} }};
+                    """)
+
+            def _get_nodes_without_embedding(tx, entity_names):
+                params = {f"param{i}": name for i, name in enumerate(entity_names)}
+                param_placeholders = ", ".join([f"${key}" for key in params.keys()])
+                result = tx.run(f"""
+                MATCH (n:Entity)
+                WHERE n.name IN [{param_placeholders}] AND n.embedding IS NULL
+                RETURN n.name AS name
+                """, **params)
+                return [record["name"] for record in result]
+
+            def _batch_set_embeddings(tx, entity_embedding_pairs):
+                for entity_name, embedding in entity_embedding_pairs:
+                    tx.run(
+                        """
+                        MATCH (e:Entity {name: $name})
+                        CALL db.create.setNodeVectorProperty(e, 'embedding', $embedding)
+                        """,
+                        name=entity_name, embedding=embedding
+                    )
+
+            # 1) 写入实体（属性：type/description）
+            with self.driver.session(database=self.kgdb_name) as session:
+                session.execute_write(_upsert_entities, entities)
+
+            # 2) 写入关系
+            with self.driver.session(database=self.kgdb_name) as session:
+                session.execute_write(_create_relationships, relationships)
+
+            # 3) 创建向量索引并补齐embedding
+            cur_embed_info = config.embed_model_names[config.embed_model]
+            with self.driver.session(database=self.kgdb_name) as session:
+                session.execute_write(_create_vector_index, cur_embed_info['dimension'])
+
+                all_entity_names = list({e.get("name") for e in entities if e.get("name")})
+                nodes_without_embedding = session.execute_read(_get_nodes_without_embedding, all_entity_names)
+
+            if nodes_without_embedding:
+                logger.info(f"需要为{len(nodes_without_embedding)}/{len(all_entity_names)}个实体计算embedding")
+                max_batch_size = 1024
+                total = len(nodes_without_embedding)
+                for i in range(0, total, max_batch_size):
+                    batch_entities = nodes_without_embedding[i:i+max_batch_size]
+                    batch_embeddings = await self.aget_embedding(batch_entities)
+                    pairs = list(zip(batch_entities, batch_embeddings))
+                    with self.driver.session(database=self.kgdb_name) as session:
+                        session.execute_write(_batch_set_embeddings, pairs)
             else:
-                logger.warning("没有生成任何三元组")
-            
+                logger.info("所有实体已有embedding，无需重新计算")
+
             self.status = "open"
-            # 更新并保存图数据库信息
             self.save_graph_info()
-            
             return len(entities), len(relationships)
         except Exception as e:
             logger.error(f"添加实体和关系到Neo4j失败: {e}, {traceback.format_exc()}")
