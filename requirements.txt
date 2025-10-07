@@ -70,3 +70,14 @@ docx2txt>=0.8.0
 
 # Excel 解析引擎（pandas read_excel 需要）
 openpyxl>=3.1.0
+
+# 认证相关
+python-jose>=3.3.0
+passlib[bcrypt]>=1.7.4
+
+# # 或者替代方案
+# PyJWT>=2.6.0
+# passlib>=1.7.4
+# bcrypt>=4.0.1
+# 中文处理
+pypinyin>=0.48.0

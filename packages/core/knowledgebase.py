@@ -12,6 +12,7 @@ from .indexing import chunk, read_text
 from ..manager.kb_db_manager import kb_db_manager
 from .migrate_kb_to_sqlite import migrate_json_to_sqlite
 
+
 class KnowledgeBase:
 
     def __init__(self) -> None:
@@ -60,8 +61,7 @@ class KnowledgeBase:
         if not self.connect_to_milvus():
             raise ConnectionError("Failed to connect to Milvus")
 
-
-    def create_database(self, database_name, description, dimension=None):
+    def create_database(self, database_name, description, dimension=None, user_id=None):
         """创建一个数据库"""
         dimension = dimension or self.embed_model.get_dimension()
         db_id = f"kb_{hashstr(database_name, with_salt=True)}"
@@ -72,7 +72,8 @@ class KnowledgeBase:
             name=database_name,
             description=description,
             embed_model=self.embed_model.embed_model_fullname,
-            dimension=dimension
+            dimension=dimension,
+            user_id=user_id
         )
 
         # 创建数据库对应的文件夹
@@ -112,7 +113,8 @@ class KnowledgeBase:
                 db_copy["metadata"] = milvus_info
                 # logger.debug(f"获取知识库 {db['name']} (ID: {db['db_id']}) 的Milvus信息成功: {milvus_info}")
             except Exception as e:
-                logger.warning(f"获取知识库 {db['name']} (ID: {db['db_id']}) 的Milvus信息失败: {e}")
+                logger.warning(
+                    f"获取知识库 {db['name']} (ID: {db['db_id']}) 的Milvus信息失败: {e}")
                 # 添加一个默认的Milvus状态
                 db_copy.update({
                     "row_count": 0,
@@ -122,9 +124,10 @@ class KnowledgeBase:
 
             # 检查处理中的文件
             processing_files = [f for f_id, f in db_copy.get("files", {}).items()
-                               if f["status"] in ["processing", "waiting"]]
+                                if f["status"] in ["processing", "waiting"]]
             if processing_files:
-                logger.info(f"数据库 {db['name']} 有 {len(processing_files)} 个文件正在处理中")
+                logger.info(
+                    f"数据库 {db['name']} 有 {len(processing_files)} 个文件正在处理中")
 
             databases_with_milvus.append(db_copy)
 
@@ -219,7 +222,8 @@ class KnowledgeBase:
             if os.path.isabs(file):
                 abs_file_path = file
             else:
-                abs_file_path = os.path.normpath(os.path.join(config.save_dir, file))
+                abs_file_path = os.path.normpath(
+                    os.path.join(config.save_dir, file))
 
             # 统一使用chunk函数处理所有文件类型
             nodes = chunk(abs_file_path, params=params)
@@ -251,7 +255,8 @@ class KnowledgeBase:
 
         # 检查嵌入模型是否匹配
         if db["embed_model"] != self.embed_model.embed_model_fullname:
-            logger.error(f"Embed model not match, {db['embed_model']} != {self.embed_model.embed_model_fullname}")
+            logger.error(
+                f"Embed model not match, {db['embed_model']} != {self.embed_model.embed_model_fullname}")
             return {"message": f"Embed model not match, cur: {self.embed_model.embed_model_fullname}, req: {db['embed_model']}", "status": "failed"}
 
         for file_id, chunk_info in file_chunks.items():
@@ -276,7 +281,8 @@ class KnowledgeBase:
                 self.db_manager.update_file_status(file_id, "done")
 
             except Exception as e:
-                logger.error(f"Failed to add documents to collection {db_id}, {e}, {traceback.format_exc()}")
+                logger.error(
+                    f"Failed to add documents to collection {db_id}, {e}, {traceback.format_exc()}")
                 # 更新文件状态为失败
                 self.db_manager.update_file_status(file_id, "failed")
 
@@ -289,7 +295,8 @@ class KnowledgeBase:
             return {"message": f"数据库不存在，db_id: {db_id}", "status": "failed"}
 
         if not self.check_embed_model(db_id):
-            logger.error(f"Embed model not match, {db['embed_model']} != {self.embed_model.embed_model_fullname}")
+            logger.error(
+                f"Embed model not match, {db['embed_model']} != {self.embed_model.embed_model_fullname}")
             return {"message": f"Embed model not match, cur: {self.embed_model.embed_model_fullname}, req: {db['embed_model']}", "status": "failed"}
 
         # Preprocessing the files to the queue
@@ -317,13 +324,15 @@ class KnowledgeBase:
                 self.db_manager.update_file_status(file_id, "done")
 
             except Exception as e:
-                logger.error(f"Failed to add documents to collection {db_id}, {e}, {traceback.format_exc()}")
+                logger.error(
+                    f"Failed to add documents to collection {db_id}, {e}, {traceback.format_exc()}")
                 # 更新文件状态为失败
                 self.db_manager.update_file_status(file_id, "failed")
 
     def delete_file(self, db_id, file_id):
         # 从Milvus中删除文件的向量
-        self.client.delete(collection_name=db_id, filter=f"file_id == '{file_id}'")
+        self.client.delete(collection_name=db_id,
+                           filter=f"file_id == '{file_id}'")
 
         # 从SQLite中删除文件记录
         self.db_manager.delete_file(file_id)
@@ -346,14 +355,17 @@ class KnowledgeBase:
         self._load_models()
 
     ###################################
-    #* Below is the code for retriever #
+    # * Below is the code for retriever #
     ###################################
 
     def query(self, query, db_id, **kwargs):
 
-        distance_threshold = kwargs.get("distance_threshold", self.default_distance_threshold)
-        rerank_threshold = kwargs.get("rerank_threshold", self.default_rerank_threshold)
-        max_query_count = kwargs.get("max_query_count", self.default_max_query_count)
+        distance_threshold = kwargs.get(
+            "distance_threshold", self.default_distance_threshold)
+        rerank_threshold = kwargs.get(
+            "rerank_threshold", self.default_rerank_threshold)
+        max_query_count = kwargs.get(
+            "max_query_count", self.default_max_query_count)
 
         all_db_result = self.search(query, db_id, limit=max_query_count)
         all_db_result = [dict(r) for r in all_db_result]
@@ -364,18 +376,21 @@ class KnowledgeBase:
             if file:
                 res["file"] = file
 
-        db_result = [r for r in all_db_result if r["distance"] > distance_threshold]
+        db_result = [r for r in all_db_result if r["distance"]
+                     > distance_threshold]
 
         if config.enable_reranker and len(db_result) > 0 and self.reranker:
             logger.debug(f"开始重排序，原始结果数量: {len(db_result)}")
             texts = [r["entity"]["text"] for r in db_result]
             # 修复reranker输入格式：FlagReranker需要[[query, text1], [query, text2], ...]的格式
             query_text_pairs = [[query, text] for text in texts]
-            rerank_scores = self.reranker.compute_score(query_text_pairs, normalize=False)
+            rerank_scores = self.reranker.compute_score(
+                query_text_pairs, normalize=False)
             for i, r in enumerate(db_result):
                 r["rerank_score"] = rerank_scores[i]
             db_result.sort(key=lambda x: x["rerank_score"], reverse=True)
-            db_result = [_res for _res in db_result if _res["rerank_score"] > rerank_threshold]
+            db_result = [
+                _res for _res in db_result if _res["rerank_score"] > rerank_threshold]
             logger.debug(f"重排序完成，过滤后结果数量: {len(db_result)}")
         elif config.enable_reranker and len(db_result) > 0 and not self.reranker:
             logger.warning("重排序已启用但重排序器未初始化")
@@ -424,7 +439,7 @@ class KnowledgeBase:
         return retrievers
 
     ################################
-    #* Below is the code for milvus #
+    # * Below is the code for milvus #
     ################################
     def connect_to_milvus(self):
         """
@@ -440,7 +455,7 @@ class KnowledgeBase:
             # 使用标准连接方式
             uri = f"http://{host}:{port}"
             self.client = MilvusClient(uri=uri)
-            
+
             # 测试连接
             self.client.list_collections()
             logger.info(f"Successfully connected to Milvus at {uri}")
@@ -465,7 +480,8 @@ class KnowledgeBase:
         """获取Milvus集合信息，处理可能的错误"""
         try:
             collection = self.client.describe_collection(collection_name)
-            collection.update(self.client.get_collection_stats(collection_name))
+            collection.update(
+                self.client.get_collection_stats(collection_name))
             return collection
         except MilvusException as e:
             logger.warning(f"获取集合 {collection_name} 信息失败: {e}")
@@ -479,19 +495,21 @@ class KnowledgeBase:
 
     def add_collection(self, collection_name, dimension=None):
         if self.client.has_collection(collection_name=collection_name):
-            logger.warning(f"Collection {collection_name} already exists, drop it")
+            logger.warning(
+                f"Collection {collection_name} already exists, drop it")
             self.client.drop_collection(collection_name=collection_name)
 
         # 创建集合
         self.client.create_collection(
             collection_name=collection_name,
-            dimension= dimension,  # The vectors we will use in this demo has 768 dimensions
+            dimension=dimension,  # The vectors we will use in this demo has 768 dimensions
         )
 
         # 创建索引（如果需要）
         try:
             # 检查是否已有索引
-            index_info = self.client.list_indexes(collection_name=collection_name)
+            index_info = self.client.list_indexes(
+                collection_name=collection_name)
             if not index_info:
                 # 创建向量索引
                 index_params = {
@@ -505,12 +523,14 @@ class KnowledgeBase:
                 )
                 logger.info(f"Index created for collection {collection_name}")
         except Exception as e:
-            logger.warning(f"Failed to create index for collection {collection_name}: {e}")
+            logger.warning(
+                f"Failed to create index for collection {collection_name}: {e}")
 
         # 创建集合后立即加载到内存中
         try:
             self.client.load_collection(collection_name=collection_name)
-            logger.info(f"Collection {collection_name} created and loaded successfully")
+            logger.info(
+                f"Collection {collection_name} created and loaded successfully")
         except Exception as e:
             logger.error(f"Failed to load collection {collection_name}: {e}")
             raise
@@ -525,9 +545,11 @@ class KnowledgeBase:
 
             # 检查是否有索引，如果没有则创建
             try:
-                index_info = self.client.list_indexes(collection_name=collection_name)
+                index_info = self.client.list_indexes(
+                    collection_name=collection_name)
                 if not index_info:
-                    logger.info(f"Collection {collection_name} has no index, creating one...")
+                    logger.info(
+                        f"Collection {collection_name} has no index, creating one...")
                     # 创建向量索引
                     index_params = {
                         "index_type": "AUTOINDEX",
@@ -538,9 +560,11 @@ class KnowledgeBase:
                         field_name="vector",
                         index_params=index_params
                     )
-                    logger.info(f"Index created for collection {collection_name}")
+                    logger.info(
+                        f"Index created for collection {collection_name}")
             except Exception as index_e:
-                logger.warning(f"Failed to check/create index for collection {collection_name}: {index_e}")
+                logger.warning(
+                    f"Failed to check/create index for collection {collection_name}: {index_e}")
 
             # 尝试加载集合（如果已加载，这个操作是安全的）
             self.client.load_collection(collection_name=collection_name)
@@ -548,7 +572,8 @@ class KnowledgeBase:
             return True
 
         except Exception as e:
-            logger.error(f"Failed to ensure collection {collection_name} is loaded: {e}")
+            logger.error(
+                f"Failed to ensure collection {collection_name} is loaded: {e}")
             return False
 
     def add_documents(self, docs, collection_name, chunk_infos=None, file_id=None, **kwargs):
@@ -587,13 +612,15 @@ class KnowledgeBase:
     def search_by_vector(self, vector, collection_name, limit=3):
         # 确保集合已加载
         if not self.ensure_collection_loaded(collection_name):
-            raise Exception(f"Collection {collection_name} is not available for search")
+            raise Exception(
+                f"Collection {collection_name} is not available for search")
 
         res = self.client.search(
             collection_name=collection_name,  # target collection
             data=[vector],  # query vectors
             limit=limit,  # number of returned entities
-            output_fields=["text", "file_id"],  # specifies fields to be returned
+            # specifies fields to be returned
+            output_fields=["text", "file_id"],
         )
 
         return res[0]
@@ -601,7 +628,8 @@ class KnowledgeBase:
     def examples(self, collection_name, limit=20):
         # 确保集合已加载
         if not self.ensure_collection_loaded(collection_name):
-            raise Exception(f"Collection {collection_name} is not available for query")
+            raise Exception(
+                f"Collection {collection_name} is not available for query")
 
         res = self.client.query(
             collection_name=collection_name,
@@ -613,7 +641,8 @@ class KnowledgeBase:
     def search_by_id(self, collection_name, id, output_fields=["id", "text"]):
         # 确保集合已加载
         if not self.ensure_collection_loaded(collection_name):
-            raise Exception(f"Collection {collection_name} is not available for search")
+            raise Exception(
+                f"Collection {collection_name} is not available for search")
 
         res = self.client.get(collection_name, id, output_fields=output_fields)
         return res
@@ -625,3 +654,13 @@ class KnowledgeBase:
             return False
         return db["embed_model"] == self.embed_model.embed_model_fullname
 
+    def get_user_knowledge_bases(self, user_id):
+        logger.info(f"获取用户 {user_id} 的知识库")
+        return self.db_manager.get_user_knowledge_bases(user_id)
+
+    def delete_user_knowledge_bases(self, user_id):
+        logger.info(f"删除用户 {user_id} 的知识库")
+        databases = self.db_manager.get_user_knowledge_bases(user_id)
+        for db in databases:
+            self.client.drop_collection(collection_name=db["db_id"])
+        return self.db_manager.delete_user_knowledge_bases(user_id)

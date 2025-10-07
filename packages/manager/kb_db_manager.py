@@ -21,12 +21,17 @@ class KBDBManager:
 
         # 创建SQLAlchemy引擎
         # 优先读取环境变量，其次读取配置文件，最后采用容器内合理默认值
-        mysql_host = os.getenv("MYSQL_HOST", config.get("mysql", {}).get("host", "mysql"))
-        mysql_port = int(os.getenv("MYSQL_PORT", config.get("mysql", {}).get("port", 3306)))
-        mysql_user = os.getenv("MYSQL_USER", config.get("mysql", {}).get("user", "mysql"))
-        mysql_password = os.getenv("MYSQL_PASSWORD", config.get("mysql", {}).get("password", "12345678"))
-        mysql_db = os.getenv("MYSQL_DB", config.get("mysql", {}).get("database", "knowledge_db"))
-        
+        mysql_host = os.getenv("MYSQL_HOST", config.get(
+            "mysql", {}).get("host", "mysql"))
+        mysql_port = int(
+            os.getenv("MYSQL_PORT", config.get("mysql", {}).get("port", 3306)))
+        mysql_user = os.getenv("MYSQL_USER", config.get(
+            "mysql", {}).get("user", "mysql"))
+        mysql_password = os.getenv("MYSQL_PASSWORD", config.get(
+            "mysql", {}).get("password", "12345678"))
+        mysql_db = os.getenv("MYSQL_DB", config.get(
+            "mysql", {}).get("database", "knowledge_db"))
+
         # 构建连接字符串
         db_url = f"mysql+pymysql://{mysql_user}:{mysql_password}@{mysql_host}:{mysql_port}/{mysql_db}"
         self.engine = create_engine(
@@ -96,7 +101,8 @@ class KBDBManager:
         with self.get_session() as session:
             # 使用eager loading加载关联的files
             db = session.query(KnowledgeDatabase).options(
-                joinedload(KnowledgeDatabase.files).joinedload(KnowledgeFile.nodes)
+                joinedload(KnowledgeDatabase.files).joinedload(
+                    KnowledgeFile.nodes)
             ).filter_by(db_id=db_id).first()
 
             # 转换为字典并返回，避免后续延迟加载
@@ -108,7 +114,7 @@ class KBDBManager:
             return obj.to_dict()
         return obj
 
-    def create_database(self, db_id, name, description, embed_model=None, dimension=None, metadata=None):
+    def create_database(self, db_id, name, description, embed_model=None, dimension=None, metadata=None, user_id=None):
         """创建知识库"""
         with self.get_session() as session:
             db = KnowledgeDatabase(
@@ -117,7 +123,8 @@ class KBDBManager:
                 description=description,
                 embed_model=embed_model,
                 dimension=dimension,
-                meta_info=metadata or {}  # 存储到meta_info字段
+                meta_info=metadata or {},  # 存储到meta_info字段
+                user_id=user_id
             )
             session.add(db)
             session.flush()  # 立即写入数据库，获取ID
@@ -130,6 +137,7 @@ class KBDBManager:
                 "embed_model": embed_model,
                 "dimension": dimension,
                 "metadata": metadata or {},  # 返回时使用metadata键
+                "user_id": user_id,
                 "files": {}
             }
             return db_dict
@@ -137,7 +145,8 @@ class KBDBManager:
     def delete_database(self, db_id):
         """删除知识库"""
         with self.get_session() as session:
-            db = session.query(KnowledgeDatabase).filter_by(db_id=db_id).first()
+            db = session.query(KnowledgeDatabase).filter_by(
+                db_id=db_id).first()
             if db:
                 session.delete(db)
                 return True
@@ -172,7 +181,8 @@ class KBDBManager:
     def update_file_status(self, file_id, status):
         """更新文件状态"""
         with self.get_session() as session:
-            file = session.query(KnowledgeFile).filter_by(file_id=file_id).first()
+            file = session.query(KnowledgeFile).filter_by(
+                file_id=file_id).first()
             if file:
                 file.status = status
                 return True
@@ -181,7 +191,8 @@ class KBDBManager:
     def delete_file(self, file_id):
         """删除文件"""
         with self.get_session() as session:
-            file = session.query(KnowledgeFile).filter_by(file_id=file_id).first()
+            file = session.query(KnowledgeFile).filter_by(
+                file_id=file_id).first()
             if file:
                 session.delete(file)
                 return True
@@ -232,7 +243,8 @@ class KBDBManager:
     def get_nodes_by_file(self, file_id):
         """获取文件下的所有知识块"""
         with self.get_session() as session:
-            nodes = session.query(KnowledgeNode).filter_by(file_id=file_id).all()
+            nodes = session.query(KnowledgeNode).filter_by(
+                file_id=file_id).all()
             return [self._to_dict_safely(node) for node in nodes]
 
     def get_nodes_by_filter(self, file_id=None, search_text=None, limit=100):
@@ -242,9 +254,28 @@ class KBDBManager:
             if file_id:
                 query = query.filter_by(file_id=file_id)
             if search_text:
-                query = query.filter(KnowledgeNode.text.like(f"%{search_text}%"))
+                query = query.filter(
+                    KnowledgeNode.text.like(f"%{search_text}%"))
             nodes = query.limit(limit).all()
             return [self._to_dict_safely(node) for node in nodes]
+
+    def get_user_knowledge_bases(self, user_id):
+        """根据用户ID获取知识库"""
+
+        with self.get_session() as session:
+            databases = session.query(
+                KnowledgeDatabase).filter_by(user_id=user_id).all()
+            return [self._to_dict_safely(db) for db in databases]
+
+    def delete_user_knowledge_bases(self, user_id):
+        """根据用户ID删除知识库"""
+        with self.get_session() as session:
+            databases = session.query(
+                KnowledgeDatabase).filter_by(user_id=user_id).all()
+            for db in databases:
+                session.delete(db)
+            return True
+
 
 # 创建全局知识库数据库管理器实例
 kb_db_manager = KBDBManager()

@@ -33,9 +33,9 @@ class GraphDatabase:
     def start(self):
         if not config.enable_knowledge_graph or not config.enable_knowledge_base:
             return
-        uri = os.environ.get("NEO4J_URL", "bolt://localhost:7687")
+        uri = os.environ.get("NEO4J_URL", "bolt://localhost:7688")
         username = os.environ.get("NEO4J_USERNAME", "neo4j")
-        password = os.environ.get("NEO4J_PASSWORD", "1234567890")
+        password = os.environ.get("NEO4J_PASSWORD", "12345678")
         logger.info(f"Connecting to Neo4j at {uri} with database {self.kgdb_name}")
         try:
             # Neo4j连接URI不应该包含数据库名称

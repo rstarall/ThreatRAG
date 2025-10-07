@@ -150,7 +150,7 @@ class DeepSeek(OpenAIBase):
     def __init__(self, model_name=None):
         model_name = model_name or "deepseek-chat"
         api_key = os.getenv("DEEPSEEK_API_KEY")
-        base_url = os.getenv("DEEPSEEK_API_BASE", "https://api.deepseek.com/v1")
+        base_url = os.getenv("DEEPSEEK_API_BASE_URL", "https://api.deepseek.com/v1")
         logger.info(f"> DeepSeek model: {model_name}, base_url: {base_url}")
         super().__init__(api_key=api_key, base_url=base_url, model_name=model_name)
 

@@ -54,7 +54,7 @@ neo4j:
   auto_start: false
   data_dir: ./neo4j_data
   host: neo4j
-  port: 7687
+  port: 7688
   http_port: 7474
   # 添加索引器配置
   index_interval: 600  # 索引间隔，单位为秒，默认1小时

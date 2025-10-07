@@ -11,81 +11,105 @@ PROMPTS["DEFAULT_COMPLETION_DELIMITER"] = "<|COMPLETE|>"
 PROMPTS["DEFAULT_USER_PROMPT"] = "n/a"
 
 PROMPTS["entity_extraction_system_prompt"] = """---Role---
-You are a STIX2.0 (Structured Threat Information eXpression) Specialist responsible for extracting threat intelligence entities and relationships from the input text according to STIX2.0 standards.
+You are an elite STIX2.0 (Structured Threat Information eXpression) Analyst. Your sole mission is to meticulously extract threat intelligence entities and relationships from texts, adhering strictly to the provided schema and instructions. Your precision is paramount.
 
----STIX2.0 Framework Overview---
-STIX2.0 is a standardized language for describing cyber threat information in a structured and machine-readable format. It provides a common vocabulary for sharing cyber threat intelligence.
+---Guiding Principles---
+1.  **Precision Over Recall**: It is better to miss an ambiguous entity than to extract an incorrect one. Extract only what is clearly stated or strongly implied.
+2.  **Canonical Naming**: Identify an entity and establish a single, canonical name for it throughout the extraction. For example, if the text mentions "APT29" and "Cozy Bear", choose "APT29" as the canonical name.
+3.  **Strict Schema Adherence**: You MUST ONLY use the entity and relationship types defined below. Do not invent new types.
 
----STIX2.0 Entity Types---
-1. **ATTACK_PATTERN**: Describes ways attackers attempt to compromise targets (TTPs)
-2. **CAMPAIGN**: Groups multiple threats and activities over time
-3. **COURSE_OF_ACTION**: Solutions to prevent or respond to threats
-4. **DIRECTORY**: File system directory
-5. **FILE**: File observable
-6. **INDICATOR**: Pattern that can identify suspicious activity
-7. **INTRUSION_SET**: Group of attackers with common goals
-8. **MALWARE**: Malicious code or software
-9. **VULNERABILITY**: Weakness in software/system that can be exploited
-10. **PROCESS**: Running process observable
-11. **REGISTRY_KEY**: Windows registry key observable
-12. **NETWORK_TRAFFIC**: Network traffic observable
-13. **EMAIL_MESSAGE**: Email message observable
-14. **USER_ACCOUNT**: User account observable
-15. **SOFTWARE**: Software application
-16. **REPORT**: Document collection of threat intelligence
-17. **THREAT_ACTOR**: Individual/group responsible for attacks
-18. **TTP**: Tactics, Techniques, and Procedures
+---STIX2.0 Entity Schema---
+# --- Threat Actors & Campaigns ---
+- **THREAT_ACTOR**: The individual or group responsible for an attack. *Example: "APT29", "Lazarus Group".*
+- **INTRUSION_SET**: A group of attackers with common characteristics and goals. *Often linked to a Threat Actor.*
+- **CAMPAIGN**: A collection of malicious activities over time with a common goal. *Example: "Operation ShadowHammer".*
+# --- TTPs & Malware ---
+- **ATTACK_PATTERN**: The method used by an attacker (TTPs). *Example: "spear-phishing", "DDoS attack".*
+- **MALWARE**: Malicious software. *Example: "WellMess", "VHD Ransomware".*
+- **TOOL**: Legitimate software that can be used for malicious purposes. *Example: "PsExec", "Cobalt Strike".*
+- **PAYLOAD**: A piece of data that can be used to achieve a specific goal. *Example: "<script>alert('XSS')</script>".*
+# --- Vulnerabilities & Indicators ---
+- **VULNERABILITY**: A weakness in software that can be exploited. *Example: "CVE-2020-1472".*
+- **INDICATOR**: A pattern that can be used to detect suspicious or malicious activity. *Example: "IP 1.2.3.4 is a C2 server".*
+# --- Response & Information ---
+- **COURSE_OF_ACTION**: A recommended step to mitigate a threat. *Example: "apply security patch MS-08-67".*
+- **IDENTITY**: An individual, organization, or group involved. *Example: "Cyber Threat Intelligence Center".*
+- **LOCATION**: A geographic location. *Example: "Eastern Europe".*
+- **REPORT**: A document sharing threat intelligence. *Example: "Mandiant Q2 Threat Report".*
+# --- Cyber Observable Objects (SCOs) ---
+- **ARTIFACT**: A piece of data collected from a system, such as a file or payload.
+- **FILE**: A computer file. *Example: "malicious.dll".*
+- **DIRECTORY**: A file system directory. *Example: "C:\\Users\\admin\\AppData".*
+- **FILE_HASH**: A hash of a file's contents. *Example: "a1b2c3d4e5f67890".*
+- **IP_ADDRESS**: An IPv4 or IPv6 address. *Example: "198.51.100.10".*
+- **DOMAIN**: A domain name. *Example: "malicious-update.com".*
+- **URL**: A Uniform Resource Locator. *Example: "http://malicious-update.com/payload.exe".*
+- **EMAIL_ADDRESS**: An email address. *Example: "phisher@example.com".*
+- **USER_ACCOUNT**: A user account on a system. *Example: "SYSTEM", "Administrator".*
+- **PROCESS**: A running process on a system. *Example: "svchost.exe".*
+- **NETWORK_TRAFFIC**: A record of network communication.
+- **SOFTWARE**: A software product, including OS, middleware, or applications. *Example: "Apache Log4j", "Microsoft Windows".*
 
----STIX2.0 Relationship Types---
-1. **CONTAINS**: A contains B (e.g., report contains indicator)
-2. **RELATED_TO**: A is related to B
-3. **ATTRIBUTED_TO**: A is attributed to B (e.g., attack attributed to threat actor)
-4. **EXPLOITS**: A exploits B (e.g., malware exploits vulnerability)
-5. **INDICATES**: A indicates B (e.g., indicator indicates malware)
-6. **IMPLEMENTS**: A implements B (e.g., attack pattern implements TTP)
-7. **LAUNCHES**: A launches B (e.g., campaign launches attack)
-8. **TARGETS**: A targets B (e.g., threat actor targets organization)
+---STIX2.0 Relationship Schema---
+- **RELATED_TO**: A generic, untyped relationship. *Use this for software-vulnerability links if no specific type is available.*
+# --- Attribution & Affiliation ---
+- **ATTRIBUTED_TO**: The source is attributed to the target. *Valid Pairs: (intrusion-set -> threat-actor).*
+- **PART_OF**: The source is a component of the target. *Valid Pairs: (malware -> malware family).*
+- **DERIVED_FROM**: The source was derived from the target. *Valid Pairs: (indicator -> observed-data).*
+# --- Behavior & Capability ---
+- **USES**: The source uses the target. *Valid Pairs: (threat-actor -> tool), (malware -> attack-pattern).*
+- **TARGETS**: The source is targeting the target. *Valid Pairs: (campaign -> identity), (intrusion-set -> location).*
+- **EXPLOITS**: The source leverages a weakness in the target. *Valid Pairs: (malware -> vulnerability), (attack-pattern -> vulnerability).*
+- **DELIVERS**: The source sends the target to a destination. *Valid Pairs: (attack-pattern -> malware).*
+# --- Indication & Location ---
+- **INDICATES**: The source indicates the presence of the target. *Valid Pairs: (indicator -> malware), (indicator -> intrusion-set).*
+- **LOCATED_AT**: The source is located at the target. *Valid Pairs: (threat-actor -> location).*
+# --- Network & Host ---
+- **COMMUNICATES_WITH**: The source and target communicate. *Valid Pairs: (malware -> domain).*
+- **CONNECTS_TO**: The source connects to the target. *Valid Pairs: (ip-address -> ip-address).*
+- **RESOLVES_TO**: The source domain name resolves to the target IP address. *Valid Pairs: (domain -> ip-address).*
+- **HOSTS**: The source hosts the target. *Valid Pairs: (ip-address -> malware).*
+# --- Containment ---
+- **CONTAINS**: The source contains the target. *Valid Pairs: (report -> indicator), (file -> artifact).*
+- **HAS_WEAKNESS**: The source has a weakness in the target. *Valid Pairs: (software -> vulnerability).*
+- **HAS_PAYLOAD**: The source has a payload in the target. *Valid Pairs: (software -> payload).*
 
----Instructions---
-1. **Entity Extraction:** Identify clearly defined and meaningful entities in the input text, and extract the following information:
-   - entity_name: Name of the entity, ensure entity names are consistent throughout the extraction.
-   - entity_type: **CRITICAL** - Categorize the entity using the EXACT STIX2.0 entity types listed above. Use the exact type names (e.g., "malware", "threat-actor", "attack-pattern", "indicator", "vulnerability", "file", "process", "network-traffic", "email-message", "user-account", "software", "report", "campaign", "intrusion-set", "course-of-action", "directory", "registry-key", "ttp"). If none of the provided types are suitable, classify it as "other".
-   - entity_description: Provide a comprehensive description of the entity's attributes and activities based on the information present in the input text.
-   - entity_properties: Extract additional STIX2.0 properties relevant to the entity type, such as:
-     * For MALWARE: malware_types, execution_platforms, capabilities
-     * For THREAT_ACTOR: aliases, threat_actor_types, roles, goals
-     * For ATTACK_PATTERN: kill_chain_phases, required_permissions
-     * For INDICATOR: pattern_type, pattern_value, valid_from
-     * For VULNERABILITY: CVE_id, CVSS_score, severity
-     * For SOFTWARE: cpe, version, vendor
-     * For FILE: hashes, size, extensions
-     * For NETWORK_TRAFFIC: protocols, src_ref, dst_ref, src_port, dst_port
-     * For REPORT: published, report_types
-2. **Entity Output Format:** (entity{tuple_delimiter}entity_name{tuple_delimiter}entity_type{tuple_delimiter}entity_description{tuple_delimiter}entity_properties)
-   **Note:** Each entity will automatically be assigned a STIX2.0 compliant ID (type--uuid), type, name, and description as standard properties.
-3. **Relationship Extraction:** Identify direct, clearly-stated and meaningful relationships between extracted entities within the input text, and extract the following information:
-   - source_entity: name of the source entity.
-   - target_entity: name of the target entity.
-   - relationship_type: Use one of the STIX2.0 relationship types listed above.
-   - relationship_description: Explain the nature of the relationship between the source and target entities, providing a clear rationale for their connection.
-   - relationship_properties: Extract additional properties relevant to the relationship type, such as:
-     * For EXPLOITS: start_time, end_time, confidence
-     * For ATTRIBUTED_TO: confidence, methodology
-     * For INDICATES: confidence, pattern_version
-     * For TARGETS: targeting_method, impact
-4. **Relationship Output Format:** (relationship{tuple_delimiter}source_entity{tuple_delimiter}target_entity{tuple_delimiter}relationship_type{tuple_delimiter}relationship_description{tuple_delimiter}relationship_properties)
-5. **Relationship Order:** Prioritize relationships based on their significance to the intended meaning of input text, and output more crucial relationships first.
-6. **Avoid Pronouns:** For entity names and all descriptions, explicitly name the subject or object instead of using pronouns; avoid pronouns such as `this document`, `our company`, `I`, `you`, and `he/she`.
-7. **Undirectional Relationship:** Treat relationships as undirected; swapping the source and target entities does not constitute a new relationship. Avoid outputting duplicate relationships.
-8. **Language:** Output entity names, keywords and descriptions in {language}.
-9. **Delimiter:** Use `{record_delimiter}` as the entity or relationship list delimiter; output `{completion_delimiter}` when all the entities and relationships are extracted.
+---Attack Chain and Causal Reasoning---
+Beyond extracting simple pairs, your primary goal is to reconstruct the logical attack chain. A common and critical chain to identify follows this pattern:
 
----STIX2.0 Compliance Requirements---
-1. **Entity Identification**: Each entity must be assigned a unique identifier following the pattern: [type]--[UUID] (e.g., malware--d81fce06-5664-48e4-a98a-c5aa9e4a4159)
-2. **Property Validation**: Only include properties that are valid for the specific entity type according to STIX2.0 specification.
-3. **Relationship Validation**: Ensure relationships are valid between the source and target entity types according to STIX2.0 specification.
-4. **Timestamps**: Include creation and modification timestamps in ISO 8601 format when available.
-5. **Confidence Scoring**: Assign confidence scores (0-100) to extracted entities and relationships when possible.
+1.  **The Foundation**: A `SOFTWARE` entity.
+2.  **The Weakness**: The software `HAS` a `VULNERABILITY`. (Use the `HAS_WEAKNESS` relationship and explain it in the description, or a more specific one if available).
+3.  **The Method**: The `VULNERABILITY` is targeted by an `ATTACK_PATTERN` or `MALWARE` via an `EXPLOITS` relationship.
+4.  **The Actor**: The `ATTACK_PATTERN` or `MALWARE` is wielded by a `THREAT_ACTOR` or `INTRUSION_SET` via a `USES` relationship.
+
+**Your task is to actively look for this causal sequence.** When you identify entities that fit this pattern, prioritize extracting the relationships that connect them. Pay close attention to causal language such as "allows for," "leads to," "by means of," "which enables," "as a result of," and "in order to."
+
+
+---Chain-of-Thought Process---
+Before generating the output, follow these steps internally:
+1.  **First Pass - Entity Identification**: Read the entire text and identify all potential entities. For each, note its name and preliminary type from the schema.
+2.  **Second Pass - Entity Canonicalization**: Review the list of entities. Merge duplicates and assign a single, consistent canonical name for each unique entity.
+3.  **Third Pass - Causal Chain & Relationship Identification**: Re-read the text. First, look for the causal attack chains as described above. Then, identify other clear, direct relationships between the canonical entities.
+4.  **Fourth Pass - Description Generation**: For each canonical entity and relationship, gather all descriptive details from the text.
+5.  **Final Pass - Formatting**: Format the extracted data precisely according to the output format rules.
+
+---Output Format and Rules---
+1.  **Entity Extraction:** Identify entities and extract the following:
+    - `entity_name`: The canonical name of the entity.
+    - `entity_type`: **CRITICAL** - The EXACT type from the Entity Schema.
+    - `entity_description`: A comprehensive summary of the entity's role and actions from the text.
+    - `entity_properties`: **CRITICAL** - This field must be an empty JSON object: `{}`.
+2.  **Entity Output Format:** `(entity{tuple_delimiter}entity_name{tuple_delimiter}entity_type{tuple_delimiter}entity_description{tuple_delimiter}entity_properties)`
+3.  **Relationship Extraction:** Identify direct relationships between extracted entities.
+    - `source_entity`: Canonical name of the source entity.
+    - `target_entity`: Canonical name of the target entity.
+    - `relationship_type`: The EXACT type from the Relationship Schema.
+    - `relationship_description`: A clear explanation of the relationship, citing evidence from the text.
+    - `relationship_properties`: **CRITICAL** - This field must be an empty JSON object: `{}`.
+4.  **Relationship Output Format:** `(relationship{tuple_delimiter}source_entity{tuple_delimiter}target_entity{tuple_delimiter}relationship_type{tuple_delimiter}relationship_description{tuple_delimiter}relationship_properties)`
+5.  **CRITICAL RULE: No Pronouns.** In all names and descriptions, use explicit names.
+6.  **CRITICAL RULE: Language.** All output must be in `{language}`.
+7.  **CRITICAL RULE: Delimiters.** Use `{record_delimiter}` to separate each record. Output `{completion_delimiter}` at the very end.
 
 ---Examples---
 {examples}
@@ -106,20 +130,17 @@ Extract STIX2.0 compliant entities and relationships from the input text to be P
 1. Output entities and relationships in STIX2.0 compliant format, prioritized by their relevance to the input text's core meaning.
 2. Each entity must include:
    - entity_name: Clear, consistent name
-   - entity_type: One of the STIX2.0 entity types
+   - entity_type: One of the STIX2.0 entity types exactly as defined in the schema
    - entity_description: Comprehensive description
-   - entity_properties: Additional STIX2.0 properties relevant to the entity type
+   - entity_properties: Empty JSON object {}
 3. Each relationship must include:
    - source_entity: Name of the source entity
    - target_entity: Name of the target entity
-   - relationship_type: One of the STIX2.0 relationship types
+   - relationship_type: One of the STIX2.0 relationship types exactly as defined in the schema
    - relationship_description: Clear explanation of the relationship
-   - relationship_properties: Additional STIX2.0 properties relevant to the relationship type
-4. Assign unique identifiers to each entity following the pattern: [type]--[UUID]
-5. Assign confidence scores (0-100) to extracted entities and relationships when possible.
-6. Include timestamps in ISO 8601 format when available.
-7. Output `{completion_delimiter}` when all the entities and relationships are extracted.
-8. Ensure the output language is {language}.
+   - relationship_properties: Empty JSON object {}
+4. Output `{completion_delimiter}` when all the entities and relationships are extracted.
+5. Ensure the output language is {language}.
 
 <Output>
 """
@@ -131,96 +152,123 @@ Identify any missed STIX2.0 compliant entities or relationships from the input t
 1. Output the entities and relationships in the same STIX2.0 compliant format as previous extraction task.
 2. Each entity must include:
    - entity_name: Clear, consistent name
-   - entity_type: One of the STIX2.0 entity types
+   - entity_type: One of the STIX2.0 entity types exactly as defined in the schema
    - entity_description: Comprehensive description
-   - entity_properties: Additional STIX2.0 properties relevant to the entity type
+   - entity_properties: Empty JSON object {}
 3. Each relationship must include:
    - source_entity: Name of the source entity
    - target_entity: Name of the target entity
-   - relationship_type: One of the STIX2.0 relationship types
+   - relationship_type: One of the STIX2.0 relationship types exactly as defined in the schema
    - relationship_description: Clear explanation of the relationship
-   - relationship_properties: Additional STIX2.0 properties relevant to the relationship type
+   - relationship_properties: Empty JSON object {}
 4. Do not include entities and relations that have been correctly extracted in last extraction task.
 5. If the entity or relation output is truncated or has missing fields in last extraction task, please re-output it in the correct STIX2.0 format.
-6. Assign unique identifiers to each entity following the pattern: [type]--[UUID]
-7. Assign confidence scores (0-100) to extracted entities and relationships when possible.
-8. Include timestamps in ISO 8601 format when available.
-9. Output `{completion_delimiter}` when all the entities and relationships are extracted.
-10. Ensure the output language is {language}.
+6. Output `{completion_delimiter}` when all the entities and relationships are extracted.
+7. Ensure the output language is {language}.
 
 <Output>
 """
 
 PROMPTS["entity_extraction_examples"] = [
     """<Input Text>
-```
-The APT29 group, also known as Cozy Bear, has been conducting a sophisticated cyber espionage campaign targeting government agencies and research institutions worldwide. According to a recent report by Cyber Threat Intelligence Center, the threat actor has been utilizing a custom malware variant named "WellMess" to compromise systems. This malware exploits CVE-2020-1472, a critical vulnerability in Microsoft Windows Netlogon Remote Protocol with a CVSS score of 10.0. The attack pattern involves spear-phishing emails containing malicious attachments that, when opened, establish a reverse shell connection to command and control servers located in Eastern Europe. Security researchers have identified indicators such as the domain "malicious-update[.]com" and the file hash "a1b2c3d4e5f67890" associated with this campaign. The threat actor's primary goal appears to be intelligence gathering related to COVID-19 vaccine research.
-```
+The APT29 group, also known as Cozy Bear, has been conducting a sophisticated cyber espionage campaign targeting government agencies and research institutions worldwide. According to a recent report by Cyber Threat Intelligence Center, the threat actor has been utilizing a custom malware variant named "WellMess" to compromise systems. This malware exploits CVE-2020-1472, a critical vulnerability in Microsoft Windows Netlogon Remote Protocol. The attack pattern involves spear-phishing emails containing malicious attachments. Security researchers have identified indicators such as the domain "malicious-update[.]com" and the IP address 203.0.113.25, and the file hash "a1b2c3d4e5f67890" associated with this campaign. The report indicates the campaign targeted multiple government agencies in North America.```
 
-<Output>
-(entity{tuple_delimiter}APT29{tuple_delimiter}THREAT_ACTOR{tuple_delimiter}APT29 is a sophisticated threat actor group also known as Cozy Bear, specializing in cyber espionage operations against government agencies and research institutions worldwide. The group has been active in conducting intelligence gathering campaigns, particularly targeting COVID-19 vaccine research data.{tuple_delimiter}{{"aliases": ["Cozy Bear"], "threat_actor_types": ["nation-state"], "roles": ["actor"], "goals": ["intelligence gathering"], "first_seen": "2015-01-01T00:00:00Z", "last_seen": "2023-12-31T23:59:59Z"}}){record_delimiter}
-(entity{tuple_delimiter}WellMess{tuple_delimiter}MALWARE{tuple_delimiter}WellMess is a custom malware variant utilized by APT29 in their cyber espionage campaigns. It is designed to establish persistent access to compromised systems and facilitate data exfiltration. The malware is typically delivered through spear-phishing emails containing malicious attachments.{tuple_delimiter}{{"malware_types": ["trojan", "backdoor"], "execution_platforms": ["Windows"], "capabilities": ["persistence", "data exfiltration", "remote access"], "first_seen": "2020-01-01T00:00:00Z", "is_family": false}}){record_delimiter}
-(entity{tuple_delimiter}CVE-2020-1472{tuple_delimiter}VULNERABILITY{tuple_delimiter}CVE-2020-1472 is a critical vulnerability in Microsoft Windows Netlogon Remote Protocol that allows attackers to authenticate as a domain controller and potentially gain domain administrator privileges. It has a CVSS score of 10.0, indicating maximum severity.{tuple_delimiter}{{"CVE_id": "CVE-2020-1472", "CVSS_score": 10.0, "severity": "critical", "affected_products": ["Windows Server 2008 R2", "Windows Server 2012", "Windows Server 2012 R2", "Windows Server 2016", "Windows Server 2019"], "published": "2020-08-11T00:00:00Z"}}){record_delimiter}
-(entity{tuple_delimiter}Spear-phishing with malicious attachments{tuple_delimiter}ATTACK_PATTERN{tuple_delimiter}This attack pattern involves sending targeted emails with malicious attachments to specific individuals or organizations. When recipients open the attachments, malware is executed, establishing unauthorized access to their systems. This technique is commonly used in initial access phases of cyber attacks.{tuple_delimiter}{{"kill_chain_phases": ["initial-access"], "required_permissions": ["user"], "execution_platforms": ["Windows", "macOS", "Linux"], "technique_id": "T1566.001", "technique_name": "Spearphishing Attachment"}}){record_delimiter}
-(entity{tuple_delimiter}malicious-update[.]com{tuple_delimiter}INDICATOR{tuple_delimiter}The domain 'malicious-update[.]com' is a known command and control server associated with APT29's WellMess malware campaign. It serves as a communication endpoint for compromised systems to establish reverse shell connections and receive instructions from attackers.{tuple_delimiter}{{"pattern_type": "domain", "pattern_value": "malicious-update[.]com", "valid_from": "2020-01-01T00:00:00Z", "confidence": 85}}){record_delimiter}
-(entity{tuple_delimiter}a1b2c3d4e5f67890{tuple_delimiter}FILE{tuple_delimiter}This file hash corresponds to a malicious executable file used in APT29's spear-phishing campaigns. The file is typically delivered as an attachment in phishing emails and, when executed, installs the WellMess malware on the victim's system.{tuple_delimiter}{{"hashes": {"MD5": "a1b2c3d4e5f67890"}, "extensions": [".exe"], "size": 102400, "mime_type": "application/x-dosexec"}}){record_delimiter}
-(entity{tuple_delimiter}COVID-19 vaccine research{tuple_delimiter}REPORT{tuple_delimiter}This report contains intelligence about APT29's targeting of COVID-19 vaccine research data. It details the threat actor's tactics, techniques, and procedures, as well as indicators of compromise associated with their campaign.{tuple_delimiter}{{"published": "2020-07-16T00:00:00Z", "report_types": ["threat-report"], "object_refs": ["APT29", "WellMess", "CVE-2020-1472"]}}){record_delimiter}
-(relationship{tuple_delimiter}APT29{tuple_delimiter}WellMess{tuple_delimiter}USES{tuple_delimiter}APT29 utilizes the WellMess malware in their cyber espionage operations to establish persistent access to compromised systems and facilitate data exfiltration.{tuple_delimiter}{{"confidence": 90, "start_time": "2020-01-01T00:00:00Z"}}){record_delimiter}
-(relationship{tuple_delimiter}WellMess{tuple_delimiter}CVE-2020-1472{tuple_delimiter}EXPLOITS{tuple_delimiter}The WellMess malware exploits the CVE-2020-1472 vulnerability in Microsoft Windows Netlogon Remote Protocol to gain elevated privileges on compromised systems.{tuple_delimiter}{{"confidence": 95, "start_time": "2020-01-01T00:00:00Z"}}){record_delimiter}
-(relationship{tuple_delimiter}APT29{tuple_delimiter}Spear-phishing with malicious attachments{tuple_delimiter}USES{tuple_delimiter}APT29 employs spear-phishing emails with malicious attachments as an initial attack vector to deliver their WellMess malware to target systems.{tuple_delimiter}{{"confidence": 85, "start_time": "2020-01-01T00:00:00Z"}}){record_delimiter}
-(relationship{tuple_delimiter}malicious-update[.]com{tuple_delimiter}WellMess{tuple_delimiter}INDICATES{tuple_delimiter}The domain 'malicious-update[.]com' serves as a command and control server for the WellMess malware, indicating its presence and activity in compromised networks.{tuple_delimiter}{{"confidence": 85, "pattern_version": "1.0"}}){record_delimiter}
-(relationship{tuple_delimiter}a1b2c3d4e5f67890{tuple_delimiter}WellMess{tuple_delimiter}INDICATES{tuple_delimiter}The file hash 'a1b2c3d4e5f67890' is associated with the WellMess malware executable, indicating its presence on a system when detected.{tuple_delimiter}{{"confidence": 90, "pattern_version": "1.0"}}){record_delimiter}
-(relationship{tuple_delimiter}APT29{tuple_delimiter}COVID-19 vaccine research{tuple_delimiter}TARGETS{tuple_delimiter}APT29 specifically targets COVID-19 vaccine research data and institutions as part of their intelligence gathering operations.{tuple_delimiter}{{"confidence": 80, "targeting_method": "cyber espionage", "impact": "data theft"}}){record_delimiter}
+<o>
+(entity{tuple_delimiter}APT29{tuple_delimiter}THREAT_ACTOR{tuple_delimiter}APT29 is a sophisticated threat actor group also known as Cozy Bear, specializing in cyber espionage operations against government agencies and research institutions worldwide.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}WellMess{tuple_delimiter}MALWARE{tuple_delimiter}WellMess is a custom malware variant utilized by APT29 for persistent access and data exfiltration in targeted espionage operations.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}CVE-2020-1472{tuple_delimiter}VULNERABILITY{tuple_delimiter}CVE-2020-1472 is a critical vulnerability in Microsoft Windows Netlogon Remote Protocol allowing privilege escalation to domain admin.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}Spear-phishing with malicious attachments{tuple_delimiter}ATTACK_PATTERN{tuple_delimiter}A targeted email technique using malicious attachments to execute malware and gain initial access.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}malicious-update[.]com{tuple_delimiter}DOMAIN{tuple_delimiter}A known command and control domain associated with WellMess operations.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}203.0.113.25{tuple_delimiter}IP_ADDRESS{tuple_delimiter}An IP address used as part of command and control infrastructure in the campaign.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}a1b2c3d4e5f67890{tuple_delimiter}FILE_HASH{tuple_delimiter}A file hash associated with the WellMess payload distributed via spear-phishing.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}Cyber Threat Intelligence Center Report{tuple_delimiter}REPORT{tuple_delimiter}A report documenting APT29’s campaign, TTPs, indicators, and victims.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}North American government agencies{tuple_delimiter}IDENTITY{tuple_delimiter}Government agencies targeted by APT29’s campaign in North America.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}APT29{tuple_delimiter}WellMess{tuple_delimiter}USES{tuple_delimiter}APT29 uses WellMess to establish persistence and exfiltrate data from compromised systems.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}WellMess{tuple_delimiter}CVE-2020-1472{tuple_delimiter}EXPLOITS{tuple_delimiter}WellMess exploits CVE-2020-1472 to escalate privileges in Windows environments.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}malicious-update[.]com{tuple_delimiter}WellMess{tuple_delimiter}INDICATES{tuple_delimiter}The domain indicates presence of WellMess C2 communications.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}203.0.113.25{tuple_delimiter}WellMess{tuple_delimiter}INDICATES{tuple_delimiter}The IP address indicates command and control activity related to WellMess.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}APT29{tuple_delimiter}Spear-phishing with malicious attachments{tuple_delimiter}USES{tuple_delimiter}APT29 employs spear-phishing with malicious attachments as initial access.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}APT29{tuple_delimiter}North American government agencies{tuple_delimiter}TARGETS{tuple_delimiter}APT29 targets government agencies to conduct espionage.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}APT29{tuple_delimiter}Cyber Threat Intelligence Center Report{tuple_delimiter}RELATED_TO{tuple_delimiter}The report documents APT29’s campaign and indicators.{tuple_delimiter}{{}){record_delimiter}
 {completion_delimiter}
-
 """,
-    """<Input Text>
-```
-In a recent cybersecurity incident, the Lazarus Group, a North Korean state-sponsored threat actor, deployed a new ransomware variant named "VHD" in attacks targeting financial institutions across Asia and Europe. The ransomware exploits CVE-2021-44228, a critical vulnerability in Apache Log4j with a CVSS score of 10.0, to gain initial access to target systems. Once inside the network, the malware propagates laterally using the EternalBlue exploit (CVE-2017-0144) and establishes persistence through registry modifications. Security researchers have identified several indicators of compromise, including the IP address 192.168.1.100, the domain "update-service[.]xyz", and the file hash "e5f6a7b8c9d01234" for the ransomware executable. The attackers demand a ransom of 10 Bitcoin for decryption keys and threaten to leak stolen data if payment is not made within 72 hours.
-```
+"""<Input Text>
+An APT group named "DarkShadow" targets critical energy infrastructure. Visitors to compromised industry websites are infected with a custom backdoor "ShadowNet" via a drive-by download exploiting CVE-2022-2294 (WebRTC). ShadowNet persists via scheduled tasks and registry modifications, performs reconnaissance, and coordinates with an ICS-disruption malware "BlackOut". C2 communication is observed with domain "shadow-c2[.]net" and IP 45.67.89.123; the domain resolves to 45.67.89.123. A hosting server 203.0.113.50 is identified as hosting "BlackOut" payloads. Affected substations are located in Eastern Europe.```
 
-<Output>
-(entity{tuple_delimiter}Lazarus Group{tuple_delimiter}THREAT_ACTOR{tuple_delimiter}The Lazarus Group is a North Korean state-sponsored threat actor known for conducting financially motivated cyber attacks, including ransomware campaigns, bank heists, and cryptocurrency theft. The group has been active since at least 2009 and has targeted various sectors worldwide.{tuple_delimiter}{{"aliases": ["Hidden Cobra", "APT38"], "threat_actor_types": ["nation-state", "criminal"], "roles": ["actor"], "goals": ["financial gain", "data theft"], "first_seen": "2009-01-01T00:00:00Z", "last_seen": "2023-12-31T23:59:59Z"}}){record_delimiter}
-(entity{tuple_delimiter}VHD{tuple_delimiter}MALWARE{tuple_delimiter}VHD is a ransomware variant deployed by the Lazarus Group in attacks against financial institutions. It encrypts files on compromised systems and demands ransom payments in Bitcoin for decryption keys. The malware also includes data theft capabilities and threatens to leak stolen information if ransom is not paid.{tuple_delimiter}{{"malware_types": ["ransomware", "trojan"], "execution_platforms": ["Windows"], "capabilities": ["file encryption", "data exfiltration", "lateral movement"], "first_seen": "2022-01-01T00:00:00Z", "is_family": false}}){record_delimiter}
-(entity{tuple_delimiter}CVE-2021-44228{tuple_delimiter}VULNERABILITY{tuple_delimiter}CVE-2021-44228, also known as Log4Shell, is a critical vulnerability in Apache Log4j that allows for unauthenticated remote code execution. It has a CVSS score of 10.0, indicating maximum severity, and affects numerous Java-based applications and services.{tuple_delimiter}{{"CVE_id": "CVE-2021-44228", "CVSS_score": 10.0, "severity": "critical", "affected_products": ["Apache Log4j 2.0-beta9 through 2.14.1"], "published": "2021-12-10T00:00:00Z"}}){record_delimiter}
-(entity{tuple_delimiter}CVE-2017-0144{tuple_delimiter}VULNERABILITY{tuple_delimiter}CVE-2017-0144, also known as EternalBlue, is a critical vulnerability in Microsoft Server Message Block 1.0 (SMBv1) that allows remote code execution. It was leaked by the Shadow Brokers hacking group and has been widely exploited in ransomware campaigns.{tuple_delimiter}{{"CVE_id": "CVE-2017-0144", "CVSS_score": 8.5, "severity": "high", "affected_products": ["Windows Vista", "Windows Server 2008", "Windows 7", "Windows Server 2008 R2"], "published": "2017-03-14T00:00:00Z"}}){record_delimiter}
-(entity{tuple_delimiter}192.168.1.100{tuple_delimiter}INDICATOR{tuple_delimiter}The IP address 192.168.1.100 is associated with command and control infrastructure used by the Lazarus Group in their VHD ransomware campaign. It serves as a communication endpoint for compromised systems to connect to and receive instructions from attackers.{tuple_delimiter}{{"pattern_type": "ipv4-addr", "pattern_value": "192.168.1.100", "valid_from": "2022-01-01T00:00:00Z", "confidence": 75}}){record_delimiter}
-(entity{tuple_delimiter}update-service[.]xyz{tuple_delimiter}INDICATOR{tuple_delimiter}The domain 'update-service[.]xyz' is a known command and control server associated with the Lazarus Group's VHD ransomware campaign. It is used to deliver additional payloads and exfiltrate stolen data from compromised systems.{tuple_delimiter}{{"pattern_type": "domain", "pattern_value": "update-service[.]xyz", "valid_from": "2022-01-01T00:00:00Z", "confidence": 80}}){record_delimiter}
-(entity{tuple_delimiter}e5f6a7b8c9d01234{tuple_delimiter}FILE{tuple_delimiter}This file hash corresponds to the VHD ransomware executable used by the Lazarus Group. The file is typically delivered after initial compromise and is responsible for encrypting files on the victim's system and demanding ransom payments.{tuple_delimiter}{{"hashes": {"MD5": "e5f6a7b8c9d01234"}, "extensions": [".exe"], "size": 204800, "mime_type": "application/x-dosexec"}}){record_delimiter}
-(relationship{tuple_delimiter}Lazarus Group{tuple_delimiter}VHD{tuple_delimiter}USES{tuple_delimiter}The Lazarus Group utilizes the VHD ransomware in their financially motivated attacks against financial institutions to encrypt files and demand ransom payments.{tuple_delimiter}{{"confidence": 90, "start_time": "2022-01-01T00:00:00Z"}}){record_delimiter}
-(relationship{tuple_delimiter}VHD{tuple_delimiter}CVE-2021-44228{tuple_delimiter}EXPLOITS{tuple_delimiter}The VHD ransomware exploits the CVE-2021-44228 vulnerability (Log4Shell) to gain initial access to target systems before deploying its encryption capabilities.{tuple_delimiter}{{"confidence": 95, "start_time": "2022-01-01T00:00:00Z"}}){record_delimiter}
-(relationship{tuple_delimiter}VHD{tuple_delimiter}CVE-2017-0144{tuple_delimiter}EXPLOITS{tuple_delimiter}After initial compromise, the VHD ransomware exploits the CVE-2017-0144 vulnerability (EternalBlue) to propagate laterally across the target network and infect additional systems.{tuple_delimiter}{{"confidence": 85, "start_time": "2022-01-01T00:00:00Z"}}){record_delimiter}
-(relationship{tuple_delimiter}192.168.1.100{tuple_delimiter}VHD{tuple_delimiter}INDICATES{tuple_delimiter}The IP address 192.168.1.100 serves as a command and control server for the VHD ransomware, indicating its presence and activity in compromised networks.{tuple_delimiter}{{"confidence": 75, "pattern_version": "1.0"}}){record_delimiter}
-(relationship{tuple_delimiter}update-service[.]xyz{tuple_delimiter}VHD{tuple_delimiter}INDICATES{tuple_delimiter}The domain 'update-service[.]xyz' is associated with the VHD ransomware campaign, serving as a command and control server for data exfiltration and payload delivery.{tuple_delimiter}{{"confidence": 80, "pattern_version": "1.0"}}){record_delimiter}
-(relationship{tuple_delimiter}e5f6a7b8c9d01234{tuple_delimiter}VHD{tuple_delimiter}INDICATES{tuple_delimiter}The file hash 'e5f6a7b8c9d01234' corresponds to the VHD ransomware executable, indicating its presence on a system when detected.{tuple_delimiter}{{"confidence": 90, "pattern_version": "1.0"}}){record_delimiter}
-(relationship{tuple_delimiter}Lazarus Group{tuple_delimiter}Financial institutions{tuple_delimiter}TARGETS{tuple_delimiter}The Lazarus Group specifically targets financial institutions across Asia and Europe with their VHD ransomware campaign to achieve financial gain through ransom payments.{tuple_delimiter}{{"confidence": 85, "targeting_method": "ransomware", "impact": "financial loss"}}){record_delimiter}
+<o>
+(entity{tuple_delimiter}DarkShadow{tuple_delimiter}INTRUSION_SET{tuple_delimiter}An APT group focusing on critical energy infrastructure operations.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}ShadowNet{tuple_delimiter}MALWARE{tuple_delimiter}A custom backdoor used for initial access, persistence, and reconnaissance.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}BlackOut{tuple_delimiter}MALWARE{tuple_delimiter}An ICS-disruption malware designed to impact power grid operations.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}CVE-2022-2294{tuple_delimiter}VULNERABILITY{tuple_delimiter}A use-after-free vulnerability in WebRTC enabling remote code execution.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}Drive-by download on industry websites{tuple_delimiter}ATTACK_PATTERN{tuple_delimiter}Compromised trusted sites trigger automatic malware delivery upon visit.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}shadow-c2[.]net{tuple_delimiter}DOMAIN{tuple_delimiter}A C2 domain used by ShadowNet.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}45.67.89.123{tuple_delimiter}IP_ADDRESS{tuple_delimiter}An IP involved in C2 communications linked to ShadowNet.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}203.0.113.50{tuple_delimiter}IP_ADDRESS{tuple_delimiter}A hosting server used to deliver BlackOut payloads.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}Eastern Europe{tuple_delimiter}LOCATION{tuple_delimiter}Geographic region where affected substations are located.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}Regional power substations{tuple_delimiter}IDENTITY{tuple_delimiter}Targeted energy infrastructure assets within Eastern Europe.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}DarkShadow{tuple_delimiter}ShadowNet{tuple_delimiter}USES{tuple_delimiter}DarkShadow uses ShadowNet for initial access and control.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}DarkShadow{tuple_delimiter}BlackOut{tuple_delimiter}USES{tuple_delimiter}DarkShadow deploys BlackOut to disrupt ICS operations.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}ShadowNet{tuple_delimiter}CVE-2022-2294{tuple_delimiter}EXPLOITS{tuple_delimiter}ShadowNet exploits the vulnerability for initial compromise.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}shadow-c2[.]net{tuple_delimiter}45.67.89.123{tuple_delimiter}RESOLVES_TO{tuple_delimiter}The domain resolves to the IP used in C2.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}ShadowNet{tuple_delimiter}shadow-c2[.]net{tuple_delimiter}COMMUNICATES_WITH{tuple_delimiter}ShadowNet communicates with the C2 domain.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}ShadowNet{tuple_delimiter}45.67.89.123{tuple_delimiter}COMMUNICATES_WITH{tuple_delimiter}ShadowNet communicates with the C2 IP.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}203.0.113.50{tuple_delimiter}BlackOut{tuple_delimiter}HOSTS{tuple_delimiter}The server hosts BlackOut payloads.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}DarkShadow{tuple_delimiter}Regional power substations{tuple_delimiter}TARGETS{tuple_delimiter}DarkShadow targets substations to disrupt power operations.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}Regional power substations{tuple_delimiter}Eastern Europe{tuple_delimiter}LOCATED_AT{tuple_delimiter}The targeted infrastructure is located in Eastern Europe.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}shadow-c2[.]net{tuple_delimiter}ShadowNet{tuple_delimiter}INDICATES{tuple_delimiter}The domain indicates activity of ShadowNet.{tuple_delimiter}{{}){record_delimiter}
 {completion_delimiter}
-
 """,
-    """<Input Text>
-```
-A new advanced persistent threat (APT) group named "DarkShadow" has been discovered targeting critical infrastructure in the energy sector. The group employs a sophisticated multi-stage attack chain that begins with watering hole attacks on industry-specific websites. Visitors to these compromised sites are infected with a custom backdoor named "ShadowNet" through a drive-by download exploiting CVE-2022-2294, a use-after-free vulnerability in WebRTC. Once installed, ShadowNet establishes persistence by creating a scheduled task and modifying Windows registry keys. The malware then performs reconnaissance on the network, mapping out critical systems and identifying high-value targets. DarkShadow operators use this information to deploy a custom industrial control system (ICS) malware named "BlackOut" specifically designed to disrupt power grid operations. Security researchers have identified several indicators of compromise, including the domain "shadow-c2[.]net", the IP address 45.67.89.123, and the file hash "f0e9d8c7b6a54321" for the ShadowNet backdoor.
-```
+"""<Input Text>
+A group "CodeStealers" compromised popular open-source JavaScript libraries by inserting a malicious updater module. The updater module downloads a payload "DevInjector" which drops files into "C:\\ProgramData\\Updater" and spawns "updater.exe". It creates a hidden user "svc_update", schedules a process via WMI, and tunnels exfiltration over HTTPS to "dev-updates[.]info" and 23.45.67.89. The operation abuses "Node.js Package Manager" (software) with a configuration weakness tracked as CVE-2023-1234. The payload later delivers "DevThief" malware for code theft. Emails from "alerts@dev-updates[.]info" were used for phishing.```
 
-<Output>
-(entity{tuple_delimiter}DarkShadow{tuple_delimiter}INTRUSION_SET{tuple_delimiter}DarkShadow is a sophisticated APT group specializing in attacks against critical infrastructure, particularly in the energy sector. The group employs advanced multi-stage attack chains and custom-developed malware to compromise target networks and disrupt industrial control systems.{tuple_delimiter}{{"aliases": [], "first_seen": "2022-01-01T00:00:00Z", "last_seen": "2023-12-31T23:59:59Z", "goals": ["disruption", "espionage"], "resource_level": "high"}}){record_delimiter}
-(entity{tuple_delimiter}ShadowNet{tuple_delimiter}MALWARE{tuple_delimiter}ShadowNet is a custom backdoor developed by DarkShadow for initial compromise and persistence in target networks. It is delivered through watering hole attacks and drive-by downloads, establishing a foothold for further exploitation and deployment of additional payloads.{tuple_delimiter}{{"malware_types": ["backdoor", "trojan"], "execution_platforms": ["Windows"], "capabilities": ["persistence", "reconnaissance", "data exfiltration"], "first_seen": "2022-01-01T00:00:00Z", "is_family": false}}){record_delimiter}
-(entity{tuple_delimiter}BlackOut{tuple_delimiter}MALWARE{tuple_delimiter}BlackOut is a custom industrial control system (ICS) malware developed by DarkShadow specifically designed to disrupt power grid operations. It is deployed after initial reconnaissance and is capable of manipulating industrial control systems to cause physical disruption to energy infrastructure.{tuple_delimiter}{{"malware_types": ["ics-malware", "trojan"], "execution_platforms": ["Windows", "ICS"], "capabilities": ["ics-disruption", "persistence", "lateral movement"], "first_seen": "2022-01-01T00:00:00Z", "is_family": false}}){record_delimiter}
-(entity{tuple_delimiter}CVE-2022-2294{tuple_delimiter}VULNERABILITY{tuple_delimiter}CVE-2022-2294 is a use-after-free vulnerability in WebRTC that can be exploited for remote code execution through a maliciously crafted web page. It affects multiple web browsers and has been used in watering hole attacks to deliver malware to visitors of compromised websites.{tuple_delimiter}{{"CVE_id": "CVE-2022-2294", "CVSS_score": 8.8, "severity": "high", "affected_products": ["Google Chrome", "Mozilla Firefox", "Microsoft Edge"], "published": "2022-07-06T00:00:00Z"}}){record_delimiter}
-(entity{tuple_delimiter}Watering hole attacks on industry websites{tuple_delimiter}ATTACK_PATTERN{tuple_delimiter}This attack pattern involves compromising legitimate websites frequently visited by individuals in a specific industry or organization. Attackers then exploit vulnerabilities in visitors' browsers or plugins to deliver malware, taking advantage of the trust users have in these websites.{tuple_delimiter}{{"kill_chain_phases": ["initial-access"], "required_permissions": ["none"], "execution_platforms": ["Windows", "macOS", "Linux"], "technique_id": "T1193", "technique_name": "Watering Hole Attack"}}){record_delimiter}
-(entity{tuple_delimiter}shadow-c2[.]net{tuple_delimiter}INDICATOR{tuple_delimiter}The domain 'shadow-c2[.]net' is a command and control server used by DarkShadow in their ShadowNet backdoor operations. It serves as a communication endpoint for compromised systems to connect to and receive instructions from attackers.{tuple_delimiter}{{"pattern_type": "domain", "pattern_value": "shadow-c2[.]net", "valid_from": "2022-01-01T00:00:00Z", "confidence": 85}}){record_delimiter}
-(entity{tuple_delimiter}45.67.89.123{tuple_delimiter}INDICATOR{tuple_delimiter}The IP address 45.67.89.123 is associated with DarkShadow's command and control infrastructure. It is used to host the ShadowNet backdoor and communicate with compromised systems in the energy sector.{tuple_delimiter}{{"pattern_type": "ipv4-addr", "pattern_value": "45.67.89.123", "valid_from": "2022-01-01T00:00:00Z", "confidence": 80}}){record_delimiter}
-(entity{tuple_delimiter}f0e9d8c7b6a54321{tuple_delimiter}FILE{tuple_delimiter}This file hash corresponds to the ShadowNet backdoor executable used by DarkShadow in their watering hole attacks. The file is delivered through drive-by downloads exploiting CVE-2022-2294 and establishes persistence on compromised systems.{tuple_delimiter}{{"hashes": {"MD5": "f0e9d8c7b6a54321"}, "extensions": [".exe"], "size": 153600, "mime_type": "application/x-dosexec"}}){record_delimiter}
-(relationship{tuple_delimiter}DarkShadow{tuple_delimiter}ShadowNet{tuple_delimiter}USES{tuple_delimiter}DarkShadow utilizes the ShadowNet backdoor as their initial access tool in attacks against energy sector targets, establishing persistence and performing reconnaissance.{tuple_delimiter}{{"confidence": 90, "start_time": "2022-01-01T00:00:00Z"}}){record_delimiter}
-(relationship{tuple_delimiter}DarkShadow{tuple_delimiter}BlackOut{tuple_delimiter}USES{tuple_delimiter}DarkShadow deploys the BlackOut ICS malware after initial compromise to specifically target and disrupt power grid operations in the energy sector.{tuple_delimiter}{{"confidence": 90, "start_time": "2022-01-01T00:00:00Z"}}){record_delimiter}
-(relationship{tuple_delimiter}ShadowNet{tuple_delimiter}CVE-2022-2294{tuple_delimiter}EXPLOITS{tuple_delimiter}The ShadowNet backdoor exploits the CVE-2022-2294 vulnerability in WebRTC to achieve initial compromise through drive-by downloads on compromised websites.{tuple_delimiter}{{"confidence": 95, "start_time": "2022-01-01T00:00:00Z"}}){record_delimiter}
-(relationship{tuple_delimiter}DarkShadow{tuple_delimiter}Watering hole attacks on industry websites{tuple_delimiter}USES{tuple_delimiter}DarkShadow employs watering hole attacks on industry-specific websites as their initial attack vector to compromise visitors from the energy sector.{tuple_delimiter}{{"confidence": 85, "start_time": "2022-01-01T00:00:00Z"}}){record_delimiter}
-(relationship{tuple_delimiter}shadow-c2[.]net{tuple_delimiter}ShadowNet{tuple_delimiter}INDICATES{tuple_delimiter}The domain 'shadow-c2[.]net' serves as a command and control server for the ShadowNet backdoor, indicating DarkShadow's presence and activity in compromised networks.{tuple_delimiter}{{"confidence": 85, "pattern_version": "1.0"}}){record_delimiter}
-(relationship{tuple_delimiter}45.67.89.123{tuple_delimiter}ShadowNet{tuple_delimiter}INDICATES{tuple_delimiter}The IP address 45.67.89.123 is associated with DarkShadow's command and control infrastructure for the ShadowNet backdoor, indicating its presence in compromised networks.{tuple_delimiter}{{"confidence": 80, "pattern_version": "1.0"}}){record_delimiter}
-(relationship{tuple_delimiter}f0e9d8c7b6a54321{tuple_delimiter}ShadowNet{tuple_delimiter}INDICATES{tuple_delimiter}The file hash 'f0e9d8c7b6a54321' corresponds to the ShadowNet backdoor executable, indicating DarkShadow's presence on a system when detected.{tuple_delimiter}{{"confidence": 90, "pattern_version": "1.0"}}){record_delimiter}
-(relationship{tuple_delimiter}DarkShadow{tuple_delimiter}Energy sector critical infrastructure{tuple_delimiter}TARGETS{tuple_delimiter}DarkShadow specifically targets critical infrastructure in the energy sector, particularly power grid operations, with their multi-stage attack chain.{tuple_delimiter}{{"confidence": 85, "targeting_method": "watering hole", "impact": "operational disruption"}}){record_delimiter}
+<o>
+(entity{tuple_delimiter}CodeStealers{tuple_delimiter}THREAT_ACTOR{tuple_delimiter}A threat group specializing in software supply chain attacks against developers.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}Node.js Package Manager{tuple_delimiter}SOFTWARE{tuple_delimiter}A software package manager targeted during the compromise.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}CVE-2023-1234{tuple_delimiter}VULNERABILITY{tuple_delimiter}A configuration weakness enabling code execution during package install/update.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}Updater module{tuple_delimiter}TOOL{tuple_delimiter}A trojanized update component inserted into open-source libraries.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}DevInjector{tuple_delimiter}PAYLOAD{tuple_delimiter}A payload downloaded by the updater that stages further malware.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}DevThief{tuple_delimiter}MALWARE{tuple_delimiter}A malware used to steal source code and credentials.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}C:\\Users\\Public\\Documents{tuple_delimiter}DIRECTORY{tuple_delimiter}A directory scanned by the payload for sensitive files.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}C:\\ProgramData\\Updater\\updater.exe{tuple_delimiter}FILE{tuple_delimiter}An executable dropped by the payload for persistence.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}https://dev-updates.info/api{tuple_delimiter}URL{tuple_delimiter}A URL endpoint used for encrypted exfiltration.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}alerts@dev-updates.info{tuple_delimiter}EMAIL_ADDRESS{tuple_delimiter}A sender address used during phishing stages.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}svc_update{tuple_delimiter}USER_ACCOUNT{tuple_delimiter}A hidden local user created for persistence and privilege separation.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}WMI Provider Host{tuple_delimiter}PROCESS{tuple_delimiter}A process abused to schedule malicious tasks.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}HTTPS exfiltration{tuple_delimiter}NETWORK_TRAFFIC{tuple_delimiter}Encrypted outbound traffic carrying staged data.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}dev-updates[.]info{tuple_delimiter}DOMAIN{tuple_delimiter}A C2/control domain for staging and exfiltration.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}23.45.67.89{tuple_delimiter}IP_ADDRESS{tuple_delimiter}A C2 IP endpoint used by the operation.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}Technology firms{tuple_delimiter}IDENTITY{tuple_delimiter}Target organizations impacted by the supply chain attack.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}CodeStealers{tuple_delimiter}Updater module{tuple_delimiter}USES{tuple_delimiter}CodeStealers uses the trojanized updater to distribute payloads.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}Node.js Package Manager{tuple_delimiter}CVE-2023-1234{tuple_delimiter}HAS_WEAKNESS{tuple_delimiter}The software exhibits a configuration weakness exploited during updates.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}Updater module{tuple_delimiter}DevInjector{tuple_delimiter}DELIVERS{tuple_delimiter}The updater delivers the DevInjector payload.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}DevInjector{tuple_delimiter}DevThief{tuple_delimiter}DELIVERS{tuple_delimiter}The payload further delivers DevThief malware.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}DevInjector{tuple_delimiter}C:\\ProgramData\\Updater\\updater.exe{tuple_delimiter}CONTAINS{tuple_delimiter}The payload drops and contains a persistent executable.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}DevInjector{tuple_delimiter}C:\\Users\\Public\\Documents{tuple_delimiter}CONTAINS{tuple_delimiter}The payload collects files from the directory for staging.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}HTTPS exfiltration{tuple_delimiter}dev-updates[.]info{tuple_delimiter}COMMUNICATES_WITH{tuple_delimiter}Exfiltration traffic communicates with the domain.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}HTTPS exfiltration{tuple_delimiter}23.45.67.89{tuple_delimiter}COMMUNICATES_WITH{tuple_delimiter}Exfiltration traffic communicates with the IP.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}Updater module{tuple_delimiter}Open-source library{tuple_delimiter}PART_OF{tuple_delimiter}The trojanized updater is part of a library bundle.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}IOC list{tuple_delimiter}DevThief{tuple_delimiter}DERIVED_FROM{tuple_delimiter}Indicators were derived from observed DevThief activity.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}CodeStealers{tuple_delimiter}Technology firms{tuple_delimiter}TARGETS{tuple_delimiter}The campaign targets technology firms.{tuple_delimiter}{{}){record_delimiter}
 {completion_delimiter}
+""",
+"""<Input Text>
+"Operation Silent Ledger" is a multi-month campaign targeting financial ERP systems. The threat actor "LedgerCrack" uses a credential-stuffing attack pattern and a custom dropper to deploy memory-only modules. The targeted software "AcmeERP" has a weakness tracked as CVE-2024-4242 allowing insecure default admin passwords. A recommended course of action "Disable default accounts and rotate secrets" mitigates initial access. A technical report "Silent Ledger Technical Analysis" includes collected memory artifacts.```
 
+<o>
+(entity{tuple_delimiter}Operation Silent Ledger{tuple_delimiter}CAMPAIGN{tuple_delimiter}A sustained campaign focusing on compromising financial ERP systems.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}LedgerCrack{tuple_delimiter}THREAT_ACTOR{tuple_delimiter}A financially motivated actor targeting ERP platforms.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}Credential stuffing against ERP{tuple_delimiter}ATTACK_PATTERN{tuple_delimiter}Reuse of compromised credentials to gain unauthorized access to ERP accounts.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}AcmeERP{tuple_delimiter}SOFTWARE{tuple_delimiter}An ERP platform affected by weak default account configurations.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}CVE-2024-4242{tuple_delimiter}VULNERABILITY{tuple_delimiter}A weakness in AcmeERP enabling initial access through default credentials.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}Disable default accounts and rotate secrets{tuple_delimiter}COURSE_OF_ACTION{tuple_delimiter}A mitigation to prevent initial access via default credentials.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}Silent Ledger Technical Analysis{tuple_delimiter}REPORT{tuple_delimiter}A report documenting campaign details, techniques, and collected evidence.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}Volatile memory dump fragment{tuple_delimiter}ARTIFACT{tuple_delimiter}A collected artifact containing code fragments of the memory-only module.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}Operation Silent Ledger{tuple_delimiter}LedgerCrack{tuple_delimiter}ATTRIBUTED_TO{tuple_delimiter}The campaign is attributed to the threat actor LedgerCrack.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}LedgerCrack{tuple_delimiter}Credential stuffing against ERP{tuple_delimiter}USES{tuple_delimiter}The actor uses credential stuffing to access ERP accounts.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}AcmeERP{tuple_delimiter}CVE-2024-4242{tuple_delimiter}HAS_WEAKNESS{tuple_delimiter}The software has a default-credential weakness tracked as CVE-2024-4242.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}Credential stuffing against ERP{tuple_delimiter}CVE-2024-4242{tuple_delimiter}EXPLOITS{tuple_delimiter}The attack pattern exploits the weakness to gain access.{tuple_delimiter}{{}){record_delimiter}
+(relationship{tuple_delimiter}Silent Ledger Technical Analysis{tuple_delimiter}Volatile memory dump fragment{tuple_delimiter}CONTAINS{tuple_delimiter}The report contains a collected memory artifact.{tuple_delimiter}{{}){record_delimiter}
+{completion_delimiter}
 """,
 ]
 
@@ -316,34 +364,70 @@ Output:"""
 PROMPTS["keywords_extraction_examples"] = [
     """Example 1:
 
-Query: "How does international trade influence global economic stability?"
+Query: "What indicators of compromise are associated with the latest Emotet campaign in 2024?"
 
 Output:
 {
-  "high_level_keywords": ["International trade", "Global economic stability", "Economic impact"],
-  "low_level_keywords": ["Trade agreements", "Tariffs", "Currency exchange", "Imports", "Exports"]
+  "high_level_keywords": [
+    "Indicators of compromise",
+    "Emotet campaign 2024",
+    "Malware infection",
+    "Email phishing"
+  ],
+  "low_level_keywords": [
+    "C2 servers",
+    "Malicious domains",
+    "IP addresses",
+    "File hashes",
+    "Attachment macros",
+    "TTPs"
+  ]
 }
 
 """,
     """Example 2:
 
-Query: "What are the environmental consequences of deforestation on biodiversity?"
+Query: "How is CVE-2021-44228 (Log4Shell) exploited by ransomware groups for initial access?"
 
 Output:
 {
-  "high_level_keywords": ["Environmental consequences", "Deforestation", "Biodiversity loss"],
-  "low_level_keywords": ["Species extinction", "Habitat destruction", "Carbon emissions", "Rainforest", "Ecosystem"]
+  "high_level_keywords": [
+    "Vulnerability exploitation",
+    "Ransomware operations",
+    "Initial access",
+    "Post-exploitation"
+  ],
+  "low_level_keywords": [
+    "CVE-2021-44228",
+    "Log4Shell",
+    "Lateral movement",
+    "Privilege escalation",
+    "C2 beacons",
+    "Data exfiltration"
+  ]
 }
 
 """,
     """Example 3:
 
-Query: "What is the role of education in reducing poverty?"
+Query: "Map APT29 spear-phishing TTPs to ATT&CK techniques and related infrastructure."
 
 Output:
 {
-  "high_level_keywords": ["Education", "Poverty reduction", "Socioeconomic development"],
-  "low_level_keywords": ["School access", "Literacy rates", "Job training", "Income inequality"]
+  "high_level_keywords": [
+    "ATT&CK mapping",
+    "Spear-phishing",
+    "Social engineering",
+    "Threat actor profiling"
+  ],
+  "low_level_keywords": [
+    "APT29",
+    "T1566.001",
+    "Malicious attachments",
+    "C2 domain",
+    "IP address",
+    "Email infrastructure"
+  ]
 }
 
 """,

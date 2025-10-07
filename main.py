@@ -116,7 +116,7 @@ if __name__ == "__main__":
         from packages.manager.neo4j_manager import start_neo4j_server
         start_neo4j_server(
             data_dir=config.get("neo4j", {}).get("data_dir", "./neo4j_data"),
-            port=config.get("neo4j", {}).get("port", 7687),
+            port=config.get("neo4j", {}).get("port", 7688),
             http_port=config.get("neo4j", {}).get("http_port", 7474),
             host=config.get("neo4j", {}).get("host", "neo4j")
         )

@@ -10,7 +10,7 @@ from ..utils import logger
 class Neo4jManager:
     """Neo4j服务器管理器"""
     
-    def __init__(self, data_dir="./neo4j_data", port=7687, http_port=7474, host="127.0.0.1"):
+    def __init__(self, data_dir="./neo4j_data", port=7688, http_port=7474, host="127.0.0.1"):
         self.data_dir = Path(data_dir).resolve()
         self.port = port
         self.http_port = http_port
@@ -47,7 +47,7 @@ class Neo4jManager:
                 try:
                     from neo4j import GraphDatabase
                     driver = GraphDatabase.driver(f"bolt://{self.host}:{self.port}", 
-                                                auth=("neo4j", "1234567890"))
+                                                auth=("neo4j", "12345678"))
                     with driver.session() as session:
                         session.run("RETURN 1")
                     driver.close()
@@ -178,7 +178,7 @@ class Neo4jManager:
         try:
             from neo4j import GraphDatabase
             driver = GraphDatabase.driver(f"bolt://{self.host}:{self.port}", 
-                                        auth=("neo4j", "1234567890"))
+                                        auth=("neo4j", "12345678"))
             with driver.session() as session:
                 result = session.run("MATCH (n) RETURN count(n) as node_count")
                 node_count = result.single()["node_count"]
@@ -204,14 +204,14 @@ class Neo4jManager:
 # 全局Neo4j管理器实例
 neo4j_manager = None
 
-def get_neo4j_manager(data_dir="./neo4j_data", port=7687, http_port=7474, host="127.0.0.1"):
+def get_neo4j_manager(data_dir="./neo4j_data", port=7688, http_port=7474, host="127.0.0.1"):
     """获取Neo4j管理器实例"""
     global neo4j_manager
     if neo4j_manager is None:
         neo4j_manager = Neo4jManager(data_dir, port, http_port, host)
     return neo4j_manager
 
-def start_neo4j_server(data_dir="./neo4j_data", port=7687, http_port=7474, host="127.0.0.1"):
+def start_neo4j_server(data_dir="./neo4j_data", port=7688, http_port=7474, host="127.0.0.1"):
     """启动Neo4j服务器的便捷函数"""
     manager = get_neo4j_manager(data_dir, port, http_port, host)
     return manager.start()

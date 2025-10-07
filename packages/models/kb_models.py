@@ -18,6 +18,8 @@ class KnowledgeDatabase(Base):
     dimension = Column(Integer, nullable=True)  # 向量维度
     meta_info = Column(JSON, nullable=True)  # 元数据
     created_at = Column(DateTime, default=func.now())  # 创建时间
+    user_id = Column(String(255), nullable=True, index=True)  # 添加用户ID字段
+
 
     # 关系
     files = relationship("KnowledgeFile", back_populates="database", cascade="all, delete-orphan")
@@ -32,7 +34,8 @@ class KnowledgeDatabase(Base):
             "embed_model": self.embed_model,
             "dimension": self.dimension,
             "metadata": self.meta_info or {},  # 确保映射正确
-            "created_at": self.created_at.isoformat() if self.created_at else None
+            "created_at": self.created_at.isoformat() if self.created_at else None,
+            "user_id": self.user_id
         }
 
         # 添加文件信息
