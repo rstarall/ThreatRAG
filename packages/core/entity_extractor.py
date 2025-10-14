@@ -61,30 +61,22 @@ class EntityExtractor:
         # 设置实体类型过滤
         entity_types_str = ",".join(entity_types or list(STIX_ENTITY_TYPES.keys()))
         
-        # 替换提示词中的变量
-        # 首先替换examples中的占位符
-        formatted_examples = []
-        for example in self.examples:
-            # 使用字符串替换而不是format，避免JSON中的双引号冲突
-            formatted_example = example.replace("{tuple_delimiter}", self.tuple_delimiter)
-            formatted_example = formatted_example.replace("{record_delimiter}", self.record_delimiter)
-            formatted_example = formatted_example.replace("{completion_delimiter}", self.completion_delimiter)
-            formatted_examples.append(formatted_example)
+        # 使用字符串替换而不是format，避免格式化问题
+        system_prompt = self.system_prompt_template
         
-        system_prompt = self.system_prompt_template.format(
-            examples="\n".join(formatted_examples),
-            entity_types=entity_types_str,
-            input_text=text,
-            language=language,
-            tuple_delimiter=self.tuple_delimiter,
-            record_delimiter=self.record_delimiter,
-            completion_delimiter=self.completion_delimiter
-        )
+        # 替换所有占位符
+        system_prompt = system_prompt.replace("{examples}", "\n".join(self.examples))
+        system_prompt = system_prompt.replace("{entity_types}", entity_types_str)
+        system_prompt = system_prompt.replace("{input_text}", text)
+        system_prompt = system_prompt.replace("{language}", language)
+        system_prompt = system_prompt.replace("{tuple_delimiter}", self.tuple_delimiter)
+        system_prompt = system_prompt.replace("{record_delimiter}", self.record_delimiter)
+        system_prompt = system_prompt.replace("{completion_delimiter}", self.completion_delimiter)
         
-        user_prompt = self.user_prompt_template.format(
-            completion_delimiter=self.completion_delimiter,
-            language=language
-        )
+        # 处理用户提示词
+        user_prompt = self.user_prompt_template
+        user_prompt = user_prompt.replace("{completion_delimiter}", self.completion_delimiter)
+        user_prompt = user_prompt.replace("{language}", language)
         
         return [
             {"role": "system", "content": system_prompt},

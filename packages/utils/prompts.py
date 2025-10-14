@@ -1,7 +1,17 @@
 from datetime import datetime
 
 def get_system_prompt():
-    return (f"当前时间：{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+    return f"""当前时间：{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+
+你是一个专业的威胁情报分析助手，专门帮助用户分析网络安全威胁、恶意软件、攻击模式等相关问题。
+
+你的职责：
+1. 基于提供的知识库信息回答用户问题
+2. 提供准确、专业的威胁情报分析
+3. 如果知识库中没有相关信息，请明确说明
+4. 始终保持专业和客观的态度
+
+请根据用户的问题和提供的上下文信息，给出详细、准确的回答。"""
 
 
 knowbase_qa_template = """
@@ -69,3 +79,39 @@ HYDE_PROMPT_TEMPLATE = (
     "\n"
     'Passage:\n'
 )
+
+cypher_generation_template = """
+任务：根据给定的图数据库Schema和用户问题，生成一个Cypher查询语句。
+
+**1. 图数据库Schema:**
+以下是你可以使用的节点标签、关系类型和属性。你必须严格遵守这个Schema来构建查询。
+
+{schema}
+
+**2. 指示:**
+- **只使用Schema中存在的标签、关系和属性**。不要虚构任何不存在的名称。
+- 根据用户问题和在相关文档中找到的实体，生成一个**精确**的Cypher查询。
+- 查询的目标是找到与问题最相关的实体和关系路径。
+- 优先使用`MATCH`语句进行模式匹配。
+- 对于实体名称的匹配，请使用 `WHERE n.name IN [...]` 或 `WHERE n.name = '...'`，这样更高效。
+- 查询应该返回可以揭示实体间关系的路径或特定的节点/关系。
+- **不要**在最终的Cypher语句中使用任何注释。
+- 如果无法根据问题生成一个有意义的查询，请返回空字符串。
+
+**3. 上下文信息:**
+- **用户问题:** "{question}"
+- **在相关文档中找到的实体:** [{entities}]
+
+**4. 查询示例:**
+- **问题:** "IP地址 '1.2.3.4' 的类型是什么?"
+  - **Cypher:** `MATCH (n:Entity {{name: '1.2.3.4'}}) RETURN n.type AS type`
+- **问题:** "'APT41' 和 'malware-uuid-123' 之间有什么联系?"
+  - **Cypher:** `MATCH p = (a:Entity)-[*..3]-(b:Entity) WHERE a.name = 'APT41' AND b.name = 'malware-uuid-123' RETURN p LIMIT 5`
+- **问题:** "有哪些攻击组织利用了 'Log4Shell' 漏洞?"
+  - **Cypher:** `MATCH p = (group:Entity)-[:USES]->(tool:Entity)-[:EXPLOITS]->(vuln:Entity {name: 'Log4Shell'}) WHERE group.type = 'Intrusion Set' RETURN p LIMIT 5`
+
+**5. Cypher查询:**
+请在下面生成Cypher查询语句。只返回查询语句本身，不要添加任何额外的解释或格式。
+
+```cypher
+"""

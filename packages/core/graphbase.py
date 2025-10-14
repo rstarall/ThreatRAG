@@ -2,12 +2,14 @@ import os
 import json
 import warnings
 import traceback
+import re
 
 import torch
 from neo4j import GraphDatabase as GD
 
 from .. import config
 from ..utils import logger
+from ..models import select_model
 
 warnings.filterwarnings("ignore", category=UserWarning)
 
@@ -780,6 +782,97 @@ class GraphDatabase:
             formatted_results["edges"].append(edge_info)
 
         return formatted_results
+
+    def query(self, cypher_query: str, kgdb_name: str = 'neo4j'):
+        """
+        执行任意Cypher查询并返回原始结果
+        """
+        self.use_database(kgdb_name)
+        
+        def _execute_query(tx, query):
+            result = tx.run(query)
+            # 将结果转换为与现有格式兼容的列表
+            # Neo4j驱动程序返回一个Record对象的迭代器
+            return [list(record.values()) for record in result]
+
+        try:
+            with self.driver.session(database=self.kgdb_name) as session:
+                return session.execute_read(_execute_query, cypher_query)
+        except Exception as e:
+            logger.error(f"执行Cypher查询失败: {cypher_query} - 错误: {e}")
+            raise
+
+    def get_schema_str(self, kgdb_name: str = 'neo4j') -> str:
+        """
+        获取图数据库的Schema，格式化为文本字符串
+        """
+        self.use_database(kgdb_name)
+
+        def _get_schema(tx):
+            # 获取所有节点标签及其属性
+            nodes_schema = {}
+            labels_result = tx.run("CALL db.labels()")
+            for record in labels_result:
+                label = record["label"]
+                properties_result = tx.run(f"MATCH (n:`{label}`) UNWIND keys(n) AS key RETURN collect(distinct key) AS properties")
+                properties = properties_result.single()["properties"]
+                nodes_schema[label] = properties
+            
+            # 获取所有关系类型及其属性
+            relationships_schema = {}
+            rel_types_result = tx.run("CALL db.relationshipTypes()")
+            for record in rel_types_result:
+                rel_type = record["relationshipType"]
+                properties_result = tx.run(f"MATCH ()-[r:`{rel_type}`]->() UNWIND keys(r) AS key RETURN collect(distinct key) AS properties")
+                properties = properties_result.single()["properties"]
+                relationships_schema[rel_type] = properties
+            
+            return nodes_schema, relationships_schema
+
+        try:
+            with self.driver.session(database=self.kgdb_name) as session:
+                nodes, rels = session.execute_read(_get_schema)
+                
+                # 格式化为字符串
+                schema_str = "Node labels and properties:\n"
+                for label, props in nodes.items():
+                    schema_str += f"- Label: `{label}`, Properties: {props}\n"
+                
+                schema_str += "\nRelationship types and properties:\n"
+                for rel_type, props in rels.items():
+                    schema_str += f"- Type: `{rel_type}`, Properties: {props}\n"
+                
+                return schema_str
+        except Exception as e:
+            logger.error(f"获取图Schema失败: {e}")
+            return "Error: Could not retrieve graph schema."
+    
+    def generate_cypher_query(self, query: str, entities: list, graph_schema: str) -> str:
+        """
+        使用LLM根据用户问题、实体和图Schema生成Cypher查询
+        """
+        from ..utils.prompts import cypher_generation_template as template
+        
+        model = select_model()
+        
+        prompt = template.format(
+            schema=graph_schema,
+            question=query,
+            entities=", ".join([f"'{e}'" for e in entities])
+        )
+        
+        try:
+            response = model.predict(prompt).content
+            # 从LLM返回的Markdown代码块中提取Cypher
+            cypher_match = re.search(r"```(cypher)?\n(.*?)```", response, re.DOTALL)
+            if cypher_match:
+                return cypher_match.group(2).strip()
+            else:
+                # 如果没有代码块，直接返回值（做一些基础清理）
+                return response.strip().replace("```", "")
+        except Exception as e:
+            logger.error(f"LLM生成Cypher查询失败: {e}")
+            return ""
 
     def format_query_result_to_graph(self, query_results):
         """将检索到的结果转换为 {"nodes": [], "edges": []} 的格式

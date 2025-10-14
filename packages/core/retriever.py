@@ -11,7 +11,8 @@ from ..utils.web_search import WebSearcher
 from ..utils.prompts import knowbase_qa_template
 from ..utils.prompts import rewritten_query_prompt_template
 from ..utils.prompts import entity_extraction_prompt_template as entity_template
-from ..utils.prompts import keywords_prompt_template as entity_template
+from ..utils.prompts import keywords_prompt_template as keywords_template
+from .entity_extractor import EntityExtractor
 
 
 class Retriever:
@@ -19,6 +20,7 @@ class Retriever:
     def __init__(self):
         self.knowledge_base = KnowledgeBase()
         self.graph_base = GraphDatabase()
+        self.entity_extractor = EntityExtractor()
         self._load_models()
 
     def _load_models(self):
@@ -31,16 +33,241 @@ class Retriever:
     def retrieval(self, query, history, meta):
         refs = {"query": query, "history": history, "meta": meta}
         refs["model_name"] = config.model_name
-        refs["entities"] = self.reco_entities(query, history, refs)
-        refs["knowledge_base"] = self.query_knowledgebase(query, history, refs)
-        refs["graph_base"] = self.query_graph(query, history, refs)
-        refs["web_search"] = self.query_web(query, history, refs)
+        
+        # 检查是否启用四阶段检索
+        if meta.get("use_hybrid_retrieval", False):
+            refs.update(self.hybrid_retrieval(query, history, meta))
+        else:
+            # 原有的检索方式
+            refs["entities"] = self.reco_entities(query, history, refs)
+            refs["knowledge_base"] = self.query_knowledgebase(query, history, refs)
+            refs["graph_base"] = self.query_graph(query, history, refs)
+            refs["web_search"] = self.query_web(query, history, refs)
 
         return refs
 
     def restart(self):
         """所有需要重启的模型"""
         self._load_models()
+
+    def hybrid_retrieval(self, query, history, meta):
+        """四阶段混合检索：向量检索 -> 实体链接 -> 图检索 -> 上下文融合"""
+        logger.info("开始四阶段混合检索")
+        
+        # 阶段1：向量检索 - 广泛的语义召回
+        vector_results = self._vector_retrieval_stage(query, history, meta)
+        
+        # 阶段2：实体链接 - 从文本片段中提取实体
+        seed_entities = self._entity_linking_stage(vector_results, query, meta)
+        
+        # 阶段3：图检索 - 基于种子节点的深度挖掘
+        graph_results = self._graph_retrieval_stage(seed_entities, query, meta)
+        
+        # 阶段4：上下文融合 - 整合向量和图检索结果
+        fused_context = self._context_fusion_stage(vector_results, graph_results, query)
+        
+        return {
+            "entities": seed_entities,
+            "knowledge_base": vector_results,
+            "graph_base": graph_results,
+            "fused_context": fused_context,
+            "web_search": self.query_web(query, history, {"meta": meta})
+        }
+
+    def _vector_retrieval_stage(self, query, history, meta):
+        """阶段1：向量检索 - 进行广泛的语义召回"""
+        logger.debug("阶段1：向量检索")
+        
+        db_id = meta.get("db_id")
+        if not db_id or not config.enable_knowledge_base:
+            return {"results": [], "message": "知识库未启用或未指定"}
+        
+        # 重写查询以获得更好的语义匹配
+        rw_query = self.rewrite_query(query, history, {"meta": meta})
+        
+        # 使用更大的top_k进行广泛召回
+        top_k = meta.get("vector_top_k", 20)  # 默认20个结果
+        distance_threshold = meta.get("vector_distance_threshold", 0.7)  # 更宽松的阈值
+        
+        query_result = self.knowledge_base.query(
+            query=rw_query,
+            db_id=db_id,
+            distance_threshold=distance_threshold,
+            rerank_threshold=meta.get("rerankThreshold", 0.1),
+            max_query_count=meta.get("maxQueryCount", 20),
+            top_k=top_k
+        )
+        
+        logger.debug(f"向量检索返回 {len(query_result['results'])} 个结果")
+        return query_result
+
+    def _entity_linking_stage(self, vector_results, query, meta):
+        """阶段2：实体链接 - 从文本片段中提取实体"""
+        logger.debug("阶段2：实体链接")
+        
+        if not vector_results.get("results"):
+            return []
+        
+        # 合并所有检索到的文本片段
+        text_chunks = []
+        for result in vector_results["results"]:
+            if isinstance(result, dict) and "entity" in result:
+                text_chunks.append(result["entity"]["text"])
+        
+        combined_text = "\n".join(text_chunks)
+        
+        # 使用实体提取器从文本中提取实体
+        try:
+            # 提取STIX实体 - 正确处理异步调用
+            import asyncio
+            import concurrent.futures
+            
+            # 在新的事件循环中运行异步方法
+            with concurrent.futures.ThreadPoolExecutor() as executor:
+                future = executor.submit(
+                    lambda: asyncio.run(self.entity_extractor.extract_entities(
+                        text=combined_text,
+                        language="chinese"
+                    ))
+                )
+                stix_entities = future.result()
+            
+            # 提取关键词实体（用于图检索）
+            keywords = self._extract_keywords_from_text(combined_text, query)
+            
+            # 合并两种实体
+            all_entities = []
+            
+            # 从STIX实体中提取实体名称
+            for entity in stix_entities:
+                if isinstance(entity, dict) and "name" in entity:
+                    all_entities.append(entity["name"])
+            
+            # 添加关键词
+            all_entities.extend(keywords)
+            
+            # 去重并过滤
+            unique_entities = list(set([e.strip() for e in all_entities if e.strip()]))
+            
+            logger.debug(f"实体链接提取到 {len(unique_entities)} 个实体: {unique_entities[:5]}...")
+            return unique_entities
+            
+        except Exception as e:
+            logger.error(f"实体链接失败: {e}")
+            # 回退到简单的关键词提取
+            return self._extract_keywords_from_text(combined_text, query)
+
+    def _extract_keywords_from_text(self, text, query):
+        """从文本中提取关键词"""
+        try:
+            model_provider = config.model_provider
+            model_name = config.model_name
+            model = select_model(model_provider=model_provider, model_name=model_name)
+            
+            # 使用关键词提取模板
+            keyword_prompt = keywords_template.format(text=text, query=query)
+            keywords_response = model.predict(keyword_prompt).content
+            
+            # 解析关键词
+            keywords = [kw.strip() for kw in keywords_response.split("<->") if kw.strip()]
+            return keywords
+            
+        except Exception as e:
+            logger.error(f"关键词提取失败: {e}")
+            return []
+
+    def _graph_retrieval_stage(self, seed_entities, query, meta):
+        """阶段3：图检索 - 基于LLM生成Cypher并执行"""
+        logger.debug("阶段3：图检索 (Cypher生成)")
+        
+        if not seed_entities:
+            return {"results": []}
+        
+        try:
+            # 新增：让LLM根据上下文和实体生成Cypher查询
+            # self.graph_base需要实现generate_cypher_query方法
+            cypher_query = self.graph_base.generate_cypher_query(
+                query=query,
+                entities=seed_entities,
+                graph_schema=self.graph_base.get_schema_str()
+            )
+
+            if not cypher_query:
+                logger.warning("LLM未能生成有效的Cypher查询，图检索被跳过。")
+                return {"results": []}
+            
+            logger.info(f"由LLM生成的Cypher查询: {cypher_query}")
+
+            # 直接执行生成的Cypher查询
+            query_results = self.graph_base.query(cypher_query)
+            
+            # 去重和格式化结果
+            unique_results = self._deduplicate_graph_results(query_results)
+            formatted_results = self.graph_base.format_query_result_to_graph(unique_results)
+            
+            logger.debug(f"图检索返回 {len(formatted_results)} 个格式化结果")
+            return {"results": formatted_results}
+
+        except Exception as e:
+            logger.error(f"图检索阶段失败: {e}, {traceback.format_exc()}")
+            return {"results": []}
+
+    def _deduplicate_graph_results(self, results):
+        """对图检索结果进行去重"""
+        seen = set()
+        unique_results = []
+        
+        for result in results:
+            # 处理不同的结果格式
+            if isinstance(result, (list, tuple)) and len(result) >= 3:
+                result_key = (str(result[0]), str(result[2]), str(result[1]))
+            elif isinstance(result, dict):
+                result_key = (result.get('h'), result.get('t'), result.get('r'))
+            else:
+                continue
+                
+            if result_key not in seen:
+                seen.add(result_key)
+                unique_results.append(result)
+        
+        return unique_results
+
+    def _context_fusion_stage(self, vector_results, graph_results, query):
+        """阶段4：上下文融合 - 整合向量和图检索结果"""
+        logger.debug("阶段4：上下文融合")
+        
+        # 构建向量检索的上下文
+        vector_context = []
+        if vector_results.get("results"):
+            for i, result in enumerate(vector_results["results"][:10]):  # 限制前10个
+                if isinstance(result, dict) and "entity" in result:
+                    vector_context.append(f"[文档{i+1}] {result['entity']['text']}")
+        
+        # 构建图检索的上下文
+        graph_context = []
+        if graph_results.get("results"):
+            if isinstance(graph_results["results"], dict) and graph_results["results"].get("edges"):
+                for edge in graph_results["results"]["edges"][:10]:  # 限制前10个
+                    graph_context.append(f"{edge['source_name']} -> {edge['target_name']}: {edge['type']}")
+            elif isinstance(graph_results["results"], list):
+                for i, item in enumerate(graph_results["results"][:10]):
+                    if isinstance(item, dict):
+                        source = item.get('source_name', '')
+                        target = item.get('target_name', '')
+                        rel_type = item.get('type', '')
+                        if source and target and rel_type:
+                            graph_context.append(f"{source} -> {target}: {rel_type}")
+        
+        # 融合上下文
+        fused_context = {
+            "vector_context": "\n".join(vector_context),
+            "graph_context": "\n".join(graph_context),
+            "query": query,
+            "summary": f"基于查询'{query}'，检索到{len(vector_context)}个相关文档片段和{len(graph_context)}个图关系"
+        }
+        
+        logger.debug(f"上下文融合完成: {fused_context['summary']}")
+        return fused_context
 
     def construct_query(self, query, refs, meta):
         logger.debug(f"{refs=}")
@@ -54,6 +281,42 @@ class Retriever:
             # 如果不显示检索结果信息，直接返回原始查询
             return query
 
+        # 检查是否使用了四阶段检索
+        if refs.get("fused_context"):
+            return self._construct_hybrid_query(query, refs, meta)
+        else:
+            return self._construct_traditional_query(query, refs, meta)
+
+    def _construct_hybrid_query(self, query, refs, meta):
+        """构造四阶段检索的查询"""
+        fused_context = refs.get("fused_context", {})
+        external_parts = []
+        
+        # 添加向量检索的上下文
+        vector_context = fused_context.get("vector_context", "")
+        if vector_context:
+            external_parts.extend(["相关文档信息:", vector_context])
+        
+        # 添加图检索的上下文
+        graph_context = fused_context.get("graph_context", "")
+        if graph_context:
+            external_parts.extend(["知识图谱关系:", graph_context])
+        
+        # 添加网络搜索的结果
+        web_res = refs.get("web_search", {}).get("results", [])
+        if web_res:
+            web_text = "\n".join(f"{r['title']}: {r['content']}" for r in web_res)
+            external_parts.extend(["网络搜索信息:", web_text])
+        
+        # 构造查询
+        if external_parts:
+            external = "\n\n".join(external_parts)
+            query = knowbase_qa_template.format(external=external, query=query)
+        
+        return query
+
+    def _construct_traditional_query(self, query, refs, meta):
+        """构造传统检索的查询"""
         external_parts = []
 
         # 解析知识库的结果

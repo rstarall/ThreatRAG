@@ -295,10 +295,11 @@ async def get_user_knowledge_bases(user_id: str):
 
 
 @data.delete("/user-knowledge-bases")
-async def delete_user_knowledge_bases(user_id: str):
+async def delete_user_knowledge_bases(user_id: str, db_id: str):
+    """根据用户ID和数据库ID删除单个知识库"""
     try:
-        knowledge_base.delete_user_knowledge_bases(user_id)
-        return {"message": "删除成功"}
+        result = knowledge_base.delete_user_database(user_id, db_id)
+        return result
     except Exception as e:
         logger.error(f"删除用户知识库失败: {e}, {traceback.format_exc()}")
         return {"message": f"删除用户知识库失败: {e}", "status": "failed"}

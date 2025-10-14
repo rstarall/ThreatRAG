@@ -49,6 +49,10 @@ You are an elite STIX2.0 (Structured Threat Information eXpression) Analyst. You
 - **PROCESS**: A running process on a system. *Example: "svchost.exe".*
 - **NETWORK_TRAFFIC**: A record of network communication.
 - **SOFTWARE**: A software product, including OS, middleware, or applications. *Example: "Apache Log4j", "Microsoft Windows".*
+# --- Contextual & Temporal Objects ---
+- **EVENT**: A specific action or occurrence described in the text, such as a phishing attack or data exfiltration, which links entities at a specific time. *Example: "Phishing attack on Oct 9, 2025".*
+- **TIME**: A specific point or period in time, normalized to ISO 8601 format. *Example: "2025-10-09T00:00:00Z".*
+
 
 ---STIX2.0 Relationship Schema---
 - **RELATED_TO**: A generic, untyped relationship. *Use this for software-vulnerability links if no specific type is available.*
@@ -73,25 +77,63 @@ You are an elite STIX2.0 (Structured Threat Information eXpression) Analyst. You
 - **CONTAINS**: The source contains the target. *Valid Pairs: (report -> indicator), (file -> artifact).*
 - **HAS_WEAKNESS**: The source has a weakness in the target. *Valid Pairs: (software -> vulnerability).*
 - **HAS_PAYLOAD**: The source has a payload in the target. *Valid Pairs: (software -> payload).*
+# --- Event & Time Relationships ---
+- **PARTICIPATED_IN**: A cyber object or entity was a participant in an event. *Valid Pairs: (threat-actor -> event), (malware -> event), (ip-address -> event), (attack-pattern -> event).*
+- **OCCURRED_AT**: An event happened at a specific time. *Valid Pairs: (event -> time).*
 
----Attack Chain and Causal Reasoning---
-Beyond extracting simple pairs, your primary goal is to reconstruct the logical attack chain. A common and critical chain to identify follows this pattern:
+---Event-Centric Reasoning---
+Your primary goal is to identify and extract **fine-grained, specific malicious events**. Each event must represent a distinct, concrete action.
 
-1.  **The Foundation**: A `SOFTWARE` entity.
-2.  **The Weakness**: The software `HAS` a `VULNERABILITY`. (Use the `HAS_WEAKNESS` relationship and explain it in the description, or a more specific one if available).
-3.  **The Method**: The `VULNERABILITY` is targeted by an `ATTACK_PATTERN` or `MALWARE` via an `EXPLOITS` relationship.
-4.  **The Actor**: The `ATTACK_PATTERN` or `MALWARE` is wielded by a `THREAT_ACTOR` or `INTRUSION_SET` via a `USES` relationship.
+**Event Granularity Rules:**
+1.  **One Action, One Event**: Each `EVENT` entity should correspond to a single, specific malicious action or a closely related sequence of actions performed by a single actor against a single target in a specific timeframe.
+2.  **Create Separate Events**: If the text describes multiple actors (e.g., different source IP addresses) performing distinct attacks (e.g., one is doing SSH brute-force, another is exploiting a web vulnerability), you **MUST** create a separate `EVENT` entity for each.
+3.  **Avoid Generalization**: Do **NOT** create a single, high-level event for an entire report or monitoring period. The name of the report itself is a `REPORT` entity, not an `EVENT`.
 
-**Your task is to actively look for this causal sequence.** When you identify entities that fit this pattern, prioritize extracting the relationships that connect them. Pay close attention to causal language such as "allows for," "leads to," "by means of," "which enables," "as a result of," and "in order to."
+* **Good, Specific Events (Correct Granularity):**
+    * "SSH Brute-force by 38.6.190.151"
+    * "Exploitation of CVE-2017-9841 by 8.152.208.190"
+    * "ThinkPHP RCE attempt by 58.216.158.82"
 
+* **Bad, Overly Broad Events (Incorrect Granularity to Avoid):**
+    * "Harbin Winter Games Security Incident"
+    * "Daily Threat Monitoring on Jan 30th"
+    * "Network Security Operation"
 
+After identifying a specific event, link all its participants (the attacker, the target, the malware/tool, the vulnerability) to this `EVENT` using the `PARTICIPATED_IN` relationship, and link the event to its `TIME` via `OCCURRED_AT`.
+
+---Event Naming Convention---
+When creating a canonical name for an `EVENT` entity, you MUST follow this prioritized hierarchy to ensure the name is as specific and descriptive as possible:
+
+**Priority 1: Use Specific Vulnerability ID.**
+- If the event is a direct exploitation of a known vulnerability, name it using the vulnerability ID.
+- **Format**: `{Vulnerability ID} Exploitation by {Attacker IP/Actor}`
+- **Example**: `CVE-2017-9841 Exploitation by 8.152.208.190`
+
+**Priority 2: Use Specific Attack Pattern.**
+- If no vulnerability ID is available, but a distinct TTP (Attack Pattern) is identified, use that.
+- **Format**: `{Attack Pattern} by {Attacker IP/Actor}`
+- **Examples**: `SSH Brute-force by 38.6.190.151`, `Remote Code Execution by 58.216.158.82`
+
+**Priority 3: Use Target Software/Protocol.**
+- If the pattern is generic but targets a specific software or protocol, use that.
+- **Format**: `{Target} Related Activity by {Attacker IP/Actor}`
+- **Example**: `ThinkPHP Exploitation Attempt by 58.216.158.82`
+
+**Priority 4: Fallback Generic Name.**
+- If none of the above specific details are available, use a generic but informative name that includes the date.
+- **Format**: `Malicious Activity by {Attacker IP/Actor} on {YYYY-MM-DD}`
+- **Example**: `Malicious Activity by 188.253.4.220 on 2025-01-30`
+
+Adhering to this convention is critical for producing a clear and analyzable knowledge graph.
 ---Chain-of-Thought Process---
 Before generating the output, follow these steps internally:
-1.  **First Pass - Entity Identification**: Read the entire text and identify all potential entities. For each, note its name and preliminary type from the schema.
-2.  **Second Pass - Entity Canonicalization**: Review the list of entities. Merge duplicates and assign a single, consistent canonical name for each unique entity.
-3.  **Third Pass - Causal Chain & Relationship Identification**: Re-read the text. First, look for the causal attack chains as described above. Then, identify other clear, direct relationships between the canonical entities.
+1.  **First Pass - Identification**: Read the entire text and identify all potential entities, **including discrete events and temporal expressions**.
+2.  **Second Pass - Canonicalization & Normalization**: Review the lists. Merge duplicate entities and assign canonical names. **Normalize all extracted temporal expressions into ISO 8601 format (e.g., "October 9, 2025" becomes "2025-10-09T00:00:00Z")**.
+3.  **Third Pass - Event & Relationship Linking**: Re-read the text. For each identified event, link all participating entities to the `EVENT` node using the `PARTICIPATED_IN` relationship. Link the `EVENT` node to its corresponding `TIME` node with `OCCURRED_AT`. Then, identify other direct and causal relationships between entities.
 4.  **Fourth Pass - Description Generation**: For each canonical entity and relationship, gather all descriptive details from the text.
 5.  **Final Pass - Formatting**: Format the extracted data precisely according to the output format rules.
+
+
 
 ---Output Format and Rules---
 1.  **Entity Extraction:** Identify entities and extract the following:
@@ -252,22 +294,37 @@ A group "CodeStealers" compromised popular open-source JavaScript libraries by i
 {completion_delimiter}
 """,
 """<Input Text>
-"Operation Silent Ledger" is a multi-month campaign targeting financial ERP systems. The threat actor "LedgerCrack" uses a credential-stuffing attack pattern and a custom dropper to deploy memory-only modules. The targeted software "AcmeERP" has a weakness tracked as CVE-2024-4242 allowing insecure default admin passwords. A recommended course of action "Disable default accounts and rotate secrets" mitigates initial access. A technical report "Silent Ledger Technical Analysis" includes collected memory artifacts.```
+On October 9, 2025, the threat actor 'ShadowNet' used the malware 'Viper' to attack a server at 198.51.100.10. This activity was part of 'Operation Nightfall', a campaign targeting financial institutions. The malware communicated with the C2 domain viper-c2.net.```
 
 <o>
-(entity{tuple_delimiter}Operation Silent Ledger{tuple_delimiter}CAMPAIGN{tuple_delimiter}A sustained campaign focusing on compromising financial ERP systems.{tuple_delimiter}{{}){record_delimiter}
-(entity{tuple_delimiter}LedgerCrack{tuple_delimiter}THREAT_ACTOR{tuple_delimiter}A financially motivated actor targeting ERP platforms.{tuple_delimiter}{{}){record_delimiter}
-(entity{tuple_delimiter}Credential stuffing against ERP{tuple_delimiter}ATTACK_PATTERN{tuple_delimiter}Reuse of compromised credentials to gain unauthorized access to ERP accounts.{tuple_delimiter}{{}){record_delimiter}
-(entity{tuple_delimiter}AcmeERP{tuple_delimiter}SOFTWARE{tuple_delimiter}An ERP platform affected by weak default account configurations.{tuple_delimiter}{{}){record_delimiter}
-(entity{tuple_delimiter}CVE-2024-4242{tuple_delimiter}VULNERABILITY{tuple_delimiter}A weakness in AcmeERP enabling initial access through default credentials.{tuple_delimiter}{{}){record_delimiter}
-(entity{tuple_delimiter}Disable default accounts and rotate secrets{tuple_delimiter}COURSE_OF_ACTION{tuple_delimiter}A mitigation to prevent initial access via default credentials.{tuple_delimiter}{{}){record_delimiter}
-(entity{tuple_delimiter}Silent Ledger Technical Analysis{tuple_delimiter}REPORT{tuple_delimiter}A report documenting campaign details, techniques, and collected evidence.{tuple_delimiter}{{}){record_delimiter}
-(entity{tuple_delimiter}Volatile memory dump fragment{tuple_delimiter}ARTIFACT{tuple_delimiter}A collected artifact containing code fragments of the memory-only module.{tuple_delimiter}{{}){record_delimiter}
-(relationship{tuple_delimiter}Operation Silent Ledger{tuple_delimiter}LedgerCrack{tuple_delimiter}ATTRIBUTED_TO{tuple_delimiter}The campaign is attributed to the threat actor LedgerCrack.{tuple_delimiter}{{}){record_delimiter}
-(relationship{tuple_delimiter}LedgerCrack{tuple_delimiter}Credential stuffing against ERP{tuple_delimiter}USES{tuple_delimiter}The actor uses credential stuffing to access ERP accounts.{tuple_delimiter}{{}){record_delimiter}
-(relationship{tuple_delimiter}AcmeERP{tuple_delimiter}CVE-2024-4242{tuple_delimiter}HAS_WEAKNESS{tuple_delimiter}The software has a default-credential weakness tracked as CVE-2024-4242.{tuple_delimiter}{{}){record_delimiter}
-(relationship{tuple_delimiter}Credential stuffing against ERP{tuple_delimiter}CVE-2024-4242{tuple_delimiter}EXPLOITS{tuple_delimiter}The attack pattern exploits the weakness to gain access.{tuple_delimiter}{{}){record_delimiter}
-(relationship{tuple_delimiter}Silent Ledger Technical Analysis{tuple_delimiter}Volatile memory dump fragment{tuple_delimiter}CONTAINS{tuple_delimiter}The report contains a collected memory artifact.{tuple_delimiter}{{}){record_delimiter}
+(entity{tuple_delimiter}ShadowNet{tuple_delimiter}THREAT_ACTOR{tuple_delimiter}The threat actor group responsible for conducting attacks as part of 'Operation Nightfall'.{tuple_delimiter}{})
+{record_delimiter}
+(entity{tuple_delimiter}Viper{tuple_delimiter}MALWARE{tuple_delimiter}The malware used by 'ShadowNet' for attacking servers and communicating with C2 infrastructure.{tuple_delimiter}{})
+{record_delimiter}
+(entity{tuple_delimiter}198.51.100.10{tuple_delimiter}IP_ADDRESS{tuple_delimiter}The IP address of the server targeted by 'ShadowNet' using 'Viper' malware.{tuple_delimiter}{})
+{record_delimiter}
+(entity{tuple_delimiter}Operation Nightfall{tuple_delimiter}CAMPAIGN{tuple_delimiter}A cyber attack campaign targeting financial institutions, which includes activities performed by 'ShadowNet'.{tuple_delimiter}{})
+{record_delimiter}
+(entity{tuple_delimiter}viper-c2.net{tuple_delimiter}DOMAIN{tuple_delimiter}The command and control domain used by the 'Viper' malware.{tuple_delimiter}{})
+{record_delimiter}
+(entity{tuple_delimiter}Server Attack on 2025-10-09{tuple_delimiter}EVENT{tuple_delimiter}An event on October 9, 2025, where 'ShadowNet' used 'Viper' malware to attack the server at 198.51.100.10.{tuple_delimiter}{})
+{record_delimiter}
+(entity{tuple_delimiter}2025-10-09T00:00:00Z{tuple_delimiter}TIME{tuple_delimiter}The normalized timestamp for the server attack event conducted by 'ShadowNet'.{tuple_delimiter}{})
+{record_delimiter}
+(relationship{tuple_delimiter}Server Attack on 2025-10-09{tuple_delimiter}2025-10-09T00:00:00Z{tuple_delimiter}OCCURRED_AT{tuple_delimiter}The server attack event occurred at the specified time.{tuple_delimiter}{})
+{record_delimiter}
+(relationship{tuple_delimiter}ShadowNet{tuple_delimiter}Server Attack on 2025-10-09{tuple_delimiter}PARTICIPATED_IN{tuple_delimiter}'ShadowNet' was the primary actor in the server attack event.{tuple_delimiter}{})
+{record_delimiter}
+(relationship{tuple_delimiter}Viper{tuple_delimiter}Server Attack on 2025-10-09{tuple_delimiter}PARTICIPATED_IN{tuple_delimiter}'Viper' malware was the tool used in the server attack event.{tuple_delimiter}{})
+{record_delimiter}
+(relationship{tuple_delimiter}198.51.100.10{tuple_delimiter}Server Attack on 2025-10-09{tuple_delimiter}PARTICIPATED_IN{tuple_delimiter}The server at 198.51.100.10 was the target in the server attack event.{tuple_delimiter}{})
+{record_delimiter}
+(relationship{tuple_delimiter}ShadowNet{tuple_delimiter}Viper{tuple_delimiter}USES{tuple_delimiter}The threat actor 'ShadowNet' uses the 'Viper' malware to carry out its attacks.{tuple_delimiter}{})
+{record_delimiter}
+(relationship{tuple_delimiter}Viper{tuple_delimiter}viper-c2.net{tuple_delimiter}COMMUNICATES_WITH{tuple_delimiter}The 'Viper' malware communicates with its C2 server located at 'viper-c2.net'.{tuple_delimiter}{})
+{record_delimiter}
+(relationship{tuple_delimiter}Server Attack on 2025-10-09{tuple_delimiter}Operation Nightfall{tuple_delimiter}PART_OF{tuple_delimiter}The specific server attack event is a constituent part of the broader 'Operation Nightfall' campaign.{tuple_delimiter}{})
+{record_delimiter}
 {completion_delimiter}
 """,
 ]

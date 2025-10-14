@@ -3,14 +3,16 @@ import json
 import time
 import traceback
 import shutil
+import re
 
-from pymilvus import MilvusClient, MilvusException
+from pymilvus import MilvusClient, MilvusException, DataType
 
 from .. import config
-from ..utils import logger, hashstr
+from ..utils import logger, hashstr, QueryPreprocessor
 from .indexing import chunk, read_text
 from ..manager.kb_db_manager import kb_db_manager
 from .migrate_kb_to_sqlite import migrate_json_to_sqlite
+from .bm25_retriever import HybridRetriever
 
 
 class KnowledgeBase:
@@ -26,6 +28,15 @@ class KnowledgeBase:
         self.default_distance_threshold = 0.5
         self.default_rerank_threshold = 0.1
         self.default_max_query_count = 20
+        
+        # 混合检索器
+        self.hybrid_retriever = HybridRetriever(
+            vector_weight=0.7,  # 向量检索权重
+            bm25_weight=0.3      # BM25权重
+        )
+        
+        # 查询预处理器
+        self.query_preprocessor = QueryPreprocessor(enabled=True)
 
         # 检查是否需要从JSON文件迁移到SQLite
         self._check_migration()
@@ -228,6 +239,23 @@ class KnowledgeBase:
             # 统一使用chunk函数处理所有文件类型
             nodes = chunk(abs_file_path, params=params)
 
+            # 为每个节点添加文件信息到metadata中
+            for node in nodes:
+                if not hasattr(node, 'metadata') or node.metadata is None:
+                    node.metadata = {}
+                
+                # 添加文件信息到metadata
+                node.metadata.update({
+                    "file_id": file_id,
+                    "filename": os.path.basename(file),
+                    "file_path": file,
+                    "file_type": file_type,
+                    "file_status": "waiting",
+                    "file_created_at": int(time.time()),
+                    "source_filename": os.path.basename(file),  # 保持向后兼容
+                    "source_file_path": file  # 保持向后兼容
+                })
+
             file_infos[file_id] = {
                 "file_id": file_id,
                 "filename": os.path.basename(file),
@@ -366,8 +394,24 @@ class KnowledgeBase:
             "rerank_threshold", self.default_rerank_threshold)
         max_query_count = kwargs.get(
             "max_query_count", self.default_max_query_count)
+        
+        # 是否使用混合检索
+        use_hybrid_retrieval = kwargs.get("use_hybrid_retrieval", True)
+        
+        # 是否使用元数据过滤
+        use_metadata_filter = kwargs.get("use_metadata_filter", True)
 
-        all_db_result = self.search(query, db_id, limit=max_query_count)
+        # 额外过滤表达式（支持调用方传入自定义过滤）
+        filter_expression = kwargs.get("filter_expression")
+
+        # 向量检索（支持元数据过滤 + 自定义过滤表达式）
+        all_db_result = self.search(
+            query,
+            db_id,
+            limit=max_query_count,
+            use_metadata_filter=use_metadata_filter,
+            filter_expression=filter_expression,
+        )
         all_db_result = [dict(r) for r in all_db_result]
 
         # 获取文件信息并添加到结果中
@@ -379,6 +423,33 @@ class KnowledgeBase:
         db_result = [r for r in all_db_result if r["distance"]
                      > distance_threshold]
 
+        # 混合检索：结合向量检索和BM25
+        if use_hybrid_retrieval and len(db_result) > 0:
+            try:
+                # 准备BM25训练数据
+                documents = [r["entity"]["text"] for r in db_result]
+                document_ids = [r["entity"]["file_id"] for r in db_result]
+                
+                # 训练BM25模型
+                self.hybrid_retriever.fit_bm25(documents, document_ids)
+                
+                # 获取向量分数
+                vector_scores = [r["distance"] for r in db_result]
+                
+                # 执行混合检索
+                hybrid_results = self.hybrid_retriever.hybrid_search(
+                    query, db_result, vector_scores, top_k=len(db_result)
+                )
+                
+                # 使用混合检索结果
+                db_result = hybrid_results
+                logger.info(f"混合检索完成，结果数量: {len(db_result)}")
+                
+            except Exception as e:
+                logger.warning(f"混合检索失败，使用向量检索: {e}")
+                # 如果混合检索失败，继续使用向量检索结果
+
+        # 重排序（如果启用）
         if config.enable_reranker and len(db_result) > 0 and self.reranker:
             logger.debug(f"开始重排序，原始结果数量: {len(db_result)}")
             texts = [r["entity"]["text"] for r in db_result]
@@ -499,10 +570,23 @@ class KnowledgeBase:
                 f"Collection {collection_name} already exists, drop it")
             self.client.drop_collection(collection_name=collection_name)
 
-        # 创建集合
+        # 使用 create_schema 显式定义 schema（动态字段 + 静态字段）
+        schema = self.client.create_schema(
+            auto_id=False,
+            enable_dynamic_field=True,
+        )
+        # 主键与向量字段
+        schema.add_field(field_name="id", datatype=DataType.INT64, is_primary=True)
+        schema.add_field(field_name="vector", datatype=DataType.FLOAT_VECTOR, dim=dimension)
+        # 静态辅助过滤字段
+        schema.add_field(field_name="source_filename", datatype=DataType.VARCHAR, max_length=1024)
+        schema.add_field(field_name="date_key", datatype=DataType.VARCHAR, max_length=8)
+        schema.add_field(field_name="file_type", datatype=DataType.VARCHAR, max_length=16)
+        schema.add_field(field_name="file_created_at", datatype=DataType.INT64)
+
         self.client.create_collection(
             collection_name=collection_name,
-            dimension=dimension,  # The vectors we will use in this demo has 768 dimensions
+            schema=schema,
         )
 
         # 创建索引（如果需要）
@@ -511,15 +595,16 @@ class KnowledgeBase:
             index_info = self.client.list_indexes(
                 collection_name=collection_name)
             if not index_info:
-                # 创建向量索引
-                index_params = {
-                    "index_type": "AUTOINDEX",
-                    "metric_type": "COSINE",
-                }
+                # 使用 MilvusClient 的 IndexParams 构建索引
+                index_params = self.client.prepare_index_params()
+                index_params.add_index(
+                    field_name="vector",
+                    index_type="AUTOINDEX",
+                    metric_type="COSINE",
+                )
                 self.client.create_index(
                     collection_name=collection_name,
-                    field_name="vector",
-                    index_params=index_params
+                    index_params=index_params,
                 )
                 logger.info(f"Index created for collection {collection_name}")
         except Exception as e:
@@ -591,38 +676,86 @@ class KnowledgeBase:
 
         vectors = self.embed_model.batch_encode(docs)
 
-        data = [{
-            "id": int(random.random() * 1e12),
-            "vector": vectors[i],
-            "text": docs[i],
-            "hash": hashstr(docs[i], with_salt=True),
-            "file_id": file_id,
-            **kwargs,
-            **chunk_infos[i]
-        } for i in range(len(vectors))]
+        data = []
+        for i in range(len(vectors)):
+            node_info = chunk_infos[i] if i < len(chunk_infos) else {}
+            node_meta = node_info.get("metadata", {}) if isinstance(node_info, dict) else {}
+
+            # 从节点元数据中提取静态字段
+            # 提取归一化日期键 (date_key)
+            date_key = None
+            filename_for_parse = node_meta.get("source_filename") or node_meta.get("filename")
+            if filename_for_parse:
+                date_match = re.search(r'(\d{8})', filename_for_parse)
+                if date_match:
+                    date_key = date_match.group(1)
+            
+            static_source_filename = node_meta.get("source_filename") or node_meta.get("filename")
+            static_file_type = node_meta.get("file_type")
+            static_file_created_at = node_meta.get("file_created_at")
+            if isinstance(static_file_created_at, float):
+                static_file_created_at = int(static_file_created_at)
+
+            # 合并所有元数据，chunk_infos中的元数据优先级最高
+            metadata = {
+                "id": int(random.random() * 1e12),
+                "vector": vectors[i],
+                "text": docs[i],
+                "hash": hashstr(docs[i], with_salt=True),
+                "file_id": file_id,
+                "source_filename": static_source_filename,
+                "date_key": date_key,
+                "file_type": static_file_type,
+                "file_created_at": static_file_created_at if static_file_created_at is not None else int(time.time()),
+                **kwargs,      # 基础参数
+                **node_info    # 保留原始节点信息（动态字段）
+            }
+            data.append(metadata)
 
         res = self.client.insert(collection_name=collection_name, data=data)
         return res
 
-    def search(self, query, collection_name, limit=3):
+    def search(self, query, collection_name, limit=3, use_metadata_filter=True, filter_expression=None):
         """搜索数据库"""
         query_vectors = self.embed_model.batch_encode([query])
-        return self.search_by_vector(query_vectors[0], collection_name, limit)
+        
+        # 提取元数据过滤条件
+        metadata_filter = None
+        if use_metadata_filter and hasattr(self, 'query_preprocessor') and self.query_preprocessor.enabled:
+            filters = self.query_preprocessor.extract_metadata_filters(query)
+            metadata_filter = self.query_preprocessor.build_milvus_filter(filters)
+            if metadata_filter:
+                logger.info(f"应用元数据过滤: {metadata_filter}")
+        
+        # 合并调用方自定义过滤
+        final_filter = None
+        if metadata_filter and filter_expression:
+            final_filter = f"({metadata_filter}) and ({filter_expression})"
+        else:
+            final_filter = metadata_filter or filter_expression
+        
+        return self.search_by_vector(query_vectors[0], collection_name, limit, final_filter)
 
-    def search_by_vector(self, vector, collection_name, limit=3):
+    def search_by_vector(self, vector, collection_name, limit=3, filter_expression=None):
         # 确保集合已加载
         if not self.ensure_collection_loaded(collection_name):
             raise Exception(
                 f"Collection {collection_name} is not available for search")
 
-        res = self.client.search(
-            collection_name=collection_name,  # target collection
-            data=[vector],  # query vectors
-            limit=limit,  # number of returned entities
-            # specifies fields to be returned
-            output_fields=["text", "file_id"],
-        )
+        # 构建搜索参数
+        search_params = {
+            "collection_name": collection_name,
+            "data": [vector],
+            "limit": limit,
+            "output_fields": ["text", "file_id", "source_filename", "date_key", "file_type", "file_created_at", "vector"]
+        }
+        
+        # 添加过滤条件
+        if filter_expression:
+            search_params["filter"] = filter_expression
+            logger.info(f"使用过滤条件: {filter_expression}")
 
+        res = self.client.search(**search_params)
         return res[0]
 
     def examples(self, collection_name, limit=20):
@@ -634,11 +767,11 @@ class KnowledgeBase:
         res = self.client.query(
             collection_name=collection_name,
             limit=limit,
-            output_fields=["id", "text"],
+            output_fields=["id", "text", "vector"],
         )
         return res
 
-    def search_by_id(self, collection_name, id, output_fields=["id", "text"]):
+    def search_by_id(self, collection_name, id, output_fields=["id", "text", "vector"]):
         # 确保集合已加载
         if not self.ensure_collection_loaded(collection_name):
             raise Exception(
@@ -664,3 +797,101 @@ class KnowledgeBase:
         for db in databases:
             self.client.drop_collection(collection_name=db["db_id"])
         return self.db_manager.delete_user_knowledge_bases(user_id)
+    
+    def delete_user_database(self, user_id: str, db_id: str):
+        """根据用户ID和数据库ID删除单个知识库"""
+        logger.info(f"根据用户 {user_id} 和数据库 {db_id} 删除知识库")
+        # 校验数据库是否存在
+        db = self.db_manager.get_database_by_id(db_id)
+        if db is None:
+            return {"message": f"数据库不存在，db_id: {db_id}", "status": "failed"}
+        
+        # 校验归属用户
+        owner_user_id = db.get("user_id") if isinstance(db, dict) else None
+        if owner_user_id and owner_user_id != user_id:
+            return {"message": f"数据库不属于该用户，owner: {owner_user_id}", "status": "failed"}
+        
+        # 删除 Milvus 集合
+        try:
+            if self.client.has_collection(collection_name=db_id):
+                self.client.drop_collection(collection_name=db_id)
+        except Exception as e:
+            logger.warning(f"删除集合 {db_id} 失败或不存在: {e}")
+        
+        # 删除数据库记录
+        try:
+            self.db_manager.delete_database(db_id)
+        except Exception as e:
+            logger.error(f"删除数据库记录失败: {e}")
+            return {"message": f"删除数据库记录失败: {e}", "status": "failed"}
+        
+        # 删除数据库对应的文件夹
+        try:
+            db_folder = os.path.join(self.work_dir, db_id)
+            if os.path.exists(db_folder):
+                shutil.rmtree(db_folder)
+        except Exception as e:
+            logger.warning(f"删除数据库文件夹失败: {e}")
+        
+        return {"message": "删除成功", "status": "success"}
+    
+    def configure_hybrid_retrieval(self, vector_weight: float = 0.7, bm25_weight: float = 0.3):
+        """
+        配置混合检索权重
+        
+        Args:
+            vector_weight: 向量检索权重 (0-1)
+            bm25_weight: BM25权重 (0-1)
+        """
+        if abs(vector_weight + bm25_weight - 1.0) > 0.01:
+            logger.warning(f"权重总和不为1，将进行归一化: {vector_weight} + {bm25_weight}")
+            total = vector_weight + bm25_weight
+            vector_weight = vector_weight / total
+            bm25_weight = bm25_weight / total
+        
+        self.hybrid_retriever.vector_weight = vector_weight
+        self.hybrid_retriever.bm25_weight = bm25_weight
+        
+        logger.info(f"混合检索权重已更新: 向量={vector_weight:.2f}, BM25={bm25_weight:.2f}")
+    
+    def get_hybrid_retrieval_config(self):
+        """获取混合检索配置"""
+        return {
+            "vector_weight": self.hybrid_retriever.vector_weight,
+            "bm25_weight": self.hybrid_retriever.bm25_weight,
+            "bm25_trained": self.hybrid_retriever.is_trained
+        }
+    
+    def enable_query_preprocessing(self):
+        """启用查询预处理功能"""
+        if hasattr(self, 'query_preprocessor'):
+            self.query_preprocessor.enabled = True
+            logger.info("查询预处理功能已启用")
+            return {"status": "success", "message": "查询预处理功能已启用"}
+        else:
+            logger.warning("查询预处理器未初始化")
+            return {"status": "error", "message": "查询预处理器未初始化"}
+    
+    def disable_query_preprocessing(self):
+        """禁用查询预处理功能"""
+        if hasattr(self, 'query_preprocessor'):
+            self.query_preprocessor.enabled = False
+            logger.info("查询预处理功能已禁用")
+            return {"status": "success", "message": "查询预处理功能已禁用"}
+        else:
+            logger.warning("查询预处理器未初始化")
+            return {"status": "error", "message": "查询预处理器未初始化"}
+    
+    def get_query_preprocessing_status(self):
+        """获取查询预处理功能状态"""
+        if hasattr(self, 'query_preprocessor'):
+            return {
+                "enabled": self.query_preprocessor.enabled,
+                "status": "success"
+            }
+        else:
+            return {
+                "enabled": False,
+                "status": "error",
+                "message": "查询预处理器未初始化"
+            }

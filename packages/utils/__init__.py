@@ -1,8 +1,11 @@
+import imp
 import time
 import random
 import os
 from pathlib import Path
 from .logging_config import logger
+from .bm25 import AbstractBM25
+from .query_preprocessor import QueryPreprocessor
 
 def is_text_pdf(pdf_path):
     import fitz
