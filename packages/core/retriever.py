@@ -200,13 +200,13 @@ class Retriever:
 
             # 直接执行生成的Cypher查询
             query_results = self.graph_base.query(cypher_query)
-            
-            # 去重和格式化结果
+        
+        # 去重和格式化结果
             unique_results = self._deduplicate_graph_results(query_results)
-            formatted_results = self.graph_base.format_query_result_to_graph(unique_results)
-            
+        formatted_results = self.graph_base.format_query_result_to_graph(unique_results)
+        
             logger.debug(f"图检索返回 {len(formatted_results)} 个格式化结果")
-            return {"results": formatted_results}
+        return {"results": formatted_results}
 
         except Exception as e:
             logger.error(f"图检索阶段失败: {e}, {traceback.format_exc()}")

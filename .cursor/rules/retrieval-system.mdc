@@ -1,0 +1,72 @@
+---
+description: 检索系统架构和混合检索逻辑
+---
+# 检索系统架构指南
+
+## 检索方式对比
+
+### 传统检索（已弃用）
+- 直接从用户问题提取实体
+- 独立执行向量检索和图检索
+- 效果较差，图查询经常失败
+
+### 四阶段混合检索（推荐使用）
+必须在 `meta` 中设置 `"use_hybrid_retrieval": true` 来启用
+
+#### 工作原理
+1. **粗召回（向量检索）**
+   - 使用语义相似度从 Milvus 召回 top-k 文档
+   - 支持元数据过滤（日期、文件类型等）
+
+2. **实体链接**
+   - 从召回的文档中提取实体（STIX 格式 + 关键词）
+   - 这些实体有上下文支持，比从原始问题提取更准确
+
+3. **精查询（图检索）**
+   - LLM 根据问题、提取的实体和图 Schema 生成 Cypher 查询
+   - 支持多跳关系查询（如 `[*..3]`）
+   - 示例见 [cypher_generation_template](mdc:packages/utils/prompts.py)
+
+4. **上下文融合**
+   - 将向量和图结果格式化为统一上下文
+   - 交给 LLM 生成最终答案
+
+## BM25 混合检索
+
+### 工作流程
+1. 向量检索获得初始结果
+2. 用这些文档训练 BM25 模型
+3. 对查询进行 BM25 评分
+4. 融合向量分数和 BM25 分数（可配置权重）
+
+### 语言支持
+- **中文**: 使用 `jieba` 分词 + 停用词过滤
+- **英文**: 使用 `PyStemmer` 词干提取 + 停用词过滤
+
+## 元数据过滤
+
+### 日期过滤
+[query_preprocessor.py](mdc:packages/utils/query_preprocessor.py) 支持：
+- 多日期提取（`1月18日和1月26日` → `['20250118', '20250126']`）
+- OR 逻辑过滤（`date_key == '20250118' or date_key == '20250126'`）
+- 支持格式：
+  - 中文：`YYYY年M月D日`, `M月D日`
+  - 英文：`Month Day, Year`
+  - 国际：`YYYY-MM-DD`
+
+### 静态字段
+Milvus 集合包含以下静态字段用于过滤：
+- `source_filename` (VARCHAR 1024)
+- `date_key` (VARCHAR 8) - YYYYMMDD 格式
+- `file_type` (VARCHAR 16)
+- `file_created_at` (INT64)
+
+## API 响应模式
+
+### `/chat/hybrid-retrieval` 端点
+- `response_mode: "simple"` (默认) - 只返回答案和摘要，日志简洁
+- `response_mode: "full"` - 返回完整检索细节，用于调试
+
+### `/chat/stream` 端点
+- 流式返回，最后消息包含 `refs_summary`
+- 支持 Redis 会话管理

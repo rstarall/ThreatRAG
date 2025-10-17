@@ -1,0 +1,109 @@
+---
+globs: *.py
+---
+# Python 代码规范
+
+## 通用规范
+- 所有注释、文档字符串和日志消息必须使用中文
+- 使用 4 空格缩进，不使用 Tab
+- 函数和类的文档字符串使用三引号 `"""`
+- 导入顺序：标准库 → 第三方库 → 项目内部模块
+
+## 导入规范
+
+### 相对导入
+```python
+from .. import config
+from ..utils import logger, hashstr
+from ..models import select_model
+```
+
+### 已修复的导入问题
+- `packages.utils.__init__.py` 必须导出：
+  ```python
+  from .bm25 import AbstractBM25
+  from .query_preprocessor import QueryPreprocessor
+  ```
+
+## 日志规范
+```python
+from packages.utils.logging_config import logger
+
+# 信息日志
+logger.info(f"开始处理: {query}")
+
+# 调试日志（用于开发，不应影响生产日志）
+logger.debug(f"检索参数: {meta}")
+
+# 错误日志（包含堆栈跟踪）
+logger.error(f"检索失败: {e}, {traceback.format_exc()}")
+```
+
+## 数据库操作
+
+### Milvus
+```python
+# 创建集合时使用 create_schema
+schema = self.client.create_schema(
+    auto_id=False,
+    enable_dynamic_field=True,
+)
+schema.add_field(field_name="id", datatype=DataType.INT64, is_primary=True)
+# ...
+
+# 确保 file_created_at 为 int 类型
+if isinstance(static_file_created_at, float):
+    static_file_created_at = int(static_file_created_at)
+```
+
+### Neo4j
+```python
+# 使用 with 语句管理会话
+with self.driver.session(database=self.kgdb_name) as session:
+    return session.execute_read(query_func, params)
+
+# Cypher 查询使用参数化
+tx.run("MATCH (n:Entity {name: $name}) RETURN n", name=entity_name)
+```
+
+## 异步处理
+```python
+# 在同步函数中运行异步代码
+import asyncio
+import concurrent.futures
+
+with concurrent.futures.ThreadPoolExecutor() as executor:
+    future = executor.submit(
+        lambda: asyncio.run(async_function(params))
+    )
+    result = future.result()
+```
+
+## LLM Prompt 模板
+定义在 [packages/utils/prompts.py](mdc:packages/utils/prompts.py)：
+- 使用 `.format()` 方法进行变量替换
+- 包含清晰的指令和示例
+- Cypher 生成 prompt 必须包含 Schema 信息和多跳查询示例
+
+## 错误处理
+```python
+try:
+    # 主要逻辑
+    result = some_operation()
+except SpecificException as e:
+    logger.error(f"具体错误描述: {e}, {traceback.format_exc()}")
+    # 优雅降级或返回错误信息
+    return {"status": "error", "message": str(e)}
+```
+
+## 类型提示
+```python
+from typing import Dict, List, Optional, Any
+
+def function(
+    query: str,
+    meta: Dict[str, Any],
+    history: Optional[List[dict]] = None
+) -> Dict[str, Any]:
+    pass
+```

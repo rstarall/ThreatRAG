@@ -10,7 +10,7 @@ from packages.manager.db_manager import db_manager
 from packages.manager.db_model import User
 from rag.utils.auth_middleware import get_admin_user, get_current_user, get_db, get_required_user
 from rag.utils.auth_utils import AuthUtils
-from rag.utils.user_utils import generate_unique_user_id, validate_username, is_valid_phone_number
+from rag.utils.user_utils import generate_int_user_id, validate_username, is_valid_phone_number
 from rag.utils.common_utils import log_operation
 
 
@@ -139,9 +139,8 @@ async def register_user(
             detail="密码长度不能少于8个字符",
         )
     
-    # 生成唯一的user_id
-    existing_user_ids = [user.user_id for user in db.query(User.user_id).all()]
-    user_id = generate_unique_user_id(register_data.username, existing_user_ids)
+    # 生成10位随机整数作为user_id
+    user_id = str(generate_int_user_id(db))
     
     # 创建新用户
     hashed_password = AuthUtils.hash_password(register_data.password)
@@ -414,9 +413,8 @@ async def create_user(
                 detail="手机号已存在",
             )
 
-    # 生成唯一的user_id
-    existing_user_ids = [user.user_id for user in db.query(User.user_id).all()]
-    user_id = generate_unique_user_id(user_data.username, existing_user_ids)
+    # 生成10位随机整数作为user_id
+    user_id = str(generate_int_user_id(db))
 
     # 创建新用户
     hashed_password = AuthUtils.hash_password(user_data.password)
@@ -605,9 +603,8 @@ async def validate_username_and_generate_user_id(
             detail="用户名已存在",
         )
 
-    # 生成唯一的user_id
-    existing_user_ids = [user.user_id for user in db.query(User.user_id).all()]
-    user_id = generate_unique_user_id(validation_data.username, existing_user_ids)
+    # 生成10位随机整数作为user_id
+    user_id = str(generate_int_user_id(db))
 
     return UserIdGeneration(username=validation_data.username, user_id=user_id, is_available=True)
 

@@ -89,3 +89,67 @@ class OperationLog(Base):
             "ip_address": self.ip_address,
             "timestamp": self.timestamp.isoformat() if self.timestamp else None,
         }
+
+
+class ChatSession(Base):
+    """聊天会话模型"""
+    
+    __tablename__ = "chat_sessions"
+    
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    session_id = Column(String(36), unique=True, nullable=False, index=True)  # UUID
+    user_id = Column(Integer, nullable=False, index=True)
+    title = Column(String(50), nullable=True)  # 会话标题（最大50字符）
+    system_prompt = Column(Text, nullable=True)  # 系统提示词
+    created_at = Column(DateTime, default=datetime.now, nullable=False)
+    updated_at = Column(DateTime, default=datetime.now, onupdate=datetime.now, nullable=False)
+    is_deleted = Column(Integer, default=0)  # 软删除标记
+    
+    # 关联消息
+    # 注意：user_id 不再是外键，而是直接使用 users.user_id 字段
+    messages = relationship("ChatMessage", back_populates="session", cascade="all, delete-orphan")
+    
+    def to_dict(self, include_messages=False):
+        result = {
+            "id": self.id,
+            "session_id": self.session_id,
+            "user_id": self.user_id,
+            "title": self.title,
+            "system_prompt": self.system_prompt,
+            "created_at": self.created_at.isoformat() if self.created_at else None,
+            "updated_at": self.updated_at.isoformat() if self.updated_at else None,
+            "is_deleted": self.is_deleted,
+        }
+        if include_messages:
+            result["messages"] = [msg.to_dict() for msg in self.messages if msg.is_deleted == 0]
+        return result
+
+
+class ChatMessage(Base):
+    """聊天消息模型"""
+    
+    __tablename__ = "chat_messages"
+    
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    session_id = Column(String(36), ForeignKey("chat_sessions.session_id"), nullable=False, index=True)
+    role = Column(String(20), nullable=False)  # user, assistant, system
+    content = Column(Text, nullable=False)
+    created_at = Column(DateTime, default=datetime.now, nullable=False)
+    is_deleted = Column(Integer, default=0)  # 软删除标记
+    
+    # 扩展字段
+    meta = Column(Text, nullable=True)  # JSON格式存储额外元数据
+    
+    # 关联会话
+    session = relationship("ChatSession", back_populates="messages")
+    
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "session_id": self.session_id,
+            "role": self.role,
+            "content": self.content,
+            "created_at": self.created_at.isoformat() if self.created_at else None,
+            "is_deleted": self.is_deleted,
+            "meta": self.meta,
+        }

@@ -1,0 +1,138 @@
+---
+description: 常见问题和解决方案
+---
+# 常见问题与解决方案
+
+## 导入错误
+
+### 问题：`ImportError: cannot import name 'QueryPreprocessor'`
+**原因**: `packages/utils/__init__.py` 未导出该类
+
+**解决方案**:
+```python
+# packages/utils/__init__.py
+from .bm25 import AbstractBM25
+from .query_preprocessor import QueryPreprocessor
+```
+
+### 问题：`ImportError: attempted relative import beyond top-level package`
+**原因**: 使用相对导入 `..` 但 Python 无法识别包结构
+
+**解决方案**: 将相对导入改为绝对导入
+```python
+# 错误
+from .. import config
+# 正确
+from packages import config
+```
+
+## Milvus 错误
+
+### 问题：`DataNotMatchException: field should be int64, but got float`
+**原因**: `file_created_at` 字段类型不匹配
+
+**解决方案**:
+```python
+if isinstance(static_file_created_at, float):
+    static_file_created_at = int(static_file_created_at)
+```
+
+### 问题：`MilvusException: unsupported pattern: %pattern%`
+**原因**: 动态字段不支持 `LIKE` 的 `%pattern%` 模糊匹配
+
+**解决方案**: 使用静态字段和精确匹配
+```python
+# 错误（动态字段）
+filter = "$metadata['filename'] LIKE '%1月6日%'"
+
+# 正确（静态字段）
+filter = "date_key == '20250106'"
+```
+
+### 问题：索引创建失败
+**解决方案**: 使用 `prepare_index_params()`
+```python
+index_params = self.client.prepare_index_params()
+index_params.add_index(
+    field_name="vector",
+    index_type="AUTOINDEX",
+    metric_type="COSINE",
+)
+self.client.create_index(collection_name, index_params)
+```
+
+## Neo4j 图查询
+
+### 问题：图检索返回空结果
+**可能原因**:
+1. 使用了传统检索而非四阶段混合检索
+2. 从原始问题提取的实体不在图中
+3. LLM 生成的 Cypher 查询不正确
+
+**解决方案**:
+1. 确保 `meta["use_hybrid_retrieval"] = True`
+2. 检查日志中的 Cypher 查询语句
+3. 验证图中是否有相关实体：
+   ```cypher
+   MATCH (n:Entity) WHERE n.name CONTAINS '关键词' RETURN n LIMIT 5
+   ```
+
+### 问题：向量索引不存在
+**解决方案**: 确保在添加实体时创建了向量索引
+```python
+await graph_base.txt_add_vector_entity(triples, kgdb_name)
+```
+
+## BM25 相关
+
+### 问题：缺少依赖
+**解决方案**: 安装必需的库
+```bash
+pip install jieba>=0.42.1 PyStemmer>=2.2.0
+```
+
+### 问题：中英文混用查询效果差
+**原因**: BM25 分词器是单语言的
+
+**建议**: 
+- 知识库和查询使用相同语言
+- 或使用机器翻译预处理查询
+
+## 日志过于冗长
+
+### 问题：API 响应包含大量 JSON 数据
+**解决方案**: 使用 `response_mode="simple"`
+```python
+# API 调用时
+{
+    "query": "...",
+    "meta": {...},
+    "response_mode": "simple"  // 只返回答案和摘要
+}
+```
+
+## 多日期查询
+
+### 问题：只能识别一个日期
+**解决方案**: 已升级为支持多日期 OR 逻辑
+```python
+# 查询: "综合1月18日和1月26日的报告"
+# 自动生成: (date_key == '20250118' or date_key == '20250126')
+```
+
+## 性能优化
+
+### 向量检索慢
+- 确保 Milvus 集合已加载到内存
+- 使用 `AUTOINDEX` 索引类型
+- 合理设置 `top_k` 和阈值
+
+### 图查询慢
+- 限制多跳查询的深度（建议 `[*..3]`）
+- 使用 `LIMIT` 子句
+- 为常用查询模式创建索引
+
+### LLM 调用慢
+- 使用协程池并发处理
+- 考虑使用流式响应
+- 缓存常见查询结果

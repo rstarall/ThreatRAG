@@ -894,4 +894,4 @@ class KnowledgeBase:
                 "enabled": False,
                 "status": "error",
                 "message": "查询预处理器未初始化"
-            }
+        }

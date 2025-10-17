@@ -1,0 +1,113 @@
+---
+description: 知识图谱和 Cypher 查询相关规范
+---
+# 知识图谱架构指南
+
+## Neo4j 图结构
+
+### 节点（Entity）
+```cypher
+(:Entity {
+    name: string,           // 实体名称（主键）
+    type: string,           // 实体类型（如 "Intrusion Set", "Malware"）
+    description: string,    // 实体描述
+    embedding: float[]      // 向量嵌入（用于相似度搜索）
+})
+```
+
+### 关系
+```cypher
+[:RELATION {
+    type: string,                  // 关系类型
+    relationship_type: string      // 备用关系类型字段
+}]
+```
+
+### 向量索引
+- 索引名称: `entityEmbeddings`
+- 维度: 根据 embedding 模型配置
+- 相似度函数: `cosine`
+
+## Cypher 查询模式
+
+### 单跳查询
+```cypher
+MATCH (n:Entity {name: 'APT41'})
+RETURN n.type AS type
+```
+
+### 多跳路径查询
+```cypher
+MATCH p = (a:Entity)-[*..3]-(b:Entity)
+WHERE a.name = 'APT41' AND b.name = 'WannaCry'
+RETURN p LIMIT 5
+```
+
+### 特定关系路径
+```cypher
+MATCH p = (group:Entity)-[:USES]->(tool:Entity)-[:EXPLOITS]->(vuln:Entity {name: 'Log4Shell'})
+WHERE group.type = 'Intrusion Set'
+RETURN p LIMIT 5
+```
+
+### 向量相似度搜索
+```cypher
+CALL db.index.vector.queryNodes('entityEmbeddings', 10, $embedding)
+YIELD node AS similarEntity, score
+RETURN similarEntity.name AS name, score
+```
+
+## LLM Cypher 生成
+
+### 工作流程
+1. 获取图 Schema (`get_schema_str()`)
+2. 准备上下文（问题 + 提取的实体）
+3. 使用 [cypher_generation_template](mdc:packages/utils/prompts.py) 生成 Cypher
+4. 从 LLM 响应中提取 Cypher（支持 markdown 代码块）
+5. 执行查询并处理结果
+
+### 关键方法
+```python
+# packages/core/graphbase.py
+
+def get_schema_str(self) -> str:
+    """获取节点标签、关系类型和属性"""
+    pass
+
+def generate_cypher_query(self, query: str, entities: list, graph_schema: str) -> str:
+    """LLM 生成 Cypher 查询"""
+    pass
+
+def query(self, cypher_query: str) -> list:
+    """执行任意 Cypher 查询"""
+    pass
+```
+
+## 实体嵌入管理
+
+### 自动索引
+[graph_indexer.py](mdc:packages/core/graph_indexer.py) 定时扫描并为没有嵌入的节点创建向量：
+- 默认间隔: 3600 秒（1小时）
+- 批处理大小: 100 个节点
+
+### 手动添加
+```python
+graph_base.add_embedding_to_nodes(node_names, kgdb_name='neo4j')
+```
+
+## STIX 实体类型
+系统支持的威胁情报实体类型：
+- `attack-pattern` - 攻击模式
+- `malware` - 恶意软件
+- `tool` - 工具
+- `vulnerability` - 漏洞
+- `intrusion-set` - 入侵集合/APT 组织
+- `indicator` - 指标
+- `identity` - 身份
+- `location` - 位置
+
+## 注意事项
+- 实体名称区分大小写
+- 关系类型会自动替换空格为下划线
+- 向量维度必须与 embedding 模型匹配
+- Cypher 生成时必须严格遵循 Schema，不能虚构不存在的标签或关系

@@ -4,6 +4,7 @@
 """
 
 import re
+import uuid
 
 from pypinyin import lazy_pinyin, Style
 
@@ -76,40 +77,6 @@ def generate_user_id(username: str) -> str:
     return user_id.lower()
 
 
-def generate_unique_user_id(username: str, existing_user_ids: list[str]) -> str:
-    """
-    生成唯一的user_id，如果重复则添加数字后缀
-
-    Args:
-        username: 用户名
-        existing_user_ids: 已存在的user_id列表
-
-    Returns:
-        str: 唯一的user_id
-    """
-    base_user_id = generate_user_id(username)
-
-    # 如果不重复，直接返回
-    if base_user_id not in existing_user_ids:
-        return base_user_id
-
-    # 如果重复，添加数字后缀
-    counter = 1
-    while True:
-        candidate = f"{base_user_id}{counter}"
-        if candidate not in existing_user_ids:
-            return candidate
-        counter += 1
-
-        # 防止无限循环
-        if counter > 9999:
-            # 使用时间戳作为后缀
-            import time
-
-            candidate = f"{base_user_id}{int(time.time()) % 10000}"
-            return candidate
-
-
 def is_valid_phone_number(phone: str) -> bool:
     """
     验证手机号格式（支持中国大陆手机号）
@@ -153,3 +120,31 @@ def normalize_phone_number(phone: str) -> str:
         return phone
 
     return phone
+
+
+def generate_int_user_id(db) -> int:
+    """
+    使用UUID生成10位随机整数作为用户ID
+    
+    Args:
+        db: 数据库会话，用于检查ID是否已存在
+        
+    Returns:
+        int: 10位整数用户ID
+    """
+    from sqlalchemy import text
+    
+    while True:
+        # 使用UUID生成随机数，取其整数值的后10位
+        random_int = abs(uuid.uuid4().int) % 9000000000 + 1000000000
+        
+        # 确保生成的ID是10位数
+        user_id = random_int
+        
+        # 检查是否已存在
+        result = db.execute(text("SELECT COUNT(*) FROM users WHERE user_id = :user_id"), 
+                           {"user_id": str(user_id)}).scalar()
+        
+        # 如果不存在，返回这个ID
+        if result == 0:
+            return user_id

@@ -100,7 +100,7 @@ class HybridRetriever:
             
             vector_score = vector_scores[i] if i < len(vector_scores) else 0.0
             bm25_score = bm25_scores_dict.get(doc_id, 0.0)
-
+            
             # 计算混合分数
             hybrid_score = (self.vector_weight * vector_score + 
                           self.bm25_weight * bm25_score)

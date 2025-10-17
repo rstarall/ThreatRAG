@@ -3,7 +3,7 @@ import json
 import asyncio
 import traceback
 import uuid
-from fastapi import APIRouter, Body, Depends, HTTPException
+from fastapi import APIRouter, Body, Depends, HTTPException, Header
 from fastapi.responses import StreamingResponse
 from langchain_core.messages import AIMessageChunk
 from packages import executor, retriever, config
@@ -11,6 +11,7 @@ from packages.core import HistoryManager
 from packages.models import select_model
 from packages.utils.logging_config import logger
 from rag.cache.redis_session import RedisSessionManager
+from packages.manager.chat_session_manager import get_chat_session_manager
 from rag.utils.coroutine_pool import CoroutinePool
 from typing import Optional, Dict, List, Any
 from dotenv import load_dotenv
@@ -27,6 +28,9 @@ redis_session = RedisSessionManager(
     expire_time=int(os.getenv("SESSION_EXPIRE_TIME", "3600"))
 )
 
+# 初始化聊天会话管理器（整合MySQL和Redis）
+chat_session_manager = get_chat_session_manager(redis_manager=redis_session)
+
 # 初始化协程池
 coroutine_pool = CoroutinePool(
     max_workers=int(os.getenv("MAX_CONCURRENT_CHATS", "20"))
@@ -36,47 +40,120 @@ coroutine_pool = CoroutinePool(
 async def chat_get():
     return "Chat Get!"
 
+@chat.post("/sessions/create")
+async def create_new_session(
+    user_id: int = Body(..., description="用户ID"),
+    title: str = Body(None, description="会话标题（可选）"),
+    system_prompt: str = Body(None, description="系统提示词（可选）")
+):
+    """创建新的聊天会话
+    
+    Args:
+        user_id: 用户ID（必需）
+        title: 会话标题（可选，如不提供则自动生成）
+        system_prompt: 系统提示词（可选）
+        
+    Returns:
+        新创建的会话信息，包含 session_id
+    """
+    try:
+        session_id = await chat_session_manager.create_session(
+            user_id=user_id,
+            title=title,
+            system_prompt=system_prompt
+        )
+        
+        logger.info(f"创建新会话成功: session_id={session_id}, user_id={user_id}")
+        
+        return {
+            "success": True,
+            "session_id": session_id,
+            "message": "会话创建成功"
+        }
+    except Exception as e:
+        logger.error(f"创建会话失败: {e}")
+        raise HTTPException(status_code=500, detail=f"创建会话失败: {str(e)}")
+
 @chat.post("/stream")
 async def chat_post(
-        query: str = Body(...),
-        meta: dict = Body(None),
-        history: list[dict] | None = Body(None),
-        thread_id: str | None = Body(None)):
-    """处理聊天请求的主要端点。
+        query: str = Body(..., description="用户的输入查询文本"),
+        user_id: int = Body(..., description="用户ID（必需）"),
+        thread_id: str = Body(None, description="会话ID（可选，不提供则自动创建）"),
+        meta: dict = Body(None, description="请求元数据")):
+    """在会话中进行聊天（流式响应）
+    
     Args:
-        query: 用户的输入查询文本
+        query: 用户的输入查询文本（必需）
+        user_id: 用户ID（必需）
+        thread_id: 会话ID（可选）
+            - 如果提供：使用已有会话
+            - 如果不提供：自动创建新会话
         meta: 包含请求元数据的字典，可以包含以下字段：
+            - title: 会话标题（仅在自动创建时使用）
+            - system_prompt: 系统提示词（仅在自动创建时使用）
             - use_web: 是否使用网络搜索
             - use_graph: 是否使用知识图谱
             - db_id: 数据库ID
             - history_round: 历史对话轮数限制
-            - system_prompt: 系统提示词（str，不含变量）
             - search_mode: 图搜索模式 (local/global/hybrid，默认hybrid)
             - top_k: 搜索结果数量限制 (默认10)
             - threshold: 相似度阈值 (默认0.7)
-        history: 对话历史记录列表
-        thread_id: 对话线程ID
+            - model_provider: 模型提供商 (可选，如 "deepseek", "custom" 等)
+            - model_name: 模型名称 (可选)
+            
     Returns:
         StreamingResponse: 返回一个流式响应
+        
+    Note:
+        推荐先使用 POST /chat/sessions/create 创建会话以获得更好的控制
     """
     meta = meta or {}
-    model = select_model()
-    meta["server_model_name"] = model.model_name
     
-    # 如果提供了thread_id，尝试从Redis获取历史记录
-    if thread_id:
+    # 如果没有提供 thread_id，自动创建新会话
+    if not thread_id:
         try:
-            # 从Redis获取会话历史
-            cached_history = await redis_session.get_history(thread_id)
-            if cached_history and not history:
-                history = cached_history
-                logger.debug(f"Using cached history for thread_id: {thread_id}")
+            thread_id = await chat_session_manager.create_session(
+                user_id=user_id,
+                title=meta.get("title"),
+                system_prompt=meta.get("system_prompt")
+            )
+            logger.info(f"自动创建新会话: thread_id={thread_id}, user_id={user_id}")
         except Exception as e:
-            logger.error(f"Error fetching history from Redis: {e}")
+            logger.error(f"创建会话失败: {e}")
+            raise HTTPException(status_code=500, detail=f"创建会话失败: {str(e)}")
     else:
-        # 如果没有thread_id，创建新会话
-        thread_id = await redis_session.create_session(system_prompt=meta.get("system_prompt"))
-        logger.debug(f"Created new session with thread_id: {thread_id}")
+        # 验证会话是否存在且用户有权访问
+        session = await chat_session_manager.get_session(
+            session_id=thread_id,
+            user_id=user_id,
+            include_messages=False
+        )
+        
+        if not session:
+            logger.warning(f"会话不存在或用户无权访问: thread_id={thread_id}, user_id={user_id}")
+            raise HTTPException(
+                status_code=404,
+                detail="会话不存在或无权访问"
+            )
+    
+    # 根据请求参数选择模型
+    model = select_model(
+        model_provider=meta.get("model_provider"),
+        model_name=meta.get("model_name")
+    )
+    meta["server_model_name"] = model.model_name
+    meta["server_model_provider"] = meta.get("model_provider") or config.model_provider
+    
+    # 从数据库获取历史记录（先Redis后MySQL）
+    try:
+        history = await chat_session_manager.get_history(
+            session_id=thread_id,
+            user_id=user_id
+        )
+        logger.debug(f"获取会话历史: thread_id={thread_id}, 消息数={len(history)}")
+    except Exception as e:
+        logger.error(f"获取会话历史失败: {e}")
+        history = []
     
     # 初始化历史管理器
     history_manager = HistoryManager(history, system_prompt=meta.get("system_prompt"))
@@ -121,11 +198,16 @@ async def chat_post(
         messages = history_manager.get_history_with_msg(modified_query, max_rounds=meta.get('history_round'))
         history_manager.add_user(query)  # 注意这里使用原始查询
         
-        # 更新Redis中的会话历史
+        # 保存用户消息到数据库（同时写入MySQL和Redis）
         try:
-            await redis_session.add_message(thread_id, "user", query)
+            await chat_session_manager.add_message(
+                session_id=thread_id,
+                role="user",
+                content=query,
+                user_id=user_id
+            )
         except Exception as e:
-            logger.error(f"Error updating Redis history: {e}")
+            logger.error(f"保存用户消息失败: {e}")
 
         content = ""
         reasoning_content = ""
@@ -152,11 +234,16 @@ async def chat_post(
             logger.debug(f"Final response: {content}")
             logger.debug(f"Final reasoning response: {reasoning_content}")
             
-            # 更新Redis中的会话历史
+            # 保存助手回复到数据库（同时写入MySQL和Redis）
             try:
-                await redis_session.add_message(thread_id, "assistant", content)
+                await chat_session_manager.add_message(
+                    session_id=thread_id,
+                    role="assistant",
+                    content=content,
+                    user_id=user_id
+                )
             except Exception as e:
-                logger.error(f"Error updating Redis history: {e}")
+                logger.error(f"保存助手回复失败: {e}")
                 
             # 只返回refs的摘要信息，避免输出大量数据
             refs_summary = None
@@ -197,50 +284,289 @@ async def call(query: str = Body(...), meta: dict = Body(None)):
 
     return {"response": response.content}
 
+@chat.get("/sessions")
+async def list_sessions(
+    user_id: int,
+    limit: int = 50,
+    offset: int = 0
+):
+    """获取用户的所有会话列表
+    
+    Args:
+        user_id: 用户ID
+        limit: 返回数量限制
+        offset: 偏移量
+        
+    Returns:
+        会话列表
+    """
+    try:
+        sessions = await chat_session_manager.list_user_sessions(
+            user_id=user_id,
+            limit=limit,
+            offset=offset
+        )
+        return {
+            "success": True,
+            "sessions": sessions,
+            "total": len(sessions)
+        }
+    except Exception as e:
+        logger.error(f"获取会话列表失败: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
 @chat.get("/sessions/{thread_id}")
-async def get_session(thread_id: str):
-    """获取指定会话的历史记录
+async def get_session(
+    thread_id: str,
+    user_id: int,
+    include_messages: bool = True
+):
+    """获取指定会话的详细信息
     
     Args:
         thread_id: 会话ID
+        user_id: 用户ID
+        include_messages: 是否包含消息列表
         
     Returns:
-        会话历史记录
+        会话详细信息
     """
     try:
-        session = await redis_session.get_session(thread_id)
+        session = await chat_session_manager.get_session(
+            session_id=thread_id,
+            user_id=user_id,
+            include_messages=include_messages
+        )
         if not session:
-            raise HTTPException(status_code=404, detail="Session not found")
-        return session
+            raise HTTPException(status_code=404, detail="会话不存在或无权访问")
+        return {"success": True, "session": session}
+    except HTTPException:
+        raise
     except Exception as e:
-        logger.error(f"Error getting session: {e}")
+        logger.error(f"获取会话失败: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@chat.put("/sessions/{thread_id}")
+async def update_session(
+    thread_id: str,
+    user_id: int = Body(...),
+    title: str = Body(None),
+    system_prompt: str = Body(None)
+):
+    """更新会话信息
+    
+    Args:
+        thread_id: 会话ID
+        user_id: 用户ID
+        title: 新标题（可选）
+        system_prompt: 新系统提示词（可选）
+        
+    Returns:
+        更新结果
+    """
+    try:
+        result = await chat_session_manager.update_session(
+            session_id=thread_id,
+            user_id=user_id,
+            title=title,
+            system_prompt=system_prompt
+        )
+        if not result:
+            raise HTTPException(status_code=404, detail="会话不存在或无权访问")
+        return {"success": True, "message": "会话更新成功"}
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"更新会话失败: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 @chat.delete("/sessions/{thread_id}")
-async def delete_session(thread_id: str):
+async def delete_session(
+    thread_id: str,
+    user_id: int,
+    hard_delete: bool = False
+):
     """删除指定会话
     
     Args:
         thread_id: 会话ID
+        user_id: 用户ID
+        hard_delete: 是否物理删除（默认软删除）
         
     Returns:
         删除结果
     """
     try:
-        result = await redis_session.delete_session(thread_id)
+        result = await chat_session_manager.delete_session(
+            session_id=thread_id,
+            user_id=user_id,
+            hard_delete=hard_delete
+        )
         if not result:
-            raise HTTPException(status_code=404, detail="Session not found")
-        return {"success": True}
+            raise HTTPException(status_code=404, detail="会话不存在或无权访问")
+        return {"success": True, "message": "会话删除成功"}
+    except HTTPException:
+        raise
     except Exception as e:
-        logger.error(f"Error deleting session: {e}")
+        logger.error(f"删除会话失败: {e}")
         raise HTTPException(status_code=500, detail=str(e))
+
+@chat.delete("/sessions/batch")
+async def delete_sessions_batch(
+    user_id: int = Body(..., description="用户ID"),
+    session_ids: list[str] = Body(..., description="会话ID列表"),
+    hard_delete: bool = Body(False, description="是否物理删除（默认软删除）")
+):
+    """批量删除会话
+    
+    Args:
+        user_id: 用户ID
+        session_ids: 会话ID列表
+        hard_delete: 是否物理删除（默认软删除）
+        
+    Returns:
+        批量删除结果
+    """
+    # 验证会话ID列表
+    if not session_ids:
+        raise HTTPException(status_code=400, detail="会话ID列表不能为空")
+    
+    # 过滤掉无效的会话ID
+    valid_session_ids = [sid for sid in session_ids if sid != "undefined" and sid]
+    
+    if not valid_session_ids:
+        raise HTTPException(status_code=400, detail="没有有效的会话ID")
+    
+    try:
+        result = await chat_session_manager.delete_sessions_batch(
+            session_ids=valid_session_ids,
+            user_id=user_id,
+            hard_delete=hard_delete
+        )
+        return {
+            "success": True,
+            "message": f"批量删除完成: 成功 {result['success']}/{result['total']}",
+            "details": result
+        }
+    except Exception as e:
+        logger.error(f"批量删除会话失败: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@chat.get("/sessions/{thread_id}/messages")
+async def get_session_messages(
+    thread_id: str,
+    user_id: int,
+    limit: int = None
+):
+    """获取会话的消息历史
+    
+    Args:
+        thread_id: 会话ID
+        user_id: 用户ID
+        limit: 限制返回消息数量（可选）
+        
+    Returns:
+        消息列表
+    """
+    try:
+        messages = await chat_session_manager.get_history(
+            session_id=thread_id,
+            user_id=user_id,
+            limit=limit
+        )
+        return {
+            "success": True,
+            "messages": messages,
+            "total": len(messages)
+        }
+    except Exception as e:
+        logger.error(f"获取消息历史失败: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@chat.delete("/sessions/{thread_id}/messages/{message_id}")
+async def delete_message(
+    thread_id: str,
+    message_id: int,
+    user_id: int
+):
+    """删除指定消息
+    
+    Args:
+        thread_id: 会话ID
+        message_id: 消息ID
+        user_id: 用户ID
+        
+    Returns:
+        删除结果
+    """
+    try:
+        result = await chat_session_manager.delete_message(
+            message_id=message_id,
+            session_id=thread_id,
+            user_id=user_id
+        )
+        if not result:
+            raise HTTPException(status_code=404, detail="消息不存在或无权访问")
+        return {"success": True, "message": "消息删除成功"}
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"删除消息失败: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
 
 
 @chat.get("/models")
 async def get_chat_models(model_provider: str):
-    """获取指定模型提供商的模型列表"""
-    model = select_model(model_provider=model_provider)
-    return {"models": model.get_models()}
+    """获取指定模型提供商的模型列表（动态）"""
+    try:
+        # 对于 OpenAI 和 Ollama，返回预定义的模型列表
+        if model_provider == "openai":
+            return {
+                "models": [
+                    "gpt-4o-mini",
+                    "gpt-3.5-turbo"
+                ]
+            }
+        elif model_provider == "ollama":
+            # 尝试从 Ollama 服务获取已下载的模型列表
+            try:
+                import requests
+                ollama_base = os.getenv("OLLAMA_API_BASE", "http://ollama:11434")
+                response = requests.get(f"{ollama_base}/api/tags", timeout=5)
+                if response.status_code == 200:
+                    models_data = response.json()
+                    model_names = [m["name"] for m in models_data.get("models", [])]
+                    return {"models": model_names}
+                else:
+                    # 返回推荐模型列表
+                    return {
+                        "models": [
+                            "llama3.1:8b",
+                            "qwen2.5:7b",
+                            "deepseek-r1:7b"
+                        ]
+                    }
+            except:
+                # 如果无法连接 Ollama，返回推荐模型列表
+                return {
+                    "models": [
+                        "llama3.1:8b",
+                        "qwen2.5:7b",
+                        "deepseek-r1:7b"
+                    ]
+                }
+        elif model_provider == "deepseek":
+            return {
+                "models": ["deepseek-chat"]
+            }
+        else:
+            # 其他提供商，使用原有逻辑
+            model = select_model(model_provider=model_provider)
+            return {"models": model.get_models()}
+    except Exception as e:
+        logger.error(f"Error getting models for {model_provider}: {e}")
+        raise HTTPException(status_code=500, detail=f"Failed to get models: {str(e)}")
 
 @chat.post("/models/update")
 async def update_chat_models(model_provider: str, model_names: list[str]):

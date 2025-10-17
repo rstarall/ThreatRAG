@@ -1,0 +1,85 @@
+---
+alwaysApply: true
+---
+# ThreatRAG 项目结构指南
+
+## 项目概述
+ThreatRAG 是一个威胁情报分析系统，结合了 RAG（检索增强生成）、知识图谱和混合检索技术。
+
+## 核心目录结构
+
+### 主入口
+- [main.py](mdc:main.py) - 应用程序主入口，负责启动 Milvus、Neo4j 和 FastAPI 服务器
+
+### 核心模块 (`packages/core/`)
+- [knowledgebase.py](mdc:packages/core/knowledgebase.py) - Milvus 向量数据库管理，文档嵌入和检索
+- [graphbase.py](mdc:packages/core/graphbase.py) - Neo4j 图数据库管理，实体关系存储和 Cypher 查询生成
+- [retriever.py](mdc:packages/core/retriever.py) - 核心检索逻辑，实现四阶段混合检索（向量→实体提取→图查询→上下文融合）
+- [bm25_retriever.py](mdc:packages/core/bm25_retriever.py) - BM25 混合检索器，结合向量检索和 BM25 算法
+- [indexing.py](mdc:packages/core/indexing.py) - 文档分块和文本提取
+- [graph_indexer.py](mdc:packages/core/graph_indexer.py) - 图数据库索引器，为实体创建嵌入向量
+
+### 工具模块 (`packages/utils/`)
+- [bm25.py](mdc:packages/utils/bm25.py) - 高级 BM25 实现，支持中文（jieba）和英文（PyStemmer）分词
+- [query_preprocessor.py](mdc:packages/utils/query_preprocessor.py) - 查询预处理，提取日期等元数据过滤条件（支持多日期 OR 逻辑）
+- [prompts.py](mdc:packages/utils/prompts.py) - 所有 LLM 提示词模板，包括 Cypher 生成模板
+- [stopwords.py](mdc:packages/utils/stopwords.py) - 中英文停用词列表
+
+### API 服务 (`rag/`)
+- **API 路由** (`rag/api/routers/`)
+  - [chat_api.py](mdc:rag/api/routers/chat_api.py) - 聊天接口
+    - `/chat/stream` - 流式聊天接口
+    - `/chat/hybrid-retrieval` - 四阶段混合检索接口
+    - `/chat/sessions/{thread_id}` - 会话管理
+  - [data_api.py](mdc:rag/api/routers/data_api.py) - 数据管理接口
+  - [graph_api.py](mdc:rag/api/routers/graph_api.py) - 知识图谱接口
+  - [token_api.py](mdc:rag/api/routers/token_api.py) - 认证接口
+
+- **缓存与会话** (`rag/cache/`)
+  - Redis 会话管理 - 存储对话历史，支持会话持久化和过期控制
+  - 使用 `RedisSessionManager` 管理用户会话和对话历史
+
+### 数据库管理 (`packages/manager/`)
+- **MySQL** - 知识库元数据管理
+  - `kb_db_manager.py` - 知识库、文件和用户数据的持久化存储
+  - 使用 SQLAlchemy ORM 管理数据库操作
+  
+- **Redis** - 会话缓存
+  - 存储用户对话历史（thread_id 为键）
+  - 支持自动过期（默认 3600 秒）
+  - 用于多轮对话的上下文保持
+
+## 关键数据流
+
+### 四阶段混合检索流程
+1. **阶段1：向量检索** (`_vector_retrieval_stage`) - 从 Milvus 广泛召回相关文档
+2. **阶段2：实体链接** (`_entity_linking_stage`) - 从文档中提取实体
+3. **阶段3：图检索** (`_graph_retrieval_stage`) - LLM 生成 Cypher 查询，在 Neo4j 中精确查找
+4. **阶段4：上下文融合** (`_context_fusion_stage`) - 整合向量和图检索结果
+
+### 数据库架构
+- **Milvus** - 向量数据库
+  - 存储文档嵌入向量
+  - 支持静态字段过滤（source_filename, date_key, file_type, file_created_at）
+  - 使用 COSINE 相似度进行向量检索
+
+- **Neo4j** - 知识图谱数据库
+  - 存储实体（Entity）和关系（RELATION）
+  - 支持向量索引（entityEmbeddings）进行实体相似度搜索
+  - 执行 LLM 生成的 Cypher 查询
+
+- **MySQL** - 元数据数据库
+  - 存储知识库配置（名称、描述、embedding 模型）
+  - 管理文件上传记录和处理状态
+  - 用户数据和权限管理
+
+- **Redis** - 缓存数据库
+  - 会话管理（thread_id → 对话历史）
+  - 支持 TTL 过期机制
+  - 提供快速的会话数据访问
+
+## 重要约定
+- 所有响应使用中文
+- 日志使用 `logger` 从 `packages.utils.logging_config` 导入
+- 配置从 `packages.config` 导入
+- 嵌入模型通过 `packages.models.embedding.get_embedding_model` 获取

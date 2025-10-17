@@ -191,5 +191,17 @@ cython_debug/
 # data
 saves/**/*
 
+# Docker volume 本地挂载数据（不要提交到 Git）
+data/mysql/
+data/redis/
+data/neo4j/
+data/etcd/
+data/minio/
+data/milvus/
+data/ollama/
+
+# 保留用户上传的知识库文件，但需要手动管理
+# data/kb_*/
+
 #sql
 *.sql

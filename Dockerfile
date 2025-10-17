@@ -1,5 +1,5 @@
 # 使用Python 3.10作为基础镜像
-FROM docker.aeko.cn/library/python:3.11-slim
+FROM docker1.aeko.cn/library/python:3.11-slim
 
 # 设置工作目录
 WORKDIR /app

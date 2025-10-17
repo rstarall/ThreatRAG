@@ -18,18 +18,35 @@ def select_model(model_provider=None, model_name=None):
     if model_provider is None:
         raise ValueError("Model provider not specified, please modify `model_provider` in `src/config/base.yaml`")
 
+    # OpenAI 官方
+    if model_provider == "openai":
+        api_key = os.getenv("OPENAI_API_KEY")
+        if not api_key:
+            raise ValueError("OPENAI_API_KEY not found in environment variables")
+        
+        model = OpenAIBase(
+            api_key=api_key,
+            base_url="https://api.openai.com/v1",
+            model_name=model_name or "gpt-4o-mini",
+        )
+        return model
+    
+    # Ollama 本地模型
+    if model_provider == "ollama":
+        ollama_base = os.getenv("OLLAMA_API_BASE", "http://ollama:11434")
+        model = OpenAIBase(
+            api_key="ollama",  # Ollama 不需要真实 API Key
+            base_url=f"{ollama_base}/v1",
+            model_name=model_name or "llama3.1:8b",  # 默认使用 Llama 3.1
+        )
+        return model
+
+    # DeepSeek
     if model_provider == "deepseek":
         from .chat_model import DeepSeek
         return DeepSeek(model_name)
 
-    # if model_provider == "dashscope":
-    #     from .chat_model import DashScope
-    #     return DashScope(model_name)
-
-    # if model_provider == "openai":
-    #     from .chat_model import OpenModel
-    #     return OpenModel(model_name)
-
+    # 自定义模型
     if model_provider == "custom":
         model_info = next((x for x in config.custom_models if x["custom_id"] == model_name), None)
         if model_info is None:
@@ -38,7 +55,7 @@ def select_model(model_provider=None, model_name=None):
         from .chat_model import CustomModel
         return CustomModel(model_info)
 
-    # 其他模型，默认使用OpenAIBase
+    # 其他模型，默认使用OpenAIBase（兼容 OpenAI API 格式的提供商）
     try:
         model = OpenAIBase(
             api_key=os.getenv(model_info["env"][0]),
