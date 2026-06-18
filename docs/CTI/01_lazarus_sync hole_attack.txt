@@ -1,0 +1,75 @@
+【威胁情报报告】 Lazarus Group "Operation SyncHole" 多阶段攻击活动
+=====================================================================
+
+报告编号: CTI-2025-001
+发布时间: 2025年3月
+情报来源: ASEC、Rewterz、ESET
+置信度: 高 (可信度: 95%)
+
+一、威胁概述
+------------
+Lazarus Group（又称APT-C-26、Hidden Cobra）是朝鲜政府支持的高级持续性威胁组织，自2009年起持续活跃。该组织在2025年初发动了名为"Operation SyncHole"的水坑式攻击活动，针对韩国多个关键行业组织部署了复杂的多阶段攻击链。攻击活动利用了Innorix Agent（企业级浏览器集成文件传输工具）中的零日漏洞以及Cross EX工具中的额外零日漏洞，最终载荷包括ThreatNeedle和LPEClient等已知Lazarus恶意软件家族。
+
+二、攻击目标
+------------
+攻击活动主要针对韩国境内的以下行业和组织：
+- 软件开发企业
+- IT服务提供商
+- 金融机构
+- 半导体制造公司
+- 电信运营商
+
+至少确认6个韩国组织遭受此次攻击，涉及多个关键基础设施领域。受害组织分布广泛，表明此次活动具有较高的战略价值取向。
+
+三、攻击向量与技战术分析
+------------------------
+【初始访问】
+攻击者采用水坑式攻击策略，首先入侵目标组织经常访问的第三方网站或服务。攻击链的核心载体为Innorix Agent组件，该软件被广泛应用于韩国企业环境进行文件传输和数据同步。攻击者利用了该组件中的一个零日远程代码执行漏洞实现初始突破。
+
+【持久化与载荷投递】
+成功利用漏洞后，攻击者在目标系统中部署Cross EX工具框架。Cross EX是一种模块化的攻击工具，能够在受感染环境中实现多种恶意功能。研究人员发现攻击者利用可信进程SyncHost.exe的上下文执行内存中的恶意代码，有效规避传统安全产品的检测。
+
+【远控与数据窃取】
+最终载荷包括ThreatNeedle后门木马，该木马是Lazarus组织的标志性远控工具，能够实现文件操作、屏幕捕获、键盘记录和命令执行等完整的后渗透功能。此外，LPEClient提权工具用于获取系统最高权限。
+
+四、关联基础设施
+----------------
+【C2服务器域名】
+- www.smartmanagerex.com （经分析确认用于C2通信）
+- http://bluekostec.com/eng/community/write.asp （ASP格式C2脚本）
+- https://kadsm.org/skin/board/basic/write_comment_skin.php （论坛类C2节点）
+- http://www.shcpump.com/admin/form/skin/formBasic/style.php （管理后台C2）
+- https://www.rsdf.kr/wp-content/uploads/2024/01/index.php （伪装资源C2）
+- https://builsf.com/inc/left.php （公司网站C2）
+- https://thek-portal.com/eng/career/index.asp （职业门户C2）
+
+五、攻击活动时间线
+----------------
+2025年初：攻击者完成C2基础设施部署
+2025年1月至2月：水坑攻击活跃期，针对韩国目标
+2025年1月：部分Web服务器被攻陷用作C2代理
+
+六、检测与防御建议
+-----------------
+1. 密切监控Innorix Agent组件的异常行为和网络通信
+2. 在网络边界实施严格的出站连接白名单策略
+3. 部署内存安全检测方案以识别进程注入行为
+4. 关注Web服务器ASP脚本的异常写入和访问模式
+5. 部署主机入侵检测系统监控可疑的PowerShell命令执行
+
+七、IOC指标
+-----------
+【恶意URL】
+- hxxps://www.smartmanagerex.com/
+- hxxp://bluekostec.com/eng/community/write.asp
+- hxxps://kadsm.org/skin/board/basic/write_comment_skin.php
+- hxxp://www.shcpump.com/admin/form/skin/formBasic/style.php
+- hxxps://www.rsdf.kr/wp-content/uploads/2024/01/index.php
+- hxxps://builsf.com/inc/left.php
+- hxxps://thek-portal.com/eng/career/index.asp
+
+【相关恶意软件家族】
+- ThreatNeedle（远控后门）
+- LPEClient（提权工具）
+- Cross EX（攻击框架）
+- ASP WebShell变种（RedHat Hacker webshell家族）

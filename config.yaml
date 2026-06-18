@@ -1,0 +1,106 @@
+# ThreatRAG 统一配置文件
+
+#1.功能开关
+enable_reranker: true
+enable_knowledge_base: true
+enable_knowledge_graph: true
+enable_web_search: false
+
+#2.查询配置
+use_rewrite_query: "on"  # 是否使用重写查询
+
+#3.模型配置
+model_provider: "siliconflow"
+model_name: "deepseek-ai/DeepSeek-V3"
+
+#4.嵌入模型
+embed_model: "local/BAAI/bge-m3"
+
+#5.Reranker 模型 - 使用相同的bge-m3模型
+reranker: "local/BAAI/bge-m3"
+model_local_paths:
+  local/BAAI/bge-m3: "models/embedding_model/bge-m3"
+
+
+#6.设备配置
+device: "cuda"
+
+#7.FastAPI服务器配置
+fastapi_server:
+  host: localhost
+  port: 8000
+
+#8.向量数据库配置
+vector_database:
+  path: /data/data/vector_db
+
+#9.文件上传配置
+file_upload:
+  path: /data/file_uploads
+
+#10.模型路径配置
+model:
+  embedding_model:
+    path: /models/embedding_model
+
+#11.Neo4j配置
+neo4j:
+  auto_start: false
+  data_dir: ./neo4j_data
+  host: 127.0.0.1
+  port: 7687
+  http_port: 7474
+  # 添加索引器配置
+  index_interval: 600  # 索引间隔，单位为秒，默认1小时
+  index_batch_size: 200  # 每次处理的实体数量
+  auto_index: true  # 是否自动启动索引器
+
+#12.PostgreSQL配置
+postgres:
+  host: localhost
+  port: 5432
+  user: postgres
+  password: 12345678
+  database: knowledge_db
+
+#13.LLM模型配置
+model_names:
+  deepseek:
+    name: DeepSeek
+    url: https://platform.deepseek.com/api-docs/zh-cn/pricing
+    default: deepseek-chat
+    base_url: https://api.deepseek.com/v1
+    env:
+      - DEEPSEEK_API_KEY
+    models:
+      - deepseek-chat
+      - deepseek-reasoner
+  siliconflow:
+    name: SiliconFlow
+    url: https://cloud.siliconflow.cn/models
+    default: deepseek-ai/DeepSeek-V3
+    base_url: https://api.siliconflow.cn/v1
+    env:
+      - SILICONFLOW_API_KEY
+    models:
+      - Pro/deepseek-ai/DeepSeek-R1
+      - Pro/deepseek-ai/DeepSeek-V3
+      - deepseek-ai/DeepSeek-R1
+      - deepseek-ai/DeepSeek-V3
+      - deepseek-ai/DeepSeek-R1-Distill-Qwen-7B
+      - Qwen/Qwen2.5-72B-Instruct
+      - Qwen/Qwen2.5-7B-Instruct
+      - Qwen/QwQ-32B
+
+#14.嵌入模型配置
+embed_model_info:
+  local/BAAI/bge-m3:
+    name: BAAI/bge-m3
+    dimension: 1024
+    local_path: models/embedding_model/bge-m3
+
+#15.重排序模型配置
+reranker_list:
+  local/BAAI/bge-m3:
+    name: BAAI/bge-m3
+    local_path: models/embedding_model/bge-m3
